@@ -1,0 +1,3670 @@
+{
+  "sheets": [
+    {
+      "name": "Analysis",
+      "cells": [
+        {
+          "cell": "C2",
+          "value": "Juniper Flats | Reference underwriting",
+          "role": "title"
+        },
+        {
+          "cell": "C3",
+          "value": "Author reference only | USD | Historical and scenario outputs remain separate",
+          "role": "note"
+        },
+        {
+          "cell": "C6",
+          "value": "Measure",
+          "role": "header"
+        },
+        {
+          "cell": "D6",
+          "value": "Amount / ratio",
+          "role": "header"
+        },
+        {
+          "cell": "F6",
+          "value": "Source / method",
+          "role": "header"
+        },
+        {
+          "cell": "C7",
+          "value": "Underwritten EGI",
+          "role": "body"
+        },
+        {
+          "cell": "D7",
+          "formula": "=(Inputs!D7*(1-Inputs!D8)+Inputs!D9)*Inputs!D35",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F7",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C8",
+          "value": "Management fee",
+          "role": "body"
+        },
+        {
+          "cell": "D8",
+          "formula": "=MAX(Inputs!D17,D7*Inputs!D18)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F8",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C9",
+          "value": "Operating expenses",
+          "role": "body"
+        },
+        {
+          "cell": "D9",
+          "formula": "=Inputs!D10+Inputs!D11+Inputs!D12+Inputs!D13-Inputs!D14+Inputs!D15+Inputs!D16+D8",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F9",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C10",
+          "value": "NOI before reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D10",
+          "formula": "=D7-D9",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F10",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C11",
+          "value": "Replacement reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D11",
+          "formula": "=Inputs!D19*Inputs!D20",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F11",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C12",
+          "value": "NCF after reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D12",
+          "formula": "=D10-D11",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F12",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C13",
+          "value": "Valuation cap rate",
+          "role": "body"
+        },
+        {
+          "cell": "D13",
+          "formula": "=Inputs!D21+Inputs!D37",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "F13",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C14",
+          "value": "Indicative value",
+          "role": "body"
+        },
+        {
+          "cell": "D14",
+          "formula": "=D10/D13",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F14",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C15",
+          "value": "Contract rate",
+          "role": "body"
+        },
+        {
+          "cell": "D15",
+          "formula": "=IF(Inputs!D25>0,Inputs!D25,MAX(Inputs!D26,Inputs!D27)+Inputs!D28)",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "F15",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C16",
+          "value": "Sizing rate",
+          "role": "body"
+        },
+        {
+          "cell": "D16",
+          "formula": "=MAX(D15,Inputs!D29)+Inputs!D36",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "F16",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C17",
+          "value": "Annual debt constant",
+          "role": "body"
+        },
+        {
+          "cell": "D17",
+          "formula": "=12*(D16/12)/(1-(1+D16/12)^(-Inputs!D30*12))",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "F17",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C18",
+          "value": "LTV capacity",
+          "role": "body"
+        },
+        {
+          "cell": "D18",
+          "formula": "=D14*Inputs!D22",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F18",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C19",
+          "value": "DSCR capacity",
+          "role": "body"
+        },
+        {
+          "cell": "D19",
+          "formula": "=D12/(Inputs!D23*D17)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F19",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C20",
+          "value": "Debt yield capacity",
+          "role": "body"
+        },
+        {
+          "cell": "D20",
+          "formula": "=IF(Inputs!D38=1,D10,D12)/Inputs!D24",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F20",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C21",
+          "value": "Maximum loan",
+          "role": "body"
+        },
+        {
+          "cell": "D21",
+          "formula": "=MIN(D18:D20)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F21",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C22",
+          "value": "Binding constraint",
+          "role": "body"
+        },
+        {
+          "cell": "D22",
+          "formula": "=IF(D21=D18,\"LTV\",IF(D21=D19,\"DSCR\",\"Debt yield\"))",
+          "number_format": "@"
+        },
+        {
+          "cell": "F22",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C23",
+          "value": "Sizing debt service",
+          "role": "body"
+        },
+        {
+          "cell": "D23",
+          "formula": "=D21*D17",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F23",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C24",
+          "value": "Sizing DSCR",
+          "role": "body"
+        },
+        {
+          "cell": "D24",
+          "formula": "=D12/D23",
+          "number_format": "0.0000\"x\""
+        },
+        {
+          "cell": "F24",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C25",
+          "value": "Sizing debt yield",
+          "role": "body"
+        },
+        {
+          "cell": "D25",
+          "formula": "=IF(Inputs!D38=1,D10,D12)/D21",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "F25",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C26",
+          "value": "Contractual first-year debt service",
+          "role": "body"
+        },
+        {
+          "cell": "D26",
+          "formula": "=IF(Inputs!D31>=12,D21*D15,D21*12*(D15/12)/(1-(1+D15/12)^(-Inputs!D30*12)))",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F26",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C27",
+          "value": "Cash to borrower",
+          "role": "body"
+        },
+        {
+          "cell": "D27",
+          "formula": "=D21-Inputs!D32-D21*Inputs!D33-Inputs!D34",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F27",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C28",
+          "value": "Historical T12 EGI",
+          "role": "body"
+        },
+        {
+          "cell": "D28",
+          "formula": "=SUM(T12!P7:P11)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F28",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C29",
+          "value": "Historical operating expenses",
+          "role": "body"
+        },
+        {
+          "cell": "D29",
+          "formula": "=SUM(T12!P12:P18)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F29",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C30",
+          "value": "Historical NOI before reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D30",
+          "formula": "=D28-D29",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F30",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C31",
+          "value": "Historical replacement reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D31",
+          "formula": "=T12!P19",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F31",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        },
+        {
+          "cell": "C32",
+          "value": "Historical NCF after reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D32",
+          "formula": "=D30-D31",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F32",
+          "value": "Property plan / lender terms; see Inputs",
+          "role": "note"
+        }
+      ],
+      "column_widths": {
+        "A": 3,
+        "B": 3,
+        "C": 41,
+        "D": 23,
+        "E": 4,
+        "F": 57
+      }
+    },
+    {
+      "name": "Inputs",
+      "cells": [
+        {
+          "cell": "C2",
+          "value": "Underwriting assumptions",
+          "role": "title"
+        },
+        {
+          "cell": "C3",
+          "value": "Source: Property-and-Plan.pdf and Lender-Terms.pdf. Blue values are editable.",
+          "role": "note"
+        },
+        {
+          "cell": "C7",
+          "value": "Gross potential rent",
+          "role": "body"
+        },
+        {
+          "cell": "D7",
+          "value": 864000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C8",
+          "value": "Revenue loss",
+          "role": "body"
+        },
+        {
+          "cell": "D8",
+          "value": 0.06,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C9",
+          "value": "Other income",
+          "role": "body"
+        },
+        {
+          "cell": "D9",
+          "value": 42000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C10",
+          "value": "Annual taxes",
+          "role": "body"
+        },
+        {
+          "cell": "D10",
+          "value": 112000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C11",
+          "value": "Annual insurance allowance",
+          "role": "body"
+        },
+        {
+          "cell": "D11",
+          "value": 33600,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C12",
+          "value": "Utilities",
+          "role": "body"
+        },
+        {
+          "cell": "D12",
+          "value": 28800,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C13",
+          "value": "Repairs actual",
+          "role": "body"
+        },
+        {
+          "cell": "D13",
+          "value": 46200,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C14",
+          "value": "Nonrecurring repairs",
+          "role": "body"
+        },
+        {
+          "cell": "D14",
+          "value": 6000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C15",
+          "value": "Payroll / contracts",
+          "role": "body"
+        },
+        {
+          "cell": "D15",
+          "value": 42000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C16",
+          "value": "Administrative / legal",
+          "role": "body"
+        },
+        {
+          "cell": "D16",
+          "value": 21600,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C17",
+          "value": "Management actual",
+          "role": "body"
+        },
+        {
+          "cell": "D17",
+          "value": 30000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C18",
+          "value": "Management minimum",
+          "role": "body"
+        },
+        {
+          "cell": "D18",
+          "value": 0.03,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C19",
+          "value": "Reserve rate",
+          "role": "body"
+        },
+        {
+          "cell": "D19",
+          "value": 300,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C20",
+          "value": "Reserve quantity",
+          "role": "body"
+        },
+        {
+          "cell": "D20",
+          "value": 36,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C21",
+          "value": "Valuation cap rate",
+          "role": "body"
+        },
+        {
+          "cell": "D21",
+          "value": 0.0575,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C22",
+          "value": "LTV limit",
+          "role": "body"
+        },
+        {
+          "cell": "D22",
+          "value": 0.65,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C23",
+          "value": "Minimum DSCR",
+          "role": "body"
+        },
+        {
+          "cell": "D23",
+          "value": 1.25,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C24",
+          "value": "Minimum debt yield",
+          "role": "body"
+        },
+        {
+          "cell": "D24",
+          "value": 0.085,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C25",
+          "value": "Fixed contract rate (zero = floating)",
+          "role": "body"
+        },
+        {
+          "cell": "D25",
+          "value": 0.059,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C26",
+          "value": "Current floating index",
+          "role": "body"
+        },
+        {
+          "cell": "D26",
+          "value": 0,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C27",
+          "value": "Index floor",
+          "role": "body"
+        },
+        {
+          "cell": "D27",
+          "value": 0,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C28",
+          "value": "Spread",
+          "role": "body"
+        },
+        {
+          "cell": "D28",
+          "value": 0,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C29",
+          "value": "Sizing rate floor",
+          "role": "body"
+        },
+        {
+          "cell": "D29",
+          "value": 0.0625,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C30",
+          "value": "Amortization years",
+          "role": "body"
+        },
+        {
+          "cell": "D30",
+          "value": 30,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C31",
+          "value": "IO months",
+          "role": "body"
+        },
+        {
+          "cell": "D31",
+          "value": 24,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C32",
+          "value": "Existing debt payoff",
+          "role": "body"
+        },
+        {
+          "cell": "D32",
+          "value": 3300000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C33",
+          "value": "Loan origination fee",
+          "role": "body"
+        },
+        {
+          "cell": "D33",
+          "value": 0.0075,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C34",
+          "value": "Fixed closing costs",
+          "role": "body"
+        },
+        {
+          "cell": "D34",
+          "value": 45000,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C35",
+          "value": "EGI multiplier",
+          "role": "body"
+        },
+        {
+          "cell": "D35",
+          "value": 1,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "C36",
+          "value": "Sizing rate increment",
+          "role": "body"
+        },
+        {
+          "cell": "D36",
+          "value": 0,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C37",
+          "value": "Cap rate increment",
+          "role": "body"
+        },
+        {
+          "cell": "D37",
+          "value": 0,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C38",
+          "value": "Debt yield uses NOI before reserves",
+          "role": "body"
+        },
+        {
+          "cell": "D38",
+          "value": 0,
+          "role": "input",
+          "number_format": "#,##0.00"
+        },
+        {
+          "cell": "F7",
+          "value": "Annual insurance renewal is confirmed in source plan.",
+          "role": "note"
+        }
+      ],
+      "column_widths": {
+        "A": 3,
+        "B": 3,
+        "C": 43,
+        "D": 21,
+        "E": 5,
+        "F": 50
+      }
+    },
+    {
+      "name": "Rent Roll",
+      "cells": [
+        {
+          "cell": "C2",
+          "value": "Juniper Flats | Rent roll",
+          "role": "title"
+        },
+        {
+          "cell": "C3",
+          "value": "As of August 31, 2026 | USD monthly | original fictional source",
+          "role": "note",
+          "wrap": false
+        },
+        {
+          "cell": "C6",
+          "value": "Unit / suite",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "D6",
+          "value": "Tenant",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "E6",
+          "value": "Area SF",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "F6",
+          "value": "Status",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "G6",
+          "value": "Monthly base rent",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "H6",
+          "value": "Market monthly rent",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "I6",
+          "value": "Lease expiry",
+          "role": "header",
+          "wrap": true,
+          "height": 36
+        },
+        {
+          "cell": "C7",
+          "value": "101",
+          "role": "body"
+        },
+        {
+          "cell": "D7",
+          "value": "Household 101",
+          "role": "body"
+        },
+        {
+          "cell": "E7",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F7",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G7",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H7",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I7",
+          "value": "2027-07-31",
+          "role": "body"
+        },
+        {
+          "cell": "C8",
+          "value": "102",
+          "role": "body"
+        },
+        {
+          "cell": "D8",
+          "value": "Household 102",
+          "role": "body"
+        },
+        {
+          "cell": "E8",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F8",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G8",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H8",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I8",
+          "value": "2026-10-31",
+          "role": "body"
+        },
+        {
+          "cell": "C9",
+          "value": "103",
+          "role": "body"
+        },
+        {
+          "cell": "D9",
+          "value": "Household 103",
+          "role": "body"
+        },
+        {
+          "cell": "E9",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F9",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G9",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H9",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I9",
+          "value": "2026-11-30",
+          "role": "body"
+        },
+        {
+          "cell": "C10",
+          "value": "104",
+          "role": "body"
+        },
+        {
+          "cell": "D10",
+          "value": "Household 104",
+          "role": "body"
+        },
+        {
+          "cell": "E10",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F10",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G10",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H10",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I10",
+          "value": "2026-12-31",
+          "role": "body"
+        },
+        {
+          "cell": "C11",
+          "value": "105",
+          "role": "body"
+        },
+        {
+          "cell": "D11",
+          "value": "Household 105",
+          "role": "body"
+        },
+        {
+          "cell": "E11",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F11",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G11",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H11",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I11",
+          "value": "2027-01-31",
+          "role": "body"
+        },
+        {
+          "cell": "C12",
+          "value": "106",
+          "role": "body"
+        },
+        {
+          "cell": "D12",
+          "value": "Household 106",
+          "role": "body"
+        },
+        {
+          "cell": "E12",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F12",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G12",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H12",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I12",
+          "value": "2027-02-28",
+          "role": "body"
+        },
+        {
+          "cell": "C13",
+          "value": "107",
+          "role": "body"
+        },
+        {
+          "cell": "D13",
+          "value": "Household 107",
+          "role": "body"
+        },
+        {
+          "cell": "E13",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F13",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G13",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H13",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I13",
+          "value": "2027-03-31",
+          "role": "body"
+        },
+        {
+          "cell": "C14",
+          "value": "108",
+          "role": "body"
+        },
+        {
+          "cell": "D14",
+          "value": "Household 108",
+          "role": "body"
+        },
+        {
+          "cell": "E14",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F14",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G14",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H14",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I14",
+          "value": "2027-04-30",
+          "role": "body"
+        },
+        {
+          "cell": "C15",
+          "value": "109",
+          "role": "body"
+        },
+        {
+          "cell": "D15",
+          "value": "Vacant",
+          "role": "body"
+        },
+        {
+          "cell": "E15",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F15",
+          "value": "Vacant",
+          "role": "body"
+        },
+        {
+          "cell": "G15",
+          "value": null,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H15",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I15",
+          "value": null,
+          "role": "body"
+        },
+        {
+          "cell": "C16",
+          "value": "110",
+          "role": "body"
+        },
+        {
+          "cell": "D16",
+          "value": "Household 110",
+          "role": "body"
+        },
+        {
+          "cell": "E16",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F16",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G16",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H16",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I16",
+          "value": "2027-06-30",
+          "role": "body"
+        },
+        {
+          "cell": "C17",
+          "value": "111",
+          "role": "body"
+        },
+        {
+          "cell": "D17",
+          "value": "Household 111",
+          "role": "body"
+        },
+        {
+          "cell": "E17",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F17",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G17",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H17",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I17",
+          "value": "2027-07-31",
+          "role": "body"
+        },
+        {
+          "cell": "C18",
+          "value": "112",
+          "role": "body"
+        },
+        {
+          "cell": "D18",
+          "value": "Household 112",
+          "role": "body"
+        },
+        {
+          "cell": "E18",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F18",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G18",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H18",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I18",
+          "value": "2027-08-31",
+          "role": "body"
+        },
+        {
+          "cell": "C19",
+          "value": "113",
+          "role": "body"
+        },
+        {
+          "cell": "D19",
+          "value": "Household 113",
+          "role": "body"
+        },
+        {
+          "cell": "E19",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F19",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G19",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H19",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I19",
+          "value": "2026-09-30",
+          "role": "body"
+        },
+        {
+          "cell": "C20",
+          "value": "114",
+          "role": "body"
+        },
+        {
+          "cell": "D20",
+          "value": "Household 114",
+          "role": "body"
+        },
+        {
+          "cell": "E20",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F20",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G20",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H20",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I20",
+          "value": "2026-10-31",
+          "role": "body"
+        },
+        {
+          "cell": "C21",
+          "value": "115",
+          "role": "body"
+        },
+        {
+          "cell": "D21",
+          "value": "Household 115",
+          "role": "body"
+        },
+        {
+          "cell": "E21",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F21",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G21",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H21",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I21",
+          "value": "2026-11-30",
+          "role": "body"
+        },
+        {
+          "cell": "C22",
+          "value": "116",
+          "role": "body"
+        },
+        {
+          "cell": "D22",
+          "value": "Household 116",
+          "role": "body"
+        },
+        {
+          "cell": "E22",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F22",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G22",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H22",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I22",
+          "value": "2026-12-31",
+          "role": "body"
+        },
+        {
+          "cell": "C23",
+          "value": "117",
+          "role": "body"
+        },
+        {
+          "cell": "D23",
+          "value": "Household 117",
+          "role": "body"
+        },
+        {
+          "cell": "E23",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F23",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G23",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H23",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I23",
+          "value": "2027-01-31",
+          "role": "body"
+        },
+        {
+          "cell": "C24",
+          "value": "118",
+          "role": "body"
+        },
+        {
+          "cell": "D24",
+          "value": "Household 118",
+          "role": "body"
+        },
+        {
+          "cell": "E24",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F24",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G24",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H24",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I24",
+          "value": "2027-02-28",
+          "role": "body"
+        },
+        {
+          "cell": "C25",
+          "value": "119",
+          "role": "body"
+        },
+        {
+          "cell": "D25",
+          "value": "Household 119",
+          "role": "body"
+        },
+        {
+          "cell": "E25",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F25",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G25",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H25",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I25",
+          "value": "2027-03-31",
+          "role": "body"
+        },
+        {
+          "cell": "C26",
+          "value": "120",
+          "role": "body"
+        },
+        {
+          "cell": "D26",
+          "value": "Household 120",
+          "role": "body"
+        },
+        {
+          "cell": "E26",
+          "value": 750,
+          "role": "body"
+        },
+        {
+          "cell": "F26",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G26",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H26",
+          "value": 1675,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I26",
+          "value": "2027-04-30",
+          "role": "body"
+        },
+        {
+          "cell": "C27",
+          "value": "121",
+          "role": "body"
+        },
+        {
+          "cell": "D27",
+          "value": "Household 121",
+          "role": "body"
+        },
+        {
+          "cell": "E27",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F27",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G27",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H27",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I27",
+          "value": "2027-05-31",
+          "role": "body"
+        },
+        {
+          "cell": "C28",
+          "value": "122",
+          "role": "body"
+        },
+        {
+          "cell": "D28",
+          "value": "Household 122",
+          "role": "body"
+        },
+        {
+          "cell": "E28",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F28",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G28",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H28",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I28",
+          "value": "2027-06-30",
+          "role": "body"
+        },
+        {
+          "cell": "C29",
+          "value": "123",
+          "role": "body"
+        },
+        {
+          "cell": "D29",
+          "value": "Household 123",
+          "role": "body"
+        },
+        {
+          "cell": "E29",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F29",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G29",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H29",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I29",
+          "value": "2027-07-31",
+          "role": "body"
+        },
+        {
+          "cell": "C30",
+          "value": "124",
+          "role": "body"
+        },
+        {
+          "cell": "D30",
+          "value": "Household 124",
+          "role": "body"
+        },
+        {
+          "cell": "E30",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F30",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G30",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H30",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I30",
+          "value": "2027-08-31",
+          "role": "body"
+        },
+        {
+          "cell": "C31",
+          "value": "125",
+          "role": "body"
+        },
+        {
+          "cell": "D31",
+          "value": "Vacant",
+          "role": "body"
+        },
+        {
+          "cell": "E31",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F31",
+          "value": "Vacant",
+          "role": "body"
+        },
+        {
+          "cell": "G31",
+          "value": null,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H31",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I31",
+          "value": null,
+          "role": "body"
+        },
+        {
+          "cell": "C32",
+          "value": "126",
+          "role": "body"
+        },
+        {
+          "cell": "D32",
+          "value": "Household 126",
+          "role": "body"
+        },
+        {
+          "cell": "E32",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F32",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G32",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H32",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I32",
+          "value": "2026-10-31",
+          "role": "body"
+        },
+        {
+          "cell": "C33",
+          "value": "127",
+          "role": "body"
+        },
+        {
+          "cell": "D33",
+          "value": "Household 127",
+          "role": "body"
+        },
+        {
+          "cell": "E33",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F33",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G33",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H33",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I33",
+          "value": "2026-11-30",
+          "role": "body"
+        },
+        {
+          "cell": "C34",
+          "value": "128",
+          "role": "body"
+        },
+        {
+          "cell": "D34",
+          "value": "Household 128",
+          "role": "body"
+        },
+        {
+          "cell": "E34",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F34",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G34",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H34",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I34",
+          "value": "2026-12-31",
+          "role": "body"
+        },
+        {
+          "cell": "C35",
+          "value": "129",
+          "role": "body"
+        },
+        {
+          "cell": "D35",
+          "value": "Household 129",
+          "role": "body"
+        },
+        {
+          "cell": "E35",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F35",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G35",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H35",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I35",
+          "value": "2027-01-31",
+          "role": "body"
+        },
+        {
+          "cell": "C36",
+          "value": "130",
+          "role": "body"
+        },
+        {
+          "cell": "D36",
+          "value": "Household 130",
+          "role": "body"
+        },
+        {
+          "cell": "E36",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F36",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G36",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H36",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I36",
+          "value": "2027-02-28",
+          "role": "body"
+        },
+        {
+          "cell": "C37",
+          "value": "131",
+          "role": "body"
+        },
+        {
+          "cell": "D37",
+          "value": "Household 131",
+          "role": "body"
+        },
+        {
+          "cell": "E37",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F37",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G37",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H37",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I37",
+          "value": "2027-03-31",
+          "role": "body"
+        },
+        {
+          "cell": "C38",
+          "value": "132",
+          "role": "body"
+        },
+        {
+          "cell": "D38",
+          "value": "Household 132",
+          "role": "body"
+        },
+        {
+          "cell": "E38",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F38",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G38",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H38",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I38",
+          "value": "2027-04-30",
+          "role": "body"
+        },
+        {
+          "cell": "C39",
+          "value": "133",
+          "role": "body"
+        },
+        {
+          "cell": "D39",
+          "value": "Household 133",
+          "role": "body"
+        },
+        {
+          "cell": "E39",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F39",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G39",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H39",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I39",
+          "value": "2027-05-31",
+          "role": "body"
+        },
+        {
+          "cell": "C40",
+          "value": "134",
+          "role": "body"
+        },
+        {
+          "cell": "D40",
+          "value": "Household 134",
+          "role": "body"
+        },
+        {
+          "cell": "E40",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F40",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G40",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H40",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I40",
+          "value": "2027-06-30",
+          "role": "body"
+        },
+        {
+          "cell": "C41",
+          "value": "135",
+          "role": "body"
+        },
+        {
+          "cell": "D41",
+          "value": "Household 135",
+          "role": "body"
+        },
+        {
+          "cell": "E41",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F41",
+          "value": "Occupied",
+          "role": "body"
+        },
+        {
+          "cell": "G41",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H41",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I41",
+          "value": "2027-07-31",
+          "role": "body"
+        },
+        {
+          "cell": "C42",
+          "value": "136",
+          "role": "body"
+        },
+        {
+          "cell": "D42",
+          "value": "Vacant",
+          "role": "body"
+        },
+        {
+          "cell": "E42",
+          "value": 1050,
+          "role": "body"
+        },
+        {
+          "cell": "F42",
+          "value": "Vacant",
+          "role": "body"
+        },
+        {
+          "cell": "G42",
+          "value": null,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H42",
+          "value": 2175,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I42",
+          "value": null,
+          "role": "body"
+        },
+        {
+          "cell": "C45",
+          "value": "Blank contractual rent means no current rent for vacant premises. Market rent is not collected income.",
+          "role": "note",
+          "wrap": false
+        },
+        {
+          "cell": "C47",
+          "value": "Review executed lease evidence for premises 101; no option exercise notice is included.",
+          "role": "note",
+          "wrap": false
+        }
+      ],
+      "column_widths": {
+        "A": 3,
+        "B": 3,
+        "C": 12,
+        "D": 25,
+        "E": 14,
+        "F": 14,
+        "G": 18,
+        "H": 18,
+        "I": 17
+      },
+      "freeze_rows": 6
+    },
+    {
+      "name": "T12",
+      "cells": [
+        {
+          "cell": "C2",
+          "value": "Historical T12 | September 2025 - August 2026",
+          "role": "title"
+        },
+        {
+          "cell": "C6",
+          "value": "Account",
+          "role": "header"
+        },
+        {
+          "cell": "D6",
+          "value": "Sep-25",
+          "role": "header"
+        },
+        {
+          "cell": "E6",
+          "value": "Oct-25",
+          "role": "header"
+        },
+        {
+          "cell": "F6",
+          "value": "Nov-25",
+          "role": "header"
+        },
+        {
+          "cell": "G6",
+          "value": "Dec-25",
+          "role": "header"
+        },
+        {
+          "cell": "H6",
+          "value": "Jan-26",
+          "role": "header"
+        },
+        {
+          "cell": "I6",
+          "value": "Feb-26",
+          "role": "header"
+        },
+        {
+          "cell": "J6",
+          "value": "Mar-26",
+          "role": "header"
+        },
+        {
+          "cell": "K6",
+          "value": "Apr-26",
+          "role": "header"
+        },
+        {
+          "cell": "L6",
+          "value": "May-26",
+          "role": "header"
+        },
+        {
+          "cell": "M6",
+          "value": "Jun-26",
+          "role": "header"
+        },
+        {
+          "cell": "N6",
+          "value": "Jul-26",
+          "role": "header"
+        },
+        {
+          "cell": "O6",
+          "value": "Aug-26",
+          "role": "header"
+        },
+        {
+          "cell": "P6",
+          "value": "Annual",
+          "role": "header"
+        },
+        {
+          "cell": "C7",
+          "value": "Gross potential base rent",
+          "role": "body"
+        },
+        {
+          "cell": "D7",
+          "value": 65800,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E7",
+          "value": 67200,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F7",
+          "value": 68600,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G7",
+          "value": 69300,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H7",
+          "value": 70700,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I7",
+          "value": 72100,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J7",
+          "value": 72800,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K7",
+          "value": 74200,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L7",
+          "value": 72100,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M7",
+          "value": 70700,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N7",
+          "value": 68600,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O7",
+          "value": 67900,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P7",
+          "formula": "=SUM(D7:O7)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C8",
+          "value": "Vacancy loss",
+          "role": "body"
+        },
+        {
+          "cell": "D8",
+          "value": -3360,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E8",
+          "value": -3430,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F8",
+          "value": -3465,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G8",
+          "value": -3535,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H8",
+          "value": -3605,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I8",
+          "value": -3640,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J8",
+          "value": -3710,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K8",
+          "value": -3605,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L8",
+          "value": -3535,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M8",
+          "value": -3430,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N8",
+          "value": -3395,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O8",
+          "value": -3290,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P8",
+          "formula": "=SUM(D8:O8)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C9",
+          "value": "Concessions",
+          "role": "body"
+        },
+        {
+          "cell": "D9",
+          "value": -980,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E9",
+          "value": -990,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F9",
+          "value": -1010,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G9",
+          "value": -1030,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H9",
+          "value": -1040,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I9",
+          "value": -1060,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J9",
+          "value": -1030,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K9",
+          "value": -1010,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L9",
+          "value": -980,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M9",
+          "value": -970,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N9",
+          "value": -940,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O9",
+          "value": -960,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P9",
+          "formula": "=SUM(D9:O9)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C10",
+          "value": "Bad debt",
+          "role": "body"
+        },
+        {
+          "cell": "D10",
+          "value": -371,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E10",
+          "value": -379,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F10",
+          "value": -386,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G10",
+          "value": -390,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H10",
+          "value": -398,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I10",
+          "value": -386,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J10",
+          "value": -379,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K10",
+          "value": -368,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L10",
+          "value": -364,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M10",
+          "value": -352,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N10",
+          "value": -360,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O10",
+          "value": -367,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P10",
+          "formula": "=SUM(D10:O10)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C11",
+          "value": "Other income / recoveries",
+          "role": "body"
+        },
+        {
+          "cell": "D11",
+          "value": 3333,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E11",
+          "value": 3399,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F11",
+          "value": 3432,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G11",
+          "value": 3498,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H11",
+          "value": 3399,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I11",
+          "value": 3333,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J11",
+          "value": 3234,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K11",
+          "value": 3201,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L11",
+          "value": 3102,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M11",
+          "value": 3168,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N11",
+          "value": 3234,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O11",
+          "value": 3267,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P11",
+          "formula": "=SUM(D11:O11)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C12",
+          "value": "Real estate taxes",
+          "role": "body"
+        },
+        {
+          "cell": "D12",
+          "value": 9270,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E12",
+          "value": 9360,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F12",
+          "value": 9540,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G12",
+          "value": 9270,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H12",
+          "value": 9090,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I12",
+          "value": 8820,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J12",
+          "value": 8730,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K12",
+          "value": 8460,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L12",
+          "value": 8640,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M12",
+          "value": 8820,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N12",
+          "value": 8910,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O12",
+          "value": 9090,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P12",
+          "formula": "=SUM(D12:O12)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C13",
+          "value": "Property insurance",
+          "role": "body"
+        },
+        {
+          "cell": "D13",
+          "value": 2704,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E13",
+          "value": 2756,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F13",
+          "value": 2678,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G13",
+          "value": 2626,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H13",
+          "value": 2548,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I13",
+          "value": 2522,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J13",
+          "value": 2444,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K13",
+          "value": 2496,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L13",
+          "value": 2548,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M13",
+          "value": 2574,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N13",
+          "value": 2626,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O13",
+          "value": 2678,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P13",
+          "formula": "=SUM(D13:O13)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C14",
+          "value": "Utilities",
+          "role": "body"
+        },
+        {
+          "cell": "D14",
+          "value": 2544,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E14",
+          "value": 2472,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F14",
+          "value": 2424,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G14",
+          "value": 2352,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H14",
+          "value": 2328,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I14",
+          "value": 2256,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J14",
+          "value": 2304,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K14",
+          "value": 2352,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L14",
+          "value": 2376,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M14",
+          "value": 2424,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N14",
+          "value": 2472,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O14",
+          "value": 2496,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P14",
+          "formula": "=SUM(D14:O14)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C15",
+          "value": "Repairs and maintenance",
+          "role": "body"
+        },
+        {
+          "cell": "D15",
+          "value": 3966,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E15",
+          "value": 3888,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F15",
+          "value": 3773,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G15",
+          "value": 3734,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H15",
+          "value": 3619,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I15",
+          "value": 3696,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J15",
+          "value": 3773,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K15",
+          "value": 3812,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L15",
+          "value": 3888,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M15",
+          "value": 3966,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N15",
+          "value": 4004,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O15",
+          "value": 4081,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P15",
+          "formula": "=SUM(D15:O15)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C16",
+          "value": "Payroll / contract labor",
+          "role": "body"
+        },
+        {
+          "cell": "D16",
+          "value": 3535,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E16",
+          "value": 3430,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F16",
+          "value": 3395,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G16",
+          "value": 3290,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H16",
+          "value": 3360,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I16",
+          "value": 3430,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J16",
+          "value": 3465,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K16",
+          "value": 3535,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L16",
+          "value": 3605,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M16",
+          "value": 3640,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N16",
+          "value": 3710,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O16",
+          "value": 3605,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P16",
+          "formula": "=SUM(D16:O16)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C17",
+          "value": "Administrative / legal",
+          "role": "body"
+        },
+        {
+          "cell": "D17",
+          "value": 1764,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E17",
+          "value": 1746,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F17",
+          "value": 1692,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G17",
+          "value": 1728,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H17",
+          "value": 1764,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I17",
+          "value": 1782,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J17",
+          "value": 1818,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K17",
+          "value": 1854,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L17",
+          "value": 1872,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M17",
+          "value": 1908,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N17",
+          "value": 1854,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O17",
+          "value": 1818,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P17",
+          "formula": "=SUM(D17:O17)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C18",
+          "value": "Management fee",
+          "role": "body"
+        },
+        {
+          "cell": "D18",
+          "value": 2425,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E18",
+          "value": 2350,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F18",
+          "value": 2400,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G18",
+          "value": 2450,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H18",
+          "value": 2475,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I18",
+          "value": 2525,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J18",
+          "value": 2575,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K18",
+          "value": 2600,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L18",
+          "value": 2650,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M18",
+          "value": 2575,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N18",
+          "value": 2525,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O18",
+          "value": 2450,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P18",
+          "formula": "=SUM(D18:O18)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C19",
+          "value": "Replacement reserves (below NOI)",
+          "role": "body"
+        },
+        {
+          "cell": "D19",
+          "value": 846,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E19",
+          "value": 864,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F19",
+          "value": 882,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G19",
+          "value": 891,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H19",
+          "value": 909,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I19",
+          "value": 927,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J19",
+          "value": 936,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K19",
+          "value": 954,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L19",
+          "value": 927,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M19",
+          "value": 909,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N19",
+          "value": 882,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O19",
+          "value": 873,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P19",
+          "formula": "=SUM(D19:O19)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C20",
+          "value": "Capital improvements (below cash flow)",
+          "role": "body"
+        },
+        {
+          "cell": "D20",
+          "value": 4960,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E20",
+          "value": 5063,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F20",
+          "value": 5115,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G20",
+          "value": 5218,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H20",
+          "value": 5322,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I20",
+          "value": 5373,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J20",
+          "value": 5477,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K20",
+          "value": 5322,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L20",
+          "value": 5218,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M20",
+          "value": 5063,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N20",
+          "value": 5012,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O20",
+          "value": 4857,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P20",
+          "formula": "=SUM(D20:O20)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C21",
+          "value": "Loan principal and interest (below cash flow)",
+          "role": "body"
+        },
+        {
+          "cell": "D21",
+          "value": 24010,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E21",
+          "value": 24255,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F21",
+          "value": 24745,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G21",
+          "value": 25235,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H21",
+          "value": 25480,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I21",
+          "value": 25970,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J21",
+          "value": 25235,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K21",
+          "value": 24745,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L21",
+          "value": 24010,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M21",
+          "value": 23765,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N21",
+          "value": 23030,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O21",
+          "value": 23520,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P21",
+          "formula": "=SUM(D21:O21)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "C22",
+          "value": "Depreciation (noncash)",
+          "role": "body"
+        },
+        {
+          "cell": "D22",
+          "value": 14850,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "E22",
+          "value": 15150,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "F22",
+          "value": 15450,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "G22",
+          "value": 15600,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "H22",
+          "value": 15900,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "I22",
+          "value": 15450,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "J22",
+          "value": 15150,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "K22",
+          "value": 14700,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "L22",
+          "value": 14550,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "M22",
+          "value": 14100,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "N22",
+          "value": 14400,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "O22",
+          "value": 14700,
+          "role": "body",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        },
+        {
+          "cell": "P22",
+          "formula": "=SUM(D22:O22)",
+          "number_format": "$#,##0;($#,##0);\"-\""
+        }
+      ],
+      "column_widths": {
+        "A": 3,
+        "B": 3,
+        "C": 40,
+        "D": 13,
+        "E": 13,
+        "F": 13,
+        "G": 13,
+        "H": 13,
+        "I": 13,
+        "J": 13,
+        "K": 13,
+        "L": 13,
+        "M": 13,
+        "N": 13,
+        "O": 13,
+        "P": 17
+      },
+      "freeze_rows": 6
+    }
+  ],
+  "input_map": {
+    "cap_rate": "Inputs!D21",
+    "sizing_rate_increment": "Inputs!D36",
+    "egi_multiplier": "Inputs!D35"
+  },
+  "output_map": {
+    "uw_egi": "Analysis!D7",
+    "uw_noi_before_reserves": "Analysis!D10",
+    "uw_ncf": "Analysis!D12",
+    "capitalization_value": "Analysis!D14",
+    "contract_rate": "Analysis!D15",
+    "sizing_rate": "Analysis!D16",
+    "annual_debt_constant": "Analysis!D17",
+    "ltv_limit": "Analysis!D18",
+    "dscr_limit": "Analysis!D19",
+    "debt_yield_limit": "Analysis!D20",
+    "maximum_loan": "Analysis!D21",
+    "binding_constraint": "Analysis!D22",
+    "first_year_debt_service": "Analysis!D26",
+    "cash_to_borrower": "Analysis!D27",
+    "t12_egi": "Analysis!D28",
+    "t12_operating_expenses": "Analysis!D29",
+    "t12_noi_before_reserves": "Analysis!D30",
+    "t12_reserves": "Analysis!D31",
+    "t12_ncf": "Analysis!D32"
+  }
+}

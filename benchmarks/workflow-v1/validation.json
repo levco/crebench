@@ -1,0 +1,2038 @@
+{
+  "method": "Independent payment-by-payment discounted cash flow plus XLSX recalculation",
+  "independent_human_review": false,
+  "results": [
+    {
+      "case_id": "cedar-landing",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 691200,
+          "expected": 691200,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 371200,
+          "expected": 371200,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 320000,
+          "expected": 320000,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 647395.2,
+          "expected": 647395.2,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 631795.2,
+          "expected": 631795.2,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6407489.510999343,
+          "expected": 6407489.510999293,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6407489.510999343,
+          "expected": 6407489.510999293,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lease-File.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 1025280,
+          "expected": 1025279.9999999999,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 647395.2,
+          "expected": 647395.2,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 631795.2,
+          "expected": 631795.2,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 11259046.9565217,
+          "expected": 11259046.956521738,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.0625,
+          "expected": 0.0625,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.065,
+          "expected": 0.065,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.0758481628191558,
+          "expected": 0.07584816281915584,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 6755428.17391304,
+          "expected": 6755428.173913043,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6407489.51099929,
+          "expected": 6407489.510999293,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 7019946.66666667,
+          "expected": 7019946.666666666,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6407489.51099929,
+          "expected": 6407489.510999293,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "DSCR",
+          "expected": "DSCR",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 400468.094437456,
+          "expected": 400468.0944374558,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 1778414.6158893,
+          "expected": 1778414.6158893001,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 691200,
+          "expected": 691200,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 371200,
+          "expected": 371200,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 320000,
+          "expected": 320000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 14400,
+          "expected": 14400,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 305600,
+          "expected": 305600,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "hawthorn-center",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 866400,
+          "expected": 866400,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 264000,
+          "expected": 264000,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 602400,
+          "expected": 602400,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 629760.0,
+          "expected": 629760.0,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 625440.0,
+          "expected": 625440.0,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6261936.607626686,
+          "expected": 6261936.6076267185,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6261936.607626686,
+          "expected": 6261936.6076267185,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lease-File.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 921000,
+          "expected": 921000.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 629760,
+          "expected": 629760.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 625440,
+          "expected": 625440.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 10076160,
+          "expected": 10076160.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.0635,
+          "expected": 0.0635,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.0635,
+          "expected": 0.0635,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.0799037153123839,
+          "expected": 0.07990371531238386,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 6297600,
+          "expected": 6297600.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6261936.60762672,
+          "expected": 6261936.6076267185,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 6997333.33333333,
+          "expected": 6997333.333333334,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6261936.60762672,
+          "expected": 6261936.6076267185,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "DSCR",
+          "expected": "DSCR",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 500352,
+          "expected": 500352.00000000006,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 1959841.1147657,
+          "expected": 1959841.1147657046,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 866400,
+          "expected": 866400,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 264000,
+          "expected": 264000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 602400,
+          "expected": 602400,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 11520,
+          "expected": 11520,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 590880,
+          "expected": 590880,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "juniper-flats",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 821100,
+          "expected": 821100,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 307800,
+          "expected": 307800,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 513300,
+          "expected": 513300,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 545960.0,
+          "expected": 545960.0,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 535160.0,
+          "expected": 535160.0,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 5794435.060223539,
+          "expected": 5794435.060223457,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 5794435.060223539,
+          "expected": 5794435.060223457,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lease-File.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 854160,
+          "expected": 854160.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 545960,
+          "expected": 545960.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 535160,
+          "expected": 535160.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 9494956.52173913,
+          "expected": 9494956.52173913,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.059,
+          "expected": 0.059,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.0625,
+          "expected": 0.0625,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.0738860640511673,
+          "expected": 0.07388606405116734,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 6171721.73913044,
+          "expected": 6171721.7391304355,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 5794435.06022346,
+          "expected": 5794435.060223457,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 6296000,
+          "expected": 6296000.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 5794435.06022346,
+          "expected": 5794435.060223457,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "DSCR",
+          "expected": "DSCR",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 341871.668553184,
+          "expected": 341871.66855318396,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 2405976.79727178,
+          "expected": 2405976.7972717816,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 821100,
+          "expected": 821100,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 307800,
+          "expected": 307800,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 513300,
+          "expected": 513300,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 10800,
+          "expected": 10800,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 502500,
+          "expected": 502500,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "market-row",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 723600,
+          "expected": 723600,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 216000,
+          "expected": 216000,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 507600,
+          "expected": 507600,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 544218.24,
+          "expected": 544218.24,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 539618.24,
+          "expected": 539618.24,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 5327927.69281834,
+          "expected": 5327927.692818298,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 5327927.69281834,
+          "expected": 5327927.692818298,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lease-File.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 768144,
+          "expected": 768144.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 544218.24,
+          "expected": 544218.24,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 539618.24,
+          "expected": 539618.24,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 8372588.30769231,
+          "expected": 8372588.307692307,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.0625,
+          "expected": 0.0625,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.065,
+          "expected": 0.065,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.081024859361717,
+          "expected": 0.08102485936171701,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 5442182.4,
+          "expected": 5442182.399999999,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 5327927.6928183,
+          "expected": 5327927.692818298,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 6046869.33333333,
+          "expected": 6046869.333333333,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 5327927.6928183,
+          "expected": 5327927.692818298,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "DSCR",
+          "expected": "DSCR",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 421760.489859476,
+          "expected": 421760.4898594764,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 1826648.41589012,
+          "expected": 1826648.415890115,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 723600,
+          "expected": 723600,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 216000,
+          "expected": 216000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 507600,
+          "expected": 507600,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 9200,
+          "expected": 9200,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 498400,
+          "expected": 498400,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "meadow-commerce",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 882000,
+          "expected": 882000,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 212400,
+          "expected": 212400,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 669600,
+          "expected": 669600,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 666860.4,
+          "expected": 666860.4,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 652460.4,
+          "expected": 652460.4,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6617070.166633802,
+          "expected": 6617070.16663375,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6155634.461538462,
+          "expected": 6155634.461538462,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lease-File.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 895320,
+          "expected": 895320.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 666860.4,
+          "expected": 666860.4,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 652460.4,
+          "expected": 652460.4,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 10259390.7692308,
+          "expected": 10259390.76923077,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.061,
+          "expected": 0.061,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.065,
+          "expected": 0.065,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.0758481628191558,
+          "expected": 0.07584816281915584,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 6155634.46153846,
+          "expected": 6155634.461538462,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6617070.16663375,
+          "expected": 6617070.16663375,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 6868004.21052632,
+          "expected": 6868004.2105263155,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6155634.46153846,
+          "expected": 6155634.461538462,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "LTV",
+          "expected": "LTV",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 375493.702153846,
+          "expected": 375493.70215384616,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 2439078.11692308,
+          "expected": 2439078.1169230775,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 882000,
+          "expected": 882000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 212400,
+          "expected": 212400,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 669600,
+          "expected": 669600,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 14400,
+          "expected": 14400,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 655200,
+          "expected": 655200,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "stonebridge-logistics",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 846000,
+          "expected": 846000,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 253200,
+          "expected": 253200,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 592800,
+          "expected": 592800,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 760710.0,
+          "expected": 760710.0,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 743710.0,
+          "expected": 743710.0,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6595637.135829547,
+          "expected": 6595637.135829609,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6595637.135829547,
+          "expected": 6595637.135829609,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "image_only_lease_text_length",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 1023000,
+          "expected": 1023000.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 760710,
+          "expected": 760710.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 743710,
+          "expected": 743710.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 11269777.7777778,
+          "expected": 11269777.777777776,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.0675,
+          "expected": 0.0675,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.0725,
+          "expected": 0.0725,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.0867368236916596,
+          "expected": 0.08673682369165958,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 6761866.66666667,
+          "expected": 6761866.666666665,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 6595637.13582961,
+          "expected": 6595637.135829609,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 7437100,
+          "expected": 7437100.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 6595637.13582961,
+          "expected": 6595637.135829609,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "DSCR",
+          "expected": "DSCR",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 445205.506668499,
+          "expected": 445205.5066684986,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 2243191.67163174,
+          "expected": 2243191.6716317385,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 846000,
+          "expected": 846000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 253200,
+          "expected": 253200,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 592800,
+          "expected": 592800,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 17000,
+          "expected": 17000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 575800,
+          "expected": 575800,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "adapter-smoke",
+      "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+      "checks": [
+        {
+          "check": "t12_egi",
+          "actual": 22800,
+          "expected": 22800,
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 6000,
+          "expected": 6000,
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 16800,
+          "expected": 16800,
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 26792.0,
+          "expected": 26792.0,
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 26192.0,
+          "expected": 26192.0,
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 283593.3984179963,
+          "expected": 283593.39841799234,
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 283593.3984179963,
+          "expected": 283593.39841799234,
+          "passed": true
+        },
+        {
+          "check": "source_count",
+          "actual": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "check": "page_count_Lease-File.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lease-File.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Lender-Terms.pdf",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Lender-Terms.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_Property-and-Plan.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_Property-and-Plan.pdf",
+          "passed": true
+        },
+        {
+          "check": "page_count_T12-Statement.pdf",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "check": "extractable_text_T12-Statement.pdf",
+          "passed": true
+        },
+        {
+          "check": "uw_egi",
+          "actual": 33600,
+          "expected": 33600.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_egi",
+          "passed": true
+        },
+        {
+          "check": "uw_noi_before_reserves",
+          "actual": 26792,
+          "expected": 26792.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "uw_ncf",
+          "actual": 26192,
+          "expected": 26192.0,
+          "passed": true
+        },
+        {
+          "check": "live_formula_uw_ncf",
+          "passed": true
+        },
+        {
+          "check": "capitalization_value",
+          "actual": 465947.826086957,
+          "expected": 465947.8260869565,
+          "passed": true
+        },
+        {
+          "check": "live_formula_capitalization_value",
+          "passed": true
+        },
+        {
+          "check": "contract_rate",
+          "actual": 0.059,
+          "expected": 0.059,
+          "passed": true
+        },
+        {
+          "check": "live_formula_contract_rate",
+          "passed": true
+        },
+        {
+          "check": "sizing_rate",
+          "actual": 0.0625,
+          "expected": 0.0625,
+          "passed": true
+        },
+        {
+          "check": "live_formula_sizing_rate",
+          "passed": true
+        },
+        {
+          "check": "annual_debt_constant",
+          "actual": 0.0738860640511673,
+          "expected": 0.07388606405116734,
+          "passed": true
+        },
+        {
+          "check": "live_formula_annual_debt_constant",
+          "passed": true
+        },
+        {
+          "check": "ltv_limit",
+          "actual": 302866.086956522,
+          "expected": 302866.0869565217,
+          "passed": true
+        },
+        {
+          "check": "live_formula_ltv_limit",
+          "passed": true
+        },
+        {
+          "check": "dscr_limit",
+          "actual": 283593.398417992,
+          "expected": 283593.39841799234,
+          "passed": true
+        },
+        {
+          "check": "live_formula_dscr_limit",
+          "passed": true
+        },
+        {
+          "check": "debt_yield_limit",
+          "actual": 308141.176470588,
+          "expected": 308141.1764705882,
+          "passed": true
+        },
+        {
+          "check": "live_formula_debt_yield_limit",
+          "passed": true
+        },
+        {
+          "check": "maximum_loan",
+          "actual": 283593.398417992,
+          "expected": 283593.39841799234,
+          "passed": true
+        },
+        {
+          "check": "live_formula_maximum_loan",
+          "passed": true
+        },
+        {
+          "check": "binding_constraint",
+          "actual": "DSCR",
+          "expected": "DSCR",
+          "passed": true
+        },
+        {
+          "check": "live_formula_binding_constraint",
+          "passed": true
+        },
+        {
+          "check": "first_year_debt_service",
+          "actual": 16732.0105066615,
+          "expected": 16732.010506661547,
+          "passed": true
+        },
+        {
+          "check": "live_formula_first_year_debt_service",
+          "passed": true
+        },
+        {
+          "check": "cash_to_borrower",
+          "actual": 176466.447929857,
+          "expected": 176466.4479298574,
+          "passed": true
+        },
+        {
+          "check": "live_formula_cash_to_borrower",
+          "passed": true
+        },
+        {
+          "check": "t12_egi",
+          "actual": 22800,
+          "expected": 22800,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_egi",
+          "passed": true
+        },
+        {
+          "check": "t12_operating_expenses",
+          "actual": 6000,
+          "expected": 6000,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_operating_expenses",
+          "passed": true
+        },
+        {
+          "check": "t12_noi_before_reserves",
+          "actual": 16800,
+          "expected": 16800,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_noi_before_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_reserves",
+          "actual": 600,
+          "expected": 600,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_reserves",
+          "passed": true
+        },
+        {
+          "check": "t12_ncf",
+          "actual": 16200,
+          "expected": 16200,
+          "passed": true
+        },
+        {
+          "check": "live_formula_t12_ncf",
+          "passed": true
+        },
+        {
+          "check": "no_excel_errors",
+          "passed": true,
+          "errors": []
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

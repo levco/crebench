@@ -1,0 +1,448 @@
+{
+  "id": "hawthorn-center",
+  "name": "Hawthorn Center",
+  "asset": "Retail",
+  "city": "Greenville, SC",
+  "address": "3200 Hawthorn Bench Road, Greenville, SC 29607",
+  "scenario": "Lender management minimum; NOI-based debt yield versus NCF-based coverage; swap breakage",
+  "areas": [
+    1400,
+    1800,
+    2200,
+    2500,
+    3000,
+    3300,
+    3800,
+    4200,
+    5000,
+    1600
+  ],
+  "vacant": [
+    9
+  ],
+  "rents": [
+    3000,
+    4000,
+    4900,
+    5600,
+    6500,
+    7400,
+    8600,
+    9200,
+    10800,
+    3400
+  ],
+  "gross": 759600,
+  "vacancy": -40800,
+  "concessions": -22800,
+  "bad_debt": -6000,
+  "other": 176400,
+  "expenses": [
+    114000,
+    32400,
+    21600,
+    36000,
+    24000,
+    18000,
+    18000
+  ],
+  "reserves": 11520,
+  "capex": 74000,
+  "uw_gross": 780000,
+  "uw_loss": 0.05,
+  "uw_other": 180000,
+  "uw_tax": 120000,
+  "uw_insurance": 34800,
+  "repair_remove": 0,
+  "mgmt": 0.04,
+  "reserve_basis": "sf",
+  "reserve_rate": 0.15,
+  "cap": 0.0625,
+  "ltv": 0.625,
+  "dscr": 1.25,
+  "dy": 0.09,
+  "dy_basis": "NOI",
+  "fixed": 0.0635,
+  "spread": 0,
+  "index": 0,
+  "index_floor": 0,
+  "sizing_floor": 0.0635,
+  "amort": 25,
+  "io": 0,
+  "term": 60,
+  "payoff": 4200000,
+  "fee": 0.008,
+  "closing": 52000,
+  "lease_rent": 3000,
+  "amended_rent": null,
+  "lease_expiry": "2029-08-31",
+  "lease_deposit": 6000,
+  "missing_insurance": false,
+  "scanned": false,
+  "rows": [
+    {
+      "unit": "101",
+      "tenant": "Tenant A LLC",
+      "area": 1400,
+      "status": "Occupied",
+      "rent": 3000,
+      "market_rent": 3000,
+      "expiry": "2029-08-31"
+    },
+    {
+      "unit": "102",
+      "tenant": "Tenant B LLC",
+      "area": 1800,
+      "status": "Occupied",
+      "rent": 4000,
+      "market_rent": 4000,
+      "expiry": "2028-08-31"
+    },
+    {
+      "unit": "103",
+      "tenant": "Tenant C LLC",
+      "area": 2200,
+      "status": "Occupied",
+      "rent": 4900,
+      "market_rent": 4900,
+      "expiry": "2029-08-31"
+    },
+    {
+      "unit": "104",
+      "tenant": "Tenant D LLC",
+      "area": 2500,
+      "status": "Occupied",
+      "rent": 5600,
+      "market_rent": 5600,
+      "expiry": "2030-08-31"
+    },
+    {
+      "unit": "105",
+      "tenant": "Tenant E LLC",
+      "area": 3000,
+      "status": "Occupied",
+      "rent": 6500,
+      "market_rent": 6500,
+      "expiry": "2031-08-31"
+    },
+    {
+      "unit": "106",
+      "tenant": "Tenant F LLC",
+      "area": 3300,
+      "status": "Occupied",
+      "rent": 7400,
+      "market_rent": 7400,
+      "expiry": "2027-08-31"
+    },
+    {
+      "unit": "107",
+      "tenant": "Tenant G LLC",
+      "area": 3800,
+      "status": "Occupied",
+      "rent": 8600,
+      "market_rent": 8600,
+      "expiry": "2028-08-31"
+    },
+    {
+      "unit": "108",
+      "tenant": "Tenant H LLC",
+      "area": 4200,
+      "status": "Occupied",
+      "rent": 9200,
+      "market_rent": 9200,
+      "expiry": "2029-08-31"
+    },
+    {
+      "unit": "109",
+      "tenant": "Tenant I LLC",
+      "area": 5000,
+      "status": "Occupied",
+      "rent": 10800,
+      "market_rent": 10800,
+      "expiry": "2030-08-31"
+    },
+    {
+      "unit": "110",
+      "tenant": "Tenant J LLC",
+      "area": 1600,
+      "status": "Vacant",
+      "rent": null,
+      "market_rent": 3400,
+      "expiry": null
+    }
+  ],
+  "t12_rows": [
+    [
+      "Gross potential base rent",
+      [
+        59502,
+        60768,
+        62034,
+        62667,
+        63933,
+        65199,
+        65832,
+        67098,
+        65199,
+        63933,
+        62034,
+        61401
+      ]
+    ],
+    [
+      "Vacancy loss",
+      [
+        -3264,
+        -3332,
+        -3366,
+        -3434,
+        -3502,
+        -3536,
+        -3604,
+        -3502,
+        -3434,
+        -3332,
+        -3298,
+        -3196
+      ]
+    ],
+    [
+      "Concessions",
+      [
+        -1862,
+        -1881,
+        -1919,
+        -1957,
+        -1976,
+        -2014,
+        -1957,
+        -1919,
+        -1862,
+        -1843,
+        -1786,
+        -1824
+      ]
+    ],
+    [
+      "Bad debt",
+      [
+        -495,
+        -505,
+        -515,
+        -520,
+        -530,
+        -515,
+        -505,
+        -490,
+        -485,
+        -470,
+        -480,
+        -490
+      ]
+    ],
+    [
+      "Other income / recoveries",
+      [
+        14847,
+        15141,
+        15288,
+        15582,
+        15141,
+        14847,
+        14406,
+        14259,
+        13818,
+        14112,
+        14406,
+        14553
+      ]
+    ],
+    [
+      "Real estate taxes",
+      [
+        9785,
+        9880,
+        10070,
+        9785,
+        9595,
+        9310,
+        9215,
+        8930,
+        9120,
+        9310,
+        9405,
+        9595
+      ]
+    ],
+    [
+      "Property insurance",
+      [
+        2808,
+        2862,
+        2781,
+        2727,
+        2646,
+        2619,
+        2538,
+        2592,
+        2646,
+        2673,
+        2727,
+        2781
+      ]
+    ],
+    [
+      "Utilities",
+      [
+        1908,
+        1854,
+        1818,
+        1764,
+        1746,
+        1692,
+        1728,
+        1764,
+        1782,
+        1818,
+        1854,
+        1872
+      ]
+    ],
+    [
+      "Repairs and maintenance",
+      [
+        3090,
+        3030,
+        2940,
+        2910,
+        2820,
+        2880,
+        2940,
+        2970,
+        3030,
+        3090,
+        3120,
+        3180
+      ]
+    ],
+    [
+      "Payroll / contract labor",
+      [
+        2020,
+        1960,
+        1940,
+        1880,
+        1920,
+        1960,
+        1980,
+        2020,
+        2060,
+        2080,
+        2120,
+        2060
+      ]
+    ],
+    [
+      "Administrative / legal",
+      [
+        1470,
+        1455,
+        1410,
+        1440,
+        1470,
+        1485,
+        1515,
+        1545,
+        1560,
+        1590,
+        1545,
+        1515
+      ]
+    ],
+    [
+      "Management fee",
+      [
+        1455,
+        1410,
+        1440,
+        1470,
+        1485,
+        1515,
+        1545,
+        1560,
+        1590,
+        1545,
+        1515,
+        1470
+      ]
+    ],
+    [
+      "Replacement reserves (below NOI)",
+      [
+        902,
+        922,
+        941,
+        950,
+        970,
+        989,
+        998,
+        1018,
+        989,
+        970,
+        941,
+        930
+      ]
+    ],
+    [
+      "Capital improvements (below cash flow)",
+      [
+        5920,
+        6043,
+        6105,
+        6228,
+        6352,
+        6413,
+        6537,
+        6352,
+        6228,
+        6043,
+        5982,
+        5797
+      ]
+    ],
+    [
+      "Loan principal and interest (below cash flow)",
+      [
+        24010,
+        24255,
+        24745,
+        25235,
+        25480,
+        25970,
+        25235,
+        24745,
+        24010,
+        23765,
+        23030,
+        23520
+      ]
+    ],
+    [
+      "Depreciation (noncash)",
+      [
+        14850,
+        15150,
+        15450,
+        15600,
+        15900,
+        15450,
+        15150,
+        14700,
+        14550,
+        14100,
+        14400,
+        14700
+      ]
+    ]
+  ]
+}

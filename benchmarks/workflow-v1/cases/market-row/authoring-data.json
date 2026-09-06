@@ -1,0 +1,426 @@
+{
+  "id": "market-row",
+  "name": "Market Row",
+  "asset": "Retail",
+  "city": "Columbus, OH",
+  "address": "1800 Market Bench Avenue, Columbus, OH 43207",
+  "scenario": "Executed amendment overrides a stale rent roll; unsigned broker draft is not authoritative",
+  "areas": [
+    1800,
+    2200,
+    2500,
+    3200,
+    4000,
+    5000,
+    1500,
+    2800
+  ],
+  "vacant": [
+    7
+  ],
+  "rents": [
+    7000,
+    5500,
+    6000,
+    7200,
+    9000,
+    10500,
+    3400,
+    5200
+  ],
+  "gross": 645600,
+  "vacancy": -46800,
+  "concessions": -14400,
+  "bad_debt": -3600,
+  "other": 142800,
+  "expenses": [
+    86400,
+    25200,
+    19200,
+    28800,
+    18000,
+    14400,
+    24000
+  ],
+  "reserves": 9200,
+  "capex": 98000,
+  "uw_gross": 657600,
+  "uw_loss": 0.06,
+  "uw_other": 150000,
+  "uw_tax": 90000,
+  "uw_insurance": 27600,
+  "repair_remove": 4800,
+  "mgmt": 0.04,
+  "reserve_basis": "sf",
+  "reserve_rate": 0.2,
+  "cap": 0.065,
+  "ltv": 0.65,
+  "dscr": 1.25,
+  "dy": 0.09,
+  "dy_basis": "NOI",
+  "fixed": 0.0625,
+  "spread": 0,
+  "index": 0,
+  "index_floor": 0,
+  "sizing_floor": 0.065,
+  "amort": 25,
+  "io": 0,
+  "term": 60,
+  "payoff": 3400000,
+  "fee": 0.01,
+  "closing": 48000,
+  "lease_rent": 7000,
+  "amended_rent": 7500,
+  "lease_expiry": "2031-08-31",
+  "lease_deposit": 15000,
+  "missing_insurance": false,
+  "scanned": false,
+  "rows": [
+    {
+      "unit": "101",
+      "tenant": "Tenant A LLC",
+      "area": 1800,
+      "status": "Occupied",
+      "rent": 7000,
+      "market_rent": 7000,
+      "expiry": "2031-08-31"
+    },
+    {
+      "unit": "102",
+      "tenant": "Tenant B LLC",
+      "area": 2200,
+      "status": "Occupied",
+      "rent": 5500,
+      "market_rent": 5500,
+      "expiry": "2028-08-31"
+    },
+    {
+      "unit": "103",
+      "tenant": "Tenant C LLC",
+      "area": 2500,
+      "status": "Occupied",
+      "rent": 6000,
+      "market_rent": 6000,
+      "expiry": "2029-08-31"
+    },
+    {
+      "unit": "104",
+      "tenant": "Tenant D LLC",
+      "area": 3200,
+      "status": "Occupied",
+      "rent": 7200,
+      "market_rent": 7200,
+      "expiry": "2030-08-31"
+    },
+    {
+      "unit": "105",
+      "tenant": "Tenant E LLC",
+      "area": 4000,
+      "status": "Occupied",
+      "rent": 9000,
+      "market_rent": 9000,
+      "expiry": "2031-08-31"
+    },
+    {
+      "unit": "106",
+      "tenant": "Tenant F LLC",
+      "area": 5000,
+      "status": "Occupied",
+      "rent": 10500,
+      "market_rent": 10500,
+      "expiry": "2027-08-31"
+    },
+    {
+      "unit": "107",
+      "tenant": "Tenant G LLC",
+      "area": 1500,
+      "status": "Occupied",
+      "rent": 3400,
+      "market_rent": 3400,
+      "expiry": "2028-08-31"
+    },
+    {
+      "unit": "108",
+      "tenant": "Tenant H LLC",
+      "area": 2800,
+      "status": "Vacant",
+      "rent": null,
+      "market_rent": 5200,
+      "expiry": null
+    }
+  ],
+  "t12_rows": [
+    [
+      "Gross potential base rent",
+      [
+        50572,
+        51648,
+        52724,
+        53262,
+        54338,
+        55414,
+        55952,
+        57028,
+        55414,
+        54338,
+        52724,
+        52186
+      ]
+    ],
+    [
+      "Vacancy loss",
+      [
+        -3744,
+        -3822,
+        -3861,
+        -3939,
+        -4017,
+        -4056,
+        -4134,
+        -4017,
+        -3939,
+        -3822,
+        -3783,
+        -3666
+      ]
+    ],
+    [
+      "Concessions",
+      [
+        -1176,
+        -1188,
+        -1212,
+        -1236,
+        -1248,
+        -1272,
+        -1236,
+        -1212,
+        -1176,
+        -1164,
+        -1128,
+        -1152
+      ]
+    ],
+    [
+      "Bad debt",
+      [
+        -297,
+        -303,
+        -309,
+        -312,
+        -318,
+        -309,
+        -303,
+        -294,
+        -291,
+        -282,
+        -288,
+        -294
+      ]
+    ],
+    [
+      "Other income / recoveries",
+      [
+        12019,
+        12257,
+        12376,
+        12614,
+        12257,
+        12019,
+        11662,
+        11543,
+        11186,
+        11424,
+        11662,
+        11781
+      ]
+    ],
+    [
+      "Real estate taxes",
+      [
+        7416,
+        7488,
+        7632,
+        7416,
+        7272,
+        7056,
+        6984,
+        6768,
+        6912,
+        7056,
+        7128,
+        7272
+      ]
+    ],
+    [
+      "Property insurance",
+      [
+        2184,
+        2226,
+        2163,
+        2121,
+        2058,
+        2037,
+        1974,
+        2016,
+        2058,
+        2079,
+        2121,
+        2163
+      ]
+    ],
+    [
+      "Utilities",
+      [
+        1696,
+        1648,
+        1616,
+        1568,
+        1552,
+        1504,
+        1536,
+        1568,
+        1584,
+        1616,
+        1648,
+        1664
+      ]
+    ],
+    [
+      "Repairs and maintenance",
+      [
+        2472,
+        2424,
+        2352,
+        2328,
+        2256,
+        2304,
+        2352,
+        2376,
+        2424,
+        2472,
+        2496,
+        2544
+      ]
+    ],
+    [
+      "Payroll / contract labor",
+      [
+        1515,
+        1470,
+        1455,
+        1410,
+        1440,
+        1470,
+        1485,
+        1515,
+        1545,
+        1560,
+        1590,
+        1545
+      ]
+    ],
+    [
+      "Administrative / legal",
+      [
+        1176,
+        1164,
+        1128,
+        1152,
+        1176,
+        1188,
+        1212,
+        1236,
+        1248,
+        1272,
+        1236,
+        1212
+      ]
+    ],
+    [
+      "Management fee",
+      [
+        1940,
+        1880,
+        1920,
+        1960,
+        1980,
+        2020,
+        2060,
+        2080,
+        2120,
+        2060,
+        2020,
+        1960
+      ]
+    ],
+    [
+      "Replacement reserves (below NOI)",
+      [
+        721,
+        736,
+        751,
+        759,
+        774,
+        790,
+        797,
+        813,
+        790,
+        774,
+        751,
+        744
+      ]
+    ],
+    [
+      "Capital improvements (below cash flow)",
+      [
+        7840,
+        8003,
+        8085,
+        8248,
+        8412,
+        8493,
+        8657,
+        8412,
+        8248,
+        8003,
+        7922,
+        7677
+      ]
+    ],
+    [
+      "Loan principal and interest (below cash flow)",
+      [
+        24010,
+        24255,
+        24745,
+        25235,
+        25480,
+        25970,
+        25235,
+        24745,
+        24010,
+        23765,
+        23030,
+        23520
+      ]
+    ],
+    [
+      "Depreciation (noncash)",
+      [
+        14850,
+        15150,
+        15450,
+        15600,
+        15900,
+        15450,
+        15150,
+        14700,
+        14550,
+        14100,
+        14400,
+        14700
+      ]
+    ]
+  ]
+}
