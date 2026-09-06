@@ -56,7 +56,7 @@ if __name__ == '__main__':
     data = summarize(target)
     # This is a derived report; immutable raw records remain the source of truth.
     (target/'summary.json').write_text(json.dumps(data,indent=2)+'\n')
-    rows = ['# Financial pilot results', '',
+    rows = ['# Financial pilot results', '', '> Historical strict-parser report. See [corrected financial scoring](FINANCIAL-RESULTS.md); all nine retained answers are now scorable. Original execution records below are preserved.', '',
             'Real API attempts on one public synthetic case. These are development findings, not a leaderboard.', '',
             '| Requested model | Run | Status | Checks passed | Complete success | Seconds |',
             '|---|---|---|---|---|---|']
