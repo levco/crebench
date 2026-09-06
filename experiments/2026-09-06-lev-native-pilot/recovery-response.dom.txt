@@ -1,0 +1,291 @@
+    - heading "Harbor Court (fictional) — Source-Grounded Review" [level=1]
+    - paragraph:
+      - text: "As-of: 2025-12-31 · T-12 period: 2025-01-01 through 2025-12-31 (source:"
+      - code: "`sizing-inputs.txt`"
+      - text: )
+      - text: "Loan type: Multifamily permanent refinance (per your prompt)"
+      - text: "Sources used, only:"
+      - code: "`t12.csv`"
+      - text: ","
+      - code: "`rent-roll.csv`"
+      - text: ","
+      - code: "`source-summary.txt`"
+      - text: ","
+      - code: "`sizing-inputs.txt`"
+    - separator
+    - 'heading "1. Financial Review (T-12) — source: `t12.csv`" [level=2]':
+      - text: "1. Financial Review (T-12) — source:"
+      - code: "`t12.csv`"
+    - heading "Line-item classification (verbatim from file)" [level=3]
+    - button "Copy table":
+    - button "Download table":
+    - table:
+      - rowgroup:
+        - row "Account Classification Annual USD":
+          - columnheader "Account"
+          - columnheader "Classification"
+          - columnheader "Annual USD"
+      - rowgroup:
+        - row "Rental income operating_revenue 240,000":
+          - cell "Rental income"
+          - cell "operating_revenue"
+          - cell "240,000"
+        - row "Rent abatements contra_revenue (6,000)":
+          - cell "Rent abatements"
+          - cell "contra_revenue"
+          - cell "(6,000)"
+        - row "Expense reimbursements operating_revenue 12,000":
+          - cell "Expense reimbursements"
+          - cell "operating_revenue"
+          - cell "12,000"
+        - row "Property taxes operating_expense 30,000":
+          - cell "Property taxes"
+          - cell "operating_expense"
+          - cell "30,000"
+        - row "Insurance operating_expense 12,000":
+          - cell "Insurance"
+          - cell "operating_expense"
+          - cell "12,000"
+        - row "Repairs operating_expense 18,000":
+          - cell "Repairs"
+          - cell "operating_expense"
+          - cell "18,000"
+        - row "Utilities operating_expense 24,000":
+          - cell "Utilities"
+          - cell "operating_expense"
+          - cell "24,000"
+        - row "Management operating_expense 12,000":
+          - cell "Management"
+          - cell "operating_expense"
+          - cell "12,000"
+        - row "Roof replacement capital_expenditure 40,000":
+          - cell "Roof replacement"
+          - cell "capital_expenditure"
+          - cell "40,000"
+        - row "Debt service financing 90,000":
+          - cell "Debt service"
+          - cell "financing"
+          - cell "90,000"
+    - heading "Rolled-up P&L" [level=3]
+    - button "Copy table":
+    - button "Download table":
+    - table:
+      - rowgroup:
+        - row "Metric Calc Value":
+          - columnheader "Metric"
+          - columnheader "Calc"
+          - columnheader "Value"
+      - rowgroup:
+        - row "Gross operating revenue 240,000 (rent) + 12,000 (reimb) 252,000":
+          - cell "Gross operating revenue"
+          - cell "240,000 (rent) + 12,000 (reimb)"
+          - cell "252,000"
+        - 'row "Less: contra revenue (abatements) (6,000) (6,000)"':
+          - 'cell "Less: contra revenue (abatements)"'
+          - cell "(6,000)"
+          - cell "(6,000)"
+        - row "Effective Gross Income (EGI) 252,000 − 6,000 246,000":
+          - cell "Effective Gross Income (EGI)"
+          - cell "252,000 − 6,000"
+          - cell "246,000"
+        - row "Total Operating Expenses 30k + 12k + 18k + 24k + 12k (96,000)":
+          - cell "Total Operating Expenses"
+          - cell "30k + 12k + 18k + 24k + 12k"
+          - cell "(96,000)"
+        - row "Net Operating Income (NOI) 246,000 − 96,000 150,000":
+          - cell "Net Operating Income (NOI)"
+          - cell "246,000 − 96,000"
+          - cell "150,000"
+    - heading "Treatment notes (as instructed)" [level=3]
+    - list:
+      - text: Rent abatements (–6,000) — classified in-source as
+      - code: "`contra_revenue`"
+      - text: ", so treated as a reduction to gross rental income (above the NOI line). They flow into EGI, not into opex."
+      - text: Expense reimbursements (+12,000) — classified in-source as
+      - code: "`operating_revenue`"
+      - text: . Included in EGI at gross; they are not netted against the corresponding expense lines.
+      - text: Roof replacement (40,000) — classified as
+      - code: "`capital_expenditure`"
+      - text: . Excluded from operating expenses and therefore excluded from NOI. It sits below the NOI line.
+      - text: Debt service (90,000) — classified as
+      - code: "`financing`"
+      - text: ". Excluded from NOI. It is used only in the DSCR calculation later. (Sanity check: this is the"
+      - emphasis: existing
+      - text: borrower-reported debt service; it is not the assumption used for sizing the new loan.)
+    - separator
+    - 'heading "2. Rent Roll — source: `rent-roll.csv`" [level=2]':
+      - text: "2. Rent Roll — source:"
+      - code: "`rent-roll.csv`"
+    - heading "Unit counts, areas, and occupancy" [level=3]
+    - button "Copy table":
+    - button "Download table":
+    - table:
+      - rowgroup:
+        - row "Metric Value Source / calc":
+          - columnheader "Metric"
+          - columnheader "Value"
+          - columnheader "Source / calc"
+      - rowgroup:
+        - row "Total units 12 count of rows":
+          - cell "Total units"
+          - cell "12"
+          - cell "count of rows"
+        - row "Active (occupied) 9 status = active":
+          - cell "Active (occupied)"
+          - cell "9"
+          - cell "status = active"
+        - row "Vacant 2 units 103, 304":
+          - cell "Vacant"
+          - cell "2"
+          - cell "units 103, 304"
+        - row "Pending 1 unit 104 (commencement 2026-02-01)":
+          - cell "Pending"
+          - cell "1"
+          - cell "unit 104 (commencement 2026-02-01)"
+        - row "Total area (SF) 8,400 Σ area_sf":
+          - cell "Total area (SF)"
+          - cell "8,400"
+          - cell "Σ area_sf"
+        - row "Occupied area (SF), active only 6,500 Σ area_sf where status=active":
+          - cell "Occupied area (SF), active only"
+          - cell "6,500"
+          - cell "Σ area_sf where status=active"
+        - row "Unit occupancy 75.00% 9 / 12":
+          - cell "Unit occupancy"
+          - cell "75.00%"
+          - cell "9 / 12"
+        - row "Area occupancy 77.38% 6,500 / 8,400":
+          - cell "Area occupancy"
+          - cell "77.38%"
+          - cell "6,500 / 8,400"
+    - heading "Occupied units by unit type (active only)" [level=3]
+    - button "Copy table":
+    - button "Download table":
+    - table:
+      - rowgroup:
+        - row "Unit type Occupied units Area SF ea. Monthly rent ea.":
+          - columnheader "Unit type"
+          - columnheader "Occupied units"
+          - columnheader "Area SF ea."
+          - columnheader "Monthly rent ea."
+      - rowgroup:
+        - row "Studio 2 (units 101, 102) 500 1,200":
+          - cell "Studio"
+          - cell "2 (units 101, 102)"
+          - cell "500"
+          - cell "1,200"
+        - row "1BR 4 (units 201–204) 700 1,600":
+          - cell "1BR"
+          - cell "4 (units 201–204)"
+          - cell "700"
+          - cell "1,600"
+        - row "2BR 3 (units 301–303) 900 2,000":
+          - cell "2BR"
+          - cell "3 (units 301–303)"
+          - cell "900"
+          - cell "2,000"
+        - row "Total 9":
+          - cell "Total"
+          - cell "9"
+          - cell
+          - cell
+    - heading "Annual in-place rent (current rent-roll run rate)" [level=3]
+    - list:
+      - listitem: Active monthly rent = (2 × 1,200) + (4 × 1,600) + (3 × 2,000) = 2,400 + 6,400 + 6,000 = 14,800/mo
+      - listitem: Annualized active in-place rent = 14,800 × 12 = 177,600
+      - text: "If unit 104 (pending, commences 2026-02-01) is included at its signed rent of 1,200/mo:"
+      - list:
+        - listitem: Monthly = 14,800 + 1,200 = 16,000 → annualized = 192,000
+    - separator
+    - 'heading "3. Reported-vs-Calculated Reconciliation — source: `source-summary.txt`" [level=2]':
+      - text: "3. Reported-vs-Calculated Reconciliation — source:"
+      - code: "`source-summary.txt`"
+    - paragraph:
+      - text: "The preparer's summary explicitly notes:"
+      - emphasis: "\"The preparer's occupied total includes the signed pending lease.\""
+    - button "Copy table":
+    - button "Download table":
+    - table:
+      - rowgroup:
+        - row "Metric Preparer reported Rent-roll calc (active only) Rent-roll calc (active + pending) Conflict?":
+          - columnheader "Metric"
+          - columnheader "Preparer reported"
+          - columnheader "Rent-roll calc (active only)"
+          - columnheader "Rent-roll calc (active + pending)"
+          - columnheader "Conflict?"
+      - rowgroup:
+        - row "Occupied units 10 9 10 Reconciled — preparer includes pending unit 104":
+          - cell "Occupied units"
+          - cell "10"
+          - cell "9"
+          - cell "10"
+          - cell "Reconciled — preparer includes pending unit 104"
+        - row "Occupied area (SF) 7,000 6,500 7,000 (6,500 + 500) Reconciled — same basis":
+          - cell "Occupied area (SF)"
+          - cell "7,000"
+          - cell "6,500"
+          - cell "7,000 (6,500 + 500)"
+          - cell "Reconciled — same basis"
+        - row "Annual in-place rent 192,000 177,600 192,000 Reconciled — same basis":
+          - cell "Annual in-place rent"
+          - cell "192,000"
+          - cell "177,600"
+          - cell "192,000"
+          - cell "Reconciled — same basis"
+    - paragraph: No genuine conflicts. The preparer's three figures are internally consistent with one another and consistent with the rent roll on an "active + signed-pending" basis. On a strict currently-occupied basis, occupancy is 9 units / 6,500 SF / 177,600 in-place rent. Both bases are preserved.
+    - heading "Historical income vs. current run rate" [level=3]
+    - list:
+      - text: "T-12 historical rental income (2025 calendar year): 240,000 gross rental / 234,000 net of abatements (per"
+      - code: "`t12.csv`"
+      - text: ).
+      - listitem: "Current rent-roll run rate, active only: 177,600 annualized."
+      - listitem: "Current rent-roll run rate, active + pending: 192,000 annualized."
+    - paragraph: "The T-12 rental figure (240,000) sits materially above either current run rate. Possible drivers (not resolvable from the four sources alone): unit-level turnover during 2025, higher in-place rents earlier in the year that have since rolled down, or other-income items rolled into the \"Rental income\" line. Flag for lender-side scrub; do not adjust NOI without a source. For debt-sizing below I use the T-12 NOI as-reported, because that is the source-grounded value."
+    - separator
+    - 'heading "4. Loan Sizing — I/O — source: `sizing-inputs.txt`" [level=2]':
+      - text: "4. Loan Sizing — I/O — source:"
+      - code: "`sizing-inputs.txt`"
+    - paragraph:
+      - text: "Inputs (verbatim): valuation = 2,400,000 · max LTV = 65% · min DSCR = 1.25× · min debt yield = 9.0% · annual interest rate = 7.0% · debt-service method = interest-only."
+      - text: NOI used = 150,000 (from Section 1, T-12 as-reported).
+    - paragraph: "For interest-only: annual debt service = Loan × 7.0%."
+    - button "Copy table":
+    - button "Download table":
+    - table:
+      - rowgroup:
+        - row "Constraint Formula Arithmetic Max loan":
+          - columnheader "Constraint"
+          - columnheader "Formula"
+          - columnheader "Arithmetic"
+          - columnheader "Max loan"
+      - rowgroup:
+        - row "LTV Value × max LTV 2,400,000 × 0.65 $1,560,000":
+          - cell "LTV"
+          - cell "Value × max LTV"
+          - cell "2,400,000 × 0.65"
+          - cell "$1,560,000"
+        - row "DSCR NOI ÷ (DSCR × rate) 150,000 ÷ (1.25 × 0.07) = 150,000 ÷ 0.0875 $1,714,285.71":
+          - cell "DSCR"
+          - cell "NOI ÷ (DSCR × rate)"
+          - cell "150,000 ÷ (1.25 × 0.07) = 150,000 ÷ 0.0875"
+          - cell "$1,714,285.71"
+        - row "Debt Yield NOI ÷ min DY 150,000 ÷ 0.09 $1,666,666.67":
+          - cell "Debt Yield"
+          - cell "NOI ÷ min DY"
+          - cell "150,000 ÷ 0.09"
+          - cell "$1,666,666.67"
+    - paragraph: "Binding constraint: LTV. Maximum proceeds = min($1,560,000; $1,714,285.71; $1,666,666.67) = $1,560,000."
+    - heading "Resulting metrics at $1,560,000 proceeds (sanity check)" [level=3]
+    - list:
+      - listitem: Annual I/O debt service = 1,560,000 × 0.07 = 109,200
+      - listitem: Resulting LTV = 1,560,000 / 2,400,000 = 65.00% ← at the cap (binding)
+      - listitem: Resulting DSCR = 150,000 / 109,200 = 1.37× (cushion over 1.25×)
+      - listitem: Resulting Debt Yield = 150,000 / 1,560,000 = 9.62% (cushion over 9.0%)
+    - separator
+    - heading "Summary" [level=2]
+    - list:
+      - listitem: "NOI (T-12, as-reported): $150,000 — after treating abatements as contra-revenue, reimbursements as gross revenue, and excluding roof capex and debt service."
+      - listitem: "Occupancy split preserved both ways: strict active = 9 units / 6,500 SF / $177,600; active + signed-pending (preparer's basis) = 10 units / 7,000 SF / $192,000. No genuine conflicts."
+      - listitem: Historical T-12 rental income ($240k) runs materially above current rent-roll run rate ($177.6k active / $192k with pending) — flagged, not adjusted (no source to resize).
+      - listitem: "Maximum I/O proceeds: $1,560,000, binding on LTV, with DSCR (1.37×) and debt yield (9.62%) both providing cushion above their floors."
+    - paragraph: No workbook or memo generated, per your instruction. No Index facts edited. Nothing sourced beyond the four attached files.

@@ -2,14 +2,16 @@
 
 One public fictional case. Every retained response is included. Formatting is diagnostic; financial and source-reference checks are separate.
 
-| Model | Run | Financial checks | Reference checks | Seconds |
-|---|---|---|---|---|
-| openai/gpt-5 | r1-1 | 25/30 | 27/27 | 46.628 |
-| anthropic/claude-opus-5 | r1-2 | 29/30 | 27/27 | 14.889 |
-| openai/gpt-5 | r2-1 | 29/30 | 27/27 | 42.117 |
-| anthropic/claude-opus-5 | r2-2 | 28/30 | 27/27 | 15.241 |
-| openai/gpt-5 | r3-1 | 29/30 | 27/27 | 52.753 |
-| anthropic/claude-opus-5 | r3-2 | 29/30 | 27/27 | 13.93 |
+| Model | Run | Financial checks | Reference checks | Seconds | Cost (USD) |
+|---|---|---|---|---|---|
+| openai/gpt-5 | r1-1 | 25/30 | 27/27 | 46.628 | $0.050894 |
+| anthropic/claude-opus-5 | r1-2 | 29/30 | 27/27 | 14.889 | $0.071175 |
+| openai/gpt-5 | r2-1 | 29/30 | 27/27 | 42.117 | $0.041078 |
+| anthropic/claude-opus-5 | r2-2 | 28/30 | 27/27 | 15.241 | $0.071175 |
+| openai/gpt-5 | r3-1 | 29/30 | 27/27 | 52.753 | $0.048718 |
+| anthropic/claude-opus-5 | r3-2 | 29/30 | 27/27 | 13.93 | $0.071175 |
+
+Cost is gateway-reported inference usage for each retained call, in USD. It excludes platform subscriptions, human work, hosting, and unmetered product tools. A reported zero is not an estimate of total service cost; missing usage is shown as Not recorded. Exact amounts remain in the machine-readable report.
 
 ## Financial failures
 

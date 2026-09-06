@@ -34,4 +34,12 @@ Freeze cases, prompts, keys, graders, settings, tool boundaries and provider ver
 
 Report by task and track: accuracy, material errors, supported evidence, completion, human correction effort where measured, repeated-run reliability, cost and latency. Use paired case comparisons and deal-cluster uncertainty, not rubric-row independence or three-run ranges as confidence intervals.
 
-Model adapters, paid-run orchestration, artifact validators, human qualification, and statistical reporting are not yet implemented. See roadmap for their acceptance criteria.
+The public API pilot runner and financial grader are implemented. Artifact validators, independent human qualification, and statistical reporting remain to be completed. See roadmap for their acceptance criteria.
+
+## Cost reporting
+
+Show cost with every run and model summary. Retain exact currency amounts, their source, and the measurement boundary. Per-run costs include attributable failed attempts and retries; exclude no attempt merely because it failed. Separate inference charges, product credits, subscriptions, external tools, and human effort. Do not imply that an inference-only price is the full workflow cost.
+
+Unknown cost stays null or “Not recorded”; it never becomes zero. A provider-reported zero is labeled as reported. Publish model means and totals only when the underlying costs are complete. Do not allocate whole-packet charges to task stages without stage-level metering. Product credits require an attributable event record and a documented conversion before any USD comparison.
+
+A worked solution that invokes no model has no API inference charge. This is distinct from the measured cost of producing an actual model response.

@@ -1,0 +1,144 @@
+{
+  "system": "Lev native product",
+  "case_id": "harbor-court-001",
+  "date": "2026-09-06",
+  "attempt": "direct-chat-attachment recovery after blocked deal-context attempt",
+  "evaluation": "retrospective manual field comparison; not the API 30-check score",
+  "independent_review": false,
+  "comparable_execution": false,
+  "reported_fields": 24,
+  "field_key_size": 27,
+  "unrequested_and_unreported_fields": [
+    "studio_total_units",
+    "1br_total_units",
+    "2br_total_units"
+  ],
+  "cost_usd": null,
+  "cost_credits": null,
+  "cost_status": "No attributable full-run cost record captured. Account-level ledger activity is insufficient.",
+  "elapsed_seconds": null,
+  "source_capture_sha256": "6cd11d765d4068f097266c23d57f67ef28d5bab2163e5291e9e72213c1ab24be",
+  "public_response_sha256": "3ff47a9f72bbd1726fb78b07046811e437bb8c3a2529decb16122637420d021c",
+  "fields": {
+    "operating_revenue": {
+      "value": 246000,
+      "response_excerpt": "Effective Gross Income (EGI) 252,000 \u2212 6,000 246,000",
+      "mapping": "manual transcription of displayed value"
+    },
+    "operating_expenses": {
+      "value": 96000,
+      "response_excerpt": "Total Operating Expenses 30k + 12k + 18k + 24k + 12k (96,000)",
+      "mapping": "manual transcription of displayed value"
+    },
+    "noi": {
+      "value": 150000,
+      "response_excerpt": "Net Operating Income (NOI) 246,000 \u2212 96,000 150,000",
+      "mapping": "manual transcription of displayed value"
+    },
+    "total_units": {
+      "value": 12,
+      "response_excerpt": "Total units 12 count of rows",
+      "mapping": "manual transcription of displayed value"
+    },
+    "occupied_units": {
+      "value": 9,
+      "response_excerpt": "Active (occupied) 9 status = active",
+      "mapping": "manual transcription of displayed value"
+    },
+    "vacant_units": {
+      "value": 2,
+      "response_excerpt": "Vacant 2 units 103, 304",
+      "mapping": "manual transcription of displayed value"
+    },
+    "pending_units": {
+      "value": 1,
+      "response_excerpt": "Pending 1 unit 104 (commencement 2026-02-01)",
+      "mapping": "manual transcription of displayed value"
+    },
+    "total_area_sf": {
+      "value": 8400,
+      "response_excerpt": "Total area (SF) 8,400 \u03a3 area_sf",
+      "mapping": "manual transcription of displayed value"
+    },
+    "occupied_area_sf": {
+      "value": 6500,
+      "response_excerpt": "Occupied area (SF), active only 6,500 \u03a3 area_sf where status=active",
+      "mapping": "manual transcription of displayed value"
+    },
+    "unit_occupancy_pct": {
+      "value": 75,
+      "response_excerpt": "Unit occupancy 75.00% 9 / 12",
+      "mapping": "manual transcription of displayed value"
+    },
+    "area_occupancy_pct": {
+      "value": 77.38,
+      "response_excerpt": "Area occupancy 77.38% 6,500 / 8,400",
+      "mapping": "manual transcription of displayed value"
+    },
+    "annual_in_place_rent": {
+      "value": 177600,
+      "response_excerpt": "Annualized active in-place rent = 14,800 \u00d7 12 = 177,600",
+      "mapping": "manual transcription of displayed value"
+    },
+    "studio_occupied_units": {
+      "value": 2,
+      "response_excerpt": "Studio 2 (units 101, 102) 500 1,200",
+      "mapping": "manual transcription of displayed value"
+    },
+    "1br_occupied_units": {
+      "value": 4,
+      "response_excerpt": "1BR 4 (units 201\u2013204) 700 1,600",
+      "mapping": "manual transcription of displayed value"
+    },
+    "2br_occupied_units": {
+      "value": 3,
+      "response_excerpt": "2BR 3 (units 301\u2013303) 900 2,000",
+      "mapping": "manual transcription of displayed value"
+    },
+    "reported_occupied_units": {
+      "value": 10,
+      "response_excerpt": "Occupied units 10 9 10 Reconciled \u2014 preparer includes pending unit 104",
+      "mapping": "manual transcription of displayed value"
+    },
+    "reported_occupied_area_sf": {
+      "value": 7000,
+      "response_excerpt": "Occupied area (SF) 7,000 6,500 7,000 (6,500 + 500) Reconciled \u2014 same basis",
+      "mapping": "manual transcription of displayed value"
+    },
+    "reported_annual_in_place_rent": {
+      "value": 192000,
+      "response_excerpt": "Annual in-place rent 192,000 177,600 192,000 Reconciled \u2014 same basis",
+      "mapping": "manual transcription of displayed value"
+    },
+    "ltv_limit": {
+      "value": 1560000,
+      "response_excerpt": "LTV Value \u00d7 max LTV 2,400,000 \u00d7 0.65 $1,560,000",
+      "mapping": "manual transcription of displayed value"
+    },
+    "dscr_limit": {
+      "value": 1714285.71,
+      "response_excerpt": "DSCR NOI \u00f7 (DSCR \u00d7 rate) 150,000 \u00f7 (1.25 \u00d7 0.07) = 150,000 \u00f7 0.0875 $1,714,285.71",
+      "mapping": "manual transcription of displayed value"
+    },
+    "debt_yield_limit": {
+      "value": 1666666.67,
+      "response_excerpt": "Debt Yield NOI \u00f7 min DY 150,000 \u00f7 0.09 $1,666,666.67",
+      "mapping": "manual transcription of displayed value"
+    },
+    "max_loan": {
+      "value": 1560000,
+      "response_excerpt": "Maximum proceeds = min($1,560,000; $1,714,285.71; $1,666,666.67) = $1,560,000.",
+      "mapping": "manual transcription of displayed value"
+    },
+    "binding_constraint": {
+      "value": "ltv",
+      "response_excerpt": "Binding constraint: LTV.",
+      "mapping": "manual semantic label mapping"
+    },
+    "resolution": {
+      "value": "exclude_pending_from_in_place",
+      "response_excerpt": "On a strict currently-occupied basis, occupancy is 9 units / 6,500 SF / 177,600 in-place rent. Both bases are preserved.",
+      "mapping": "manual semantic label mapping"
+    }
+  }
+}

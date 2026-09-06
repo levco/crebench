@@ -388,7 +388,7 @@ strong,b {
 
 .matrix-heading,.matrix-row {
   display:grid;
-  grid-template-columns:112px minmax(0,1fr) 48px;
+  grid-template-columns:100px minmax(0,1fr) 44px 68px;
   gap:16px;
   align-items:center;
 }
@@ -1169,7 +1169,7 @@ pre code {
     grid-template-columns:.9fr 2fr;
   }
   .matrix-heading,.matrix-row {
-    grid-template-columns:88px minmax(0,1fr) 44px;
+    grid-template-columns:78px minmax(0,1fr) 40px 62px;
     gap:12px;
   }
   .check-cells {
@@ -1280,7 +1280,7 @@ pre code {
     display:none;
   }
   .matrix-heading,.matrix-row {
-    grid-template-columns:100px minmax(0,1fr) 44px;
+    grid-template-columns:90px minmax(0,1fr) 40px 64px;
   }
   .section {
     margin:54px 0;
@@ -1415,7 +1415,7 @@ pre code {
     display:none;
   }
   .matrix-row {
-    grid-template-columns:1fr auto;
+    grid-template-columns:1fr auto auto;
     gap:10px;
     padding:12px 0;
   }
@@ -1611,4 +1611,28 @@ pre code {
     transition:none!important;
     animation:none!important;
   }
+}
+
+.matrix-cost { font:11px/1 var(--mono); text-align:right; color:var(--mint); white-space:nowrap; }
+.matrix-legend .cost-basis { width:100%; margin-left:0; color:#abc1b3; }
+.cost-summary { margin:38px 0; }
+.cost-summary h2 { font-size:26px; }
+.cost-summary table { margin:20px 0 16px; }
+.cost-summary td:nth-child(n+3) { font-family:var(--mono); font-size:12px; white-space:nowrap; }
+.cost-summary .subtle { max-width:850px; }
+.earlier-runs { border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:30px 0 50px; padding:18px 0; }
+.earlier-runs summary { cursor:pointer; font-size:14px; font-weight:600; color:var(--forest); }
+.earlier-runs table { margin-top:20px; }
+.lev-comparison { padding:35px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:45px 0; }
+.lev-comparison>p { max-width:880px; color:var(--muted); font-size:14px; }
+.lev-comparison .note { margin-top:25px; }
+.lev-comparison table { margin:26px 0 16px; font-size:12px; }
+.lev-comparison td:nth-child(3),.lev-comparison td:nth-child(4) { min-width:210px; }
+.example-cost { margin-top:28px; font-size:13px; }
+@media(max-width:560px) {
+  .matrix-cost { grid-column:3; grid-row:1; font-size:11px; }
+  .cost-summary table { min-width:530px; }
+  .earlier-runs table { min-width:560px; }
+  .lev-comparison h2 { font-size:28px; }
+  .matrix-score { min-width:45px; }
 }

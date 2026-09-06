@@ -1,11 +1,19 @@
 """Rescore all retained answers consistently, preserving original run records."""
 import datetime
+import math
 import json
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from crebench.grade import read_json,sha256,verify_case
 from crebench.normalize import score_text
+
+
+def cost_usd(usage):
+    cost = (usage or {}).get('cost')
+    if isinstance(cost, bool) or not isinstance(cost, (int, float)) or not math.isfinite(cost) or cost < 0:
+        return 'Not recorded'
+    return f'${cost:.6f}'
 
 
 def report(root):
@@ -33,13 +41,13 @@ def report(root):
           'scorer_sha256':{p:sha256(p) for p in ['crebench/normalize.py','crebench/grade.py']},
           'plan_sha256':sha256(root/'plan.json'),'unique_cases':1,'leaderboard_eligible':False,'runs':rows}
     (root/'financial-v2.json').write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
-    lines=['# Financial pilot: corrected scoring','','One public fictional case. Every retained response is included. Formatting is diagnostic; financial and source-reference checks are separate.','','| Model | Run | Financial checks | Reference checks | Seconds |','|---|---|---|---|---|']
+    lines=['# Financial pilot: corrected scoring','','One public fictional case. Every retained response is included. Formatting is diagnostic; financial and source-reference checks are separate.','','| Model | Run | Financial checks | Reference checks | Seconds | Cost (USD) |','|---|---|---|---|---|---|']
     for r in rows:
         def count(kind):
             g=r['score']['groups'][kind] if r['score'] else None
             return f"{g['passed']}/{g['total']}" if g else 'Unscored'
-        lines.append(f"| {r['model']} | {r['run']} | {count('financial')} | {count('references')} | {r['elapsed_seconds']} |")
-    lines+=['','## Financial failures','']
+        lines.append(f"| {r['model']} | {r['run']} | {count('financial')} | {count('references')} | {r['elapsed_seconds']} | {cost_usd(r['usage'])} |")
+    lines+=['','Cost is gateway-reported inference usage for each retained call, in USD. It excludes platform subscriptions, human work, hosting, and unmetered product tools. A reported zero is not an estimate of total service cost; missing usage is shown as Not recorded. Exact amounts remain in the machine-readable report.','','## Financial failures','']
     for r in rows:
         failed=r['score']['groups']['financial']['failed'] if r['score'] else [r['status']]
         lines.append(f"- {r['run']} ({r['model']}): {', '.join(failed) or 'None'}")

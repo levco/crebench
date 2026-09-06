@@ -10,8 +10,15 @@ for(const name of fs.readdirSync(dist).filter(f=>f.endsWith('.html'))) {
   for(const [,url] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     if(url.startsWith('http')) continue;
     if(url.startsWith('#')) {assert(ids.includes(url.slice(1)),`Missing anchor ${url}`);continue;}
-    const target = path.join(dist,url==='/'?'index.html':url);
-    assert(fs.existsSync(target),`${name}: missing ${url}`); checked++;
+    const parsed = new URL(url,'https://local.test');
+    const target = path.join(dist,parsed.pathname==='/'?'index.html':parsed.pathname);
+    assert(fs.existsSync(target),`${name}: missing ${url}`);
+    if(parsed.hash) {
+      const targetHtml=fs.readFileSync(target,'utf8');
+      const targetIds=[...targetHtml.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+      assert(targetIds.includes(decodeURIComponent(parsed.hash.slice(1))),`${name}: missing fragment ${url}`);
+    }
+    checked++;
   }
   for(const [,id] of html.matchAll(/aria-(?:controls|labelledby)="([^"]+)"/g)) assert(ids.includes(id),`Missing ARIA target ${id}`);
 }

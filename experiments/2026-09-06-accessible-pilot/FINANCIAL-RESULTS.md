@@ -2,17 +2,19 @@
 
 One public fictional case. Every retained response is included. Formatting is diagnostic; financial and source-reference checks are separate.
 
-| Model | Run | Financial checks | Reference checks | Seconds |
-|---|---|---|---|---|
-| xiaomi/mimo-v2.5 | r1-1 | 23/30 | 9/27 | 37.929 |
-| xiaomi/mimo-v2.5-pro | r1-2 | 29/30 | 27/27 | 126.192 |
-| inclusionai/ling-3.0-flash-sante | r1-3 | 29/30 | 0/27 | 18.37 |
-| xiaomi/mimo-v2.5 | r2-1 | 29/30 | 27/27 | 116.86 |
-| xiaomi/mimo-v2.5-pro | r2-2 | 28/30 | 0/27 | 101.156 |
-| inclusionai/ling-3.0-flash-sante | r2-3 | 29/30 | 0/27 | 28.147 |
-| xiaomi/mimo-v2.5 | r3-1 | 29/30 | 27/27 | 65.371 |
-| xiaomi/mimo-v2.5-pro | r3-2 | 29/30 | 27/27 | 90.159 |
-| inclusionai/ling-3.0-flash-sante | r3-3 | 29/30 | 0/27 | 19.01 |
+| Model | Run | Financial checks | Reference checks | Seconds | Cost (USD) |
+|---|---|---|---|---|---|
+| xiaomi/mimo-v2.5 | r1-1 | 23/30 | 9/27 | 37.929 | $0.000974 |
+| xiaomi/mimo-v2.5-pro | r1-2 | 29/30 | 27/27 | 126.192 | $0.004372 |
+| inclusionai/ling-3.0-flash-sante | r1-3 | 29/30 | 0/27 | 18.37 | $0.000000 |
+| xiaomi/mimo-v2.5 | r2-1 | 29/30 | 27/27 | 116.86 | $0.001732 |
+| xiaomi/mimo-v2.5-pro | r2-2 | 28/30 | 0/27 | 101.156 | $0.003449 |
+| inclusionai/ling-3.0-flash-sante | r2-3 | 29/30 | 0/27 | 28.147 | $0.000000 |
+| xiaomi/mimo-v2.5 | r3-1 | 29/30 | 27/27 | 65.371 | $0.001393 |
+| xiaomi/mimo-v2.5-pro | r3-2 | 29/30 | 27/27 | 90.159 | $0.004036 |
+| inclusionai/ling-3.0-flash-sante | r3-3 | 29/30 | 0/27 | 19.01 | $0.000000 |
+
+Cost is gateway-reported inference usage for each retained call, in USD. It excludes platform subscriptions, human work, hosting, and unmetered product tools. A reported zero is not an estimate of total service cost; missing usage is shown as Not recorded. Exact amounts remain in the machine-readable report.
 
 ## Financial failures
 
