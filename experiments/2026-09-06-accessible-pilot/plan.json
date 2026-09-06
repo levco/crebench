@@ -1,0 +1,44 @@
+{
+  "experiment": "2026-09-06-accessible-pilot",
+  "created_at": "2026-09-06T19:01:44.448429+00:00",
+  "case_id": "harbor-court-001",
+  "track": "public_synthetic_text_api_pilot",
+  "model_evaluation": true,
+  "leaderboard_eligible": false,
+  "case_manifest_sha256": "442e89e3cc6a87170f1a0897cc962f0542e6acaec82b20d7bee221bcfaa02c54",
+  "grader_sha256": "15fbb78b65ca3e803db1541c45b915f9d2397a442409a3eb8eacacd0c693fc32",
+  "runner_sha256": "81742fc88ecbd3a053244002fd15e650fda0525146bc5c3a347d5e03f69b8b47",
+  "packet_sha256": "38146cb355c7b7e05a60413aa60d4e55fa87a159d6986a28b1357d904ee559b5",
+  "endpoint": "https://ai-gateway.vercel.sh/v1/chat/completions",
+  "models": [
+    "xiaomi/mimo-v2.5",
+    "xiaomi/mimo-v2.5-pro",
+    "inclusionai/ling-3.0-flash-sante"
+  ],
+  "repetitions": 3,
+  "max_tokens": 8192,
+  "temperature": "provider_default",
+  "reasoning": "provider_default",
+  "tools": [],
+  "retries": 0,
+  "timeout_seconds": 180,
+  "model_fallbacks": [],
+  "provider_routing": "gateway_default_record_response",
+  "cost_reservation_usd": 0.08702280000000001,
+  "cost_limit_usd": 5,
+  "reservation_by_model_usd": {
+    "xiaomi/mimo-v2.5": 0.007062720000000001,
+    "xiaomi/mimo-v2.5-pro": 0.02194488,
+    "inclusionai/ling-3.0-flash-sante": 0.0
+  },
+  "limitations": [
+    "One public case; answer key already published",
+    "No independent case reviewer",
+    "CSV and JSON supplied as text; no PDF ingestion",
+    "Source references supplied in contract",
+    "Provider defaults and routing may differ; not equal compute",
+    "Aliases may change over time",
+    "No workbook, OM, or Lev product assessment",
+    "Cost reservation is not a provider billing cap"
+  ]
+}

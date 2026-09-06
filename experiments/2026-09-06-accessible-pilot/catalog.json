@@ -1,0 +1,162 @@
+{
+  "retrieved_at": "2026-09-06T19:01:44.448025+00:00",
+  "source": "https://ai-gateway.vercel.sh/v1/models",
+  "data": [
+    {
+      "id": "xiaomi/mimo-v2.5",
+      "object": "model",
+      "created": 1755815280,
+      "released": 1776816000,
+      "owned_by": "xiaomi",
+      "name": "MiMo M2.5",
+      "description": "A native full-modal model supporting text, image, video, and audio understanding, with powerful Agent capabilities.",
+      "context_window": 1050000,
+      "max_tokens": 131100,
+      "type": "language",
+      "zdr": "some",
+      "no_training": "some",
+      "tags": [
+        "reasoning",
+        "tool-use",
+        "implicit-caching",
+        "vision"
+      ],
+      "supported_specifications": [
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "temperature",
+        "stop",
+        "tools",
+        "tool_choice",
+        "reasoning",
+        "include_reasoning"
+      ],
+      "temperature": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "knowledge": "2024-12",
+      "pricing": {
+        "input": "0.00000014",
+        "output": "0.00000028",
+        "input_cache_read": "0.0000000028",
+        "varies_by_provider": true
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.5-pro",
+      "object": "model",
+      "created": 1755815280,
+      "released": 1776816000,
+      "owned_by": "xiaomi",
+      "name": "MiMo V2.5 Pro",
+      "description": "MiMo V2.5 Pro delivers significant improvements over its predecessor, MiMo-V2-Pro, in general agentic capabilities, complex software engineering, and long-horizon tasks. MiMo-V2.5-Pro is a 1.02T-parameter Mixture-of-Experts model with 42B active parameters, built on a hybrid-attention architecture with a 1M-token context window.",
+      "context_window": 1050000,
+      "max_tokens": 131000,
+      "type": "language",
+      "zdr": "some",
+      "no_training": "some",
+      "tags": [
+        "reasoning",
+        "tool-use",
+        "implicit-caching"
+      ],
+      "supported_specifications": [
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "temperature",
+        "stop",
+        "tools",
+        "tool_choice",
+        "reasoning",
+        "include_reasoning"
+      ],
+      "temperature": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "knowledge": "2024-12",
+      "pricing": {
+        "input": "0.000000435",
+        "output": "0.00000087",
+        "input_cache_read": "0.0000000036",
+        "varies_by_provider": true
+      }
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-sante",
+      "object": "model",
+      "created": 1755815280,
+      "released": 1788480000,
+      "owned_by": "inclusionai",
+      "name": "Ling 3.0 Flash Sante",
+      "description": "Ling-3.0-Flash-Sante is inclusionAI\u2019s language model specialized for health and medicine, built on a Mixture-of-Experts architecture with 124 billion total parameters and approximately 5.1 billion active per token. With a 256K context window and function calling, it supports medical knowledge reasoning, evidence-based retrieval, and complex medical workflows while retaining general reasoning, coding, and agentic capabilities.",
+      "context_window": 256000,
+      "max_tokens": 32000,
+      "type": "language",
+      "zdr": "none",
+      "no_training": "all",
+      "tags": [
+        "free",
+        "reasoning",
+        "tool-use"
+      ],
+      "supported_specifications": [
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "temperature",
+        "stop",
+        "tools",
+        "tool_choice",
+        "reasoning",
+        "include_reasoning"
+      ],
+      "temperature": true,
+      "pricing": {
+        "input": "0",
+        "output": "0"
+      }
+    }
+  ]
+}
