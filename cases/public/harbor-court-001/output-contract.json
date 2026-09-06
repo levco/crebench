@@ -1,0 +1,197 @@
+{
+  "fields": {
+    "operating_revenue": {
+      "type": "number",
+      "canonical_evidence": [
+        "t12.csv:2-4"
+      ]
+    },
+    "operating_expenses": {
+      "type": "number",
+      "canonical_evidence": [
+        "t12.csv:5-9"
+      ]
+    },
+    "noi": {
+      "type": "number",
+      "canonical_evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9"
+      ]
+    },
+    "total_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "occupied_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "vacant_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "pending_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "total_area_sf": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "occupied_area_sf": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "unit_occupancy_pct": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "area_occupancy_pct": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "annual_in_place_rent": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "studio_total_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "studio_occupied_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "1br_total_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "1br_occupied_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "2br_total_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "2br_occupied_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "reported_occupied_units": {
+      "type": "number",
+      "canonical_evidence": [
+        "source-summary.json:/reported_occupied_units"
+      ]
+    },
+    "reported_occupied_area_sf": {
+      "type": "number",
+      "canonical_evidence": [
+        "source-summary.json:/reported_occupied_area_sf"
+      ]
+    },
+    "reported_annual_in_place_rent": {
+      "type": "number",
+      "canonical_evidence": [
+        "source-summary.json:/reported_annual_in_place_rent"
+      ]
+    },
+    "ltv_limit": {
+      "type": "number",
+      "canonical_evidence": [
+        "sizing-inputs.json:/valuation",
+        "sizing-inputs.json:/max_ltv"
+      ]
+    },
+    "dscr_limit": {
+      "type": "number",
+      "canonical_evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/min_dscr",
+        "sizing-inputs.json:/annual_interest_rate"
+      ]
+    },
+    "debt_yield_limit": {
+      "type": "number",
+      "canonical_evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/min_debt_yield"
+      ]
+    },
+    "max_loan": {
+      "type": "number",
+      "canonical_evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/valuation",
+        "sizing-inputs.json:/max_ltv",
+        "sizing-inputs.json:/min_dscr",
+        "sizing-inputs.json:/annual_interest_rate",
+        "sizing-inputs.json:/min_debt_yield"
+      ]
+    },
+    "binding_constraint": {
+      "type": "string",
+      "canonical_evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/valuation",
+        "sizing-inputs.json:/max_ltv",
+        "sizing-inputs.json:/min_dscr",
+        "sizing-inputs.json:/annual_interest_rate",
+        "sizing-inputs.json:/min_debt_yield"
+      ]
+    },
+    "resolution": {
+      "type": "string",
+      "canonical_evidence": [
+        "rent-roll.csv:2-13",
+        "sizing-inputs.json:/as_of",
+        "source-summary.json:/note"
+      ]
+    }
+  },
+  "conflict_ids": [
+    "pending_in_reported_occupied_units",
+    "pending_in_reported_occupied_area",
+    "pending_in_reported_rent",
+    "historical_revenue_differs_from_current_rent"
+  ],
+  "resolution_values": [
+    "exclude_pending_from_in_place",
+    "use_reported_summary"
+  ]
+}

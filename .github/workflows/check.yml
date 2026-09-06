@@ -1,0 +1,20 @@
+name: Verify public release
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 -m unittest discover -s tests -v
+      - run: python3 -m crebench verify cases/public/harbor-court-001
+      - run: python3 -m crebench grade cases/public/harbor-court-001 cases/public/harbor-court-001/reference-answer.json
+      - run: npm run build
+      - run: npm run check:site

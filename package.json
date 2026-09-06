@@ -1,0 +1,12 @@
+{
+  "name": "crebench",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "build": "node tools/build-site.mjs",
+    "test": "python3 -m unittest discover -s tests -v",
+    "check:site": "node tools/check-site.mjs"
+  }
+}

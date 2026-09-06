@@ -1,0 +1,192 @@
+{
+  "fields": {
+    "operating_revenue": {
+      "value": 246000,
+      "evidence": [
+        "t12.csv:2-4"
+      ]
+    },
+    "operating_expenses": {
+      "value": 96000,
+      "evidence": [
+        "t12.csv:5-9"
+      ]
+    },
+    "noi": {
+      "value": 150000,
+      "evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9"
+      ]
+    },
+    "total_units": {
+      "value": 12,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "occupied_units": {
+      "value": 9,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "vacant_units": {
+      "value": 2,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "pending_units": {
+      "value": 1,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "total_area_sf": {
+      "value": 8400,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "occupied_area_sf": {
+      "value": 6500,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "unit_occupancy_pct": {
+      "value": 75,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "area_occupancy_pct": {
+      "value": 77.38,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "annual_in_place_rent": {
+      "value": 177600,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "studio_total_units": {
+      "value": 4,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "studio_occupied_units": {
+      "value": 2,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "1br_total_units": {
+      "value": 4,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "1br_occupied_units": {
+      "value": 4,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "2br_total_units": {
+      "value": 4,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "2br_occupied_units": {
+      "value": 3,
+      "evidence": [
+        "rent-roll.csv:2-13"
+      ]
+    },
+    "reported_occupied_units": {
+      "value": 10,
+      "evidence": [
+        "source-summary.json:/reported_occupied_units"
+      ]
+    },
+    "reported_occupied_area_sf": {
+      "value": 7000,
+      "evidence": [
+        "source-summary.json:/reported_occupied_area_sf"
+      ]
+    },
+    "reported_annual_in_place_rent": {
+      "value": 192000,
+      "evidence": [
+        "source-summary.json:/reported_annual_in_place_rent"
+      ]
+    },
+    "ltv_limit": {
+      "value": 1560000,
+      "evidence": [
+        "sizing-inputs.json:/valuation",
+        "sizing-inputs.json:/max_ltv"
+      ]
+    },
+    "dscr_limit": {
+      "value": 1714286,
+      "evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/min_dscr",
+        "sizing-inputs.json:/annual_interest_rate"
+      ]
+    },
+    "debt_yield_limit": {
+      "value": 1666667,
+      "evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/min_debt_yield"
+      ]
+    },
+    "max_loan": {
+      "value": 1560000,
+      "evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/valuation",
+        "sizing-inputs.json:/max_ltv",
+        "sizing-inputs.json:/min_dscr",
+        "sizing-inputs.json:/annual_interest_rate",
+        "sizing-inputs.json:/min_debt_yield"
+      ]
+    },
+    "binding_constraint": {
+      "value": "ltv",
+      "evidence": [
+        "t12.csv:2-4",
+        "t12.csv:5-9",
+        "sizing-inputs.json:/valuation",
+        "sizing-inputs.json:/max_ltv",
+        "sizing-inputs.json:/min_dscr",
+        "sizing-inputs.json:/annual_interest_rate",
+        "sizing-inputs.json:/min_debt_yield"
+      ]
+    },
+    "resolution": {
+      "value": "exclude_pending_from_in_place",
+      "evidence": [
+        "rent-roll.csv:2-13",
+        "sizing-inputs.json:/as_of",
+        "source-summary.json:/note"
+      ]
+    }
+  },
+  "discrepancies": [
+    "pending_in_reported_occupied_units",
+    "pending_in_reported_occupied_area",
+    "pending_in_reported_rent"
+  ]
+}
