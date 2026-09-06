@@ -1,0 +1,649 @@
+{
+  "model_evaluation": true,
+  "leaderboard_eligible": false,
+  "requested_model": "openai/gpt-5",
+  "status": "scored",
+  "score": {
+    "normalizations": [],
+    "normalized_answer": {
+      "fields": {
+        "operating_revenue": {
+          "value": 246000,
+          "evidence": [
+            "t12.csv:2-4"
+          ]
+        },
+        "operating_expenses": {
+          "value": 96000,
+          "evidence": [
+            "t12.csv:5-9"
+          ]
+        },
+        "noi": {
+          "value": 150000,
+          "evidence": [
+            "t12.csv:2-4",
+            "t12.csv:5-9"
+          ]
+        },
+        "total_units": {
+          "value": 12,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "occupied_units": {
+          "value": 9,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "vacant_units": {
+          "value": 2,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "pending_units": {
+          "value": 1,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "total_area_sf": {
+          "value": 8400,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "occupied_area_sf": {
+          "value": 6500,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "unit_occupancy_pct": {
+          "value": 75.0,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "area_occupancy_pct": {
+          "value": 77.38,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "annual_in_place_rent": {
+          "value": 177600,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "studio_total_units": {
+          "value": 4,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "studio_occupied_units": {
+          "value": 2,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "1br_total_units": {
+          "value": 4,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "1br_occupied_units": {
+          "value": 4,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "2br_total_units": {
+          "value": 4,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "2br_occupied_units": {
+          "value": 3,
+          "evidence": [
+            "rent-roll.csv:2-13"
+          ]
+        },
+        "reported_occupied_units": {
+          "value": 10,
+          "evidence": [
+            "source-summary.json:/reported_occupied_units"
+          ]
+        },
+        "reported_occupied_area_sf": {
+          "value": 7000,
+          "evidence": [
+            "source-summary.json:/reported_occupied_area_sf"
+          ]
+        },
+        "reported_annual_in_place_rent": {
+          "value": 192000,
+          "evidence": [
+            "source-summary.json:/reported_annual_in_place_rent"
+          ]
+        },
+        "ltv_limit": {
+          "value": 1560000,
+          "evidence": [
+            "sizing-inputs.json:/valuation",
+            "sizing-inputs.json:/max_ltv"
+          ]
+        },
+        "dscr_limit": {
+          "value": 1714286,
+          "evidence": [
+            "t12.csv:2-4",
+            "t12.csv:5-9",
+            "sizing-inputs.json:/min_dscr",
+            "sizing-inputs.json:/annual_interest_rate"
+          ]
+        },
+        "debt_yield_limit": {
+          "value": 1666667,
+          "evidence": [
+            "t12.csv:2-4",
+            "t12.csv:5-9",
+            "sizing-inputs.json:/min_debt_yield"
+          ]
+        },
+        "max_loan": {
+          "value": 1560000,
+          "evidence": [
+            "t12.csv:2-4",
+            "t12.csv:5-9",
+            "sizing-inputs.json:/valuation",
+            "sizing-inputs.json:/max_ltv",
+            "sizing-inputs.json:/min_dscr",
+            "sizing-inputs.json:/annual_interest_rate",
+            "sizing-inputs.json:/min_debt_yield"
+          ]
+        },
+        "binding_constraint": {
+          "value": "LTV",
+          "evidence": [
+            "t12.csv:2-4",
+            "t12.csv:5-9",
+            "sizing-inputs.json:/valuation",
+            "sizing-inputs.json:/max_ltv",
+            "sizing-inputs.json:/min_dscr",
+            "sizing-inputs.json:/annual_interest_rate",
+            "sizing-inputs.json:/min_debt_yield"
+          ]
+        },
+        "resolution": {
+          "value": "exclude_pending_from_in_place",
+          "evidence": [
+            "rent-roll.csv:2-13",
+            "sizing-inputs.json:/as_of",
+            "source-summary.json:/note"
+          ]
+        }
+      },
+      "discrepancies": [
+        "pending_in_reported_occupied_units",
+        "pending_in_reported_occupied_area",
+        "pending_in_reported_rent",
+        "historical_revenue_differs_from_current_rent"
+      ]
+    },
+    "groups": {
+      "financial": {
+        "passed": 28,
+        "total": 30,
+        "failed": [
+          "binding_constraint",
+          "conflicts.exact_set"
+        ]
+      },
+      "references": {
+        "passed": 27,
+        "total": 27,
+        "failed": []
+      },
+      "contract": {
+        "passed": 1,
+        "total": 1,
+        "failed": []
+      }
+    },
+    "financial_complete": false,
+    "criteria": [
+      {
+        "criterion": "output.contract",
+        "pass": true,
+        "kind": "format",
+        "material": false
+      },
+      {
+        "criterion": "operating_revenue",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "operating_revenue.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "operating_expenses",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "operating_expenses.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "noi",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "noi.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "total_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "total_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "occupied_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "occupied_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "vacant_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "vacant_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "pending_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "pending_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "total_area_sf",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "total_area_sf.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "occupied_area_sf",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "occupied_area_sf.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "unit_occupancy_pct",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "unit_occupancy_pct.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "area_occupancy_pct",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "area_occupancy_pct.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "annual_in_place_rent",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "annual_in_place_rent.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "studio_total_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "studio_total_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "studio_occupied_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "studio_occupied_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "1br_total_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "1br_total_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "1br_occupied_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "1br_occupied_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "2br_total_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "2br_total_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "2br_occupied_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "2br_occupied_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "reported_occupied_units",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "reported_occupied_units.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "reported_occupied_area_sf",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "reported_occupied_area_sf.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "reported_annual_in_place_rent",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "reported_annual_in_place_rent.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "ltv_limit",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "ltv_limit.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "dscr_limit",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "dscr_limit.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "debt_yield_limit",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "debt_yield_limit.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "max_loan",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "max_loan.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "binding_constraint",
+        "pass": false,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "binding_constraint.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "resolution",
+        "pass": true,
+        "kind": "accuracy",
+        "material": true
+      },
+      {
+        "criterion": "resolution.evidence",
+        "pass": true,
+        "kind": "source_reference",
+        "material": false
+      },
+      {
+        "criterion": "conflicts.exact_set",
+        "pass": false,
+        "kind": "conflict",
+        "material": true
+      },
+      {
+        "criterion": "noi.reconciles",
+        "pass": true,
+        "kind": "calculation",
+        "material": true
+      },
+      {
+        "criterion": "loan.minimum_constraint",
+        "pass": true,
+        "kind": "calculation",
+        "material": true
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 3187,
+        "completion_tokens": 4055,
+        "total_tokens": 7242,
+        "cost": 0.04107775,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3200,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.04107775,
+        "gateway_cost": 0.04107775
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 42.116,
+      "completed_at": "2026-09-06T19:30:10.299191+00:00",
+      "sha256": {
+        "started.json": "e6e3ca00ddb0af922386c04f9bae342c48394f12178a0ec80c75e877cea1a25a",
+        "answer.txt": "fb85f9ab49536043041198fe1e280a3de8ed32d18239e47bbf9683e543b409c7",
+        "response.json": "5ff6f699fcb3472d0af8dc591cc6265248ae8ec50d85028fa776a6fd0e17d7fa"
+      }
+    }
+  ],
+  "returned_model": "openai/gpt-5",
+  "usage": {
+    "prompt_tokens": 3187,
+    "completion_tokens": 4055,
+    "total_tokens": 7242,
+    "cost": 0.04107775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": null,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3200,
+      "image_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "market_cost": 0.04107775,
+    "gateway_cost": 0.04107775
+  },
+  "finish_reason": "stop",
+  "answer_path": "attempt-1/answer.txt",
+  "elapsed_seconds": 42.117,
+  "completed_at": "2026-09-06T19:30:10.300582+00:00",
+  "sha256": {
+    "request.json": "dc02313c50f0ad4e17b1e6a4b715a86e01df98b19d0003dc1bb2024ebabafd4a",
+    "started.json": "791d68a535287e84b6b586b6eb38fd63b4e26767d4c0c8e558839a2dfc9c7fe2",
+    "attempt-1/result.json": "4b1ce2a9aea042490a685322af379b9da7eb520ece6ebf59f96cbca4c25cb410",
+    "attempt-1/started.json": "e6e3ca00ddb0af922386c04f9bae342c48394f12178a0ec80c75e877cea1a25a",
+    "attempt-1/answer.txt": "fb85f9ab49536043041198fe1e280a3de8ed32d18239e47bbf9683e543b409c7",
+    "attempt-1/response.json": "5ff6f699fcb3472d0af8dc591cc6265248ae8ec50d85028fa776a6fd0e17d7fa"
+  }
+}

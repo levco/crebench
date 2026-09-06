@@ -45,3 +45,17 @@ class NormalizeTests(unittest.TestCase):
         result=score_text(CASE,'{"noi":150000}')
         self.assertEqual(result['groups']['financial']['passed'],1)
         self.assertNotIn('operating_revenue',result['normalized_answer']['fields'])
+
+    def test_constraint_labels_are_equivalent_but_wrong_constraints_fail(self):
+        for label in ['ltv','LTV','ltv_limit','Loan-to-value']:
+            a=self.answer; a['fields']['binding_constraint']['value']=label
+            self.assertTrue(score_text(CASE,json.dumps(a))['financial_complete'])
+        for label in ['DSCR','debt_yield_limit']:
+            a=self.answer; a['fields']['binding_constraint']['value']=label
+            self.assertIn('binding_constraint',score_text(CASE,json.dumps(a))['groups']['financial']['failed'])
+
+    def test_duplicate_conflicts_are_noise_but_false_conflicts_fail(self):
+        a=self.answer;a['discrepancies'].append(a['discrepancies'][0])
+        self.assertTrue(score_text(CASE,json.dumps(a))['financial_complete'])
+        a['discrepancies'].append('historical_revenue_differs_from_current_rent')
+        self.assertIn('conflicts.exact_set',score_text(CASE,json.dumps(a))['groups']['financial']['failed'])

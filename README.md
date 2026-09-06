@@ -45,8 +45,8 @@ Created and published by Lev. New original code, documentation and the fictional
 
 Nine real API attempts on one public synthetic case are retained in
 [the accessible-model experiment](experiments/2026-09-06-accessible-pilot/RESULTS.md).
-All returned HTTP 200; all failed strict JSON parsing. Financial correctness is
-unscored. These are development findings, not a ranking or real-world accuracy estimate.
+The original parser rejected Markdown-wrapped responses. The corrected scorer
+evaluates all nine; [supplemental financial results](experiments/2026-09-06-accessible-pilot/FINANCIAL-RESULTS.md) preserve the initial records. These are development findings, not a ranking or real-world accuracy estimate.
 Rebuild the report with:
 
 ```sh
@@ -55,3 +55,20 @@ python3 tools/report-pilot.py experiments/2026-09-06-accessible-pilot
 
 Native Lev product calibration is a separate track. Any input adaptation,
 manual correction, tool access and generated-artifact review will be disclosed.
+
+## GPT-5 and Claude Opus 5
+
+[Six real runs and financial results](experiments/2026-09-06-gpt5-opus5-v2/FINANCIAL-RESULTS.md)
+are published with all requests and original responses. Reproduce corrected scoring:
+
+```sh
+python3 tools/report-financial.py experiments/2026-09-06-gpt5-opus5-v2
+python3 tools/report-financial.py experiments/2026-09-06-accessible-pilot
+```
+
+The legacy `grade` command and original execution records retain strict development
+checks. Current financial reports use the presentation-tolerant scorer. The exact
+runner used to generate the six GPT-5/Opus-5 responses is available at commit 7ace77c;
+its frozen requests must not be replayed in place. Prepare a new directory for a new
+experiment using `python3 -m crebench.run_v2 prepare <new-directory>` and a fresh
+model catalog, then execute it with the configured gateway credentials.

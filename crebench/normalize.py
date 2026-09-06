@@ -69,8 +69,22 @@ def normalize(text):
         if isinstance(value, str) and re.fullmatch(r'\s*\$?-?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?%?\s*', value):
             value = float(value.strip().replace('$','').replace(',','').rstrip('%'))
             changes.append(f'parsed_numeric_display:{name}')
+        if name == 'binding_constraint' and isinstance(value, str):
+            label = value.strip().lower().replace('-', '_').replace(' ', '_')
+            aliases = {'ltv':'ltv', 'ltv_limit':'ltv', 'loan_to_value':'ltv',
+                       'dscr':'dscr', 'dscr_limit':'dscr', 'debt_service_coverage_ratio':'dscr',
+                       'debt_yield':'debt_yield', 'debt_yield_limit':'debt_yield', 'dy':'debt_yield'}
+            if label in aliases and value != aliases[label]:
+                value = aliases[label]
+                changes.append('normalized_constraint_label')
         normalized[name] = {'value': value, 'evidence': evidence}
-    return {'fields': normalized, 'discrepancies': obj.get('discrepancies')}, changes
+    conflicts = obj.get('discrepancies')
+    if isinstance(conflicts, list) and all(isinstance(x,str) for x in conflicts):
+        unique = list(dict.fromkeys(conflicts))
+        if unique != conflicts:
+            changes.append('removed_duplicate_conflict_ids')
+        conflicts = unique
+    return {'fields': normalized, 'discrepancies': conflicts}, changes
 
 
 def score_text(case, text):
