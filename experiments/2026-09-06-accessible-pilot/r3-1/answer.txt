@@ -1,0 +1,139 @@
+Looking at this problem, I need to: (1) compute T-12 financials, (2) reconcile the rent roll, (3) identify conflicts with the source summary, and (4) size the loan. Let me work through each step carefully.
+
+**T-12 Financials:**
+- Operating Revenue: Rental income ($240k) + Rent abatements (-$6k) + Expense reimbursements ($12k) = $246,000
+- Operating Expenses: Property taxes ($30k) + Insurance ($12k) + Repairs ($18k) + Utilities ($24k) + Management ($12k) = $96,000
+- NOI: $246,000 − $96,000 = $150,000
+
+**Rent Roll (as-of 2025-12-31, excluding pending):**
+- 12 total units; 9 active, 2 vacant (103, 304), 1 pending (104)
+- Occupied area: 2 studios×500 + 4×700 + 3×900 = 1,000 + 2,800 + 2,700 = 6,500 sf of 8,400 total (77.38%)
+- Unit occupancy: 9/12 = 75.00%
+- Annual in-place rent: 2×$14,400 + 4×$19,200 + 3×$24,000 = $177,600
+
+**Conflict check:** Source summary reports 10 occupied units / 7,000 sf / $192,000 — exactly our figures plus the pending lease (1 unit, 500 sf, $14,400). Resolution: exclude pending from in-place. T-12 rental income ($240k) naturally differs from current in-place ($177.6k) as noted.
+
+**Loan sizing (interest-only):**
+- LTV: $2,400,000 × 0.65 = $1,560,000
+- DSCR: $150,000 ÷ (1.25 × 0.07) = $1,714,286
+- Debt yield: $150,000 ÷ 0.09 = $1,666,667
+- **Binding constraint: LTV** → max loan = $1,560,000
+
+```json
+{
+  "operating_revenue": {
+    "value": 246000,
+    "evidence": ["t12.csv:2-4"]
+  },
+  "operating_expenses": {
+    "value": 96000,
+    "evidence": ["t12.csv:5-9"]
+  },
+  "noi": {
+    "value": 150000,
+    "evidence": ["t12.csv:2-4", "t12.csv:5-9"]
+  },
+  "total_units": {
+    "value": 12,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "occupied_units": {
+    "value": 9,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "vacant_units": {
+    "value": 2,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "pending_units": {
+    "value": 1,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "total_area_sf": {
+    "value": 8400,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "occupied_area_sf": {
+    "value": 6500,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "unit_occupancy_pct": {
+    "value": 75.00,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "area_occupancy_pct": {
+    "value": 77.38,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "annual_in_place_rent": {
+    "value": 177600,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "studio_total_units": {
+    "value": 4,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "studio_occupied_units": {
+    "value": 2,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "1br_total_units": {
+    "value": 4,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "1br_occupied_units": {
+    "value": 4,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "2br_total_units": {
+    "value": 4,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "2br_occupied_units": {
+    "value": 3,
+    "evidence": ["rent-roll.csv:2-13"]
+  },
+  "reported_occupied_units": {
+    "value": 10,
+    "evidence": ["source-summary.json:/reported_occupied_units"]
+  },
+  "reported_occupied_area_sf": {
+    "value": 7000,
+    "evidence": ["source-summary.json:/reported_occupied_area_sf"]
+  },
+  "reported_annual_in_place_rent": {
+    "value": 192000,
+    "evidence": ["source-summary.json:/reported_annual_in_place_rent"]
+  },
+  "ltv_limit": {
+    "value": 1560000,
+    "evidence": ["sizing-inputs.json:/valuation", "sizing-inputs.json:/max_ltv"]
+  },
+  "dscr_limit": {
+    "value": 1714286,
+    "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/min_dscr", "sizing-inputs.json:/annual_interest_rate"]
+  },
+  "debt_yield_limit": {
+    "value": 1666667,
+    "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/min_debt_yield"]
+  },
+  "max_loan": {
+    "value": 1560000,
+    "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/valuation", "sizing-inputs.json:/max_ltv", "sizing-inputs.json:/min_dscr", "sizing-inputs.json:/annual_interest_rate", "sizing-inputs.json:/min_debt_yield"]
+  },
+  "binding_constraint": {
+    "value": "ltv",
+    "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/valuation", "sizing-inputs.json:/max_ltv", "sizing-inputs.json:/min_dscr", "sizing-inputs.json:/annual_interest_rate", "sizing-inputs.json:/min_debt_yield"]
+  },
+  "discrepancies": [
+    "pending_in_reported_occupied_units",
+    "pending_in_reported_occupied_area",
+    "pending_in_reported_rent",
+    "historical_revenue_differs_from_current_rent"
+  ],
+  "resolution": {
+    "value": "exclude_pending_from_in_place",
+    "evidence": ["rent-roll.csv:2-13", "sizing-inputs.json:/as_of", "source-summary.json:/note"]
+  }
+}
+```

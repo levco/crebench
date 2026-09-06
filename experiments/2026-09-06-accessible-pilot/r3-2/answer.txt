@@ -1,0 +1,193 @@
+I'll analyze the data from the provided files and prepare the answer.json according to the output contract.
+
+## Financial Analysis
+
+**Operating Revenue Calculation:**
+- Rental income: $240,000
+- Rent abatements: -$6,000  
+- Expense reimbursements: $12,000
+- **Total Operating Revenue: $246,000**
+
+**Operating Expenses Calculation:**
+- Property taxes: $30,000
+- Insurance: $12,000
+- Repairs: $18,000
+- Utilities: $24,000
+- Management: $12,000
+- **Total Operating Expenses: $96,000**
+
+**NOI = $246,000 - $96,000 = $150,000**
+
+## Rent Roll Analysis (as of 2025-12-31)
+
+**Unit Status Summary:**
+- Total units: 12
+- Active units: 9 (units 101, 102, 201-204, 301-303)
+- Vacant units: 2 (units 103, 304)
+- Pending units: 1 (unit 104, commencement 2026-02-01)
+
+**By Unit Type:**
+- Studio (101-104): 4 total, 2 active, 1 vacant, 1 pending
+- 1BR (201-204): 4 total, 4 active
+- 2BR (301-304): 4 total, 3 active, 1 vacant
+
+**Area Calculations:**
+- Total area: 8,400 sq ft (4×500 + 4×700 + 4×900)
+- Occupied area: 6,500 sq ft (2×500 + 4×700 + 3×900)
+
+**Occupancy:**
+- Unit occupancy: 9/12 = 75.00%
+- Area occupancy: 6,500/8,400 = 77.38%
+
+**In-Place Rent (active units only):**
+- Studios: 2 × $1,200 × 12 = $28,800
+- 1BRs: 4 × $1,600 × 12 = $76,800
+- 2BRs: 3 × $2,000 × 12 = $72,000
+- **Total: $177,600**
+
+## Source-Reported Discrepancies
+
+The source-summary.json reports:
+- Occupied units: 10 (vs. our 9)
+- Occupied area: 7,000 sq ft (vs. our 6,500 sq ft)
+- Annual in-place rent: $192,000 (vs. our $177,600)
+
+These differences occur because the source-summary includes the pending lease (unit 104) as occupied, as noted in its own documentation.
+
+**Resolution:** Exclude pending lease from in-place calculations since it's not active at the as-of date.
+
+## Loan Sizing (Interest-Only)
+
+1. **LTV Limit:** $2,400,000 × 0.65 = $1,560,000
+2. **DSCR Limit:** $150,000 ÷ (1.25 × 0.07) = $1,714,286
+3. **Debt Yield Limit:** $150,000 ÷ 0.09 = $1,666,667
+
+**Maximum Loan:** Minimum of $1,560,000, $1,714,286, and $1,666,667 = **$1,560,000**
+
+**Binding Constraint:** LTV (Loan-to-Value)
+
+## Historical Revenue Note
+The T-12 rental income ($240,000) differs from the current annualized rent ($177,600 for active units or $192,000 including pending). This is expected as the T-12 reflects historical performance which need not match current in-place rent.
+
+Here is the answer.json:
+
+```json
+{
+  "fields": {
+    "operating_revenue": {
+      "value": 246000,
+      "evidence": ["t12.csv:2-4"]
+    },
+    "operating_expenses": {
+      "value": 96000,
+      "evidence": ["t12.csv:5-9"]
+    },
+    "noi": {
+      "value": 150000,
+      "evidence": ["t12.csv:2-4", "t12.csv:5-9"]
+    },
+    "total_units": {
+      "value": 12,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "occupied_units": {
+      "value": 9,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "vacant_units": {
+      "value": 2,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "pending_units": {
+      "value": 1,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "total_area_sf": {
+      "value": 8400,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "occupied_area_sf": {
+      "value": 6500,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "unit_occupancy_pct": {
+      "value": 75.00,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "area_occupancy_pct": {
+      "value": 77.38,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "annual_in_place_rent": {
+      "value": 177600,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "studio_total_units": {
+      "value": 4,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "studio_occupied_units": {
+      "value": 2,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "1br_total_units": {
+      "value": 4,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "1br_occupied_units": {
+      "value": 4,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "2br_total_units": {
+      "value": 4,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "2br_occupied_units": {
+      "value": 3,
+      "evidence": ["rent-roll.csv:2-13"]
+    },
+    "reported_occupied_units": {
+      "value": 10,
+      "evidence": ["source-summary.json:/reported_occupied_units"]
+    },
+    "reported_occupied_area_sf": {
+      "value": 7000,
+      "evidence": ["source-summary.json:/reported_occupied_area_sf"]
+    },
+    "reported_annual_in_place_rent": {
+      "value": 192000,
+      "evidence": ["source-summary.json:/reported_annual_in_place_rent"]
+    },
+    "ltv_limit": {
+      "value": 1560000,
+      "evidence": ["sizing-inputs.json:/valuation", "sizing-inputs.json:/max_ltv"]
+    },
+    "dscr_limit": {
+      "value": 1714286,
+      "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/min_dscr", "sizing-inputs.json:/annual_interest_rate"]
+    },
+    "debt_yield_limit": {
+      "value": 1666667,
+      "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/min_debt_yield"]
+    },
+    "max_loan": {
+      "value": 1560000,
+      "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/valuation", "sizing-inputs.json:/max_ltv", "sizing-inputs.json:/min_dscr", "sizing-inputs.json:/annual_interest_rate", "sizing-inputs.json:/min_debt_yield"]
+    },
+    "binding_constraint": {
+      "value": "LTV",
+      "evidence": ["t12.csv:2-4", "t12.csv:5-9", "sizing-inputs.json:/valuation", "sizing-inputs.json:/max_ltv", "sizing-inputs.json:/min_dscr", "sizing-inputs.json:/annual_interest_rate", "sizing-inputs.json:/min_debt_yield"]
+    },
+    "resolution": {
+      "value": "exclude_pending_from_in_place",
+      "evidence": ["rent-roll.csv:2-13", "sizing-inputs.json:/as_of", "source-summary.json:/note"]
+    }
+  },
+  "discrepancies": [
+    "pending_in_reported_occupied_units",
+    "pending_in_reported_occupied_area",
+    "pending_in_reported_rent",
+    "historical_revenue_differs_from_current_rent"
+  ]
+}
+```

@@ -1,0 +1,69 @@
+Looking at this problem, I need to extract data, reconcile conflicts, calculate financials, size a loan, and produce answer.json.
+
+## Data Extraction & Calculations
+
+**T12 Financials:**
+- Operating revenue: 240,000 + (−6,000) + 12,000 = **246,000**
+- Operating expenses: 30,000 + 12,000 + 18,000 + 24,000 + 12,000 = **96,000** (excluding capex & debt service)
+- NOI = 246,000 − 96,000 = **150,000**
+
+**Rent Roll Analysis (active = occupied, excluding pending):**
+- Total units: 12 | Active: 9 | Vacant: 2 | Pending: 1
+- Total area: 8,400 sf | Occupied area: 6,500 sf
+- Unit occupancy: 9/12 = 75.00%
+- Area occupancy: 6,500/8,400 = 77.38%
+- Annual in-place rent: (2×1200 + 4×1600 + 3×2000) × 12 = **177,600**
+
+**Unit type breakdown:** Studio: 4 total/2 occupied; 1BR: 4/4; 2BR: 4/3
+
+**Conflicts identified:**
+1. `pending_in_reported_occupied_units`: reported 10 vs. actual 9 active
+2. `pending_in_reported_occupied_area`: reported 7,000 vs. actual 6,500 sf
+3. `pending_in_reported_rent`: reported 192,000 vs. actual 177,600
+4. `historical_revenue_differs_from_current_rent`: T12 revenue 246,000 ≠ in-place rent 177,600 (expected, different concepts)
+
+**Loan Sizing:**
+- LTV limit: 2,400,000 × 0.65 = **1,560,000**
+- DSCR limit: 150,000 / (1.25 × 0.07) = **1,714,286**
+- Debt yield limit: 150,000 / 0.09 = **1,666,667**
+- Maximum loan: min(1,560,000, 1,714,286, 1,666,667) = **1,560,000** → binding constraint: **LTV**
+
+**Resolution:** exclude_pending_from_in_place
+
+```json
+{
+  "operating_revenue": 246000,
+  "operating_expenses": 96000,
+  "noi": 150000,
+  "total_units": 12,
+  "occupied_units": 9,
+  "vacant_units": 2,
+  "pending_units": 1,
+  "total_area_sf": 8400,
+  "occupied_area_sf": 6500,
+  "unit_occupancy_pct": 75.00,
+  "area_occupancy_pct": 77.38,
+  "annual_in_place_rent": 177600,
+  "studio_total_units": 4,
+  "studio_occupied_units": 2,
+  "1br_total_units": 4,
+  "1br_occupied_units": 4,
+  "2br_total_units": 4,
+  "2br_occupied_units": 3,
+  "reported_occupied_units": 10,
+  "reported_occupied_area_sf": 7000,
+  "reported_annual_in_place_rent": 192000,
+  "ltv_limit": 1560000,
+  "dscr_limit": 1714286,
+  "debt_yield_limit": 1666667,
+  "max_loan": 1560000,
+  "binding_constraint": "ltv",
+  "resolution": "exclude_pending_from_in_place",
+  "discrepancies": [
+    "pending_in_reported_occupied_units",
+    "pending_in_reported_occupied_area",
+    "pending_in_reported_rent",
+    "historical_revenue_differs_from_current_rent"
+  ]
+}
+```

@@ -40,3 +40,18 @@ Only `dist/` is deployed. The build copies an explicit public file list; it does
 ## Ownership and license
 
 Created and published by Lev. New original code, documentation and the fictional example are MIT licensed; the license does not grant trademark rights. No consultant code or private customer material has been incorporated in this initial release. The initial scope was informed by an earlier methodology engagement with The AI Consulting Network; its private materials are not redistributed here. See [NOTICE](NOTICE).
+
+## Development pilot evidence
+
+Nine real API attempts on one public synthetic case are retained in
+[the accessible-model experiment](experiments/2026-09-06-accessible-pilot/RESULTS.md).
+All returned HTTP 200; all failed strict JSON parsing. Financial correctness is
+unscored. These are development findings, not a ranking or real-world accuracy estimate.
+Rebuild the report with:
+
+```sh
+python3 tools/report-pilot.py experiments/2026-09-06-accessible-pilot
+```
+
+Native Lev product calibration is a separate track. Any input adaptation,
+manual correction, tool access and generated-artifact review will be disclosed.
