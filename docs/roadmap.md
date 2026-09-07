@@ -12,3 +12,7 @@
 | Release | Results and evidence | Task-level findings, paired uncertainty, licensed reproduction and corrections |
 
 Dependencies: representative documents and release rights, qualified CRE reviewers, precise Lev test access, evaluation credentials and budget, and domain DNS configuration. Do not replace absent resources with claims that the corresponding stage is complete.
+
+## Research expansion
+
+The [comps and qualified-leads protocol](../benchmarks/research-v1/README.md) defines a separate planned cohort: sales comps, rent comps, sponsor prospects and refinance prospects. It distinguishes a common source corpus from native product discovery, with source-backed eligibility, shortlist usefulness, material errors and cost per verified result. Twenty-four case slots are planned; no research cases are frozen or scored yet. Begin with a four-case development pilot after source and reference review.

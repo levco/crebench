@@ -39,6 +39,7 @@ This makes no API calls. It verifies original hashes, changed input cells, prese
 - [`crebench/`](crebench/): source transforms, generic bounded tools, API runner, deterministic grader, presentation normalization and exact-context billing-resumption adapter.
 - [`experiments/2026-09-06-workflow-development/costs.json`](experiments/2026-09-06-workflow-development/costs.json): separate adapter smoke tests and costs, excluded from scored runs.
 - [`docs/`](docs/): disclosed corrections, source-location interpretation, governance and prior history.
+- [`benchmarks/research-v1/`](benchmarks/research-v1/): design for sales/rent comps and qualified sponsor/refinance leads; planned, with no scored results yet.
 - [Earlier development pilot](https://crebench.vercel.app/pilot.html): a separate one-case cohort with its original limitations and corrections.
 
 The original runner and all 72 frozen manifest hashes are retained. Nine gateway credit interruptions resumed their exact saved requests, with original consumed turns, tools, artifacts and costs retained. Administrative credit waiting is excluded from active run latency and explicitly logged. Completed workflows were not selectively rerun.
