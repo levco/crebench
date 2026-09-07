@@ -1,3 +1,8 @@
+* text=auto eol=lf
 *.pdf binary
 *.xlsx binary
 *.png binary
+# Frozen inputs and original experiment evidence must retain exact bytes,
+# including model whitespace and CSV CRLF endings, on every platform.
+benchmarks/** -text
+experiments/** -text -whitespace
