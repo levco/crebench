@@ -14,7 +14,12 @@ jobs:
         with:
           node-version: '22'
       - run: python3 -m pip install -r requirements-review.txt
+      - name: Install independent spreadsheet recalculation engine
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libreoffice-calc
       - run: python3 -m unittest discover -s tests -v
+      - run: python3 tools/check-expansion.py
       - run: python3 -m crebench verify cases/public/harbor-court-001
       - run: python3 -m crebench grade cases/public/harbor-court-001 cases/public/harbor-court-001/reference-answer.json
       - run: python3 tools/collect-workflow-results.py experiments/2026-09-06-workflow-v1
