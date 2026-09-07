@@ -1,0 +1,704 @@
+{
+  "name": "create_workbook",
+  "arguments_raw": "{\"spec\":{\"sheets\":[{\"name\":\"Comp Grid\",\"freeze_rows\":3,\"column_widths\":{\"A\":12,\"B\":16,\"C\":12,\"D\":18,\"E\":14,\"F\":10,\"G\":14,\"H\":12,\"I\":30},\"cells\":[{\"cell\":\"A1\",\"value\":\"Sales Comps - Industrial / Dallas (as of 2026-08-31)\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Window 2025-09-01 to 2026-08-31; <=8 miles; 71,500-159,500 sf; stabilized, single-asset, fee-simple, unrelated party, known positive consideration, size unit = sf\",\"role\":\"note\",\"wrap\":true},{\"cell\":\"A4\",\"value\":\"Qualified comps selected\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":0,\"role\":\"total\"},{\"cell\":\"A6\",\"value\":\"record_id\",\"role\":\"header\"},{\"cell\":\"B6\",\"value\":\"entity_id\",\"role\":\"header\"},{\"cell\":\"C6\",\"value\":\"event_date\",\"role\":\"header\"},{\"cell\":\"D6\",\"value\":\"consideration_usd\",\"role\":\"header\"},{\"cell\":\"E6\",\"value\":\"property_size\",\"role\":\"header\"},{\"cell\":\"F6\",\"value\":\"size_unit\",\"role\":\"header\"},{\"cell\":\"G6\",\"value\":\"price_per_unit\",\"role\":\"header\"},{\"cell\":\"H6\",\"value\":\"distance_miles\",\"role\":\"header\"},{\"cell\":\"I6\",\"value\":\"source_ids\",\"role\":\"header\"},{\"cell\":\"A7\",\"value\":\"NONE - no qualifying closed sale in scope\",\"role\":\"body\"},{\"cell\":\"D7\",\"value\":null,\"role\":\"body\"},{\"cell\":\"E7\",\"value\":null,\"role\":\"body\"},{\"cell\":\"G7\",\"value\":null,\"role\":\"body\"},{\"cell\":\"A9\",\"value\":\"All 20 base records were screened out; see Screening sheet for record-level reasons and citations.\",\"role\":\"note\",\"wrap\":true}]},{\"name\":\"Screening\",\"freeze_rows\":2,\"column_widths\":{\"A\":12,\"B\":16,\"C\":14,\"D\":16,\"E\":10,\"F\":62},\"cells\":[{\"cell\":\"A1\",\"value\":\"Record-level eligibility screening (all base records)\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"record_id\",\"role\":\"header\"},{\"cell\":\"B2\",\"value\":\"entity_id\",\"role\":\"header\"},{\"cell\":\"C2\",\"value\":\"base_source_id\",\"role\":\"header\"},{\"cell\":\"D2\",\"value\":\"controlling_update\",\"role\":\"header\"},{\"cell\":\"E2\",\"value\":\"eligible\",\"role\":\"header\"},{\"cell\":\"F2\",\"value\":\"reason\",\"role\":\"header\"},{\"cell\":\"A3\",\"value\":\"R8490\"},{\"cell\":\"B3\",\"value\":\"FIR-SAL-26959\"},{\"cell\":\"C3\",\"value\":\"S-R8490\"},{\"cell\":\"D3\",\"value\":\"U-R8490-6\"},{\"cell\":\"E3\",\"value\":false},{\"cell\":\"F3\",\"value\":\"Executed amendment moves market to Seattle; outside Dallas scope. Later 2026-09-10 amendment ignored (post-cutoff).\",\"wrap\":true},{\"cell\":\"A4\",\"value\":\"R8993\"},{\"cell\":\"B4\",\"value\":\"FIR-SAL-16417\"},{\"cell\":\"C4\",\"value\":\"S-R8993\"},{\"cell\":\"D4\",\"value\":null},{\"cell\":\"E4\",\"value\":false},{\"cell\":\"F4\",\"value\":\"Property size 231,000 sf exceeds 159,500 sf band.\",\"wrap\":true},{\"cell\":\"A5\",\"value\":\"R8114\"},{\"cell\":\"B5\",\"value\":\"FIR-SAL-89538\"},{\"cell\":\"C5\",\"value\":\"S-R8114\"},{\"cell\":\"D5\",\"value\":null},{\"cell\":\"E5\",\"value\":false},{\"cell\":\"F5\",\"value\":\"Consideration null (unknown, not zero); positive consideration not evidenced.\",\"wrap\":true},{\"cell\":\"A6\",\"value\":\"R8252\"},{\"cell\":\"B6\",\"value\":\"FIR-SAL-91456\"},{\"cell\":\"C6\",\"value\":\"S-R8252\"},{\"cell\":\"D6\",\"value\":null},{\"cell\":\"E6\",\"value\":false},{\"cell\":\"F6\",\"value\":\"Asset type Office, not Industrial.\",\"wrap\":true},{\"cell\":\"A7\",\"value\":\"R2607\"},{\"cell\":\"B7\",\"value\":\"FIR-SAL-95060\"},{\"cell\":\"C7\",\"value\":\"S-R2607\"},{\"cell\":\"D7\",\"value\":\"U-R6997-4\"},{\"cell\":\"E7\",\"value\":false},{\"cell\":\"F7\",\"value\":\"Duplicate of R6997 (same entity/date/price); entity amendment moves market to Seattle.\",\"wrap\":true},{\"cell\":\"A8\",\"value\":\"R2188\"},{\"cell\":\"B8\",\"value\":\"FIR-SAL-59912\"},{\"cell\":\"C8\",\"value\":\"S-R2188\"},{\"cell\":\"D8\",\"value\":null},{\"cell\":\"E8\",\"value\":false},{\"cell\":\"F8\",\"value\":\"Unallocated portfolio price; not a single-asset qualifying sale.\",\"wrap\":true},{\"cell\":\"A9\",\"value\":\"R7726\"},{\"cell\":\"B9\",\"value\":\"FIR-SAL-55694\"},{\"cell\":\"C9\",\"value\":\"S-R7726\"},{\"cell\":\"D9\",\"value\":null},{\"cell\":\"E9\",\"value\":false},{\"cell\":\"F9\",\"value\":\"Published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence not usable.\",\"wrap\":true},{\"cell\":\"A10\",\"value\":\"R2939\"},{\"cell\":\"B10\",\"value\":\"FIR-SAL-85658\"},{\"cell\":\"C10\",\"value\":\"S-R2939\"},{\"cell\":\"D10\",\"value\":null},{\"cell\":\"E10\",\"value\":false},{\"cell\":\"F10\",\"value\":\"Distance 18.6 miles exceeds 8-mile radius.\",\"wrap\":true},{\"cell\":\"A11\",\"value\":\"R6997\"},{\"cell\":\"B11\",\"value\":\"FIR-SAL-95060\"},{\"cell\":\"C11\",\"value\":\"S-R6997\"},{\"cell\":\"D11\",\"value\":\"U-R6997-4\"},{\"cell\":\"E11\",\"value\":false},{\"cell\":\"F11\",\"value\":\"Executed amendment moves market to Seattle; outside Dallas scope.\",\"wrap\":true},{\"cell\":\"A12\",\"value\":\"R9929\"},{\"cell\":\"B12\",\"value\":\"FIR-SAL-47218\"},{\"cell\":\"C12\",\"value\":\"S-R9929\"},{\"cell\":\"D12\",\"value\":\"U-R9929-5; U-R9929-1\"},{\"cell\":\"E12\",\"value\":false},{\"cell\":\"F12\",\"value\":\"Amended market Seattle (price amended to $14,880,000 but market disqualifies).\",\"wrap\":true},{\"cell\":\"A13\",\"value\":\"R9726\"},{\"cell\":\"B13\",\"value\":\"FIR-SAL-48564\"},{\"cell\":\"C13\",\"value\":\"S-R9726\"},{\"cell\":\"D13\",\"value\":null},{\"cell\":\"E13\",\"value\":false},{\"cell\":\"F13\",\"value\":\"Related-party transaction.\",\"wrap\":true},{\"cell\":\"A14\",\"value\":\"R8402\"},{\"cell\":\"B14\",\"value\":\"FIR-SAL-10084\"},{\"cell\":\"C14\",\"value\":\"S-R8402\"},{\"cell\":\"D14\",\"value\":null},{\"cell\":\"E14\",\"value\":false},{\"cell\":\"F14\",\"value\":\"Minority equity interest, not fee-simple whole-asset sale.\",\"wrap\":true},{\"cell\":\"A15\",\"value\":\"R2942\"},{\"cell\":\"B15\",\"value\":\"FIR-SAL-14121\"},{\"cell\":\"C15\",\"value\":\"S-R2942\"},{\"cell\":\"D15\",\"value\":null},{\"cell\":\"E15\",\"value\":false},{\"cell\":\"F15\",\"value\":\"Closed 2024-02-10, outside 2025-09-01 to 2026-08-31 window.\",\"wrap\":true},{\"cell\":\"A16\",\"value\":\"R3099\"},{\"cell\":\"B16\",\"value\":\"FIR-SAL-27341\"},{\"cell\":\"C16\",\"value\":\"S-R3099\"},{\"cell\":\"D16\",\"value\":null},{\"cell\":\"E16\",\"value\":false},{\"cell\":\"F16\",\"value\":\"Status listing, not a closed sale.\",\"wrap\":true},{\"cell\":\"A17\",\"value\":\"R3387\"},{\"cell\":\"B17\",\"value\":\"FIR-SAL-97680\"},{\"cell\":\"C17\",\"value\":\"S-R3387\"},{\"cell\":\"D17\",\"value\":null},{\"cell\":\"E17\",\"value\":false},{\"cell\":\"F17\",\"value\":\"Size unit reported in acres; incorrect size unit for sf screen.\",\"wrap\":true},{\"cell\":\"A18\",\"value\":\"R8382\"},{\"cell\":\"B18\",\"value\":\"FIR-SAL-46518\"},{\"cell\":\"C18\",\"value\":\"S-R8382\"},{\"cell\":\"D18\",\"value\":\"U-R8382-7\"},{\"cell\":\"E18\",\"value\":false},{\"cell\":\"F18\",\"value\":\"Executed amendment moves market to Seattle. Unsigned draft U-R8382-3 price change disregarded.\",\"wrap\":true},{\"cell\":\"A19\",\"value\":\"R7274\"},{\"cell\":\"B19\",\"value\":\"FIR-SAL-82857\"},{\"cell\":\"C19\",\"value\":\"S-R7274\"},{\"cell\":\"D19\",\"value\":\"U-R7274-9\"},{\"cell\":\"E19\",\"value\":false},{\"cell\":\"F19\",\"value\":\"Executed amendment moves market to Seattle; outside Dallas scope.\",\"wrap\":true},{\"cell\":\"A20\",\"value\":\"R7218\"},{\"cell\":\"B20\",\"value\":\"FIR-SAL-46212\"},{\"cell\":\"C20\",\"value\":\"S-R7218\"},{\"cell\":\"D20\",\"value\":\"U-R7218-8\"},{\"cell\":\"E20\",\"value\":false},{\"cell\":\"F20\",\"value\":\"Executed amendment moves market to Seattle; outside Dallas scope.\",\"wrap\":true},{\"cell\":\"A21\",\"value\":\"R8181\"},{\"cell\":\"B21\",\"value\":\"FIR-SAL-56956\"},{\"cell\":\"C21\",\"value\":\"S-R8181\"},{\"cell\":\"D21\",\"value\":null},{\"cell\":\"E21\",\"value\":false},{\"cell\":\"F21\",\"value\":\"Condition redevelopment; not stabilized.\",\"wrap\":true},{\"cell\":\"A22\",\"value\":\"R4189\"},{\"cell\":\"B22\",\"value\":\"FIR-SAL-23807\"},{\"cell\":\"C22\",\"value\":\"S-R4189\"},{\"cell\":\"D22\",\"value\":\"U-R4189-10\"},{\"cell\":\"E22\",\"value\":false},{\"cell\":\"F22\",\"value\":\"Executed amendment moves market to Seattle; outside Dallas scope.\",\"wrap\":true},{\"cell\":\"A24\",\"value\":\"Qualified count\",\"role\":\"header\"},{\"cell\":\"B24\",\"formula\":\"=COUNTIF(E3:E22,TRUE)\",\"role\":\"total\"}]}],\"input_map\":{\"screening_eligible_flags\":\"Screening!E3\",\"cutoff_note\":\"'Comp Grid'!A2\"},\"output_map\":{\"qualified_comp_count\":\"'Comp Grid'!B4\",\"screening_qualified_count\":\"Screening!B24\"}}}",
+  "call_id": "toolu_01Cj94vwsCgSgRtLS6tQh9JC",
+  "arguments": {
+    "spec": {
+      "sheets": [
+        {
+          "name": "Comp Grid",
+          "freeze_rows": 3,
+          "column_widths": {
+            "A": 12,
+            "B": 16,
+            "C": 12,
+            "D": 18,
+            "E": 14,
+            "F": 10,
+            "G": 14,
+            "H": 12,
+            "I": 30
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Sales Comps - Industrial / Dallas (as of 2026-08-31)",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Window 2025-09-01 to 2026-08-31; <=8 miles; 71,500-159,500 sf; stabilized, single-asset, fee-simple, unrelated party, known positive consideration, size unit = sf",
+              "role": "note",
+              "wrap": true
+            },
+            {
+              "cell": "A4",
+              "value": "Qualified comps selected",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": 0,
+              "role": "total"
+            },
+            {
+              "cell": "A6",
+              "value": "record_id",
+              "role": "header"
+            },
+            {
+              "cell": "B6",
+              "value": "entity_id",
+              "role": "header"
+            },
+            {
+              "cell": "C6",
+              "value": "event_date",
+              "role": "header"
+            },
+            {
+              "cell": "D6",
+              "value": "consideration_usd",
+              "role": "header"
+            },
+            {
+              "cell": "E6",
+              "value": "property_size",
+              "role": "header"
+            },
+            {
+              "cell": "F6",
+              "value": "size_unit",
+              "role": "header"
+            },
+            {
+              "cell": "G6",
+              "value": "price_per_unit",
+              "role": "header"
+            },
+            {
+              "cell": "H6",
+              "value": "distance_miles",
+              "role": "header"
+            },
+            {
+              "cell": "I6",
+              "value": "source_ids",
+              "role": "header"
+            },
+            {
+              "cell": "A7",
+              "value": "NONE - no qualifying closed sale in scope",
+              "role": "body"
+            },
+            {
+              "cell": "D7",
+              "value": null,
+              "role": "body"
+            },
+            {
+              "cell": "E7",
+              "value": null,
+              "role": "body"
+            },
+            {
+              "cell": "G7",
+              "value": null,
+              "role": "body"
+            },
+            {
+              "cell": "A9",
+              "value": "All 20 base records were screened out; see Screening sheet for record-level reasons and citations.",
+              "role": "note",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "name": "Screening",
+          "freeze_rows": 2,
+          "column_widths": {
+            "A": 12,
+            "B": 16,
+            "C": 14,
+            "D": 16,
+            "E": 10,
+            "F": 62
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Record-level eligibility screening (all base records)",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "record_id",
+              "role": "header"
+            },
+            {
+              "cell": "B2",
+              "value": "entity_id",
+              "role": "header"
+            },
+            {
+              "cell": "C2",
+              "value": "base_source_id",
+              "role": "header"
+            },
+            {
+              "cell": "D2",
+              "value": "controlling_update",
+              "role": "header"
+            },
+            {
+              "cell": "E2",
+              "value": "eligible",
+              "role": "header"
+            },
+            {
+              "cell": "F2",
+              "value": "reason",
+              "role": "header"
+            },
+            {
+              "cell": "A3",
+              "value": "R8490"
+            },
+            {
+              "cell": "B3",
+              "value": "FIR-SAL-26959"
+            },
+            {
+              "cell": "C3",
+              "value": "S-R8490"
+            },
+            {
+              "cell": "D3",
+              "value": "U-R8490-6"
+            },
+            {
+              "cell": "E3",
+              "value": false
+            },
+            {
+              "cell": "F3",
+              "value": "Executed amendment moves market to Seattle; outside Dallas scope. Later 2026-09-10 amendment ignored (post-cutoff).",
+              "wrap": true
+            },
+            {
+              "cell": "A4",
+              "value": "R8993"
+            },
+            {
+              "cell": "B4",
+              "value": "FIR-SAL-16417"
+            },
+            {
+              "cell": "C4",
+              "value": "S-R8993"
+            },
+            {
+              "cell": "D4",
+              "value": null
+            },
+            {
+              "cell": "E4",
+              "value": false
+            },
+            {
+              "cell": "F4",
+              "value": "Property size 231,000 sf exceeds 159,500 sf band.",
+              "wrap": true
+            },
+            {
+              "cell": "A5",
+              "value": "R8114"
+            },
+            {
+              "cell": "B5",
+              "value": "FIR-SAL-89538"
+            },
+            {
+              "cell": "C5",
+              "value": "S-R8114"
+            },
+            {
+              "cell": "D5",
+              "value": null
+            },
+            {
+              "cell": "E5",
+              "value": false
+            },
+            {
+              "cell": "F5",
+              "value": "Consideration null (unknown, not zero); positive consideration not evidenced.",
+              "wrap": true
+            },
+            {
+              "cell": "A6",
+              "value": "R8252"
+            },
+            {
+              "cell": "B6",
+              "value": "FIR-SAL-91456"
+            },
+            {
+              "cell": "C6",
+              "value": "S-R8252"
+            },
+            {
+              "cell": "D6",
+              "value": null
+            },
+            {
+              "cell": "E6",
+              "value": false
+            },
+            {
+              "cell": "F6",
+              "value": "Asset type Office, not Industrial.",
+              "wrap": true
+            },
+            {
+              "cell": "A7",
+              "value": "R2607"
+            },
+            {
+              "cell": "B7",
+              "value": "FIR-SAL-95060"
+            },
+            {
+              "cell": "C7",
+              "value": "S-R2607"
+            },
+            {
+              "cell": "D7",
+              "value": "U-R6997-4"
+            },
+            {
+              "cell": "E7",
+              "value": false
+            },
+            {
+              "cell": "F7",
+              "value": "Duplicate of R6997 (same entity/date/price); entity amendment moves market to Seattle.",
+              "wrap": true
+            },
+            {
+              "cell": "A8",
+              "value": "R2188"
+            },
+            {
+              "cell": "B8",
+              "value": "FIR-SAL-59912"
+            },
+            {
+              "cell": "C8",
+              "value": "S-R2188"
+            },
+            {
+              "cell": "D8",
+              "value": null
+            },
+            {
+              "cell": "E8",
+              "value": false
+            },
+            {
+              "cell": "F8",
+              "value": "Unallocated portfolio price; not a single-asset qualifying sale.",
+              "wrap": true
+            },
+            {
+              "cell": "A9",
+              "value": "R7726"
+            },
+            {
+              "cell": "B9",
+              "value": "FIR-SAL-55694"
+            },
+            {
+              "cell": "C9",
+              "value": "S-R7726"
+            },
+            {
+              "cell": "D9",
+              "value": null
+            },
+            {
+              "cell": "E9",
+              "value": false
+            },
+            {
+              "cell": "F9",
+              "value": "Published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence not usable.",
+              "wrap": true
+            },
+            {
+              "cell": "A10",
+              "value": "R2939"
+            },
+            {
+              "cell": "B10",
+              "value": "FIR-SAL-85658"
+            },
+            {
+              "cell": "C10",
+              "value": "S-R2939"
+            },
+            {
+              "cell": "D10",
+              "value": null
+            },
+            {
+              "cell": "E10",
+              "value": false
+            },
+            {
+              "cell": "F10",
+              "value": "Distance 18.6 miles exceeds 8-mile radius.",
+              "wrap": true
+            },
+            {
+              "cell": "A11",
+              "value": "R6997"
+            },
+            {
+              "cell": "B11",
+              "value": "FIR-SAL-95060"
+            },
+            {
+              "cell": "C11",
+              "value": "S-R6997"
+            },
+            {
+              "cell": "D11",
+              "value": "U-R6997-4"
+            },
+            {
+              "cell": "E11",
+              "value": false
+            },
+            {
+              "cell": "F11",
+              "value": "Executed amendment moves market to Seattle; outside Dallas scope.",
+              "wrap": true
+            },
+            {
+              "cell": "A12",
+              "value": "R9929"
+            },
+            {
+              "cell": "B12",
+              "value": "FIR-SAL-47218"
+            },
+            {
+              "cell": "C12",
+              "value": "S-R9929"
+            },
+            {
+              "cell": "D12",
+              "value": "U-R9929-5; U-R9929-1"
+            },
+            {
+              "cell": "E12",
+              "value": false
+            },
+            {
+              "cell": "F12",
+              "value": "Amended market Seattle (price amended to $14,880,000 but market disqualifies).",
+              "wrap": true
+            },
+            {
+              "cell": "A13",
+              "value": "R9726"
+            },
+            {
+              "cell": "B13",
+              "value": "FIR-SAL-48564"
+            },
+            {
+              "cell": "C13",
+              "value": "S-R9726"
+            },
+            {
+              "cell": "D13",
+              "value": null
+            },
+            {
+              "cell": "E13",
+              "value": false
+            },
+            {
+              "cell": "F13",
+              "value": "Related-party transaction.",
+              "wrap": true
+            },
+            {
+              "cell": "A14",
+              "value": "R8402"
+            },
+            {
+              "cell": "B14",
+              "value": "FIR-SAL-10084"
+            },
+            {
+              "cell": "C14",
+              "value": "S-R8402"
+            },
+            {
+              "cell": "D14",
+              "value": null
+            },
+            {
+              "cell": "E14",
+              "value": false
+            },
+            {
+              "cell": "F14",
+              "value": "Minority equity interest, not fee-simple whole-asset sale.",
+              "wrap": true
+            },
+            {
+              "cell": "A15",
+              "value": "R2942"
+            },
+            {
+              "cell": "B15",
+              "value": "FIR-SAL-14121"
+            },
+            {
+              "cell": "C15",
+              "value": "S-R2942"
+            },
+            {
+              "cell": "D15",
+              "value": null
+            },
+            {
+              "cell": "E15",
+              "value": false
+            },
+            {
+              "cell": "F15",
+              "value": "Closed 2024-02-10, outside 2025-09-01 to 2026-08-31 window.",
+              "wrap": true
+            },
+            {
+              "cell": "A16",
+              "value": "R3099"
+            },
+            {
+              "cell": "B16",
+              "value": "FIR-SAL-27341"
+            },
+            {
+              "cell": "C16",
+              "value": "S-R3099"
+            },
+            {
+              "cell": "D16",
+              "value": null
+            },
+            {
+              "cell": "E16",
+              "value": false
+            },
+            {
+              "cell": "F16",
+              "value": "Status listing, not a closed sale.",
+              "wrap": true
+            },
+            {
+              "cell": "A17",
+              "value": "R3387"
+            },
+            {
+              "cell": "B17",
+              "value": "FIR-SAL-97680"
+            },
+            {
+              "cell": "C17",
+              "value": "S-R3387"
+            },
+            {
+              "cell": "D17",
+              "value": null
+            },
+            {
+              "cell": "E17",
+              "value": false
+            },
+            {
+              "cell": "F17",
+              "value": "Size unit reported in acres; incorrect size unit for sf screen.",
+              "wrap": true
+            },
+            {
+              "cell": "A18",
+              "value": "R8382"
+            },
+            {
+              "cell": "B18",
+              "value": "FIR-SAL-46518"
+            },
+            {
+              "cell": "C18",
+              "value": "S-R8382"
+            },
+            {
+              "cell": "D18",
+              "value": "U-R8382-7"
+            },
+            {
+              "cell": "E18",
+              "value": false
+            },
+            {
+              "cell": "F18",
+              "value": "Executed amendment moves market to Seattle. Unsigned draft U-R8382-3 price change disregarded.",
+              "wrap": true
+            },
+            {
+              "cell": "A19",
+              "value": "R7274"
+            },
+            {
+              "cell": "B19",
+              "value": "FIR-SAL-82857"
+            },
+            {
+              "cell": "C19",
+              "value": "S-R7274"
+            },
+            {
+              "cell": "D19",
+              "value": "U-R7274-9"
+            },
+            {
+              "cell": "E19",
+              "value": false
+            },
+            {
+              "cell": "F19",
+              "value": "Executed amendment moves market to Seattle; outside Dallas scope.",
+              "wrap": true
+            },
+            {
+              "cell": "A20",
+              "value": "R7218"
+            },
+            {
+              "cell": "B20",
+              "value": "FIR-SAL-46212"
+            },
+            {
+              "cell": "C20",
+              "value": "S-R7218"
+            },
+            {
+              "cell": "D20",
+              "value": "U-R7218-8"
+            },
+            {
+              "cell": "E20",
+              "value": false
+            },
+            {
+              "cell": "F20",
+              "value": "Executed amendment moves market to Seattle; outside Dallas scope.",
+              "wrap": true
+            },
+            {
+              "cell": "A21",
+              "value": "R8181"
+            },
+            {
+              "cell": "B21",
+              "value": "FIR-SAL-56956"
+            },
+            {
+              "cell": "C21",
+              "value": "S-R8181"
+            },
+            {
+              "cell": "D21",
+              "value": null
+            },
+            {
+              "cell": "E21",
+              "value": false
+            },
+            {
+              "cell": "F21",
+              "value": "Condition redevelopment; not stabilized.",
+              "wrap": true
+            },
+            {
+              "cell": "A22",
+              "value": "R4189"
+            },
+            {
+              "cell": "B22",
+              "value": "FIR-SAL-23807"
+            },
+            {
+              "cell": "C22",
+              "value": "S-R4189"
+            },
+            {
+              "cell": "D22",
+              "value": "U-R4189-10"
+            },
+            {
+              "cell": "E22",
+              "value": false
+            },
+            {
+              "cell": "F22",
+              "value": "Executed amendment moves market to Seattle; outside Dallas scope.",
+              "wrap": true
+            },
+            {
+              "cell": "A24",
+              "value": "Qualified count",
+              "role": "header"
+            },
+            {
+              "cell": "B24",
+              "formula": "=COUNTIF(E3:E22,TRUE)",
+              "role": "total"
+            }
+          ]
+        }
+      ],
+      "input_map": {
+        "screening_eligible_flags": "Screening!E3",
+        "cutoff_note": "'Comp Grid'!A2"
+      },
+      "output_map": {
+        "qualified_comp_count": "'Comp Grid'!B4",
+        "screening_qualified_count": "Screening!B24"
+      }
+    }
+  },
+  "result": {
+    "created": "artifacts/underwriting-v1.xlsx",
+    "bytes": 6981,
+    "inspection": {
+      "sheets": [
+        "Comp Grid",
+        "Screening"
+      ],
+      "formula_count": 1,
+      "formula_errors": [],
+      "outputs": {
+        "qualified_comp_count": 0,
+        "screening_qualified_count": 0
+      }
+    }
+  },
+  "status": "ok"
+}

@@ -1,0 +1,283 @@
+{
+  "case_id": "rent-comps-alder",
+  "system": "openai/gpt-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T02:47:15.694559+00:00",
+  "completed_at": "2026-09-07T02:56:09.775527+00:00",
+  "elapsed_seconds": 534.079,
+  "cost_usd": 0.4952655,
+  "known_partial_cost_usd": 0.4952655,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "openai/gpt-5"
+  ],
+  "model_calls": 8,
+  "tool_calls": 8,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 5626,
+        "completion_tokens": 7139,
+        "total_tokens": 12765,
+        "cost": 0.0784225,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7104,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0784225,
+        "gateway_cost": 0.0784225
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 81.668,
+      "completed_at": "2026-09-07T02:48:37.382882+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 5669,
+        "completion_tokens": 4522,
+        "total_tokens": 10191,
+        "cost": 0.04611425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5504,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4352,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.04611425,
+        "gateway_cost": 0.04611425
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 50.867,
+      "completed_at": "2026-09-07T02:49:28.254328+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 5905,
+        "completion_tokens": 3864,
+        "total_tokens": 9769,
+        "cost": 0.03968525,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3648,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.03968525,
+        "gateway_cost": 0.03968525
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 49.072,
+      "completed_at": "2026-09-07T02:50:17.329361+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 6149,
+        "completion_tokens": 4537,
+        "total_tokens": 10686,
+        "cost": 0.04643225,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4096,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.04643225,
+        "gateway_cost": 0.04643225
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 56.48,
+      "completed_at": "2026-09-07T02:51:13.812140+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 6798,
+        "completion_tokens": 6964,
+        "total_tokens": 13762,
+        "cost": 0.0713695,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6016,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6272,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0713695,
+        "gateway_cost": 0.0713695
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 75.735,
+      "completed_at": "2026-09-07T02:52:29.550750+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 7869,
+        "completion_tokens": 5453,
+        "total_tokens": 13322,
+        "cost": 0.05687825,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6656,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5056,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.05687825,
+        "gateway_cost": 0.05687825
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 58.027,
+      "completed_at": "2026-09-07T02:53:27.593484+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8415,
+        "completion_tokens": 6910,
+        "total_tokens": 15325,
+        "cost": 0.07083475,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 7808,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5696,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.07083475,
+        "gateway_cost": 0.07083475
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 67.522,
+      "completed_at": "2026-09-07T02:54:35.118538+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 9639,
+        "completion_tokens": 8284,
+        "total_tokens": 17923,
+        "cost": 0.08552875,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8320,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6464,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.08552875,
+        "gateway_cost": 0.08552875
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 94.137,
+      "completed_at": "2026-09-07T02:56:09.773109+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/underwriting-v1.xlsx",
+      "sha256": "cafc2706f68d42ca21238fa7f442208c0a0ffffde2d096267eb699be4ff27780",
+      "bytes": 4461
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

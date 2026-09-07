@@ -1,0 +1,58 @@
+{
+  "case_id": "rent-comps-birch",
+  "system": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-07T02:30:42.927Z",
+  "observed_completed_at": "2026-09-07T02:33:15.080Z",
+  "packet_sha256": "26b6483dae943726636203505622b7928fbfc897724db3d82daa1c98a40193c7",
+  "ui_whitespace_equivalent": true,
+  "operator_semantic_corrections": 0,
+  "artifacts": [
+    {
+      "path": "artifacts/birch_comp_grid.xlsx",
+      "sha256": "390d695d49961a2f54d35c1873d6b258eaf3a6722a6a32e110834b7b9dbb0043",
+      "bytes": 7768
+    }
+  ],
+  "cost_usd": null,
+  "estimated_inference_cost_usd": 0.55367875,
+  "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price",
+  "elapsed_seconds": 116.42,
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "trace_audit": {
+    "trace_id": "ed1c3aad-5fad-412e-835a-bf9ca097fa2b",
+    "session_id": "9122db29-8b6f-48f5-89ab-fc3863cb6363",
+    "started_at": "2026-09-06T22:32:08.550000-04:00",
+    "packet_match": "Trace prefix matches; connector truncates root input. Complete UI input was independently verified before submission.",
+    "event_count": 4,
+    "model_calls": 2,
+    "generation_costs_usd": [
+      0.3779745,
+      0.17570425
+    ],
+    "total_cost_usd": 0.55367875,
+    "cost_sources": [
+      "openrouter"
+    ],
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "tools_called": [
+      "get_generated_file"
+    ],
+    "external_retrieval_audit": "no_retrieval_observed_partial_coverage",
+    "execution_coverage": "Recorded backend tools only; internal file-creation execution is not visible in the available trace metadata.",
+    "confirmed_common_corpus": false,
+    "tools_requiring_review": [],
+    "elapsed_seconds": 116.42,
+    "cost_scope": "Matched workflow generations and embeddings; duplicate run-summary excluded. Session naming, hosting, subscriptions, operator time and product credits excluded.",
+    "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price"
+  },
+  "access_audit": "no_retrieval_observed_partial_coverage"
+}

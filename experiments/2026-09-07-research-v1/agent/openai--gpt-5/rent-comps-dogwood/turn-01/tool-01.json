@@ -1,0 +1,69 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"A_R8720\",\"expression\":\"21.0\"},{\"name\":\"m_R8720\",\"expression\":\"A_R8720/12\"},{\"name\":\"E_R8720\",\"expression\":\"6.25/12\"},{\"name\":\"sum_face_1_12_R8720\",\"expression\":\"m_R8720*12\"},{\"name\":\"sum_face_13_24_R8720\",\"expression\":\"m_R8720*1.025*12\"},{\"name\":\"sum_face_25_36_R8720\",\"expression\":\"m_R8720*1.025**2*12\"},{\"name\":\"sum_face_total_R8720\",\"expression\":\"sum_face_1_12_R8720+sum_face_13_24_R8720+sum_face_25_36_R8720\"},{\"name\":\"sum_exp_R8720\",\"expression\":\"E_R8720*36\"},{\"name\":\"net_before_TI_R8720\",\"expression\":\"sum_face_total_R8720 - sum_exp_R8720\"},{\"name\":\"net_total_R8720\",\"expression\":\"net_before_TI_R8720 - 12\"},{\"name\":\"eff_net_annual_R8720\",\"expression\":\"(net_total_R8720/36)*12\"}]}",
+  "call_id": "call_VrM0dorX80di6dylXFrkefEU",
+  "arguments": {
+    "steps": [
+      {
+        "name": "A_R8720",
+        "expression": "21.0"
+      },
+      {
+        "name": "m_R8720",
+        "expression": "A_R8720/12"
+      },
+      {
+        "name": "E_R8720",
+        "expression": "6.25/12"
+      },
+      {
+        "name": "sum_face_1_12_R8720",
+        "expression": "m_R8720*12"
+      },
+      {
+        "name": "sum_face_13_24_R8720",
+        "expression": "m_R8720*1.025*12"
+      },
+      {
+        "name": "sum_face_25_36_R8720",
+        "expression": "m_R8720*1.025**2*12"
+      },
+      {
+        "name": "sum_face_total_R8720",
+        "expression": "sum_face_1_12_R8720+sum_face_13_24_R8720+sum_face_25_36_R8720"
+      },
+      {
+        "name": "sum_exp_R8720",
+        "expression": "E_R8720*36"
+      },
+      {
+        "name": "net_before_TI_R8720",
+        "expression": "sum_face_total_R8720 - sum_exp_R8720"
+      },
+      {
+        "name": "net_total_R8720",
+        "expression": "net_before_TI_R8720 - 12"
+      },
+      {
+        "name": "eff_net_annual_R8720",
+        "expression": "(net_total_R8720/36)*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "A_R8720": 21.0,
+      "m_R8720": 1.75,
+      "E_R8720": 0.5208333333333334,
+      "sum_face_1_12_R8720": 21.0,
+      "sum_face_13_24_R8720": 21.525,
+      "sum_face_25_36_R8720": 22.063125,
+      "sum_face_total_R8720": 64.58812499999999,
+      "sum_exp_R8720": 18.75,
+      "net_before_TI_R8720": 45.83812499999999,
+      "net_total_R8720": 33.83812499999999,
+      "eff_net_annual_R8720": 11.279374999999998
+    }
+  },
+  "status": "ok"
+}

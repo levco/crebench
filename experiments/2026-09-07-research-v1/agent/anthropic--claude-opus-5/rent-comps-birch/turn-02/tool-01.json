@@ -1,0 +1,889 @@
+{
+  "name": "create_workbook",
+  "arguments_raw": "{\"spec\":{\"sheets\":[{\"name\":\"Comp Grid\",\"freeze_rows\":4,\"column_widths\":{\"A\":10,\"B\":20,\"C\":16,\"D\":12,\"E\":9,\"F\":9,\"G\":9,\"H\":18,\"I\":11,\"J\":11,\"K\":11,\"L\":9,\"M\":9,\"N\":9,\"O\":9,\"P\":10,\"Q\":10,\"R\":10,\"S\":10,\"T\":10,\"U\":11,\"V\":11,\"W\":13,\"X\":60},\"cells\":[{\"cell\":\"A1\",\"value\":\"rent-comps-birch - Retail Phoenix Executed Lease Comp Grid (as of 2026-08-31)\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Client convention: face quote annualized; step-ups at months 13/25/...; no face rent during free months; gross expense deduction annual_expenses_psf/12 every month (NNN = 0); TI subtracted once; net total / term_months x 12. Undiscounted rent-only, not an appraisal.\",\"role\":\"note\",\"wrap\":true},{\"cell\":\"A3\",\"value\":\"Ranked by distance ascending, then latest lease date. Blue cells are source inputs; 'null' means unknown (not zero).\",\"role\":\"note\",\"wrap\":true},{\"cell\":\"A4\",\"value\":\"record_id\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"entity_id\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"name\",\"role\":\"header\"},{\"cell\":\"D4\",\"value\":\"event_date\",\"role\":\"header\"},{\"cell\":\"E4\",\"value\":\"distance_mi\",\"role\":\"header\"},{\"cell\":\"F4\",\"value\":\"area_sf\",\"role\":\"header\"},{\"cell\":\"G4\",\"value\":\"face_quote\",\"role\":\"header\"},{\"cell\":\"H4\",\"value\":\"quote_unit\",\"role\":\"header\"},{\"cell\":\"I4\",\"value\":\"annual_face_rent_psf\",\"role\":\"header\"},{\"cell\":\"J4\",\"value\":\"expense_basis\",\"role\":\"header\"},{\"cell\":\"K4\",\"value\":\"annual_expenses_psf\",\"role\":\"header\"},{\"cell\":\"L4\",\"value\":\"free_months\",\"role\":\"header\"},{\"cell\":\"M4\",\"value\":\"term_months\",\"role\":\"header\"},{\"cell\":\"N4\",\"value\":\"annual_increase\",\"role\":\"header\"},{\"cell\":\"O4\",\"value\":\"ti_psf\",\"role\":\"header\"},{\"cell\":\"P4\",\"value\":\"yr1_face\",\"role\":\"header\"},{\"cell\":\"Q4\",\"value\":\"yr2_face\",\"role\":\"header\"},{\"cell\":\"R4\",\"value\":\"yr3_face\",\"role\":\"header\"},{\"cell\":\"S4\",\"value\":\"yr4_face\",\"role\":\"header\"},{\"cell\":\"T4\",\"value\":\"yr5_face\",\"role\":\"header\"},{\"cell\":\"U4\",\"value\":\"expense_ded\",\"role\":\"header\"},{\"cell\":\"V4\",\"value\":\"net_total_psf\",\"role\":\"header\"},{\"cell\":\"W4\",\"value\":\"effective_net_rent_psf_year\",\"role\":\"header\"},{\"cell\":\"X4\",\"value\":\"source_ids\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"R1695\",\"role\":\"body\"},{\"cell\":\"B5\",\"value\":\"BIRCH-REN-46690\",\"role\":\"body\"},{\"cell\":\"C5\",\"value\":\"Birch Square 1\",\"role\":\"body\"},{\"cell\":\"D5\",\"value\":\"2026-02-05\",\"role\":\"body\"},{\"cell\":\"E5\",\"value\":0.8,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"F5\",\"value\":9600,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"G5\",\"value\":21,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"H5\",\"value\":\"USD_per_sf_year\",\"role\":\"body\"},{\"cell\":\"I5\",\"value\":21,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"J5\",\"value\":\"gross\",\"role\":\"input\"},{\"cell\":\"K5\",\"value\":6.25,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"L5\",\"value\":0,\"role\":\"input\"},{\"cell\":\"M5\",\"value\":36,\"role\":\"input\"},{\"cell\":\"N5\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O5\",\"value\":12,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"X5\",\"value\":\"S-R1695 (duplicate entity record R2614 / S-R2614 not counted twice)\",\"role\":\"note\"},{\"cell\":\"A6\",\"value\":\"R3353\",\"role\":\"body\"},{\"cell\":\"B6\",\"value\":\"BIRCH-REN-48467\",\"role\":\"body\"},{\"cell\":\"C6\",\"value\":\"Birch Grove 2\",\"role\":\"body\"},{\"cell\":\"D6\",\"value\":\"2026-03-06\",\"role\":\"body\"},{\"cell\":\"E6\",\"value\":1.03,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"F6\",\"value\":10320,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"G6\",\"value\":1.87,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"H6\",\"value\":\"USD_per_sf_month\",\"role\":\"body\"},{\"cell\":\"I6\",\"formula\":\"=G6*12\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J6\",\"value\":\"NNN\",\"role\":\"input\"},{\"cell\":\"K6\",\"value\":\"null\",\"role\":\"input\"},{\"cell\":\"L6\",\"value\":4,\"role\":\"input\"},{\"cell\":\"M6\",\"value\":48,\"role\":\"input\"},{\"cell\":\"N6\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O6\",\"value\":18,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"X6\",\"value\":\"S-R3353; U-R3353-1 (executed amendment eff. 2026-08-20: free_months 4, TI 18)\",\"role\":\"note\"},{\"cell\":\"A7\",\"value\":\"R2434\",\"role\":\"body\"},{\"cell\":\"B7\",\"value\":\"BIRCH-REN-81113\",\"role\":\"body\"},{\"cell\":\"C7\",\"value\":\"Birch Grove 3\",\"role\":\"body\"},{\"cell\":\"D7\",\"value\":\"2026-04-07\",\"role\":\"body\"},{\"cell\":\"E7\",\"value\":1.26,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"F7\",\"value\":11040,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"G7\",\"value\":22.6,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"H7\",\"value\":\"USD_per_sf_year\",\"role\":\"body\"},{\"cell\":\"I7\",\"value\":22.6,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"J7\",\"value\":\"NNN\",\"role\":\"input\"},{\"cell\":\"K7\",\"value\":\"null\",\"role\":\"input\"},{\"cell\":\"L7\",\"value\":2,\"role\":\"input\"},{\"cell\":\"M7\",\"value\":60,\"role\":\"input\"},{\"cell\":\"N7\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O7\",\"value\":18,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"X7\",\"value\":\"S-R2434 (U-R2434-2 published 2026-09-10 is after cutoff - excluded)\",\"role\":\"note\"},{\"cell\":\"A8\",\"value\":\"R1930\",\"role\":\"body\"},{\"cell\":\"B8\",\"value\":\"BIRCH-REN-15479\",\"role\":\"body\"},{\"cell\":\"C8\",\"value\":\"Birch Point 4\",\"role\":\"body\"},{\"cell\":\"D8\",\"value\":\"2026-05-08\",\"role\":\"body\"},{\"cell\":\"E8\",\"value\":1.49,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"F8\",\"value\":11760,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"G8\",\"value\":2.01,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"H8\",\"value\":\"USD_per_sf_month\",\"role\":\"body\"},{\"cell\":\"I8\",\"formula\":\"=G8*12\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J8\",\"value\":\"gross\",\"role\":\"input\"},{\"cell\":\"K8\",\"value\":6.25,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"L8\",\"value\":3,\"role\":\"input\"},{\"cell\":\"M8\",\"value\":36,\"role\":\"input\"},{\"cell\":\"N8\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O8\",\"value\":21,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"X8\",\"value\":\"S-R1930 (U-R1930-3 unsigned draft free_months 8 - excluded)\",\"role\":\"note\"},{\"cell\":\"A9\",\"value\":\"R6289\",\"role\":\"body\"},{\"cell\":\"B9\",\"value\":\"BIRCH-REN-11670\",\"role\":\"body\"},{\"cell\":\"C9\",\"value\":\"Birch Point 5\",\"role\":\"body\"},{\"cell\":\"D9\",\"value\":\"2026-06-09\",\"role\":\"body\"},{\"cell\":\"E9\",\"value\":1.72,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"F9\",\"value\":12480,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"G9\",\"value\":24.2,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"H9\",\"value\":\"USD_per_sf_year\",\"role\":\"body\"},{\"cell\":\"I9\",\"value\":24.2,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"J9\",\"value\":\"NNN\",\"role\":\"input\"},{\"cell\":\"K9\",\"value\":\"null\",\"role\":\"input\"},{\"cell\":\"L9\",\"value\":0,\"role\":\"input\"},{\"cell\":\"M9\",\"value\":48,\"role\":\"input\"},{\"cell\":\"N9\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O9\",\"value\":12,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"X9\",\"value\":\"S-R6289\",\"role\":\"note\"},{\"cell\":\"P5\",\"formula\":\"=($I5*(1+$N5)^0/12)*(MAX(0,MIN(12,$M5-0))-MAX(0,MIN(MAX(0,MIN(12,$M5-0)),$L5-0)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q5\",\"formula\":\"=($I5*(1+$N5)^1/12)*(MAX(0,MIN(12,$M5-12))-MAX(0,MIN(MAX(0,MIN(12,$M5-12)),$L5-12)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R5\",\"formula\":\"=($I5*(1+$N5)^2/12)*(MAX(0,MIN(12,$M5-24))-MAX(0,MIN(MAX(0,MIN(12,$M5-24)),$L5-24)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"S5\",\"formula\":\"=($I5*(1+$N5)^3/12)*(MAX(0,MIN(12,$M5-36))-MAX(0,MIN(MAX(0,MIN(12,$M5-36)),$L5-36)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"T5\",\"formula\":\"=($I5*(1+$N5)^4/12)*(MAX(0,MIN(12,$M5-48))-MAX(0,MIN(MAX(0,MIN(12,$M5-48)),$L5-48)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"U5\",\"formula\":\"=IF($J5=\\\"gross\\\",$K5/12*$M5,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"V5\",\"formula\":\"=SUM(P5:T5)-U5-$O5\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"W5\",\"formula\":\"=V5/$M5*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"P6\",\"formula\":\"=($I6*(1+$N6)^0/12)*(MAX(0,MIN(12,$M6-0))-MAX(0,MIN(MAX(0,MIN(12,$M6-0)),$L6-0)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q6\",\"formula\":\"=($I6*(1+$N6)^1/12)*(MAX(0,MIN(12,$M6-12))-MAX(0,MIN(MAX(0,MIN(12,$M6-12)),$L6-12)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R6\",\"formula\":\"=($I6*(1+$N6)^2/12)*(MAX(0,MIN(12,$M6-24))-MAX(0,MIN(MAX(0,MIN(12,$M6-24)),$L6-24)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"S6\",\"formula\":\"=($I6*(1+$N6)^3/12)*(MAX(0,MIN(12,$M6-36))-MAX(0,MIN(MAX(0,MIN(12,$M6-36)),$L6-36)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"T6\",\"formula\":\"=($I6*(1+$N6)^4/12)*(MAX(0,MIN(12,$M6-48))-MAX(0,MIN(MAX(0,MIN(12,$M6-48)),$L6-48)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"U6\",\"formula\":\"=IF($J6=\\\"gross\\\",$K6/12*$M6,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"V6\",\"formula\":\"=SUM(P6:T6)-U6-$O6\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"W6\",\"formula\":\"=V6/$M6*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"P7\",\"formula\":\"=($I7*(1+$N7)^0/12)*(MAX(0,MIN(12,$M7-0))-MAX(0,MIN(MAX(0,MIN(12,$M7-0)),$L7-0)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q7\",\"formula\":\"=($I7*(1+$N7)^1/12)*(MAX(0,MIN(12,$M7-12))-MAX(0,MIN(MAX(0,MIN(12,$M7-12)),$L7-12)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R7\",\"formula\":\"=($I7*(1+$N7)^2/12)*(MAX(0,MIN(12,$M7-24))-MAX(0,MIN(MAX(0,MIN(12,$M7-24)),$L7-24)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"S7\",\"formula\":\"=($I7*(1+$N7)^3/12)*(MAX(0,MIN(12,$M7-36))-MAX(0,MIN(MAX(0,MIN(12,$M7-36)),$L7-36)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"T7\",\"formula\":\"=($I7*(1+$N7)^4/12)*(MAX(0,MIN(12,$M7-48))-MAX(0,MIN(MAX(0,MIN(12,$M7-48)),$L7-48)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"U7\",\"formula\":\"=IF($J7=\\\"gross\\\",$K7/12*$M7,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"V7\",\"formula\":\"=SUM(P7:T7)-U7-$O7\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"W7\",\"formula\":\"=V7/$M7*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"P8\",\"formula\":\"=($I8*(1+$N8)^0/12)*(MAX(0,MIN(12,$M8-0))-MAX(0,MIN(MAX(0,MIN(12,$M8-0)),$L8-0)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q8\",\"formula\":\"=($I8*(1+$N8)^1/12)*(MAX(0,MIN(12,$M8-12))-MAX(0,MIN(MAX(0,MIN(12,$M8-12)),$L8-12)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R8\",\"formula\":\"=($I8*(1+$N8)^2/12)*(MAX(0,MIN(12,$M8-24))-MAX(0,MIN(MAX(0,MIN(12,$M8-24)),$L8-24)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"S8\",\"formula\":\"=($I8*(1+$N8)^3/12)*(MAX(0,MIN(12,$M8-36))-MAX(0,MIN(MAX(0,MIN(12,$M8-36)),$L8-36)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"T8\",\"formula\":\"=($I8*(1+$N8)^4/12)*(MAX(0,MIN(12,$M8-48))-MAX(0,MIN(MAX(0,MIN(12,$M8-48)),$L8-48)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"U8\",\"formula\":\"=IF($J8=\\\"gross\\\",$K8/12*$M8,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"V8\",\"formula\":\"=SUM(P8:T8)-U8-$O8\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"W8\",\"formula\":\"=V8/$M8*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"P9\",\"formula\":\"=($I9*(1+$N9)^0/12)*(MAX(0,MIN(12,$M9-0))-MAX(0,MIN(MAX(0,MIN(12,$M9-0)),$L9-0)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q9\",\"formula\":\"=($I9*(1+$N9)^1/12)*(MAX(0,MIN(12,$M9-12))-MAX(0,MIN(MAX(0,MIN(12,$M9-12)),$L9-12)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R9\",\"formula\":\"=($I9*(1+$N9)^2/12)*(MAX(0,MIN(12,$M9-24))-MAX(0,MIN(MAX(0,MIN(12,$M9-24)),$L9-24)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"S9\",\"formula\":\"=($I9*(1+$N9)^3/12)*(MAX(0,MIN(12,$M9-36))-MAX(0,MIN(MAX(0,MIN(12,$M9-36)),$L9-36)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"T9\",\"formula\":\"=($I9*(1+$N9)^4/12)*(MAX(0,MIN(12,$M9-48))-MAX(0,MIN(MAX(0,MIN(12,$M9-48)),$L9-48)))\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"U9\",\"formula\":\"=IF($J9=\\\"gross\\\",$K9/12*$M9,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"V9\",\"formula\":\"=SUM(P9:T9)-U9-$O9\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"W9\",\"formula\":\"=V9/$M9*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"A11\",\"value\":\"Excluded base records (see research answer for full decision log): R7254 (2024 lease date, outside window), R8177 (18.6 mi), R2614 (duplicate of R1695, same entity BIRCH-REN-46690), R3442 (TI unknown), R5629 (free months unknown), R1009 (term unknown), R9966 (Office), R7377 (rent unknown), R9256 (published 2026-09-03, after cutoff), R5471 (gross with unknown expenses), R7345 (unsigned proposal), R3964 (asking), R7562 (rent 0), R8772 / R5747 (qualified but ranked 6th / 7th by distance).\",\"role\":\"note\",\"wrap\":true}]}],\"input_map\":{\"egi\":\"Comp Grid!I5\",\"cap_rate\":\"Comp Grid!N5\",\"sizing_rate\":\"Comp Grid!N5\"},\"output_map\":{\"effective_net_rent_psf_year_R1695\":\"Comp Grid!W5\",\"effective_net_rent_psf_year_R3353\":\"Comp Grid!W6\",\"effective_net_rent_psf_year_R2434\":\"Comp Grid!W7\",\"effective_net_rent_psf_year_R1930\":\"Comp Grid!W8\",\"effective_net_rent_psf_year_R6289\":\"Comp Grid!W9\"}}}",
+  "call_id": "toolu_01GSPZcczHUHUu4Akr7a1nqS",
+  "arguments": {
+    "spec": {
+      "sheets": [
+        {
+          "name": "Comp Grid",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 10,
+            "B": 20,
+            "C": 16,
+            "D": 12,
+            "E": 9,
+            "F": 9,
+            "G": 9,
+            "H": 18,
+            "I": 11,
+            "J": 11,
+            "K": 11,
+            "L": 9,
+            "M": 9,
+            "N": 9,
+            "O": 9,
+            "P": 10,
+            "Q": 10,
+            "R": 10,
+            "S": 10,
+            "T": 10,
+            "U": 11,
+            "V": 11,
+            "W": 13,
+            "X": 60
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "rent-comps-birch - Retail Phoenix Executed Lease Comp Grid (as of 2026-08-31)",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Client convention: face quote annualized; step-ups at months 13/25/...; no face rent during free months; gross expense deduction annual_expenses_psf/12 every month (NNN = 0); TI subtracted once; net total / term_months x 12. Undiscounted rent-only, not an appraisal.",
+              "role": "note",
+              "wrap": true
+            },
+            {
+              "cell": "A3",
+              "value": "Ranked by distance ascending, then latest lease date. Blue cells are source inputs; 'null' means unknown (not zero).",
+              "role": "note",
+              "wrap": true
+            },
+            {
+              "cell": "A4",
+              "value": "record_id",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "entity_id",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "name",
+              "role": "header"
+            },
+            {
+              "cell": "D4",
+              "value": "event_date",
+              "role": "header"
+            },
+            {
+              "cell": "E4",
+              "value": "distance_mi",
+              "role": "header"
+            },
+            {
+              "cell": "F4",
+              "value": "area_sf",
+              "role": "header"
+            },
+            {
+              "cell": "G4",
+              "value": "face_quote",
+              "role": "header"
+            },
+            {
+              "cell": "H4",
+              "value": "quote_unit",
+              "role": "header"
+            },
+            {
+              "cell": "I4",
+              "value": "annual_face_rent_psf",
+              "role": "header"
+            },
+            {
+              "cell": "J4",
+              "value": "expense_basis",
+              "role": "header"
+            },
+            {
+              "cell": "K4",
+              "value": "annual_expenses_psf",
+              "role": "header"
+            },
+            {
+              "cell": "L4",
+              "value": "free_months",
+              "role": "header"
+            },
+            {
+              "cell": "M4",
+              "value": "term_months",
+              "role": "header"
+            },
+            {
+              "cell": "N4",
+              "value": "annual_increase",
+              "role": "header"
+            },
+            {
+              "cell": "O4",
+              "value": "ti_psf",
+              "role": "header"
+            },
+            {
+              "cell": "P4",
+              "value": "yr1_face",
+              "role": "header"
+            },
+            {
+              "cell": "Q4",
+              "value": "yr2_face",
+              "role": "header"
+            },
+            {
+              "cell": "R4",
+              "value": "yr3_face",
+              "role": "header"
+            },
+            {
+              "cell": "S4",
+              "value": "yr4_face",
+              "role": "header"
+            },
+            {
+              "cell": "T4",
+              "value": "yr5_face",
+              "role": "header"
+            },
+            {
+              "cell": "U4",
+              "value": "expense_ded",
+              "role": "header"
+            },
+            {
+              "cell": "V4",
+              "value": "net_total_psf",
+              "role": "header"
+            },
+            {
+              "cell": "W4",
+              "value": "effective_net_rent_psf_year",
+              "role": "header"
+            },
+            {
+              "cell": "X4",
+              "value": "source_ids",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "R1695",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "value": "BIRCH-REN-46690",
+              "role": "body"
+            },
+            {
+              "cell": "C5",
+              "value": "Birch Square 1",
+              "role": "body"
+            },
+            {
+              "cell": "D5",
+              "value": "2026-02-05",
+              "role": "body"
+            },
+            {
+              "cell": "E5",
+              "value": 0.8,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "F5",
+              "value": 9600,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G5",
+              "value": 21,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "H5",
+              "value": "USD_per_sf_year",
+              "role": "body"
+            },
+            {
+              "cell": "I5",
+              "value": 21,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J5",
+              "value": "gross",
+              "role": "input"
+            },
+            {
+              "cell": "K5",
+              "value": 6.25,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "L5",
+              "value": 0,
+              "role": "input"
+            },
+            {
+              "cell": "M5",
+              "value": 36,
+              "role": "input"
+            },
+            {
+              "cell": "N5",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O5",
+              "value": 12,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "X5",
+              "value": "S-R1695 (duplicate entity record R2614 / S-R2614 not counted twice)",
+              "role": "note"
+            },
+            {
+              "cell": "A6",
+              "value": "R3353",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "value": "BIRCH-REN-48467",
+              "role": "body"
+            },
+            {
+              "cell": "C6",
+              "value": "Birch Grove 2",
+              "role": "body"
+            },
+            {
+              "cell": "D6",
+              "value": "2026-03-06",
+              "role": "body"
+            },
+            {
+              "cell": "E6",
+              "value": 1.03,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "F6",
+              "value": 10320,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G6",
+              "value": 1.87,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "H6",
+              "value": "USD_per_sf_month",
+              "role": "body"
+            },
+            {
+              "cell": "I6",
+              "formula": "=G6*12",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J6",
+              "value": "NNN",
+              "role": "input"
+            },
+            {
+              "cell": "K6",
+              "value": "null",
+              "role": "input"
+            },
+            {
+              "cell": "L6",
+              "value": 4,
+              "role": "input"
+            },
+            {
+              "cell": "M6",
+              "value": 48,
+              "role": "input"
+            },
+            {
+              "cell": "N6",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O6",
+              "value": 18,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "X6",
+              "value": "S-R3353; U-R3353-1 (executed amendment eff. 2026-08-20: free_months 4, TI 18)",
+              "role": "note"
+            },
+            {
+              "cell": "A7",
+              "value": "R2434",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "value": "BIRCH-REN-81113",
+              "role": "body"
+            },
+            {
+              "cell": "C7",
+              "value": "Birch Grove 3",
+              "role": "body"
+            },
+            {
+              "cell": "D7",
+              "value": "2026-04-07",
+              "role": "body"
+            },
+            {
+              "cell": "E7",
+              "value": 1.26,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "F7",
+              "value": 11040,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G7",
+              "value": 22.6,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "H7",
+              "value": "USD_per_sf_year",
+              "role": "body"
+            },
+            {
+              "cell": "I7",
+              "value": 22.6,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J7",
+              "value": "NNN",
+              "role": "input"
+            },
+            {
+              "cell": "K7",
+              "value": "null",
+              "role": "input"
+            },
+            {
+              "cell": "L7",
+              "value": 2,
+              "role": "input"
+            },
+            {
+              "cell": "M7",
+              "value": 60,
+              "role": "input"
+            },
+            {
+              "cell": "N7",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O7",
+              "value": 18,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "X7",
+              "value": "S-R2434 (U-R2434-2 published 2026-09-10 is after cutoff - excluded)",
+              "role": "note"
+            },
+            {
+              "cell": "A8",
+              "value": "R1930",
+              "role": "body"
+            },
+            {
+              "cell": "B8",
+              "value": "BIRCH-REN-15479",
+              "role": "body"
+            },
+            {
+              "cell": "C8",
+              "value": "Birch Point 4",
+              "role": "body"
+            },
+            {
+              "cell": "D8",
+              "value": "2026-05-08",
+              "role": "body"
+            },
+            {
+              "cell": "E8",
+              "value": 1.49,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "F8",
+              "value": 11760,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G8",
+              "value": 2.01,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "H8",
+              "value": "USD_per_sf_month",
+              "role": "body"
+            },
+            {
+              "cell": "I8",
+              "formula": "=G8*12",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J8",
+              "value": "gross",
+              "role": "input"
+            },
+            {
+              "cell": "K8",
+              "value": 6.25,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "L8",
+              "value": 3,
+              "role": "input"
+            },
+            {
+              "cell": "M8",
+              "value": 36,
+              "role": "input"
+            },
+            {
+              "cell": "N8",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O8",
+              "value": 21,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "X8",
+              "value": "S-R1930 (U-R1930-3 unsigned draft free_months 8 - excluded)",
+              "role": "note"
+            },
+            {
+              "cell": "A9",
+              "value": "R6289",
+              "role": "body"
+            },
+            {
+              "cell": "B9",
+              "value": "BIRCH-REN-11670",
+              "role": "body"
+            },
+            {
+              "cell": "C9",
+              "value": "Birch Point 5",
+              "role": "body"
+            },
+            {
+              "cell": "D9",
+              "value": "2026-06-09",
+              "role": "body"
+            },
+            {
+              "cell": "E9",
+              "value": 1.72,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "F9",
+              "value": 12480,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G9",
+              "value": 24.2,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "H9",
+              "value": "USD_per_sf_year",
+              "role": "body"
+            },
+            {
+              "cell": "I9",
+              "value": 24.2,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J9",
+              "value": "NNN",
+              "role": "input"
+            },
+            {
+              "cell": "K9",
+              "value": "null",
+              "role": "input"
+            },
+            {
+              "cell": "L9",
+              "value": 0,
+              "role": "input"
+            },
+            {
+              "cell": "M9",
+              "value": 48,
+              "role": "input"
+            },
+            {
+              "cell": "N9",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O9",
+              "value": 12,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "X9",
+              "value": "S-R6289",
+              "role": "note"
+            },
+            {
+              "cell": "P5",
+              "formula": "=($I5*(1+$N5)^0/12)*(MAX(0,MIN(12,$M5-0))-MAX(0,MIN(MAX(0,MIN(12,$M5-0)),$L5-0)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q5",
+              "formula": "=($I5*(1+$N5)^1/12)*(MAX(0,MIN(12,$M5-12))-MAX(0,MIN(MAX(0,MIN(12,$M5-12)),$L5-12)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R5",
+              "formula": "=($I5*(1+$N5)^2/12)*(MAX(0,MIN(12,$M5-24))-MAX(0,MIN(MAX(0,MIN(12,$M5-24)),$L5-24)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S5",
+              "formula": "=($I5*(1+$N5)^3/12)*(MAX(0,MIN(12,$M5-36))-MAX(0,MIN(MAX(0,MIN(12,$M5-36)),$L5-36)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "T5",
+              "formula": "=($I5*(1+$N5)^4/12)*(MAX(0,MIN(12,$M5-48))-MAX(0,MIN(MAX(0,MIN(12,$M5-48)),$L5-48)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "U5",
+              "formula": "=IF($J5=\"gross\",$K5/12*$M5,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "V5",
+              "formula": "=SUM(P5:T5)-U5-$O5",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "W5",
+              "formula": "=V5/$M5*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P6",
+              "formula": "=($I6*(1+$N6)^0/12)*(MAX(0,MIN(12,$M6-0))-MAX(0,MIN(MAX(0,MIN(12,$M6-0)),$L6-0)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q6",
+              "formula": "=($I6*(1+$N6)^1/12)*(MAX(0,MIN(12,$M6-12))-MAX(0,MIN(MAX(0,MIN(12,$M6-12)),$L6-12)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R6",
+              "formula": "=($I6*(1+$N6)^2/12)*(MAX(0,MIN(12,$M6-24))-MAX(0,MIN(MAX(0,MIN(12,$M6-24)),$L6-24)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S6",
+              "formula": "=($I6*(1+$N6)^3/12)*(MAX(0,MIN(12,$M6-36))-MAX(0,MIN(MAX(0,MIN(12,$M6-36)),$L6-36)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "T6",
+              "formula": "=($I6*(1+$N6)^4/12)*(MAX(0,MIN(12,$M6-48))-MAX(0,MIN(MAX(0,MIN(12,$M6-48)),$L6-48)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "U6",
+              "formula": "=IF($J6=\"gross\",$K6/12*$M6,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "V6",
+              "formula": "=SUM(P6:T6)-U6-$O6",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "W6",
+              "formula": "=V6/$M6*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P7",
+              "formula": "=($I7*(1+$N7)^0/12)*(MAX(0,MIN(12,$M7-0))-MAX(0,MIN(MAX(0,MIN(12,$M7-0)),$L7-0)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q7",
+              "formula": "=($I7*(1+$N7)^1/12)*(MAX(0,MIN(12,$M7-12))-MAX(0,MIN(MAX(0,MIN(12,$M7-12)),$L7-12)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R7",
+              "formula": "=($I7*(1+$N7)^2/12)*(MAX(0,MIN(12,$M7-24))-MAX(0,MIN(MAX(0,MIN(12,$M7-24)),$L7-24)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S7",
+              "formula": "=($I7*(1+$N7)^3/12)*(MAX(0,MIN(12,$M7-36))-MAX(0,MIN(MAX(0,MIN(12,$M7-36)),$L7-36)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "T7",
+              "formula": "=($I7*(1+$N7)^4/12)*(MAX(0,MIN(12,$M7-48))-MAX(0,MIN(MAX(0,MIN(12,$M7-48)),$L7-48)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "U7",
+              "formula": "=IF($J7=\"gross\",$K7/12*$M7,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "V7",
+              "formula": "=SUM(P7:T7)-U7-$O7",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "W7",
+              "formula": "=V7/$M7*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P8",
+              "formula": "=($I8*(1+$N8)^0/12)*(MAX(0,MIN(12,$M8-0))-MAX(0,MIN(MAX(0,MIN(12,$M8-0)),$L8-0)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q8",
+              "formula": "=($I8*(1+$N8)^1/12)*(MAX(0,MIN(12,$M8-12))-MAX(0,MIN(MAX(0,MIN(12,$M8-12)),$L8-12)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R8",
+              "formula": "=($I8*(1+$N8)^2/12)*(MAX(0,MIN(12,$M8-24))-MAX(0,MIN(MAX(0,MIN(12,$M8-24)),$L8-24)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S8",
+              "formula": "=($I8*(1+$N8)^3/12)*(MAX(0,MIN(12,$M8-36))-MAX(0,MIN(MAX(0,MIN(12,$M8-36)),$L8-36)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "T8",
+              "formula": "=($I8*(1+$N8)^4/12)*(MAX(0,MIN(12,$M8-48))-MAX(0,MIN(MAX(0,MIN(12,$M8-48)),$L8-48)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "U8",
+              "formula": "=IF($J8=\"gross\",$K8/12*$M8,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "V8",
+              "formula": "=SUM(P8:T8)-U8-$O8",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "W8",
+              "formula": "=V8/$M8*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P9",
+              "formula": "=($I9*(1+$N9)^0/12)*(MAX(0,MIN(12,$M9-0))-MAX(0,MIN(MAX(0,MIN(12,$M9-0)),$L9-0)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q9",
+              "formula": "=($I9*(1+$N9)^1/12)*(MAX(0,MIN(12,$M9-12))-MAX(0,MIN(MAX(0,MIN(12,$M9-12)),$L9-12)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R9",
+              "formula": "=($I9*(1+$N9)^2/12)*(MAX(0,MIN(12,$M9-24))-MAX(0,MIN(MAX(0,MIN(12,$M9-24)),$L9-24)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S9",
+              "formula": "=($I9*(1+$N9)^3/12)*(MAX(0,MIN(12,$M9-36))-MAX(0,MIN(MAX(0,MIN(12,$M9-36)),$L9-36)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "T9",
+              "formula": "=($I9*(1+$N9)^4/12)*(MAX(0,MIN(12,$M9-48))-MAX(0,MIN(MAX(0,MIN(12,$M9-48)),$L9-48)))",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "U9",
+              "formula": "=IF($J9=\"gross\",$K9/12*$M9,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "V9",
+              "formula": "=SUM(P9:T9)-U9-$O9",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "W9",
+              "formula": "=V9/$M9*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "A11",
+              "value": "Excluded base records (see research answer for full decision log): R7254 (2024 lease date, outside window), R8177 (18.6 mi), R2614 (duplicate of R1695, same entity BIRCH-REN-46690), R3442 (TI unknown), R5629 (free months unknown), R1009 (term unknown), R9966 (Office), R7377 (rent unknown), R9256 (published 2026-09-03, after cutoff), R5471 (gross with unknown expenses), R7345 (unsigned proposal), R3964 (asking), R7562 (rent 0), R8772 / R5747 (qualified but ranked 6th / 7th by distance).",
+              "role": "note",
+              "wrap": true
+            }
+          ]
+        }
+      ],
+      "input_map": {
+        "egi": "Comp Grid!I5",
+        "cap_rate": "Comp Grid!N5",
+        "sizing_rate": "Comp Grid!N5"
+      },
+      "output_map": {
+        "effective_net_rent_psf_year_R1695": "Comp Grid!W5",
+        "effective_net_rent_psf_year_R3353": "Comp Grid!W6",
+        "effective_net_rent_psf_year_R2434": "Comp Grid!W7",
+        "effective_net_rent_psf_year_R1930": "Comp Grid!W8",
+        "effective_net_rent_psf_year_R6289": "Comp Grid!W9"
+      }
+    }
+  },
+  "result": {
+    "created": "artifacts/underwriting-v1.xlsx",
+    "bytes": 6437,
+    "inspection": {
+      "sheets": [
+        "Comp Grid"
+      ],
+      "formula_count": 42,
+      "formula_errors": [],
+      "outputs": {
+        "effective_net_rent_psf_year_R1695": 11.279374999999998,
+        "effective_net_rent_psf_year_R3353": 16.92561265625,
+        "effective_net_rent_psf_year_R2434": 19.405271557291666,
+        "effective_net_rent_psf_year_R1930": 9.468024999999992,
+        "effective_net_rent_psf_year_R6289": 22.122719531249995
+      }
+    }
+  },
+  "status": "ok"
+}

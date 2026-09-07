@@ -1,0 +1,202 @@
+```json
+{
+  "shortlist": [
+    {
+      "record_id": "R8720",
+      "facts": {
+        "entity_id": "DOGWOOD-REN-60901",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.28,
+        "term_months": 36
+      },
+      "source_ids": ["S-R8720", "S-R6660"],
+      "rationale": "Executed multifamily lease abstract, Tampa, 0.80 mi, event 2026-02-05 inside window. Gross with known annual_expenses_psf 6.25, free_months 0, TI 12, term 36. Face 21.00/sf/yr escalating 2.5% at m13/m25 => 64.588125 total face; less gross expense 18.75 (6.25/12 every month x36) less TI 12 = 33.838125 net; /36 x 12 = 11.28. R6660 is a second source for the same entity (DOGWOOD-REN-60901) and is treated as a duplicate, not an additional slot. No update applies.",
+      "rationale_units": "USD per sf per year"
+    },
+    {
+      "record_id": "R3534",
+      "facts": {
+        "entity_id": "DOGWOOD-REN-79987",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.93,
+        "term_months": 48
+      },
+      "source_ids": ["S-R3534", "U-R3534-1"],
+      "rationale": "Executed lease, 1.03 mi, event 2026-03-06. Executed amendment U-R3534-1 (published/effective 2026-08-20, on or before cutoff) overrides base: free_months 4 and TI 18. Face 1.87/sf/month = 22.44/sf/yr; escalated totals 93.182451 over 48 months; less 4 free months at 1.87 (7.48) = 85.702451; NNN deduction zero; less TI 18 = 67.702451; /48 x 12 = 16.93."
+    },
+    {
+      "record_id": "R6645",
+      "facts": {
+        "entity_id": "DOGWOOD-REN-64895",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.41,
+        "term_months": 60
+      },
+      "source_ids": ["S-R6645"],
+      "rationale": "Executed lease, 1.26 mi, event 2026-04-07. U-R6645-2 (executed amendment changing rent_quote to 2) is published/effective 2026-09-10, after the 2026-08-31 cutoff, so it is later-dated evidence and is NOT applied; base face 22.60/sf/yr used. Escalated face total 118.793025 over 60 months; less 2 free months at 22.60/12 (3.766667) = 115.026358; NNN deduction zero; less TI 18 = 97.026358; /60 x 12 = 19.41."
+    },
+    {
+      "record_id": "R6812",
+      "facts": {
+        "entity_id": "DOGWOOD-REN-50280",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.47,
+        "term_months": 36
+      },
+      "source_ids": ["S-R6812"],
+      "rationale": "Executed lease, 1.49 mi, event 2026-05-08. U-R6812-3 is an unsigned draft (free_months 8) and does not override; free_months remains 3. Face 2.01/sf/month = 24.12/sf/yr; escalated face total 74.184075; less 3 free months at 2.01 (6.03) = 68.154075; gross expense deduction 6.25/12 every month x36 = 18.75; less TI 21 = 28.404075; /36 x 12 = 9.47."
+    },
+    {
+      "record_id": "R1551",
+      "facts": {
+        "entity_id": "DOGWOOD-REN-99067",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.12,
+        "term_months": 48
+      },
+      "source_ids": ["S-R1551"],
+      "rationale": "Executed lease, 1.72 mi, event 2026-06-09. NNN with free_months 0, TI 12, term 48. Escalated face total 100.490878; NNN deduction zero; less TI 12 = 88.490878; /48 x 12 = 22.12. No update applies."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8720",
+      "eligible": true,
+      "reason": "Multifamily, Tampa, executed lease abstract, 0.80 mi (<=8), event 2026-02-05 in window, positive face rent 21.00/sf/yr, term 36 known, free_months 0 known, TI 12 known, gross with known annual_expenses_psf 6.25. Primary record for entity DOGWOOD-REN-60901 (R6660 is a duplicate second source of the same entity).",
+      "source_ids": ["S-R8720", "S-R6660"]
+    },
+    {
+      "record_id": "R8926",
+      "eligible": false,
+      "reason": "Gross lease with annual_expenses_psf = null; gross leases require a known expense deduction. Missing is unknown, not zero.",
+      "source_ids": ["S-R8926"]
+    },
+    {
+      "record_id": "R9647",
+      "eligible": false,
+      "reason": "rent_quote is null; positive rent is required.",
+      "source_ids": ["S-R9647"]
+    },
+    {
+      "record_id": "R9438",
+      "eligible": false,
+      "reason": "free_months is null; known free rent is required (missing is unknown, not zero).",
+      "source_ids": ["S-R9438"]
+    },
+    {
+      "record_id": "R6157",
+      "eligible": false,
+      "reason": "status = asking; asking/unsigned rents do not qualify despite the evidence_kind label.",
+      "source_ids": ["S-R6157"]
+    },
+    {
+      "record_id": "R4285",
+      "eligible": true,
+      "reason": "Meets all rules: executed, multifamily Tampa, 2.18 mi, event 2026-02-11, face 25.80/sf/yr, term 36, free 2, TI 18, gross expenses 6.25 known. Effective net 12.77 /sf/yr. Ranked 7th by distance, outside the top-5 shortlist.",
+      "source_ids": ["S-R4285"]
+    },
+    {
+      "record_id": "R9947",
+      "eligible": true,
+      "reason": "Meets all rules: executed, 1.95 mi, event 2026-07-10, face 2.15/sf/month = 25.80/sf/yr, NNN, free 1, TI 15, term 60. Effective net 23.69 /sf/yr. Ranked 6th by distance, just outside the top-5 shortlist.",
+      "source_ids": ["S-R9947"]
+    },
+    {
+      "record_id": "R6717",
+      "eligible": false,
+      "reason": "event_date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.",
+      "source_ids": ["S-R6717"]
+    },
+    {
+      "record_id": "R9661",
+      "eligible": false,
+      "reason": "Evidence published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence cannot be used.",
+      "source_ids": ["S-R9661"]
+    },
+    {
+      "record_id": "R6613",
+      "eligible": false,
+      "reason": "Distance 18.6 mi exceeds the 8-mile radius.",
+      "source_ids": ["S-R6613"]
+    },
+    {
+      "record_id": "R6645",
+      "eligible": true,
+      "reason": "Meets all rules using base face rent 22.60/sf/yr; the executed amendment U-R6645-2 is dated 2026-09-10 (after cutoff) and is excluded as later-dated evidence.",
+      "source_ids": ["S-R6645"]
+    },
+    {
+      "record_id": "R9315",
+      "eligible": false,
+      "reason": "status = unsigned_proposal; unsigned rents do not qualify.",
+      "source_ids": ["S-R9315"]
+    },
+    {
+      "record_id": "R7718",
+      "eligible": false,
+      "reason": "asset_type = Office; outside the multifamily scope.",
+      "source_ids": ["S-R7718"]
+    },
+    {
+      "record_id": "R1330",
+      "eligible": false,
+      "reason": "term_months is null; known term is required.",
+      "source_ids": ["S-R1330"]
+    },
+    {
+      "record_id": "R1551",
+      "eligible": true,
+      "reason": "Meets all rules: executed, 1.72 mi, event 2026-06-09, face 24.20/sf/yr, NNN, free 0, TI 12, term 48.",
+      "source_ids": ["S-R1551"]
+    },
+    {
+      "record_id": "R6660",
+      "eligible": true,
+      "reason": "Duplicate of entity DOGWOOD-REN-60901 (evidence_kind = second_source_same_underlying_record, identical terms to R8720). Satisfies the business rules but is deduplicated to R8720 and does not add a second slot.",
+      "source_ids": ["S-R6660", "S-R8720"]
+    },
+    {
+      "record_id": "R9145",
+      "eligible": false,
+      "reason": "ti_allowance_psf is null; known TI is required (missing is unknown, not zero).",
+      "source_ids": ["S-R9145"]
+    },
+    {
+      "record_id": "R4220",
+      "eligible": false,
+      "reason": "rent_quote = 0; positive rent is required.",
+      "source_ids": ["S-R4220"]
+    },
+    {
+      "record_id": "R6812",
+      "eligible": true,
+      "reason": "Meets all rules: executed, 1.49 mi, event 2026-05-08, face 2.01/sf/month = 24.12/sf/yr, gross with known expenses 6.25, free 3, TI 21, term 36. Unsigned draft U-R6812-3 (free_months 8) does not override the base extract.",
+      "source_ids": ["S-R6812", "U-R6812-3"]
+    },
+    {
+      "record_id": "R3534",
+      "eligible": true,
+      "reason": "Meets all rules: executed, 1.03 mi, event 2026-03-06, face 1.87/sf/month = 22.44/sf/yr, NNN, term 48. Executed amendment U-R3534-1 (2026-08-20, on/before cutoff) controls free_months = 4 and TI = 18.",
+      "source_ids": ["S-R3534", "U-R3534-1"]
+    }
+  ],
+  "summary": "Seven unique multifamily Tampa entities produced qualifying executed leases inside the 8-mile radius and the 2025-09-01 to 2026-08-31 window; the five closest were shortlisted: R8720 (0.80 mi, 11.28 $/sf/yr effective net), R3534 (1.03 mi, 16.93), R6645 (1.26 mi, 19.41), R6812 (1.49 mi, 9.47) and R1551 (1.72 mi, 22.12). Ranking is distance ascending (no distance ties needed tie-breaking by lease date). R9947 (1.95 mi, 23.69) and R4285 (2.18 mi, 12.77) qualified but fell outside the top five. Controlling updates applied: executed amendment U-R3534-1 (free_months 4, TI 18). Excluded updates: U-R6812-3 (unsigned draft) and U-R6645-2 (published 2026-09-10, after cutoff). R6660 was deduplicated into R8720 (same entity DOGWOOD-REN-60901). Effective rents follow the client's undiscounted rent-only convention (annual escalations at months 13/25/..., free months at zero face rent, gross expense deduction every month, TI subtracted once) and are not market appraisals. No SPV-to-parent mappings appeared in this packet. Artifact generation (comp-grid XLSX) is outside this direct API control, so no workbook or CSV was produced; the same selected facts and citations are provided in this JSON.",
+  "limitations": [
+    "Effective net rents use the prescribed undiscounted convention (no discounting, no downtime, no credit or concession timing adjustments) and are not appraisal-grade values.",
+    "Gross-lease expense deductions rely on the stated annual_expenses_psf of 6.25 with no detail on which expenses are covered or whether they escalate; the convention holds them flat.",
+    "R6645's face rent may change: executed amendment U-R6645-2 sets rent_quote to 2 (unit unstated in the update) but is effective 2026-09-10, after the cutoff, so the shortlisted 22.60 $/sf/yr may be stale post-cutoff.",
+    "R6812 could change materially if the unsigned draft U-R6812-3 (free_months 8) is later executed; as drafted it is excluded.",
+    "Several candidates were excluded solely for missing fields (R8926 gross expenses, R9647 rent, R9438 free months, R1330 term, R9145 TI); these are unknowns, not zeros, and could qualify if the data were supplied.",
+    "R9661 may be a valid nearby comp but its only evidence is published 2026-09-03, after the cutoff.",
+    "Distances are taken as given in the extracts; no independent geocoding was performed, and the 8-mile radius reference point is not specified in the packet.",
+    "R8720/R6660 are treated as one underlying lease based on the shared entity_id and identical terms; if they were in fact distinct leases, an additional slot would be available.",
+    "Unit-mix, submarket quality, concession structure beyond free months, and lease commencement dates are not provided, so comps are not adjusted for comparability.",
+    "No downloadable XLSX/CSV artifact was created in this direct API control run."
+  ]
+}
+```

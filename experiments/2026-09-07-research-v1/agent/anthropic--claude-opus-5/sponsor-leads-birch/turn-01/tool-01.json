@@ -1,0 +1,119 @@
+{
+  "name": "export_csv",
+  "arguments_raw": "{\"headers\":[\"rank\",\"record_id\",\"entity_id\",\"firm_name\",\"transaction_size_usd\",\"event_date\",\"contact_name\",\"contact_role\",\"contact_email\",\"asset_type\",\"market\",\"size_basis\",\"source_ids\"],\"rows\":[[1,\"R2245\",\"BIRCH-SPO-58038\",\"Birch Point 6 Capital\",13200000,\"2026-07-10\",\"Morgan Birch6\",\"Head of Acquisitions\",\"person6@sponsor-leads-birch.example\",\"Retail\",\"Phoenix\",\"single_asset_purchase\",\"S-R2245\"],[2,\"R6968\",\"BIRCH-SPO-48685\",\"Birch Park 5 Capital\",12480000,\"2026-06-09\",\"Alex Birch5\",\"CFO\",\"null\",\"Retail\",\"Phoenix\",\"single_asset_purchase\",\"S-R6968\"],[3,\"R8710\",\"BIRCH-SPO-35519\",\"Birch Square 4 Capital\",11760000,\"2026-05-08\",\"Taylor Birch4\",\"Head of Acquisitions\",\"person4@sponsor-leads-birch.example\",\"Retail\",\"Phoenix\",\"single_asset_purchase\",\"S-R8710 (U-R8710-3 unsigned draft rejected)\"],[4,\"R1638\",\"BIRCH-SPO-67736\",\"Birch Park 3 Capital\",11040000,\"2026-04-07\",\"Jordan Birch3\",\"CFO\",\"person3@sponsor-leads-birch.example\",\"Retail\",\"Phoenix\",\"single_asset_purchase\",\"S-R1638 (U-R1638-2 post-cutoff, not applied)\"],[5,\"R7815\",\"BIRCH-SPO-66254\",\"Birch Square 2 Capital\",10320000,\"2026-03-06\",\"Drew Birch\",\"CFO\",\"new.cfo@sponsor-leads-birch.example\",\"Retail\",\"Phoenix\",\"single_asset_purchase\",\"S-R7815; U-R7815-1\"],[6,\"R1077\",\"BIRCH-SPO-59032\",\"Birch Square 1 Capital\",9600000,\"2026-02-05\",\"Alex Birch1\",\"CFO\",\"person1@sponsor-leads-birch.example\",\"Retail\",\"Phoenix\",\"single_asset_purchase\",\"S-R1077 (dupes: S-R2431; SPV S-R2005)\"]]}",
+  "call_id": "toolu_01GQzkW8VVBiBN6A9apahhkx",
+  "arguments": {
+    "headers": [
+      "rank",
+      "record_id",
+      "entity_id",
+      "firm_name",
+      "transaction_size_usd",
+      "event_date",
+      "contact_name",
+      "contact_role",
+      "contact_email",
+      "asset_type",
+      "market",
+      "size_basis",
+      "source_ids"
+    ],
+    "rows": [
+      [
+        1,
+        "R2245",
+        "BIRCH-SPO-58038",
+        "Birch Point 6 Capital",
+        13200000,
+        "2026-07-10",
+        "Morgan Birch6",
+        "Head of Acquisitions",
+        "person6@sponsor-leads-birch.example",
+        "Retail",
+        "Phoenix",
+        "single_asset_purchase",
+        "S-R2245"
+      ],
+      [
+        2,
+        "R6968",
+        "BIRCH-SPO-48685",
+        "Birch Park 5 Capital",
+        12480000,
+        "2026-06-09",
+        "Alex Birch5",
+        "CFO",
+        "null",
+        "Retail",
+        "Phoenix",
+        "single_asset_purchase",
+        "S-R6968"
+      ],
+      [
+        3,
+        "R8710",
+        "BIRCH-SPO-35519",
+        "Birch Square 4 Capital",
+        11760000,
+        "2026-05-08",
+        "Taylor Birch4",
+        "Head of Acquisitions",
+        "person4@sponsor-leads-birch.example",
+        "Retail",
+        "Phoenix",
+        "single_asset_purchase",
+        "S-R8710 (U-R8710-3 unsigned draft rejected)"
+      ],
+      [
+        4,
+        "R1638",
+        "BIRCH-SPO-67736",
+        "Birch Park 3 Capital",
+        11040000,
+        "2026-04-07",
+        "Jordan Birch3",
+        "CFO",
+        "person3@sponsor-leads-birch.example",
+        "Retail",
+        "Phoenix",
+        "single_asset_purchase",
+        "S-R1638 (U-R1638-2 post-cutoff, not applied)"
+      ],
+      [
+        5,
+        "R7815",
+        "BIRCH-SPO-66254",
+        "Birch Square 2 Capital",
+        10320000,
+        "2026-03-06",
+        "Drew Birch",
+        "CFO",
+        "new.cfo@sponsor-leads-birch.example",
+        "Retail",
+        "Phoenix",
+        "single_asset_purchase",
+        "S-R7815; U-R7815-1"
+      ],
+      [
+        6,
+        "R1077",
+        "BIRCH-SPO-59032",
+        "Birch Square 1 Capital",
+        9600000,
+        "2026-02-05",
+        "Alex Birch1",
+        "CFO",
+        "person1@sponsor-leads-birch.example",
+        "Retail",
+        "Phoenix",
+        "single_asset_purchase",
+        "S-R1077 (dupes: S-R2431; SPV S-R2005)"
+      ]
+    ]
+  },
+  "result": {
+    "created": "artifacts/prospects-v1.csv",
+    "rows": 6
+  },
+  "status": "ok"
+}

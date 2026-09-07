@@ -1,0 +1,232 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R7391",
+      "facts": {
+        "entity_id": "CYPRESS-REF-62661",
+        "owner_entity_id": "O-CYPRESS-REF-62661",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 4800000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Cypress1",
+        "contact_email": "finance1@refinance-leads-cypress.example"
+      },
+      "source_ids": ["S-R7391"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-01-15; no executed extension; Director of Finance contact current and verified."
+    },
+    {
+      "record_id": "R4643",
+      "facts": {
+        "entity_id": "CYPRESS-REF-10959",
+        "owner_entity_id": "O-CYPRESS-REF-10959",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 5520000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Cypress3",
+        "contact_email": "finance3@refinance-leads-cypress.example"
+      },
+      "source_ids": ["S-R4643"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity within window; no executed extension; Director of Finance contact current and verified (as of cutoff)."
+    },
+    {
+      "record_id": "R3353",
+      "facts": {
+        "entity_id": "CYPRESS-REF-27033",
+        "owner_entity_id": "O-CYPRESS-REF-27033",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 5880000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Sam Cypress4",
+        "contact_email": "finance4@refinance-leads-cypress.example"
+      },
+      "source_ids": ["S-R3353"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-04-15; no executed extension; Director of Finance contact current and verified."
+    },
+    {
+      "record_id": "R3917",
+      "facts": {
+        "entity_id": "CYPRESS-REF-21679",
+        "owner_entity_id": "O-CYPRESS-REF-21679",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 5880000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Cypress18",
+        "contact_email": "finance18@refinance-leads-cypress.example"
+      },
+      "source_ids": ["S-R3917"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-04-15; no executed extension; Director of Finance contact current and verified."
+    },
+    {
+      "record_id": "R2253",
+      "facts": {
+        "entity_id": "CYPRESS-REF-14488",
+        "owner_entity_id": "O-CYPRESS-REF-14488",
+        "maturity_date": "2027-05-15",
+        "original_principal_usd": 6240000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Cypress5",
+        "contact_email": null
+      },
+      "source_ids": ["S-R2253"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-05-15; no executed extension; Director of Finance contact current and verified; email not published."
+    },
+    {
+      "record_id": "R5546",
+      "facts": {
+        "entity_id": "CYPRESS-REF-65445",
+        "owner_entity_id": "O-CYPRESS-REF-65445",
+        "maturity_date": "2027-06-15",
+        "original_principal_usd": 6600000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Cypress6",
+        "contact_email": "finance6@refinance-leads-cypress.example"
+      },
+      "source_ids": ["S-R5546"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-06-15; no executed extension; Director of Finance contact current and verified."
+    },
+    {
+      "record_id": "R7918",
+      "facts": {
+        "entity_id": "CYPRESS-REF-34203",
+        "owner_entity_id": "O-CYPRESS-REF-34203",
+        "maturity_date": "2027-07-15",
+        "original_principal_usd": 6960000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Cypress7",
+        "contact_email": "finance7@refinance-leads-cypress.example"
+      },
+      "source_ids": ["S-R7918"],
+      "rationale": "Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-07-15; no executed extension; Director of Finance contact current and verified."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R3947",
+      "eligible": false,
+      "reason": "Excluded: owner_relation is property_manager, not record owner as required.",
+      "source_ids": ["S-R3947"]
+    },
+    {
+      "record_id": "R3917",
+      "eligible": true,
+      "reason": "Meets all criteria: Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-04-15 within window; no executed extension; Director of Finance contact current and verified.",
+      "source_ids": ["S-R3917"]
+    },
+    {
+      "record_id": "R3389",
+      "eligible": false,
+      "reason": "Excluded: executed amendment effective 2026-08-20 (U-R3389-1) extended maturity to 2028-09-30 and marked executed extension; outside window and not unextended.",
+      "source_ids": ["S-R3389", "U-R3389-1"]
+    },
+    {
+      "record_id": "R7918",
+      "eligible": true,
+      "reason": "Meets all criteria: Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-07-15 within window; no executed extension; Director of Finance contact current and verified.",
+      "source_ids": ["S-R7918"]
+    },
+    {
+      "record_id": "R2362",
+      "eligible": true,
+      "reason": "Eligible on facts but duplicate of the same property/entity (CYPRESS-REF-62661); will be deduped in shortlist in favor of a single sponsor slot.",
+      "source_ids": ["S-R2362"]
+    },
+    {
+      "record_id": "R9569",
+      "eligible": false,
+      "reason": "Excluded: maturity unconfirmed and extension option_unresolved; both disallowed.",
+      "source_ids": ["S-R9569"]
+    },
+    {
+      "record_id": "R9318",
+      "eligible": false,
+      "reason": "Excluded: maturity inferred_from_origination (unconfirmed).",
+      "source_ids": ["S-R9318"]
+    },
+    {
+      "record_id": "R3320",
+      "eligible": false,
+      "reason": "Excluded: loan_status released.",
+      "source_ids": ["S-R3320"]
+    },
+    {
+      "record_id": "R9030",
+      "eligible": false,
+      "reason": "Excluded: loan_status status_unknown (not confirmed active).",
+      "source_ids": ["S-R9030"]
+    },
+    {
+      "record_id": "R3353",
+      "eligible": true,
+      "reason": "Meets all criteria: Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-04-15 within window; no executed extension; Director of Finance contact current and verified.",
+      "source_ids": ["S-R3353"]
+    },
+    {
+      "record_id": "R8853",
+      "eligible": false,
+      "reason": "Excluded: asset_type Office (out of scope).",
+      "source_ids": ["S-R8853"]
+    },
+    {
+      "record_id": "R2334",
+      "eligible": false,
+      "reason": "Excluded: ownership verification stale (2024-01-01); not verified since 2026-03-01.",
+      "source_ids": ["S-R2334"]
+    },
+    {
+      "record_id": "R2570",
+      "eligible": false,
+      "reason": "Excluded: maturity 2028-02-01 outside the 2026-09-01 to 2027-08-31 window.",
+      "source_ids": ["S-R2570"]
+    },
+    {
+      "record_id": "R2253",
+      "eligible": true,
+      "reason": "Meets all criteria: Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-05-15 within window; no executed extension; Director of Finance contact current and verified (email not published is acceptable).",
+      "source_ids": ["S-R2253"]
+    },
+    {
+      "record_id": "R4643",
+      "eligible": true,
+      "reason": "Meets all criteria: Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-03-15 within window; no executed extension; Director of Finance contact current and verified (as of cutoff).",
+      "source_ids": ["S-R4643"]
+    },
+    {
+      "record_id": "R3709",
+      "eligible": false,
+      "reason": "Excluded: contact_role is Registered Agent; requires CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": ["S-R3709"]
+    },
+    {
+      "record_id": "R4862",
+      "eligible": false,
+      "reason": "Excluded: contact employment is former; must be current.",
+      "source_ids": ["S-R4862"]
+    },
+    {
+      "record_id": "R5546",
+      "eligible": true,
+      "reason": "Meets all criteria: Industrial Columbus; record owner verified 2026-08-10; loan active_confirmed; executed-note maturity 2027-06-15 within window; no executed extension; Director of Finance contact current and verified.",
+      "source_ids": ["S-R5546"]
+    },
+    {
+      "record_id": "R7391",
+      "eligible": true,
+      "reason": "Eligible on facts but duplicate of the same property/entity (CYPRESS-REF-62661); will be deduped in shortlist in favor of a single sponsor slot.",
+      "source_ids": ["S-R7391"]
+    },
+    {
+      "record_id": "R3836",
+      "eligible": false,
+      "reason": "Excluded: market Seattle; scope limited to Columbus.",
+      "source_ids": ["S-R3836"]
+    }
+  ],
+  "summary": "Seven unique Columbus industrial refinance opportunities meet the criteria as of the 2026-08-31 cutoff. All shortlisted loans are active_confirmed with executed-note maturities between 2027-01-15 and 2027-07-15, no executed extensions, record ownership verified on/after 2026-03-01, and a current Director of Finance contact verified in 2026. Two base records (R2362 and R7391) were eligible duplicates for Cypress Park 1; one (R7391) was retained. One candidate (R3389) was excluded due to an executed amendment extending maturity to 2028-09-30 (U-R3389-1). Several others were excluded for unconfirmed/inferred maturities, unresolved extension options, released/unknown loan status, stale ownership verification, contact role/tenure misalignment, or out-of-scope asset/market. Prospect CSV/XLSX generation is not included in this response; the shortlisted facts and source_ids support downstream file creation.",
+  "limitations": [
+    "Outstanding balances are not provided (null) across the dataset; sizing relies on original principal only.",
+    "Shortlist ranking breaks ties only by the stated rules (maturity asc, then original principal desc); no secondary tiebreaker specified.",
+    "Deduplication for CYPRESS-REF-62661 favored record R7391 over R2362; both share identical facts and verification timing.",
+    "Results reflect the evidence effective on or before the 2026-08-31 cutoff; later-dated changes (e.g., any releases or amendments after cutoff) are not considered.",
+    "All contact and ownership roles are taken solely from the supplied extracts; no external validation of titles or corporate hierarchy."
+  ]
+}

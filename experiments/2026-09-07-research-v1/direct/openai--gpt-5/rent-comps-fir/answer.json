@@ -1,0 +1,181 @@
+{
+  "shortlist": [],
+  "candidate_decisions": [
+    {
+      "record_id": "R1207",
+      "eligible": false,
+      "reason": "Asking status; not an executed lease (ineligible per scope).",
+      "source_ids": [
+        "S-R1207"
+      ]
+    },
+    {
+      "record_id": "R2562",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope). Later rent change published after cutoff is ignored.",
+      "source_ids": [
+        "S-R2562",
+        "U-R2562-6"
+      ]
+    },
+    {
+      "record_id": "R9849",
+      "eligible": false,
+      "reason": "Positive rent required; rent_quote is 0.",
+      "source_ids": [
+        "S-R9849"
+      ]
+    },
+    {
+      "record_id": "R9791",
+      "eligible": false,
+      "reason": "Gross lease missing annual_expenses_psf (required to compute effective net).",
+      "source_ids": [
+        "S-R9791"
+      ]
+    },
+    {
+      "record_id": "R7689",
+      "eligible": false,
+      "reason": "Term_months is null (known term required).",
+      "source_ids": [
+        "S-R7689"
+      ]
+    },
+    {
+      "record_id": "R2197",
+      "eligible": false,
+      "reason": "Rent_quote is null (positive rent required).",
+      "source_ids": [
+        "S-R2197"
+      ]
+    },
+    {
+      "record_id": "R3079",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope).",
+      "source_ids": [
+        "S-R3079",
+        "U-R3079-1",
+        "U-R3079-5"
+      ]
+    },
+    {
+      "record_id": "R7814",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope). Unsigned draft change is ignored.",
+      "source_ids": [
+        "S-R7814",
+        "U-R7814-7"
+      ]
+    },
+    {
+      "record_id": "R4703",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope).",
+      "source_ids": [
+        "S-R4703",
+        "U-R4703-8"
+      ]
+    },
+    {
+      "record_id": "R2353",
+      "eligible": false,
+      "reason": "TI allowance is null (required).",
+      "source_ids": [
+        "S-R2353"
+      ]
+    },
+    {
+      "record_id": "R1562",
+      "eligible": false,
+      "reason": "Record published after cutoff (2026-09-03 > 2026-08-31).",
+      "source_ids": [
+        "S-R1562"
+      ]
+    },
+    {
+      "record_id": "R5413",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope).",
+      "source_ids": [
+        "S-R5413",
+        "U-R5413-10"
+      ]
+    },
+    {
+      "record_id": "R7010",
+      "eligible": false,
+      "reason": "Out of radius (18.6 miles > 8 miles).",
+      "source_ids": [
+        "S-R7010"
+      ]
+    },
+    {
+      "record_id": "R5183",
+      "eligible": false,
+      "reason": "Free_months is null (required).",
+      "source_ids": [
+        "S-R5183"
+      ]
+    },
+    {
+      "record_id": "R3428",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope). Duplicate entity also appears as R4169.",
+      "source_ids": [
+        "S-R3428",
+        "U-R3428-4"
+      ]
+    },
+    {
+      "record_id": "R6529",
+      "eligible": false,
+      "reason": "Event_date outside window (2024-02-10 not within 2025-09-01 to 2026-08-31).",
+      "source_ids": [
+        "S-R6529"
+      ]
+    },
+    {
+      "record_id": "R4514",
+      "eligible": false,
+      "reason": "Executed amendment moved market to Seattle (outside Dallas scope).",
+      "source_ids": [
+        "S-R4514",
+        "U-R4514-9"
+      ]
+    },
+    {
+      "record_id": "R1617",
+      "eligible": false,
+      "reason": "Unsigned proposal; not an executed lease.",
+      "source_ids": [
+        "S-R1617"
+      ]
+    },
+    {
+      "record_id": "R6943",
+      "eligible": false,
+      "reason": "Asset type is Office (scope is Industrial).",
+      "source_ids": [
+        "S-R6943"
+      ]
+    },
+    {
+      "record_id": "R4169",
+      "eligible": false,
+      "reason": "Duplicate of FIR-REN-70478 (see R3428). Executed amendment moved market to Seattle (outside Dallas scope).",
+      "source_ids": [
+        "S-R4169",
+        "U-R3428-4"
+      ]
+    }
+  ],
+  "summary": "No qualified Dallas industrial rent comps were identified within 8 miles and with execution dates from 2025-09-01 to 2026-08-31. Most executed Dallas records were superseded by executed amendments relocating the market to Seattle as of 2026-08-20 (e.g., S-R2562/U-R2562-6, S-R3079/U-R3079-5, S-R7814/U-R7814-7, S-R4703/U-R4703-8, S-R5413/U-R5413-10, S-R4514/U-R4514-9, S-R3428/U-R3428-4). The remaining Dallas records failed eligibility due to missing required fields (e.g., rent, term, free months, TI, or gross-expense detail), out-of-radius, out-of-window, or asking/unsigned status. As a result, the shortlist is empty.",
+  "limitations": [
+    "Several executed amendments changed the market to Seattle shortly before the cutoff; if these reflect administrative recoding rather than physical location, potential Dallas comps could be inadvertently excluded.",
+    "Multiple records lacked required inputs (TI, free months, or gross expense detail), preventing effective rent computation under the specified convention.",
+    "One executed lease (S-R1562) falls within the date window but was published after the cutoff and was excluded per instructions.",
+    "No discounting or present value adjustments were applied by convention; even with complete data, results would reflect undiscounted rent-only figures."
+  ]
+}

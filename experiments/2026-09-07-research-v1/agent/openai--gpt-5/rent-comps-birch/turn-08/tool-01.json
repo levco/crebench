@@ -1,0 +1,79 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"p\",\"expression\":\"0.025\"},{\"name\":\"e_m\",\"expression\":\"6.25/12\"},{\"name\":\"m0\",\"expression\":\"2.01\"},{\"name\":\"sum_m1_3\",\"expression\":\"3*(0 - e_m)\"},{\"name\":\"sum_m4_12\",\"expression\":\"9*(m0 - e_m)\"},{\"name\":\"sum_m13_24\",\"expression\":\"12*(m0*(1+p) - e_m)\"},{\"name\":\"sum_m25_36\",\"expression\":\"12*(m0*((1+p)**2) - e_m)\"},{\"name\":\"total_net_before_TI\",\"expression\":\"sum_m1_3+sum_m4_12+sum_m13_24+sum_m25_36\"},{\"name\":\"TI\",\"expression\":\"21\"},{\"name\":\"net_total\",\"expression\":\"total_net_before_TI - TI\"},{\"name\":\"term\",\"expression\":\"36\"},{\"name\":\"annual_effective\",\"expression\":\"(net_total/term)*12\"},{\"name\":\"annual_face\",\"expression\":\"2.01*12\"}]}",
+  "call_id": "call_pC7rYjaML3gU8lOI3amvxCVl",
+  "arguments": {
+    "steps": [
+      {
+        "name": "p",
+        "expression": "0.025"
+      },
+      {
+        "name": "e_m",
+        "expression": "6.25/12"
+      },
+      {
+        "name": "m0",
+        "expression": "2.01"
+      },
+      {
+        "name": "sum_m1_3",
+        "expression": "3*(0 - e_m)"
+      },
+      {
+        "name": "sum_m4_12",
+        "expression": "9*(m0 - e_m)"
+      },
+      {
+        "name": "sum_m13_24",
+        "expression": "12*(m0*(1+p) - e_m)"
+      },
+      {
+        "name": "sum_m25_36",
+        "expression": "12*(m0*((1+p)**2) - e_m)"
+      },
+      {
+        "name": "total_net_before_TI",
+        "expression": "sum_m1_3+sum_m4_12+sum_m13_24+sum_m25_36"
+      },
+      {
+        "name": "TI",
+        "expression": "21"
+      },
+      {
+        "name": "net_total",
+        "expression": "total_net_before_TI - TI"
+      },
+      {
+        "name": "term",
+        "expression": "36"
+      },
+      {
+        "name": "annual_effective",
+        "expression": "(net_total/term)*12"
+      },
+      {
+        "name": "annual_face",
+        "expression": "2.01*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "p": 0.025,
+      "e_m": 0.5208333333333334,
+      "m0": 2.01,
+      "sum_m1_3": -1.5625,
+      "sum_m4_12": 13.402499999999996,
+      "sum_m13_24": 18.472999999999992,
+      "sum_m25_36": 19.091074999999993,
+      "total_net_before_TI": 49.40407499999998,
+      "TI": 21,
+      "net_total": 28.404074999999978,
+      "term": 36,
+      "annual_effective": 9.468024999999992,
+      "annual_face": 24.119999999999997
+    }
+  },
+  "status": "ok"
+}

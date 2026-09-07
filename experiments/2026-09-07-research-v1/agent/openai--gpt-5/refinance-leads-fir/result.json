@@ -1,0 +1,128 @@
+{
+  "case_id": "refinance-leads-fir",
+  "system": "openai/gpt-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T02:44:01.714217+00:00",
+  "completed_at": "2026-09-07T02:46:52.344608+00:00",
+  "elapsed_seconds": 170.63,
+  "cost_usd": 0.18099425,
+  "known_partial_cost_usd": 0.18099425,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "openai/gpt-5"
+  ],
+  "model_calls": 3,
+  "tool_calls": 3,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8238,
+        "completion_tokens": 4513,
+        "total_tokens": 12751,
+        "cost": 0.0554275,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4416,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0554275,
+        "gateway_cost": 0.0554275
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 48.381,
+      "completed_at": "2026-09-07T02:44:50.108204+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8317,
+        "completion_tokens": 5682,
+        "total_tokens": 13999,
+        "cost": 0.05800025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8192,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5248,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.05800025,
+        "gateway_cost": 0.05800025
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 58.507,
+      "completed_at": "2026-09-07T02:45:48.628796+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8738,
+        "completion_tokens": 6586,
+        "total_tokens": 15324,
+        "cost": 0.0675665,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8192,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5504,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0675665,
+        "gateway_cost": 0.0675665
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 63.084,
+      "completed_at": "2026-09-07T02:46:52.342147+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/prospects-v1.csv",
+      "sha256": "d1908b6b2cd20e0c9497d5c075316a3a1e35d9703a5dcde5346ab176b920c703",
+      "bytes": 136
+    },
+    {
+      "path": "artifacts/underwriting-v1.xlsx",
+      "sha256": "6488b816464685b19cb8a7cbaad4c40e16ae817106706cc9b598617222fc86af",
+      "bytes": 4540
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

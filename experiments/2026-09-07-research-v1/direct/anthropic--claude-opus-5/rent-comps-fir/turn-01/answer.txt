@@ -1,0 +1,138 @@
+```json
+{
+  "shortlist": [],
+  "candidate_decisions": [
+    {
+      "record_id": "R1207",
+      "eligible": false,
+      "reason": "status is 'asking' (not an executed lease); asking/unsigned rents do not qualify.",
+      "source_ids": ["S-R1207"]
+    },
+    {
+      "record_id": "R2562",
+      "eligible": false,
+      "reason": "Executed lease 2026-04-07 at 1.26 mi with complete NNN terms, but executed amendment U-R2562-6 (published/effective 2026-08-20, on or before cutoff) changes market to Seattle, placing it outside the Dallas scope. Later-dated rent amendment U-R2562-2 (published 2026-09-10) is after the cutoff and was not applied.",
+      "source_ids": ["S-R2562", "U-R2562-6", "U-R2562-2"]
+    },
+    {
+      "record_id": "R9849",
+      "eligible": false,
+      "reason": "rent_quote is 0; positive rent is required.",
+      "source_ids": ["S-R9849"]
+    },
+    {
+      "record_id": "R9791",
+      "eligible": false,
+      "reason": "Gross lease with annual_expenses_psf null; gross leases require a known expense deduction (missing is unknown, not zero).",
+      "source_ids": ["S-R9791"]
+    },
+    {
+      "record_id": "R7689",
+      "eligible": false,
+      "reason": "term_months is null; known term is required.",
+      "source_ids": ["S-R7689"]
+    },
+    {
+      "record_id": "R2197",
+      "eligible": false,
+      "reason": "rent_quote is null; positive rent is required.",
+      "source_ids": ["S-R2197"]
+    },
+    {
+      "record_id": "R3079",
+      "eligible": false,
+      "reason": "Executed amendment U-R3079-5 (effective 2026-08-20) changes market to Seattle, outside the Dallas scope. U-R3079-1 (free_months 4, TI 18) would otherwise apply but the record is out of scope.",
+      "source_ids": ["S-R3079", "U-R3079-5", "U-R3079-1"]
+    },
+    {
+      "record_id": "R7814",
+      "eligible": false,
+      "reason": "Executed amendment U-R7814-7 (effective 2026-08-20) changes market to Seattle, outside the Dallas scope. U-R7814-3 is an unsigned draft and does not override the base extract.",
+      "source_ids": ["S-R7814", "U-R7814-7", "U-R7814-3"]
+    },
+    {
+      "record_id": "R4703",
+      "eligible": false,
+      "reason": "Executed amendment U-R4703-8 (effective 2026-08-20) changes market to Seattle, outside the Dallas scope.",
+      "source_ids": ["S-R4703", "U-R4703-8"]
+    },
+    {
+      "record_id": "R2353",
+      "eligible": false,
+      "reason": "ti_allowance_psf is null; known TI is required.",
+      "source_ids": ["S-R2353"]
+    },
+    {
+      "record_id": "R1562",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence cannot be used.",
+      "source_ids": ["S-R1562"]
+    },
+    {
+      "record_id": "R5413",
+      "eligible": false,
+      "reason": "Executed amendment U-R5413-10 (effective 2026-08-20) changes market to Seattle, outside the Dallas scope.",
+      "source_ids": ["S-R5413", "U-R5413-10"]
+    },
+    {
+      "record_id": "R7010",
+      "eligible": false,
+      "reason": "distance_miles 18.6 exceeds the 8-mile radius.",
+      "source_ids": ["S-R7010"]
+    },
+    {
+      "record_id": "R5183",
+      "eligible": false,
+      "reason": "free_months is null; known free rent is required (missing is unknown, not zero).",
+      "source_ids": ["S-R5183"]
+    },
+    {
+      "record_id": "R3428",
+      "eligible": false,
+      "reason": "Executed amendment U-R3428-4 (effective 2026-08-20) changes market to Seattle for entity FIR-REN-70478, outside the Dallas scope. Also a duplicate of R4169 (same entity FIR-REN-70478 / 'Fir Park 1').",
+      "source_ids": ["S-R3428", "U-R3428-4"]
+    },
+    {
+      "record_id": "R6529",
+      "eligible": false,
+      "reason": "event_date 2024-02-10 falls outside the 2025-09-01 to 2026-08-31 window.",
+      "source_ids": ["S-R6529"]
+    },
+    {
+      "record_id": "R4514",
+      "eligible": false,
+      "reason": "Executed amendment U-R4514-9 (effective 2026-08-20) changes market to Seattle, outside the Dallas scope.",
+      "source_ids": ["S-R4514", "U-R4514-9"]
+    },
+    {
+      "record_id": "R1617",
+      "eligible": false,
+      "reason": "status is 'unsigned_proposal'; unsigned rents do not qualify.",
+      "source_ids": ["S-R1617"]
+    },
+    {
+      "record_id": "R6943",
+      "eligible": false,
+      "reason": "asset_type is Office, not Industrial.",
+      "source_ids": ["S-R6943"]
+    },
+    {
+      "record_id": "R4169",
+      "eligible": false,
+      "reason": "Duplicate of R3428 (same entity FIR-REN-70478, 'Fir Park 1'; second_source_same_underlying_record). The entity-level executed amendment U-R3428-4 applies to this duplicate record, moving market to Seattle, outside the Dallas scope.",
+      "source_ids": ["S-R4169", "S-R3428", "U-R3428-4"]
+    }
+  ],
+  "summary": "No qualifying comps. Of the 21 base records, none satisfy all business rules on evidence published and effective on or before 2026-08-31. Eight otherwise-complete Dallas industrial executed leases (R2562, R3079, R7814, R4703, R5413, R3428/R4169 duplicate pair, R4514) were removed from scope by executed amendments effective 2026-08-20 that reassign their market to Seattle; entity updates were also applied to the duplicate record R4169 of entity FIR-REN-70478. The remainder fail on status (R1207 asking, R1617 unsigned proposal), asset type (R6943 Office), distance (R7010 at 18.6 mi), date window (R6529 event 2024-02-10; R1562 source published 2026-09-03, after cutoff), or missing/non-positive required inputs (R9849 zero rent, R2197 null rent, R7689 null term, R5183 null free months, R2353 null TI, R9791 gross with unknown expense deduction). Because no record qualified, no effective net rent per sf per year was computed and the shortlist is empty; there is insufficient qualifying evidence to produce a rent comp set for Dallas industrial at this cutoff.",
+  "limitations": [
+    "Zero qualifying comps means no effective net rent benchmark can be stated for Dallas industrial within 8 miles under the stated convention.",
+    "The market-change amendments (U-R2562-6, U-R3079-5, U-R7814-7, U-R4703-8, U-R5413-10, U-R3428-4, U-R4514-9) eliminated the closest and most complete candidates; if these market reassignments were data errors rather than genuine scope changes, the result set would change materially, but the packet gives no basis to override them.",
+    "R2562's later amendment U-R2562-2 (rent_quote 2, published 2026-09-10) is after the cutoff and was excluded; its effect on rent is therefore unknown as of the as-of date.",
+    "R7814's free_months change to 8 comes only from an unsigned draft (U-R7814-3) and was not applied; the signed free-rent term beyond the base extract is unknown.",
+    "Missing fields (null annual_expenses_psf, term, free months, TI, rent) were treated as unknown, not zero, so some records may in fact be viable comps if the underlying documents were obtained.",
+    "R3428 and R4169 are treated as one underlying lease (entity FIR-REN-70478); no independent confirmation of that duplication beyond the record metadata is available.",
+    "The convention applied is an undiscounted, rent-only calculation and would not constitute a market appraisal even if comps had qualified.",
+    "No workbook or CSV artifact was produced in this direct API response; file generation is outside this control path."
+  ]
+}
+```

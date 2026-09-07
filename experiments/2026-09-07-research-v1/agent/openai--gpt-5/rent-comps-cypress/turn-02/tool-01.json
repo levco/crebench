@@ -1,0 +1,119 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"g\",\"expression\":\"0.025\"},{\"name\":\"R_R2670\",\"expression\":\"25.8\"},{\"name\":\"Y_R2670\",\"expression\":\"36/12\"},{\"name\":\"E_R2670\",\"expression\":\"6.25\"},{\"name\":\"f_R2670\",\"expression\":\"2\"},{\"name\":\"Total_face_R2670\",\"expression\":\"R_R2670*(1 + (1+g) + (1+g)**2)\"},{\"name\":\"Free_deduction_R2670\",\"expression\":\"f_R2670*R_R2670/12\"},{\"name\":\"Gross_deduction_R2670\",\"expression\":\"E_R2670*Y_R2670\"},{\"name\":\"TI_R2670\",\"expression\":\"18\"},{\"name\":\"Net_total_R2670\",\"expression\":\"Total_face_R2670 - Free_deduction_R2670 - Gross_deduction_R2670 - TI_R2670\"},{\"name\":\"Eff_R2670\",\"expression\":\"Net_total_R2670 / Y_R2670\"},{\"name\":\"R_R1188\",\"expression\":\"2.15*12\"},{\"name\":\"Y_R1188\",\"expression\":\"60/12\"},{\"name\":\"E_R1188\",\"expression\":\"0\"},{\"name\":\"f_R1188\",\"expression\":\"1\"},{\"name\":\"Total_face_R1188\",\"expression\":\"R_R1188*(1 + (1+g) + (1+g)**2 + (1+g)**3 + (1+g)**4)\"},{\"name\":\"Free_deduction_R1188\",\"expression\":\"f_R1188*R_R1188/12\"},{\"name\":\"Gross_deduction_R1188\",\"expression\":\"E_R1188*Y_R1188\"},{\"name\":\"TI_R1188\",\"expression\":\"15\"},{\"name\":\"Net_total_R1188\",\"expression\":\"Total_face_R1188 - Free_deduction_R1188 - Gross_deduction_R1188 - TI_R1188\"},{\"name\":\"Eff_R1188\",\"expression\":\"Net_total_R1188 / Y_R1188\"}]}",
+  "call_id": "call_YVyv7ahsk9iftPVvYWd4dNjq",
+  "arguments": {
+    "steps": [
+      {
+        "name": "g",
+        "expression": "0.025"
+      },
+      {
+        "name": "R_R2670",
+        "expression": "25.8"
+      },
+      {
+        "name": "Y_R2670",
+        "expression": "36/12"
+      },
+      {
+        "name": "E_R2670",
+        "expression": "6.25"
+      },
+      {
+        "name": "f_R2670",
+        "expression": "2"
+      },
+      {
+        "name": "Total_face_R2670",
+        "expression": "R_R2670*(1 + (1+g) + (1+g)**2)"
+      },
+      {
+        "name": "Free_deduction_R2670",
+        "expression": "f_R2670*R_R2670/12"
+      },
+      {
+        "name": "Gross_deduction_R2670",
+        "expression": "E_R2670*Y_R2670"
+      },
+      {
+        "name": "TI_R2670",
+        "expression": "18"
+      },
+      {
+        "name": "Net_total_R2670",
+        "expression": "Total_face_R2670 - Free_deduction_R2670 - Gross_deduction_R2670 - TI_R2670"
+      },
+      {
+        "name": "Eff_R2670",
+        "expression": "Net_total_R2670 / Y_R2670"
+      },
+      {
+        "name": "R_R1188",
+        "expression": "2.15*12"
+      },
+      {
+        "name": "Y_R1188",
+        "expression": "60/12"
+      },
+      {
+        "name": "E_R1188",
+        "expression": "0"
+      },
+      {
+        "name": "f_R1188",
+        "expression": "1"
+      },
+      {
+        "name": "Total_face_R1188",
+        "expression": "R_R1188*(1 + (1+g) + (1+g)**2 + (1+g)**3 + (1+g)**4)"
+      },
+      {
+        "name": "Free_deduction_R1188",
+        "expression": "f_R1188*R_R1188/12"
+      },
+      {
+        "name": "Gross_deduction_R1188",
+        "expression": "E_R1188*Y_R1188"
+      },
+      {
+        "name": "TI_R1188",
+        "expression": "15"
+      },
+      {
+        "name": "Net_total_R1188",
+        "expression": "Total_face_R1188 - Free_deduction_R1188 - Gross_deduction_R1188 - TI_R1188"
+      },
+      {
+        "name": "Eff_R1188",
+        "expression": "Net_total_R1188 / Y_R1188"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "g": 0.025,
+      "R_R2670": 25.8,
+      "Y_R2670": 3.0,
+      "E_R2670": 6.25,
+      "f_R2670": 2,
+      "Total_face_R2670": 79.351125,
+      "Free_deduction_R2670": 4.3,
+      "Gross_deduction_R2670": 18.75,
+      "TI_R2670": 18,
+      "Net_total_R2670": 38.301125,
+      "Eff_R2670": 12.767041666666666,
+      "R_R1188": 25.799999999999997,
+      "Y_R1188": 5.0,
+      "E_R1188": 0,
+      "f_R1188": 1,
+      "Total_face_R1188": 135.61327570312494,
+      "Free_deduction_R1188": 2.15,
+      "Gross_deduction_R1188": 0.0,
+      "TI_R1188": 15,
+      "Net_total_R1188": 118.46327570312494,
+      "Eff_R1188": 23.692655140624986
+    }
+  },
+  "status": "ok"
+}

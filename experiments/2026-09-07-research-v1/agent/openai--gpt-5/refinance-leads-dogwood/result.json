@@ -1,0 +1,165 @@
+{
+  "case_id": "refinance-leads-dogwood",
+  "system": "openai/gpt-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T02:38:15.425255+00:00",
+  "completed_at": "2026-09-07T02:43:08.187990+00:00",
+  "elapsed_seconds": 292.762,
+  "cost_usd": 0.29875799999999997,
+  "known_partial_cost_usd": 0.29875799999999997,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "openai/gpt-5"
+  ],
+  "model_calls": 4,
+  "tool_calls": 4,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 7843,
+        "completion_tokens": 5963,
+        "total_tokens": 13806,
+        "cost": 0.06943375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5504,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.06943375,
+        "gateway_cost": 0.06943375
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 55.993,
+      "completed_at": "2026-09-07T02:39:11.429253+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8323,
+        "completion_tokens": 6216,
+        "total_tokens": 14539,
+        "cost": 0.06377975,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 7808,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5760,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.06377975,
+        "gateway_cost": 0.06377975
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 71.538,
+      "completed_at": "2026-09-07T02:40:22.973193+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8744,
+        "completion_tokens": 7413,
+        "total_tokens": 16157,
+        "cost": 0.075844,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8192,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6976,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.075844,
+        "gateway_cost": 0.075844
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 76.349,
+      "completed_at": "2026-09-07T02:41:39.325270+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 9170,
+        "completion_tokens": 8803,
+        "total_tokens": 17973,
+        "cost": 0.0897005,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8704,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6656,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0897005,
+        "gateway_cost": 0.0897005
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 88.857,
+      "completed_at": "2026-09-07T02:43:08.185681+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/prospects-v1.csv",
+      "sha256": "bfe6edd7e04c38048187d433ce0a19b47942ca2b3d140c657e56c74daaa4bf6d",
+      "bytes": 1006
+    },
+    {
+      "path": "artifacts/prospects-v2.csv",
+      "sha256": "fb35f6acc2120060a57515c382b8e401db333c2e5029e18ff0c3285b9046059a",
+      "bytes": 874
+    },
+    {
+      "path": "artifacts/prospects-v3.csv",
+      "sha256": "e4cd090c788b900a56ca60d0ed39e171f63ec6df986bfa61c05dd29877286b18",
+      "bytes": 882
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

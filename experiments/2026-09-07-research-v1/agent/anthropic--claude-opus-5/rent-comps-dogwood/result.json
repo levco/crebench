@@ -1,0 +1,155 @@
+{
+  "case_id": "rent-comps-dogwood",
+  "system": "anthropic/claude-opus-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T03:00:58.966824+00:00",
+  "completed_at": "2026-09-07T03:03:43.716940+00:00",
+  "elapsed_seconds": 164.751,
+  "cost_usd": 0.596995,
+  "known_partial_cost_usd": 0.596995,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "model_calls": 4,
+  "tool_calls": 3,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 9024,
+        "completion_tokens": 2467,
+        "total_tokens": 11491,
+        "cost": 0.106795,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2050,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.106795,
+        "gateway_cost": 0.106795
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 27.665,
+      "completed_at": "2026-09-07T03:01:26.650475+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 9539,
+        "completion_tokens": 1859,
+        "total_tokens": 11398,
+        "cost": 0.09417,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1774,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.09417,
+        "gateway_cost": 0.09417
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 24.686,
+      "completed_at": "2026-09-07T03:01:51.340006+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 9682,
+        "completion_tokens": 6351,
+        "total_tokens": 16033,
+        "cost": 0.207185,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2462,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.207185,
+        "gateway_cost": 0.207185
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 63.488,
+      "completed_at": "2026-09-07T03:02:54.829189+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 13804,
+        "completion_tokens": 4793,
+        "total_tokens": 18597,
+        "cost": 0.188845,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 502,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.188845,
+        "gateway_cost": 0.188845
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 48.358,
+      "completed_at": "2026-09-07T03:03:43.715012+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/underwriting-v1.xlsx",
+      "sha256": "847c8f4a2de9db668508a13a68433413fc88726864e19e461c657c268c5cea65",
+      "bytes": 5463
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

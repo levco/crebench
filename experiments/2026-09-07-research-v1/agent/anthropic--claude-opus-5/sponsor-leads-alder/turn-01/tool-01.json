@@ -1,0 +1,98 @@
+{
+  "name": "export_csv",
+  "arguments_raw": "{\"headers\":[\"rank\",\"record_id\",\"entity_id\",\"firm_name\",\"transaction_size_usd\",\"event_date\",\"contact_name\",\"contact_role\",\"contact_email\",\"source_ids\"],\"rows\":[[1,\"R3168\",\"ALDER-SPO-67037\",\"Alder Square 6 Capital\",33000000,\"2026-07-10\",\"Morgan Alder6\",\"Head of Acquisitions\",\"person6@sponsor-leads-alder.example\",\"S-R3168\"],[2,\"R4787\",\"ALDER-SPO-19257\",\"Alder Square 5 Capital\",31200000,\"2026-06-09\",\"Alex Alder5\",\"CFO\",null,\"S-R4787\"],[3,\"R4752\",\"ALDER-SPO-13273\",\"Alder Grove 4 Capital\",29400000,\"2026-05-08\",\"Taylor Alder4\",\"Head of Acquisitions\",\"person4@sponsor-leads-alder.example\",\"S-R4752 (U-R4752-3 unsigned draft not applied)\"],[4,\"R2273\",\"ALDER-SPO-21979\",\"Alder Park 3 Capital\",27600000,\"2026-04-07\",\"Jordan Alder3\",\"CFO\",\"person3@sponsor-leads-alder.example\",\"S-R2273 (U-R2273-2 post-cutoff, not applied)\"],[5,\"R1117\",\"ALDER-SPO-82903\",\"Alder Park 2 Capital\",25800000,\"2026-03-06\",\"Drew Alder\",\"CFO\",\"new.cfo@sponsor-leads-alder.example\",\"S-R1117; U-R1117-1\"],[6,\"R7805\",\"ALDER-SPO-80621\",\"Alder Grove 1 Capital\",24000000,\"2026-02-05\",\"Alex Alder1\",\"CFO\",\"person1@sponsor-leads-alder.example\",\"S-R7805 (dupes: S-R5723; SPV S-R7756)\"]]}",
+  "call_id": "toolu_01VTGC6ZtmLK85r5HuDmnwPY",
+  "arguments": {
+    "headers": [
+      "rank",
+      "record_id",
+      "entity_id",
+      "firm_name",
+      "transaction_size_usd",
+      "event_date",
+      "contact_name",
+      "contact_role",
+      "contact_email",
+      "source_ids"
+    ],
+    "rows": [
+      [
+        1,
+        "R3168",
+        "ALDER-SPO-67037",
+        "Alder Square 6 Capital",
+        33000000,
+        "2026-07-10",
+        "Morgan Alder6",
+        "Head of Acquisitions",
+        "person6@sponsor-leads-alder.example",
+        "S-R3168"
+      ],
+      [
+        2,
+        "R4787",
+        "ALDER-SPO-19257",
+        "Alder Square 5 Capital",
+        31200000,
+        "2026-06-09",
+        "Alex Alder5",
+        "CFO",
+        null,
+        "S-R4787"
+      ],
+      [
+        3,
+        "R4752",
+        "ALDER-SPO-13273",
+        "Alder Grove 4 Capital",
+        29400000,
+        "2026-05-08",
+        "Taylor Alder4",
+        "Head of Acquisitions",
+        "person4@sponsor-leads-alder.example",
+        "S-R4752 (U-R4752-3 unsigned draft not applied)"
+      ],
+      [
+        4,
+        "R2273",
+        "ALDER-SPO-21979",
+        "Alder Park 3 Capital",
+        27600000,
+        "2026-04-07",
+        "Jordan Alder3",
+        "CFO",
+        "person3@sponsor-leads-alder.example",
+        "S-R2273 (U-R2273-2 post-cutoff, not applied)"
+      ],
+      [
+        5,
+        "R1117",
+        "ALDER-SPO-82903",
+        "Alder Park 2 Capital",
+        25800000,
+        "2026-03-06",
+        "Drew Alder",
+        "CFO",
+        "new.cfo@sponsor-leads-alder.example",
+        "S-R1117; U-R1117-1"
+      ],
+      [
+        6,
+        "R7805",
+        "ALDER-SPO-80621",
+        "Alder Grove 1 Capital",
+        24000000,
+        "2026-02-05",
+        "Alex Alder1",
+        "CFO",
+        "person1@sponsor-leads-alder.example",
+        "S-R7805 (dupes: S-R5723; SPV S-R7756)"
+      ]
+    ]
+  },
+  "result": {
+    "created": "artifacts/prospects-v1.csv",
+    "rows": 6
+  },
+  "status": "ok"
+}

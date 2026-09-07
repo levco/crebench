@@ -1,0 +1,218 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R3529",
+      "facts": {
+        "entity_id": "DOGWOOD-REF-43781",
+        "owner_entity_id": "O-DOGWOOD-REF-43781",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 16800000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Dogwood1",
+        "contact_email": "finance1@refinance-leads-dogwood.example"
+      },
+      "source_ids": ["S-R3529", "S-R5565"],
+      "rationale": "Multifamily Tampa with owner and Director of Finance verified 2026-08-10; active loan; executed-note maturity 2027-01-15 within window; no executed extension."
+    },
+    {
+      "record_id": "R9410",
+      "facts": {
+        "entity_id": "DOGWOOD-REF-92578",
+        "owner_entity_id": "O-DOGWOOD-REF-92578",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 19320000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Dogwood3",
+        "contact_email": "finance3@refinance-leads-dogwood.example"
+      },
+      "source_ids": ["S-R9410"],
+      "rationale": "Multifamily Tampa; owner and Director of Finance verified 2026-08-10; active loan; executed-note maturity 2027-03-15 within window; no executed extension as of cutoff."
+    },
+    {
+      "record_id": "R8389",
+      "facts": {
+        "entity_id": "DOGWOOD-REF-32756",
+        "owner_entity_id": "O-DOGWOOD-REF-32756",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 20580000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Sam Dogwood4",
+        "contact_email": "finance4@refinance-leads-dogwood.example"
+      },
+      "source_ids": ["S-R8389"],
+      "rationale": "Multifamily Tampa; owner and Director of Finance verified 2026-08-10; active loan; executed-note maturity 2027-04-15 within window; no executed extension (unsigned draft ignored)."
+    },
+    {
+      "record_id": "R2818",
+      "facts": {
+        "entity_id": "DOGWOOD-REF-21989",
+        "owner_entity_id": "O-DOGWOOD-REF-21989",
+        "maturity_date": "2027-05-15",
+        "original_principal_usd": 21840000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Dogwood5",
+        "contact_email": null
+      },
+      "source_ids": ["S-R2818"],
+      "rationale": "Multifamily Tampa; owner and Director of Finance verified 2026-08-10; active loan; executed-note maturity 2027-05-15 within window; no executed extension."
+    },
+    {
+      "record_id": "R1318",
+      "facts": {
+        "entity_id": "DOGWOOD-REF-14595",
+        "owner_entity_id": "O-DOGWOOD-REF-14595",
+        "maturity_date": "2027-06-15",
+        "original_principal_usd": 23100000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Dogwood6",
+        "contact_email": "finance6@refinance-leads-dogwood.example"
+      },
+      "source_ids": ["S-R1318"],
+      "rationale": "Multifamily Tampa; owner and Director of Finance verified 2026-08-10; active loan; executed-note maturity 2027-06-15 within window; no executed extension."
+    },
+    {
+      "record_id": "R5792",
+      "facts": {
+        "entity_id": "DOGWOOD-REF-69815",
+        "owner_entity_id": "O-DOGWOOD-REF-69815",
+        "maturity_date": "2027-07-15",
+        "original_principal_usd": 24360000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Dogwood7",
+        "contact_email": "finance7@refinance-leads-dogwood.example"
+      },
+      "source_ids": ["S-R5792"],
+      "rationale": "Multifamily Tampa; owner and Director of Finance verified 2026-08-10; active loan; executed-note maturity 2027-07-15 within window; no executed extension."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R2320",
+      "eligible": false,
+      "reason": "Owner verification is stale (ownership_verified_at 2024-01-01), not since 2026-03-01.",
+      "source_ids": ["S-R2320"]
+    },
+    {
+      "record_id": "R3529",
+      "eligible": true,
+      "reason": "Meets all criteria; duplicate underlying record with R5565 (same entity_id DOGWOOD-REF-43781).",
+      "source_ids": ["S-R3529"]
+    },
+    {
+      "record_id": "R5792",
+      "eligible": true,
+      "reason": "Meets all criteria: Multifamily Tampa, active loan, executed-note maturity within 2026-09-01 to 2027-08-31, verified owner and Director of Finance.",
+      "source_ids": ["S-R5792"]
+    },
+    {
+      "record_id": "R6805",
+      "eligible": false,
+      "reason": "Owner relation is property_manager; no record owner verified since 2026-03-01.",
+      "source_ids": ["S-R6805"]
+    },
+    {
+      "record_id": "R8788",
+      "eligible": false,
+      "reason": "Evidence published 2026-09-03 is after the 2026-08-31 cutoff; not considered as of the analysis date.",
+      "source_ids": ["S-R8788"]
+    },
+    {
+      "record_id": "R8811",
+      "eligible": false,
+      "reason": "Executed amendment effective 2026-08-20 extends maturity to 2028-09-30 (extension executed); outside the target window.",
+      "source_ids": ["S-R8811", "U-R8811-1"]
+    },
+    {
+      "record_id": "R7731",
+      "eligible": false,
+      "reason": "Loan status is status_unknown (not confirmed active).",
+      "source_ids": ["S-R7731"]
+    },
+    {
+      "record_id": "R4836",
+      "eligible": false,
+      "reason": "Maturity basis unconfirmed and extension option unresolved.",
+      "source_ids": ["S-R4836"]
+    },
+    {
+      "record_id": "R2818",
+      "eligible": true,
+      "reason": "Meets all criteria: Multifamily Tampa, active loan, executed-note maturity within window, verified owner and Director of Finance.",
+      "source_ids": ["S-R2818"]
+    },
+    {
+      "record_id": "R9410",
+      "eligible": true,
+      "reason": "Meets all criteria as of cutoff: Multifamily Tampa, active loan, executed-note maturity within window, verified owner and Director of Finance.",
+      "source_ids": ["S-R9410"]
+    },
+    {
+      "record_id": "R2226",
+      "eligible": false,
+      "reason": "Loan released.",
+      "source_ids": ["S-R2226"]
+    },
+    {
+      "record_id": "R1271",
+      "eligible": false,
+      "reason": "Asset type Office; scope limited to Multifamily.",
+      "source_ids": ["S-R1271"]
+    },
+    {
+      "record_id": "R8389",
+      "eligible": true,
+      "reason": "Meets all criteria; unsigned draft extension ignored (no executed change).",
+      "source_ids": ["S-R8389"]
+    },
+    {
+      "record_id": "R4312",
+      "eligible": false,
+      "reason": "Maturity basis inferred_from_origination (not confirmed executed).",
+      "source_ids": ["S-R4312"]
+    },
+    {
+      "record_id": "R8536",
+      "eligible": false,
+      "reason": "Executed-note maturity 2028-02-01 falls outside the 2026-09-01 to 2027-08-31 window.",
+      "source_ids": ["S-R8536"]
+    },
+    {
+      "record_id": "R1318",
+      "eligible": true,
+      "reason": "Meets all criteria: Multifamily Tampa, active loan, executed-note maturity within window, verified owner and Director of Finance.",
+      "source_ids": ["S-R1318"]
+    },
+    {
+      "record_id": "R2326",
+      "eligible": false,
+      "reason": "Market is Seattle; scope limited to Tampa.",
+      "source_ids": ["S-R2326"]
+    },
+    {
+      "record_id": "R6522",
+      "eligible": false,
+      "reason": "Contact role is Registered Agent, not CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": ["S-R6522"]
+    },
+    {
+      "record_id": "R2110",
+      "eligible": false,
+      "reason": "Contact employment is former; requires current CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": ["S-R2110"]
+    },
+    {
+      "record_id": "R5565",
+      "eligible": true,
+      "reason": "Meets all criteria; duplicate underlying record with R3529 (same entity_id DOGWOOD-REF-43781).",
+      "source_ids": ["S-R5565"]
+    }
+  ],
+  "summary": "Six Tampa Multifamily refinance opportunities qualified with confirmed active loans and executed-note maturities between 2026-09-01 and 2027-08-31, ranked by maturity date. Duplicates were consolidated (Dogwood Park 1). Records were excluded for reasons including executed extensions beyond the window (R8811), released/unknown-status loans, unconfirmed or inferred maturities, in-scope contact/owner verification failures, out-of-market/asset-type, and post-cutoff publication.",
+  "limitations": [
+    "As-of cutoff 2026-08-31: evidence published/effective after this date (e.g., recorded release for R9410 on 2026-09-10) was not applied and could change eligibility later.",
+    "Outstanding balances were not provided in sources; reported as null.",
+    "Emails are only included when published; some entries have null contact_email.",
+    "Duplicate detection relied on shared entity_id; other potential duplication signals were not provided.",
+    "Unsigned drafts (e.g., U-R8389-3) were not treated as controlling; future execution could alter maturities."
+  ]
+}

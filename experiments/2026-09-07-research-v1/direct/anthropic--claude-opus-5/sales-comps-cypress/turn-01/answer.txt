@@ -1,0 +1,199 @@
+```json
+{
+  "shortlist": [
+    {
+      "record_id": "R6807",
+      "facts": {
+        "entity_id": "CYPRESS-SAL-30526",
+        "event_date": "2026-02-05",
+        "consideration_usd": 8000000.0,
+        "property_size": 64000,
+        "price_per_unit": 125.0
+      },
+      "source_ids": ["S-R6807", "S-R8212"],
+      "rationale": "Closed, stabilized, single-asset, fee-simple, unrelated-party industrial sale in Columbus at 0.80 mi; 64,000 sf is within the 52,000-116,000 sf band; consideration already USD ($8,000,000) giving $125.00/sf. Nearest qualifying comp. Entity CYPRESS-SAL-30526 also appears as R8212 (second source, same underlying record); deduplicated to a single slot with S-R8212 retained as corroboration."
+    },
+    {
+      "record_id": "R1278",
+      "facts": {
+        "entity_id": "CYPRESS-SAL-84892",
+        "event_date": "2026-03-06",
+        "consideration_usd": 9300000.0,
+        "property_size": 68800,
+        "price_per_unit": 135.17
+      },
+      "source_ids": ["S-R1278", "U-R1278-1"],
+      "rationale": "Closed, stabilized, single-asset, fee-simple, unrelated-party industrial sale at 1.03 mi; 68,800 sf in range. Executed amendment U-R1278-1 (published/effective 2026-08-20, on or before the 2026-08-31 cutoff) overrides the base $8,600 thousand figure to $9,300,000 USD, yielding $135.17/sf."
+    },
+    {
+      "record_id": "R3282",
+      "facts": {
+        "entity_id": "CYPRESS-SAL-51360",
+        "event_date": "2026-04-07",
+        "consideration_usd": 9200000.0,
+        "property_size": 73600,
+        "price_per_unit": 125.0
+      },
+      "source_ids": ["S-R3282"],
+      "rationale": "Closed, stabilized, single-asset, fee-simple, unrelated-party industrial sale at 1.26 mi; 73,600 sf in range. Base consideration of 9.2 USD_millions normalizes to $9,200,000 = $125.00/sf. Executed amendment U-R3282-2 (published/effective 2026-09-10) is later-dated than the cutoff and was not applied."
+    },
+    {
+      "record_id": "R2008",
+      "facts": {
+        "entity_id": "CYPRESS-SAL-79686",
+        "event_date": "2026-05-08",
+        "consideration_usd": 9800000.0,
+        "property_size": 78400,
+        "price_per_unit": 125.0
+      },
+      "source_ids": ["S-R2008"],
+      "rationale": "Closed, stabilized, single-asset, fee-simple, unrelated-party industrial sale at 1.49 mi; 78,400 sf in range; $9,800,000 USD = $125.00/sf. U-R2008-3 is an unsigned draft and does not override the base consideration."
+    },
+    {
+      "record_id": "R6608",
+      "facts": {
+        "entity_id": "CYPRESS-SAL-19485",
+        "event_date": "2026-06-09",
+        "consideration_usd": 10400000.0,
+        "property_size": 83200,
+        "price_per_unit": 125.0
+      },
+      "source_ids": ["S-R6608"],
+      "rationale": "Closed, stabilized, single-asset, fee-simple, unrelated-party industrial sale at 1.72 mi; 83,200 sf in range; 10,400 USD_thousands normalizes to $10,400,000 = $125.00/sf."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8675",
+      "eligible": false,
+      "reason": "Size unit is 'acre', not the required sf unit for an 83,200 property-size figure; incorrect size unit disqualifies the record.",
+      "source_ids": ["S-R8675"]
+    },
+    {
+      "record_id": "R3282",
+      "eligible": true,
+      "reason": "Meets all business rules: closed 2026-04-07 (in window), 1.26 mi (<8), 73,600 sf (in band), stabilized, single-asset, fee-simple, unrelated party, known positive consideration $9,200,000 USD. Post-cutoff executed amendment U-R3282-2 (2026-09-10, would set consideration to $1) is later-dated and not applied.",
+      "source_ids": ["S-R3282", "U-R3282-2"]
+    },
+    {
+      "record_id": "R1278",
+      "eligible": true,
+      "reason": "Meets all business rules; consideration controlled by executed amendment U-R1278-1 (effective 2026-08-20, pre-cutoff) at $9,300,000 USD; 1.03 mi, 68,800 sf, closed 2026-03-06.",
+      "source_ids": ["S-R1278", "U-R1278-1"]
+    },
+    {
+      "record_id": "R2044",
+      "eligible": false,
+      "reason": "Sole evidence S-R2044 is published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence cannot be used, so the sale is unsupported as of the cutoff.",
+      "source_ids": ["S-R2044"]
+    },
+    {
+      "record_id": "R1596",
+      "eligible": true,
+      "reason": "Qualifies on all rules (closed 2026-07-10, 1.95 mi, 88,000 sf, $11,000,000 USD = $125.00/sf) but ranks 6th by distance and falls outside the five-row shortlist cap.",
+      "source_ids": ["S-R1596"]
+    },
+    {
+      "record_id": "R4227",
+      "eligible": false,
+      "reason": "Interest is a minority equity interest, not fee simple; a minority interest is not a qualifying sale.",
+      "source_ids": ["S-R4227"]
+    },
+    {
+      "record_id": "R5215",
+      "eligible": false,
+      "reason": "Property size 168,000 sf exceeds the 52,000-116,000 sf screen.",
+      "source_ids": ["S-R5215"]
+    },
+    {
+      "record_id": "R6807",
+      "eligible": true,
+      "reason": "Qualifies on all rules; nearest comp at 0.80 mi. Same entity (CYPRESS-SAL-30526) as R8212 — duplicate pair, retained as the primary record (recorded deed and closing statement).",
+      "source_ids": ["S-R6807"]
+    },
+    {
+      "record_id": "R2134",
+      "eligible": false,
+      "reason": "Consideration is null (unknown, not zero); known positive consideration is required.",
+      "source_ids": ["S-R2134"]
+    },
+    {
+      "record_id": "R9925",
+      "eligible": true,
+      "reason": "Qualifies on all rules (closed 2026-02-11, 2.18 mi, 92,800 sf, $11,600,000 USD = $125.00/sf) but ranks 7th by distance and falls outside the five-row shortlist cap.",
+      "source_ids": ["S-R9925"]
+    },
+    {
+      "record_id": "R8973",
+      "eligible": false,
+      "reason": "Status is 'listing', not a closed sale; a listing is not a qualifying transaction.",
+      "source_ids": ["S-R8973"]
+    },
+    {
+      "record_id": "R7955",
+      "eligible": false,
+      "reason": "Condition is 'redevelopment', not stabilized; a redevelopment is not a qualifying sale.",
+      "source_ids": ["S-R7955"]
+    },
+    {
+      "record_id": "R6608",
+      "eligible": true,
+      "reason": "Qualifies on all rules: closed 2026-06-09, 1.72 mi, 83,200 sf, $10,400,000 USD, stabilized fee-simple single-asset unrelated-party sale.",
+      "source_ids": ["S-R6608"]
+    },
+    {
+      "record_id": "R6518",
+      "eligible": false,
+      "reason": "Event date 2024-02-10 falls outside the 2025-09-01 to 2026-08-31 closing window.",
+      "source_ids": ["S-R6518"]
+    },
+    {
+      "record_id": "R5660",
+      "eligible": false,
+      "reason": "Scope is 'portfolio_unallocated'; an unallocated portfolio price is not a qualifying single-asset sale.",
+      "source_ids": ["S-R5660"]
+    },
+    {
+      "record_id": "R2008",
+      "eligible": true,
+      "reason": "Qualifies on all rules; base consideration $9,800,000 USD stands because U-R2008-3 is an unsigned draft and does not override.",
+      "source_ids": ["S-R2008", "U-R2008-3"]
+    },
+    {
+      "record_id": "R8212",
+      "eligible": true,
+      "reason": "Satisfies the business rules on its own terms (closed 2026-02-05, 0.80 mi, 64,000 sf, $8,000,000 USD) but is a duplicate of entity CYPRESS-SAL-30526 already represented by R6807; it is a second source for the same underlying record and adds no additional shortlist slot.",
+      "source_ids": ["S-R8212", "S-R6807"]
+    },
+    {
+      "record_id": "R1485",
+      "eligible": false,
+      "reason": "Distance 18.6 mi exceeds the 8-mile radius screen.",
+      "source_ids": ["S-R1485"]
+    },
+    {
+      "record_id": "R1604",
+      "eligible": false,
+      "reason": "Asset type is Office, outside the Industrial scope.",
+      "source_ids": ["S-R1604"]
+    },
+    {
+      "record_id": "R6806",
+      "eligible": false,
+      "reason": "related_party is true; only unrelated-party transactions qualify.",
+      "source_ids": ["S-R6806"]
+    }
+  ],
+  "summary": "Seven of the twenty base records qualified as comparable closed industrial sales in Columbus within 8 miles and 52,000-116,000 sf (R6807/R8212 being one deduplicated entity, plus R1278, R3282, R2008, R6608, R1596, R9925). Ranked by distance ascending then most recent close, the top five selected comps are R6807 (0.80 mi, $125.00/sf), R1278 (1.03 mi, $135.17/sf), R3282 (1.26 mi, $125.00/sf), R2008 (1.49 mi, $125.00/sf) and R6608 (1.72 mi, $125.00/sf); R1596 (1.95 mi) and R9925 (2.18 mi) qualified but fell outside the five-slot cap. Indicated pricing clusters tightly at $125.00/sf, with the amended R1278 at $135.17/sf the only outlier. Exclusions were driven by wrong size unit (R8675), post-cutoff-only evidence (R2044), minority interest (R4227), size out of band (R5215), unknown consideration (R2134), listing status (R8973), redevelopment condition (R7955), stale closing date (R6518), unallocated portfolio price (R5660), distance (R1485), asset type (R1604) and related-party status (R6806). Only the pre-cutoff executed amendment U-R1278-1 was applied; U-R3282-2 (post-cutoff) and U-R2008-3 (unsigned draft) were disregarded per the precedence rules. Note: no workbook or CSV file was produced in this direct API response; artifact generation is outside this control and the tabular comp grid is represented by the shortlist above.",
+  "limitations": [
+    "R2044 (78,400 sf, 4.71 mi, closed 2026-07-22) may be a legitimate comp but its only evidence (S-R2044) postdates the 2026-08-31 cutoff, so it could not be counted; its exclusion is an evidence-timing artifact rather than a substantive failure.",
+    "U-R3282-2 would reduce R3282's consideration to $1 (a nominal, likely non-market or correcting figure) effective 2026-09-10. It is excluded as later-dated, but if that amendment is valid the R3282 comp would cease to reflect known positive market consideration.",
+    "R8675's 83,200 figure with size_unit 'acre' is internally implausible; if the unit is a data-entry error and the true unit is sf, the record would otherwise qualify at 4.94 mi and $125.00/sf. No corrective source was supplied, so it remains excluded.",
+    "R2134 has a recorded deed and closing statement but a null consideration; missing is treated as unknown, so no price per sf could be derived.",
+    "Duplicate resolution for entity CYPRESS-SAL-30526 (R6807 vs R8212) relied on evidence kind, since distance, date, size and consideration are identical; the choice of R6807 as the primary row does not change any reported fact.",
+    "No cap rate, tenancy, building quality, clear height, land area, buyer/seller identity or submarket detail was supplied, so no qualitative adjustment for building attributes or lease profile was possible; the $125.00/sf uniformity across most records suggests synthetic fixture pricing rather than observed market variance.",
+    "Distances are supplied as given values with no stated reference point or measurement method; ranking accepts them at face value.",
+    "R1278's $135.17/sf rests on a single executed amendment (U-R1278-1) that raises the base price by ~8%; no second source corroborates the amended figure."
+  ]
+}
+```

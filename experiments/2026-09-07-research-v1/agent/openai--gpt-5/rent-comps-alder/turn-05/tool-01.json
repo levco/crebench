@@ -1,0 +1,194 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"r\",\"expression\":\"0.025\"},{\"name\":\"sum3\",\"expression\":\"1 + (1+r) + (1+r)**2\"},{\"name\":\"sum4\",\"expression\":\"sum3 + (1+r)**3\"},{\"name\":\"sum5\",\"expression\":\"sum4 + (1+r)**4\"},{\"name\":\"face_1298\",\"expression\":\"21.0\"},{\"name\":\"E_annual\",\"expression\":\"6.25\"},{\"name\":\"E_month\",\"expression\":\"E_annual/12\"},{\"name\":\"total_face_1298\",\"expression\":\"face_1298*sum3\"},{\"name\":\"E_total_1298\",\"expression\":\"E_month*36\"},{\"name\":\"TI_1298\",\"expression\":\"12\"},{\"name\":\"net_total_1298\",\"expression\":\"total_face_1298 - E_total_1298 - TI_1298\"},{\"name\":\"eff_1298\",\"expression\":\"net_total_1298/36*12\"},{\"name\":\"face_9957\",\"expression\":\"1.87*12\"},{\"name\":\"total_face_9957\",\"expression\":\"face_9957*sum4\"},{\"name\":\"free_deduction_9957\",\"expression\":\"face_9957/12*4\"},{\"name\":\"TI_9957\",\"expression\":\"18\"},{\"name\":\"net_total_9957\",\"expression\":\"total_face_9957 - free_deduction_9957 - TI_9957\"},{\"name\":\"eff_9957\",\"expression\":\"net_total_9957/48*12\"},{\"name\":\"face_2302\",\"expression\":\"22.6\"},{\"name\":\"total_face_2302\",\"expression\":\"face_2302*sum5\"},{\"name\":\"free_deduction_2302\",\"expression\":\"face_2302/12*2\"},{\"name\":\"TI_2302\",\"expression\":\"18\"},{\"name\":\"net_total_2302\",\"expression\":\"total_face_2302 - free_deduction_2302 - TI_2302\"},{\"name\":\"eff_2302\",\"expression\":\"net_total_2302/60*12\"},{\"name\":\"face_6740\",\"expression\":\"2.01*12\"},{\"name\":\"total_face_6740\",\"expression\":\"face_6740*sum3\"},{\"name\":\"free_deduction_6740\",\"expression\":\"face_6740/12*3\"},{\"name\":\"E_total_6740\",\"expression\":\"E_month*36\"},{\"name\":\"TI_6740\",\"expression\":\"21\"},{\"name\":\"net_total_6740\",\"expression\":\"total_face_6740 - free_deduction_6740 - E_total_6740 - TI_6740\"},{\"name\":\"eff_6740\",\"expression\":\"net_total_6740/36*12\"},{\"name\":\"face_6049\",\"expression\":\"24.2\"},{\"name\":\"total_face_6049\",\"expression\":\"face_6049*sum4\"},{\"name\":\"TI_6049\",\"expression\":\"12\"},{\"name\":\"net_total_6049\",\"expression\":\"total_face_6049 - TI_6049\"},{\"name\":\"eff_6049\",\"expression\":\"net_total_6049/48*12\"}]}",
+  "call_id": "call_463ClyN4zn2hAzcuXTLCD9D2",
+  "arguments": {
+    "steps": [
+      {
+        "name": "r",
+        "expression": "0.025"
+      },
+      {
+        "name": "sum3",
+        "expression": "1 + (1+r) + (1+r)**2"
+      },
+      {
+        "name": "sum4",
+        "expression": "sum3 + (1+r)**3"
+      },
+      {
+        "name": "sum5",
+        "expression": "sum4 + (1+r)**4"
+      },
+      {
+        "name": "face_1298",
+        "expression": "21.0"
+      },
+      {
+        "name": "E_annual",
+        "expression": "6.25"
+      },
+      {
+        "name": "E_month",
+        "expression": "E_annual/12"
+      },
+      {
+        "name": "total_face_1298",
+        "expression": "face_1298*sum3"
+      },
+      {
+        "name": "E_total_1298",
+        "expression": "E_month*36"
+      },
+      {
+        "name": "TI_1298",
+        "expression": "12"
+      },
+      {
+        "name": "net_total_1298",
+        "expression": "total_face_1298 - E_total_1298 - TI_1298"
+      },
+      {
+        "name": "eff_1298",
+        "expression": "net_total_1298/36*12"
+      },
+      {
+        "name": "face_9957",
+        "expression": "1.87*12"
+      },
+      {
+        "name": "total_face_9957",
+        "expression": "face_9957*sum4"
+      },
+      {
+        "name": "free_deduction_9957",
+        "expression": "face_9957/12*4"
+      },
+      {
+        "name": "TI_9957",
+        "expression": "18"
+      },
+      {
+        "name": "net_total_9957",
+        "expression": "total_face_9957 - free_deduction_9957 - TI_9957"
+      },
+      {
+        "name": "eff_9957",
+        "expression": "net_total_9957/48*12"
+      },
+      {
+        "name": "face_2302",
+        "expression": "22.6"
+      },
+      {
+        "name": "total_face_2302",
+        "expression": "face_2302*sum5"
+      },
+      {
+        "name": "free_deduction_2302",
+        "expression": "face_2302/12*2"
+      },
+      {
+        "name": "TI_2302",
+        "expression": "18"
+      },
+      {
+        "name": "net_total_2302",
+        "expression": "total_face_2302 - free_deduction_2302 - TI_2302"
+      },
+      {
+        "name": "eff_2302",
+        "expression": "net_total_2302/60*12"
+      },
+      {
+        "name": "face_6740",
+        "expression": "2.01*12"
+      },
+      {
+        "name": "total_face_6740",
+        "expression": "face_6740*sum3"
+      },
+      {
+        "name": "free_deduction_6740",
+        "expression": "face_6740/12*3"
+      },
+      {
+        "name": "E_total_6740",
+        "expression": "E_month*36"
+      },
+      {
+        "name": "TI_6740",
+        "expression": "21"
+      },
+      {
+        "name": "net_total_6740",
+        "expression": "total_face_6740 - free_deduction_6740 - E_total_6740 - TI_6740"
+      },
+      {
+        "name": "eff_6740",
+        "expression": "net_total_6740/36*12"
+      },
+      {
+        "name": "face_6049",
+        "expression": "24.2"
+      },
+      {
+        "name": "total_face_6049",
+        "expression": "face_6049*sum4"
+      },
+      {
+        "name": "TI_6049",
+        "expression": "12"
+      },
+      {
+        "name": "net_total_6049",
+        "expression": "total_face_6049 - TI_6049"
+      },
+      {
+        "name": "eff_6049",
+        "expression": "net_total_6049/48*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "r": 0.025,
+      "sum3": 3.0756249999999996,
+      "sum4": 4.1525156249999995,
+      "sum5": 5.256328515624999,
+      "face_1298": 21.0,
+      "E_annual": 6.25,
+      "E_month": 0.5208333333333334,
+      "total_face_1298": 64.58812499999999,
+      "E_total_1298": 18.75,
+      "TI_1298": 12,
+      "net_total_1298": 33.83812499999999,
+      "eff_1298": 11.279374999999998,
+      "face_9957": 22.44,
+      "total_face_9957": 93.18245062499999,
+      "free_deduction_9957": 7.48,
+      "TI_9957": 18,
+      "net_total_9957": 67.70245062499998,
+      "eff_9957": 16.925612656249996,
+      "face_2302": 22.6,
+      "total_face_2302": 118.79302445312497,
+      "free_deduction_2302": 3.766666666666667,
+      "TI_2302": 18,
+      "net_total_2302": 97.0263577864583,
+      "eff_2302": 19.40527155729166,
+      "face_6740": 24.119999999999997,
+      "total_face_6740": 74.18407499999998,
+      "free_deduction_6740": 6.029999999999999,
+      "E_total_6740": 18.75,
+      "TI_6740": 21,
+      "net_total_6740": 28.404074999999978,
+      "eff_6740": 9.468024999999992,
+      "face_6049": 24.2,
+      "total_face_6049": 100.49087812499998,
+      "TI_6049": 12,
+      "net_total_6049": 88.49087812499998,
+      "eff_6049": 22.122719531249995
+    }
+  },
+  "status": "ok"
+}

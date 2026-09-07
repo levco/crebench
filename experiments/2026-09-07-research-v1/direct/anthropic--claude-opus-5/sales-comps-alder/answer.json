@@ -1,0 +1,252 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R5793",
+      "facts": {
+        "entity_id": "ALDER-SAL-26768",
+        "event_date": "2026-02-05",
+        "consideration_usd": 24000000.0,
+        "property_size": 64,
+        "price_per_unit": 375000.0
+      },
+      "source_ids": [
+        "S-R5793"
+      ],
+      "rationale": "Closed 2026-02-05 (in window), Charlotte multifamily, 0.80 mi, 64 units (size unit = unit), stabilized, single-asset, fee-simple, unrelated party, known positive USD consideration on recorded deed and closing statement. Primary record for entity ALDER-SAL-26768; duplicate R8631 (second source of same underlying record) suppressed."
+    },
+    {
+      "record_id": "R2721",
+      "facts": {
+        "entity_id": "ALDER-SAL-30580",
+        "event_date": "2026-03-06",
+        "consideration_usd": 27900000.0,
+        "property_size": 69,
+        "price_per_unit": 404347.83
+      },
+      "source_ids": [
+        "S-R2721",
+        "U-R2721-1"
+      ],
+      "rationale": "Closed 2026-03-06, 1.03 mi, 69 units, stabilized single-asset fee-simple unrelated sale. Executed amendment U-R2721-1 (published/effective 2026-08-20, on or before cutoff) overrides base consideration of USD 25,800 thousands to USD 27,900,000."
+    },
+    {
+      "record_id": "R1038",
+      "facts": {
+        "entity_id": "ALDER-SAL-50728",
+        "event_date": "2026-04-07",
+        "consideration_usd": 27600000.0,
+        "property_size": 74,
+        "price_per_unit": 372972.97
+      },
+      "source_ids": [
+        "S-R1038"
+      ],
+      "rationale": "Closed 2026-04-07, 1.26 mi, 74 units, stabilized single-asset fee-simple unrelated sale; USD 27.6 millions normalized to USD 27,600,000. Amendment U-R1038-2 is dated after the 2026-08-31 cutoff (published/effective 2026-09-10) and is therefore not applied."
+    },
+    {
+      "record_id": "R4976",
+      "facts": {
+        "entity_id": "ALDER-SAL-87412",
+        "event_date": "2026-05-08",
+        "consideration_usd": 29400000.0,
+        "property_size": 78,
+        "price_per_unit": 376923.08
+      },
+      "source_ids": [
+        "S-R4976"
+      ],
+      "rationale": "Closed 2026-05-08, 1.49 mi, 78 units, stabilized single-asset fee-simple unrelated sale with known positive consideration. U-R4976-3 is an unsigned draft and does not override the base extract."
+    },
+    {
+      "record_id": "R1363",
+      "facts": {
+        "entity_id": "ALDER-SAL-96959",
+        "event_date": "2026-06-09",
+        "consideration_usd": 31200000.0,
+        "property_size": 83,
+        "price_per_unit": 375903.61
+      },
+      "source_ids": [
+        "S-R1363"
+      ],
+      "rationale": "Closed 2026-06-09, 1.72 mi, 83 units, stabilized single-asset fee-simple unrelated sale; USD 31,200 thousands normalized to USD 31,200,000."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R9371",
+      "eligible": false,
+      "reason": "Asset type is Office, not Multifamily; outside scope.",
+      "source_ids": [
+        "S-R9371"
+      ]
+    },
+    {
+      "record_id": "R8904",
+      "eligible": false,
+      "reason": "Status is listing, not a closed sale.",
+      "source_ids": [
+        "S-R8904"
+      ]
+    },
+    {
+      "record_id": "R2375",
+      "eligible": false,
+      "reason": "Condition is redevelopment; not a stabilized qualifying sale.",
+      "source_ids": [
+        "S-R2375"
+      ]
+    },
+    {
+      "record_id": "R7563",
+      "eligible": false,
+      "reason": "Distance 18.6 miles exceeds the 8-mile radius.",
+      "source_ids": [
+        "S-R7563"
+      ]
+    },
+    {
+      "record_id": "R8631",
+      "eligible": true,
+      "reason": "Meets all business rules (closed 2026-02-05, 0.80 mi, 64 units, stabilized, single-asset, fee-simple, unrelated, USD 24,000,000), but it is a duplicate of entity ALDER-SAL-26768 already represented by R5793; evidence_kind is 'second_source_same_underlying_record', so it is suppressed in deduplication and adds no second slot.",
+      "source_ids": [
+        "S-R8631",
+        "S-R5793"
+      ]
+    },
+    {
+      "record_id": "R1527",
+      "eligible": true,
+      "reason": "Qualifies on all rules (closed 2026-02-11, 2.18 mi, 93 units, USD 34,800,000; price per unit 374,193.55) but ranks 7th by distance and falls outside the top five.",
+      "source_ids": [
+        "S-R1527"
+      ]
+    },
+    {
+      "record_id": "R5793",
+      "eligible": true,
+      "reason": "Qualifies on all rules; selected (rank 1, 0.80 mi). Primary record for entity ALDER-SAL-26768 (duplicate: R8631).",
+      "source_ids": [
+        "S-R5793"
+      ]
+    },
+    {
+      "record_id": "R1267",
+      "eligible": false,
+      "reason": "related_party = true; not an unrelated-party transaction.",
+      "source_ids": [
+        "S-R1267"
+      ]
+    },
+    {
+      "record_id": "R9650",
+      "eligible": true,
+      "reason": "Qualifies on all rules (closed 2026-07-10, 1.95 mi, 88 units, USD 33,000,000; price per unit 375,000) but ranks 6th by distance and falls outside the top five.",
+      "source_ids": [
+        "S-R9650"
+      ]
+    },
+    {
+      "record_id": "R2721",
+      "eligible": true,
+      "reason": "Qualifies on all rules; selected (rank 2, 1.03 mi). Consideration updated by executed amendment U-R2721-1 effective 2026-08-20 (on or before cutoff).",
+      "source_ids": [
+        "S-R2721",
+        "U-R2721-1"
+      ]
+    },
+    {
+      "record_id": "R3130",
+      "eligible": false,
+      "reason": "168 units is outside the 52\u2013116 unit size range.",
+      "source_ids": [
+        "S-R3130"
+      ]
+    },
+    {
+      "record_id": "R1038",
+      "eligible": true,
+      "reason": "Qualifies on all rules; selected (rank 3, 1.26 mi). Later-dated amendment U-R1038-2 (effective 2026-09-10, after cutoff) not applied.",
+      "source_ids": [
+        "S-R1038"
+      ]
+    },
+    {
+      "record_id": "R3116",
+      "eligible": false,
+      "reason": "Consideration is null (unknown), so known positive consideration cannot be established; price per unit not derivable.",
+      "source_ids": [
+        "S-R3116"
+      ]
+    },
+    {
+      "record_id": "R5368",
+      "eligible": false,
+      "reason": "Closing date 2024-02-10 is before the 2025-09-01 window start.",
+      "source_ids": [
+        "S-R5368"
+      ]
+    },
+    {
+      "record_id": "R4976",
+      "eligible": true,
+      "reason": "Qualifies on all rules; selected (rank 4, 1.49 mi). U-R4976-3 is an unsigned draft and does not override base consideration.",
+      "source_ids": [
+        "S-R4976",
+        "U-R4976-3"
+      ]
+    },
+    {
+      "record_id": "R1363",
+      "eligible": true,
+      "reason": "Qualifies on all rules; selected (rank 5, 1.72 mi).",
+      "source_ids": [
+        "S-R1363"
+      ]
+    },
+    {
+      "record_id": "R8928",
+      "eligible": false,
+      "reason": "Interest conveyed is a minority equity interest, not fee simple.",
+      "source_ids": [
+        "S-R8928"
+      ]
+    },
+    {
+      "record_id": "R9770",
+      "eligible": false,
+      "reason": "Sole supporting evidence published 2026-09-03, after the 2026-08-31 cutoff; cannot be used.",
+      "source_ids": [
+        "S-R9770"
+      ]
+    },
+    {
+      "record_id": "R5127",
+      "eligible": false,
+      "reason": "Size unit is acre, not unit; incorrect size unit for a per-unit multifamily comp.",
+      "source_ids": [
+        "S-R5127"
+      ]
+    },
+    {
+      "record_id": "R5520",
+      "eligible": false,
+      "reason": "Scope is portfolio_unallocated; unallocated portfolio price is not a qualifying single-asset sale.",
+      "source_ids": [
+        "S-R5520"
+      ]
+    }
+  ],
+  "summary": "Seven unique base records satisfy every screen (Charlotte multifamily, closed 2025-09-01 to 2026-08-31, within 8 miles, 52\u2013116 units with unit size measure, stabilized, single-asset, fee-simple, unrelated party, known positive consideration), plus one suppressed duplicate (R8631 duplicating R5793 for entity ALDER-SAL-26768). Ranked by distance ascending then most recent closing, the five selected comps are R5793 (0.80 mi, $375,000/unit), R2721 (1.03 mi, $404,347.83/unit after executed amendment U-R2721-1), R1038 (1.26 mi, $372,972.97/unit), R4976 (1.49 mi, $376,923.08/unit) and R1363 (1.72 mi, $375,903.61/unit). Eligible but not selected due to the five-row cap: R9650 (1.95 mi) and R1527 (2.18 mi). Overrides applied: only U-R2721-1 (executed, effective 2026-08-20); U-R4976-3 was rejected as an unsigned draft and U-R1038-2 as later-dated (2026-09-10) evidence. Considerations stated in USD thousands/millions were normalized to USD. No file artifacts were produced under this direct API control; the comp-grid facts and citations are fully contained in this JSON response.",
+  "limitations": [
+    "R2721's price per unit ($404,347.83) is a clear outlier versus the ~$373k\u2013$377k cluster; the uplift comes solely from executed amendment U-R2721-1 and no other corroborating source for the revised price was supplied.",
+    "R1038's controlling base price of $27,600,000 is retained because amendment U-R1038-2 (a $1 consideration, effective 2026-09-10) postdates the cutoff; if that amendment were later deemed effective within scope, the record would likely fail the positive/market-consideration test and R9650 would move into the fifth slot.",
+    "R9770 may be a genuine qualifying sale but its only evidence was published 2026-09-03, after the cutoff, so it is excluded on evidence timing rather than substance.",
+    "R3116 could qualify if consideration were disclosed; the value is missing (unknown, not zero) and price per unit is not derivable.",
+    "R5127 is excluded on the size unit being acres; whether the 83 figure represents units is not evidenced.",
+    "Distances, unit counts, stabilization status and related-party flags are taken as stated in the extracts and were not independently verified; no submarket, vintage, occupancy or income-quality adjustments were possible from the fields supplied.",
+    "R8631 vs. R5793 were treated as one underlying transaction based on identical entity_id, date, size and price; if they were in fact separate assets, one additional slot would be available.",
+    "No SPV-to-parent mappings were present in the packet, so the single-sponsor-slot rule had no additional effect beyond the R8631/R5793 duplicate suppression.",
+    "Artifact generation (XLSX comp grid) is outside this direct API control; no workbook or CSV was created or delivered."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"m0\",\"expression\":\"1.87\"},{\"name\":\"p\",\"expression\":\"0.025\"},{\"name\":\"sum_m5_12\",\"expression\":\"8*m0\"},{\"name\":\"sum_m13_24\",\"expression\":\"12*m0*(1+p)\"},{\"name\":\"sum_m25_36\",\"expression\":\"12*m0*((1+p)**2)\"},{\"name\":\"sum_m37_48\",\"expression\":\"12*m0*((1+p)**3)\"},{\"name\":\"total_face\",\"expression\":\"sum_m5_12+sum_m13_24+sum_m25_36+sum_m37_48\"},{\"name\":\"TI\",\"expression\":\"18\"},{\"name\":\"term\",\"expression\":\"48\"},{\"name\":\"net_total\",\"expression\":\"total_face - TI\"},{\"name\":\"annual_effective\",\"expression\":\"(net_total/term)*12\"},{\"name\":\"annual_face_rent_psf\",\"expression\":\"m0*12\"}]}",
+  "call_id": "call_AwoIwCexH1wdIoVx8ogRAebp",
+  "arguments": {
+    "steps": [
+      {
+        "name": "m0",
+        "expression": "1.87"
+      },
+      {
+        "name": "p",
+        "expression": "0.025"
+      },
+      {
+        "name": "sum_m5_12",
+        "expression": "8*m0"
+      },
+      {
+        "name": "sum_m13_24",
+        "expression": "12*m0*(1+p)"
+      },
+      {
+        "name": "sum_m25_36",
+        "expression": "12*m0*((1+p)**2)"
+      },
+      {
+        "name": "sum_m37_48",
+        "expression": "12*m0*((1+p)**3)"
+      },
+      {
+        "name": "total_face",
+        "expression": "sum_m5_12+sum_m13_24+sum_m25_36+sum_m37_48"
+      },
+      {
+        "name": "TI",
+        "expression": "18"
+      },
+      {
+        "name": "term",
+        "expression": "48"
+      },
+      {
+        "name": "net_total",
+        "expression": "total_face - TI"
+      },
+      {
+        "name": "annual_effective",
+        "expression": "(net_total/term)*12"
+      },
+      {
+        "name": "annual_face_rent_psf",
+        "expression": "m0*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "m0": 1.87,
+      "p": 0.025,
+      "sum_m5_12": 14.96,
+      "sum_m13_24": 23.000999999999998,
+      "sum_m25_36": 23.576024999999998,
+      "sum_m37_48": 24.165425624999994,
+      "total_face": 85.702450625,
+      "TI": 18,
+      "term": 48,
+      "net_total": 67.702450625,
+      "annual_effective": 16.92561265625,
+      "annual_face_rent_psf": 22.44
+    }
+  },
+  "status": "ok"
+}

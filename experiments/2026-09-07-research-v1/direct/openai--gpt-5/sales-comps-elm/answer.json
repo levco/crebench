@@ -1,0 +1,221 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R4105",
+      "facts": {
+        "entity_id": "ELM-SAL-91902",
+        "event_date": "2026-02-05",
+        "consideration_usd": 14400000.0,
+        "property_size": 36000,
+        "price_per_unit": 400.0
+      },
+      "source_ids": [
+        "S-R4105"
+      ],
+      "rationale": "Qualifies: stabilized retail, single-asset, fee-simple, unrelated-party; 0.8 miles; 36,000 sf; closed within window; known positive USD consideration."
+    },
+    {
+      "record_id": "R8422",
+      "facts": {
+        "entity_id": "ELM-SAL-64090",
+        "event_date": "2026-03-06",
+        "consideration_usd": 16740000.0,
+        "property_size": 38700,
+        "price_per_unit": 432.56
+      },
+      "source_ids": [
+        "S-R8422",
+        "U-R8422-1"
+      ],
+      "rationale": "Qualifies after executed amendment updating consideration; stabilized retail, single-asset, fee-simple, unrelated-party; 1.03 miles; 38,700 sf; within window."
+    },
+    {
+      "record_id": "R3397",
+      "facts": {
+        "entity_id": "ELM-SAL-96210",
+        "event_date": "2026-04-07",
+        "consideration_usd": 16560000.0,
+        "property_size": 41400,
+        "price_per_unit": 400.0
+      },
+      "source_ids": [
+        "S-R3397"
+      ],
+      "rationale": "Qualifies: stabilized retail, single-asset, fee-simple, unrelated-party; 1.26 miles; 41,400 sf; within window; later amendment effective after cutoff ignored."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8129",
+      "eligible": false,
+      "reason": "Excluded: condition is redevelopment (not stabilized).",
+      "source_ids": [
+        "S-R8129"
+      ]
+    },
+    {
+      "record_id": "R7280",
+      "eligible": false,
+      "reason": "Excluded: asset_type changed to Office by executed amendment (out of Retail scope).",
+      "source_ids": [
+        "S-R7280",
+        "U-R7280-6"
+      ]
+    },
+    {
+      "record_id": "R8422",
+      "eligible": true,
+      "reason": "Eligible: stabilized retail, single-asset, fee-simple, unrelated-party; consideration updated by executed amendment.",
+      "source_ids": [
+        "S-R8422",
+        "U-R8422-1"
+      ]
+    },
+    {
+      "record_id": "R7302",
+      "eligible": false,
+      "reason": "Excluded: asset_type changed to Office by executed amendment (out of Retail scope).",
+      "source_ids": [
+        "S-R7302",
+        "U-R7302-5"
+      ]
+    },
+    {
+      "record_id": "R4105",
+      "eligible": true,
+      "reason": "Eligible: stabilized retail, single-asset, fee-simple, unrelated-party; note duplicate record R3577 (same entity).",
+      "source_ids": [
+        "S-R4105"
+      ]
+    },
+    {
+      "record_id": "R3794",
+      "eligible": false,
+      "reason": "Excluded: event_date outside window (before 2025-09-01).",
+      "source_ids": [
+        "S-R3794"
+      ]
+    },
+    {
+      "record_id": "R3397",
+      "eligible": true,
+      "reason": "Eligible: stabilized retail, single-asset, fee-simple, unrelated-party; later amendment after cutoff not applied.",
+      "source_ids": [
+        "S-R3397"
+      ]
+    },
+    {
+      "record_id": "R2952",
+      "eligible": false,
+      "reason": "Excluded: distance 18.6 miles exceeds 8-mile radius.",
+      "source_ids": [
+        "S-R2952"
+      ]
+    },
+    {
+      "record_id": "R3577",
+      "eligible": true,
+      "reason": "Eligible before deduplication, but duplicate of R4105 (same entity); do not double-count.",
+      "source_ids": [
+        "S-R3577"
+      ]
+    },
+    {
+      "record_id": "R3742",
+      "eligible": false,
+      "reason": "Excluded: asset_type changed to Office by executed amendment (out of Retail scope).",
+      "source_ids": [
+        "S-R3742",
+        "U-R3742-7"
+      ]
+    },
+    {
+      "record_id": "R8218",
+      "eligible": false,
+      "reason": "Excluded: consideration unknown (null).",
+      "source_ids": [
+        "S-R8218"
+      ]
+    },
+    {
+      "record_id": "R5078",
+      "eligible": false,
+      "reason": "Excluded: asset_type Office (out of Retail scope).",
+      "source_ids": [
+        "S-R5078"
+      ]
+    },
+    {
+      "record_id": "R4512",
+      "eligible": false,
+      "reason": "Excluded: size unit is 'acre' (must be square feet for size filter).",
+      "source_ids": [
+        "S-R4512"
+      ]
+    },
+    {
+      "record_id": "R4218",
+      "eligible": false,
+      "reason": "Excluded: property_size 94,500 sf outside 29,250\u201365,250 sf range.",
+      "source_ids": [
+        "S-R4218"
+      ]
+    },
+    {
+      "record_id": "R6058",
+      "eligible": false,
+      "reason": "Excluded: minority_equity_interest (not fee-simple).",
+      "source_ids": [
+        "S-R6058"
+      ]
+    },
+    {
+      "record_id": "R2453",
+      "eligible": false,
+      "reason": "Excluded: source published after cutoff (2026-09-03 > 2026-08-31); not usable as of the evaluation date.",
+      "source_ids": [
+        "S-R2453"
+      ]
+    },
+    {
+      "record_id": "R7069",
+      "eligible": false,
+      "reason": "Excluded: asset_type changed to Office by executed amendment (out of Retail scope).",
+      "source_ids": [
+        "S-R7069",
+        "U-R7069-4"
+      ]
+    },
+    {
+      "record_id": "R8810",
+      "eligible": false,
+      "reason": "Excluded: related-party transaction.",
+      "source_ids": [
+        "S-R8810"
+      ]
+    },
+    {
+      "record_id": "R4592",
+      "eligible": false,
+      "reason": "Excluded: portfolio_unallocated price (not a qualifying single-asset comp).",
+      "source_ids": [
+        "S-R4592"
+      ]
+    },
+    {
+      "record_id": "R6121",
+      "eligible": false,
+      "reason": "Excluded: status is listing (not a closed sale).",
+      "source_ids": [
+        "S-R6121"
+      ]
+    }
+  ],
+  "summary": "Three qualifying retail sale comps were found within 8 miles and between 29,250\u201365,250 sf during 2025-09-01 to 2026-08-31: R4105 (0.8 mi; $14.40M; 36,000 sf; $400/sf), R8422 with executed pricing amendment (1.03 mi; $16.74M; 38,700 sf; ~$432.56/sf), and R3397 (1.26 mi; $16.56M; 41,400 sf; $400/sf). Other candidates were excluded for Office reclassification, redevelopment, minority interest, listing/portfolio status, related-party, distance/size/unit issues, missing consideration, outside the time window, or being published after the cutoff.",
+  "limitations": [
+    "Only sources published and effective on or before 2026-08-31 were used; later amendments (e.g., U-R3397-2) were ignored and could change comps after the as-of date.",
+    "Distance and size reliance is per provided records; no external verification performed.",
+    "Price per sf rounded to two decimals; minor rounding differences may exist.",
+    "Duplicates were identified by matching entity_id; if additional undisclosed duplicates exist, they may affect counts."
+  ]
+}

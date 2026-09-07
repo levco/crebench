@@ -1,0 +1,636 @@
+{
+  "case_id": "sponsor-leads-dogwood",
+  "task": "sponsor_leads",
+  "target_count": 6,
+  "available_unique": 6,
+  "returned_count": 7,
+  "eligible_count": 6,
+  "verified_count": 5,
+  "eligible_yield": 1.0,
+  "verified_yield": 0.8333333333333334,
+  "selection_precision": 0.8571428571428571,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 47,
+    "total": 49
+  },
+  "evidence_accuracy": {
+    "passed": 7,
+    "total": 7
+  },
+  "candidate_accuracy": {
+    "passed": 18,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 7,
+    "total": 8
+  },
+  "ineligible_rejection": {
+    "passed": 11,
+    "total": 12
+  },
+  "ranking_pair_agreement": {
+    "passed": 15,
+    "total": 15
+  },
+  "material_errors": [
+    {
+      "record_id": "R4246",
+      "type": "ineligible_selection",
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R1890",
+      "type": "material_field_error",
+      "field": "transaction_size_usd",
+      "actual": 40600000,
+      "expected": 28000000
+    },
+    {
+      "record_id": "R1890",
+      "type": "material_field_error",
+      "field": "event_date",
+      "actual": "2026-02-11",
+      "expected": "2026-02-05"
+    }
+  ],
+  "selected_checks": [
+    {
+      "record_id": "R4246",
+      "eligible": false,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-75075",
+          "expected": "DOGWOOD-SPO-75075",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Grove 18 Capital",
+          "expected": "Dogwood Grove 18 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 34300000,
+          "expected": 34300000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-07-22",
+          "expected": "2026-07-22",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Morgan Dogwood18",
+          "expected": "Morgan Dogwood18",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person18@sponsor-leads-dogwood.example",
+          "expected": "person18@sponsor-leads-dogwood.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4246"
+      ],
+      "reported_sources": [
+        "S-R4246"
+      ]
+    },
+    {
+      "record_id": "R2197",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-12301",
+          "expected": "DOGWOOD-SPO-12301",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Grove 6 Capital",
+          "expected": "Dogwood Grove 6 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 38500000,
+          "expected": 38500000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-07-10",
+          "expected": "2026-07-10",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Morgan Dogwood6",
+          "expected": "Morgan Dogwood6",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person6@sponsor-leads-dogwood.example",
+          "expected": "person6@sponsor-leads-dogwood.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R2197"
+      ],
+      "reported_sources": [
+        "S-R2197"
+      ]
+    },
+    {
+      "record_id": "R9831",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-79419",
+          "expected": "DOGWOOD-SPO-79419",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Square 5 Capital",
+          "expected": "Dogwood Square 5 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 36400000,
+          "expected": 36400000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-06-09",
+          "expected": "2026-06-09",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Dogwood5",
+          "expected": "Alex Dogwood5",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R9831"
+      ],
+      "reported_sources": [
+        "S-R9831"
+      ]
+    },
+    {
+      "record_id": "R3432",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-28763",
+          "expected": "DOGWOOD-SPO-28763",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Square 4 Capital",
+          "expected": "Dogwood Square 4 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 34300000,
+          "expected": 34300000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-05-08",
+          "expected": "2026-05-08",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Taylor Dogwood4",
+          "expected": "Taylor Dogwood4",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person4@sponsor-leads-dogwood.example",
+          "expected": "person4@sponsor-leads-dogwood.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3432"
+      ],
+      "reported_sources": [
+        "S-R3432"
+      ]
+    },
+    {
+      "record_id": "R1761",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-33898",
+          "expected": "DOGWOOD-SPO-33898",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Point 3 Capital",
+          "expected": "Dogwood Point 3 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 32200000,
+          "expected": 32200000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-04-07",
+          "expected": "2026-04-07",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Jordan Dogwood3",
+          "expected": "Jordan Dogwood3",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person3@sponsor-leads-dogwood.example",
+          "expected": "person3@sponsor-leads-dogwood.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R1761"
+      ],
+      "reported_sources": [
+        "S-R1761"
+      ]
+    },
+    {
+      "record_id": "R9429",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-39382",
+          "expected": "DOGWOOD-SPO-39382",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Crossing 2 Capital",
+          "expected": "Dogwood Crossing 2 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 30100000,
+          "expected": 30100000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-03-06",
+          "expected": "2026-03-06",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Drew Dogwood",
+          "expected": "Drew Dogwood",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "new.cfo@sponsor-leads-dogwood.example",
+          "expected": "new.cfo@sponsor-leads-dogwood.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R9429",
+        "U-R9429-1"
+      ],
+      "reported_sources": [
+        "S-R9429",
+        "U-R9429-1"
+      ]
+    },
+    {
+      "record_id": "R1890",
+      "eligible": true,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "DOGWOOD-SPO-18376",
+          "expected": "DOGWOOD-SPO-18376",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Dogwood Park 1 Capital",
+          "expected": "Dogwood Park 1 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 40600000,
+          "expected": 28000000,
+          "passed": false
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-02-11",
+          "expected": "2026-02-05",
+          "passed": false
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Dogwood1",
+          "expected": "Alex Dogwood1",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person1@sponsor-leads-dogwood.example",
+          "expected": "person1@sponsor-leads-dogwood.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R1890"
+      ],
+      "reported_sources": [
+        "S-R1890",
+        "S-R1101",
+        "S-R6695"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R9429",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R6695",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R1218",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    },
+    {
+      "record_id": "R3088",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R1890",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3718",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not a closed acquisition"
+      ]
+    },
+    {
+      "record_id": "R3432",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R1135",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Event outside lookback"
+      ]
+    },
+    {
+      "record_id": "R9543",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R3924",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Amount is not a single-asset purchase",
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R4246",
+      "actual": true,
+      "expected": false,
+      "passed": false,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R4968",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R8500",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale contact verification"
+      ]
+    },
+    {
+      "record_id": "R1658",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R1101",
+      "actual": false,
+      "expected": true,
+      "passed": false,
+      "reasons": []
+    },
+    {
+      "record_id": "R1761",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2197",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R5255",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R9831",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3779",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ]
+}

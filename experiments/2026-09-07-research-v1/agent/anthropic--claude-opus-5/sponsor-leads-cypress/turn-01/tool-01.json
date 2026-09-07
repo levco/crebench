@@ -1,0 +1,112 @@
+{
+  "name": "export_csv",
+  "arguments_raw": "{\"headers\":[\"rank\",\"record_id\",\"entity_id\",\"firm_name\",\"asset_type\",\"market\",\"transaction_size_usd\",\"event_date\",\"contact_name\",\"contact_role\",\"contact_email\",\"source_ids\"],\"rows\":[[1,\"R9249\",\"CYPRESS-SPO-30009\",\"Cypress Square 6 Capital\",\"Industrial\",\"Columbus\",11000000,\"2026-07-10\",\"Morgan Cypress6\",\"Head of Acquisitions\",\"person6@sponsor-leads-cypress.example\",\"S-R9249\"],[2,\"R3919\",\"CYPRESS-SPO-21730\",\"Cypress Park 5 Capital\",\"Industrial\",\"Columbus\",10400000,\"2026-06-09\",\"Alex Cypress5\",\"CFO\",\"null\",\"S-R3919\"],[3,\"R2909\",\"CYPRESS-SPO-81408\",\"Cypress Crossing 4 Capital\",\"Industrial\",\"Columbus\",9800000,\"2026-05-08\",\"Taylor Cypress4\",\"Head of Acquisitions\",\"person4@sponsor-leads-cypress.example\",\"S-R2909 (U-R2909-3 unsigned draft not applied)\"],[4,\"R4338\",\"CYPRESS-SPO-51531\",\"Cypress Square 3 Capital\",\"Industrial\",\"Columbus\",9200000,\"2026-04-07\",\"Jordan Cypress3\",\"CFO\",\"person3@sponsor-leads-cypress.example\",\"S-R4338 (U-R4338-2 dated after cutoff, not applied)\"],[5,\"R9956\",\"CYPRESS-SPO-38583\",\"Cypress Point 2 Capital\",\"Industrial\",\"Columbus\",8600000,\"2026-03-06\",\"Drew Cypress\",\"CFO\",\"new.cfo@sponsor-leads-cypress.example\",\"S-R9956; U-R9956-1\"],[6,\"R9815\",\"CYPRESS-SPO-90059\",\"Cypress Crossing 1 Capital\",\"Industrial\",\"Columbus\",8000000,\"2026-02-05\",\"Alex Cypress1\",\"CFO\",\"person1@sponsor-leads-cypress.example\",\"S-R9815 (dupes: S-R4738; SPV S-R2141)\"]]}",
+  "call_id": "toolu_01HQF45fVqTkvjAC6WbcKydv",
+  "arguments": {
+    "headers": [
+      "rank",
+      "record_id",
+      "entity_id",
+      "firm_name",
+      "asset_type",
+      "market",
+      "transaction_size_usd",
+      "event_date",
+      "contact_name",
+      "contact_role",
+      "contact_email",
+      "source_ids"
+    ],
+    "rows": [
+      [
+        1,
+        "R9249",
+        "CYPRESS-SPO-30009",
+        "Cypress Square 6 Capital",
+        "Industrial",
+        "Columbus",
+        11000000,
+        "2026-07-10",
+        "Morgan Cypress6",
+        "Head of Acquisitions",
+        "person6@sponsor-leads-cypress.example",
+        "S-R9249"
+      ],
+      [
+        2,
+        "R3919",
+        "CYPRESS-SPO-21730",
+        "Cypress Park 5 Capital",
+        "Industrial",
+        "Columbus",
+        10400000,
+        "2026-06-09",
+        "Alex Cypress5",
+        "CFO",
+        "null",
+        "S-R3919"
+      ],
+      [
+        3,
+        "R2909",
+        "CYPRESS-SPO-81408",
+        "Cypress Crossing 4 Capital",
+        "Industrial",
+        "Columbus",
+        9800000,
+        "2026-05-08",
+        "Taylor Cypress4",
+        "Head of Acquisitions",
+        "person4@sponsor-leads-cypress.example",
+        "S-R2909 (U-R2909-3 unsigned draft not applied)"
+      ],
+      [
+        4,
+        "R4338",
+        "CYPRESS-SPO-51531",
+        "Cypress Square 3 Capital",
+        "Industrial",
+        "Columbus",
+        9200000,
+        "2026-04-07",
+        "Jordan Cypress3",
+        "CFO",
+        "person3@sponsor-leads-cypress.example",
+        "S-R4338 (U-R4338-2 dated after cutoff, not applied)"
+      ],
+      [
+        5,
+        "R9956",
+        "CYPRESS-SPO-38583",
+        "Cypress Point 2 Capital",
+        "Industrial",
+        "Columbus",
+        8600000,
+        "2026-03-06",
+        "Drew Cypress",
+        "CFO",
+        "new.cfo@sponsor-leads-cypress.example",
+        "S-R9956; U-R9956-1"
+      ],
+      [
+        6,
+        "R9815",
+        "CYPRESS-SPO-90059",
+        "Cypress Crossing 1 Capital",
+        "Industrial",
+        "Columbus",
+        8000000,
+        "2026-02-05",
+        "Alex Cypress1",
+        "CFO",
+        "person1@sponsor-leads-cypress.example",
+        "S-R9815 (dupes: S-R4738; SPV S-R2141)"
+      ]
+    ]
+  },
+  "result": {
+    "created": "artifacts/prospects-v1.csv",
+    "rows": 6
+  },
+  "status": "ok"
+}

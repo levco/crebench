@@ -1,0 +1,247 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R2732",
+      "facts": {
+        "entity_id": "CYPRESS-REN-54094",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.279375,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R2732"
+      ],
+      "rationale": "Executed gross lease within 1 mile and date window; all required economics present. Selected by nearest-distance ranking; computed per client rent convention."
+    },
+    {
+      "record_id": "R7377",
+      "facts": {
+        "entity_id": "CYPRESS-REN-75613",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.92561265625,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R7377",
+        "U-R7377-1"
+      ],
+      "rationale": "Executed NNN lease; executed amendment effective 2026-08-20 controls (free_months=4, TI=18). Within 8 miles and window; selected by distance."
+    },
+    {
+      "record_id": "R7850",
+      "facts": {
+        "entity_id": "CYPRESS-REN-73837",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.405271557291663,
+        "term_months": 60
+      },
+      "source_ids": [
+        "S-R7850"
+      ],
+      "rationale": "Executed NNN lease within 8 miles and window; no controlling updates before cutoff. Selected by distance."
+    },
+    {
+      "record_id": "R9286",
+      "facts": {
+        "entity_id": "CYPRESS-REN-55027",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.468024999999992,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R9286"
+      ],
+      "rationale": "Executed gross lease with stated expenses, free rent and TI. Unsigned draft update ignored. Selected by distance."
+    },
+    {
+      "record_id": "R9636",
+      "facts": {
+        "entity_id": "CYPRESS-REN-82731",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.122719531249995,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R9636"
+      ],
+      "rationale": "Executed NNN lease within 2 miles and window; selected by distance."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R2670",
+      "eligible": true,
+      "reason": "Qualifies: executed Industrial lease within 8 miles and window; positive rent, known term, free months and TI present; gross expenses provided. Not selected due to top-5 by distance.",
+      "source_ids": [
+        "S-R2670"
+      ]
+    },
+    {
+      "record_id": "R5936",
+      "eligible": false,
+      "reason": "Ineligible: term_months is null (required).",
+      "source_ids": [
+        "S-R5936"
+      ]
+    },
+    {
+      "record_id": "R5587",
+      "eligible": false,
+      "reason": "Ineligible: TI allowance missing (required for NNN).",
+      "source_ids": [
+        "S-R5587"
+      ]
+    },
+    {
+      "record_id": "R3881",
+      "eligible": false,
+      "reason": "Ineligible: status asking (not executed).",
+      "source_ids": [
+        "S-R3881"
+      ]
+    },
+    {
+      "record_id": "R5958",
+      "eligible": true,
+      "reason": "Qualifies before deduplication but duplicate of R2732 (same underlying entity CYPRESS-REN-54094); not selected for shortlist.",
+      "source_ids": [
+        "S-R5958"
+      ]
+    },
+    {
+      "record_id": "R8711",
+      "eligible": false,
+      "reason": "Ineligible: rent_quote missing (required).",
+      "source_ids": [
+        "S-R8711"
+      ]
+    },
+    {
+      "record_id": "R7377",
+      "eligible": true,
+      "reason": "Qualifies: executed; executed amendment U-R7377-1 controls (free_months=4, TI=18). Within 8 miles and window.",
+      "source_ids": [
+        "S-R7377",
+        "U-R7377-1"
+      ]
+    },
+    {
+      "record_id": "R2921",
+      "eligible": false,
+      "reason": "Ineligible: event_date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.",
+      "source_ids": [
+        "S-R2921"
+      ]
+    },
+    {
+      "record_id": "R5588",
+      "eligible": false,
+      "reason": "Ineligible: rent_quote is zero (must be positive).",
+      "source_ids": [
+        "S-R5588"
+      ]
+    },
+    {
+      "record_id": "R3746",
+      "eligible": false,
+      "reason": "Ineligible: evidence published after cutoff (published_at 2026-09-03 > 2026-08-31), despite executed status.",
+      "source_ids": [
+        "S-R3746"
+      ]
+    },
+    {
+      "record_id": "R7850",
+      "eligible": true,
+      "reason": "Qualifies: executed within radius and window. Later amendment U-R7850-2 is after cutoff and ignored. Not selected due to top-5 by distance.",
+      "source_ids": [
+        "S-R7850"
+      ]
+    },
+    {
+      "record_id": "R9636",
+      "eligible": true,
+      "reason": "Qualifies: executed NNN lease within radius and window.",
+      "source_ids": [
+        "S-R9636"
+      ]
+    },
+    {
+      "record_id": "R2732",
+      "eligible": true,
+      "reason": "Qualifies: executed gross lease with required terms and expenses; selected for shortlist.",
+      "source_ids": [
+        "S-R2732"
+      ]
+    },
+    {
+      "record_id": "R9286",
+      "eligible": true,
+      "reason": "Qualifies: executed gross lease; unsigned draft update U-R9286-3 ignored. Selected for shortlist.",
+      "source_ids": [
+        "S-R9286"
+      ]
+    },
+    {
+      "record_id": "R1369",
+      "eligible": false,
+      "reason": "Ineligible: gross lease missing annual_expenses_psf (required).",
+      "source_ids": [
+        "S-R1369"
+      ]
+    },
+    {
+      "record_id": "R7843",
+      "eligible": false,
+      "reason": "Ineligible: free_months is null (required).",
+      "source_ids": [
+        "S-R7843"
+      ]
+    },
+    {
+      "record_id": "R3375",
+      "eligible": false,
+      "reason": "Ineligible: asset type Office; scope limited to Industrial.",
+      "source_ids": [
+        "S-R3375"
+      ]
+    },
+    {
+      "record_id": "R1188",
+      "eligible": true,
+      "reason": "Qualifies: executed NNN lease within radius and window. Not selected due to top-5 by distance.",
+      "source_ids": [
+        "S-R1188"
+      ]
+    },
+    {
+      "record_id": "R7637",
+      "eligible": false,
+      "reason": "Ineligible: status unsigned_proposal (not executed).",
+      "source_ids": [
+        "S-R7637"
+      ]
+    },
+    {
+      "record_id": "R1207",
+      "eligible": false,
+      "reason": "Ineligible: distance 18.6 miles exceeds 8-mile radius.",
+      "source_ids": [
+        "S-R1207"
+      ]
+    }
+  ],
+  "summary": "Selected 5 executed Industrial rent comps in Columbus dated between 2026-02-05 and 2026-06-09 and within 1.72 miles. Effective net rents (undiscounted, per client convention) range from $9.468 to $22.123 per sf per year. Two additional executed leases qualified but were not included due to the top-5-by-distance rule. One executed lease (R3746) was excluded because its evidence was published after the 2026-08-31 cutoff. A comp-grid XLSX with citations has been created (artifacts/underwriting-v2.xlsx).",
+  "limitations": [
+    "Undiscounted rent-only convention used; no present-value or downtime/leasing costs beyond free rent and TI.",
+    "Free months were assumed to occur at lease commencement; none of the selected comps had free periods long enough to span an annual escalation step.",
+    "Gross expense deductions were treated as flat per year with no escalation, per instructions.",
+    "Some records lacked required fields (term, TI, gross expenses) and could not be evaluated.",
+    "Duplicate handling relied on shared entity_id to identify the same underlying lease.",
+    "Executed amendments or drafts published/effective after the cutoff were not applied."
+  ]
+}

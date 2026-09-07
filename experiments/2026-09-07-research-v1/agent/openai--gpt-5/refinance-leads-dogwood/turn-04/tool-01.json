@@ -1,0 +1,283 @@
+{
+  "name": "submit_research",
+  "arguments_raw": "{\"shortlist\":[{\"record_id\":\"R3529\",\"facts\":{\"entity_id\":\"DOGWOOD-REF-43781\",\"owner_entity_id\":\"O-DOGWOOD-REF-43781\",\"maturity_date\":\"2027-01-15\",\"original_principal_usd\":16800000,\"outstanding_balance_usd\":null,\"contact_name\":\"Casey Dogwood1\",\"contact_email\":\"finance1@refinance-leads-dogwood.example\"},\"source_ids\":[\"S-R3529\",\"S-R5565\"],\"rationale\":\"Multifamily in Tampa with active confirmed debt and executed, unextended maturity on 2027-01-15. Record owner verified 2026-08-10; Director of Finance current and verified 2026-08-10.\"},{\"record_id\":\"R9410\",\"facts\":{\"entity_id\":\"DOGWOOD-REF-92578\",\"owner_entity_id\":\"O-DOGWOOD-REF-92578\",\"maturity_date\":\"2027-03-15\",\"original_principal_usd\":19320000,\"outstanding_balance_usd\":null,\"contact_name\":\"Avery Dogwood3\",\"contact_email\":\"finance3@refinance-leads-dogwood.example\"},\"source_ids\":[\"S-R9410\"],\"rationale\":\"Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-03-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10.\"},{\"record_id\":\"R8389\",\"facts\":{\"entity_id\":\"DOGWOOD-REF-32756\",\"owner_entity_id\":\"O-DOGWOOD-REF-32756\",\"maturity_date\":\"2027-04-15\",\"original_principal_usd\":20580000,\"outstanding_balance_usd\":null,\"contact_name\":\"Sam Dogwood4\",\"contact_email\":\"finance4@refinance-leads-dogwood.example\"},\"source_ids\":[\"S-R8389\"],\"rationale\":\"Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-04-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10.\"},{\"record_id\":\"R2818\",\"facts\":{\"entity_id\":\"DOGWOOD-REF-21989\",\"owner_entity_id\":\"O-DOGWOOD-REF-21989\",\"maturity_date\":\"2027-05-15\",\"original_principal_usd\":21840000,\"outstanding_balance_usd\":null,\"contact_name\":\"Casey Dogwood5\",\"contact_email\":null},\"source_ids\":[\"S-R2818\"],\"rationale\":\"Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-05-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10; email not published.\"},{\"record_id\":\"R1318\",\"facts\":{\"entity_id\":\"DOGWOOD-REF-14595\",\"owner_entity_id\":\"O-DOGWOOD-REF-14595\",\"maturity_date\":\"2027-06-15\",\"original_principal_usd\":23100000,\"outstanding_balance_usd\":null,\"contact_name\":\"Riley Dogwood6\",\"contact_email\":\"finance6@refinance-leads-dogwood.example\"},\"source_ids\":[\"S-R1318\"],\"rationale\":\"Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-06-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10.\"},{\"record_id\":\"R5792\",\"facts\":{\"entity_id\":\"DOGWOOD-REF-69815\",\"owner_entity_id\":\"O-DOGWOOD-REF-69815\",\"maturity_date\":\"2027-07-15\",\"original_principal_usd\":24360000,\"outstanding_balance_usd\":null,\"contact_name\":\"Avery Dogwood7\",\"contact_email\":\"finance7@refinance-leads-dogwood.example\"},\"source_ids\":[\"S-R5792\"],\"rationale\":\"Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-07-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10.\"}],\"candidate_decisions\":[{\"record_id\":\"R2320\",\"eligible\":false,\"reason\":\"Owner verification is stale (2024-01-01); requires record owner verified since 2026-03-01.\",\"source_ids\":[\"S-R2320\"]},{\"record_id\":\"R3529\",\"eligible\":true,\"reason\":\"Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01. Duplicate exists at R5565; will not add a second sponsor slot.\",\"source_ids\":[\"S-R3529\",\"S-R5565\"]},{\"record_id\":\"R5792\",\"eligible\":true,\"reason\":\"Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.\",\"source_ids\":[\"S-R5792\"]},{\"record_id\":\"R6805\",\"eligible\":false,\"reason\":\"Owner relation is property_manager, not record owner; managers are excluded.\",\"source_ids\":[\"S-R6805\"]},{\"record_id\":\"R8788\",\"eligible\":false,\"reason\":\"Record published after cutoff (2026-09-03); only evidence on or before 2026-08-31 may be used.\",\"source_ids\":[\"S-R8788\"]},{\"record_id\":\"R8811\",\"eligible\":false,\"reason\":\"Executed amendment before cutoff extends maturity to 2028-09-30; not an unextended-or-amended maturity within window.\",\"source_ids\":[\"S-R8811\",\"U-R8811-1\"]},{\"record_id\":\"R7731\",\"eligible\":false,\"reason\":\"Loan status is unknown; exclude unknown-status loans.\",\"source_ids\":[\"S-R7731\"]},{\"record_id\":\"R5565\",\"eligible\":true,\"reason\":\"Meets all rules but is a duplicate of R3529; eligible before deduplication and will not add a second sponsor slot.\",\"source_ids\":[\"S-R5565\",\"S-R3529\"]},{\"record_id\":\"R4836\",\"eligible\":false,\"reason\":\"Maturity is unconfirmed and extension option unresolved; exclude unconfirmed maturities and unresolved extensions.\",\"source_ids\":[\"S-R4836\"]},{\"record_id\":\"R2818\",\"eligible\":true,\"reason\":\"Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.\",\"source_ids\":[\"S-R2818\"]},{\"record_id\":\"R9410\",\"eligible\":true,\"reason\":\"Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.\",\"source_ids\":[\"S-R9410\"]},{\"record_id\":\"R2226\",\"eligible\":false,\"reason\":\"Loan status released; exclude released loans.\",\"source_ids\":[\"S-R2226\"]},{\"record_id\":\"R1271\",\"eligible\":false,\"reason\":\"Asset type is Office; scope is Multifamily only.\",\"source_ids\":[\"S-R1271\"]},{\"record_id\":\"R8389\",\"eligible\":true,\"reason\":\"Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01. Unsigned draft update does not control.\",\"source_ids\":[\"S-R8389\",\"U-R8389-3\"]},{\"record_id\":\"R4312\",\"eligible\":false,\"reason\":\"Maturity basis is inferred_from_origination; exclude unconfirmed/inferred maturities.\",\"source_ids\":[\"S-R4312\"]},{\"record_id\":\"R8536\",\"eligible\":false,\"reason\":\"Maturity 2028-02-01 is outside the 2026-09-01 to 2027-08-31 window.\",\"source_ids\":[\"S-R8536\"]},{\"record_id\":\"R1318\",\"eligible\":true,\"reason\":\"Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.\",\"source_ids\":[\"S-R1318\"]},{\"record_id\":\"R2326\",\"eligible\":false,\"reason\":\"Market is Seattle; scope is Tampa only.\",\"source_ids\":[\"S-R2326\"]},{\"record_id\":\"R6522\",\"eligible\":false,\"reason\":\"Contact role is Registered Agent; requires current CFO, Head of Acquisitions or Director of Finance.\",\"source_ids\":[\"S-R6522\"]},{\"record_id\":\"R2110\",\"eligible\":false,\"reason\":\"Director of Finance employment marked former; requires current executive contact.\",\"source_ids\":[\"S-R2110\"]}],\"summary\":\"Six distinct Tampa multifamily refinance opportunities qualify within the 2026-09-01 to 2027-08-31 window, each with active confirmed debt and executed, unextended maturities. Owners and Director of Finance contacts are verified since 2026-03-01. A prospects CSV with citations was created (artifacts/prospects-v3.csv). Remaining records were excluded for post-cutoff publication, released/unknown loans, unconfirmed/inferred maturities, executed extensions, stale ownership verification, non-owner manager relation, non-qualifying contact roles, off-scope asset type or market, or maturities outside the window.\",\"limitations\":[\"Outstanding balances are not provided in sources and are reported as null.\",\"Email is only included when published; some contacts (e.g., R2818) have null emails.\",\"Cutoff rules exclude records published after 2026-08-31 (e.g., R8788) and disregard later updates such as recorded releases after the cutoff.\",\"Duplicate base records exist (e.g., R3529 and R5565); selection is deduplicated to one sponsor slot.\"]}",
+  "call_id": "call_RawUUMEZwFABwT8J3VP0tDfD",
+  "arguments": {
+    "shortlist": [
+      {
+        "record_id": "R3529",
+        "facts": {
+          "entity_id": "DOGWOOD-REF-43781",
+          "owner_entity_id": "O-DOGWOOD-REF-43781",
+          "maturity_date": "2027-01-15",
+          "original_principal_usd": 16800000,
+          "outstanding_balance_usd": null,
+          "contact_name": "Casey Dogwood1",
+          "contact_email": "finance1@refinance-leads-dogwood.example"
+        },
+        "source_ids": [
+          "S-R3529",
+          "S-R5565"
+        ],
+        "rationale": "Multifamily in Tampa with active confirmed debt and executed, unextended maturity on 2027-01-15. Record owner verified 2026-08-10; Director of Finance current and verified 2026-08-10."
+      },
+      {
+        "record_id": "R9410",
+        "facts": {
+          "entity_id": "DOGWOOD-REF-92578",
+          "owner_entity_id": "O-DOGWOOD-REF-92578",
+          "maturity_date": "2027-03-15",
+          "original_principal_usd": 19320000,
+          "outstanding_balance_usd": null,
+          "contact_name": "Avery Dogwood3",
+          "contact_email": "finance3@refinance-leads-dogwood.example"
+        },
+        "source_ids": [
+          "S-R9410"
+        ],
+        "rationale": "Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-03-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10."
+      },
+      {
+        "record_id": "R8389",
+        "facts": {
+          "entity_id": "DOGWOOD-REF-32756",
+          "owner_entity_id": "O-DOGWOOD-REF-32756",
+          "maturity_date": "2027-04-15",
+          "original_principal_usd": 20580000,
+          "outstanding_balance_usd": null,
+          "contact_name": "Sam Dogwood4",
+          "contact_email": "finance4@refinance-leads-dogwood.example"
+        },
+        "source_ids": [
+          "S-R8389"
+        ],
+        "rationale": "Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-04-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10."
+      },
+      {
+        "record_id": "R2818",
+        "facts": {
+          "entity_id": "DOGWOOD-REF-21989",
+          "owner_entity_id": "O-DOGWOOD-REF-21989",
+          "maturity_date": "2027-05-15",
+          "original_principal_usd": 21840000,
+          "outstanding_balance_usd": null,
+          "contact_name": "Casey Dogwood5",
+          "contact_email": null
+        },
+        "source_ids": [
+          "S-R2818"
+        ],
+        "rationale": "Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-05-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10; email not published."
+      },
+      {
+        "record_id": "R1318",
+        "facts": {
+          "entity_id": "DOGWOOD-REF-14595",
+          "owner_entity_id": "O-DOGWOOD-REF-14595",
+          "maturity_date": "2027-06-15",
+          "original_principal_usd": 23100000,
+          "outstanding_balance_usd": null,
+          "contact_name": "Riley Dogwood6",
+          "contact_email": "finance6@refinance-leads-dogwood.example"
+        },
+        "source_ids": [
+          "S-R1318"
+        ],
+        "rationale": "Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-06-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10."
+      },
+      {
+        "record_id": "R5792",
+        "facts": {
+          "entity_id": "DOGWOOD-REF-69815",
+          "owner_entity_id": "O-DOGWOOD-REF-69815",
+          "maturity_date": "2027-07-15",
+          "original_principal_usd": 24360000,
+          "outstanding_balance_usd": null,
+          "contact_name": "Avery Dogwood7",
+          "contact_email": "finance7@refinance-leads-dogwood.example"
+        },
+        "source_ids": [
+          "S-R5792"
+        ],
+        "rationale": "Multifamily in Tampa; active confirmed loan; executed, unextended maturity 2027-07-15. Owner verified 2026-08-10; Director of Finance current and verified 2026-08-10."
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "record_id": "R2320",
+        "eligible": false,
+        "reason": "Owner verification is stale (2024-01-01); requires record owner verified since 2026-03-01.",
+        "source_ids": [
+          "S-R2320"
+        ]
+      },
+      {
+        "record_id": "R3529",
+        "eligible": true,
+        "reason": "Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01. Duplicate exists at R5565; will not add a second sponsor slot.",
+        "source_ids": [
+          "S-R3529",
+          "S-R5565"
+        ]
+      },
+      {
+        "record_id": "R5792",
+        "eligible": true,
+        "reason": "Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.",
+        "source_ids": [
+          "S-R5792"
+        ]
+      },
+      {
+        "record_id": "R6805",
+        "eligible": false,
+        "reason": "Owner relation is property_manager, not record owner; managers are excluded.",
+        "source_ids": [
+          "S-R6805"
+        ]
+      },
+      {
+        "record_id": "R8788",
+        "eligible": false,
+        "reason": "Record published after cutoff (2026-09-03); only evidence on or before 2026-08-31 may be used.",
+        "source_ids": [
+          "S-R8788"
+        ]
+      },
+      {
+        "record_id": "R8811",
+        "eligible": false,
+        "reason": "Executed amendment before cutoff extends maturity to 2028-09-30; not an unextended-or-amended maturity within window.",
+        "source_ids": [
+          "S-R8811",
+          "U-R8811-1"
+        ]
+      },
+      {
+        "record_id": "R7731",
+        "eligible": false,
+        "reason": "Loan status is unknown; exclude unknown-status loans.",
+        "source_ids": [
+          "S-R7731"
+        ]
+      },
+      {
+        "record_id": "R5565",
+        "eligible": true,
+        "reason": "Meets all rules but is a duplicate of R3529; eligible before deduplication and will not add a second sponsor slot.",
+        "source_ids": [
+          "S-R5565",
+          "S-R3529"
+        ]
+      },
+      {
+        "record_id": "R4836",
+        "eligible": false,
+        "reason": "Maturity is unconfirmed and extension option unresolved; exclude unconfirmed maturities and unresolved extensions.",
+        "source_ids": [
+          "S-R4836"
+        ]
+      },
+      {
+        "record_id": "R2818",
+        "eligible": true,
+        "reason": "Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.",
+        "source_ids": [
+          "S-R2818"
+        ]
+      },
+      {
+        "record_id": "R9410",
+        "eligible": true,
+        "reason": "Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.",
+        "source_ids": [
+          "S-R9410"
+        ]
+      },
+      {
+        "record_id": "R2226",
+        "eligible": false,
+        "reason": "Loan status released; exclude released loans.",
+        "source_ids": [
+          "S-R2226"
+        ]
+      },
+      {
+        "record_id": "R1271",
+        "eligible": false,
+        "reason": "Asset type is Office; scope is Multifamily only.",
+        "source_ids": [
+          "S-R1271"
+        ]
+      },
+      {
+        "record_id": "R8389",
+        "eligible": true,
+        "reason": "Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01. Unsigned draft update does not control.",
+        "source_ids": [
+          "S-R8389",
+          "U-R8389-3"
+        ]
+      },
+      {
+        "record_id": "R4312",
+        "eligible": false,
+        "reason": "Maturity basis is inferred_from_origination; exclude unconfirmed/inferred maturities.",
+        "source_ids": [
+          "S-R4312"
+        ]
+      },
+      {
+        "record_id": "R8536",
+        "eligible": false,
+        "reason": "Maturity 2028-02-01 is outside the 2026-09-01 to 2027-08-31 window.",
+        "source_ids": [
+          "S-R8536"
+        ]
+      },
+      {
+        "record_id": "R1318",
+        "eligible": true,
+        "reason": "Meets all rules: Multifamily Tampa, active confirmed debt, executed unextended maturity within window, owner and Director of Finance verified since 2026-03-01.",
+        "source_ids": [
+          "S-R1318"
+        ]
+      },
+      {
+        "record_id": "R2326",
+        "eligible": false,
+        "reason": "Market is Seattle; scope is Tampa only.",
+        "source_ids": [
+          "S-R2326"
+        ]
+      },
+      {
+        "record_id": "R6522",
+        "eligible": false,
+        "reason": "Contact role is Registered Agent; requires current CFO, Head of Acquisitions or Director of Finance.",
+        "source_ids": [
+          "S-R6522"
+        ]
+      },
+      {
+        "record_id": "R2110",
+        "eligible": false,
+        "reason": "Director of Finance employment marked former; requires current executive contact.",
+        "source_ids": [
+          "S-R2110"
+        ]
+      }
+    ],
+    "summary": "Six distinct Tampa multifamily refinance opportunities qualify within the 2026-09-01 to 2027-08-31 window, each with active confirmed debt and executed, unextended maturities. Owners and Director of Finance contacts are verified since 2026-03-01. A prospects CSV with citations was created (artifacts/prospects-v3.csv). Remaining records were excluded for post-cutoff publication, released/unknown loans, unconfirmed/inferred maturities, executed extensions, stale ownership verification, non-owner manager relation, non-qualifying contact roles, off-scope asset type or market, or maturities outside the window.",
+    "limitations": [
+      "Outstanding balances are not provided in sources and are reported as null.",
+      "Email is only included when published; some contacts (e.g., R2818) have null emails.",
+      "Cutoff rules exclude records published after 2026-08-31 (e.g., R8788) and disregard later updates such as recorded releases after the cutoff.",
+      "Duplicate base records exist (e.g., R3529 and R5565); selection is deduplicated to one sponsor slot."
+    ]
+  },
+  "result": {
+    "saved": true
+  },
+  "status": "ok"
+}

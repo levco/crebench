@@ -1,0 +1,201 @@
+```json
+{
+  "shortlist": [
+    {
+      "record_id": "R2732",
+      "facts": {
+        "entity_id": "CYPRESS-REN-54094",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.28,
+        "term_months": 36
+      },
+      "source_ids": ["S-R2732", "S-R5958"],
+      "rationale": "Industrial/Columbus executed lease abstract dated 2026-02-05 (in 2025-09-01..2026-08-31 window), 0.80 mi, positive face rent $21.00/sf/yr gross with known annual_expenses_psf 6.25, free_months 0, TI 12, term 36, 2.5% annual steps. Convention: face $21.00 + $21.525 + $22.06125 = $64.586; less expenses 6.25/12 x 36 = $18.75; less TI $12.00 = $33.836 net / 36 x 12 = $11.28. R5958 is the same entity (second source, same underlying record) and does not add a slot."
+    },
+    {
+      "record_id": "R7377",
+      "facts": {
+        "entity_id": "CYPRESS-REN-75613",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.93,
+        "term_months": 48
+      },
+      "source_ids": ["S-R7377", "U-R7377-1"],
+      "rationale": "Executed lease 2026-03-06, 1.03 mi, NNN. Face $1.87/sf/month = $22.44/sf/yr. Executed amendment U-R7377-1 (effective 2026-08-20, on/before cutoff) overrides base: free_months 4, TI 18. Face collected: 8 mo x 1.87 = 14.96; yr2 23.001; yr3 23.576; yr4 24.165 = $85.702; NNN expense deduction zero; less TI $18.00 = $67.702 / 48 x 12 = $16.93."
+    },
+    {
+      "record_id": "R7850",
+      "facts": {
+        "entity_id": "CYPRESS-REN-73837",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.41,
+        "term_months": 60
+      },
+      "source_ids": ["S-R7850"],
+      "rationale": "Executed lease 2026-04-07, 1.26 mi, NNN, face $22.60/sf/yr, free 2, TI 18, term 60, 2.5% steps. U-R7850-2 (published/effective 2026-09-10) is later-dated than the 2026-08-31 cutoff and is not applied, so face remains 22.60. Face: 10 mo x 1.88333 = 18.833; then 23.165 + 23.744 + 24.338 + 24.946 = $115.026; NNN deduction zero; less TI $18.00 = $97.026 / 60 x 12 = $19.41."
+    },
+    {
+      "record_id": "R9286",
+      "facts": {
+        "entity_id": "CYPRESS-REN-55027",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.47,
+        "term_months": 36
+      },
+      "source_ids": ["S-R9286"],
+      "rationale": "Executed lease 2026-05-08, 1.49 mi, gross with known annual_expenses_psf 6.25. Face $2.01/sf/month = $24.12/sf/yr, free 3, TI 21, term 36. U-R9286-3 (free_months 8) is an unsigned draft and is not applied. Face: 9 mo x 2.01 = 18.09; yr2 24.723; yr3 25.341 = $68.154; less expenses $18.75; less TI $21.00 = $28.404 / 36 x 12 = $9.47."
+    },
+    {
+      "record_id": "R9636",
+      "facts": {
+        "entity_id": "CYPRESS-REN-82731",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.12,
+        "term_months": 48
+      },
+      "source_ids": ["S-R9636"],
+      "rationale": "Executed lease 2026-06-09, 1.72 mi, NNN, face $24.20/sf/yr, free 0, TI 12, term 48, 2.5% steps. Face: 24.20 + 24.805 + 25.425 + 26.061 = $100.491; NNN deduction zero; less TI $12.00 = $88.491 / 48 x 12 = $22.12."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R2670",
+      "eligible": true,
+      "reason": "Qualifies on all rules (Industrial/Columbus, executed 2026-02-11, 2.18 mi, gross face $25.80/sf/yr with expenses 6.25, free 2, TI 18, term 36; effective net $12.77/sf/yr), but ranks 7th by distance and falls outside the five-slot shortlist.",
+      "source_ids": ["S-R2670"]
+    },
+    {
+      "record_id": "R5936",
+      "eligible": false,
+      "reason": "term_months is null; known term is required (missing is unknown, not zero).",
+      "source_ids": ["S-R5936"]
+    },
+    {
+      "record_id": "R5587",
+      "eligible": false,
+      "reason": "ti_allowance_psf is null; known TI is required.",
+      "source_ids": ["S-R5587"]
+    },
+    {
+      "record_id": "R3881",
+      "eligible": false,
+      "reason": "status is 'asking'; asking/unsigned rents do not qualify.",
+      "source_ids": ["S-R3881"]
+    },
+    {
+      "record_id": "R5958",
+      "eligible": true,
+      "reason": "Meets all business rules but is a duplicate of entity CYPRESS-REN-54094 (second source, same underlying record as R2732); deduplicated to R2732 and does not add a second slot.",
+      "source_ids": ["S-R5958", "S-R2732"]
+    },
+    {
+      "record_id": "R8711",
+      "eligible": false,
+      "reason": "rent_quote is null; positive rent is required.",
+      "source_ids": ["S-R8711"]
+    },
+    {
+      "record_id": "R7377",
+      "eligible": true,
+      "reason": "Executed industrial lease in window, 1.03 mi, all required facts present after applying executed amendment U-R7377-1 (free 4, TI 18). Shortlisted rank 2.",
+      "source_ids": ["S-R7377", "U-R7377-1"]
+    },
+    {
+      "record_id": "R2921",
+      "eligible": false,
+      "reason": "event_date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 execution window.",
+      "source_ids": ["S-R2921"]
+    },
+    {
+      "record_id": "R5588",
+      "eligible": false,
+      "reason": "rent_quote is 0; positive rent required.",
+      "source_ids": ["S-R5588"]
+    },
+    {
+      "record_id": "R3746",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence is not used.",
+      "source_ids": ["S-R3746"]
+    },
+    {
+      "record_id": "R7850",
+      "eligible": true,
+      "reason": "Executed industrial lease 2026-04-07, 1.26 mi, all required facts present; later-dated amendment U-R7850-2 (2026-09-10) excluded. Shortlisted rank 3.",
+      "source_ids": ["S-R7850"]
+    },
+    {
+      "record_id": "R9636",
+      "eligible": true,
+      "reason": "Executed industrial lease 2026-06-09, 1.72 mi, positive rent, known term/free/TI (NNN so no expense deduction needed). Shortlisted rank 5.",
+      "source_ids": ["S-R9636"]
+    },
+    {
+      "record_id": "R2732",
+      "eligible": true,
+      "reason": "Executed industrial lease 2026-02-05, 0.80 mi, gross with known expenses; retained record for entity CYPRESS-REN-54094 (duplicate of R5958). Shortlisted rank 1.",
+      "source_ids": ["S-R2732", "S-R5958"]
+    },
+    {
+      "record_id": "R9286",
+      "eligible": true,
+      "reason": "Executed industrial lease 2026-05-08, 1.49 mi, gross with known expenses; unsigned draft U-R9286-3 not applied. Shortlisted rank 4.",
+      "source_ids": ["S-R9286", "U-R9286-3"]
+    },
+    {
+      "record_id": "R1369",
+      "eligible": false,
+      "reason": "Gross lease with annual_expenses_psf null; gross leases require a known expense deduction.",
+      "source_ids": ["S-R1369"]
+    },
+    {
+      "record_id": "R7843",
+      "eligible": false,
+      "reason": "free_months is null; known free rent is required.",
+      "source_ids": ["S-R7843"]
+    },
+    {
+      "record_id": "R3375",
+      "eligible": false,
+      "reason": "asset_type is Office; outside the Industrial scope.",
+      "source_ids": ["S-R3375"]
+    },
+    {
+      "record_id": "R1188",
+      "eligible": true,
+      "reason": "Qualifies on all rules (executed 2026-07-10, 1.95 mi, NNN face $25.80/sf/yr, free 1, TI 15, term 60; effective net $23.69/sf/yr) but ranks 6th by distance and falls outside the five-slot shortlist.",
+      "source_ids": ["S-R1188"]
+    },
+    {
+      "record_id": "R7637",
+      "eligible": false,
+      "reason": "status is 'unsigned_proposal'; unsigned evidence does not qualify.",
+      "source_ids": ["S-R7637"]
+    },
+    {
+      "record_id": "R1207",
+      "eligible": false,
+      "reason": "distance_miles 18.6 exceeds the 8-mile radius.",
+      "source_ids": ["S-R1207"]
+    }
+  ],
+  "summary": "Nine base records satisfied the business rules (R2732 and its duplicate R5958, R7377, R7850, R9286, R9636, R1188, R2670); after deduplicating entity CYPRESS-REN-54094 there are seven unique qualifying leases, and the five nearest were shortlisted: R2732 (0.80 mi, $11.28/sf/yr effective net), R7377 (1.03 mi, $16.93), R7850 (1.26 mi, $19.41), R9286 (1.49 mi, $9.47) and R9636 (1.72 mi, $22.12). R1188 (1.95 mi, $23.69) and R2670 (2.18 mi, $12.77) qualified but fell outside the five slots. Controlling updates: U-R7377-1 (executed amendment, effective 2026-08-20) applied to R7377; U-R9286-3 rejected as an unsigned draft; U-R7850-2 rejected as published after the 2026-08-31 cutoff. Effective net rents follow the client's undiscounted rent-only convention (annualized face quote, 2.5% steps at months 13/25/37/49, no face rent during free months, gross expenses deducted every month, TI subtracted once) and are not a market appraisal. No spreadsheet or CSV artifact was produced: file creation is outside this direct API control.",
+  "limitations": [
+    "No workbook/CSV was generated; artifact delivery is outside this direct API control channel, so only the JSON analysis is provided.",
+    "Effective net rents are undiscounted and rent-only per the stated client convention; they exclude time value, commissions, downtime, escalation of operating expenses and any percentage/other rent, so they are not appraisal-grade.",
+    "Distances are taken as provided (distance_miles) and were not independently verified; no addresses or coordinates were supplied.",
+    "Records with null term, TI, free months or gross expense loads (R5936, R5587, R7843, R1369) were excluded as unknown rather than zero, which may understate the available comp set if those fields are in fact zero.",
+    "R2670 free-rent timing is assumed to occur in the first months of the term (months 1-2 of year 1) as the convention specifies; the extracts do not state whether free rent is upfront or spread.",
+    "R5958 vs R2732 duplication was resolved on identical entity_id and identical fields; if these are truly distinct suites at the same asset, one comp may be omitted.",
+    "U-R7850-2 (rent_quote 2, unit unstated) and U-R9286-3 were excluded on cutoff/unsigned grounds; if a signed, on-or-before-cutoff version exists, R7850's and R9286's economics would change materially.",
+    "Face-rent unit conversions from USD_per_sf_month to annual assume a 12x multiplier; no verification of stated units beyond the extracts was possible.",
+    "No sponsor/SPV parent mappings were present in the packet, so no SPV-to-parent consolidation was required or performed.",
+    "Tenant names, landlords, suite sizes beyond area_sf, and any contact information are not evidenced in the packet and are therefore not asserted."
+  ]
+}
+```

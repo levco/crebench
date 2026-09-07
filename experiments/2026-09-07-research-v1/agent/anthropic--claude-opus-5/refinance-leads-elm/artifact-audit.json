@@ -1,0 +1,188 @@
+{
+  "applicable": true,
+  "required_format": ".csv",
+  "checks": [
+    {
+      "id": "readable_required_format",
+      "passed": true
+    },
+    {
+      "id": "identity_and_order",
+      "passed": true
+    },
+    {
+      "id": "selected_facts_and_unknowns",
+      "passed": false
+    },
+    {
+      "id": "source_identifiers",
+      "passed": true
+    }
+  ],
+  "file": "artifacts/prospects-v1.csv",
+  "criterion": "Original artifact consistency with submitted answer; factual truth is scored separately",
+  "issues": [
+    "2 blank unknown annotations were caused by the benchmark CSV writer after explicit model-supplied JSON nulls; these are harness delivery failures, not model factual errors.",
+    "R6968 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R7631 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown"
+  ],
+  "sheets": [
+    "CSV"
+  ],
+  "table_sheet": "CSV",
+  "original_record_order": [
+    "R6968",
+    "R7631"
+  ],
+  "answer_record_order": [
+    "R6968",
+    "R7631"
+  ],
+  "field_checks": [
+    {
+      "record_id": "R6968",
+      "field": "entity_id",
+      "actual": "ELM-REF-63521",
+      "original": "ELM-REF-63521",
+      "expected": "ELM-REF-63521",
+      "passed": true
+    },
+    {
+      "record_id": "R6968",
+      "field": "owner_entity_id",
+      "actual": "O-ELM-REF-63521",
+      "original": "O-ELM-REF-63521",
+      "expected": "O-ELM-REF-63521",
+      "passed": true
+    },
+    {
+      "record_id": "R6968",
+      "field": "maturity_date",
+      "actual": "2027-01-15",
+      "original": "2027-01-15",
+      "expected": "2027-01-15",
+      "passed": true
+    },
+    {
+      "record_id": "R6968",
+      "field": "original_principal_usd",
+      "actual": "8640000",
+      "original": "8640000",
+      "expected": 8640000,
+      "passed": true
+    },
+    {
+      "record_id": "R6968",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-elm/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R6968",
+      "field": "contact_name",
+      "actual": "Casey Elm1",
+      "original": "Casey Elm1",
+      "expected": "Casey Elm1",
+      "passed": true
+    },
+    {
+      "record_id": "R6968",
+      "field": "contact_email",
+      "actual": "finance1@refinance-leads-elm.example",
+      "original": "finance1@refinance-leads-elm.example",
+      "expected": "finance1@refinance-leads-elm.example",
+      "passed": true
+    },
+    {
+      "record_id": "R7631",
+      "field": "entity_id",
+      "actual": "ELM-REF-53828",
+      "original": "ELM-REF-53828",
+      "expected": "ELM-REF-53828",
+      "passed": true
+    },
+    {
+      "record_id": "R7631",
+      "field": "owner_entity_id",
+      "actual": "O-ELM-REF-53828",
+      "original": "O-ELM-REF-53828",
+      "expected": "O-ELM-REF-53828",
+      "passed": true
+    },
+    {
+      "record_id": "R7631",
+      "field": "maturity_date",
+      "actual": "2027-03-15",
+      "original": "2027-03-15",
+      "expected": "2027-03-15",
+      "passed": true
+    },
+    {
+      "record_id": "R7631",
+      "field": "original_principal_usd",
+      "actual": "9936000",
+      "original": "9936000",
+      "expected": 9936000,
+      "passed": true
+    },
+    {
+      "record_id": "R7631",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-elm/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R7631",
+      "field": "contact_name",
+      "actual": "Avery Elm3",
+      "original": "Avery Elm3",
+      "expected": "Avery Elm3",
+      "passed": true
+    },
+    {
+      "record_id": "R7631",
+      "field": "contact_email",
+      "actual": "finance3@refinance-leads-elm.example",
+      "original": "finance3@refinance-leads-elm.example",
+      "expected": "finance3@refinance-leads-elm.example",
+      "passed": true
+    }
+  ],
+  "harness_induced_null_annotations": 2,
+  "source_checks": [
+    {
+      "record_id": "R6968",
+      "passed": true,
+      "expected": [
+        "S-R4437",
+        "S-R6968"
+      ],
+      "actual": [
+        "S-R4437",
+        "S-R6968"
+      ]
+    },
+    {
+      "record_id": "R7631",
+      "passed": true,
+      "expected": [
+        "S-R7631"
+      ],
+      "actual": [
+        "S-R7631",
+        "U-R7631-2"
+      ]
+    }
+  ],
+  "source_sha256": "138757cbfb49255d7a34308889f45443bd50cdc86dcb8c5aa95fd4b3b479c545"
+}

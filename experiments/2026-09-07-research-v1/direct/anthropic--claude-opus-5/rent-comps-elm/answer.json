@@ -1,0 +1,230 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R5361",
+      "facts": {
+        "entity_id": "ELM-REN-25776",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.28,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R5361"
+      ],
+      "rationale": "Executed retail lease abstract in Raleigh, 0.80 mi, event 2026-02-05 inside the 2025-09-01..2026-08-31 window. Gross basis with known annual_expenses_psf 6.25, free_months 0, TI 12, term 36. Face $21.00/sf/yr escalated 2.5% at months 13 and 25 (21.000 + 21.525 + 22.063 = 64.588), less gross expense deduction 6.25/12 in all 36 months (18.75) and one-time TI 12 => 33.838 over 36 months => $11.28/sf/yr. Preferred over duplicate R6572 (same entity ELM-REN-25776), which is a second source of the same underlying record."
+    },
+    {
+      "record_id": "R8528",
+      "facts": {
+        "entity_id": "ELM-REN-95631",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.93,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R8528",
+        "U-R8528-1"
+      ],
+      "rationale": "Executed retail lease abstract, 1.03 mi, event 2026-03-06. Executed amendment U-R8528-1 (effective 2026-08-20, on/before cutoff) controls: free_months 4 and TI 18 replace base 1 and 15. Face $2.01... actually $1.87/sf/month = $22.44/sf/yr; 2.5% increases at months 13, 25, 37; no face rent in months 1-4 (8 paid months in year 1 = 14.96), years 2-4 = 23.001 + 23.576 + 24.165; NNN so expense deduction is zero; less one-time TI 18 => 67.702 over 48 months => $16.93/sf/yr."
+    },
+    {
+      "record_id": "R4908",
+      "facts": {
+        "entity_id": "ELM-REN-51407",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.41,
+        "term_months": 60
+      },
+      "source_ids": [
+        "S-R4908"
+      ],
+      "rationale": "Executed retail lease abstract, 1.26 mi, event 2026-04-07. Amendment U-R4908-2 (published/effective 2026-09-10) is later-dated than the 2026-08-31 cutoff and is not applied, so face rent stays $22.60/sf/yr. NNN, free_months 2, TI 18, term 60. Escalations 2.5% at months 13/25/37/49; 10 paid months in year 1 (18.833) plus years 2-5 (23.165 + 23.744 + 24.338 + 24.946 = 96.193) = 115.026; NNN deduction zero; less TI 18 => 97.026 over 60 months => $19.41/sf/yr."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8323",
+      "eligible": false,
+      "reason": "Gross expense basis with annual_expenses_psf null; gross leases require a known expense deduction, and missing is unknown (not zero). Otherwise in-window executed retail at 2.87 mi.",
+      "source_ids": [
+        "S-R8323"
+      ]
+    },
+    {
+      "record_id": "R5055",
+      "eligible": false,
+      "reason": "Executed amendment U-R5055-5 (effective 2026-08-20) reclassifies asset_type to Office, outside the Retail scope.",
+      "source_ids": [
+        "S-R5055",
+        "U-R5055-5"
+      ]
+    },
+    {
+      "record_id": "R5909",
+      "eligible": false,
+      "reason": "rent_quote is 0; positive rent is required.",
+      "source_ids": [
+        "S-R5909"
+      ]
+    },
+    {
+      "record_id": "R6803",
+      "eligible": false,
+      "reason": "Distance 18.6 miles exceeds the 8-mile radius.",
+      "source_ids": [
+        "S-R6803"
+      ]
+    },
+    {
+      "record_id": "R4908",
+      "eligible": true,
+      "reason": "Executed retail lease, Raleigh, 1.26 mi, event 2026-04-07 in window; positive rent 22.6 $/sf/yr, term 60, free_months 2, TI 18, NNN (zero deduction). Later-dated amendment U-R4908-2 (2026-09-10) excluded. Selected.",
+      "source_ids": [
+        "S-R4908"
+      ]
+    },
+    {
+      "record_id": "R7763",
+      "eligible": false,
+      "reason": "Executed amendment U-R7763-4 (effective 2026-08-20) reclassifies asset_type to Office, outside Retail scope. Unsigned draft U-R7763-3 (free_months 8) disregarded.",
+      "source_ids": [
+        "S-R7763",
+        "U-R7763-4",
+        "U-R7763-3"
+      ]
+    },
+    {
+      "record_id": "R8668",
+      "eligible": false,
+      "reason": "Status is asking; asking/unsigned rents do not qualify.",
+      "source_ids": [
+        "S-R8668"
+      ]
+    },
+    {
+      "record_id": "R6572",
+      "eligible": true,
+      "reason": "Meets all business rules (executed, Retail, Raleigh, 0.80 mi, event 2026-02-05, gross with expenses 6.25, free 0, term 36, TI 12) but is a duplicate of entity ELM-REN-25776 already represented by R5361; evidence_kind is second_source_same_underlying_record, so R5361 was retained and this record adds no separate shortlist slot.",
+      "source_ids": [
+        "S-R6572",
+        "S-R5361"
+      ]
+    },
+    {
+      "record_id": "R3616",
+      "eligible": false,
+      "reason": "term_months is null; known term is required.",
+      "source_ids": [
+        "S-R3616"
+      ]
+    },
+    {
+      "record_id": "R3778",
+      "eligible": false,
+      "reason": "Executed amendment U-R3778-7 (effective 2026-08-20) reclassifies asset_type to Office, outside Retail scope.",
+      "source_ids": [
+        "S-R3778",
+        "U-R3778-7"
+      ]
+    },
+    {
+      "record_id": "R1184",
+      "eligible": false,
+      "reason": "ti_allowance_psf is null; known TI is required (missing is unknown, not zero).",
+      "source_ids": [
+        "S-R1184"
+      ]
+    },
+    {
+      "record_id": "R8329",
+      "eligible": false,
+      "reason": "Executed amendment U-R8329-6 (effective 2026-08-20) reclassifies asset_type to Office, outside Retail scope.",
+      "source_ids": [
+        "S-R8329",
+        "U-R8329-6"
+      ]
+    },
+    {
+      "record_id": "R5806",
+      "eligible": false,
+      "reason": "rent_quote is null; positive known rent is required.",
+      "source_ids": [
+        "S-R5806"
+      ]
+    },
+    {
+      "record_id": "R2825",
+      "eligible": false,
+      "reason": "event_date 2024-02-10 falls outside the 2025-09-01 to 2026-08-31 window.",
+      "source_ids": [
+        "S-R2825"
+      ]
+    },
+    {
+      "record_id": "R9355",
+      "eligible": false,
+      "reason": "asset_type is Office, outside the Retail scope.",
+      "source_ids": [
+        "S-R9355"
+      ]
+    },
+    {
+      "record_id": "R5361",
+      "eligible": true,
+      "reason": "Executed retail lease abstract, Raleigh, 0.80 mi, event 2026-02-05 in window; gross with known annual_expenses_psf 6.25, free 0, term 36, TI 12. Primary record for duplicate entity ELM-REN-25776 (see R6572). Selected.",
+      "source_ids": [
+        "S-R5361"
+      ]
+    },
+    {
+      "record_id": "R8578",
+      "eligible": false,
+      "reason": "Status is unsigned_proposal; unsigned rents do not qualify.",
+      "source_ids": [
+        "S-R8578"
+      ]
+    },
+    {
+      "record_id": "R8528",
+      "eligible": true,
+      "reason": "Executed retail lease, Raleigh, 1.03 mi, event 2026-03-06 in window; NNN, positive rent 1.87 $/sf/month, term 48; executed amendment U-R8528-1 controls free_months 4 and TI 18. Selected.",
+      "source_ids": [
+        "S-R8528",
+        "U-R8528-1"
+      ]
+    },
+    {
+      "record_id": "R6603",
+      "eligible": false,
+      "reason": "free_months is null; known free rent is required (missing is unknown, not zero).",
+      "source_ids": [
+        "S-R6603"
+      ]
+    },
+    {
+      "record_id": "R4617",
+      "eligible": false,
+      "reason": "Base extract published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence cannot be used even though the event date is in window.",
+      "source_ids": [
+        "S-R4617"
+      ]
+    }
+  ],
+  "summary": "Three unique qualifying executed retail comps in Raleigh within 8 miles were identified from the supplied fixtures, fewer than the five allowed. Ranked by distance ascending: R5361 (ELM-REN-25776, 0.80 mi, executed 2026-02-05, face $21.00/sf/yr gross, effective net $11.28/sf/yr, 36 months); R8528 (ELM-REN-95631, 1.03 mi, executed 2026-03-06, face $22.44/sf/yr NNN, effective net $16.93/sf/yr, 48 months); R4908 (ELM-REN-51407, 1.26 mi, executed 2026-04-07, face $22.60/sf/yr NNN, effective net $19.41/sf/yr, 60 months). Seventeen base records were excluded: four reclassified to Office by executed amendments (R5055, R7763, R8329, R3778), one Office at base (R9355), one asking (R8668), one unsigned proposal (R8578), one out-of-radius (R6803), one out-of-window event (R2825), one published after cutoff (R4617), one zero rent (R5909), one null rent (R5806), one null term (R3616), one null TI (R1184), one null free months (R6603), one gross lease with unknown expenses (R8323), and one eligible duplicate of an already-selected entity (R6572). No SPV-to-parent mappings appeared in the packet. Effective rents use the client's undiscounted, rent-only convention and are not a market appraisal.",
+  "limitations": [
+    "Only three qualifying comps were available, so the shortlist is thinner than the five-slot maximum and the resulting rent range is not statistically robust.",
+    "Effective net rents follow the prescribed undiscounted convention (no time value, no commissions, no percentage rent or opex growth) and are not appraisal-grade values.",
+    "Gross-lease expense deductions rely on a single reported annual_expenses_psf of 6.25 with no year-over-year escalation and no breakdown or reconciliation of recoveries.",
+    "For NNN comps the deduction is set to zero by convention; actual tenant-paid operating costs are unknown and would lower true occupancy cost comparability against the gross comp R5361.",
+    "R4908's later-dated executed amendment U-R4908-2 (rent_quote 2, effective 2026-09-10) would materially change its face rent and unit interpretation, but it is excluded as post-cutoff evidence; the selected value may be stale relative to the current lease.",
+    "R4617 appears to be an in-window executed lease but is excluded solely because its source was published 2026-09-03; it could qualify under a later cutoff.",
+    "Distances are taken as supplied (distance_miles) with no stated reference point, submarket, trade-area or co-tenancy detail, so location comparability is unverified.",
+    "No tenant names, credit, unit sizes' comparability, build-out condition, options, or landlord-work detail are provided; area_sf differences (14,400-18,720 sf) may affect rent levels.",
+    "Duplicate handling for entity ELM-REN-25776 assumed R5361 (executed_lease_abstract) is the better source over R6572 (second_source_same_underlying_record); both report identical economics, so the choice does not change the computed facts.",
+    "Missing fields were treated as unknown and disqualifying rather than zero, which may exclude leases that in fact had no free rent or no TI.",
+    "Artifact generation (comp-grid XLSX) was not performed because file creation is outside this direct API control; the JSON above contains the full selected fact set and citations."
+  ]
+}

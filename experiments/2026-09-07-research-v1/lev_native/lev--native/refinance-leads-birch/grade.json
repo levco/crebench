@@ -1,0 +1,623 @@
+{
+  "case_id": "refinance-leads-birch",
+  "task": "refinance_leads",
+  "target_count": 6,
+  "available_unique": 6,
+  "returned_count": 7,
+  "eligible_count": 6,
+  "verified_count": 6,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 0.8571428571428571,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 49,
+    "total": 49
+  },
+  "evidence_accuracy": {
+    "passed": 7,
+    "total": 7
+  },
+  "candidate_accuracy": {
+    "passed": 18,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 6,
+    "total": 7
+  },
+  "ineligible_rejection": {
+    "passed": 12,
+    "total": 13
+  },
+  "ranking_pair_agreement": {
+    "passed": 15,
+    "total": 15
+  },
+  "material_errors": [
+    {
+      "record_id": "R3130",
+      "type": "ineligible_selection",
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "selected_checks": [
+    {
+      "record_id": "R7849",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-71420",
+          "expected": "BIRCH-REF-71420",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-71420",
+          "expected": "O-BIRCH-REF-71420",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-01-15",
+          "expected": "2027-01-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 5760000,
+          "expected": 5760000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Casey Birch1",
+          "expected": "Casey Birch1",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance1@refinance-leads-birch.example",
+          "expected": "finance1@refinance-leads-birch.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R7849"
+      ],
+      "reported_sources": [
+        "S-R7849",
+        "S-R8920"
+      ]
+    },
+    {
+      "record_id": "R2258",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-42124",
+          "expected": "BIRCH-REF-42124",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-42124",
+          "expected": "O-BIRCH-REF-42124",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-03-15",
+          "expected": "2027-03-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 6624000,
+          "expected": 6624000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Avery Birch3",
+          "expected": "Avery Birch3",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance3@refinance-leads-birch.example",
+          "expected": "finance3@refinance-leads-birch.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R2258"
+      ],
+      "reported_sources": [
+        "S-R2258"
+      ]
+    },
+    {
+      "record_id": "R3130",
+      "eligible": false,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-46281",
+          "expected": "BIRCH-REF-46281",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-46281",
+          "expected": "O-BIRCH-REF-46281",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-04-15",
+          "expected": "2027-04-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 7056000,
+          "expected": 7056000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Riley Birch18",
+          "expected": "Riley Birch18",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance18@refinance-leads-birch.example",
+          "expected": "finance18@refinance-leads-birch.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3130"
+      ],
+      "reported_sources": [
+        "S-R3130"
+      ]
+    },
+    {
+      "record_id": "R8680",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-10272",
+          "expected": "BIRCH-REF-10272",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-10272",
+          "expected": "O-BIRCH-REF-10272",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-04-15",
+          "expected": "2027-04-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 7056000,
+          "expected": 7056000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Sam Birch4",
+          "expected": "Sam Birch4",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance4@refinance-leads-birch.example",
+          "expected": "finance4@refinance-leads-birch.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R8680"
+      ],
+      "reported_sources": [
+        "S-R8680"
+      ]
+    },
+    {
+      "record_id": "R9318",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-75599",
+          "expected": "BIRCH-REF-75599",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-75599",
+          "expected": "O-BIRCH-REF-75599",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-05-15",
+          "expected": "2027-05-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 7488000,
+          "expected": 7488000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Casey Birch5",
+          "expected": "Casey Birch5",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R9318"
+      ],
+      "reported_sources": [
+        "S-R9318"
+      ]
+    },
+    {
+      "record_id": "R7666",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-37514",
+          "expected": "BIRCH-REF-37514",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-37514",
+          "expected": "O-BIRCH-REF-37514",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-06-15",
+          "expected": "2027-06-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 7920000,
+          "expected": 7920000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Riley Birch6",
+          "expected": "Riley Birch6",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance6@refinance-leads-birch.example",
+          "expected": "finance6@refinance-leads-birch.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R7666"
+      ],
+      "reported_sources": [
+        "S-R7666"
+      ]
+    },
+    {
+      "record_id": "R8605",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "BIRCH-REF-88672",
+          "expected": "BIRCH-REF-88672",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-BIRCH-REF-88672",
+          "expected": "O-BIRCH-REF-88672",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-07-15",
+          "expected": "2027-07-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 8352000,
+          "expected": 8352000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Avery Birch7",
+          "expected": "Avery Birch7",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance7@refinance-leads-birch.example",
+          "expected": "finance7@refinance-leads-birch.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R8605"
+      ],
+      "reported_sources": [
+        "S-R8605"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R4713",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Loan status not confirmed active"
+      ]
+    },
+    {
+      "record_id": "R8097",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R2258",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2031",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Loan status not confirmed active"
+      ]
+    },
+    {
+      "record_id": "R3130",
+      "actual": true,
+      "expected": false,
+      "passed": false,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R7666",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2900",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity outside window"
+      ]
+    },
+    {
+      "record_id": "R8605",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R8827",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity not confirmed by executed evidence"
+      ]
+    },
+    {
+      "record_id": "R9318",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R7439",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity not confirmed by executed evidence",
+        "Unresolved extension"
+      ]
+    },
+    {
+      "record_id": "R6767",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale ownership verification"
+      ]
+    },
+    {
+      "record_id": "R8055",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not the record owner"
+      ]
+    },
+    {
+      "record_id": "R1912",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R7849",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R8680",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R8920",
+      "actual": false,
+      "expected": true,
+      "passed": false,
+      "reasons": []
+    },
+    {
+      "record_id": "R9844",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    },
+    {
+      "record_id": "R9018",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity outside window"
+      ]
+    },
+    {
+      "record_id": "R4315",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ],
+  "scoring_version": "research-v1.1-scoring",
+  "representation_adjustments": []
+}

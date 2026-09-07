@@ -1,0 +1,224 @@
+```json
+{
+  "shortlist": [
+    {
+      "record_id": "R1514",
+      "facts": {
+        "entity_id": "ALDER-REF-61562",
+        "owner_entity_id": "O-ALDER-REF-61562",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 14400000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Alder1",
+        "contact_email": "finance1@refinance-leads-alder.example"
+      },
+      "source_ids": ["S-R1514", "S-R6774"],
+      "rationale": "Charlotte multifamily; loan_status active_confirmed; maturity 2027-01-15 on executed_note with extension_status none_executed (in 2026-09-01..2027-08-31 window); record_owner verified 2026-08-10; Director of Finance, employment current, verified 2026-08-10; published_business email. Duplicate entity record R6774 confirms the same underlying loan and occupies no second slot. Outstanding balance not published (null); 14,400,000 USD is original principal, not balance."
+    },
+    {
+      "record_id": "R4598",
+      "facts": {
+        "entity_id": "ALDER-REF-82017",
+        "owner_entity_id": "O-ALDER-REF-82017",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 16560000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Alder3",
+        "contact_email": "finance3@refinance-leads-alder.example"
+      },
+      "source_ids": ["S-R4598"],
+      "rationale": "Charlotte multifamily; active_confirmed debt; executed_note maturity 2027-03-15, no executed extension; record_owner verified 2026-08-10; Director of Finance current, verified 2026-08-10. The recorded release U-R4598-2 is published/effective 2026-09-10, after the 2026-08-31 cutoff, so it is later-dated evidence and does not control as of the cutoff; flagged as a material near-term risk. Outstanding balance unknown (null)."
+    },
+    {
+      "record_id": "R7567",
+      "facts": {
+        "entity_id": "ALDER-REF-70342",
+        "owner_entity_id": "O-ALDER-REF-70342",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 17640000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Sam Alder4",
+        "contact_email": "finance4@refinance-leads-alder.example"
+      },
+      "source_ids": ["S-R7567"],
+      "rationale": "Charlotte multifamily; active_confirmed; executed_note maturity 2027-04-15 retained because U-R7567-3 (maturity 2028-01-01) is an unsigned_draft and does not override the base extract; record_owner verified 2026-08-10; Director of Finance current, verified 2026-08-10. Outstanding balance unknown (null)."
+    },
+    {
+      "record_id": "R8446",
+      "facts": {
+        "entity_id": "ALDER-REF-87904",
+        "owner_entity_id": "O-ALDER-REF-87904",
+        "maturity_date": "2027-05-15",
+        "original_principal_usd": 18720000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Alder5",
+        "contact_email": null
+      },
+      "source_ids": ["S-R8446"],
+      "rationale": "Charlotte multifamily; active_confirmed; executed_note maturity 2027-05-15, extension none_executed; record_owner verified 2026-08-10; Director of Finance current, verified 2026-08-10. Email is not published (email_basis not_published), reported as explicit null; email is optional. Outstanding balance unknown (null)."
+    },
+    {
+      "record_id": "R2663",
+      "facts": {
+        "entity_id": "ALDER-REF-13745",
+        "owner_entity_id": "O-ALDER-REF-13745",
+        "maturity_date": "2027-06-15",
+        "original_principal_usd": 19800000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Alder6",
+        "contact_email": "finance6@refinance-leads-alder.example"
+      },
+      "source_ids": ["S-R2663"],
+      "rationale": "Charlotte multifamily; active_confirmed; executed_note maturity 2027-06-15, extension none_executed; record_owner verified 2026-08-10; Director of Finance current, verified 2026-08-10. Outstanding balance unknown (null)."
+    },
+    {
+      "record_id": "R3927",
+      "facts": {
+        "entity_id": "ALDER-REF-56841",
+        "owner_entity_id": "O-ALDER-REF-56841",
+        "maturity_date": "2027-07-15",
+        "original_principal_usd": 20880000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Alder7",
+        "contact_email": "finance7@refinance-leads-alder.example"
+      },
+      "source_ids": ["S-R3927"],
+      "rationale": "Charlotte multifamily; active_confirmed; executed_note maturity 2027-07-15, extension none_executed; record_owner verified 2026-08-10; Director of Finance current, verified 2026-08-10. Outstanding balance unknown (null)."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R2193",
+      "eligible": false,
+      "reason": "All debt/maturity tests pass (active_confirmed, executed_note 2027-03-15, no extension) but the only verified contact is a Registered Agent (Casey Alder17), not CFO, Head of Acquisitions or Director of Finance; registered agents are excluded.",
+      "source_ids": ["S-R2193"]
+    },
+    {
+      "record_id": "R6607",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; evidence must be published and effective on or before the cutoff, so the record cannot be relied on.",
+      "source_ids": ["S-R6607"]
+    },
+    {
+      "record_id": "R5582",
+      "eligible": false,
+      "reason": "owner_relation is property_manager, not record_owner; manager-only ownership evidence is excluded.",
+      "source_ids": ["S-R5582"]
+    },
+    {
+      "record_id": "R9859",
+      "eligible": false,
+      "reason": "Market is Seattle; outside the Charlotte multifamily scope.",
+      "source_ids": ["S-R9859"]
+    },
+    {
+      "record_id": "R4360",
+      "eligible": false,
+      "reason": "ownership_verified_at 2024-01-01 is stale (owner verification required since 2026-03-01).",
+      "source_ids": ["S-R4360"]
+    },
+    {
+      "record_id": "R6400",
+      "eligible": false,
+      "reason": "maturity_basis unconfirmed and extension_status option_unresolved; unconfirmed maturities and unresolved extensions are excluded.",
+      "source_ids": ["S-R6400"]
+    },
+    {
+      "record_id": "R8446",
+      "eligible": true,
+      "reason": "Charlotte multifamily, active_confirmed loan, executed_note maturity 2027-05-15 in window, no executed extension, record_owner verified 2026-08-10, Director of Finance current and verified 2026-08-10. Email not published -> null.",
+      "source_ids": ["S-R8446"]
+    },
+    {
+      "record_id": "R2682",
+      "eligible": false,
+      "reason": "maturity_basis is inferred_from_origination; inferred maturities are excluded.",
+      "source_ids": ["S-R2682"]
+    },
+    {
+      "record_id": "R1514",
+      "eligible": true,
+      "reason": "Meets all rules (Charlotte multifamily, active_confirmed, executed_note 2027-01-15, no extension, owner verified 2026-08-10, Director of Finance current). Duplicate of entity ALDER-REF-61562 also present as R6774; retained as the single shortlisted instance.",
+      "source_ids": ["S-R1514", "S-R6774"]
+    },
+    {
+      "record_id": "R8411",
+      "eligible": false,
+      "reason": "Executed maturity 2028-02-01 falls outside the 2026-09-01..2027-08-31 window.",
+      "source_ids": ["S-R8411"]
+    },
+    {
+      "record_id": "R3927",
+      "eligible": true,
+      "reason": "Charlotte multifamily, active_confirmed, executed_note maturity 2027-07-15 in window, no extension, owner verified 2026-08-10, Director of Finance current and verified 2026-08-10.",
+      "source_ids": ["S-R3927"]
+    },
+    {
+      "record_id": "R2324",
+      "eligible": false,
+      "reason": "loan_status status_unknown; unknown-status loans are excluded (missing is unknown, not active).",
+      "source_ids": ["S-R2324"]
+    },
+    {
+      "record_id": "R2663",
+      "eligible": true,
+      "reason": "Charlotte multifamily, active_confirmed, executed_note maturity 2027-06-15 in window, no extension, owner verified 2026-08-10, Director of Finance current and verified 2026-08-10.",
+      "source_ids": ["S-R2663"]
+    },
+    {
+      "record_id": "R6902",
+      "eligible": false,
+      "reason": "Executed amendment U-R6902-1 (published/effective 2026-08-20, before cutoff) extends maturity to 2028-09-30 with extension_status executed; controlling maturity is outside the window.",
+      "source_ids": ["S-R6902", "U-R6902-1"]
+    },
+    {
+      "record_id": "R3320",
+      "eligible": false,
+      "reason": "Asset type is Office; outside the multifamily scope.",
+      "source_ids": ["S-R3320"]
+    },
+    {
+      "record_id": "R7567",
+      "eligible": true,
+      "reason": "Charlotte multifamily, active_confirmed, executed_note maturity 2027-04-15 in window; U-R7567-3 is an unsigned_draft and does not override; owner verified 2026-08-10, Director of Finance current and verified 2026-08-10.",
+      "source_ids": ["S-R7567", "U-R7567-3"]
+    },
+    {
+      "record_id": "R6774",
+      "eligible": true,
+      "reason": "Satisfies all business rules identically to R1514 (same entity ALDER-REF-61562, same loan L-ALDER-REF-61562). Duplicate record; deduplicated to R1514 so it consumes no second slot.",
+      "source_ids": ["S-R6774", "S-R1514"]
+    },
+    {
+      "record_id": "R3086",
+      "eligible": false,
+      "reason": "loan_status released; released loans are excluded.",
+      "source_ids": ["S-R3086"]
+    },
+    {
+      "record_id": "R4598",
+      "eligible": true,
+      "reason": "Eligible as of cutoff: active_confirmed, executed_note maturity 2027-03-15, no extension, owner verified 2026-08-10, Director of Finance current. Recorded release U-R4598-2 is published and effective 2026-09-10 (after cutoff) and therefore does not control, but is disclosed as a known post-cutoff risk.",
+      "source_ids": ["S-R4598", "U-R4598-2"]
+    },
+    {
+      "record_id": "R1100",
+      "eligible": false,
+      "reason": "Contact employment is former; no current CFO/Head of Acquisitions/Director of Finance evidenced.",
+      "source_ids": ["S-R1100"]
+    }
+  ],
+  "summary": "Six distinct refinance opportunities qualify from the 20 base extracts, all Charlotte multifamily with active_confirmed debt, executed and unextended maturities inside 2026-09-01..2027-08-31, record-owner verification on 2026-08-10, and a current Director of Finance verified 2026-08-10. Ranked by maturity ascending then original principal descending: R1514 (Alder Grove 1, 2027-01-15, $14,400,000; duplicate R6774 merged), R4598 (Alder Park 3, 2027-03-15, $16,560,000), R7567 (Alder Square 4, 2027-04-15, $17,640,000), R8446 (Alder Grove 5, 2027-05-15, $18,720,000), R2663 (Alder Grove 6, 2027-06-15, $19,800,000), R3927 (Alder Crossing 7, 2027-07-15, $20,880,000). Fourteen records were excluded: post-cutoff publication (R6607), out-of-scope market/asset (R9859, R3320), non-owner or stale owner evidence (R5582, R4360), registered-agent-only or former contact (R2193, R1100), unconfirmed/inferred maturity or unresolved extension (R6400, R2682), released or unknown loan status (R3086, R2324), executed extension pushing maturity out of window (R6902), and maturity outside the window (R8411). Two evidence overrides mattered before the cutoff: U-R6902-1 (executed amendment, disqualifying) and U-R7567-3 (unsigned draft, ignored); U-R4598-2 is dated after the cutoff and was not applied. All amounts reported are original principal; outstanding balances are unknown (null) in every source, and R8446's email is unpublished (null). No comp-grid XLSX or prospect CSV was produced in this direct API control mode; the shortlist facts above contain the full field set and citations needed to build one.",
+  "limitations": [
+    "outstanding_balance_usd is null in every extract; original principal (loan_amount_basis original_principal) must not be read as current balance, so refinance sizing cannot be assessed.",
+    "R4598 has a recorded release (U-R4598-2) published and effective 2026-09-10; it is after the 2026-08-31 cutoff and thus non-controlling here, but the loan is very likely no longer active in reality and should be re-verified before outreach.",
+    "R7567's maturity rests on the base executed note only; the 2028-01-01 date in U-R7567-3 could become controlling if that draft is later executed.",
+    "R6607 may well be a qualifying Charlotte multifamily opportunity but its sole source was published 2026-09-03, after the cutoff, so it is unverifiable within scope.",
+    "R1514/R6774 are duplicate sources for entity ALDER-REF-61562; no independent confirmation exists that they are separate assets or loans, and no sponsor/parent-SPV mapping is supplied for any record.",
+    "Contact seniority, employment status and owner ownership all derive from a single verification date (2026-08-10, evidence_kind note_owner_confirmation_and_team_page); no second-source confirmation of role or email deliverability is available.",
+    "No lender, rate, DSCR, occupancy, prepayment or NOI data is present in the packet, so refinance urgency and economics are unquantified.",
+    "Email for R8446 is explicitly not published and reported as null; no enrichment was performed.",
+    "Fewer than ten qualifying records exist; the shortlist is limited by evidence, not truncated."
+  ]
+}
+```

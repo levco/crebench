@@ -1,0 +1,64 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"A\",\"expression\":\"21\"},{\"name\":\"r\",\"expression\":\"0.025\"},{\"name\":\"Y\",\"expression\":\"3\"},{\"name\":\"sum_geom\",\"expression\":\"1 + (1+r) + (1+r)**2\"},{\"name\":\"total_face\",\"expression\":\"A*sum_geom\"},{\"name\":\"E_total\",\"expression\":\"6.25/12*36\"},{\"name\":\"free_rev\",\"expression\":\"0\"},{\"name\":\"TI\",\"expression\":\"12\"},{\"name\":\"net_total\",\"expression\":\"total_face - E_total - TI - free_rev\"},{\"name\":\"effective_net_rent_psf_year\",\"expression\":\"net_total/36*12\"}]}",
+  "call_id": "call_B8MmxstEKYd4vsxzCfEOGVzr",
+  "arguments": {
+    "steps": [
+      {
+        "name": "A",
+        "expression": "21"
+      },
+      {
+        "name": "r",
+        "expression": "0.025"
+      },
+      {
+        "name": "Y",
+        "expression": "3"
+      },
+      {
+        "name": "sum_geom",
+        "expression": "1 + (1+r) + (1+r)**2"
+      },
+      {
+        "name": "total_face",
+        "expression": "A*sum_geom"
+      },
+      {
+        "name": "E_total",
+        "expression": "6.25/12*36"
+      },
+      {
+        "name": "free_rev",
+        "expression": "0"
+      },
+      {
+        "name": "TI",
+        "expression": "12"
+      },
+      {
+        "name": "net_total",
+        "expression": "total_face - E_total - TI - free_rev"
+      },
+      {
+        "name": "effective_net_rent_psf_year",
+        "expression": "net_total/36*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "A": 21,
+      "r": 0.025,
+      "Y": 3,
+      "sum_geom": 3.0756249999999996,
+      "total_face": 64.58812499999999,
+      "E_total": 18.75,
+      "free_rev": 0,
+      "TI": 12,
+      "net_total": 33.83812499999999,
+      "effective_net_rent_psf_year": 11.279374999999998
+    }
+  },
+  "status": "ok"
+}

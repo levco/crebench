@@ -1,0 +1,282 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R2197",
+      "facts": {
+        "entity_id": "DOGWOOD-SPO-12301",
+        "firm_name": "Dogwood Grove 6 Capital",
+        "transaction_size_usd": 38500000,
+        "event_date": "2026-07-10",
+        "contact_name": "Morgan Dogwood6",
+        "contact_role": "Head of Acquisitions",
+        "contact_email": "person6@sponsor-leads-dogwood.example"
+      },
+      "source_ids": [
+        "S-R2197"
+      ],
+      "rationale": "Owner-operator closed single-asset Multifamily acquisition in Tampa on 2026-07-10 for $38,500,000 (in $17.5M\u2013$52.5M range, inside 2025-09-01 to 2026-08-31 window). Current Head of Acquisitions verified 2026-08-10 (after 2026-03-01) with published business email. No updates apply."
+    },
+    {
+      "record_id": "R9831",
+      "facts": {
+        "entity_id": "DOGWOOD-SPO-79419",
+        "firm_name": "Dogwood Square 5 Capital",
+        "transaction_size_usd": 36400000,
+        "event_date": "2026-06-09",
+        "contact_name": "Alex Dogwood5",
+        "contact_role": "CFO",
+        "contact_email": null
+      },
+      "source_ids": [
+        "S-R9831"
+      ],
+      "rationale": "Owner-operator closed single-asset Multifamily purchase in Tampa on 2026-06-09 for $36,400,000. Current CFO verified 2026-08-10. Email is recorded as not published, so contact_email is reported as explicit null (not guessed)."
+    },
+    {
+      "record_id": "R3432",
+      "facts": {
+        "entity_id": "DOGWOOD-SPO-28763",
+        "firm_name": "Dogwood Square 4 Capital",
+        "transaction_size_usd": 34300000,
+        "event_date": "2026-05-08",
+        "contact_name": "Taylor Dogwood4",
+        "contact_role": "Head of Acquisitions",
+        "contact_email": "person4@sponsor-leads-dogwood.example"
+      },
+      "source_ids": [
+        "S-R3432"
+      ],
+      "rationale": "Owner-operator closed single-asset Multifamily purchase in Tampa on 2026-05-08 for $34,300,000. Current Head of Acquisitions verified 2026-08-10. Update U-R3432-3 (unsigned draft, $140,000,000) is disregarded per precedence rules, so the base size governs and the deal remains in range."
+    },
+    {
+      "record_id": "R1761",
+      "facts": {
+        "entity_id": "DOGWOOD-SPO-33898",
+        "firm_name": "Dogwood Point 3 Capital",
+        "transaction_size_usd": 32200000,
+        "event_date": "2026-04-07",
+        "contact_name": "Jordan Dogwood3",
+        "contact_role": "CFO",
+        "contact_email": "person3@sponsor-leads-dogwood.example"
+      },
+      "source_ids": [
+        "S-R1761"
+      ],
+      "rationale": "Owner-operator closed single-asset Multifamily purchase in Tampa on 2026-04-07 for $32,200,000. CFO current, verified 2026-08-10. Update U-R1761-2 (published/effective 2026-09-10, contact shown as former) is later-dated than the 2026-08-31 cutoff and therefore does not apply to this as-of evaluation."
+    },
+    {
+      "record_id": "R9429",
+      "facts": {
+        "entity_id": "DOGWOOD-SPO-39382",
+        "firm_name": "Dogwood Crossing 2 Capital",
+        "transaction_size_usd": 30100000,
+        "event_date": "2026-03-06",
+        "contact_name": "Drew Dogwood",
+        "contact_role": "CFO",
+        "contact_email": "new.cfo@sponsor-leads-dogwood.example"
+      },
+      "source_ids": [
+        "S-R9429",
+        "U-R9429-1"
+      ],
+      "rationale": "Owner-operator closed single-asset Multifamily purchase in Tampa on 2026-03-06 for $30,100,000. Controlling update U-R9429-1 (current company team page, published/effective 2026-08-20, on or before cutoff) replaces the base contact with Drew Dogwood, CFO, new.cfo@sponsor-leads-dogwood.example; verification is within the required window (base 2026-08-10, team page 2026-08-20)."
+    },
+    {
+      "record_id": "R1890",
+      "facts": {
+        "entity_id": "DOGWOOD-SPO-18376",
+        "firm_name": "Dogwood Park 1 Capital",
+        "transaction_size_usd": 28000000,
+        "event_date": "2026-02-05",
+        "contact_name": "Alex Dogwood1",
+        "contact_role": "CFO",
+        "contact_email": "person1@sponsor-leads-dogwood.example"
+      },
+      "source_ids": [
+        "S-R1890",
+        "S-R1101"
+      ],
+      "rationale": "Operating parent DOGWOOD-SPO-18376 closed a single-asset Multifamily purchase in Tampa on 2026-02-05 for $28,000,000; current CFO verified 2026-08-10. This is the single sponsor slot for this parent: R1101 is a second source on the same underlying record, and R6695 is a property SPV whose executed ownership schedule resolves to this same parent (S-R6695 evidences a separate $40,600,000 closing on 2026-02-11 under the same parent, but it cannot add a second sponsor slot)."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R9429",
+      "eligible": true,
+      "reason": "Tampa Multifamily, closed single-asset purchase 2026-03-06 for $30,100,000 (in range and in window); qualifying current CFO per controlling team-page update U-R9429-1 (effective 2026-08-20, on/before cutoff). Selected.",
+      "source_ids": [
+        "S-R9429",
+        "U-R9429-1"
+      ]
+    },
+    {
+      "record_id": "R6695",
+      "eligible": true,
+      "reason": "Property SPV validly mapped to operating parent DOGWOOD-SPO-18376 via executed ownership schedule; Tampa Multifamily closed single-asset purchase 2026-02-11 for $40,600,000 with current CFO verified 2026-08-10. Eligible, but deduplicated: parent already occupies a sponsor slot via R1890/R1101, so it adds no second slot.",
+      "source_ids": [
+        "S-R6695",
+        "S-R1890"
+      ]
+    },
+    {
+      "record_id": "R1218",
+      "eligible": false,
+      "reason": "Market is Seattle, outside the Tampa scope.",
+      "source_ids": [
+        "S-R1218"
+      ]
+    },
+    {
+      "record_id": "R3088",
+      "eligible": false,
+      "reason": "Contact employment is 'former'; former employees do not satisfy the current CFO / Head of Acquisitions / Director of Finance requirement, and no alternate qualifying contact is evidenced.",
+      "source_ids": [
+        "S-R3088"
+      ]
+    },
+    {
+      "record_id": "R1890",
+      "eligible": true,
+      "reason": "Tampa Multifamily closed single-asset purchase 2026-02-05 for $28,000,000; current CFO verified 2026-08-10. Selected as the single slot for parent DOGWOOD-SPO-18376 (duplicates: R1101 same underlying record; R6695 SPV of same parent).",
+      "source_ids": [
+        "S-R1890",
+        "S-R1101"
+      ]
+    },
+    {
+      "record_id": "R3718",
+      "eligible": false,
+      "reason": "Activity is an announced bid, not a closed acquisition; announced bids are excluded.",
+      "source_ids": [
+        "S-R3718"
+      ]
+    },
+    {
+      "record_id": "R3432",
+      "eligible": true,
+      "reason": "Tampa Multifamily closed single-asset purchase 2026-05-08 for $34,300,000; current Head of Acquisitions verified 2026-08-10. Unsigned draft U-R3432-3 ($140,000,000) does not override the base extract. Selected.",
+      "source_ids": [
+        "S-R3432",
+        "U-R3432-3"
+      ]
+    },
+    {
+      "record_id": "R1135",
+      "eligible": false,
+      "reason": "Event date 2024-02-10 falls outside the 2025-09-01 to 2026-08-31 qualifying window.",
+      "source_ids": [
+        "S-R1135"
+      ]
+    },
+    {
+      "record_id": "R9543",
+      "eligible": false,
+      "reason": "Transaction size $7,000,000 is below the $17,500,000 minimum.",
+      "source_ids": [
+        "S-R9543"
+      ]
+    },
+    {
+      "record_id": "R3924",
+      "eligible": false,
+      "reason": "Size basis is portfolio_total ($245,000,000); portfolio totals are excluded and no single-asset price is evidenced.",
+      "source_ids": [
+        "S-R3924"
+      ]
+    },
+    {
+      "record_id": "R4246",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence cannot be used.",
+      "source_ids": [
+        "S-R4246"
+      ]
+    },
+    {
+      "record_id": "R4968",
+      "eligible": false,
+      "reason": "Asset type is Office, outside the Multifamily scope.",
+      "source_ids": [
+        "S-R4968"
+      ]
+    },
+    {
+      "record_id": "R8500",
+      "eligible": false,
+      "reason": "Contact verification date 2024-01-10 predates the required 2026-03-01 verification threshold.",
+      "source_ids": [
+        "S-R8500"
+      ]
+    },
+    {
+      "record_id": "R1658",
+      "eligible": false,
+      "reason": "Firm kind is broker; brokers are excluded as operating sponsors.",
+      "source_ids": [
+        "S-R1658"
+      ]
+    },
+    {
+      "record_id": "R1101",
+      "eligible": true,
+      "reason": "Second source on the same underlying record as R1890 for entity DOGWOOD-SPO-18376; meets all business rules but is a duplicate sponsor and does not add a slot.",
+      "source_ids": [
+        "S-R1101",
+        "S-R1890"
+      ]
+    },
+    {
+      "record_id": "R1761",
+      "eligible": true,
+      "reason": "Tampa Multifamily closed single-asset purchase 2026-04-07 for $32,200,000; CFO current and verified 2026-08-10. Update U-R1761-2 (2026-09-10, contact former) is dated after the cutoff and does not apply. Selected.",
+      "source_ids": [
+        "S-R1761",
+        "U-R1761-2"
+      ]
+    },
+    {
+      "record_id": "R2197",
+      "eligible": true,
+      "reason": "Tampa Multifamily closed single-asset purchase 2026-07-10 for $38,500,000; current Head of Acquisitions verified 2026-08-10. Selected.",
+      "source_ids": [
+        "S-R2197"
+      ]
+    },
+    {
+      "record_id": "R5255",
+      "eligible": false,
+      "reason": "Firm kind is property_manager; managers are excluded as operating sponsors.",
+      "source_ids": [
+        "S-R5255"
+      ]
+    },
+    {
+      "record_id": "R9831",
+      "eligible": true,
+      "reason": "Tampa Multifamily closed single-asset purchase 2026-06-09 for $36,400,000; current CFO verified 2026-08-10. Email not published, reported as null. Selected.",
+      "source_ids": [
+        "S-R9831"
+      ]
+    },
+    {
+      "record_id": "R3779",
+      "eligible": false,
+      "reason": "Only contact is a Registered Agent, which does not satisfy the CFO / Head of Acquisitions / Director of Finance requirement.",
+      "source_ids": [
+        "S-R3779"
+      ]
+    }
+  ],
+  "summary": "From 20 base records, six distinct operating sponsors qualify for Tampa Multifamily single-asset closings between 2025-09-01 and 2026-08-31 in the $17.5M\u2013$52.5M range with a current CFO/Head of Acquisitions verified on or after 2026-03-01: Dogwood Grove 6 Capital ($38.5M, 2026-07-10), Dogwood Square 5 Capital ($36.4M, 2026-06-09), Dogwood Square 4 Capital ($34.3M, 2026-05-08), Dogwood Point 3 Capital ($32.2M, 2026-04-07), Dogwood Crossing 2 Capital ($30.1M, 2026-03-06), and Dogwood Park 1 Capital ($28.0M, 2026-02-05). Key adjudications: U-R9429-1 (current team page, effective 2026-08-20) replaces the R9429 contact with Drew Dogwood, CFO; U-R3432-3 is an unsigned draft and does not raise the R3432 size out of range; U-R1761-2 is dated 2026-09-10, after the cutoff, so R1761's CFO remains current for this as-of date. Entity DOGWOOD-SPO-18376 occupies one slot only, with R1101 (second source) and R6695 (SPV under executed ownership schedule) deduplicated to it. Fourteen records were excluded for market, asset class, activity type (announced bid), size basis (portfolio total), size, date window, post-cutoff publication, stale or non-qualifying contacts (former employee, registered agent, 2024 verification), or excluded firm kinds (broker, property manager). One selected sponsor (Dogwood Square 5 Capital) has no published business email, reported as an explicit null.",
+  "limitations": [
+    "Shortlist contains six sponsors, fewer than the ten requested, because the remaining records fail at least one hard eligibility rule; no additional evidence was available within scope.",
+    "contact_email for Dogwood Square 5 Capital (R9831) is null (email_basis: not_published); it was not inferred or guessed.",
+    "For parent DOGWOOD-SPO-18376 the slot is reported using the parent's own record R1890 ($28,000,000, 2026-02-05). The SPV record R6695 evidences a separate, larger and later closing ($40,600,000, 2026-02-11) attributable to the same parent; if the intent were to represent the parent by its most recent/largest qualifying deal, that entry's rank and figures would change. No evidence links R6695's contact (Jordan Dogwood7, CFO) to the parent entity, so parent-level facts were kept from S-R1890/S-R1101.",
+    "R1761 is included because U-R1761-2 postdates the 2026-08-31 cutoff; that contact is evidenced as former as of 2026-09-10, so the lead is likely stale for outreach after the cutoff.",
+    "R4246 (Dogwood Grove 18, $34.3M, 2026-07-22) would otherwise satisfy every rule but its only source was published 2026-09-03, after the cutoff; it may qualify on a later as-of date.",
+    "R3432's size rests solely on the base extract; if U-R3432-3 were later executed at $140,000,000 the deal would exceed the size ceiling and drop out.",
+    "Contact verification relies on the supplied contact_verified_at and team-page dates; no independent role or title confirmation was possible within scope.",
+    "Records with missing fields were treated as unknown rather than zero; no external search, CRM, or contact enrichment was used, and no messages or CRM records were created.",
+    "Artifact generation (prospect CSV / comp-grid XLSX) is outside this direct API control, so no file was produced or delivered; all selected facts, citations, explicit nulls and USD units are presented in this JSON for downstream export."
+  ]
+}

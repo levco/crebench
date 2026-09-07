@@ -1,0 +1,621 @@
+{
+  "case_id": "sponsor-leads-alder",
+  "task": "sponsor_leads",
+  "target_count": 6,
+  "available_unique": 6,
+  "returned_count": 7,
+  "eligible_count": 6,
+  "verified_count": 6,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 0.8571428571428571,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 49,
+    "total": 49
+  },
+  "evidence_accuracy": {
+    "passed": 7,
+    "total": 7
+  },
+  "candidate_accuracy": {
+    "passed": 19,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 8,
+    "total": 8
+  },
+  "ineligible_rejection": {
+    "passed": 11,
+    "total": 12
+  },
+  "ranking_pair_agreement": {
+    "passed": 15,
+    "total": 15
+  },
+  "material_errors": [
+    {
+      "record_id": "R9772",
+      "type": "ineligible_selection",
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "selected_checks": [
+    {
+      "record_id": "R9772",
+      "eligible": false,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-86867",
+          "expected": "ALDER-SPO-86867",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Grove 18 Capital",
+          "expected": "Alder Grove 18 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 29400000,
+          "expected": 29400000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-07-22",
+          "expected": "2026-07-22",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Morgan Alder18",
+          "expected": "Morgan Alder18",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person18@sponsor-leads-alder.example",
+          "expected": "person18@sponsor-leads-alder.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R9772"
+      ],
+      "reported_sources": [
+        "S-R9772"
+      ]
+    },
+    {
+      "record_id": "R3168",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-67037",
+          "expected": "ALDER-SPO-67037",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Square 6 Capital",
+          "expected": "Alder Square 6 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 33000000,
+          "expected": 33000000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-07-10",
+          "expected": "2026-07-10",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Morgan Alder6",
+          "expected": "Morgan Alder6",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person6@sponsor-leads-alder.example",
+          "expected": "person6@sponsor-leads-alder.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3168"
+      ],
+      "reported_sources": [
+        "S-R3168"
+      ]
+    },
+    {
+      "record_id": "R4787",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-19257",
+          "expected": "ALDER-SPO-19257",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Square 5 Capital",
+          "expected": "Alder Square 5 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 31200000,
+          "expected": 31200000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-06-09",
+          "expected": "2026-06-09",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Alder5",
+          "expected": "Alex Alder5",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4787"
+      ],
+      "reported_sources": [
+        "S-R4787"
+      ]
+    },
+    {
+      "record_id": "R4752",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-13273",
+          "expected": "ALDER-SPO-13273",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Grove 4 Capital",
+          "expected": "Alder Grove 4 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 29400000,
+          "expected": 29400000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-05-08",
+          "expected": "2026-05-08",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Taylor Alder4",
+          "expected": "Taylor Alder4",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person4@sponsor-leads-alder.example",
+          "expected": "person4@sponsor-leads-alder.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4752"
+      ],
+      "reported_sources": [
+        "S-R4752"
+      ]
+    },
+    {
+      "record_id": "R2273",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-21979",
+          "expected": "ALDER-SPO-21979",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Park 3 Capital",
+          "expected": "Alder Park 3 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 27600000,
+          "expected": 27600000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-04-07",
+          "expected": "2026-04-07",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Jordan Alder3",
+          "expected": "Jordan Alder3",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person3@sponsor-leads-alder.example",
+          "expected": "person3@sponsor-leads-alder.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R2273"
+      ],
+      "reported_sources": [
+        "S-R2273"
+      ]
+    },
+    {
+      "record_id": "R1117",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-82903",
+          "expected": "ALDER-SPO-82903",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Park 2 Capital",
+          "expected": "Alder Park 2 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 25800000,
+          "expected": 25800000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-03-06",
+          "expected": "2026-03-06",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Drew Alder",
+          "expected": "Drew Alder",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "new.cfo@sponsor-leads-alder.example",
+          "expected": "new.cfo@sponsor-leads-alder.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R1117",
+        "U-R1117-1"
+      ],
+      "reported_sources": [
+        "S-R1117",
+        "U-R1117-1"
+      ]
+    },
+    {
+      "record_id": "R5723",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ALDER-SPO-80621",
+          "expected": "ALDER-SPO-80621",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Alder Grove 1 Capital",
+          "expected": "Alder Grove 1 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 24000000,
+          "expected": 24000000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-02-05",
+          "expected": "2026-02-05",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Alder1",
+          "expected": "Alex Alder1",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person1@sponsor-leads-alder.example",
+          "expected": "person1@sponsor-leads-alder.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R5723"
+      ],
+      "reported_sources": [
+        "S-R5723",
+        "S-R7805"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R9772",
+      "actual": true,
+      "expected": false,
+      "passed": false,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R4022",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not a closed acquisition"
+      ]
+    },
+    {
+      "record_id": "R1654",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R5723",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R1117",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4787",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3335",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Event outside lookback"
+      ]
+    },
+    {
+      "record_id": "R1421",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale contact verification"
+      ]
+    },
+    {
+      "record_id": "R2273",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R1078",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R7756",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R7814",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R2889",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R4752",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4993",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Amount is not a single-asset purchase",
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R3168",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R9496",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    },
+    {
+      "record_id": "R2033",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    },
+    {
+      "record_id": "R7805",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4644",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "applicable": true,
+  "required_format": ".csv",
+  "checks": [
+    {
+      "id": "readable_required_format",
+      "passed": true
+    },
+    {
+      "id": "identity_and_order",
+      "passed": true
+    },
+    {
+      "id": "selected_facts_and_unknowns",
+      "passed": false
+    },
+    {
+      "id": "source_identifiers",
+      "passed": true
+    }
+  ],
+  "file": "artifacts/refinance_leads_alder_charlotte.csv",
+  "criterion": "Original artifact consistency with submitted answer; factual truth is scored separately",
+  "issues": [
+    "R1514 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R4598 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R7567 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R8446 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R8446 / contact_email: artifact differs from answer or lacks explicit unknown",
+    "R2663 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R3927 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown"
+  ],
+  "sheets": [
+    "CSV"
+  ],
+  "table_sheet": "CSV",
+  "original_record_order": [
+    "R1514",
+    "R4598",
+    "R7567",
+    "R8446",
+    "R2663",
+    "R3927"
+  ],
+  "answer_record_order": [
+    "R1514",
+    "R4598",
+    "R7567",
+    "R8446",
+    "R2663",
+    "R3927"
+  ],
+  "field_checks": [
+    {
+      "record_id": "R1514",
+      "field": "entity_id",
+      "actual": "ALDER-REF-61562",
+      "original": "ALDER-REF-61562",
+      "expected": "ALDER-REF-61562",
+      "passed": true
+    },
+    {
+      "record_id": "R1514",
+      "field": "owner_entity_id",
+      "actual": "O-ALDER-REF-61562",
+      "original": "O-ALDER-REF-61562",
+      "expected": "O-ALDER-REF-61562",
+      "passed": true
+    },
+    {
+      "record_id": "R1514",
+      "field": "maturity_date",
+      "actual": "2027-01-15",
+      "original": "2027-01-15",
+      "expected": "2027-01-15",
+      "passed": true
+    },
+    {
+      "record_id": "R1514",
+      "field": "original_principal_usd",
+      "actual": "14400000",
+      "original": "14400000",
+      "expected": 14400000,
+      "passed": true
+    },
+    {
+      "record_id": "R1514",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R1514",
+      "field": "contact_name",
+      "actual": "Casey Alder1",
+      "original": "Casey Alder1",
+      "expected": "Casey Alder1",
+      "passed": true
+    },
+    {
+      "record_id": "R1514",
+      "field": "contact_email",
+      "actual": "finance1@refinance-leads-alder.example",
+      "original": "finance1@refinance-leads-alder.example",
+      "expected": "finance1@refinance-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R4598",
+      "field": "entity_id",
+      "actual": "ALDER-REF-82017",
+      "original": "ALDER-REF-82017",
+      "expected": "ALDER-REF-82017",
+      "passed": true
+    },
+    {
+      "record_id": "R4598",
+      "field": "owner_entity_id",
+      "actual": "O-ALDER-REF-82017",
+      "original": "O-ALDER-REF-82017",
+      "expected": "O-ALDER-REF-82017",
+      "passed": true
+    },
+    {
+      "record_id": "R4598",
+      "field": "maturity_date",
+      "actual": "2027-03-15",
+      "original": "2027-03-15",
+      "expected": "2027-03-15",
+      "passed": true
+    },
+    {
+      "record_id": "R4598",
+      "field": "original_principal_usd",
+      "actual": "16560000",
+      "original": "16560000",
+      "expected": 16560000,
+      "passed": true
+    },
+    {
+      "record_id": "R4598",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R4598",
+      "field": "contact_name",
+      "actual": "Avery Alder3",
+      "original": "Avery Alder3",
+      "expected": "Avery Alder3",
+      "passed": true
+    },
+    {
+      "record_id": "R4598",
+      "field": "contact_email",
+      "actual": "finance3@refinance-leads-alder.example",
+      "original": "finance3@refinance-leads-alder.example",
+      "expected": "finance3@refinance-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R7567",
+      "field": "entity_id",
+      "actual": "ALDER-REF-70342",
+      "original": "ALDER-REF-70342",
+      "expected": "ALDER-REF-70342",
+      "passed": true
+    },
+    {
+      "record_id": "R7567",
+      "field": "owner_entity_id",
+      "actual": "O-ALDER-REF-70342",
+      "original": "O-ALDER-REF-70342",
+      "expected": "O-ALDER-REF-70342",
+      "passed": true
+    },
+    {
+      "record_id": "R7567",
+      "field": "maturity_date",
+      "actual": "2027-04-15",
+      "original": "2027-04-15",
+      "expected": "2027-04-15",
+      "passed": true
+    },
+    {
+      "record_id": "R7567",
+      "field": "original_principal_usd",
+      "actual": "17640000",
+      "original": "17640000",
+      "expected": 17640000,
+      "passed": true
+    },
+    {
+      "record_id": "R7567",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R7567",
+      "field": "contact_name",
+      "actual": "Sam Alder4",
+      "original": "Sam Alder4",
+      "expected": "Sam Alder4",
+      "passed": true
+    },
+    {
+      "record_id": "R7567",
+      "field": "contact_email",
+      "actual": "finance4@refinance-leads-alder.example",
+      "original": "finance4@refinance-leads-alder.example",
+      "expected": "finance4@refinance-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R8446",
+      "field": "entity_id",
+      "actual": "ALDER-REF-87904",
+      "original": "ALDER-REF-87904",
+      "expected": "ALDER-REF-87904",
+      "passed": true
+    },
+    {
+      "record_id": "R8446",
+      "field": "owner_entity_id",
+      "actual": "O-ALDER-REF-87904",
+      "original": "O-ALDER-REF-87904",
+      "expected": "O-ALDER-REF-87904",
+      "passed": true
+    },
+    {
+      "record_id": "R8446",
+      "field": "maturity_date",
+      "actual": "2027-05-15",
+      "original": "2027-05-15",
+      "expected": "2027-05-15",
+      "passed": true
+    },
+    {
+      "record_id": "R8446",
+      "field": "original_principal_usd",
+      "actual": "18720000",
+      "original": "18720000",
+      "expected": 18720000,
+      "passed": true
+    },
+    {
+      "record_id": "R8446",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R8446",
+      "field": "contact_name",
+      "actual": "Casey Alder5",
+      "original": "Casey Alder5",
+      "expected": "Casey Alder5",
+      "passed": true
+    },
+    {
+      "record_id": "R8446",
+      "field": "contact_email",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R2663",
+      "field": "entity_id",
+      "actual": "ALDER-REF-13745",
+      "original": "ALDER-REF-13745",
+      "expected": "ALDER-REF-13745",
+      "passed": true
+    },
+    {
+      "record_id": "R2663",
+      "field": "owner_entity_id",
+      "actual": "O-ALDER-REF-13745",
+      "original": "O-ALDER-REF-13745",
+      "expected": "O-ALDER-REF-13745",
+      "passed": true
+    },
+    {
+      "record_id": "R2663",
+      "field": "maturity_date",
+      "actual": "2027-06-15",
+      "original": "2027-06-15",
+      "expected": "2027-06-15",
+      "passed": true
+    },
+    {
+      "record_id": "R2663",
+      "field": "original_principal_usd",
+      "actual": "19800000",
+      "original": "19800000",
+      "expected": 19800000,
+      "passed": true
+    },
+    {
+      "record_id": "R2663",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R2663",
+      "field": "contact_name",
+      "actual": "Riley Alder6",
+      "original": "Riley Alder6",
+      "expected": "Riley Alder6",
+      "passed": true
+    },
+    {
+      "record_id": "R2663",
+      "field": "contact_email",
+      "actual": "finance6@refinance-leads-alder.example",
+      "original": "finance6@refinance-leads-alder.example",
+      "expected": "finance6@refinance-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R3927",
+      "field": "entity_id",
+      "actual": "ALDER-REF-56841",
+      "original": "ALDER-REF-56841",
+      "expected": "ALDER-REF-56841",
+      "passed": true
+    },
+    {
+      "record_id": "R3927",
+      "field": "owner_entity_id",
+      "actual": "O-ALDER-REF-56841",
+      "original": "O-ALDER-REF-56841",
+      "expected": "O-ALDER-REF-56841",
+      "passed": true
+    },
+    {
+      "record_id": "R3927",
+      "field": "maturity_date",
+      "actual": "2027-07-15",
+      "original": "2027-07-15",
+      "expected": "2027-07-15",
+      "passed": true
+    },
+    {
+      "record_id": "R3927",
+      "field": "original_principal_usd",
+      "actual": "20880000",
+      "original": "20880000",
+      "expected": 20880000,
+      "passed": true
+    },
+    {
+      "record_id": "R3927",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false
+    },
+    {
+      "record_id": "R3927",
+      "field": "contact_name",
+      "actual": "Avery Alder7",
+      "original": "Avery Alder7",
+      "expected": "Avery Alder7",
+      "passed": true
+    },
+    {
+      "record_id": "R3927",
+      "field": "contact_email",
+      "actual": "finance7@refinance-leads-alder.example",
+      "original": "finance7@refinance-leads-alder.example",
+      "expected": "finance7@refinance-leads-alder.example",
+      "passed": true
+    }
+  ],
+  "harness_induced_null_annotations": 0,
+  "source_checks": [
+    {
+      "record_id": "R1514",
+      "passed": true,
+      "expected": [
+        "S-R1514"
+      ],
+      "actual": [
+        "S-R1514"
+      ]
+    },
+    {
+      "record_id": "R4598",
+      "passed": true,
+      "expected": [
+        "S-R4598"
+      ],
+      "actual": [
+        "S-R4598"
+      ]
+    },
+    {
+      "record_id": "R7567",
+      "passed": true,
+      "expected": [
+        "S-R7567"
+      ],
+      "actual": [
+        "S-R7567"
+      ]
+    },
+    {
+      "record_id": "R8446",
+      "passed": true,
+      "expected": [
+        "S-R8446"
+      ],
+      "actual": [
+        "S-R8446"
+      ]
+    },
+    {
+      "record_id": "R2663",
+      "passed": true,
+      "expected": [
+        "S-R2663"
+      ],
+      "actual": [
+        "S-R2663"
+      ]
+    },
+    {
+      "record_id": "R3927",
+      "passed": true,
+      "expected": [
+        "S-R3927"
+      ],
+      "actual": [
+        "S-R3927"
+      ]
+    }
+  ],
+  "source_sha256": "9581880f421768c9b764c6b4e9ef9bd22a92290368d8496669e7f01806aa8fae"
+}

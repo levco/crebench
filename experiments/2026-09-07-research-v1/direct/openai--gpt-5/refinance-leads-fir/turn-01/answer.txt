@@ -1,0 +1,132 @@
+{
+  "shortlist": [],
+  "candidate_decisions": [
+    {
+      "record_id": "R2813",
+      "eligible": false,
+      "reason": "Maturity is inferred_from_origination (unconfirmed); excludes unconfirmed/inferred maturities.",
+      "source_ids": ["S-R2813"]
+    },
+    {
+      "record_id": "R2663",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required). Duplicate of R5151 for the same entity.",
+      "source_ids": ["S-R2663", "U-R5151-4"]
+    },
+    {
+      "record_id": "R7919",
+      "eligible": false,
+      "reason": "Contact is not current (employment = former). Requires a current CFO/Head of Acquisitions/Director of Finance verified since 2026-03-01.",
+      "source_ids": ["S-R7919"]
+    },
+    {
+      "record_id": "R4743",
+      "eligible": false,
+      "reason": "Maturity unconfirmed and extension option unresolved; excludes unconfirmed maturities and unresolved extensions.",
+      "source_ids": ["S-R4743"]
+    },
+    {
+      "record_id": "R4927",
+      "eligible": false,
+      "reason": "Owner relation is property_manager. Requires record_owner; excludes managers.",
+      "source_ids": ["S-R4927"]
+    },
+    {
+      "record_id": "R5151",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required). Duplicate of R2663 for the same entity.",
+      "source_ids": ["S-R5151", "U-R5151-4"]
+    },
+    {
+      "record_id": "R1776",
+      "eligible": false,
+      "reason": "Maturity 2028-02-01 is outside the 2026-09-01 to 2027-08-31 window.",
+      "source_ids": ["S-R1776"]
+    },
+    {
+      "record_id": "R7702",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required).",
+      "source_ids": ["S-R7702", "U-R7702-7"]
+    },
+    {
+      "record_id": "R5451",
+      "eligible": false,
+      "reason": "Out of scope: Market is Seattle, not Dallas.",
+      "source_ids": ["S-R5451"]
+    },
+    {
+      "record_id": "R7436",
+      "eligible": false,
+      "reason": "Loan status is status_unknown; excludes unknown-status loans.",
+      "source_ids": ["S-R7436"]
+    },
+    {
+      "record_id": "R8900",
+      "eligible": false,
+      "reason": "Out of scope and outside window: Executed amendments updated market to Seattle and extended maturity to 2028-09-30.",
+      "source_ids": ["S-R8900", "U-R8900-5", "U-R8900-1"]
+    },
+    {
+      "record_id": "R5181",
+      "eligible": false,
+      "reason": "Out of scope: Asset type Office; requires Industrial.",
+      "source_ids": ["S-R5181"]
+    },
+    {
+      "record_id": "R3402",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required).",
+      "source_ids": ["S-R3402", "U-R3402-9"]
+    },
+    {
+      "record_id": "R7201",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required).",
+      "source_ids": ["S-R7201", "U-R7201-8"]
+    },
+    {
+      "record_id": "R9169",
+      "eligible": false,
+      "reason": "Contact role is Registered Agent; requires a current CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": ["S-R9169"]
+    },
+    {
+      "record_id": "R7833",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required).",
+      "source_ids": ["S-R7833", "U-R7833-10"]
+    },
+    {
+      "record_id": "R1118",
+      "eligible": false,
+      "reason": "Out of scope: Executed amendment updated market to Seattle (Industrial in Dallas required).",
+      "source_ids": ["S-R1118", "U-R1118-6"]
+    },
+    {
+      "record_id": "R1203",
+      "eligible": false,
+      "reason": "Owner verification is stale (2024-01-01); requires a record owner verified since 2026-03-01.",
+      "source_ids": ["S-R1203"]
+    },
+    {
+      "record_id": "R9426",
+      "eligible": false,
+      "reason": "Loan status released; excludes released loans.",
+      "source_ids": ["S-R9426"]
+    },
+    {
+      "record_id": "R5442",
+      "eligible": false,
+      "reason": "Source published after the 2026-08-31 cutoff; not considered in-scope for this run.",
+      "source_ids": ["S-R5442"]
+    }
+  ],
+  "summary": "No qualifying Dallas Industrial refinance opportunities were identified with confirmed, unextended maturities between 2026-09-01 and 2027-08-31. Most Dallas assets were moved to Seattle via executed amendments effective 2026-08-20 (e.g., R2663/R5151, R7702, R3402, R7201, R7833, R1118, R8900), while others failed due to unconfirmed or inferred maturities (R2813, R4743), non-qualifying loan status (R7436, R9426), non-record ownership (R4927), non-qualifying contact role/status (R7919, R9169), stale owner verification (R1203), asset type mismatch (R5181), or maturity outside the window (R1776). A later record (R5442) was published after the 2026-08-31 cutoff and was not considered.",
+  "limitations": [
+    "All assessments are limited to the provided sources and updates effective on or before 2026-08-31; later evidence (e.g., recorded releases after cutoff) was not applied.",
+    "Outstanding loan balances are not provided in the sources; nulls were preserved where not published.",
+    "Several records rely on amendments that change market; if entity-level cross-record updates were incomplete in the packet, scope determinations could be affected.",
+    "No eligible results means no ranked shortlist could be produced for the specified window and scope."
+  ]
+}

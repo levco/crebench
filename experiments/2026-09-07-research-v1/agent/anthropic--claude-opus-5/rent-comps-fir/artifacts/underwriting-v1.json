@@ -1,0 +1,1741 @@
+{
+  "input_map": {
+    "cutoff_date": "Method!B4",
+    "radius_miles": "Method!B6"
+  },
+  "output_map": {
+    "qualified_comp_count": "Method!B10",
+    "shortlist_status": "Method!B11"
+  },
+  "sheets": [
+    {
+      "name": "Comp Grid",
+      "freeze_rows": 3,
+      "column_widths": {
+        "A": 10,
+        "B": 16,
+        "C": 16,
+        "D": 11,
+        "E": 22,
+        "F": 12,
+        "G": 10,
+        "H": 13,
+        "I": 9,
+        "J": 8,
+        "K": 8,
+        "L": 11,
+        "M": 12,
+        "N": 18,
+        "O": 15,
+        "P": 9,
+        "Q": 60,
+        "R": 26
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Rent Comps \u2014 Industrial / Dallas \u2014 Screening Grid (as of 2026-08-31)",
+          "role": "title"
+        },
+        {
+          "cell": "A2",
+          "value": "No base record qualified under the brief; grid documents every candidate and its controlling evidence. Nulls preserved as 'null'; rents in USD per sf per year.",
+          "role": "note",
+          "wrap": true
+        },
+        {
+          "cell": "A3",
+          "value": "record_id",
+          "role": "header"
+        },
+        {
+          "cell": "B3",
+          "value": "entity_id",
+          "role": "header"
+        },
+        {
+          "cell": "C3",
+          "value": "name",
+          "role": "header"
+        },
+        {
+          "cell": "D3",
+          "value": "asset_type",
+          "role": "header"
+        },
+        {
+          "cell": "E3",
+          "value": "market (effective)",
+          "role": "header"
+        },
+        {
+          "cell": "F3",
+          "value": "event_date",
+          "role": "header"
+        },
+        {
+          "cell": "G3",
+          "value": "distance_miles",
+          "role": "header"
+        },
+        {
+          "cell": "H3",
+          "value": "annual_face_rent_psf",
+          "role": "header"
+        },
+        {
+          "cell": "I3",
+          "value": "term_months",
+          "role": "header"
+        },
+        {
+          "cell": "J3",
+          "value": "free_months",
+          "role": "header"
+        },
+        {
+          "cell": "K3",
+          "value": "ti_allowance_psf",
+          "role": "header"
+        },
+        {
+          "cell": "L3",
+          "value": "expense_basis",
+          "role": "header"
+        },
+        {
+          "cell": "M3",
+          "value": "annual_expenses_psf",
+          "role": "header"
+        },
+        {
+          "cell": "N3",
+          "value": "status",
+          "role": "header"
+        },
+        {
+          "cell": "O3",
+          "value": "effective_net_rent_psf_year",
+          "role": "header"
+        },
+        {
+          "cell": "P3",
+          "value": "eligible",
+          "role": "header"
+        },
+        {
+          "cell": "Q3",
+          "value": "reason",
+          "role": "header"
+        },
+        {
+          "cell": "R3",
+          "value": "source_ids",
+          "role": "header"
+        },
+        {
+          "cell": "A4",
+          "value": "R1207"
+        },
+        {
+          "cell": "B4",
+          "value": "FIR-REN-86900"
+        },
+        {
+          "cell": "C4",
+          "value": "Fir Crossing 8"
+        },
+        {
+          "cell": "D4",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E4",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F4",
+          "value": "2026-03-12"
+        },
+        {
+          "cell": "G4",
+          "value": 2.41
+        },
+        {
+          "cell": "H4",
+          "value": 27.48,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I4",
+          "value": 48
+        },
+        {
+          "cell": "J4",
+          "value": 3
+        },
+        {
+          "cell": "K4",
+          "value": 21
+        },
+        {
+          "cell": "L4",
+          "value": "NNN"
+        },
+        {
+          "cell": "M4",
+          "value": "null"
+        },
+        {
+          "cell": "N4",
+          "value": "asking"
+        },
+        {
+          "cell": "O4",
+          "value": "n/a"
+        },
+        {
+          "cell": "P4",
+          "value": false
+        },
+        {
+          "cell": "Q4",
+          "value": "Status = asking; asking/unsigned rents do not qualify",
+          "wrap": true
+        },
+        {
+          "cell": "R4",
+          "value": "S-R1207"
+        },
+        {
+          "cell": "A5",
+          "value": "R2562"
+        },
+        {
+          "cell": "B5",
+          "value": "FIR-REN-15552"
+        },
+        {
+          "cell": "C5",
+          "value": "Fir Square 3"
+        },
+        {
+          "cell": "D5",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E5",
+          "value": "Seattle (per U-R2562-6)"
+        },
+        {
+          "cell": "F5",
+          "value": "2026-04-07"
+        },
+        {
+          "cell": "G5",
+          "value": 1.26
+        },
+        {
+          "cell": "H5",
+          "value": 22.6,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I5",
+          "value": 60
+        },
+        {
+          "cell": "J5",
+          "value": 2
+        },
+        {
+          "cell": "K5",
+          "value": 18
+        },
+        {
+          "cell": "L5",
+          "value": "NNN"
+        },
+        {
+          "cell": "M5",
+          "value": "null"
+        },
+        {
+          "cell": "N5",
+          "value": "executed"
+        },
+        {
+          "cell": "O5",
+          "value": "n/a"
+        },
+        {
+          "cell": "P5",
+          "value": false
+        },
+        {
+          "cell": "Q5",
+          "value": "Executed amendment (eff. 2026-08-20) moved market to Seattle; outside Dallas scope. Rent amendment U-R2562-2 is post-cutoff (2026-09-10) and ignored",
+          "wrap": true
+        },
+        {
+          "cell": "R5",
+          "value": "S-R2562; U-R2562-6"
+        },
+        {
+          "cell": "A6",
+          "value": "R9849"
+        },
+        {
+          "cell": "B6",
+          "value": "FIR-REN-33092"
+        },
+        {
+          "cell": "C6",
+          "value": "Fir Grove 19"
+        },
+        {
+          "cell": "D6",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E6",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F6",
+          "value": "2026-02-23"
+        },
+        {
+          "cell": "G6",
+          "value": 4.94
+        },
+        {
+          "cell": "H6",
+          "value": 0,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I6",
+          "value": 36
+        },
+        {
+          "cell": "J6",
+          "value": 2
+        },
+        {
+          "cell": "K6",
+          "value": 18
+        },
+        {
+          "cell": "L6",
+          "value": "gross"
+        },
+        {
+          "cell": "M6",
+          "value": 6.25
+        },
+        {
+          "cell": "N6",
+          "value": "executed"
+        },
+        {
+          "cell": "O6",
+          "value": "n/a"
+        },
+        {
+          "cell": "P6",
+          "value": false
+        },
+        {
+          "cell": "Q6",
+          "value": "Face rent quote is 0; positive rent required",
+          "wrap": true
+        },
+        {
+          "cell": "R6",
+          "value": "S-R9849"
+        },
+        {
+          "cell": "A7",
+          "value": "R9791"
+        },
+        {
+          "cell": "B7",
+          "value": "FIR-REN-14118"
+        },
+        {
+          "cell": "C7",
+          "value": "Fir Square 10"
+        },
+        {
+          "cell": "D7",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E7",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F7",
+          "value": "2026-05-14"
+        },
+        {
+          "cell": "G7",
+          "value": 2.87
+        },
+        {
+          "cell": "H7",
+          "value": 29.16,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I7",
+          "value": 36
+        },
+        {
+          "cell": "J7",
+          "value": 1
+        },
+        {
+          "cell": "K7",
+          "value": 15
+        },
+        {
+          "cell": "L7",
+          "value": "gross"
+        },
+        {
+          "cell": "M7",
+          "value": "null"
+        },
+        {
+          "cell": "N7",
+          "value": "executed"
+        },
+        {
+          "cell": "O7",
+          "value": "n/a"
+        },
+        {
+          "cell": "P7",
+          "value": false
+        },
+        {
+          "cell": "Q7",
+          "value": "Gross lease with unknown annual_expenses_psf; expense deduction required",
+          "wrap": true
+        },
+        {
+          "cell": "R7",
+          "value": "S-R9791"
+        },
+        {
+          "cell": "A8",
+          "value": "R7689"
+        },
+        {
+          "cell": "B8",
+          "value": "FIR-REN-42835"
+        },
+        {
+          "cell": "C8",
+          "value": "Fir Point 16"
+        },
+        {
+          "cell": "D8",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E8",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F8",
+          "value": "2026-05-20"
+        },
+        {
+          "cell": "G8",
+          "value": 4.25
+        },
+        {
+          "cell": "H8",
+          "value": 34.2,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I8",
+          "value": "null"
+        },
+        {
+          "cell": "J8",
+          "value": 3
+        },
+        {
+          "cell": "K8",
+          "value": 21
+        },
+        {
+          "cell": "L8",
+          "value": "gross"
+        },
+        {
+          "cell": "M8",
+          "value": 6.25
+        },
+        {
+          "cell": "N8",
+          "value": "executed"
+        },
+        {
+          "cell": "O8",
+          "value": "n/a"
+        },
+        {
+          "cell": "P8",
+          "value": false
+        },
+        {
+          "cell": "Q8",
+          "value": "term_months unknown (null); known term required",
+          "wrap": true
+        },
+        {
+          "cell": "R8",
+          "value": "S-R7689"
+        },
+        {
+          "cell": "A9",
+          "value": "R2197"
+        },
+        {
+          "cell": "B9",
+          "value": "FIR-REN-75410"
+        },
+        {
+          "cell": "C9",
+          "value": "Fir Park 17"
+        },
+        {
+          "cell": "D9",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E9",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F9",
+          "value": "2026-06-21"
+        },
+        {
+          "cell": "G9",
+          "value": 4.48
+        },
+        {
+          "cell": "H9",
+          "value": "null"
+        },
+        {
+          "cell": "I9",
+          "value": 48
+        },
+        {
+          "cell": "J9",
+          "value": 0
+        },
+        {
+          "cell": "K9",
+          "value": 12
+        },
+        {
+          "cell": "L9",
+          "value": "NNN"
+        },
+        {
+          "cell": "M9",
+          "value": "null"
+        },
+        {
+          "cell": "N9",
+          "value": "executed"
+        },
+        {
+          "cell": "O9",
+          "value": "n/a"
+        },
+        {
+          "cell": "P9",
+          "value": false
+        },
+        {
+          "cell": "Q9",
+          "value": "rent_quote unknown (null); positive rent required",
+          "wrap": true
+        },
+        {
+          "cell": "R9",
+          "value": "S-R2197"
+        },
+        {
+          "cell": "A10",
+          "value": "R3079"
+        },
+        {
+          "cell": "B10",
+          "value": "FIR-REN-91476"
+        },
+        {
+          "cell": "C10",
+          "value": "Fir Square 2"
+        },
+        {
+          "cell": "D10",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E10",
+          "value": "Seattle (per U-R3079-5)"
+        },
+        {
+          "cell": "F10",
+          "value": "2026-03-06"
+        },
+        {
+          "cell": "G10",
+          "value": 1.03
+        },
+        {
+          "cell": "H10",
+          "value": 22.44,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I10",
+          "value": 48
+        },
+        {
+          "cell": "J10",
+          "value": 4
+        },
+        {
+          "cell": "K10",
+          "value": 18
+        },
+        {
+          "cell": "L10",
+          "value": "NNN"
+        },
+        {
+          "cell": "M10",
+          "value": "null"
+        },
+        {
+          "cell": "N10",
+          "value": "executed"
+        },
+        {
+          "cell": "O10",
+          "value": "n/a"
+        },
+        {
+          "cell": "P10",
+          "value": false
+        },
+        {
+          "cell": "Q10",
+          "value": "Executed amendment moved market to Seattle; outside Dallas scope. U-R3079-1 (free_months 4, TI 18) applied but moot",
+          "wrap": true
+        },
+        {
+          "cell": "R10",
+          "value": "S-R3079; U-R3079-1; U-R3079-5"
+        },
+        {
+          "cell": "A11",
+          "value": "R7814"
+        },
+        {
+          "cell": "B11",
+          "value": "FIR-REN-56771"
+        },
+        {
+          "cell": "C11",
+          "value": "Fir Crossing 4"
+        },
+        {
+          "cell": "D11",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E11",
+          "value": "Seattle (per U-R7814-7)"
+        },
+        {
+          "cell": "F11",
+          "value": "2026-05-08"
+        },
+        {
+          "cell": "G11",
+          "value": 24.12,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "H11",
+          "value": 24.12,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I11",
+          "value": 36
+        },
+        {
+          "cell": "J11",
+          "value": 3
+        },
+        {
+          "cell": "K11",
+          "value": 21
+        },
+        {
+          "cell": "L11",
+          "value": "gross"
+        },
+        {
+          "cell": "M11",
+          "value": 6.25
+        },
+        {
+          "cell": "N11",
+          "value": "executed"
+        },
+        {
+          "cell": "O11",
+          "value": "n/a"
+        },
+        {
+          "cell": "P11",
+          "value": false
+        },
+        {
+          "cell": "Q11",
+          "value": "Executed amendment moved market to Seattle; outside Dallas scope. Unsigned draft U-R7814-3 (free_months 8) not applied",
+          "wrap": true
+        },
+        {
+          "cell": "R11",
+          "value": "S-R7814; U-R7814-7"
+        },
+        {
+          "cell": "A12",
+          "value": "R4703"
+        },
+        {
+          "cell": "B12",
+          "value": "FIR-REN-99428"
+        },
+        {
+          "cell": "C12",
+          "value": "Fir Square 5"
+        },
+        {
+          "cell": "D12",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E12",
+          "value": "Seattle (per U-R4703-8)"
+        },
+        {
+          "cell": "F12",
+          "value": "2026-06-09"
+        },
+        {
+          "cell": "G12",
+          "value": 1.72
+        },
+        {
+          "cell": "H12",
+          "value": 24.2,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I12",
+          "value": 48
+        },
+        {
+          "cell": "J12",
+          "value": 0
+        },
+        {
+          "cell": "K12",
+          "value": 12
+        },
+        {
+          "cell": "L12",
+          "value": "NNN"
+        },
+        {
+          "cell": "M12",
+          "value": "null"
+        },
+        {
+          "cell": "N12",
+          "value": "executed"
+        },
+        {
+          "cell": "O12",
+          "value": "n/a"
+        },
+        {
+          "cell": "P12",
+          "value": false
+        },
+        {
+          "cell": "Q12",
+          "value": "Executed amendment moved market to Seattle; outside Dallas scope",
+          "wrap": true
+        },
+        {
+          "cell": "R12",
+          "value": "S-R4703; U-R4703-8"
+        },
+        {
+          "cell": "A13",
+          "value": "R2353"
+        },
+        {
+          "cell": "B13",
+          "value": "FIR-REN-35868"
+        },
+        {
+          "cell": "C13",
+          "value": "Fir Park 11"
+        },
+        {
+          "cell": "D13",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E13",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F13",
+          "value": "2026-06-15"
+        },
+        {
+          "cell": "G13",
+          "value": 3.1
+        },
+        {
+          "cell": "H13",
+          "value": 29,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I13",
+          "value": 48
+        },
+        {
+          "cell": "J13",
+          "value": 2
+        },
+        {
+          "cell": "K13",
+          "value": "null"
+        },
+        {
+          "cell": "L13",
+          "value": "NNN"
+        },
+        {
+          "cell": "M13",
+          "value": "null"
+        },
+        {
+          "cell": "N13",
+          "value": "executed"
+        },
+        {
+          "cell": "O13",
+          "value": "n/a"
+        },
+        {
+          "cell": "P13",
+          "value": false
+        },
+        {
+          "cell": "Q13",
+          "value": "ti_allowance_psf unknown (null); known TI required",
+          "wrap": true
+        },
+        {
+          "cell": "R13",
+          "value": "S-R2353"
+        },
+        {
+          "cell": "A14",
+          "value": "R1562"
+        },
+        {
+          "cell": "B14",
+          "value": "FIR-REN-55844"
+        },
+        {
+          "cell": "C14",
+          "value": "Fir Point 18"
+        },
+        {
+          "cell": "D14",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E14",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F14",
+          "value": "2026-07-22"
+        },
+        {
+          "cell": "G14",
+          "value": 4.71
+        },
+        {
+          "cell": "H14",
+          "value": 35.88,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I14",
+          "value": 60
+        },
+        {
+          "cell": "J14",
+          "value": 1
+        },
+        {
+          "cell": "K14",
+          "value": 15
+        },
+        {
+          "cell": "L14",
+          "value": "NNN"
+        },
+        {
+          "cell": "M14",
+          "value": "null"
+        },
+        {
+          "cell": "N14",
+          "value": "executed"
+        },
+        {
+          "cell": "O14",
+          "value": "n/a"
+        },
+        {
+          "cell": "P14",
+          "value": false
+        },
+        {
+          "cell": "Q14",
+          "value": "Evidence published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence not usable",
+          "wrap": true
+        },
+        {
+          "cell": "R14",
+          "value": "S-R1562"
+        },
+        {
+          "cell": "A15",
+          "value": "R5413"
+        },
+        {
+          "cell": "B15",
+          "value": "FIR-REN-89581"
+        },
+        {
+          "cell": "C15",
+          "value": "Fir Square 7"
+        },
+        {
+          "cell": "D15",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E15",
+          "value": "Seattle (per U-R5413-10)"
+        },
+        {
+          "cell": "F15",
+          "value": "2026-02-11"
+        },
+        {
+          "cell": "G15",
+          "value": 2.18
+        },
+        {
+          "cell": "H15",
+          "value": 25.8,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I15",
+          "value": 36
+        },
+        {
+          "cell": "J15",
+          "value": 2
+        },
+        {
+          "cell": "K15",
+          "value": 18
+        },
+        {
+          "cell": "L15",
+          "value": "gross"
+        },
+        {
+          "cell": "M15",
+          "value": 6.25
+        },
+        {
+          "cell": "N15",
+          "value": "executed"
+        },
+        {
+          "cell": "O15",
+          "value": "n/a"
+        },
+        {
+          "cell": "P15",
+          "value": false
+        },
+        {
+          "cell": "Q15",
+          "value": "Executed amendment moved market to Seattle; outside Dallas scope",
+          "wrap": true
+        },
+        {
+          "cell": "R15",
+          "value": "S-R5413; U-R5413-10"
+        },
+        {
+          "cell": "A16",
+          "value": "R7010"
+        },
+        {
+          "cell": "B16",
+          "value": "FIR-REN-71443"
+        },
+        {
+          "cell": "C16",
+          "value": "Fir Grove 15"
+        },
+        {
+          "cell": "D16",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E16",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F16",
+          "value": "2026-04-19"
+        },
+        {
+          "cell": "G16",
+          "value": 18.6
+        },
+        {
+          "cell": "H16",
+          "value": 32.2,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I16",
+          "value": 60
+        },
+        {
+          "cell": "J16",
+          "value": 2
+        },
+        {
+          "cell": "K16",
+          "value": 18
+        },
+        {
+          "cell": "L16",
+          "value": "NNN"
+        },
+        {
+          "cell": "M16",
+          "value": "null"
+        },
+        {
+          "cell": "N16",
+          "value": "executed"
+        },
+        {
+          "cell": "O16",
+          "value": "n/a"
+        },
+        {
+          "cell": "P16",
+          "value": false
+        },
+        {
+          "cell": "Q16",
+          "value": "Distance 18.6 mi exceeds 8-mile radius",
+          "wrap": true
+        },
+        {
+          "cell": "R16",
+          "value": "S-R7010"
+        },
+        {
+          "cell": "A17",
+          "value": "R5183"
+        },
+        {
+          "cell": "B17",
+          "value": "FIR-REN-34548"
+        },
+        {
+          "cell": "C17",
+          "value": "Fir Square 9"
+        },
+        {
+          "cell": "D17",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E17",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F17",
+          "value": "2026-04-13"
+        },
+        {
+          "cell": "G17",
+          "value": 2.64
+        },
+        {
+          "cell": "H17",
+          "value": 27.4,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I17",
+          "value": 60
+        },
+        {
+          "cell": "J17",
+          "value": "null"
+        },
+        {
+          "cell": "K17",
+          "value": 12
+        },
+        {
+          "cell": "L17",
+          "value": "NNN"
+        },
+        {
+          "cell": "M17",
+          "value": "null"
+        },
+        {
+          "cell": "N17",
+          "value": "executed"
+        },
+        {
+          "cell": "O17",
+          "value": "n/a"
+        },
+        {
+          "cell": "P17",
+          "value": false
+        },
+        {
+          "cell": "Q17",
+          "value": "free_months unknown (null); known free rent required",
+          "wrap": true
+        },
+        {
+          "cell": "R17",
+          "value": "S-R5183"
+        },
+        {
+          "cell": "A18",
+          "value": "R3428"
+        },
+        {
+          "cell": "B18",
+          "value": "FIR-REN-70478"
+        },
+        {
+          "cell": "C18",
+          "value": "Fir Park 1"
+        },
+        {
+          "cell": "D18",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E18",
+          "value": "Seattle (per U-R3428-4)"
+        },
+        {
+          "cell": "F18",
+          "value": "2026-02-05"
+        },
+        {
+          "cell": "G18",
+          "value": 0.8
+        },
+        {
+          "cell": "H18",
+          "value": 21,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I18",
+          "value": 36
+        },
+        {
+          "cell": "J18",
+          "value": 0
+        },
+        {
+          "cell": "K18",
+          "value": 12
+        },
+        {
+          "cell": "L18",
+          "value": "gross"
+        },
+        {
+          "cell": "M18",
+          "value": 6.25
+        },
+        {
+          "cell": "N18",
+          "value": "executed"
+        },
+        {
+          "cell": "O18",
+          "value": "n/a"
+        },
+        {
+          "cell": "P18",
+          "value": false
+        },
+        {
+          "cell": "Q18",
+          "value": "Executed amendment moved market to Seattle; outside Dallas scope. Same underlying lease as R4169 (entity FIR-REN-70478)",
+          "wrap": true
+        },
+        {
+          "cell": "R18",
+          "value": "S-R3428; U-R3428-4"
+        },
+        {
+          "cell": "A19",
+          "value": "R6529"
+        },
+        {
+          "cell": "B19",
+          "value": "FIR-REN-41631"
+        },
+        {
+          "cell": "C19",
+          "value": "Fir Square 14"
+        },
+        {
+          "cell": "D19",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E19",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F19",
+          "value": "2024-02-10"
+        },
+        {
+          "cell": "G19",
+          "value": 3.79
+        },
+        {
+          "cell": "H19",
+          "value": 32.52,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I19",
+          "value": 48
+        },
+        {
+          "cell": "J19",
+          "value": 1
+        },
+        {
+          "cell": "K19",
+          "value": 15
+        },
+        {
+          "cell": "L19",
+          "value": "NNN"
+        },
+        {
+          "cell": "M19",
+          "value": "null"
+        },
+        {
+          "cell": "N19",
+          "value": "executed"
+        },
+        {
+          "cell": "O19",
+          "value": "n/a"
+        },
+        {
+          "cell": "P19",
+          "value": false
+        },
+        {
+          "cell": "Q19",
+          "value": "Lease dated 2024-02-10, outside 2025-09-01 to 2026-08-31 window",
+          "wrap": true
+        },
+        {
+          "cell": "R19",
+          "value": "S-R6529"
+        },
+        {
+          "cell": "A20",
+          "value": "R4514"
+        },
+        {
+          "cell": "B20",
+          "value": "FIR-REN-67761"
+        },
+        {
+          "cell": "C20",
+          "value": "Fir Park 6"
+        },
+        {
+          "cell": "D20",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E20",
+          "value": "Seattle (per U-R4514-9)"
+        },
+        {
+          "cell": "F20",
+          "value": "2026-07-10"
+        },
+        {
+          "cell": "G20",
+          "value": 1.95
+        },
+        {
+          "cell": "H20",
+          "value": 25.8,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I20",
+          "value": 60
+        },
+        {
+          "cell": "J20",
+          "value": 1
+        },
+        {
+          "cell": "K20",
+          "value": 15
+        },
+        {
+          "cell": "L20",
+          "value": "NNN"
+        },
+        {
+          "cell": "M20",
+          "value": "null"
+        },
+        {
+          "cell": "N20",
+          "value": "executed"
+        },
+        {
+          "cell": "O20",
+          "value": "n/a"
+        },
+        {
+          "cell": "P20",
+          "value": false
+        },
+        {
+          "cell": "Q20",
+          "value": "Executed amendment moved market to Seattle; outside Dallas scope",
+          "wrap": true
+        },
+        {
+          "cell": "R20",
+          "value": "S-R4514; U-R4514-9"
+        },
+        {
+          "cell": "A21",
+          "value": "R1617"
+        },
+        {
+          "cell": "B21",
+          "value": "FIR-REN-84010"
+        },
+        {
+          "cell": "C21",
+          "value": "Fir Crossing 12"
+        },
+        {
+          "cell": "D21",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E21",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F21",
+          "value": "2026-07-16"
+        },
+        {
+          "cell": "G21",
+          "value": 3.33
+        },
+        {
+          "cell": "H21",
+          "value": 30.84,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I21",
+          "value": 60
+        },
+        {
+          "cell": "J21",
+          "value": 3
+        },
+        {
+          "cell": "K21",
+          "value": 21
+        },
+        {
+          "cell": "N21",
+          "value": "unsigned_proposal"
+        },
+        {
+          "cell": "L21",
+          "value": "NNN"
+        },
+        {
+          "cell": "M21",
+          "value": "null"
+        },
+        {
+          "cell": "O21",
+          "value": "n/a"
+        },
+        {
+          "cell": "P21",
+          "value": false
+        },
+        {
+          "cell": "Q21",
+          "value": "Unsigned proposal; not an executed lease",
+          "wrap": true
+        },
+        {
+          "cell": "R21",
+          "value": "S-R1617"
+        },
+        {
+          "cell": "A22",
+          "value": "R6943"
+        },
+        {
+          "cell": "B22",
+          "value": "FIR-REN-11910"
+        },
+        {
+          "cell": "C22",
+          "value": "Fir Point 13"
+        },
+        {
+          "cell": "D22",
+          "value": "Office"
+        },
+        {
+          "cell": "E22",
+          "value": "Dallas"
+        },
+        {
+          "cell": "F22",
+          "value": "2026-02-17"
+        },
+        {
+          "cell": "G22",
+          "value": 3.56
+        },
+        {
+          "cell": "H22",
+          "value": 30.6,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I22",
+          "value": 36
+        },
+        {
+          "cell": "J22",
+          "value": 0
+        },
+        {
+          "cell": "K22",
+          "value": 12
+        },
+        {
+          "cell": "L22",
+          "value": "gross"
+        },
+        {
+          "cell": "M22",
+          "value": 6.25
+        },
+        {
+          "cell": "N22",
+          "value": "executed"
+        },
+        {
+          "cell": "O22",
+          "value": "n/a"
+        },
+        {
+          "cell": "P22",
+          "value": false
+        },
+        {
+          "cell": "Q22",
+          "value": "Office asset type; outside Industrial scope",
+          "wrap": true
+        },
+        {
+          "cell": "R22",
+          "value": "S-R6943"
+        },
+        {
+          "cell": "A23",
+          "value": "R4169"
+        },
+        {
+          "cell": "B23",
+          "value": "FIR-REN-70478"
+        },
+        {
+          "cell": "C23",
+          "value": "Fir Park 1"
+        },
+        {
+          "cell": "D23",
+          "value": "Industrial"
+        },
+        {
+          "cell": "E23",
+          "value": "Seattle (per U-R3428-4, entity update)"
+        },
+        {
+          "cell": "F23",
+          "value": "2026-02-05"
+        },
+        {
+          "cell": "G23",
+          "value": 0.8
+        },
+        {
+          "cell": "H23",
+          "value": 21,
+          "number_format": "0.00"
+        },
+        {
+          "cell": "I23",
+          "value": 36
+        },
+        {
+          "cell": "J23",
+          "value": 0
+        },
+        {
+          "cell": "K23",
+          "value": 12
+        },
+        {
+          "cell": "L23",
+          "value": "gross"
+        },
+        {
+          "cell": "M23",
+          "value": 6.25
+        },
+        {
+          "cell": "N23",
+          "value": "executed"
+        },
+        {
+          "cell": "O23",
+          "value": "n/a"
+        },
+        {
+          "cell": "P23",
+          "value": false
+        },
+        {
+          "cell": "Q23",
+          "value": "Duplicate second source of entity FIR-REN-70478 (same lease as R3428); entity-level executed amendment moved market to Seattle; outside Dallas scope",
+          "wrap": true
+        },
+        {
+          "cell": "R23",
+          "value": "S-R4169; U-R3428-4"
+        },
+        {
+          "cell": "A25",
+          "value": "Qualified comps: 0 (see Method sheet)",
+          "role": "total"
+        }
+      ]
+    },
+    {
+      "name": "Method",
+      "column_widths": {
+        "A": 34,
+        "B": 46
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Method & Screen Parameters",
+          "role": "title"
+        },
+        {
+          "cell": "A3",
+          "value": "Scope",
+          "role": "header"
+        },
+        {
+          "cell": "B3",
+          "value": "Industrial, Dallas, within 8 miles",
+          "role": "body"
+        },
+        {
+          "cell": "A4",
+          "value": "Evidence cutoff",
+          "role": "header"
+        },
+        {
+          "cell": "B4",
+          "value": "2026-08-31",
+          "role": "input"
+        },
+        {
+          "cell": "A5",
+          "value": "Lease date window",
+          "role": "header"
+        },
+        {
+          "cell": "B5",
+          "value": "2025-09-01 to 2026-08-31",
+          "role": "input"
+        },
+        {
+          "cell": "A6",
+          "value": "Radius (miles)",
+          "role": "header"
+        },
+        {
+          "cell": "B6",
+          "value": 8,
+          "role": "input"
+        },
+        {
+          "cell": "A7",
+          "value": "Effective net rent convention",
+          "role": "header"
+        },
+        {
+          "cell": "B7",
+          "value": "Annualize face quote; step face rent up by annual_increase_pct at months 13/25/...; zero face rent during free_months; deduct annual_expenses_psf/12 every month for gross (zero for NNN); subtract TI once; divide net total by term_months and multiply by 12. Undiscounted, rent-only.",
+          "role": "note",
+          "wrap": true
+        },
+        {
+          "cell": "A8",
+          "value": "Required known fields",
+          "role": "header"
+        },
+        {
+          "cell": "B8",
+          "value": "Executed status, positive rent, term_months, free_months, ti_allowance_psf; gross also requires annual_expenses_psf",
+          "role": "note",
+          "wrap": true
+        },
+        {
+          "cell": "A10",
+          "value": "Qualified comp count",
+          "role": "header"
+        },
+        {
+          "cell": "B10",
+          "value": 0,
+          "role": "total"
+        },
+        {
+          "cell": "A11",
+          "value": "Shortlist status",
+          "role": "header"
+        },
+        {
+          "cell": "B11",
+          "value": "No qualifying executed comps \u2014 shortlist empty",
+          "role": "total"
+        },
+        {
+          "cell": "A12",
+          "value": "Base records screened",
+          "role": "header"
+        },
+        {
+          "cell": "B12",
+          "value": 20,
+          "role": "total"
+        },
+        {
+          "cell": "A14",
+          "value": "Override rules applied",
+          "role": "header"
+        },
+        {
+          "cell": "B14",
+          "value": "Executed amendments effective on/before cutoff override base extract (market relocations U-R2562-6, U-R3079-5, U-R3428-4, U-R4514-9, U-R4703-8, U-R5413-10, U-R7814-7; economics U-R3079-1). Unsigned draft U-R7814-3 and post-cutoff U-R2562-2 ignored. Entity update U-R3428-4 applied to duplicate R4169 (FIR-REN-70478).",
+          "role": "note",
+          "wrap": true
+        }
+      ]
+    }
+  ]
+}

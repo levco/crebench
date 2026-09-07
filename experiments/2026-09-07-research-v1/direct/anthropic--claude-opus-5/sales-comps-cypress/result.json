@@ -1,0 +1,53 @@
+{
+  "case_id": "sales-comps-cypress",
+  "system": "anthropic/claude-opus-5",
+  "track": "direct",
+  "status": "completed",
+  "started_at": "2026-09-07T03:15:00.820364+00:00",
+  "completed_at": "2026-09-07T03:15:59.171716+00:00",
+  "elapsed_seconds": 58.351,
+  "cost_usd": 0.17522,
+  "known_partial_cost_usd": 0.17522,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "model_calls": 1,
+  "tool_calls": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 5924,
+        "completion_tokens": 5824,
+        "total_tokens": 11748,
+        "cost": 0.17522,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1138,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.17522,
+        "gateway_cost": 0.17522
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 58.333,
+      "completed_at": "2026-09-07T03:15:59.169772+00:00"
+    }
+  ],
+  "artifacts": [],
+  "operator_semantic_corrections": 0
+}

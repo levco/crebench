@@ -1,0 +1,182 @@
+{
+  "shortlist": [],
+  "candidate_decisions": [
+    {
+      "record_id": "R1207",
+      "eligible": false,
+      "reason": "status=asking (not executed); asking/unsigned rents do not qualify",
+      "source_ids": [
+        "S-R1207"
+      ]
+    },
+    {
+      "record_id": "R2562",
+      "eligible": false,
+      "reason": "market changed to Seattle by executed amendment U-R2562-6 (effective 2026-08-20, pre-cutoff); U-R2562-2 (2026-09-10) is post-cutoff and ignored",
+      "source_ids": [
+        "S-R2562",
+        "U-R2562-6"
+      ]
+    },
+    {
+      "record_id": "R9849",
+      "eligible": false,
+      "reason": "rent_quote=0; no positive rent",
+      "source_ids": [
+        "S-R9849"
+      ]
+    },
+    {
+      "record_id": "R9791",
+      "eligible": false,
+      "reason": "gross lease with annual_expenses_psf=null; gross leases require a known expense deduction",
+      "source_ids": [
+        "S-R9791"
+      ]
+    },
+    {
+      "record_id": "R7689",
+      "eligible": false,
+      "reason": "term_months=null (term unknown)",
+      "source_ids": [
+        "S-R7689"
+      ]
+    },
+    {
+      "record_id": "R2197",
+      "eligible": false,
+      "reason": "rent_quote=null (no positive rent)",
+      "source_ids": [
+        "S-R2197"
+      ]
+    },
+    {
+      "record_id": "R3079",
+      "eligible": false,
+      "reason": "market changed to Seattle by executed amendment U-R3079-5 (effective 2026-08-20); U-R3079-1 free_months/TI update also applied but market change disqualifies",
+      "source_ids": [
+        "S-R3079",
+        "U-R3079-1",
+        "U-R3079-5"
+      ]
+    },
+    {
+      "record_id": "R7814",
+      "eligible": false,
+      "reason": "market changed to Seattle by executed amendment U-R7814-7 (effective 2026-08-20); unsigned draft U-R7814-3 ignored",
+      "source_ids": [
+        "S-R7814",
+        "U-R7814-7"
+      ]
+    },
+    {
+      "record_id": "R4703",
+      "eligible": false,
+      "reason": "market changed to Seattle by executed amendment U-R4703-8 (effective 2026-08-20)",
+      "source_ids": [
+        "S-R4703",
+        "U-R4703-8"
+      ]
+    },
+    {
+      "record_id": "R2353",
+      "eligible": false,
+      "reason": "ti_allowance_psf=null (TI unknown; missing != zero)",
+      "source_ids": [
+        "S-R2353"
+      ]
+    },
+    {
+      "record_id": "R1562",
+      "eligible": false,
+      "reason": "published_at 2026-09-03 is after the 2026-08-31 cutoff; evidence not admissible",
+      "source_ids": [
+        "S-R1562"
+      ]
+    },
+    {
+      "record_id": "R5413",
+      "eligible": false,
+      "reason": "market changed to Seattle by executed amendment U-R5413-10 (effective 2026-08-20)",
+      "source_ids": [
+        "S-R5413",
+        "U-R5413-10"
+      ]
+    },
+    {
+      "record_id": "R7010",
+      "eligible": false,
+      "reason": "distance 18.6 mi exceeds 8-mile radius",
+      "source_ids": [
+        "S-R7010"
+      ]
+    },
+    {
+      "record_id": "R5183",
+      "eligible": false,
+      "reason": "free_months=null (unknown; missing != zero)",
+      "source_ids": [
+        "S-R5183"
+      ]
+    },
+    {
+      "record_id": "R3428",
+      "eligible": false,
+      "reason": "entity FIR-REN-70478 market changed to Seattle by executed amendment U-R3428-4 (effective 2026-08-20)",
+      "source_ids": [
+        "S-R3428",
+        "U-R3428-4"
+      ]
+    },
+    {
+      "record_id": "R6529",
+      "eligible": false,
+      "reason": "event_date 2024-02-10 outside 2025-09-01 to 2026-08-31 window",
+      "source_ids": [
+        "S-R6529"
+      ]
+    },
+    {
+      "record_id": "R4514",
+      "eligible": false,
+      "reason": "market changed to Seattle by executed amendment U-R4514-9 (effective 2026-08-20)",
+      "source_ids": [
+        "S-R4514",
+        "U-R4514-9"
+      ]
+    },
+    {
+      "record_id": "R1617",
+      "eligible": false,
+      "reason": "status=unsigned_proposal (not executed)",
+      "source_ids": [
+        "S-R1617"
+      ]
+    },
+    {
+      "record_id": "R6943",
+      "eligible": false,
+      "reason": "asset_type=Office (not Industrial)",
+      "source_ids": [
+        "S-R6943"
+      ]
+    },
+    {
+      "record_id": "R4169",
+      "eligible": false,
+      "reason": "duplicate second_source of R3428 (same entity FIR-REN-70478); entity market update U-R3428-4 (Seattle) applies to this duplicate as well",
+      "source_ids": [
+        "S-R4169",
+        "U-R3428-4"
+      ]
+    }
+  ],
+  "summary": "No qualifying Dallas industrial executed leases within the 8-mile radius and the 2025-09-01 to 2026-08-31 window. Of 20 base records, 7 were removed by pre-cutoff executed market-change amendments (Dallas \u2192 Seattle) covering the closest-in candidates (R2562, R3079, R7814, R4703, R5413, R3428/R4169, R4514). The remainder failed on missing required inputs (rent, term, free months, TI, or gross-lease expenses), non-executed status, non-Industrial asset type, out-of-window event date, out-of-radius distance, or post-cutoff publication (R1562). Result: insufficient qualifying evidence \u2014 0 comps.",
+  "limitations": [
+    "Post-cutoff update U-R2562-2 (2026-09-10) was excluded per the on-or-before-cutoff rule; if later admitted it still would not restore R2562's Dallas market.",
+    "Unsigned draft U-R7814-3 was excluded per source-precedence; it does not modify R7814.",
+    "Executed market-change amendments were treated as fully controlling; no attempt was made to interpret them as partial or portfolio-level moves.",
+    "R4169 was treated as a duplicate of R3428 (same entity, second_source_same_underlying_record); no independent comp value was assigned.",
+    "For records with missing required facts (R2197 rent, R7689 term, R5183 free_months, R2353 TI, R9791 gross expense), 'missing' was treated as unknown and disqualifying rather than zero, per instructions."
+  ]
+}

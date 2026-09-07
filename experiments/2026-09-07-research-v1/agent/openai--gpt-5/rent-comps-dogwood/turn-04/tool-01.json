@@ -1,0 +1,255 @@
+{
+  "name": "submit_research",
+  "arguments_raw": "{\"shortlist\":[{\"record_id\":\"R8720\",\"facts\":{\"entity_id\":\"DOGWOOD-REN-60901\",\"event_date\":\"2026-02-05\",\"annual_face_rent_psf\":21,\"effective_net_rent_psf_year\":11.279375,\"term_months\":36},\"source_ids\":[\"S-R8720\"],\"rationale\":\"Selected: Executed Multifamily lease within 0.8 miles and window; gross with known expenses; concessions (free=0) and TI present. Ranked by distance.\"},{\"record_id\":\"R3534\",\"facts\":{\"entity_id\":\"DOGWOOD-REN-79987\",\"event_date\":\"2026-03-06\",\"annual_face_rent_psf\":22.44,\"effective_net_rent_psf_year\":16.92561265625,\"term_months\":48},\"source_ids\":[\"S-R3534\",\"U-R3534-1\"],\"rationale\":\"Selected: Executed Multifamily lease within 1.03 miles; executed amendment controls (free=4, TI=18). Ranked by distance.\"},{\"record_id\":\"R6645\",\"facts\":{\"entity_id\":\"DOGWOOD-REN-64895\",\"event_date\":\"2026-04-07\",\"annual_face_rent_psf\":22.6,\"effective_net_rent_psf_year\":19.405271557291666,\"term_months\":60},\"source_ids\":[\"S-R6645\"],\"rationale\":\"Selected: Executed Multifamily lease within 1.26 miles; NNN; free months and TI present. Later-dated amendment ignored per cutoff. Ranked by distance.\"},{\"record_id\":\"R6812\",\"facts\":{\"entity_id\":\"DOGWOOD-REN-50280\",\"event_date\":\"2026-05-08\",\"annual_face_rent_psf\":24.12,\"effective_net_rent_psf_year\":9.468024999999992,\"term_months\":36},\"source_ids\":[\"S-R6812\"],\"rationale\":\"Selected: Executed Multifamily lease within 1.49 miles; gross with known expenses; free months and TI present. Unsigned draft update ignored. Ranked by distance.\"},{\"record_id\":\"R1551\",\"facts\":{\"entity_id\":\"DOGWOOD-REN-99067\",\"event_date\":\"2026-06-09\",\"annual_face_rent_psf\":24.2,\"effective_net_rent_psf_year\":22.122719531249995,\"term_months\":48},\"source_ids\":[\"S-R1551\"],\"rationale\":\"Selected: Executed Multifamily lease within 1.72 miles; NNN; concessions and TI present. Ranked by distance.\"}],\"candidate_decisions\":[{\"record_id\":\"R8720\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily lease within 8 miles and window; positive rent; gross with known expense; free months (0) and TI provided.\",\"source_ids\":[\"S-R8720\"]},{\"record_id\":\"R8926\",\"eligible\":false,\"reason\":\"Ineligible: Gross lease lacks annual_expenses_psf (required for gross).\",\"source_ids\":[\"S-R8926\"]},{\"record_id\":\"R9647\",\"eligible\":false,\"reason\":\"Ineligible: Missing positive rent_quote.\",\"source_ids\":[\"S-R9647\"]},{\"record_id\":\"R9438\",\"eligible\":false,\"reason\":\"Ineligible: free_months is null (required).\",\"source_ids\":[\"S-R9438\"]},{\"record_id\":\"R6157\",\"eligible\":false,\"reason\":\"Ineligible: Status is asking, not executed.\",\"source_ids\":[\"S-R6157\"]},{\"record_id\":\"R4285\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily; within 8 miles and window; gross with known expense; free months and TI present.\",\"source_ids\":[\"S-R4285\"]},{\"record_id\":\"R9947\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily; within 8 miles and window; NNN; free months and TI present.\",\"source_ids\":[\"S-R9947\"]},{\"record_id\":\"R6717\",\"eligible\":false,\"reason\":\"Ineligible: Event date 2024-02-10 outside the 2025-09-01 to 2026-08-31 window.\",\"source_ids\":[\"S-R6717\"]},{\"record_id\":\"R9661\",\"eligible\":false,\"reason\":\"Ineligible: Source published after the cutoff (published_at 2026-09-03).\",\"source_ids\":[\"S-R9661\"]},{\"record_id\":\"R6613\",\"eligible\":false,\"reason\":\"Ineligible: Distance 18.6 miles exceeds 8-mile limit.\",\"source_ids\":[\"S-R6613\"]},{\"record_id\":\"R6645\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily; within 8 miles and window; NNN; free months and TI present. Later-dated executed amendment (U-R6645-2) effective after cutoff not applied.\",\"source_ids\":[\"S-R6645\"]},{\"record_id\":\"R9315\",\"eligible\":false,\"reason\":\"Ineligible: Status unsigned_proposal.\",\"source_ids\":[\"S-R9315\"]},{\"record_id\":\"R7718\",\"eligible\":false,\"reason\":\"Ineligible: Asset type Office (scope is Multifamily).\",\"source_ids\":[\"S-R7718\"]},{\"record_id\":\"R1330\",\"eligible\":false,\"reason\":\"Ineligible: term_months is null (known term required).\",\"source_ids\":[\"S-R1330\"]},{\"record_id\":\"R1551\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily; within 8 miles and window; NNN; free months (0) and TI present.\",\"source_ids\":[\"S-R1551\"]},{\"record_id\":\"R6660\",\"eligible\":true,\"reason\":\"Eligible by rules but duplicate of R8720 (same entity DOGWOOD-REN-60901; second_source_same_underlying_record). Will not add a second slot.\",\"source_ids\":[\"S-R6660\"]},{\"record_id\":\"R9145\",\"eligible\":false,\"reason\":\"Ineligible: TI allowance is null (required).\",\"source_ids\":[\"S-R9145\"]},{\"record_id\":\"R4220\",\"eligible\":false,\"reason\":\"Ineligible: rent_quote is not positive (0).\",\"source_ids\":[\"S-R4220\"]},{\"record_id\":\"R6812\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily; within 8 miles and window; gross with known expense; free months and TI present. Unsigned draft update (U-R6812-3) ignored.\",\"source_ids\":[\"S-R6812\"]},{\"record_id\":\"R3534\",\"eligible\":true,\"reason\":\"Eligible: Executed Multifamily; within 8 miles and window; NNN; free months and TI present. Executed amendment (U-R3534-1) controls and is applied.\",\"source_ids\":[\"S-R3534\",\"U-R3534-1\"]}],\"summary\":\"Selected five executed Multifamily rent comps in Tampa within 1.72 miles of the subject and dated between 2026-02-05 and 2026-06-09. Effective net rents (client convention) range from 9.468 to 22.123 $/sf/year. Records were ranked by distance (then recency). Exclusions were due to missing gross expenses, missing TI/free rent, non-executed status, outside distance/date window, zero/missing rent, or evidence published after the 2026-08-31 cutoff. A duplicate source for Dogwood Point 1 was noted and not double-counted. A comp-grid XLSX with citations has been created.\",\"limitations\":[\"Free rent assumed front-loaded at lease start as instructed; timing within a period is not otherwise modeled.\",\"Undiscounted rent-only convention ignores present value and non-rent economics (parking, options, reimbursements).\",\"Where rents were quoted monthly, they were annualized exactly (x12).\",\"For gross leases, expense deductions were applied every month per instruction, including free months.\",\"Later-dated or unsigned updates were intentionally ignored per cutoff and evidence rules; if new executed amendments exist post-cutoff, results may change.\"]}",
+  "call_id": "call_L4Yylb2TPqdD4PrxCeHPP1Mu",
+  "arguments": {
+    "shortlist": [
+      {
+        "record_id": "R8720",
+        "facts": {
+          "entity_id": "DOGWOOD-REN-60901",
+          "event_date": "2026-02-05",
+          "annual_face_rent_psf": 21,
+          "effective_net_rent_psf_year": 11.279375,
+          "term_months": 36
+        },
+        "source_ids": [
+          "S-R8720"
+        ],
+        "rationale": "Selected: Executed Multifamily lease within 0.8 miles and window; gross with known expenses; concessions (free=0) and TI present. Ranked by distance."
+      },
+      {
+        "record_id": "R3534",
+        "facts": {
+          "entity_id": "DOGWOOD-REN-79987",
+          "event_date": "2026-03-06",
+          "annual_face_rent_psf": 22.44,
+          "effective_net_rent_psf_year": 16.92561265625,
+          "term_months": 48
+        },
+        "source_ids": [
+          "S-R3534",
+          "U-R3534-1"
+        ],
+        "rationale": "Selected: Executed Multifamily lease within 1.03 miles; executed amendment controls (free=4, TI=18). Ranked by distance."
+      },
+      {
+        "record_id": "R6645",
+        "facts": {
+          "entity_id": "DOGWOOD-REN-64895",
+          "event_date": "2026-04-07",
+          "annual_face_rent_psf": 22.6,
+          "effective_net_rent_psf_year": 19.405271557291666,
+          "term_months": 60
+        },
+        "source_ids": [
+          "S-R6645"
+        ],
+        "rationale": "Selected: Executed Multifamily lease within 1.26 miles; NNN; free months and TI present. Later-dated amendment ignored per cutoff. Ranked by distance."
+      },
+      {
+        "record_id": "R6812",
+        "facts": {
+          "entity_id": "DOGWOOD-REN-50280",
+          "event_date": "2026-05-08",
+          "annual_face_rent_psf": 24.12,
+          "effective_net_rent_psf_year": 9.468024999999992,
+          "term_months": 36
+        },
+        "source_ids": [
+          "S-R6812"
+        ],
+        "rationale": "Selected: Executed Multifamily lease within 1.49 miles; gross with known expenses; free months and TI present. Unsigned draft update ignored. Ranked by distance."
+      },
+      {
+        "record_id": "R1551",
+        "facts": {
+          "entity_id": "DOGWOOD-REN-99067",
+          "event_date": "2026-06-09",
+          "annual_face_rent_psf": 24.2,
+          "effective_net_rent_psf_year": 22.122719531249995,
+          "term_months": 48
+        },
+        "source_ids": [
+          "S-R1551"
+        ],
+        "rationale": "Selected: Executed Multifamily lease within 1.72 miles; NNN; concessions and TI present. Ranked by distance."
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "record_id": "R8720",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily lease within 8 miles and window; positive rent; gross with known expense; free months (0) and TI provided.",
+        "source_ids": [
+          "S-R8720"
+        ]
+      },
+      {
+        "record_id": "R8926",
+        "eligible": false,
+        "reason": "Ineligible: Gross lease lacks annual_expenses_psf (required for gross).",
+        "source_ids": [
+          "S-R8926"
+        ]
+      },
+      {
+        "record_id": "R9647",
+        "eligible": false,
+        "reason": "Ineligible: Missing positive rent_quote.",
+        "source_ids": [
+          "S-R9647"
+        ]
+      },
+      {
+        "record_id": "R9438",
+        "eligible": false,
+        "reason": "Ineligible: free_months is null (required).",
+        "source_ids": [
+          "S-R9438"
+        ]
+      },
+      {
+        "record_id": "R6157",
+        "eligible": false,
+        "reason": "Ineligible: Status is asking, not executed.",
+        "source_ids": [
+          "S-R6157"
+        ]
+      },
+      {
+        "record_id": "R4285",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily; within 8 miles and window; gross with known expense; free months and TI present.",
+        "source_ids": [
+          "S-R4285"
+        ]
+      },
+      {
+        "record_id": "R9947",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily; within 8 miles and window; NNN; free months and TI present.",
+        "source_ids": [
+          "S-R9947"
+        ]
+      },
+      {
+        "record_id": "R6717",
+        "eligible": false,
+        "reason": "Ineligible: Event date 2024-02-10 outside the 2025-09-01 to 2026-08-31 window.",
+        "source_ids": [
+          "S-R6717"
+        ]
+      },
+      {
+        "record_id": "R9661",
+        "eligible": false,
+        "reason": "Ineligible: Source published after the cutoff (published_at 2026-09-03).",
+        "source_ids": [
+          "S-R9661"
+        ]
+      },
+      {
+        "record_id": "R6613",
+        "eligible": false,
+        "reason": "Ineligible: Distance 18.6 miles exceeds 8-mile limit.",
+        "source_ids": [
+          "S-R6613"
+        ]
+      },
+      {
+        "record_id": "R6645",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily; within 8 miles and window; NNN; free months and TI present. Later-dated executed amendment (U-R6645-2) effective after cutoff not applied.",
+        "source_ids": [
+          "S-R6645"
+        ]
+      },
+      {
+        "record_id": "R9315",
+        "eligible": false,
+        "reason": "Ineligible: Status unsigned_proposal.",
+        "source_ids": [
+          "S-R9315"
+        ]
+      },
+      {
+        "record_id": "R7718",
+        "eligible": false,
+        "reason": "Ineligible: Asset type Office (scope is Multifamily).",
+        "source_ids": [
+          "S-R7718"
+        ]
+      },
+      {
+        "record_id": "R1330",
+        "eligible": false,
+        "reason": "Ineligible: term_months is null (known term required).",
+        "source_ids": [
+          "S-R1330"
+        ]
+      },
+      {
+        "record_id": "R1551",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily; within 8 miles and window; NNN; free months (0) and TI present.",
+        "source_ids": [
+          "S-R1551"
+        ]
+      },
+      {
+        "record_id": "R6660",
+        "eligible": true,
+        "reason": "Eligible by rules but duplicate of R8720 (same entity DOGWOOD-REN-60901; second_source_same_underlying_record). Will not add a second slot.",
+        "source_ids": [
+          "S-R6660"
+        ]
+      },
+      {
+        "record_id": "R9145",
+        "eligible": false,
+        "reason": "Ineligible: TI allowance is null (required).",
+        "source_ids": [
+          "S-R9145"
+        ]
+      },
+      {
+        "record_id": "R4220",
+        "eligible": false,
+        "reason": "Ineligible: rent_quote is not positive (0).",
+        "source_ids": [
+          "S-R4220"
+        ]
+      },
+      {
+        "record_id": "R6812",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily; within 8 miles and window; gross with known expense; free months and TI present. Unsigned draft update (U-R6812-3) ignored.",
+        "source_ids": [
+          "S-R6812"
+        ]
+      },
+      {
+        "record_id": "R3534",
+        "eligible": true,
+        "reason": "Eligible: Executed Multifamily; within 8 miles and window; NNN; free months and TI present. Executed amendment (U-R3534-1) controls and is applied.",
+        "source_ids": [
+          "S-R3534",
+          "U-R3534-1"
+        ]
+      }
+    ],
+    "summary": "Selected five executed Multifamily rent comps in Tampa within 1.72 miles of the subject and dated between 2026-02-05 and 2026-06-09. Effective net rents (client convention) range from 9.468 to 22.123 $/sf/year. Records were ranked by distance (then recency). Exclusions were due to missing gross expenses, missing TI/free rent, non-executed status, outside distance/date window, zero/missing rent, or evidence published after the 2026-08-31 cutoff. A duplicate source for Dogwood Point 1 was noted and not double-counted. A comp-grid XLSX with citations has been created.",
+    "limitations": [
+      "Free rent assumed front-loaded at lease start as instructed; timing within a period is not otherwise modeled.",
+      "Undiscounted rent-only convention ignores present value and non-rent economics (parking, options, reimbursements).",
+      "Where rents were quoted monthly, they were annualized exactly (x12).",
+      "For gross leases, expense deductions were applied every month per instruction, including free months.",
+      "Later-dated or unsigned updates were intentionally ignored per cutoff and evidence rules; if new executed amendments exist post-cutoff, results may change."
+    ]
+  },
+  "result": {
+    "saved": true
+  },
+  "status": "ok"
+}

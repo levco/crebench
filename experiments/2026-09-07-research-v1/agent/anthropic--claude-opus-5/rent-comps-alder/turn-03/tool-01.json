@@ -1,0 +1,262 @@
+{
+  "name": "submit_research",
+  "arguments_raw": "{\"summary\":\"Five qualified executed multifamily rent comps in Charlotte within 8 miles with event dates in the 2025-09-01 to 2026-08-31 window were selected and ranked by distance ascending. Effective net rents (client undiscounted convention: annualized face rent, 2.5% step-ups at months 13/25/37/49, no face rent during free months, monthly gross expense deduction across every month of term, TI subtracted once, divided by term and annualized) range from $9.47 to $22.12 psf/yr: R1298 $11.28 (0.80 mi), R9957 $16.93 (1.03 mi), R2302 $19.41 (1.26 mi), R6740 $9.47 (1.49 mi), R6049 $22.12 (1.72 mi). Controlling updates applied: U-R9957-1 (executed amendment, effective 2026-08-20: free_months 4, TI $18). Excluded updates: U-R2302-2 (executed but effective 2026-09-10, after cutoff) and U-R6740-3 (unsigned draft). R1927 duplicates entity ALDER-REN-19075 and was deduplicated in favor of R1298 (single slot). Two further eligible comps (R2543 1.95 mi $23.69; R6844 2.18 mi $12.77) fell outside the five-slot limit. A comp-grid XLSX with live formulas and citations was produced (artifacts/underwriting-v1.xlsx).\",\"shortlist\":[{\"record_id\":\"R1298\",\"facts\":{\"entity_id\":\"ALDER-REN-19075\",\"event_date\":\"2026-02-05\",\"annual_face_rent_psf\":21,\"effective_net_rent_psf_year\":11.28,\"term_months\":36},\"source_ids\":[\"S-R1298\"],\"rationale\":\"Executed multifamily lease abstract 0.80 mi away, dated 2026-02-05 (in window). Gross basis with known expenses $6.25/sf/yr, free_months 0, TI $12. Face $21.00/sf/yr with 2.5% step-ups at months 13 and 25; expense deducted all 36 months; TI once. Closest comp; duplicate record R1927 (same entity) collapsed into this slot.\"},{\"record_id\":\"R9957\",\"facts\":{\"entity_id\":\"ALDER-REN-19383\",\"event_date\":\"2026-03-06\",\"annual_face_rent_psf\":22.44,\"effective_net_rent_psf_year\":16.93,\"term_months\":48},\"source_ids\":[\"S-R9957\",\"U-R9957-1\"],\"rationale\":\"Executed lease 1.03 mi away. Monthly quote $1.87/sf converted to $22.44/sf/yr. Executed amendment U-R9957-1 (effective 2026-08-20, on/before cutoff) controls: free_months 4 and TI $18. NNN, so expense deduction is zero.\"},{\"record_id\":\"R2302\",\"facts\":{\"entity_id\":\"ALDER-REN-80164\",\"event_date\":\"2026-04-07\",\"annual_face_rent_psf\":22.6,\"effective_net_rent_psf_year\":19.41,\"term_months\":60},\"source_ids\":[\"S-R2302\"],\"rationale\":\"Executed lease 1.26 mi away, 60-month term, NNN (zero expense deduction), 2 free months, TI $18. Base face rent $22.60/sf/yr retained because U-R2302-2 (rent $2) is published/effective 2026-09-10, after the 2026-08-31 cutoff, and therefore does not control.\"},{\"record_id\":\"R6740\",\"facts\":{\"entity_id\":\"ALDER-REN-24854\",\"event_date\":\"2026-05-08\",\"annual_face_rent_psf\":24.12,\"effective_net_rent_psf_year\":9.47,\"term_months\":36},\"source_ids\":[\"S-R6740\"],\"rationale\":\"Executed lease 1.49 mi away. $2.01/sf/mo = $24.12/sf/yr. Gross with known $6.25/sf/yr expenses charged in all 36 months, 3 free months, TI $21. Unsigned draft U-R6740-3 (free_months 8) does not override the executed base extract.\"},{\"record_id\":\"R6049\",\"facts\":{\"entity_id\":\"ALDER-REN-90122\",\"event_date\":\"2026-06-09\",\"annual_face_rent_psf\":24.2,\"effective_net_rent_psf_year\":22.12,\"term_months\":48},\"source_ids\":[\"S-R6049\"],\"rationale\":\"Executed lease 1.72 mi away, 48-month term, NNN (zero deduction), 0 free months, TI $12, face $24.20/sf/yr with 2.5% annual step-ups. Fifth and final slot by distance ranking.\"}],\"candidate_decisions\":[{\"record_id\":\"R8015\",\"eligible\":false,\"reason\":\"free_months is null (missing = unknown, not zero); known free rent is required.\",\"source_ids\":[\"S-R8015\"]},{\"record_id\":\"R1927\",\"eligible\":true,\"reason\":\"Meets all business rules but is a duplicate of entity ALDER-REN-19075 (second source for the same underlying lease as R1298); deduplicated and not given a separate slot.\",\"source_ids\":[\"S-R1927\",\"S-R1298\"]},{\"record_id\":\"R9957\",\"eligible\":true,\"reason\":\"Executed, in window, 1.03 mi, positive rent, known term/free rent/TI; NNN so no expense deduction needed. Executed amendment U-R9957-1 applied. Selected.\",\"source_ids\":[\"S-R9957\",\"U-R9957-1\"]},{\"record_id\":\"R6049\",\"eligible\":true,\"reason\":\"Executed, in window, 1.72 mi, all required fields known, NNN. Selected.\",\"source_ids\":[\"S-R6049\"]},{\"record_id\":\"R2302\",\"eligible\":true,\"reason\":\"Executed, in window, 1.26 mi, all required fields known, NNN. Later-dated U-R2302-2 (effective 2026-09-10) excluded. Selected.\",\"source_ids\":[\"S-R2302\",\"U-R2302-2\"]},{\"record_id\":\"R6740\",\"eligible\":true,\"reason\":\"Executed, in window, 1.49 mi, gross with known expense deduction $6.25/sf/yr; unsigned draft U-R6740-3 excluded. Selected.\",\"source_ids\":[\"S-R6740\",\"U-R6740-3\"]},{\"record_id\":\"R4257\",\"eligible\":false,\"reason\":\"Status is asking; asking/unsigned rents do not qualify.\",\"source_ids\":[\"S-R4257\"]},{\"record_id\":\"R4144\",\"eligible\":false,\"reason\":\"ti_allowance_psf is null; known TI is required.\",\"source_ids\":[\"S-R4144\"]},{\"record_id\":\"R4517\",\"eligible\":false,\"reason\":\"Event date 2024-02-10 falls outside the 2025-09-01 to 2026-08-31 window.\",\"source_ids\":[\"S-R4517\"]},{\"record_id\":\"R7480\",\"eligible\":false,\"reason\":\"Gross lease with annual_expenses_psf null; gross leases require a known expense deduction.\",\"source_ids\":[\"S-R7480\"]},{\"record_id\":\"R6844\",\"eligible\":true,\"reason\":\"Executed, in window, 2.18 mi, gross with known $6.25/sf/yr expenses; qualifies (effective net $12.77 psf/yr) but ranks 7th by distance and falls outside the five-comp limit.\",\"source_ids\":[\"S-R6844\"]},{\"record_id\":\"R5477\",\"eligible\":false,\"reason\":\"rent_quote is null; positive rent is required.\",\"source_ids\":[\"S-R5477\"]},{\"record_id\":\"R8781\",\"eligible\":false,\"reason\":\"term_months is null; known term is required (also 4.25 mi, gross).\",\"source_ids\":[\"S-R8781\"]},{\"record_id\":\"R1298\",\"eligible\":true,\"reason\":\"Executed, in window, 0.80 mi, gross with known expenses, free rent 0 and TI $12 known. Selected as the retained record for entity ALDER-REN-19075.\",\"source_ids\":[\"S-R1298\"]},{\"record_id\":\"R7775\",\"eligible\":false,\"reason\":\"Distance 18.6 mi exceeds the 8-mile radius.\",\"source_ids\":[\"S-R7775\"]},{\"record_id\":\"R3818\",\"eligible\":false,\"reason\":\"Asset type is Office, outside the multifamily scope.\",\"source_ids\":[\"S-R3818\"]},{\"record_id\":\"R8821\",\"eligible\":false,\"reason\":\"Status is unsigned_proposal; unsigned rents do not qualify.\",\"source_ids\":[\"S-R8821\"]},{\"record_id\":\"R2138\",\"eligible\":false,\"reason\":\"rent_quote is 0; positive rent is required.\",\"source_ids\":[\"S-R2138\"]},{\"record_id\":\"R2543\",\"eligible\":true,\"reason\":\"Executed, in window, 1.95 mi, NNN, all required fields known; qualifies (effective net $23.69 psf/yr) but ranks 6th by distance and falls outside the five-comp limit.\",\"source_ids\":[\"S-R2543\"]},{\"record_id\":\"R2337\",\"eligible\":false,\"reason\":\"Evidence published 2026-09-03, after the 2026-08-31 cutoff; only evidence published and effective on or before the cutoff may be used (also 4.71 mi).\",\"source_ids\":[\"S-R2337\"]}],\"limitations\":[\"Effective rents follow the client's undiscounted rent-only convention (no time value, no discounting, no vacancy/credit loss) and are not a market appraisal or value indication.\",\"Escalations are applied as full annual steps at months 13/25/37/49 on the annualized face rent; partial-year or mid-term escalation timing in the actual documents is not evidenced.\",\"Free rent is assumed to occur in the first months of term and to abate face rent only; gross expense deductions are charged in every month including free-rent months, per the stated convention.\",\"NNN comps have annual_expenses_psf null; the convention sets the NNN deduction to zero, so net rents for NNN and gross comps are not fully like-for-like.\",\"U-R2302-2 would reduce R2302's face rent to $2 but is effective 2026-09-10 (after cutoff) and was excluded; if it were effective, R2302's ranking metric would change materially.\",\"U-R6740-3 (free_months 8) is an unsigned draft and was excluded; the executed base terms may later be amended.\",\"R1927 and R1298 report identical terms for entity ALDER-REN-19075; only one slot was used, but which document is the primary abstract is not evidenced beyond evidence_kind labels.\",\"Distances, areas and expense loads are taken as supplied; no independent verification of geography, unit mix or lease clauses was possible.\",\"Two otherwise-qualifying comps (R2543, R6844) were omitted solely because of the five-comp cap, so the shortlist is distance-weighted rather than a full market sample.\"]}",
+  "call_id": "toolu_01HzQtd6qdZ23DDB3GhRTBq9",
+  "arguments": {
+    "summary": "Five qualified executed multifamily rent comps in Charlotte within 8 miles with event dates in the 2025-09-01 to 2026-08-31 window were selected and ranked by distance ascending. Effective net rents (client undiscounted convention: annualized face rent, 2.5% step-ups at months 13/25/37/49, no face rent during free months, monthly gross expense deduction across every month of term, TI subtracted once, divided by term and annualized) range from $9.47 to $22.12 psf/yr: R1298 $11.28 (0.80 mi), R9957 $16.93 (1.03 mi), R2302 $19.41 (1.26 mi), R6740 $9.47 (1.49 mi), R6049 $22.12 (1.72 mi). Controlling updates applied: U-R9957-1 (executed amendment, effective 2026-08-20: free_months 4, TI $18). Excluded updates: U-R2302-2 (executed but effective 2026-09-10, after cutoff) and U-R6740-3 (unsigned draft). R1927 duplicates entity ALDER-REN-19075 and was deduplicated in favor of R1298 (single slot). Two further eligible comps (R2543 1.95 mi $23.69; R6844 2.18 mi $12.77) fell outside the five-slot limit. A comp-grid XLSX with live formulas and citations was produced (artifacts/underwriting-v1.xlsx).",
+    "shortlist": [
+      {
+        "record_id": "R1298",
+        "facts": {
+          "entity_id": "ALDER-REN-19075",
+          "event_date": "2026-02-05",
+          "annual_face_rent_psf": 21,
+          "effective_net_rent_psf_year": 11.28,
+          "term_months": 36
+        },
+        "source_ids": [
+          "S-R1298"
+        ],
+        "rationale": "Executed multifamily lease abstract 0.80 mi away, dated 2026-02-05 (in window). Gross basis with known expenses $6.25/sf/yr, free_months 0, TI $12. Face $21.00/sf/yr with 2.5% step-ups at months 13 and 25; expense deducted all 36 months; TI once. Closest comp; duplicate record R1927 (same entity) collapsed into this slot."
+      },
+      {
+        "record_id": "R9957",
+        "facts": {
+          "entity_id": "ALDER-REN-19383",
+          "event_date": "2026-03-06",
+          "annual_face_rent_psf": 22.44,
+          "effective_net_rent_psf_year": 16.93,
+          "term_months": 48
+        },
+        "source_ids": [
+          "S-R9957",
+          "U-R9957-1"
+        ],
+        "rationale": "Executed lease 1.03 mi away. Monthly quote $1.87/sf converted to $22.44/sf/yr. Executed amendment U-R9957-1 (effective 2026-08-20, on/before cutoff) controls: free_months 4 and TI $18. NNN, so expense deduction is zero."
+      },
+      {
+        "record_id": "R2302",
+        "facts": {
+          "entity_id": "ALDER-REN-80164",
+          "event_date": "2026-04-07",
+          "annual_face_rent_psf": 22.6,
+          "effective_net_rent_psf_year": 19.41,
+          "term_months": 60
+        },
+        "source_ids": [
+          "S-R2302"
+        ],
+        "rationale": "Executed lease 1.26 mi away, 60-month term, NNN (zero expense deduction), 2 free months, TI $18. Base face rent $22.60/sf/yr retained because U-R2302-2 (rent $2) is published/effective 2026-09-10, after the 2026-08-31 cutoff, and therefore does not control."
+      },
+      {
+        "record_id": "R6740",
+        "facts": {
+          "entity_id": "ALDER-REN-24854",
+          "event_date": "2026-05-08",
+          "annual_face_rent_psf": 24.12,
+          "effective_net_rent_psf_year": 9.47,
+          "term_months": 36
+        },
+        "source_ids": [
+          "S-R6740"
+        ],
+        "rationale": "Executed lease 1.49 mi away. $2.01/sf/mo = $24.12/sf/yr. Gross with known $6.25/sf/yr expenses charged in all 36 months, 3 free months, TI $21. Unsigned draft U-R6740-3 (free_months 8) does not override the executed base extract."
+      },
+      {
+        "record_id": "R6049",
+        "facts": {
+          "entity_id": "ALDER-REN-90122",
+          "event_date": "2026-06-09",
+          "annual_face_rent_psf": 24.2,
+          "effective_net_rent_psf_year": 22.12,
+          "term_months": 48
+        },
+        "source_ids": [
+          "S-R6049"
+        ],
+        "rationale": "Executed lease 1.72 mi away, 48-month term, NNN (zero deduction), 0 free months, TI $12, face $24.20/sf/yr with 2.5% annual step-ups. Fifth and final slot by distance ranking."
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "record_id": "R8015",
+        "eligible": false,
+        "reason": "free_months is null (missing = unknown, not zero); known free rent is required.",
+        "source_ids": [
+          "S-R8015"
+        ]
+      },
+      {
+        "record_id": "R1927",
+        "eligible": true,
+        "reason": "Meets all business rules but is a duplicate of entity ALDER-REN-19075 (second source for the same underlying lease as R1298); deduplicated and not given a separate slot.",
+        "source_ids": [
+          "S-R1927",
+          "S-R1298"
+        ]
+      },
+      {
+        "record_id": "R9957",
+        "eligible": true,
+        "reason": "Executed, in window, 1.03 mi, positive rent, known term/free rent/TI; NNN so no expense deduction needed. Executed amendment U-R9957-1 applied. Selected.",
+        "source_ids": [
+          "S-R9957",
+          "U-R9957-1"
+        ]
+      },
+      {
+        "record_id": "R6049",
+        "eligible": true,
+        "reason": "Executed, in window, 1.72 mi, all required fields known, NNN. Selected.",
+        "source_ids": [
+          "S-R6049"
+        ]
+      },
+      {
+        "record_id": "R2302",
+        "eligible": true,
+        "reason": "Executed, in window, 1.26 mi, all required fields known, NNN. Later-dated U-R2302-2 (effective 2026-09-10) excluded. Selected.",
+        "source_ids": [
+          "S-R2302",
+          "U-R2302-2"
+        ]
+      },
+      {
+        "record_id": "R6740",
+        "eligible": true,
+        "reason": "Executed, in window, 1.49 mi, gross with known expense deduction $6.25/sf/yr; unsigned draft U-R6740-3 excluded. Selected.",
+        "source_ids": [
+          "S-R6740",
+          "U-R6740-3"
+        ]
+      },
+      {
+        "record_id": "R4257",
+        "eligible": false,
+        "reason": "Status is asking; asking/unsigned rents do not qualify.",
+        "source_ids": [
+          "S-R4257"
+        ]
+      },
+      {
+        "record_id": "R4144",
+        "eligible": false,
+        "reason": "ti_allowance_psf is null; known TI is required.",
+        "source_ids": [
+          "S-R4144"
+        ]
+      },
+      {
+        "record_id": "R4517",
+        "eligible": false,
+        "reason": "Event date 2024-02-10 falls outside the 2025-09-01 to 2026-08-31 window.",
+        "source_ids": [
+          "S-R4517"
+        ]
+      },
+      {
+        "record_id": "R7480",
+        "eligible": false,
+        "reason": "Gross lease with annual_expenses_psf null; gross leases require a known expense deduction.",
+        "source_ids": [
+          "S-R7480"
+        ]
+      },
+      {
+        "record_id": "R6844",
+        "eligible": true,
+        "reason": "Executed, in window, 2.18 mi, gross with known $6.25/sf/yr expenses; qualifies (effective net $12.77 psf/yr) but ranks 7th by distance and falls outside the five-comp limit.",
+        "source_ids": [
+          "S-R6844"
+        ]
+      },
+      {
+        "record_id": "R5477",
+        "eligible": false,
+        "reason": "rent_quote is null; positive rent is required.",
+        "source_ids": [
+          "S-R5477"
+        ]
+      },
+      {
+        "record_id": "R8781",
+        "eligible": false,
+        "reason": "term_months is null; known term is required (also 4.25 mi, gross).",
+        "source_ids": [
+          "S-R8781"
+        ]
+      },
+      {
+        "record_id": "R1298",
+        "eligible": true,
+        "reason": "Executed, in window, 0.80 mi, gross with known expenses, free rent 0 and TI $12 known. Selected as the retained record for entity ALDER-REN-19075.",
+        "source_ids": [
+          "S-R1298"
+        ]
+      },
+      {
+        "record_id": "R7775",
+        "eligible": false,
+        "reason": "Distance 18.6 mi exceeds the 8-mile radius.",
+        "source_ids": [
+          "S-R7775"
+        ]
+      },
+      {
+        "record_id": "R3818",
+        "eligible": false,
+        "reason": "Asset type is Office, outside the multifamily scope.",
+        "source_ids": [
+          "S-R3818"
+        ]
+      },
+      {
+        "record_id": "R8821",
+        "eligible": false,
+        "reason": "Status is unsigned_proposal; unsigned rents do not qualify.",
+        "source_ids": [
+          "S-R8821"
+        ]
+      },
+      {
+        "record_id": "R2138",
+        "eligible": false,
+        "reason": "rent_quote is 0; positive rent is required.",
+        "source_ids": [
+          "S-R2138"
+        ]
+      },
+      {
+        "record_id": "R2543",
+        "eligible": true,
+        "reason": "Executed, in window, 1.95 mi, NNN, all required fields known; qualifies (effective net $23.69 psf/yr) but ranks 6th by distance and falls outside the five-comp limit.",
+        "source_ids": [
+          "S-R2543"
+        ]
+      },
+      {
+        "record_id": "R2337",
+        "eligible": false,
+        "reason": "Evidence published 2026-09-03, after the 2026-08-31 cutoff; only evidence published and effective on or before the cutoff may be used (also 4.71 mi).",
+        "source_ids": [
+          "S-R2337"
+        ]
+      }
+    ],
+    "limitations": [
+      "Effective rents follow the client's undiscounted rent-only convention (no time value, no discounting, no vacancy/credit loss) and are not a market appraisal or value indication.",
+      "Escalations are applied as full annual steps at months 13/25/37/49 on the annualized face rent; partial-year or mid-term escalation timing in the actual documents is not evidenced.",
+      "Free rent is assumed to occur in the first months of term and to abate face rent only; gross expense deductions are charged in every month including free-rent months, per the stated convention.",
+      "NNN comps have annual_expenses_psf null; the convention sets the NNN deduction to zero, so net rents for NNN and gross comps are not fully like-for-like.",
+      "U-R2302-2 would reduce R2302's face rent to $2 but is effective 2026-09-10 (after cutoff) and was excluded; if it were effective, R2302's ranking metric would change materially.",
+      "U-R6740-3 (free_months 8) is an unsigned draft and was excluded; the executed base terms may later be amended.",
+      "R1927 and R1298 report identical terms for entity ALDER-REN-19075; only one slot was used, but which document is the primary abstract is not evidenced beyond evidence_kind labels.",
+      "Distances, areas and expense loads are taken as supplied; no independent verification of geography, unit mix or lease clauses was possible.",
+      "Two otherwise-qualifying comps (R2543, R6844) were omitted solely because of the five-comp cap, so the shortlist is distance-weighted rather than a full market sample."
+    ]
+  },
+  "result": {
+    "saved": true
+  },
+  "status": "ok"
+}

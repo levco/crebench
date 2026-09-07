@@ -1,0 +1,155 @@
+{
+  "case_id": "sales-comps-elm",
+  "system": "openai/gpt-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T03:17:50.098570+00:00",
+  "completed_at": "2026-09-07T03:21:09.543955+00:00",
+  "elapsed_seconds": 199.445,
+  "cost_usd": 0.225564,
+  "known_partial_cost_usd": 0.225564,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "openai/gpt-5"
+  ],
+  "model_calls": 4,
+  "tool_calls": 4,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 5350,
+        "completion_tokens": 2377,
+        "total_tokens": 7727,
+        "cost": 0.0304575,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2304,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0304575,
+        "gateway_cost": 0.0304575
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 20.688,
+      "completed_at": "2026-09-07T03:18:10.815002+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 5399,
+        "completion_tokens": 5361,
+        "total_tokens": 10760,
+        "cost": 0.05445475,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4736,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.05445475,
+        "gateway_cost": 0.05445475
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 59.667,
+      "completed_at": "2026-09-07T03:19:10.487600+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 6012,
+        "completion_tokens": 5929,
+        "total_tokens": 11941,
+        "cost": 0.060757,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5376,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5888,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.060757,
+        "gateway_cost": 0.060757
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 51.143,
+      "completed_at": "2026-09-07T03:20:02.138401+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 6055,
+        "completion_tokens": 7895,
+        "total_tokens": 13950,
+        "cost": 0.07989475,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6464,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.07989475,
+        "gateway_cost": 0.07989475
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 67.399,
+      "completed_at": "2026-09-07T03:21:09.540646+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/underwriting-v1.xlsx",
+      "sha256": "bab688a91681a04394f315d45846c848742e5a827db240b2f52464f7b023332d",
+      "bytes": 4095
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

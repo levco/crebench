@@ -1,0 +1,457 @@
+{
+  "applicable": true,
+  "required_format": ".csv",
+  "checks": [
+    {
+      "id": "readable_required_format",
+      "passed": true
+    },
+    {
+      "id": "identity_and_order",
+      "passed": true
+    },
+    {
+      "id": "selected_facts_and_unknowns",
+      "passed": false
+    },
+    {
+      "id": "source_identifiers",
+      "passed": true
+    }
+  ],
+  "file": "artifacts/prospects-v2.csv",
+  "criterion": "Original artifact consistency with submitted answer; factual truth is scored separately",
+  "issues": [
+    "1 blank unknown annotations were caused by the benchmark CSV writer after explicit model-supplied JSON nulls; these are harness delivery failures, not model factual errors.",
+    "R3919 / contact_email: artifact differs from answer or lacks explicit unknown"
+  ],
+  "sheets": [
+    "CSV"
+  ],
+  "table_sheet": "CSV",
+  "original_record_order": [
+    "R9249",
+    "R3919",
+    "R2909",
+    "R4338",
+    "R9956",
+    "R2141"
+  ],
+  "answer_record_order": [
+    "R9249",
+    "R3919",
+    "R2909",
+    "R4338",
+    "R9956",
+    "R2141"
+  ],
+  "field_checks": [
+    {
+      "record_id": "R9249",
+      "field": "entity_id",
+      "actual": "CYPRESS-SPO-30009",
+      "original": "CYPRESS-SPO-30009",
+      "expected": "CYPRESS-SPO-30009",
+      "passed": true
+    },
+    {
+      "record_id": "R9249",
+      "field": "firm_name",
+      "actual": "Cypress Square 6 Capital",
+      "original": "Cypress Square 6 Capital",
+      "expected": "Cypress Square 6 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R9249",
+      "field": "transaction_size_usd",
+      "actual": "11000000",
+      "original": "11000000",
+      "expected": 11000000,
+      "passed": true
+    },
+    {
+      "record_id": "R9249",
+      "field": "event_date",
+      "actual": "2026-07-10",
+      "original": "2026-07-10",
+      "expected": "2026-07-10",
+      "passed": true
+    },
+    {
+      "record_id": "R9249",
+      "field": "contact_name",
+      "actual": "Morgan Cypress6",
+      "original": "Morgan Cypress6",
+      "expected": "Morgan Cypress6",
+      "passed": true
+    },
+    {
+      "record_id": "R9249",
+      "field": "contact_role",
+      "actual": "Head of Acquisitions",
+      "original": "Head of Acquisitions",
+      "expected": "Head of Acquisitions",
+      "passed": true
+    },
+    {
+      "record_id": "R9249",
+      "field": "contact_email",
+      "actual": "person6@sponsor-leads-cypress.example",
+      "original": "person6@sponsor-leads-cypress.example",
+      "expected": "person6@sponsor-leads-cypress.example",
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "entity_id",
+      "actual": "CYPRESS-SPO-21730",
+      "original": "CYPRESS-SPO-21730",
+      "expected": "CYPRESS-SPO-21730",
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "firm_name",
+      "actual": "Cypress Park 5 Capital",
+      "original": "Cypress Park 5 Capital",
+      "expected": "Cypress Park 5 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "transaction_size_usd",
+      "actual": "10400000",
+      "original": "10400000",
+      "expected": 10400000,
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "event_date",
+      "actual": "2026-06-09",
+      "original": "2026-06-09",
+      "expected": "2026-06-09",
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "contact_name",
+      "actual": "Alex Cypress5",
+      "original": "Alex Cypress5",
+      "expected": "Alex Cypress5",
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R3919",
+      "field": "contact_email",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/openai--gpt-5/sponsor-leads-cypress/turn-03/tool-01.json"
+    },
+    {
+      "record_id": "R2909",
+      "field": "entity_id",
+      "actual": "CYPRESS-SPO-81408",
+      "original": "CYPRESS-SPO-81408",
+      "expected": "CYPRESS-SPO-81408",
+      "passed": true
+    },
+    {
+      "record_id": "R2909",
+      "field": "firm_name",
+      "actual": "Cypress Crossing 4 Capital",
+      "original": "Cypress Crossing 4 Capital",
+      "expected": "Cypress Crossing 4 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R2909",
+      "field": "transaction_size_usd",
+      "actual": "9800000",
+      "original": "9800000",
+      "expected": 9800000,
+      "passed": true
+    },
+    {
+      "record_id": "R2909",
+      "field": "event_date",
+      "actual": "2026-05-08",
+      "original": "2026-05-08",
+      "expected": "2026-05-08",
+      "passed": true
+    },
+    {
+      "record_id": "R2909",
+      "field": "contact_name",
+      "actual": "Taylor Cypress4",
+      "original": "Taylor Cypress4",
+      "expected": "Taylor Cypress4",
+      "passed": true
+    },
+    {
+      "record_id": "R2909",
+      "field": "contact_role",
+      "actual": "Head of Acquisitions",
+      "original": "Head of Acquisitions",
+      "expected": "Head of Acquisitions",
+      "passed": true
+    },
+    {
+      "record_id": "R2909",
+      "field": "contact_email",
+      "actual": "person4@sponsor-leads-cypress.example",
+      "original": "person4@sponsor-leads-cypress.example",
+      "expected": "person4@sponsor-leads-cypress.example",
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "entity_id",
+      "actual": "CYPRESS-SPO-51531",
+      "original": "CYPRESS-SPO-51531",
+      "expected": "CYPRESS-SPO-51531",
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "firm_name",
+      "actual": "Cypress Square 3 Capital",
+      "original": "Cypress Square 3 Capital",
+      "expected": "Cypress Square 3 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "transaction_size_usd",
+      "actual": "9200000",
+      "original": "9200000",
+      "expected": 9200000,
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "event_date",
+      "actual": "2026-04-07",
+      "original": "2026-04-07",
+      "expected": "2026-04-07",
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "contact_name",
+      "actual": "Jordan Cypress3",
+      "original": "Jordan Cypress3",
+      "expected": "Jordan Cypress3",
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R4338",
+      "field": "contact_email",
+      "actual": "person3@sponsor-leads-cypress.example",
+      "original": "person3@sponsor-leads-cypress.example",
+      "expected": "person3@sponsor-leads-cypress.example",
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "entity_id",
+      "actual": "CYPRESS-SPO-38583",
+      "original": "CYPRESS-SPO-38583",
+      "expected": "CYPRESS-SPO-38583",
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "firm_name",
+      "actual": "Cypress Point 2 Capital",
+      "original": "Cypress Point 2 Capital",
+      "expected": "Cypress Point 2 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "transaction_size_usd",
+      "actual": "8600000",
+      "original": "8600000",
+      "expected": 8600000,
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "event_date",
+      "actual": "2026-03-06",
+      "original": "2026-03-06",
+      "expected": "2026-03-06",
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "contact_name",
+      "actual": "Drew Cypress",
+      "original": "Drew Cypress",
+      "expected": "Drew Cypress",
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R9956",
+      "field": "contact_email",
+      "actual": "new.cfo@sponsor-leads-cypress.example",
+      "original": "new.cfo@sponsor-leads-cypress.example",
+      "expected": "new.cfo@sponsor-leads-cypress.example",
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "entity_id",
+      "actual": "CYPRESS-SPO-90059",
+      "original": "CYPRESS-SPO-90059",
+      "expected": "CYPRESS-SPO-90059",
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "firm_name",
+      "actual": "Cypress Crossing 1 Capital",
+      "original": "Cypress Crossing 1 Capital",
+      "expected": "Cypress Crossing 1 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "transaction_size_usd",
+      "actual": "11600000",
+      "original": "11600000",
+      "expected": 11600000,
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "event_date",
+      "actual": "2026-02-11",
+      "original": "2026-02-11",
+      "expected": "2026-02-11",
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "contact_name",
+      "actual": "Alex Cypress1",
+      "original": "Alex Cypress1",
+      "expected": "Alex Cypress1",
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R2141",
+      "field": "contact_email",
+      "actual": "person1@sponsor-leads-cypress.example",
+      "original": "person1@sponsor-leads-cypress.example",
+      "expected": "person1@sponsor-leads-cypress.example",
+      "passed": true
+    }
+  ],
+  "harness_induced_null_annotations": 1,
+  "source_checks": [
+    {
+      "record_id": "R9249",
+      "passed": true,
+      "expected": [
+        "S-R9249"
+      ],
+      "actual": [
+        "S-R9249"
+      ]
+    },
+    {
+      "record_id": "R3919",
+      "passed": true,
+      "expected": [
+        "S-R3919"
+      ],
+      "actual": [
+        "S-R3919"
+      ]
+    },
+    {
+      "record_id": "R2909",
+      "passed": true,
+      "expected": [
+        "S-R2909"
+      ],
+      "actual": [
+        "S-R2909"
+      ]
+    },
+    {
+      "record_id": "R4338",
+      "passed": true,
+      "expected": [
+        "S-R4338"
+      ],
+      "actual": [
+        "S-R4338"
+      ]
+    },
+    {
+      "record_id": "R9956",
+      "passed": true,
+      "expected": [
+        "S-R9956",
+        "U-R9956-1"
+      ],
+      "actual": [
+        "S-R9956",
+        "U-R9956-1"
+      ]
+    },
+    {
+      "record_id": "R2141",
+      "passed": true,
+      "expected": [
+        "S-R2141",
+        "S-R9815"
+      ],
+      "actual": [
+        "S-R2141",
+        "S-R9815"
+      ]
+    }
+  ],
+  "source_sha256": "f9ac3d474894a46e0384021a8edfdd62464d4302b96655511df0e5dba7bc6817"
+}

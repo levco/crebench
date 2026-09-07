@@ -1,0 +1,620 @@
+{
+  "case_id": "refinance-leads-cypress",
+  "task": "refinance_leads",
+  "target_count": 6,
+  "available_unique": 6,
+  "returned_count": 7,
+  "eligible_count": 6,
+  "verified_count": 6,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 0.8571428571428571,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 49,
+    "total": 49
+  },
+  "evidence_accuracy": {
+    "passed": 7,
+    "total": 7
+  },
+  "candidate_accuracy": {
+    "passed": 19,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 7,
+    "total": 7
+  },
+  "ineligible_rejection": {
+    "passed": 12,
+    "total": 13
+  },
+  "ranking_pair_agreement": {
+    "passed": 15,
+    "total": 15
+  },
+  "material_errors": [
+    {
+      "record_id": "R3917",
+      "type": "ineligible_selection",
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "selected_checks": [
+    {
+      "record_id": "R7391",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-62661",
+          "expected": "CYPRESS-REF-62661",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-62661",
+          "expected": "O-CYPRESS-REF-62661",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-01-15",
+          "expected": "2027-01-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 4800000,
+          "expected": 4800000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Casey Cypress1",
+          "expected": "Casey Cypress1",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance1@refinance-leads-cypress.example",
+          "expected": "finance1@refinance-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R7391"
+      ],
+      "reported_sources": [
+        "S-R7391"
+      ]
+    },
+    {
+      "record_id": "R4643",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-10959",
+          "expected": "CYPRESS-REF-10959",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-10959",
+          "expected": "O-CYPRESS-REF-10959",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-03-15",
+          "expected": "2027-03-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 5520000,
+          "expected": 5520000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Avery Cypress3",
+          "expected": "Avery Cypress3",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance3@refinance-leads-cypress.example",
+          "expected": "finance3@refinance-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4643"
+      ],
+      "reported_sources": [
+        "S-R4643"
+      ]
+    },
+    {
+      "record_id": "R3353",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-27033",
+          "expected": "CYPRESS-REF-27033",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-27033",
+          "expected": "O-CYPRESS-REF-27033",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-04-15",
+          "expected": "2027-04-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 5880000,
+          "expected": 5880000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Sam Cypress4",
+          "expected": "Sam Cypress4",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance4@refinance-leads-cypress.example",
+          "expected": "finance4@refinance-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3353"
+      ],
+      "reported_sources": [
+        "S-R3353"
+      ]
+    },
+    {
+      "record_id": "R3917",
+      "eligible": false,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-21679",
+          "expected": "CYPRESS-REF-21679",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-21679",
+          "expected": "O-CYPRESS-REF-21679",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-04-15",
+          "expected": "2027-04-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 5880000,
+          "expected": 5880000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Riley Cypress18",
+          "expected": "Riley Cypress18",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance18@refinance-leads-cypress.example",
+          "expected": "finance18@refinance-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3917"
+      ],
+      "reported_sources": [
+        "S-R3917"
+      ]
+    },
+    {
+      "record_id": "R2253",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-14488",
+          "expected": "CYPRESS-REF-14488",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-14488",
+          "expected": "O-CYPRESS-REF-14488",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-05-15",
+          "expected": "2027-05-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 6240000,
+          "expected": 6240000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Casey Cypress5",
+          "expected": "Casey Cypress5",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R2253"
+      ],
+      "reported_sources": [
+        "S-R2253"
+      ]
+    },
+    {
+      "record_id": "R5546",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-65445",
+          "expected": "CYPRESS-REF-65445",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-65445",
+          "expected": "O-CYPRESS-REF-65445",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-06-15",
+          "expected": "2027-06-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 6600000,
+          "expected": 6600000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Riley Cypress6",
+          "expected": "Riley Cypress6",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance6@refinance-leads-cypress.example",
+          "expected": "finance6@refinance-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R5546"
+      ],
+      "reported_sources": [
+        "S-R5546"
+      ]
+    },
+    {
+      "record_id": "R7918",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-REF-34203",
+          "expected": "CYPRESS-REF-34203",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-CYPRESS-REF-34203",
+          "expected": "O-CYPRESS-REF-34203",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-07-15",
+          "expected": "2027-07-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 6960000,
+          "expected": 6960000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Avery Cypress7",
+          "expected": "Avery Cypress7",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance7@refinance-leads-cypress.example",
+          "expected": "finance7@refinance-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R7918"
+      ],
+      "reported_sources": [
+        "S-R7918"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R3947",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not the record owner"
+      ]
+    },
+    {
+      "record_id": "R3917",
+      "actual": true,
+      "expected": false,
+      "passed": false,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R3389",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity outside window"
+      ]
+    },
+    {
+      "record_id": "R7918",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2362",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R9569",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity not confirmed by executed evidence",
+        "Unresolved extension"
+      ]
+    },
+    {
+      "record_id": "R9318",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity not confirmed by executed evidence"
+      ]
+    },
+    {
+      "record_id": "R3320",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Loan status not confirmed active"
+      ]
+    },
+    {
+      "record_id": "R9030",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Loan status not confirmed active"
+      ]
+    },
+    {
+      "record_id": "R3353",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R8853",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R2334",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale ownership verification"
+      ]
+    },
+    {
+      "record_id": "R2570",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity outside window"
+      ]
+    },
+    {
+      "record_id": "R2253",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4643",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3709",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    },
+    {
+      "record_id": "R4862",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R5546",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R7391",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3836",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ]
+}

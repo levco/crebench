@@ -1,0 +1,253 @@
+{
+  "name": "submit_research",
+  "arguments_raw": "{\"shortlist\":[{\"record_id\":\"R1298\",\"facts\":{\"entity_id\":\"ALDER-REN-19075\",\"event_date\":\"2026-02-05\",\"annual_face_rent_psf\":21,\"effective_net_rent_psf_year\":11.279375,\"term_months\":36},\"source_ids\":[\"S-R1298\"],\"rationale\":\"Executed multifamily lease within 0.8 miles and within date range; gross with known expenses, free months=0 and TI present; computed per stated convention (annual 2.5% bumps, no free rent, expense deduction each month, TI once).\"},{\"record_id\":\"R9957\",\"facts\":{\"entity_id\":\"ALDER-REN-19383\",\"event_date\":\"2026-03-06\",\"annual_face_rent_psf\":22.44,\"effective_net_rent_psf_year\":16.9256126563,\"term_months\":48},\"source_ids\":[\"S-R9957\",\"U-R9957-1\"],\"rationale\":\"Executed multifamily NNN within 1.03 miles and within date range; applied executed amendment updating free months to 4 and TI to 18; computed per convention (annual 2.5% bumps, free rent in months 1\u20134, no expense deduction for NNN, TI once).\"},{\"record_id\":\"R2302\",\"facts\":{\"entity_id\":\"ALDER-REN-80164\",\"event_date\":\"2026-04-07\",\"annual_face_rent_psf\":22.6,\"effective_net_rent_psf_year\":19.4052715573,\"term_months\":60},\"source_ids\":[\"S-R2302\"],\"rationale\":\"Executed multifamily NNN within 1.26 miles; free months and TI present; amendment dated after cutoff ignored; computed with 2.5% annual bumps, 2 free months at start, TI once.\"},{\"record_id\":\"R6740\",\"facts\":{\"entity_id\":\"ALDER-REN-24854\",\"event_date\":\"2026-05-08\",\"annual_face_rent_psf\":24.12,\"effective_net_rent_psf_year\":9.468025,\"term_months\":36},\"source_ids\":[\"S-R6740\"],\"rationale\":\"Executed multifamily gross within 1.49 miles; free months, TI, and expense deduction provided; unsigned draft update ignored; computed per convention with expense deduction every month.\"},{\"record_id\":\"R6049\",\"facts\":{\"entity_id\":\"ALDER-REN-90122\",\"event_date\":\"2026-06-09\",\"annual_face_rent_psf\":24.2,\"effective_net_rent_psf_year\":22.1227195313,\"term_months\":48},\"source_ids\":[\"S-R6049\"],\"rationale\":\"Executed multifamily NNN within 1.72 miles; TI present, 0 free months; computed per convention with 2.5% annual bumps and TI once.\"}],\"candidate_decisions\":[{\"record_id\":\"R8015\",\"eligible\":false,\"reason\":\"Ineligible: missing required free_months (null) despite executed status; TI present but all executed comps must have explicit free rent value.\",\"source_ids\":[\"S-R8015\"]},{\"record_id\":\"R1927\",\"eligible\":true,\"reason\":\"Eligible executed multifamily within distance/date; gross with expenses, free months=0 and TI present. Duplicate of entity ALDER-REN-19075 (also in R1298); not selected in shortlist due to duplication.\",\"source_ids\":[\"S-R1927\"]},{\"record_id\":\"R9957\",\"eligible\":true,\"reason\":\"Eligible executed multifamily NNN within distance/date; executed amendment updates free_months to 4 and TI to 18.\",\"source_ids\":[\"S-R9957\",\"U-R9957-1\"]},{\"record_id\":\"R6049\",\"eligible\":true,\"reason\":\"Eligible executed multifamily NNN within distance/date; TI present; free_months explicitly 0.\",\"source_ids\":[\"S-R6049\"]},{\"record_id\":\"R2302\",\"eligible\":true,\"reason\":\"Eligible executed multifamily NNN within distance/date; free months and TI provided. Later executed amendment effective after cutoff ignored.\",\"source_ids\":[\"S-R2302\"]},{\"record_id\":\"R6740\",\"eligible\":true,\"reason\":\"Eligible executed multifamily gross within distance/date; expenses provided, free months and TI present. Unsigned draft update (free_months=8) ignored.\",\"source_ids\":[\"S-R6740\"]},{\"record_id\":\"R4257\",\"eligible\":false,\"reason\":\"Ineligible: status is asking/marketing, not an executed lease.\",\"source_ids\":[\"S-R4257\"]},{\"record_id\":\"R4144\",\"eligible\":false,\"reason\":\"Ineligible: TI allowance is missing (null), which is required.\",\"source_ids\":[\"S-R4144\"]},{\"record_id\":\"R4517\",\"eligible\":false,\"reason\":\"Ineligible: event date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.\",\"source_ids\":[\"S-R4517\"]},{\"record_id\":\"R7480\",\"eligible\":false,\"reason\":\"Ineligible: gross lease missing required annual_expenses_psf.\",\"source_ids\":[\"S-R7480\"]},{\"record_id\":\"R6844\",\"eligible\":true,\"reason\":\"Eligible executed multifamily gross within distance/date; expenses provided, free months=2 and TI present.\",\"source_ids\":[\"S-R6844\"]},{\"record_id\":\"R5477\",\"eligible\":false,\"reason\":\"Ineligible: rent_quote is null (must be positive).\",\"source_ids\":[\"S-R5477\"]},{\"record_id\":\"R8781\",\"eligible\":false,\"reason\":\"Ineligible: term_months is null (known term required).\",\"source_ids\":[\"S-R8781\"]},{\"record_id\":\"R1298\",\"eligible\":true,\"reason\":\"Eligible executed multifamily within distance/date; gross with expenses, free months=0 and TI present. Duplicate of entity ALDER-REN-19075 (also in R1927); selected for shortlist.\",\"source_ids\":[\"S-R1298\"]},{\"record_id\":\"R7775\",\"eligible\":false,\"reason\":\"Ineligible: distance 18.6 miles exceeds the 8-mile limit.\",\"source_ids\":[\"S-R7775\"]},{\"record_id\":\"R3818\",\"eligible\":false,\"reason\":\"Ineligible: asset type Office; scope limited to Multifamily.\",\"source_ids\":[\"S-R3818\"]},{\"record_id\":\"R8821\",\"eligible\":false,\"reason\":\"Ineligible: status unsigned_proposal (asking/unsigned rents do not qualify).\",\"source_ids\":[\"S-R8821\"]},{\"record_id\":\"R2138\",\"eligible\":false,\"reason\":\"Ineligible: rent_quote is 0 (must be positive).\",\"source_ids\":[\"S-R2138\"]},{\"record_id\":\"R2543\",\"eligible\":true,\"reason\":\"Eligible executed multifamily NNN within distance/date; free months and TI provided.\",\"source_ids\":[\"S-R2543\"]},{\"record_id\":\"R2337\",\"eligible\":false,\"reason\":\"Ineligible as of 2026-08-31: source published 2026-09-03 (after cutoff), so not in-scope despite in-range event date.\",\"source_ids\":[\"S-R2337\"]}],\"summary\":\"Five unique executed multifamily rent comps within 1.72 miles of the subject and dated 2026-02-05 to 2026-06-09 were selected and ranked by proximity: R1298 (ALDER-REN-19075), R9957 (amended), R2302, R6740 (gross with expenses), and R6049. Effective net rents ($/sf/yr) were computed per the client convention with 2.5% annual bumps, free rent applied at lease start, gross expense deductions each month, and TI subtracted once. Eight records met eligibility before deduplication; duplicates and the five-comp limit reduced the shortlist to five. An executed amendment after the cutoff (U-R2302-2) and an unsigned draft (U-R6740-3) were correctly ignored; an executed amendment within the window (U-R9957-1) was applied. A comp-grid XLSX with citations was created (artifacts/underwriting-v1.xlsx).\",\"limitations\":[\"Assumes free rent is applied at the start of the term, consistent with the convention; timing of TI disbursement and expense seasonality ignored by the undiscounted method.\",\"Face rent escalation is modeled as step-ups at months 13, 25, etc.; no mid-year proration or partial-year stubs were provided.\",\"Rounding may cause minor presentation differences versus internal systems.\"]}",
+  "call_id": "call_a5roaDku9czeo9R9iXd3hd3M",
+  "arguments": {
+    "shortlist": [
+      {
+        "record_id": "R1298",
+        "facts": {
+          "entity_id": "ALDER-REN-19075",
+          "event_date": "2026-02-05",
+          "annual_face_rent_psf": 21,
+          "effective_net_rent_psf_year": 11.279375,
+          "term_months": 36
+        },
+        "source_ids": [
+          "S-R1298"
+        ],
+        "rationale": "Executed multifamily lease within 0.8 miles and within date range; gross with known expenses, free months=0 and TI present; computed per stated convention (annual 2.5% bumps, no free rent, expense deduction each month, TI once)."
+      },
+      {
+        "record_id": "R9957",
+        "facts": {
+          "entity_id": "ALDER-REN-19383",
+          "event_date": "2026-03-06",
+          "annual_face_rent_psf": 22.44,
+          "effective_net_rent_psf_year": 16.9256126563,
+          "term_months": 48
+        },
+        "source_ids": [
+          "S-R9957",
+          "U-R9957-1"
+        ],
+        "rationale": "Executed multifamily NNN within 1.03 miles and within date range; applied executed amendment updating free months to 4 and TI to 18; computed per convention (annual 2.5% bumps, free rent in months 1\u20134, no expense deduction for NNN, TI once)."
+      },
+      {
+        "record_id": "R2302",
+        "facts": {
+          "entity_id": "ALDER-REN-80164",
+          "event_date": "2026-04-07",
+          "annual_face_rent_psf": 22.6,
+          "effective_net_rent_psf_year": 19.4052715573,
+          "term_months": 60
+        },
+        "source_ids": [
+          "S-R2302"
+        ],
+        "rationale": "Executed multifamily NNN within 1.26 miles; free months and TI present; amendment dated after cutoff ignored; computed with 2.5% annual bumps, 2 free months at start, TI once."
+      },
+      {
+        "record_id": "R6740",
+        "facts": {
+          "entity_id": "ALDER-REN-24854",
+          "event_date": "2026-05-08",
+          "annual_face_rent_psf": 24.12,
+          "effective_net_rent_psf_year": 9.468025,
+          "term_months": 36
+        },
+        "source_ids": [
+          "S-R6740"
+        ],
+        "rationale": "Executed multifamily gross within 1.49 miles; free months, TI, and expense deduction provided; unsigned draft update ignored; computed per convention with expense deduction every month."
+      },
+      {
+        "record_id": "R6049",
+        "facts": {
+          "entity_id": "ALDER-REN-90122",
+          "event_date": "2026-06-09",
+          "annual_face_rent_psf": 24.2,
+          "effective_net_rent_psf_year": 22.1227195313,
+          "term_months": 48
+        },
+        "source_ids": [
+          "S-R6049"
+        ],
+        "rationale": "Executed multifamily NNN within 1.72 miles; TI present, 0 free months; computed per convention with 2.5% annual bumps and TI once."
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "record_id": "R8015",
+        "eligible": false,
+        "reason": "Ineligible: missing required free_months (null) despite executed status; TI present but all executed comps must have explicit free rent value.",
+        "source_ids": [
+          "S-R8015"
+        ]
+      },
+      {
+        "record_id": "R1927",
+        "eligible": true,
+        "reason": "Eligible executed multifamily within distance/date; gross with expenses, free months=0 and TI present. Duplicate of entity ALDER-REN-19075 (also in R1298); not selected in shortlist due to duplication.",
+        "source_ids": [
+          "S-R1927"
+        ]
+      },
+      {
+        "record_id": "R9957",
+        "eligible": true,
+        "reason": "Eligible executed multifamily NNN within distance/date; executed amendment updates free_months to 4 and TI to 18.",
+        "source_ids": [
+          "S-R9957",
+          "U-R9957-1"
+        ]
+      },
+      {
+        "record_id": "R6049",
+        "eligible": true,
+        "reason": "Eligible executed multifamily NNN within distance/date; TI present; free_months explicitly 0.",
+        "source_ids": [
+          "S-R6049"
+        ]
+      },
+      {
+        "record_id": "R2302",
+        "eligible": true,
+        "reason": "Eligible executed multifamily NNN within distance/date; free months and TI provided. Later executed amendment effective after cutoff ignored.",
+        "source_ids": [
+          "S-R2302"
+        ]
+      },
+      {
+        "record_id": "R6740",
+        "eligible": true,
+        "reason": "Eligible executed multifamily gross within distance/date; expenses provided, free months and TI present. Unsigned draft update (free_months=8) ignored.",
+        "source_ids": [
+          "S-R6740"
+        ]
+      },
+      {
+        "record_id": "R4257",
+        "eligible": false,
+        "reason": "Ineligible: status is asking/marketing, not an executed lease.",
+        "source_ids": [
+          "S-R4257"
+        ]
+      },
+      {
+        "record_id": "R4144",
+        "eligible": false,
+        "reason": "Ineligible: TI allowance is missing (null), which is required.",
+        "source_ids": [
+          "S-R4144"
+        ]
+      },
+      {
+        "record_id": "R4517",
+        "eligible": false,
+        "reason": "Ineligible: event date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.",
+        "source_ids": [
+          "S-R4517"
+        ]
+      },
+      {
+        "record_id": "R7480",
+        "eligible": false,
+        "reason": "Ineligible: gross lease missing required annual_expenses_psf.",
+        "source_ids": [
+          "S-R7480"
+        ]
+      },
+      {
+        "record_id": "R6844",
+        "eligible": true,
+        "reason": "Eligible executed multifamily gross within distance/date; expenses provided, free months=2 and TI present.",
+        "source_ids": [
+          "S-R6844"
+        ]
+      },
+      {
+        "record_id": "R5477",
+        "eligible": false,
+        "reason": "Ineligible: rent_quote is null (must be positive).",
+        "source_ids": [
+          "S-R5477"
+        ]
+      },
+      {
+        "record_id": "R8781",
+        "eligible": false,
+        "reason": "Ineligible: term_months is null (known term required).",
+        "source_ids": [
+          "S-R8781"
+        ]
+      },
+      {
+        "record_id": "R1298",
+        "eligible": true,
+        "reason": "Eligible executed multifamily within distance/date; gross with expenses, free months=0 and TI present. Duplicate of entity ALDER-REN-19075 (also in R1927); selected for shortlist.",
+        "source_ids": [
+          "S-R1298"
+        ]
+      },
+      {
+        "record_id": "R7775",
+        "eligible": false,
+        "reason": "Ineligible: distance 18.6 miles exceeds the 8-mile limit.",
+        "source_ids": [
+          "S-R7775"
+        ]
+      },
+      {
+        "record_id": "R3818",
+        "eligible": false,
+        "reason": "Ineligible: asset type Office; scope limited to Multifamily.",
+        "source_ids": [
+          "S-R3818"
+        ]
+      },
+      {
+        "record_id": "R8821",
+        "eligible": false,
+        "reason": "Ineligible: status unsigned_proposal (asking/unsigned rents do not qualify).",
+        "source_ids": [
+          "S-R8821"
+        ]
+      },
+      {
+        "record_id": "R2138",
+        "eligible": false,
+        "reason": "Ineligible: rent_quote is 0 (must be positive).",
+        "source_ids": [
+          "S-R2138"
+        ]
+      },
+      {
+        "record_id": "R2543",
+        "eligible": true,
+        "reason": "Eligible executed multifamily NNN within distance/date; free months and TI provided.",
+        "source_ids": [
+          "S-R2543"
+        ]
+      },
+      {
+        "record_id": "R2337",
+        "eligible": false,
+        "reason": "Ineligible as of 2026-08-31: source published 2026-09-03 (after cutoff), so not in-scope despite in-range event date.",
+        "source_ids": [
+          "S-R2337"
+        ]
+      }
+    ],
+    "summary": "Five unique executed multifamily rent comps within 1.72 miles of the subject and dated 2026-02-05 to 2026-06-09 were selected and ranked by proximity: R1298 (ALDER-REN-19075), R9957 (amended), R2302, R6740 (gross with expenses), and R6049. Effective net rents ($/sf/yr) were computed per the client convention with 2.5% annual bumps, free rent applied at lease start, gross expense deductions each month, and TI subtracted once. Eight records met eligibility before deduplication; duplicates and the five-comp limit reduced the shortlist to five. An executed amendment after the cutoff (U-R2302-2) and an unsigned draft (U-R6740-3) were correctly ignored; an executed amendment within the window (U-R9957-1) was applied. A comp-grid XLSX with citations was created (artifacts/underwriting-v1.xlsx).",
+    "limitations": [
+      "Assumes free rent is applied at the start of the term, consistent with the convention; timing of TI disbursement and expense seasonality ignored by the undiscounted method.",
+      "Face rent escalation is modeled as step-ups at months 13, 25, etc.; no mid-year proration or partial-year stubs were provided.",
+      "Rounding may cause minor presentation differences versus internal systems."
+    ]
+  },
+  "result": {
+    "saved": true
+  },
+  "status": "ok"
+}

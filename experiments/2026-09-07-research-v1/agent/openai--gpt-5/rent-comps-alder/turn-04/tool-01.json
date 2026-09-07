@@ -1,0 +1,124 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"r\",\"expression\":\"0.025\"},{\"name\":\"A2302\",\"expression\":\"22.6\"},{\"name\":\"sum5\",\"expression\":\"1 + (1+r) + (1+r)**2 + (1+r)**3 + (1+r)**4\"},{\"name\":\"total_face2302\",\"expression\":\"A2302*sum5\"},{\"name\":\"free_deduction2302\",\"expression\":\"A2302/12*2\"},{\"name\":\"TI2302\",\"expression\":\"18\"},{\"name\":\"net_total2302\",\"expression\":\"total_face2302 - free_deduction2302 - TI2302\"},{\"name\":\"eff2302\",\"expression\":\"net_total2302/60*12\"},{\"name\":\"A6740\",\"expression\":\"2.01*12\"},{\"name\":\"sum3\",\"expression\":\"1 + (1+r) + (1+r)**2\"},{\"name\":\"total_face6740\",\"expression\":\"A6740*sum3\"},{\"name\":\"free_deduction6740\",\"expression\":\"A6740/12*3\"},{\"name\":\"E6740\",\"expression\":\"6.25/12*36\"},{\"name\":\"TI6740\",\"expression\":\"21\"},{\"name\":\"net_total6740\",\"expression\":\"total_face6740 - free_deduction6740 - E6740 - TI6740\"},{\"name\":\"eff6740\",\"expression\":\"net_total6740/36*12\"},{\"name\":\"A6049\",\"expression\":\"24.2\"},{\"name\":\"sum4\",\"expression\":\"1 + (1+r) + (1+r)**2 + (1+r)**3\"},{\"name\":\"total_face6049\",\"expression\":\"A6049*sum4\"},{\"name\":\"TI6049\",\"expression\":\"12\"},{\"name\":\"net_total6049\",\"expression\":\"total_face6049 - TI6049\"},{\"name\":\"eff6049\",\"expression\":\"net_total6049/48*12\"}]}",
+  "call_id": "call_UorhVJaEK84tUVcztIZaUPfZ",
+  "arguments": {
+    "steps": [
+      {
+        "name": "r",
+        "expression": "0.025"
+      },
+      {
+        "name": "A2302",
+        "expression": "22.6"
+      },
+      {
+        "name": "sum5",
+        "expression": "1 + (1+r) + (1+r)**2 + (1+r)**3 + (1+r)**4"
+      },
+      {
+        "name": "total_face2302",
+        "expression": "A2302*sum5"
+      },
+      {
+        "name": "free_deduction2302",
+        "expression": "A2302/12*2"
+      },
+      {
+        "name": "TI2302",
+        "expression": "18"
+      },
+      {
+        "name": "net_total2302",
+        "expression": "total_face2302 - free_deduction2302 - TI2302"
+      },
+      {
+        "name": "eff2302",
+        "expression": "net_total2302/60*12"
+      },
+      {
+        "name": "A6740",
+        "expression": "2.01*12"
+      },
+      {
+        "name": "sum3",
+        "expression": "1 + (1+r) + (1+r)**2"
+      },
+      {
+        "name": "total_face6740",
+        "expression": "A6740*sum3"
+      },
+      {
+        "name": "free_deduction6740",
+        "expression": "A6740/12*3"
+      },
+      {
+        "name": "E6740",
+        "expression": "6.25/12*36"
+      },
+      {
+        "name": "TI6740",
+        "expression": "21"
+      },
+      {
+        "name": "net_total6740",
+        "expression": "total_face6740 - free_deduction6740 - E6740 - TI6740"
+      },
+      {
+        "name": "eff6740",
+        "expression": "net_total6740/36*12"
+      },
+      {
+        "name": "A6049",
+        "expression": "24.2"
+      },
+      {
+        "name": "sum4",
+        "expression": "1 + (1+r) + (1+r)**2 + (1+r)**3"
+      },
+      {
+        "name": "total_face6049",
+        "expression": "A6049*sum4"
+      },
+      {
+        "name": "TI6049",
+        "expression": "12"
+      },
+      {
+        "name": "net_total6049",
+        "expression": "total_face6049 - TI6049"
+      },
+      {
+        "name": "eff6049",
+        "expression": "net_total6049/48*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "r": 0.025,
+      "A2302": 22.6,
+      "sum5": 5.256328515624999,
+      "total_face2302": 118.79302445312497,
+      "free_deduction2302": 3.766666666666667,
+      "TI2302": 18,
+      "net_total2302": 97.0263577864583,
+      "eff2302": 19.40527155729166,
+      "A6740": 24.119999999999997,
+      "sum3": 3.0756249999999996,
+      "total_face6740": 74.18407499999998,
+      "free_deduction6740": 6.029999999999999,
+      "E6740": 18.75,
+      "TI6740": 21,
+      "net_total6740": 28.404074999999978,
+      "eff6740": 9.468024999999992,
+      "A6049": 24.2,
+      "sum4": 4.1525156249999995,
+      "total_face6049": 100.49087812499998,
+      "TI6049": 12,
+      "net_total6049": 88.49087812499998,
+      "eff6049": 22.122719531249995
+    }
+  },
+  "status": "ok"
+}

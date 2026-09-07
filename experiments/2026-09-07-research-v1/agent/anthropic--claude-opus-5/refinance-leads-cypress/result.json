@@ -1,0 +1,91 @@
+{
+  "case_id": "refinance-leads-cypress",
+  "system": "anthropic/claude-opus-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T02:36:18.866359+00:00",
+  "completed_at": "2026-09-07T02:37:26.582245+00:00",
+  "elapsed_seconds": 67.716,
+  "cost_usd": 0.29891,
+  "known_partial_cost_usd": 0.29891,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "model_calls": 2,
+  "tool_calls": 2,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 12393,
+        "completion_tokens": 1838,
+        "total_tokens": 14231,
+        "cost": 0.107915,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1048,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.107915,
+        "gateway_cost": 0.107915
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 19.367,
+      "completed_at": "2026-09-07T02:36:38.250348+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 13194,
+        "completion_tokens": 5001,
+        "total_tokens": 18195,
+        "cost": 0.190995,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 753,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.190995,
+        "gateway_cost": 0.190995
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 48.325,
+      "completed_at": "2026-09-07T02:37:26.578810+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/prospects-v1.csv",
+      "sha256": "e1fdbefd562c4b99f422aa31bbb9f221c0c5fc325858106c976b3fc60e18de91",
+      "bytes": 1127
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

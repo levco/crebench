@@ -1,0 +1,34 @@
+{
+  "trace_id": "8e8860fe-f6aa-4c54-a2fd-f8d78d59274c",
+  "session_id": "782c1a2c-f32f-4bc9-af35-cbc0948b1714",
+  "started_at": "2026-09-06T22:28:01.588000-04:00",
+  "packet_match": "Trace prefix matches; connector truncates root input. Complete UI input was independently verified before submission.",
+  "event_count": 5,
+  "model_calls": 3,
+  "generation_costs_usd": [
+    0.29287025,
+    0.23848825,
+    0.1032965
+  ],
+  "total_cost_usd": 0.634655,
+  "cost_sources": [
+    "openrouter"
+  ],
+  "models": [
+    "claude-opus-4-7"
+  ],
+  "agent_versions": [
+    "7.9"
+  ],
+  "tools_called": [
+    "get_expertise_instructions",
+    "get_generated_file"
+  ],
+  "external_retrieval_audit": "no_retrieval_observed_partial_coverage",
+  "execution_coverage": "Recorded backend tools only; internal file-creation execution is not visible in the available trace metadata.",
+  "confirmed_common_corpus": false,
+  "tools_requiring_review": [],
+  "elapsed_seconds": 151.37,
+  "cost_scope": "Matched workflow generations and embeddings; duplicate run-summary excluded. Session naming, hosting, subscriptions, operator time and product credits excluded.",
+  "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price"
+}

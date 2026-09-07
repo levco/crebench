@@ -1,0 +1,355 @@
+{
+  "case_id": "sales-comps-elm",
+  "task": "sales_comps",
+  "target_count": 3,
+  "available_unique": 3,
+  "returned_count": 3,
+  "eligible_count": 3,
+  "verified_count": 3,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 1.0,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 15,
+    "total": 15
+  },
+  "evidence_accuracy": {
+    "passed": 3,
+    "total": 3
+  },
+  "candidate_accuracy": {
+    "passed": 20,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 4,
+    "total": 4
+  },
+  "ineligible_rejection": {
+    "passed": 16,
+    "total": 16
+  },
+  "ranking_pair_agreement": {
+    "passed": 3,
+    "total": 3
+  },
+  "material_errors": [],
+  "selected_checks": [
+    {
+      "record_id": "R4105",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-SAL-91902",
+          "expected": "ELM-SAL-91902",
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-02-05",
+          "expected": "2026-02-05",
+          "passed": true
+        },
+        {
+          "field": "consideration_usd",
+          "actual": 14400000.0,
+          "expected": 14400000.0,
+          "passed": true
+        },
+        {
+          "field": "property_size",
+          "actual": 36000,
+          "expected": 36000,
+          "passed": true
+        },
+        {
+          "field": "price_per_unit",
+          "actual": 400.0,
+          "expected": 400.0,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4105"
+      ],
+      "reported_sources": [
+        "S-R4105"
+      ]
+    },
+    {
+      "record_id": "R8422",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-SAL-64090",
+          "expected": "ELM-SAL-64090",
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-03-06",
+          "expected": "2026-03-06",
+          "passed": true
+        },
+        {
+          "field": "consideration_usd",
+          "actual": 16740000.0,
+          "expected": 16740000.0,
+          "passed": true
+        },
+        {
+          "field": "property_size",
+          "actual": 38700,
+          "expected": 38700,
+          "passed": true
+        },
+        {
+          "field": "price_per_unit",
+          "actual": 432.56,
+          "expected": 432.5581395348837,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R8422",
+        "U-R8422-1"
+      ],
+      "reported_sources": [
+        "S-R8422",
+        "U-R8422-1"
+      ]
+    },
+    {
+      "record_id": "R3397",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-SAL-96210",
+          "expected": "ELM-SAL-96210",
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-04-07",
+          "expected": "2026-04-07",
+          "passed": true
+        },
+        {
+          "field": "consideration_usd",
+          "actual": 16560000.0,
+          "expected": 16559999.999999998,
+          "passed": true
+        },
+        {
+          "field": "property_size",
+          "actual": 41400,
+          "expected": 41400,
+          "passed": true
+        },
+        {
+          "field": "price_per_unit",
+          "actual": 400.0,
+          "expected": 399.99999999999994,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3397"
+      ],
+      "reported_sources": [
+        "S-R3397"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R8129",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "condition is redevelopment"
+      ]
+    },
+    {
+      "record_id": "R7280",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R8422",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R7302",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R4105",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3794",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Event outside lookback"
+      ]
+    },
+    {
+      "record_id": "R3397",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2952",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside radius"
+      ]
+    },
+    {
+      "record_id": "R3577",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3742",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R8218",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "No positive verified price"
+      ]
+    },
+    {
+      "record_id": "R5078",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R4512",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "size_unit is acre"
+      ]
+    },
+    {
+      "record_id": "R4218",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside size range"
+      ]
+    },
+    {
+      "record_id": "R6058",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "interest is minority_equity_interest"
+      ]
+    },
+    {
+      "record_id": "R2453",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R7069",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R8810",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Related-party transaction"
+      ]
+    },
+    {
+      "record_id": "R4592",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "scope is portfolio_unallocated"
+      ]
+    },
+    {
+      "record_id": "R6121",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "status is listing"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"p\",\"expression\":\"0.025\"},{\"name\":\"e_m\",\"expression\":\"6.25/12\"},{\"name\":\"m0\",\"expression\":\"21/12\"},{\"name\":\"sum1\",\"expression\":\"12*(m0 - e_m)\"},{\"name\":\"sum2\",\"expression\":\"12*(m0*(1+p) - e_m)\"},{\"name\":\"sum3\",\"expression\":\"12*(m0*((1+p)**2) - e_m)\"},{\"name\":\"total_net_before_TI\",\"expression\":\"sum1+sum2+sum3\"},{\"name\":\"TI\",\"expression\":\"12\"},{\"name\":\"net_total\",\"expression\":\"total_net_before_TI - TI\"},{\"name\":\"term\",\"expression\":\"36\"},{\"name\":\"annual_effective\",\"expression\":\"(net_total/term)*12\"},{\"name\":\"annual_face\",\"expression\":\"21\"}]}",
+  "call_id": "call_G3NnV3QV1DVeplLJ4Yy4APap",
+  "arguments": {
+    "steps": [
+      {
+        "name": "p",
+        "expression": "0.025"
+      },
+      {
+        "name": "e_m",
+        "expression": "6.25/12"
+      },
+      {
+        "name": "m0",
+        "expression": "21/12"
+      },
+      {
+        "name": "sum1",
+        "expression": "12*(m0 - e_m)"
+      },
+      {
+        "name": "sum2",
+        "expression": "12*(m0*(1+p) - e_m)"
+      },
+      {
+        "name": "sum3",
+        "expression": "12*(m0*((1+p)**2) - e_m)"
+      },
+      {
+        "name": "total_net_before_TI",
+        "expression": "sum1+sum2+sum3"
+      },
+      {
+        "name": "TI",
+        "expression": "12"
+      },
+      {
+        "name": "net_total",
+        "expression": "total_net_before_TI - TI"
+      },
+      {
+        "name": "term",
+        "expression": "36"
+      },
+      {
+        "name": "annual_effective",
+        "expression": "(net_total/term)*12"
+      },
+      {
+        "name": "annual_face",
+        "expression": "21"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "p": 0.025,
+      "e_m": 0.5208333333333334,
+      "m0": 1.75,
+      "sum1": 14.749999999999998,
+      "sum2": 15.274999999999995,
+      "sum3": 15.813124999999996,
+      "total_net_before_TI": 45.83812499999999,
+      "TI": 12,
+      "net_total": 33.83812499999999,
+      "term": 36,
+      "annual_effective": 11.279374999999998,
+      "annual_face": 21
+    }
+  },
+  "status": "ok"
+}

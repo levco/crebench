@@ -1,0 +1,167 @@
+```json
+{
+  "shortlist": [
+    {
+      "record_id": "R6968",
+      "facts": {
+        "entity_id": "ELM-REF-63521",
+        "owner_entity_id": "O-ELM-REF-63521",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 8640000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Elm1",
+        "contact_email": "finance1@refinance-leads-elm.example"
+      },
+      "source_ids": ["S-R6968", "S-R4437"],
+      "rationale": "Retail in Raleigh; loan_status active_confirmed; maturity 2027-01-15 on executed_note basis with extension_status none_executed, inside the 2026-09-01 to 2027-08-31 window. Record owner (O-ELM-REF-63521) verified 2026-08-10 and current Director of Finance verified 2026-08-10 (post 2026-03-01). No update applies to this entity. Duplicate record R4437 (same entity ELM-REF-63521, second source on the same underlying record) is consolidated here and does not take a second slot. Loan amount is original principal; outstanding balance not published, reported null."
+    },
+    {
+      "record_id": "R7631",
+      "facts": {
+        "entity_id": "ELM-REF-53828",
+        "owner_entity_id": "O-ELM-REF-53828",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 9936000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Elm3",
+        "contact_email": "finance3@refinance-leads-elm.example"
+      },
+      "source_ids": ["S-R7631"],
+      "rationale": "Retail in Raleigh; loan_status active_confirmed; maturity 2027-03-15 on executed_note basis with extension_status none_executed, inside the window. Record owner verified 2026-08-10 and current Director of Finance verified 2026-08-10. The recorded release U-R7631-2 is published and effective 2026-09-10, i.e. after the 2026-08-31 cutoff, so per scope rules later-dated evidence does not override the base extract; loan is treated as active as of the cutoff. Loan amount is original principal; outstanding balance not published, reported null."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R7798",
+      "eligible": false,
+      "reason": "Base extract published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence cannot be used, so no usable on-or-before-cutoff evidence of loan status, maturity, owner or contact for Elm Crossing 18.",
+      "source_ids": ["S-R7798"]
+    },
+    {
+      "record_id": "R1548",
+      "eligible": false,
+      "reason": "Retail/Raleigh with active_confirmed loan and executed maturity 2027-02-15 in window, but the only contact (Sam Elm16, Director of Finance) has employment 'former'; no current CFO/Head of Acquisitions/Director of Finance verified since 2026-03-01.",
+      "source_ids": ["S-R1548"]
+    },
+    {
+      "record_id": "R5893",
+      "eligible": false,
+      "reason": "Executed amendment U-R5893-7 (published/effective 2026-08-20, on or before cutoff) changes asset_type to Office, so the record falls outside the Retail scope.",
+      "source_ids": ["S-R5893", "U-R5893-7"]
+    },
+    {
+      "record_id": "R6909",
+      "eligible": false,
+      "reason": "Stale ownership: ownership_verified_at 2024-01-01, before the required 2026-03-01 owner verification threshold.",
+      "source_ids": ["S-R6909"]
+    },
+    {
+      "record_id": "R6968",
+      "eligible": true,
+      "reason": "Meets all rules: Retail/Raleigh, active_confirmed loan, executed_note maturity 2027-01-15 in window, no executed extension, owner and current Director of Finance both verified 2026-08-10. Duplicate of R4437 (same entity ELM-REF-63521); selected as the shortlist representative.",
+      "source_ids": ["S-R6968"]
+    },
+    {
+      "record_id": "R2801",
+      "eligible": false,
+      "reason": "Maturity_basis is 'unconfirmed' (inferred/unconfirmed maturity excluded) and extension_status is 'option_unresolved' (unresolved extension excluded).",
+      "source_ids": ["S-R2801"]
+    },
+    {
+      "record_id": "R7631",
+      "eligible": true,
+      "reason": "Retail/Raleigh, active_confirmed as of cutoff, executed_note maturity 2027-03-15 in window, no executed extension, owner and current Director of Finance verified 2026-08-10. Recorded release U-R7631-2 is dated 2026-09-10 (after cutoff) and therefore does not control; flagged as a material post-cutoff risk.",
+      "source_ids": ["S-R7631", "U-R7631-2"]
+    },
+    {
+      "record_id": "R4392",
+      "eligible": false,
+      "reason": "Market is Seattle, outside the Raleigh scope.",
+      "source_ids": ["S-R4392"]
+    },
+    {
+      "record_id": "R4755",
+      "eligible": false,
+      "reason": "loan_status is 'status_unknown'; unknown-status loans are excluded (confirmed active debt required).",
+      "source_ids": ["S-R4755"]
+    },
+    {
+      "record_id": "R3427",
+      "eligible": false,
+      "reason": "asset_type is Office, outside the Retail scope.",
+      "source_ids": ["S-R3427"]
+    },
+    {
+      "record_id": "R4641",
+      "eligible": false,
+      "reason": "Only contact is a Registered Agent; registered agents are excluded and no current CFO/Head of Acquisitions/Director of Finance is evidenced.",
+      "source_ids": ["S-R4641"]
+    },
+    {
+      "record_id": "R3478",
+      "eligible": false,
+      "reason": "Executed amendment U-R3478-5 (2026-08-20) changes asset_type to Office, placing the record outside the Retail scope. (Contact email was also unpublished/null, which alone would not disqualify.)",
+      "source_ids": ["S-R3478", "U-R3478-5"]
+    },
+    {
+      "record_id": "R9095",
+      "eligible": false,
+      "reason": "loan_status is 'released'; released loans are excluded.",
+      "source_ids": ["S-R9095"]
+    },
+    {
+      "record_id": "R9201",
+      "eligible": false,
+      "reason": "Maturity_basis is 'inferred_from_origination'; inferred maturities are excluded.",
+      "source_ids": ["S-R9201"]
+    },
+    {
+      "record_id": "R2376",
+      "eligible": false,
+      "reason": "owner_relation is 'property_manager', not record owner; a verified record owner is required and managers are excluded.",
+      "source_ids": ["S-R2376"]
+    },
+    {
+      "record_id": "R1927",
+      "eligible": false,
+      "reason": "Executed amendment U-R1927-1 (2026-08-20) sets maturity to 2028-09-30 with extension executed; the controlling maturity falls outside the 2026-09-01 to 2027-08-31 window.",
+      "source_ids": ["S-R1927", "U-R1927-1"]
+    },
+    {
+      "record_id": "R9233",
+      "eligible": false,
+      "reason": "Executed amendment U-R9233-4 (2026-08-20) changes asset_type to Office, outside the Retail scope. Unsigned draft U-R9233-3 (maturity 2028-01-01) is disregarded as it is not executed.",
+      "source_ids": ["S-R9233", "U-R9233-4", "U-R9233-3"]
+    },
+    {
+      "record_id": "R8058",
+      "eligible": false,
+      "reason": "Executed maturity 2028-02-01 is after the 2027-08-31 end of the required window.",
+      "source_ids": ["S-R8058"]
+    },
+    {
+      "record_id": "R2630",
+      "eligible": false,
+      "reason": "Executed amendment U-R2630-6 (2026-08-20) changes asset_type to Office, outside the Retail scope.",
+      "source_ids": ["S-R2630", "U-R2630-6"]
+    },
+    {
+      "record_id": "R4437",
+      "eligible": true,
+      "reason": "Satisfies all business rules on its own (Retail/Raleigh, active_confirmed, executed maturity 2027-01-15, owner and current Director of Finance verified 2026-08-10), but it is a duplicate second source for the same underlying record/entity ELM-REF-63521 as R6968; consolidated into the R6968 shortlist row and not given a separate slot.",
+      "source_ids": ["S-R4437"]
+    }
+  ],
+  "summary": "From 20 base records, two distinct Raleigh retail refinance opportunities qualify: Elm Square 1 (R6968 / entity ELM-REF-63521, executed maturity 2027-01-15, original principal $8,640,000) and Elm Point 3 (R7631 / entity ELM-REF-53828, executed maturity 2027-03-15, original principal $9,936,000), ranked by confirmed maturity ascending. R4437 is a duplicate of R6968 (same entity) and was consolidated rather than counted twice. All other records failed on scope (Seattle market; Office asset type per executed amendments U-R3478-5, U-R9233-4, U-R5893-7, U-R2630-6, or base Office in R3427), debt status (released R9095; status_unknown R4755), maturity evidence (unconfirmed R2801, inferred R9201, out-of-window R8058, executed extension to 2028-09-30 in U-R1927-1), or people evidence (stale ownership R6909, former employee R1548, registered agent only R4641, property manager only R2376). R7798 was excluded solely because its source was published 2026-09-03, after the cutoff. Outstanding balances are unknown (null) for every record — only original principal is published — so no loan-to-value or payoff sizing is supported. No SPV-to-parent mappings were present in the packet.",
+  "limitations": [
+    "outstanding_balance_usd is null for all 20 records; original principal is reported as such and must not be read as current payoff.",
+    "R7631 carries a recorded release (U-R7631-2) published and effective 2026-09-10. Under the stated cutoff rule this post-cutoff evidence does not override the base extract, but the loan is very likely no longer active in reality; verify before outreach.",
+    "R7798 (Elm Crossing 18) may well qualify on the merits (active loan, executed 2027-04-15 maturity, current Director of Finance) but its only source is published 2026-09-03, after the cutoff, so it was excluded for evidence timing rather than substance.",
+    "Owner and contact verification for the shortlisted records both rest on a single 2026-08-10 combined evidence item (note owner confirmation plus team page); no independent second confirmation of contact employment is available except for entity ELM-REF-63521, where R4437 duplicates the same underlying record.",
+    "Emails are taken as published_business values in the extracts; no enrichment, validation or deliverability check was performed.",
+    "Asset-type reclassifications to Office arrive via 'executed_amendment' documents, an unusual instrument for asset type; they were applied as controlling per the packet rules, which materially reduced the eligible pool.",
+    "No lender, interest rate, DSCR, occupancy or valuation data is supplied, so refinance need and sizing cannot be assessed.",
+    "Artifact creation (prospect CSV / comp-grid XLSX) is outside this direct API control; no file was generated or delivered. The two shortlist rows above contain the complete selected facts and citations needed to build it."
+  ]
+}
+```

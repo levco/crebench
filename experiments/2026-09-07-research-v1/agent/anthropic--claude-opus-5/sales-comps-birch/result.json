@@ -1,0 +1,123 @@
+{
+  "case_id": "sales-comps-birch",
+  "system": "anthropic/claude-opus-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T02:19:47.094670+00:00",
+  "completed_at": "2026-09-07T02:21:06.201408+00:00",
+  "elapsed_seconds": 79.106,
+  "cost_usd": 0.338265,
+  "known_partial_cost_usd": 0.338265,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "model_calls": 3,
+  "tool_calls": 2,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 8163,
+        "completion_tokens": 1236,
+        "total_tokens": 9399,
+        "cost": 0.071715,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1078,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.071715,
+        "gateway_cost": 0.071715
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 14.083,
+      "completed_at": "2026-09-07T02:20:01.194875+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 8381,
+        "completion_tokens": 3158,
+        "total_tokens": 11539,
+        "cost": 0.120855,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 876,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.120855,
+        "gateway_cost": 0.120855
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 29.357,
+      "completed_at": "2026-09-07T02:20:30.556105+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 10834,
+        "completion_tokens": 3661,
+        "total_tokens": 14495,
+        "cost": 0.145695,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 173,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.145695,
+        "gateway_cost": 0.145695
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 35.048,
+      "completed_at": "2026-09-07T02:21:06.198123+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/underwriting-v1.xlsx",
+      "sha256": "7c70b9cf1cb09c85f70ddb46ef5ea14e8349726863c099f5cebea67ef09b6f84",
+      "bytes": 4660
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

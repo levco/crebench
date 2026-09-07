@@ -1,0 +1,623 @@
+{
+  "case_id": "sponsor-leads-cypress",
+  "task": "sponsor_leads",
+  "target_count": 6,
+  "available_unique": 6,
+  "returned_count": 7,
+  "eligible_count": 6,
+  "verified_count": 6,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 0.8571428571428571,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 49,
+    "total": 49
+  },
+  "evidence_accuracy": {
+    "passed": 7,
+    "total": 7
+  },
+  "candidate_accuracy": {
+    "passed": 19,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 8,
+    "total": 8
+  },
+  "ineligible_rejection": {
+    "passed": 11,
+    "total": 12
+  },
+  "ranking_pair_agreement": {
+    "passed": 15,
+    "total": 15
+  },
+  "material_errors": [
+    {
+      "record_id": "R1826",
+      "type": "ineligible_selection",
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "selected_checks": [
+    {
+      "record_id": "R1826",
+      "eligible": false,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-94665",
+          "expected": "CYPRESS-SPO-94665",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Crossing 18 Capital",
+          "expected": "Cypress Crossing 18 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 9800000,
+          "expected": 9800000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-07-22",
+          "expected": "2026-07-22",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Morgan Cypress18",
+          "expected": "Morgan Cypress18",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person18@sponsor-leads-cypress.example",
+          "expected": "person18@sponsor-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R1826"
+      ],
+      "reported_sources": [
+        "S-R1826"
+      ]
+    },
+    {
+      "record_id": "R9249",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-30009",
+          "expected": "CYPRESS-SPO-30009",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Square 6 Capital",
+          "expected": "Cypress Square 6 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 11000000,
+          "expected": 11000000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-07-10",
+          "expected": "2026-07-10",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Morgan Cypress6",
+          "expected": "Morgan Cypress6",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person6@sponsor-leads-cypress.example",
+          "expected": "person6@sponsor-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R9249"
+      ],
+      "reported_sources": [
+        "S-R9249"
+      ]
+    },
+    {
+      "record_id": "R3919",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-21730",
+          "expected": "CYPRESS-SPO-21730",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Park 5 Capital",
+          "expected": "Cypress Park 5 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 10400000,
+          "expected": 10400000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-06-09",
+          "expected": "2026-06-09",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Cypress5",
+          "expected": "Alex Cypress5",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3919"
+      ],
+      "reported_sources": [
+        "S-R3919"
+      ]
+    },
+    {
+      "record_id": "R2909",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-81408",
+          "expected": "CYPRESS-SPO-81408",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Crossing 4 Capital",
+          "expected": "Cypress Crossing 4 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 9800000,
+          "expected": 9800000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-05-08",
+          "expected": "2026-05-08",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Taylor Cypress4",
+          "expected": "Taylor Cypress4",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "Head of Acquisitions",
+          "expected": "Head of Acquisitions",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person4@sponsor-leads-cypress.example",
+          "expected": "person4@sponsor-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R2909"
+      ],
+      "reported_sources": [
+        "S-R2909"
+      ]
+    },
+    {
+      "record_id": "R4338",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-51531",
+          "expected": "CYPRESS-SPO-51531",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Square 3 Capital",
+          "expected": "Cypress Square 3 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 9200000,
+          "expected": 9200000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-04-07",
+          "expected": "2026-04-07",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Jordan Cypress3",
+          "expected": "Jordan Cypress3",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person3@sponsor-leads-cypress.example",
+          "expected": "person3@sponsor-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4338"
+      ],
+      "reported_sources": [
+        "S-R4338"
+      ]
+    },
+    {
+      "record_id": "R9956",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-38583",
+          "expected": "CYPRESS-SPO-38583",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Point 2 Capital",
+          "expected": "Cypress Point 2 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 8600000,
+          "expected": 8600000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-03-06",
+          "expected": "2026-03-06",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Drew Cypress",
+          "expected": "Drew Cypress",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "new.cfo@sponsor-leads-cypress.example",
+          "expected": "new.cfo@sponsor-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R9956",
+        "U-R9956-1"
+      ],
+      "reported_sources": [
+        "S-R9956",
+        "U-R9956-1"
+      ]
+    },
+    {
+      "record_id": "R4738",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "CYPRESS-SPO-90059",
+          "expected": "CYPRESS-SPO-90059",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Cypress Crossing 1 Capital",
+          "expected": "Cypress Crossing 1 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 8000000,
+          "expected": 8000000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-02-05",
+          "expected": "2026-02-05",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Cypress1",
+          "expected": "Alex Cypress1",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person1@sponsor-leads-cypress.example",
+          "expected": "person1@sponsor-leads-cypress.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4738"
+      ],
+      "reported_sources": [
+        "S-R4738",
+        "S-R9815"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R9956",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3919",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R5272",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Amount is not a single-asset purchase",
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R7976",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R2395",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale contact verification"
+      ]
+    },
+    {
+      "record_id": "R4766",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R8528",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    },
+    {
+      "record_id": "R4857",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Event outside lookback"
+      ]
+    },
+    {
+      "record_id": "R3688",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R9249",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2909",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R9289",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R4738",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R6278",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    },
+    {
+      "record_id": "R6741",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not a closed acquisition"
+      ]
+    },
+    {
+      "record_id": "R9815",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2141",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R7602",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R4338",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R1826",
+      "actual": true,
+      "expected": false,
+      "passed": false,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ],
+  "scoring_version": "research-v1.1-scoring",
+  "representation_adjustments": []
+}

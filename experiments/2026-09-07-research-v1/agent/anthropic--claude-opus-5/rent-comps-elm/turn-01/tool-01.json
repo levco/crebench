@@ -1,0 +1,64 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"r5361_face\",\"expression\":\"21.0*(1+1.025+1.025**2)\"},{\"name\":\"r5361_net\",\"expression\":\"r5361_face-6.25*3-12\"},{\"name\":\"r5361_eff\",\"expression\":\"r5361_net/36*12\"},{\"name\":\"r8528_ann\",\"expression\":\"1.87*12\"},{\"name\":\"r8528_face\",\"expression\":\"r8528_ann*(1+1.025+1.025**2+1.025**3)\"},{\"name\":\"r8528_net\",\"expression\":\"r8528_face-4*(r8528_ann/12)-18\"},{\"name\":\"r8528_eff\",\"expression\":\"r8528_net/48*12\"},{\"name\":\"r4908_face\",\"expression\":\"22.6*(1+1.025+1.025**2+1.025**3+1.025**4)\"},{\"name\":\"r4908_net\",\"expression\":\"r4908_face-2*(22.6/12)-18\"},{\"name\":\"r4908_eff\",\"expression\":\"r4908_net/60*12\"}]}",
+  "call_id": "toolu_01EXGTxEDzWxe12S2WizH4v9",
+  "arguments": {
+    "steps": [
+      {
+        "name": "r5361_face",
+        "expression": "21.0*(1+1.025+1.025**2)"
+      },
+      {
+        "name": "r5361_net",
+        "expression": "r5361_face-6.25*3-12"
+      },
+      {
+        "name": "r5361_eff",
+        "expression": "r5361_net/36*12"
+      },
+      {
+        "name": "r8528_ann",
+        "expression": "1.87*12"
+      },
+      {
+        "name": "r8528_face",
+        "expression": "r8528_ann*(1+1.025+1.025**2+1.025**3)"
+      },
+      {
+        "name": "r8528_net",
+        "expression": "r8528_face-4*(r8528_ann/12)-18"
+      },
+      {
+        "name": "r8528_eff",
+        "expression": "r8528_net/48*12"
+      },
+      {
+        "name": "r4908_face",
+        "expression": "22.6*(1+1.025+1.025**2+1.025**3+1.025**4)"
+      },
+      {
+        "name": "r4908_net",
+        "expression": "r4908_face-2*(22.6/12)-18"
+      },
+      {
+        "name": "r4908_eff",
+        "expression": "r4908_net/60*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "r5361_face": 64.58812499999999,
+      "r5361_net": 33.83812499999999,
+      "r5361_eff": 11.279374999999998,
+      "r8528_ann": 22.44,
+      "r8528_face": 93.18245062499999,
+      "r8528_net": 67.70245062499998,
+      "r8528_eff": 16.925612656249996,
+      "r4908_face": 118.79302445312497,
+      "r4908_net": 97.0263577864583,
+      "r4908_eff": 19.40527155729166
+    }
+  },
+  "status": "ok"
+}

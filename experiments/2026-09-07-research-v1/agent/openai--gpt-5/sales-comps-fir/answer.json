@@ -1,0 +1,182 @@
+{
+  "shortlist": [],
+  "candidate_decisions": [
+    {
+      "record_id": "R8490",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20; not an Industrial sale in Dallas at cutoff.",
+      "source_ids": [
+        "S-R8490",
+        "U-R8490-6"
+      ]
+    },
+    {
+      "record_id": "R8993",
+      "eligible": false,
+      "reason": "Property size 231,000 sf is outside the 71,500\u2013159,500 sf range.",
+      "source_ids": [
+        "S-R8993"
+      ]
+    },
+    {
+      "record_id": "R8114",
+      "eligible": false,
+      "reason": "Consideration is unknown (null); requires known positive consideration.",
+      "source_ids": [
+        "S-R8114"
+      ]
+    },
+    {
+      "record_id": "R8252",
+      "eligible": false,
+      "reason": "Asset type is Office, not Industrial.",
+      "source_ids": [
+        "S-R8252"
+      ]
+    },
+    {
+      "record_id": "R2607",
+      "eligible": false,
+      "reason": "Duplicate of R6997 (same entity_id). Entity-level executed amendment updated market to Seattle effective 2026-08-20; not Dallas at cutoff.",
+      "source_ids": [
+        "S-R2607",
+        "U-R6997-4"
+      ]
+    },
+    {
+      "record_id": "R2188",
+      "eligible": false,
+      "reason": "Scope is portfolio_unallocated; not a qualifying single-asset sale with allocated price.",
+      "source_ids": [
+        "S-R2188"
+      ]
+    },
+    {
+      "record_id": "R7726",
+      "eligible": false,
+      "reason": "Evidence published after cutoff (published_at 2026-09-03 > 2026-08-31).",
+      "source_ids": [
+        "S-R7726"
+      ]
+    },
+    {
+      "record_id": "R2939",
+      "eligible": false,
+      "reason": "Distance 18.6 miles exceeds the 8-mile limit.",
+      "source_ids": [
+        "S-R2939"
+      ]
+    },
+    {
+      "record_id": "R6997",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20; also a duplicate of R2607 (same entity_id).",
+      "source_ids": [
+        "S-R6997",
+        "U-R6997-4"
+      ]
+    },
+    {
+      "record_id": "R9929",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20 (pricing also amended but market controls Dallas scope exclusion).",
+      "source_ids": [
+        "S-R9929",
+        "U-R9929-5",
+        "U-R9929-1"
+      ]
+    },
+    {
+      "record_id": "R9726",
+      "eligible": false,
+      "reason": "Related-party transaction; must be unrelated parties.",
+      "source_ids": [
+        "S-R9726"
+      ]
+    },
+    {
+      "record_id": "R8402",
+      "eligible": false,
+      "reason": "Interest is minority_equity_interest; not a fee-simple single-asset sale.",
+      "source_ids": [
+        "S-R8402"
+      ]
+    },
+    {
+      "record_id": "R2942",
+      "eligible": false,
+      "reason": "Event date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.",
+      "source_ids": [
+        "S-R2942"
+      ]
+    },
+    {
+      "record_id": "R3099",
+      "eligible": false,
+      "reason": "Status is listing; not a closed sale.",
+      "source_ids": [
+        "S-R3099"
+      ]
+    },
+    {
+      "record_id": "R3387",
+      "eligible": false,
+      "reason": "Size unit is acre, not sf; fails correct size unit and size-range requirements.",
+      "source_ids": [
+        "S-R3387"
+      ]
+    },
+    {
+      "record_id": "R8382",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20; not Dallas at cutoff.",
+      "source_ids": [
+        "S-R8382",
+        "U-R8382-7"
+      ]
+    },
+    {
+      "record_id": "R7274",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20; not Dallas at cutoff.",
+      "source_ids": [
+        "S-R7274",
+        "U-R7274-9"
+      ]
+    },
+    {
+      "record_id": "R7218",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20; not Dallas at cutoff.",
+      "source_ids": [
+        "S-R7218",
+        "U-R7218-8"
+      ]
+    },
+    {
+      "record_id": "R8181",
+      "eligible": false,
+      "reason": "Condition is redevelopment; not stabilized.",
+      "source_ids": [
+        "S-R8181"
+      ]
+    },
+    {
+      "record_id": "R4189",
+      "eligible": false,
+      "reason": "Market updated to Seattle by executed amendment effective 2026-08-20; not Dallas at cutoff.",
+      "source_ids": [
+        "S-R4189",
+        "U-R4189-10"
+      ]
+    }
+  ],
+  "summary": "No qualifying Dallas Industrial closed sales were found within 8 miles and 71,500\u2013159,500 sf between 2025-09-01 and 2026-08-31. Many candidates were excluded by executed amendments moving the market to Seattle as of 2026-08-20; others failed size, distance, consideration, transaction-type, redevelopment, or publication-date rules. A comps grid XLSX with headers and a note has been generated.",
+  "limitations": [
+    "Only the provided base extracts and executed amendments effective on/before 2026-08-31 were used; no external corroboration.",
+    "Several Dallas records were invalidated by entity-level market updates to Seattle effective 2026-08-20; if those are reversed or refined later, results could change.",
+    "One nearby closed sale (R8114) lacked consideration, preventing qualification despite meeting other filters.",
+    "A record with post-cutoff publication (R7726) was excluded by rule; earlier evidence could alter eligibility if available.",
+    "Data entry anomalies (e.g., size unit reported as acre for R3387) could not be corrected without additional evidence."
+  ]
+}

@@ -50,4 +50,41 @@ if(release.workflow){
   for(const [file,hash] of Object.entries(plan.sha256))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),hash,`Frozen input drift: ${file}`);
 }else assert.deepEqual(release.model_results,[]);
 for(const forbidden of ['private','heldout','.git','.env','outputs']) assert(!fs.existsSync(path.join(dist,forbidden)));
+if(release.research){
+  const results=JSON.parse(fs.readFileSync(path.join(dist,'research-results.json')));
+  assert.equal(results.runs.length,120);
+  assert.equal(new Set(results.runs.map(r=>[r.track,r.system,r.case_id].join('/'))).size,120);
+  assert.equal(release.research.recorded_runs,results.runs.filter(r=>r.status==='completed').length);
+  const plan=JSON.parse(fs.readFileSync('experiments/2026-09-07-research-v1/plan.json'));
+  for(const [file,hash] of Object.entries(plan.sha256))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),hash,`Research frozen input drift: ${file}`);
+  for(const r of results.runs){
+    if(r.grade){
+      const g=r.grade;
+      assert.equal(g.candidate_accuracy.total,20);
+      assert.equal(g.candidate_accuracy.passed,g.decision_checks.filter(c=>c.passed).length);
+      assert.equal(g.verified_count,g.selected_checks.filter(c=>c.verified).length);
+      assert.equal(g.eligible_count,g.selected_checks.filter(c=>c.eligible).length);
+      assert.equal(g.verified_yield,g.target_count?g.verified_count/g.target_count:null);
+    }
+    if(r.trace_audit){
+      assert.equal(r.packet_sha256,plan.sha256[`benchmarks/research-v1/cases/${r.case_id}/packet.md`]);
+      assert(Math.abs(r.estimated_inference_cost_usd-r.trace_audit.generation_costs_usd.reduce((a,n)=>a+n,0))<1e-8);
+    }
+    for(const f of r.artifacts??[]){
+      const p=path.join(dist,'research-artifacts',r.track,r.system.replace('/','--'),r.case_id,path.basename(f.path));
+      assert.equal(crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'),f.sha256);
+    }
+  }
+  for(const s of results.summary){
+    const runs=results.runs.filter(r=>r.track===s.track&&r.system===s.system);
+    assert.equal(s.planned,24);
+    assert.equal(s.verified,runs.reduce((n,r)=>n+(r.grade?.verified_count??0),0));
+    assert.equal(s.target,runs.reduce((n,r)=>n+r.expected_target,0));
+    assert.equal(s.screening.total,480);
+    assert.equal(s.screening.unanswered,runs.filter(r=>!r.grade).length*20);
+    assert.equal(s.screening.passed,runs.reduce((n,r)=>n+(r.grade?.candidate_accuracy.passed??0),0));
+    assert.equal(s.material_errors,runs.reduce((n,r)=>n+(r.grade?.material_errors.length??0),0));
+  }
+  for(const marker of ['X-Amz-Signature','kylegraves808@gmail.com','Authorization: Bearer','sk-ant-','vck_'])assert(!JSON.stringify(results).includes(marker),`Private research marker: ${marker}`);
+}
 console.log(`Verified ${checked} local links/assets, ARIA targets, published score arithmetic, original artifact hashes, frozen protocol, and public-only output.`);

@@ -1,0 +1,271 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R7391",
+      "facts": {
+        "entity_id": "CYPRESS-REF-62661",
+        "owner_entity_id": "O-CYPRESS-REF-62661",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 4800000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Cypress1",
+        "contact_email": "finance1@refinance-leads-cypress.example"
+      },
+      "source_ids": [
+        "S-R7391"
+      ],
+      "rationale": "Industrial (Columbus), confirmed active debt; executed-note maturity on 2027-01-15 with no executed extension; record owner and current Director of Finance both verified 2026-08-10. Duplicate exists (R2362) for same entity; shortlisted once."
+    },
+    {
+      "record_id": "R4643",
+      "facts": {
+        "entity_id": "CYPRESS-REF-10959",
+        "owner_entity_id": "O-CYPRESS-REF-10959",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 5520000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Cypress3",
+        "contact_email": "finance3@refinance-leads-cypress.example"
+      },
+      "source_ids": [
+        "S-R4643"
+      ],
+      "rationale": "Industrial (Columbus), confirmed active debt; executed-note maturity on 2027-03-15; no executed extension; owner and current Director of Finance verified 2026-08-10. Later recorded-release update is post-cutoff and not applied."
+    },
+    {
+      "record_id": "R3353",
+      "facts": {
+        "entity_id": "CYPRESS-REF-27033",
+        "owner_entity_id": "O-CYPRESS-REF-27033",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 5880000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Sam Cypress4",
+        "contact_email": "finance4@refinance-leads-cypress.example"
+      },
+      "source_ids": [
+        "S-R3353"
+      ],
+      "rationale": "Industrial (Columbus), confirmed active debt; executed-note maturity on 2027-04-15; no executed extension; owner and current Director of Finance verified 2026-08-10. An unsigned draft amendment does not control."
+    },
+    {
+      "record_id": "R2253",
+      "facts": {
+        "entity_id": "CYPRESS-REF-14488",
+        "owner_entity_id": "O-CYPRESS-REF-14488",
+        "maturity_date": "2027-05-15",
+        "original_principal_usd": 6240000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Cypress5",
+        "contact_email": null
+      },
+      "source_ids": [
+        "S-R2253"
+      ],
+      "rationale": "Industrial (Columbus), confirmed active debt; executed-note maturity on 2027-05-15; no executed extension; owner and current Director of Finance verified 2026-08-10. Email not published (optional)."
+    },
+    {
+      "record_id": "R5546",
+      "facts": {
+        "entity_id": "CYPRESS-REF-65445",
+        "owner_entity_id": "O-CYPRESS-REF-65445",
+        "maturity_date": "2027-06-15",
+        "original_principal_usd": 6600000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Cypress6",
+        "contact_email": "finance6@refinance-leads-cypress.example"
+      },
+      "source_ids": [
+        "S-R5546"
+      ],
+      "rationale": "Industrial (Columbus), confirmed active debt; executed-note maturity on 2027-06-15; no executed extension; owner and current Director of Finance verified 2026-08-10."
+    },
+    {
+      "record_id": "R7918",
+      "facts": {
+        "entity_id": "CYPRESS-REF-34203",
+        "owner_entity_id": "O-CYPRESS-REF-34203",
+        "maturity_date": "2027-07-15",
+        "original_principal_usd": 6960000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Cypress7",
+        "contact_email": "finance7@refinance-leads-cypress.example"
+      },
+      "source_ids": [
+        "S-R7918"
+      ],
+      "rationale": "Industrial (Columbus), confirmed active debt; executed-note maturity on 2027-07-15; no executed extension; owner and current Director of Finance verified 2026-08-10."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R3947",
+      "eligible": false,
+      "reason": "Owner is listed as property_manager; requires a record_owner verified since 2026-03-01.",
+      "source_ids": [
+        "S-R3947"
+      ]
+    },
+    {
+      "record_id": "R3917",
+      "eligible": false,
+      "reason": "Base record published 2026-09-03 (post-cutoff 2026-08-31); excluded from as-of analysis.",
+      "source_ids": [
+        "S-R3917"
+      ]
+    },
+    {
+      "record_id": "R3389",
+      "eligible": false,
+      "reason": "Executed amendment extended maturity to 2028-09-30 and marked extension executed; outside window and not unextended.",
+      "source_ids": [
+        "S-R3389",
+        "U-R3389-1"
+      ]
+    },
+    {
+      "record_id": "R7918",
+      "eligible": true,
+      "reason": "Industrial (Columbus) with confirmed active debt and executed-note maturity on 2027-07-15; no executed extension; contact is current Director of Finance verified 2026-08-10.",
+      "source_ids": [
+        "S-R7918"
+      ]
+    },
+    {
+      "record_id": "R2362",
+      "eligible": true,
+      "reason": "Meets all criteria but is a duplicate of R7391 (same entity_id CYPRESS-REF-62661); sponsor counted once in shortlist.",
+      "source_ids": [
+        "S-R2362"
+      ]
+    },
+    {
+      "record_id": "R9569",
+      "eligible": false,
+      "reason": "Maturity unconfirmed and extension option unresolved; requires executed, unextended maturity.",
+      "source_ids": [
+        "S-R9569"
+      ]
+    },
+    {
+      "record_id": "R9318",
+      "eligible": false,
+      "reason": "Maturity inferred_from_origination (not executed); requires executed-note basis.",
+      "source_ids": [
+        "S-R9318"
+      ]
+    },
+    {
+      "record_id": "R3320",
+      "eligible": false,
+      "reason": "Loan released; requires confirmed active debt.",
+      "source_ids": [
+        "S-R3320"
+      ]
+    },
+    {
+      "record_id": "R9030",
+      "eligible": false,
+      "reason": "Loan status unknown; requires confirmed active debt.",
+      "source_ids": [
+        "S-R9030"
+      ]
+    },
+    {
+      "record_id": "R3353",
+      "eligible": true,
+      "reason": "Industrial (Columbus) with confirmed active debt and executed-note maturity on 2027-04-15; no executed extension. Unsigned draft amendment ignored.",
+      "source_ids": [
+        "S-R3353",
+        "U-R3353-3"
+      ]
+    },
+    {
+      "record_id": "R8853",
+      "eligible": false,
+      "reason": "Asset type Office; scope limited to Industrial in Columbus.",
+      "source_ids": [
+        "S-R8853"
+      ]
+    },
+    {
+      "record_id": "R2334",
+      "eligible": false,
+      "reason": "Record owner verification dated 2024-01-01 (stale); needs verification since 2026-03-01.",
+      "source_ids": [
+        "S-R2334"
+      ]
+    },
+    {
+      "record_id": "R2570",
+      "eligible": false,
+      "reason": "Maturity 2028-02-01 is outside the 2026-09-01 to 2027-08-31 window.",
+      "source_ids": [
+        "S-R2570"
+      ]
+    },
+    {
+      "record_id": "R2253",
+      "eligible": true,
+      "reason": "Industrial (Columbus) with confirmed active debt and executed-note maturity on 2027-05-15; no executed extension; contact current and verified since 2026-03-01. Email not published (optional).",
+      "source_ids": [
+        "S-R2253"
+      ]
+    },
+    {
+      "record_id": "R4643",
+      "eligible": true,
+      "reason": "Industrial (Columbus) with confirmed active debt and executed-note maturity on 2027-03-15; no executed extension; contact current and verified since 2026-03-01. Later recorded-release update is post-cutoff and not applied.",
+      "source_ids": [
+        "S-R4643"
+      ]
+    },
+    {
+      "record_id": "R3709",
+      "eligible": false,
+      "reason": "Contact role is Registered Agent; requires CFO, Head of Acquisitions, or Director of Finance verified since 2026-03-01.",
+      "source_ids": [
+        "S-R3709"
+      ]
+    },
+    {
+      "record_id": "R4862",
+      "eligible": false,
+      "reason": "Contact employment listed as former; requires current CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": [
+        "S-R4862"
+      ]
+    },
+    {
+      "record_id": "R5546",
+      "eligible": true,
+      "reason": "Industrial (Columbus) with confirmed active debt and executed-note maturity on 2027-06-15; no executed extension; contact current and verified since 2026-03-01.",
+      "source_ids": [
+        "S-R5546"
+      ]
+    },
+    {
+      "record_id": "R7391",
+      "eligible": true,
+      "reason": "Meets all criteria and duplicates R2362 (same entity); shortlisted with this record to avoid double-counting.",
+      "source_ids": [
+        "S-R7391"
+      ]
+    },
+    {
+      "record_id": "R3836",
+      "eligible": false,
+      "reason": "Market is Seattle; scope limited to Industrial in Columbus.",
+      "source_ids": [
+        "S-R3836"
+      ]
+    }
+  ],
+  "summary": "Six Columbus industrial refinance opportunities meet the criteria (confirmed active loans; executed-note maturities between 2026-09-01 and 2027-08-31; no executed extensions; record owner and current Director of Finance verified since 2026-03-01). One duplicate pair (R2362/R7391) was shortlisted once. Exclusions were due to unconfirmed/inferred maturities, executed extensions, released/unknown loans, out-of-scope markets/asset types, stale ownership verification, or ineligible/invalid contacts. A prospect CSV with citations and selected facts has been created at artifacts/prospects-v1.csv.",
+  "limitations": [
+    "Outstanding balances were not provided in the sources and are reported as null.",
+    "Eligibility and rankings rely strictly on sources published/effective on or before the 2026-08-31 cutoff; any later changes are not reflected.",
+    "One duplicate property record existed (Cypress Park 1); selection prioritized the team-page\u2013corroborated base record.",
+    "Tie-breaking beyond the specified maturity then principal ordering was not defined; equal-principal items on the same date were ordered consistently but arbitrarily."
+  ]
+}

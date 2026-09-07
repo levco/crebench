@@ -1,0 +1,229 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R4105",
+      "facts": {
+        "entity_id": "ELM-SAL-91902",
+        "event_date": "2026-02-05",
+        "consideration_usd": 14400000,
+        "property_size": 36000,
+        "price_per_unit": 400.0
+      },
+      "source_ids": [
+        "S-R4105"
+      ],
+      "rationale": "Retail, Raleigh, closed 2026-02-05 (inside 2025-09-01 to 2026-08-31), 0.8 mi (<=8), 36,000 sf in range with correct 'sf' unit, stabilized, single-asset, fee-simple, unrelated party, known positive consideration USD 14,400,000 -> USD 400.00/sf. Nearest qualifying comp; duplicate record R3577 (same entity ELM-SAL-91902) suppressed in dedupe."
+    },
+    {
+      "record_id": "R8422",
+      "facts": {
+        "entity_id": "ELM-SAL-64090",
+        "event_date": "2026-03-06",
+        "consideration_usd": 16740000,
+        "property_size": 38700,
+        "price_per_unit": 432.56
+      },
+      "source_ids": [
+        "S-R8422",
+        "U-R8422-1"
+      ],
+      "rationale": "Retail, Raleigh, closed 2026-03-06, 1.03 mi, 38,700 sf ('sf'), stabilized, single-asset, fee-simple, unrelated. Executed amendment U-R8422-1 (published/effective 2026-08-20, on or before cutoff) overrides base consideration of USD 15,480,000 to USD 16,740,000 -> USD 432.56/sf."
+    },
+    {
+      "record_id": "R3397",
+      "facts": {
+        "entity_id": "ELM-SAL-96210",
+        "event_date": "2026-04-07",
+        "consideration_usd": 16560000,
+        "property_size": 41400,
+        "price_per_unit": 400.0
+      },
+      "source_ids": [
+        "S-R3397"
+      ],
+      "rationale": "Retail, Raleigh, closed 2026-04-07, 1.26 mi, 41,400 sf ('sf'), stabilized, single-asset, fee-simple, unrelated. Base consideration USD 16,560,000 (16.56 USD millions normalized) -> USD 400.00/sf. Update U-R3397-2 is published/effective 2026-09-10, after the 2026-08-31 cutoff, so it is not applied."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8129",
+      "eligible": false,
+      "reason": "Condition is 'redevelopment', which is not a qualifying stabilized sale (also fails the stabilized requirement).",
+      "source_ids": [
+        "S-R8129"
+      ]
+    },
+    {
+      "record_id": "R7280",
+      "eligible": false,
+      "reason": "Executed amendment U-R7280-6 (effective 2026-08-20, on or before cutoff) changes asset_type to Office; outside Retail scope.",
+      "source_ids": [
+        "S-R7280",
+        "U-R7280-6"
+      ]
+    },
+    {
+      "record_id": "R8422",
+      "eligible": true,
+      "reason": "Meets all business rules; consideration controlled by executed amendment U-R8422-1 (USD 16,740,000). Selected in shortlist.",
+      "source_ids": [
+        "S-R8422",
+        "U-R8422-1"
+      ]
+    },
+    {
+      "record_id": "R7302",
+      "eligible": false,
+      "reason": "Executed amendment U-R7302-5 (effective 2026-08-20) changes asset_type to Office; outside Retail scope.",
+      "source_ids": [
+        "S-R7302",
+        "U-R7302-5"
+      ]
+    },
+    {
+      "record_id": "R4105",
+      "eligible": true,
+      "reason": "Meets all business rules (Retail, Raleigh, closed in window, 0.8 mi, 36,000 sf, stabilized, single-asset, fee-simple, unrelated, USD 14,400,000). Selected; entity ELM-SAL-91902 also appears as duplicate record R3577.",
+      "source_ids": [
+        "S-R4105"
+      ]
+    },
+    {
+      "record_id": "R3794",
+      "eligible": false,
+      "reason": "Event date 2024-02-10 is before the 2025-09-01 start of the closing-date window.",
+      "source_ids": [
+        "S-R3794"
+      ]
+    },
+    {
+      "record_id": "R3397",
+      "eligible": true,
+      "reason": "Meets all business rules on base evidence; later-dated update U-R3397-2 (effective 2026-09-10) is after cutoff and not applied. Selected in shortlist.",
+      "source_ids": [
+        "S-R3397",
+        "U-R3397-2"
+      ]
+    },
+    {
+      "record_id": "R2952",
+      "eligible": false,
+      "reason": "Distance 18.6 miles exceeds the 8-mile radius.",
+      "source_ids": [
+        "S-R2952"
+      ]
+    },
+    {
+      "record_id": "R3577",
+      "eligible": true,
+      "reason": "Satisfies business rules but is a duplicate of entity ELM-SAL-91902 already represented by R4105 (second source on same underlying record); suppressed in dedupe so it does not occupy a second slot.",
+      "source_ids": [
+        "S-R3577",
+        "S-R4105"
+      ]
+    },
+    {
+      "record_id": "R3742",
+      "eligible": false,
+      "reason": "Executed amendment U-R3742-7 (effective 2026-08-20) changes asset_type to Office; outside Retail scope.",
+      "source_ids": [
+        "S-R3742",
+        "U-R3742-7"
+      ]
+    },
+    {
+      "record_id": "R8218",
+      "eligible": false,
+      "reason": "Consideration is null (unknown, not zero); known positive consideration is required, so price per sf cannot be evidenced.",
+      "source_ids": [
+        "S-R8218"
+      ]
+    },
+    {
+      "record_id": "R5078",
+      "eligible": false,
+      "reason": "Asset type is Office; outside Retail scope.",
+      "source_ids": [
+        "S-R5078"
+      ]
+    },
+    {
+      "record_id": "R4512",
+      "eligible": false,
+      "reason": "Size unit is 'acre', not the required 'sf'; size cannot be treated as square feet.",
+      "source_ids": [
+        "S-R4512"
+      ]
+    },
+    {
+      "record_id": "R4218",
+      "eligible": false,
+      "reason": "Property size 94,500 sf exceeds the 29,250\u201365,250 sf band.",
+      "source_ids": [
+        "S-R4218"
+      ]
+    },
+    {
+      "record_id": "R6058",
+      "eligible": false,
+      "reason": "Interest is a minority equity interest, which is not a qualifying sale.",
+      "source_ids": [
+        "S-R6058"
+      ]
+    },
+    {
+      "record_id": "R2453",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; evidence must be published and effective on or before the cutoff.",
+      "source_ids": [
+        "S-R2453"
+      ]
+    },
+    {
+      "record_id": "R7069",
+      "eligible": false,
+      "reason": "Executed amendment U-R7069-4 (effective 2026-08-20) changes asset_type to Office; outside Retail scope. Unsigned draft U-R7069-3 (consideration 9,000,000) is disregarded.",
+      "source_ids": [
+        "S-R7069",
+        "U-R7069-4",
+        "U-R7069-3"
+      ]
+    },
+    {
+      "record_id": "R8810",
+      "eligible": false,
+      "reason": "Related-party transaction (related_party = true); unrelated-party requirement fails.",
+      "source_ids": [
+        "S-R8810"
+      ]
+    },
+    {
+      "record_id": "R4592",
+      "eligible": false,
+      "reason": "Scope is portfolio_unallocated; an unallocated portfolio price is not a qualifying single-asset sale.",
+      "source_ids": [
+        "S-R4592"
+      ]
+    },
+    {
+      "record_id": "R6121",
+      "eligible": false,
+      "reason": "Status is 'listing', not a closed sale.",
+      "source_ids": [
+        "S-R6121"
+      ]
+    }
+  ],
+  "summary": "Three unique qualifying closed retail comps were identified in Raleigh within 8 miles, 29,250\u201365,250 sf, closed between 2025-09-01 and 2026-08-31, ranked by distance ascending: R4105 (0.80 mi, 2026-02-05, USD 14,400,000, 36,000 sf, USD 400.00/sf), R8422 (1.03 mi, 2026-03-06, USD 16,740,000 per executed amendment U-R8422-1, 38,700 sf, USD 432.56/sf), and R3397 (1.26 mi, 2026-04-07, USD 16,560,000, 41,400 sf, USD 400.00/sf). Fewer than five comps qualified: the remaining base records failed on asset-type reclassification to Office via executed amendments (R7280, R7302, R3742, R7069) or base data (R5078), redevelopment condition (R8129), out-of-window closing (R3794), distance (R2952), unknown consideration (R8218), wrong size unit (R4512), oversize (R4218), minority interest (R6058), post-cutoff publication (R2453), related-party (R8810), unallocated portfolio (R4592), or listing status (R6121). R3577 duplicates entity ELM-SAL-91902 (R4105) and was suppressed. Per the control note, no workbook or CSV file was produced in this direct API response; the comp-grid facts and citations are provided inline above and are ready for export.",
+  "limitations": [
+    "Only the supplied extracts and updates were used; no external verification of deeds, closing statements, or amendment authenticity was performed.",
+    "Consideration for R8422 depends on executed amendment U-R8422-1; if that amendment were later superseded, price per sf (USD 432.56) would change.",
+    "R3397's post-cutoff amendment U-R3397-2 would reduce consideration to USD 1 (nominal, likely non-arm's-length); as of the 2026-08-31 cutoff it is excluded, but this comp may not survive a later as-of date.",
+    "R2453 could plausibly qualify on its underlying facts (4.71 mi, 44,100 sf, USD 17,640,000, closed 2026-07-22) but its source was published after the cutoff and was therefore excluded.",
+    "R8218 has unknown (null) consideration rather than zero; a price per sf could not be computed, so its eligibility is indeterminate rather than definitively disqualified on economics.",
+    "Distances are taken as supplied point values with no stated measurement basis or precision; near-boundary records were not independently re-measured.",
+    "Only three comps qualified, so the sample is thin for a value conclusion; price-per-sf clustering near USD 400/sf reflects a small set of transactions.",
+    "No cap rate, NOI, tenancy, vintage, or condition detail beyond the 'stabilized' flag was supplied, so no quality adjustments were applied.",
+    "No SPV-to-parent mappings appeared in this packet, so the SPV/sponsor-slot rule was not exercised."
+  ]
+}

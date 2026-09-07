@@ -1,0 +1,63 @@
+{
+  "case_id": "sponsor-leads-dogwood",
+  "system": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-07T02:35:07.184Z",
+  "observed_completed_at": "2026-09-07T02:40:11.966Z",
+  "packet_sha256": "e4c1bd9feb9905b8e83f488ae56dd0c9fde161ebc4ddefa0db519aa72ca5fa24",
+  "ui_whitespace_equivalent": true,
+  "operator_semantic_corrections": 0,
+  "artifacts": [
+    {
+      "path": "artifacts/dogwood_tampa_mf_sponsor_leads.csv",
+      "sha256": "cd8b01f087cc73c7a7b1672a0bf2538b52e363067366f9ed751978511d6a8572",
+      "bytes": 1118
+    },
+    {
+      "path": "artifacts/dogwood_tampa_mf_sponsor_leads.xlsx",
+      "sha256": "abc1645155a13f95e3e674772ca26be20f1b0f6f8c6ee7da209b5a18875c8ec7",
+      "bytes": 5616
+    }
+  ],
+  "cost_usd": null,
+  "estimated_inference_cost_usd": 0.379625,
+  "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price",
+  "elapsed_seconds": 92.53,
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "trace_audit": {
+    "trace_id": "78630138-9575-42e3-9eb3-19dfc0120a00",
+    "session_id": "ff174183-09fa-47cf-9981-93b341c7ab0a",
+    "started_at": "2026-09-06T22:36:00.700000-04:00",
+    "packet_match": "Trace prefix matches; connector truncates root input. Complete UI input was independently verified before submission.",
+    "event_count": 4,
+    "model_calls": 2,
+    "generation_costs_usd": [
+      0.22573875,
+      0.15388625
+    ],
+    "total_cost_usd": 0.379625,
+    "cost_sources": [
+      "openrouter"
+    ],
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "tools_called": [
+      "get_generated_file"
+    ],
+    "external_retrieval_audit": "no_retrieval_observed_partial_coverage",
+    "execution_coverage": "Recorded backend tools only; internal file-creation execution is not visible in the available trace metadata.",
+    "confirmed_common_corpus": false,
+    "tools_requiring_review": [],
+    "elapsed_seconds": 92.53,
+    "cost_scope": "Matched workflow generations and embeddings; duplicate run-summary excluded. Session naming, hosting, subscriptions, operator time and product credits excluded.",
+    "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price"
+  },
+  "access_audit": "no_retrieval_observed_partial_coverage"
+}

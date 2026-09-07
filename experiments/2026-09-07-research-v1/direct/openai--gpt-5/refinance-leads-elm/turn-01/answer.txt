@@ -1,0 +1,162 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R6968",
+      "facts": {
+        "entity_id": "ELM-REF-63521",
+        "owner_entity_id": "O-ELM-REF-63521",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 8640000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Elm1",
+        "contact_email": "finance1@refinance-leads-elm.example"
+      },
+      "source_ids": ["S-R6968", "S-R4437"],
+      "rationale": "Retail in Raleigh; active loan with executed-note maturity within 2026-09-01 to 2027-08-31; no executed extensions; owner and current Director of Finance verified since 2026-03-01. Duplicated by R4437 (same underlying record), which was consolidated."
+    },
+    {
+      "record_id": "R7631",
+      "facts": {
+        "entity_id": "ELM-REF-53828",
+        "owner_entity_id": "O-ELM-REF-53828",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 9936000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Elm3",
+        "contact_email": "finance3@refinance-leads-elm.example"
+      },
+      "source_ids": ["S-R7631"],
+      "rationale": "Retail in Raleigh; active loan with executed-note maturity within window; no executed extensions; owner and current Director of Finance verified since 2026-03-01."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R7798",
+      "eligible": false,
+      "reason": "Source published after the 2026-08-31 cutoff; not considered.",
+      "source_ids": ["S-R7798"]
+    },
+    {
+      "record_id": "R1548",
+      "eligible": false,
+      "reason": "Contact is former; requires current CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": ["S-R1548"]
+    },
+    {
+      "record_id": "R5893",
+      "eligible": false,
+      "reason": "Asset type changed to Office via executed amendment; outside Retail scope.",
+      "source_ids": ["S-R5893", "U-R5893-7"]
+    },
+    {
+      "record_id": "R6909",
+      "eligible": false,
+      "reason": "Owner verification is stale (verified 2024-01-01); requires verification since 2026-03-01.",
+      "source_ids": ["S-R6909"]
+    },
+    {
+      "record_id": "R6968",
+      "eligible": true,
+      "reason": "Meets scope and all evidence requirements (Retail, Raleigh, active loan, executed-note maturity 2027-01-15, no executed extensions, owner and current Director of Finance verified since 2026-03-01). Duplicate underlying record exists (R4437).",
+      "source_ids": ["S-R6968", "S-R4437"]
+    },
+    {
+      "record_id": "R2801",
+      "eligible": false,
+      "reason": "Maturity unconfirmed and extension option unresolved.",
+      "source_ids": ["S-R2801"]
+    },
+    {
+      "record_id": "R7631",
+      "eligible": true,
+      "reason": "Meets scope and all evidence requirements (Retail, Raleigh, active loan, executed-note maturity 2027-03-15, no executed extensions, owner and current Director of Finance verified since 2026-03-01).",
+      "source_ids": ["S-R7631"]
+    },
+    {
+      "record_id": "R4392",
+      "eligible": false,
+      "reason": "Market is Seattle; outside Raleigh scope.",
+      "source_ids": ["S-R4392"]
+    },
+    {
+      "record_id": "R4755",
+      "eligible": false,
+      "reason": "Loan status unknown; requires confirmed active debt.",
+      "source_ids": ["S-R4755"]
+    },
+    {
+      "record_id": "R3427",
+      "eligible": false,
+      "reason": "Asset type Office; outside Retail scope.",
+      "source_ids": ["S-R3427"]
+    },
+    {
+      "record_id": "R4641",
+      "eligible": false,
+      "reason": "Contact role is Registered Agent; requires CFO/Head of Acquisitions/Director of Finance.",
+      "source_ids": ["S-R4641"]
+    },
+    {
+      "record_id": "R3478",
+      "eligible": false,
+      "reason": "Asset type changed to Office via executed amendment; outside Retail scope.",
+      "source_ids": ["S-R3478", "U-R3478-5"]
+    },
+    {
+      "record_id": "R9095",
+      "eligible": false,
+      "reason": "Loan released; requires confirmed active debt.",
+      "source_ids": ["S-R9095"]
+    },
+    {
+      "record_id": "R9201",
+      "eligible": false,
+      "reason": "Maturity is inferred, not executed; requires confirmed executed-note maturity.",
+      "source_ids": ["S-R9201"]
+    },
+    {
+      "record_id": "R2376",
+      "eligible": false,
+      "reason": "Owner relation is property manager; requires verified record owner.",
+      "source_ids": ["S-R2376"]
+    },
+    {
+      "record_id": "R1927",
+      "eligible": false,
+      "reason": "Executed amendment extends maturity to 2028-09-30 (out of window) and records an executed extension.",
+      "source_ids": ["S-R1927", "U-R1927-1"]
+    },
+    {
+      "record_id": "R9233",
+      "eligible": false,
+      "reason": "Asset type changed to Office via executed amendment; outside Retail scope.",
+      "source_ids": ["S-R9233", "U-R9233-4"]
+    },
+    {
+      "record_id": "R8058",
+      "eligible": false,
+      "reason": "Maturity 2028-02-01 is outside the target window.",
+      "source_ids": ["S-R8058"]
+    },
+    {
+      "record_id": "R2630",
+      "eligible": false,
+      "reason": "Asset type changed to Office via executed amendment; outside Retail scope.",
+      "source_ids": ["S-R2630", "U-R2630-6"]
+    },
+    {
+      "record_id": "R4437",
+      "eligible": true,
+      "reason": "Meets scope and evidence requirements but duplicates R6968 (same underlying entity); will be removed during deduplication.",
+      "source_ids": ["S-R4437", "S-R6968"]
+    }
+  ],
+  "summary": "Two Raleigh retail refinance opportunities met all evidence requirements as of the 2026-08-31 cutoff: Elm Square 1 (matures 2027-01-15; $8.64M original principal) and Elm Point 3 (matures 2027-03-15; $9.936M original principal). All others were excluded due to post-cutoff publication, non-Retail/market scope, unconfirmed or amended/extended maturities, released/unknown loan status, stale ownership, non-owner records, or invalid contact role/employment. Duplicate records for Elm Square 1 were consolidated.",
+  "limitations": [
+    "Outstanding balances are not provided in sources (null).",
+    "Potential post-cutoff changes (e.g., releases or amendments published after 2026-08-31) are not considered.",
+    "Some exclusions rely on asset-type changes from executed amendments; if later re-amended after cutoff, such changes are not captured here.",
+    "Deduplication is based on matching entity_id and corroborative base sources; if additional undisclosed duplicates exist, they are not reflected.",
+    "Email availability is source-dependent; one shortlisted contact lacks alternate contact channels beyond what is published."
+  ]
+}

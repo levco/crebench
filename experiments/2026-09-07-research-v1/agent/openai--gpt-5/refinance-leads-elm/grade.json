@@ -1,0 +1,403 @@
+{
+  "case_id": "refinance-leads-elm",
+  "task": "refinance_leads",
+  "target_count": 2,
+  "available_unique": 2,
+  "returned_count": 3,
+  "eligible_count": 2,
+  "verified_count": 2,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 0.6666666666666666,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 21,
+    "total": 21
+  },
+  "evidence_accuracy": {
+    "passed": 3,
+    "total": 3
+  },
+  "candidate_accuracy": {
+    "passed": 19,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 3,
+    "total": 3
+  },
+  "ineligible_rejection": {
+    "passed": 16,
+    "total": 17
+  },
+  "ranking_pair_agreement": {
+    "passed": 1,
+    "total": 1
+  },
+  "material_errors": [
+    {
+      "record_id": "R7798",
+      "type": "ineligible_selection",
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "selected_checks": [
+    {
+      "record_id": "R6968",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-REF-63521",
+          "expected": "ELM-REF-63521",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-ELM-REF-63521",
+          "expected": "O-ELM-REF-63521",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-01-15",
+          "expected": "2027-01-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 8640000,
+          "expected": 8640000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Casey Elm1",
+          "expected": "Casey Elm1",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance1@refinance-leads-elm.example",
+          "expected": "finance1@refinance-leads-elm.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R6968"
+      ],
+      "reported_sources": [
+        "S-R6968",
+        "S-R4437"
+      ]
+    },
+    {
+      "record_id": "R7631",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-REF-53828",
+          "expected": "ELM-REF-53828",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-ELM-REF-53828",
+          "expected": "O-ELM-REF-53828",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-03-15",
+          "expected": "2027-03-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 9936000,
+          "expected": 9936000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Avery Elm3",
+          "expected": "Avery Elm3",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance3@refinance-leads-elm.example",
+          "expected": "finance3@refinance-leads-elm.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R7631"
+      ],
+      "reported_sources": [
+        "S-R7631"
+      ]
+    },
+    {
+      "record_id": "R7798",
+      "eligible": false,
+      "duplicate": false,
+      "verified": false,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-REF-31274",
+          "expected": "ELM-REF-31274",
+          "passed": true
+        },
+        {
+          "field": "owner_entity_id",
+          "actual": "O-ELM-REF-31274",
+          "expected": "O-ELM-REF-31274",
+          "passed": true
+        },
+        {
+          "field": "maturity_date",
+          "actual": "2027-04-15",
+          "expected": "2027-04-15",
+          "passed": true
+        },
+        {
+          "field": "original_principal_usd",
+          "actual": 10584000,
+          "expected": 10584000,
+          "passed": true
+        },
+        {
+          "field": "outstanding_balance_usd",
+          "actual": null,
+          "expected": null,
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Riley Elm18",
+          "expected": "Riley Elm18",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "finance18@refinance-leads-elm.example",
+          "expected": "finance18@refinance-leads-elm.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R7798"
+      ],
+      "reported_sources": [
+        "S-R7798"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R7798",
+      "actual": true,
+      "expected": false,
+      "passed": false,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R1548",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R5893",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R6909",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale ownership verification"
+      ]
+    },
+    {
+      "record_id": "R6968",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R2801",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity not confirmed by executed evidence",
+        "Unresolved extension"
+      ]
+    },
+    {
+      "record_id": "R7631",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4392",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    },
+    {
+      "record_id": "R4755",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Loan status not confirmed active"
+      ]
+    },
+    {
+      "record_id": "R3427",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R4641",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    },
+    {
+      "record_id": "R3478",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R9095",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Loan status not confirmed active"
+      ]
+    },
+    {
+      "record_id": "R9201",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity not confirmed by executed evidence"
+      ]
+    },
+    {
+      "record_id": "R2376",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not the record owner"
+      ]
+    },
+    {
+      "record_id": "R1927",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity outside window"
+      ]
+    },
+    {
+      "record_id": "R9233",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R8058",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Maturity outside window"
+      ]
+    },
+    {
+      "record_id": "R2630",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R4437",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ],
+  "scoring_version": "research-v1.1-scoring",
+  "representation_adjustments": []
+}

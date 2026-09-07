@@ -1,0 +1,269 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"g\",\"expression\":\"0.025\"},{\"name\":\"R_R2732\",\"expression\":\"21.0\"},{\"name\":\"Y_R2732\",\"expression\":\"36/12\"},{\"name\":\"E_R2732\",\"expression\":\"6.25\"},{\"name\":\"f_R2732\",\"expression\":\"0\"},{\"name\":\"Total_face_R2732\",\"expression\":\"R_R2732*(1 + (1+g) + (1+g)**2)\"},{\"name\":\"Free_deduction_R2732\",\"expression\":\"f_R2732*R_R2732/12\"},{\"name\":\"Gross_deduction_R2732\",\"expression\":\"E_R2732*Y_R2732\"},{\"name\":\"TI_R2732\",\"expression\":\"12\"},{\"name\":\"Net_total_R2732\",\"expression\":\"Total_face_R2732 - Free_deduction_R2732 - Gross_deduction_R2732 - TI_R2732\"},{\"name\":\"Eff_R2732\",\"expression\":\"Net_total_R2732 / Y_R2732\"},{\"name\":\"R_R7377\",\"expression\":\"1.87*12\"},{\"name\":\"Y_R7377\",\"expression\":\"48/12\"},{\"name\":\"E_R7377\",\"expression\":\"0\"},{\"name\":\"f_R7377\",\"expression\":\"4\"},{\"name\":\"Total_face_R7377\",\"expression\":\"R_R7377*(1 + (1+g) + (1+g)**2 + (1+g)**3)\"},{\"name\":\"Free_deduction_R7377\",\"expression\":\"f_R7377*R_R7377/12\"},{\"name\":\"Gross_deduction_R7377\",\"expression\":\"E_R7377*Y_R7377\"},{\"name\":\"TI_R7377\",\"expression\":\"18\"},{\"name\":\"Net_total_R7377\",\"expression\":\"Total_face_R7377 - Free_deduction_R7377 - Gross_deduction_R7377 - TI_R7377\"},{\"name\":\"Eff_R7377\",\"expression\":\"Net_total_R7377 / Y_R7377\"},{\"name\":\"R_R7850\",\"expression\":\"22.6\"},{\"name\":\"Y_R7850\",\"expression\":\"60/12\"},{\"name\":\"E_R7850\",\"expression\":\"0\"},{\"name\":\"f_R7850\",\"expression\":\"2\"},{\"name\":\"Total_face_R7850\",\"expression\":\"R_R7850*(1 + (1+g) + (1+g)**2 + (1+g)**3 + (1+g)**4)\"},{\"name\":\"Free_deduction_R7850\",\"expression\":\"f_R7850*R_R7850/12\"},{\"name\":\"Gross_deduction_R7850\",\"expression\":\"E_R7850*Y_R7850\"},{\"name\":\"TI_R7850\",\"expression\":\"18\"},{\"name\":\"Net_total_R7850\",\"expression\":\"Total_face_R7850 - Free_deduction_R7850 - Gross_deduction_R7850 - TI_R7850\"},{\"name\":\"Eff_R7850\",\"expression\":\"Net_total_R7850 / Y_R7850\"},{\"name\":\"R_R9286\",\"expression\":\"2.01*12\"},{\"name\":\"Y_R9286\",\"expression\":\"36/12\"},{\"name\":\"E_R9286\",\"expression\":\"6.25\"},{\"name\":\"f_R9286\",\"expression\":\"3\"},{\"name\":\"Total_face_R9286\",\"expression\":\"R_R9286*(1 + (1+g) + (1+g)**2)\"},{\"name\":\"Free_deduction_R9286\",\"expression\":\"f_R9286*R_R9286/12\"},{\"name\":\"Gross_deduction_R9286\",\"expression\":\"E_R9286*Y_R9286\"},{\"name\":\"TI_R9286\",\"expression\":\"21\"},{\"name\":\"Net_total_R9286\",\"expression\":\"Total_face_R9286 - Free_deduction_R9286 - Gross_deduction_R9286 - TI_R9286\"},{\"name\":\"Eff_R9286\",\"expression\":\"Net_total_R9286 / Y_R9286\"},{\"name\":\"R_R9636\",\"expression\":\"24.2\"},{\"name\":\"Y_R9636\",\"expression\":\"48/12\"},{\"name\":\"E_R9636\",\"expression\":\"0\"},{\"name\":\"f_R9636\",\"expression\":\"0\"},{\"name\":\"Total_face_R9636\",\"expression\":\"R_R9636*(1 + (1+g) + (1+g)**2 + (1+g)**3)\"},{\"name\":\"Free_deduction_R9636\",\"expression\":\"f_R9636*R_R9636/12\"},{\"name\":\"Gross_deduction_R9636\",\"expression\":\"E_R9636*Y_R9636\"},{\"name\":\"TI_R9636\",\"expression\":\"12\"},{\"name\":\"Net_total_R9636\",\"expression\":\"Total_face_R9636 - Free_deduction_R9636 - Gross_deduction_R9636 - TI_R9636\"},{\"name\":\"Eff_R9636\",\"expression\":\"Net_total_R9636 / Y_R9636\"}]}",
+  "call_id": "call_GJOfzikOn9yK1Gpqvix99KIe",
+  "arguments": {
+    "steps": [
+      {
+        "name": "g",
+        "expression": "0.025"
+      },
+      {
+        "name": "R_R2732",
+        "expression": "21.0"
+      },
+      {
+        "name": "Y_R2732",
+        "expression": "36/12"
+      },
+      {
+        "name": "E_R2732",
+        "expression": "6.25"
+      },
+      {
+        "name": "f_R2732",
+        "expression": "0"
+      },
+      {
+        "name": "Total_face_R2732",
+        "expression": "R_R2732*(1 + (1+g) + (1+g)**2)"
+      },
+      {
+        "name": "Free_deduction_R2732",
+        "expression": "f_R2732*R_R2732/12"
+      },
+      {
+        "name": "Gross_deduction_R2732",
+        "expression": "E_R2732*Y_R2732"
+      },
+      {
+        "name": "TI_R2732",
+        "expression": "12"
+      },
+      {
+        "name": "Net_total_R2732",
+        "expression": "Total_face_R2732 - Free_deduction_R2732 - Gross_deduction_R2732 - TI_R2732"
+      },
+      {
+        "name": "Eff_R2732",
+        "expression": "Net_total_R2732 / Y_R2732"
+      },
+      {
+        "name": "R_R7377",
+        "expression": "1.87*12"
+      },
+      {
+        "name": "Y_R7377",
+        "expression": "48/12"
+      },
+      {
+        "name": "E_R7377",
+        "expression": "0"
+      },
+      {
+        "name": "f_R7377",
+        "expression": "4"
+      },
+      {
+        "name": "Total_face_R7377",
+        "expression": "R_R7377*(1 + (1+g) + (1+g)**2 + (1+g)**3)"
+      },
+      {
+        "name": "Free_deduction_R7377",
+        "expression": "f_R7377*R_R7377/12"
+      },
+      {
+        "name": "Gross_deduction_R7377",
+        "expression": "E_R7377*Y_R7377"
+      },
+      {
+        "name": "TI_R7377",
+        "expression": "18"
+      },
+      {
+        "name": "Net_total_R7377",
+        "expression": "Total_face_R7377 - Free_deduction_R7377 - Gross_deduction_R7377 - TI_R7377"
+      },
+      {
+        "name": "Eff_R7377",
+        "expression": "Net_total_R7377 / Y_R7377"
+      },
+      {
+        "name": "R_R7850",
+        "expression": "22.6"
+      },
+      {
+        "name": "Y_R7850",
+        "expression": "60/12"
+      },
+      {
+        "name": "E_R7850",
+        "expression": "0"
+      },
+      {
+        "name": "f_R7850",
+        "expression": "2"
+      },
+      {
+        "name": "Total_face_R7850",
+        "expression": "R_R7850*(1 + (1+g) + (1+g)**2 + (1+g)**3 + (1+g)**4)"
+      },
+      {
+        "name": "Free_deduction_R7850",
+        "expression": "f_R7850*R_R7850/12"
+      },
+      {
+        "name": "Gross_deduction_R7850",
+        "expression": "E_R7850*Y_R7850"
+      },
+      {
+        "name": "TI_R7850",
+        "expression": "18"
+      },
+      {
+        "name": "Net_total_R7850",
+        "expression": "Total_face_R7850 - Free_deduction_R7850 - Gross_deduction_R7850 - TI_R7850"
+      },
+      {
+        "name": "Eff_R7850",
+        "expression": "Net_total_R7850 / Y_R7850"
+      },
+      {
+        "name": "R_R9286",
+        "expression": "2.01*12"
+      },
+      {
+        "name": "Y_R9286",
+        "expression": "36/12"
+      },
+      {
+        "name": "E_R9286",
+        "expression": "6.25"
+      },
+      {
+        "name": "f_R9286",
+        "expression": "3"
+      },
+      {
+        "name": "Total_face_R9286",
+        "expression": "R_R9286*(1 + (1+g) + (1+g)**2)"
+      },
+      {
+        "name": "Free_deduction_R9286",
+        "expression": "f_R9286*R_R9286/12"
+      },
+      {
+        "name": "Gross_deduction_R9286",
+        "expression": "E_R9286*Y_R9286"
+      },
+      {
+        "name": "TI_R9286",
+        "expression": "21"
+      },
+      {
+        "name": "Net_total_R9286",
+        "expression": "Total_face_R9286 - Free_deduction_R9286 - Gross_deduction_R9286 - TI_R9286"
+      },
+      {
+        "name": "Eff_R9286",
+        "expression": "Net_total_R9286 / Y_R9286"
+      },
+      {
+        "name": "R_R9636",
+        "expression": "24.2"
+      },
+      {
+        "name": "Y_R9636",
+        "expression": "48/12"
+      },
+      {
+        "name": "E_R9636",
+        "expression": "0"
+      },
+      {
+        "name": "f_R9636",
+        "expression": "0"
+      },
+      {
+        "name": "Total_face_R9636",
+        "expression": "R_R9636*(1 + (1+g) + (1+g)**2 + (1+g)**3)"
+      },
+      {
+        "name": "Free_deduction_R9636",
+        "expression": "f_R9636*R_R9636/12"
+      },
+      {
+        "name": "Gross_deduction_R9636",
+        "expression": "E_R9636*Y_R9636"
+      },
+      {
+        "name": "TI_R9636",
+        "expression": "12"
+      },
+      {
+        "name": "Net_total_R9636",
+        "expression": "Total_face_R9636 - Free_deduction_R9636 - Gross_deduction_R9636 - TI_R9636"
+      },
+      {
+        "name": "Eff_R9636",
+        "expression": "Net_total_R9636 / Y_R9636"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "g": 0.025,
+      "R_R2732": 21.0,
+      "Y_R2732": 3.0,
+      "E_R2732": 6.25,
+      "f_R2732": 0,
+      "Total_face_R2732": 64.58812499999999,
+      "Free_deduction_R2732": 0.0,
+      "Gross_deduction_R2732": 18.75,
+      "TI_R2732": 12,
+      "Net_total_R2732": 33.83812499999999,
+      "Eff_R2732": 11.279374999999996,
+      "R_R7377": 22.44,
+      "Y_R7377": 4.0,
+      "E_R7377": 0,
+      "f_R7377": 4,
+      "Total_face_R7377": 93.18245062499999,
+      "Free_deduction_R7377": 7.48,
+      "Gross_deduction_R7377": 0.0,
+      "TI_R7377": 18,
+      "Net_total_R7377": 67.70245062499998,
+      "Eff_R7377": 16.925612656249996,
+      "R_R7850": 22.6,
+      "Y_R7850": 5.0,
+      "E_R7850": 0,
+      "f_R7850": 2,
+      "Total_face_R7850": 118.79302445312497,
+      "Free_deduction_R7850": 3.766666666666667,
+      "Gross_deduction_R7850": 0.0,
+      "TI_R7850": 18,
+      "Net_total_R7850": 97.0263577864583,
+      "Eff_R7850": 19.405271557291663,
+      "R_R9286": 24.119999999999997,
+      "Y_R9286": 3.0,
+      "E_R9286": 6.25,
+      "f_R9286": 3,
+      "Total_face_R9286": 74.18407499999998,
+      "Free_deduction_R9286": 6.0299999999999985,
+      "Gross_deduction_R9286": 18.75,
+      "TI_R9286": 21,
+      "Net_total_R9286": 28.404074999999978,
+      "Eff_R9286": 9.468024999999992,
+      "R_R9636": 24.2,
+      "Y_R9636": 4.0,
+      "E_R9636": 0,
+      "f_R9636": 0,
+      "Total_face_R9636": 100.49087812499998,
+      "Free_deduction_R9636": 0.0,
+      "Gross_deduction_R9636": 0.0,
+      "TI_R9636": 12,
+      "Net_total_R9636": 88.49087812499998,
+      "Eff_R9636": 22.122719531249995
+    }
+  },
+  "status": "ok"
+}

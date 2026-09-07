@@ -1,0 +1,58 @@
+{
+  "case_id": "refinance-leads-elm",
+  "system": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-07T02:41:11.963Z",
+  "observed_completed_at": "2026-09-07T02:44:55.549Z",
+  "packet_sha256": "91f4b7a78be924e50e9b3a57cd65e53f1f4fa873e0f15d2fed45e93e4a5368d8",
+  "ui_whitespace_equivalent": true,
+  "operator_semantic_corrections": 0,
+  "artifacts": [
+    {
+      "path": "artifacts/refinance_leads_elm_prospects.csv",
+      "sha256": "95e67df40e298d4f9a64d02f059e1f5c5190d8ce816c2fc3e521e2ac2693ca77",
+      "bytes": 533
+    }
+  ],
+  "cost_usd": null,
+  "estimated_inference_cost_usd": 0.5288765,
+  "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price",
+  "elapsed_seconds": 111.15,
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "trace_audit": {
+    "trace_id": "047d27bd-7b7b-4266-af7d-f2eb1998b999",
+    "session_id": "365b5fef-5418-406a-8ce0-86cce0d5a883",
+    "started_at": "2026-09-06T22:42:34.276000-04:00",
+    "packet_match": "Trace prefix matches; connector truncates root input. Complete UI input was independently verified before submission.",
+    "event_count": 4,
+    "model_calls": 2,
+    "generation_costs_usd": [
+      0.38167475,
+      0.14720175
+    ],
+    "total_cost_usd": 0.5288765,
+    "cost_sources": [
+      "openrouter"
+    ],
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "tools_called": [
+      "get_generated_file"
+    ],
+    "external_retrieval_audit": "no_retrieval_observed_partial_coverage",
+    "execution_coverage": "Recorded backend tools only; internal file-creation execution is not visible in the available trace metadata.",
+    "confirmed_common_corpus": false,
+    "tools_requiring_review": [],
+    "elapsed_seconds": 111.15,
+    "cost_scope": "Matched workflow generations and embeddings; duplicate run-summary excluded. Session naming, hosting, subscriptions, operator time and product credits excluded.",
+    "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price"
+  },
+  "access_audit": "no_retrieval_observed_partial_coverage"
+}

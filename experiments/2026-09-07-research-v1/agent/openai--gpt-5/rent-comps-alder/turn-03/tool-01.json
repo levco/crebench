@@ -1,0 +1,59 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"A_year\",\"expression\":\"1.87*12\"},{\"name\":\"r\",\"expression\":\"0.025\"},{\"name\":\"sum4yrs\",\"expression\":\"1 + (1+r) + (1+r)**2 + (1+r)**3\"},{\"name\":\"total_face_no_free\",\"expression\":\"A_year*sum4yrs\"},{\"name\":\"free_months\",\"expression\":\"4\"},{\"name\":\"free_deduction\",\"expression\":\"A_year/12*free_months\"},{\"name\":\"TI\",\"expression\":\"18\"},{\"name\":\"net_total\",\"expression\":\"total_face_no_free - free_deduction - TI\"},{\"name\":\"effective_net\",\"expression\":\"net_total/48*12\"}]}",
+  "call_id": "call_UXZiiYAa0OaVMrxUPZJa8jIC",
+  "arguments": {
+    "steps": [
+      {
+        "name": "A_year",
+        "expression": "1.87*12"
+      },
+      {
+        "name": "r",
+        "expression": "0.025"
+      },
+      {
+        "name": "sum4yrs",
+        "expression": "1 + (1+r) + (1+r)**2 + (1+r)**3"
+      },
+      {
+        "name": "total_face_no_free",
+        "expression": "A_year*sum4yrs"
+      },
+      {
+        "name": "free_months",
+        "expression": "4"
+      },
+      {
+        "name": "free_deduction",
+        "expression": "A_year/12*free_months"
+      },
+      {
+        "name": "TI",
+        "expression": "18"
+      },
+      {
+        "name": "net_total",
+        "expression": "total_face_no_free - free_deduction - TI"
+      },
+      {
+        "name": "effective_net",
+        "expression": "net_total/48*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "A_year": 22.44,
+      "r": 0.025,
+      "sum4yrs": 4.1525156249999995,
+      "total_face_no_free": 93.18245062499999,
+      "free_months": 4,
+      "free_deduction": 7.48,
+      "TI": 18,
+      "net_total": 67.70245062499998,
+      "effective_net": 16.925612656249996
+    }
+  },
+  "status": "ok"
+}

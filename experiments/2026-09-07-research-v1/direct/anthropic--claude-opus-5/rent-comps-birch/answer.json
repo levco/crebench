@@ -1,0 +1,254 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R1695",
+      "facts": {
+        "entity_id": "BIRCH-REN-46690",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.28,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R1695"
+      ],
+      "rationale": "Executed retail lease in Phoenix, 2026-02-05 (inside 2025-09-01..2026-08-31), 0.80 mi (<=8). Gross lease with known annual_expenses_psf 6.25, free_months 0, TI 12, term 36, positive face rent 21.00 $/sf/yr. Client convention: face escalated 2.5% at months 13 and 25 (21.00 + 21.525 + 22.063125 = 64.588125), less expenses 0.520833/mo x 36 = 18.75, less TI 12.00 once = 33.838125 net over 36 months -> 11.28 $/sf/yr. Ranked first on distance. Chosen as the primary record for entity BIRCH-REN-46690; duplicate R2614 (same entity, second-source extract) excluded from the shortlist.",
+      "no_controlling_update": true
+    },
+    {
+      "record_id": "R3353",
+      "facts": {
+        "entity_id": "BIRCH-REN-48467",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.93,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R3353",
+        "U-R3353-1"
+      ],
+      "rationale": "Executed retail lease, 2026-03-06, 1.03 mi. Executed amendment U-R3353-1 (published/effective 2026-08-20, on or before cutoff) controls: free_months 4 and TI 18 replace base 1 and 15. NNN so expense deduction is zero. Face 1.87 $/sf/mo = 22.44 $/sf/yr; no face rent months 1-4 (8 paying months in year 1 = 14.96), then 23.001 + 23.576025 + 24.165426 = 85.702451 total face, less TI 18 once = 67.702451 over 48 months -> 16.93 $/sf/yr."
+    },
+    {
+      "record_id": "R2434",
+      "facts": {
+        "entity_id": "BIRCH-REN-81113",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.41,
+        "term_months": 60
+      },
+      "source_ids": [
+        "S-R2434"
+      ],
+      "rationale": "Executed retail lease, 2026-04-07, 1.26 mi. Update U-R2434-2 (rent_quote 2) is published/effective 2026-09-10, after the 2026-08-31 cutoff, so it does not control; base face rent 22.60 $/sf/yr is used. NNN (zero expense deduction), free_months 2, TI 18, term 60. Escalated face total 115.026358 (10 paying months year 1 = 18.833333; then 23.165, 23.744125, 24.337728, 24.946171), less TI 18 = 97.026358 over 60 months -> 19.41 $/sf/yr."
+    },
+    {
+      "record_id": "R1930",
+      "facts": {
+        "entity_id": "BIRCH-REN-15479",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.47,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R1930"
+      ],
+      "rationale": "Executed retail lease, 2026-05-08, 1.49 mi. U-R1930-3 is an unsigned draft (free_months 8) and does not override; base free_months 3 used. Gross with known annual_expenses_psf 6.25, TI 21, term 36. Face 2.01 $/sf/mo = 24.12 $/sf/yr; 9 paying months year 1 = 18.09, then 24.723 + 25.341075 = 68.154075 total face, less expenses 18.75 (0.520833/mo x 36) and TI 21.00 = 28.404075 over 36 months -> 9.47 $/sf/yr."
+    },
+    {
+      "record_id": "R6289",
+      "facts": {
+        "entity_id": "BIRCH-REN-11670",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.12,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R6289"
+      ],
+      "rationale": "Executed retail lease, 2026-06-09, 1.72 mi. NNN (zero expense deduction), free_months 0, TI 12, term 48, face 24.20 $/sf/yr. Escalated face 24.20 + 24.805 + 25.425125 + 26.060753 = 100.490878, less TI 12 = 88.490878 over 48 months -> 22.12 $/sf/yr."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R7254",
+      "eligible": false,
+      "reason": "Event date 2024-02-10 is before the 2025-09-01 lease-date window start.",
+      "source_ids": [
+        "S-R7254"
+      ]
+    },
+    {
+      "record_id": "R8772",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-07-10, 1.95 mi, positive face rent 2.15 $/sf/mo (25.80 $/sf/yr), term 60, free_months 1, TI 15, NNN (no expense deduction needed). Qualifies but ranks 6th by distance, outside the five-slot shortlist.",
+      "source_ids": [
+        "S-R8772"
+      ]
+    },
+    {
+      "record_id": "R2614",
+      "eligible": true,
+      "reason": "Meets all business rules (executed retail, 2026-02-05, 0.80 mi, gross with expenses 6.25, term 36, free_months 0, TI 12), but it is a duplicate of entity BIRCH-REN-46690 already represented by R1695 (evidence_kind 'second_source_same_underlying_record'); deduplicated to R1695 and not given a second slot.",
+      "source_ids": [
+        "S-R2614",
+        "S-R1695"
+      ]
+    },
+    {
+      "record_id": "R8177",
+      "eligible": false,
+      "reason": "Distance 18.6 mi exceeds the 8-mile radius.",
+      "source_ids": [
+        "S-R8177"
+      ]
+    },
+    {
+      "record_id": "R6289",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-06-09, 1.72 mi, face 24.20 $/sf/yr, term 48, free_months 0, TI 12, NNN. Selected (rank 5).",
+      "source_ids": [
+        "S-R6289"
+      ]
+    },
+    {
+      "record_id": "R3353",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-03-06, 1.03 mi, face 22.44 $/sf/yr, term 48, NNN; executed amendment U-R3353-1 (effective 2026-08-20, pre-cutoff) sets free_months 4 and TI 18. Selected (rank 2).",
+      "source_ids": [
+        "S-R3353",
+        "U-R3353-1"
+      ]
+    },
+    {
+      "record_id": "R3442",
+      "eligible": false,
+      "reason": "ti_allowance_psf is null (unknown); TI is a required field.",
+      "source_ids": [
+        "S-R3442"
+      ]
+    },
+    {
+      "record_id": "R5629",
+      "eligible": false,
+      "reason": "free_months is null (unknown, not zero); free rent is a required field.",
+      "source_ids": [
+        "S-R5629"
+      ]
+    },
+    {
+      "record_id": "R1930",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-05-08, 1.49 mi, face 24.12 $/sf/yr, term 36, gross with known expenses 6.25, free_months 3 (unsigned draft U-R1930-3 proposing 8 does not override), TI 21. Selected (rank 4).",
+      "source_ids": [
+        "S-R1930",
+        "U-R1930-3"
+      ]
+    },
+    {
+      "record_id": "R1009",
+      "eligible": false,
+      "reason": "term_months is null (unknown); known term is required.",
+      "source_ids": [
+        "S-R1009"
+      ]
+    },
+    {
+      "record_id": "R2434",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-04-07, 1.26 mi, face 22.60 $/sf/yr (post-cutoff amendment U-R2434-2 of 2026-09-10 not applied), term 60, free_months 2, TI 18, NNN. Selected (rank 3).",
+      "source_ids": [
+        "S-R2434",
+        "U-R2434-2"
+      ]
+    },
+    {
+      "record_id": "R9966",
+      "eligible": false,
+      "reason": "Asset type is Office, outside the retail scope.",
+      "source_ids": [
+        "S-R9966"
+      ]
+    },
+    {
+      "record_id": "R7377",
+      "eligible": false,
+      "reason": "rent_quote is null; positive rent is required.",
+      "source_ids": [
+        "S-R7377"
+      ]
+    },
+    {
+      "record_id": "R1695",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-02-05, 0.80 mi, face 21.00 $/sf/yr, term 36, gross with known expenses 6.25, free_months 0, TI 12. Selected (rank 1); primary record for entity BIRCH-REN-46690 versus duplicate R2614.",
+      "source_ids": [
+        "S-R1695"
+      ]
+    },
+    {
+      "record_id": "R9256",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; evidence must be published on or before the cutoff.",
+      "source_ids": [
+        "S-R9256"
+      ]
+    },
+    {
+      "record_id": "R5471",
+      "eligible": false,
+      "reason": "Gross lease with annual_expenses_psf null; gross leases require a known expense deduction.",
+      "source_ids": [
+        "S-R5471"
+      ]
+    },
+    {
+      "record_id": "R7345",
+      "eligible": false,
+      "reason": "Status is unsigned_proposal; unsigned/asking rents do not qualify.",
+      "source_ids": [
+        "S-R7345"
+      ]
+    },
+    {
+      "record_id": "R3964",
+      "eligible": false,
+      "reason": "Status is asking; asking rents do not qualify.",
+      "source_ids": [
+        "S-R3964"
+      ]
+    },
+    {
+      "record_id": "R5747",
+      "eligible": true,
+      "reason": "Executed retail Phoenix lease 2026-02-11, 2.18 mi, face 25.80 $/sf/yr, term 36, gross with expenses 6.25, free_months 2, TI 18. Qualifies but ranks 7th by distance, outside the five-slot shortlist.",
+      "source_ids": [
+        "S-R5747"
+      ]
+    },
+    {
+      "record_id": "R7562",
+      "eligible": false,
+      "reason": "rent_quote is 0, not positive rent.",
+      "source_ids": [
+        "S-R7562"
+      ]
+    }
+  ],
+  "summary": "Seven unique executed retail Phoenix leases within 8 miles and inside the 2025-09-01 to 2026-08-31 window met all data requirements (R1695 with duplicate R2614, R3353, R2434, R1930, R6289, R8772, R5747). Ranking by distance ascending (then latest lease date) yields a five-comp shortlist: R1695 (0.80 mi, 21.00 face, 11.28 effective net $/sf/yr, 36 mo), R3353 (1.03 mi, 22.44 face, 16.93, 48 mo, amended free rent 4 months and TI 18 per U-R3353-1), R2434 (1.26 mi, 22.60 face, 19.41, 60 mo), R1930 (1.49 mi, 24.12 face, 9.47, 36 mo), and R6289 (1.72 mi, 24.20 face, 22.12, 48 mo). R8772 and R5747 qualified but fell outside the five slots. Effective rents use the stated undiscounted client convention (2.5% escalations at months 13/25/37/49, free rent at the front, gross expenses deducted every month, TI subtracted once) and are not appraisal-grade values. Excluded records failed on date (R7254), radius (R8177), asset type (R9966), status (R7345, R3964), post-cutoff publication (R9256), or missing/zero required inputs (R3442 TI, R5629 free months, R1009 term, R7377 rent, R5471 gross expenses, R7562 zero rent).",
+  "limitations": [
+    "No workbook or CSV was produced: artifact creation is outside this direct API control, so the comp grid exists only as the JSON shortlist above.",
+    "All base extracts share a single publication date (2026-08-15) and no underlying lease documents were provided; face rents, free rent, TI and expense figures are taken at face value from the abstracts.",
+    "Effective net rents follow the prescribed undiscounted rent-only convention (no time value, no leasing commissions, no downtime or credit adjustment) and are not market value indications.",
+    "R2434's face rent may be superseded: executed amendment U-R2434-2 lowers rent_quote to 2 (unit unstated) effective 2026-09-10, after the cutoff, so the shortlist value could be stale for post-cutoff use.",
+    "R1930's free rent is contested by unsigned draft U-R1930-3 (8 months); if executed, its effective net rent would fall materially.",
+    "Duplicate entity BIRCH-REN-46690 appears as R1695 and R2614 with identical terms; R1695 was treated as primary because R2614 is labelled a second source of the same underlying record. No sponsor/parent-SPV mappings were supplied in the packet, so no SPV consolidation was needed.",
+    "NNN records list annual_expenses_psf as null; per the convention the NNN deduction is zero, but the true reimbursable load is unknown.",
+    "Distances are as supplied (miles) and were not independently verified; no address, tenant, landlord or contact details were provided or asserted.",
+    "R9256 (published after cutoff) and R8177 (18.6 mi) could change conclusions if the cutoff or radius were relaxed."
+  ]
+}

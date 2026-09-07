@@ -1,0 +1,84 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"p\",\"expression\":\"0.025\"},{\"name\":\"m0\",\"expression\":\"22.6/12\"},{\"name\":\"sum1_m1_2\",\"expression\":\"0\"},{\"name\":\"sum1_m3_12\",\"expression\":\"10*m0\"},{\"name\":\"sum2_m13_24\",\"expression\":\"12*m0*(1+p)\"},{\"name\":\"sum3_m25_36\",\"expression\":\"12*m0*((1+p)**2)\"},{\"name\":\"sum4_m37_48\",\"expression\":\"12*m0*((1+p)**3)\"},{\"name\":\"sum5_m49_60\",\"expression\":\"12*m0*((1+p)**4)\"},{\"name\":\"total_face\",\"expression\":\"sum1_m1_2+sum1_m3_12+sum2_m13_24+sum3_m25_36+sum4_m37_48+sum5_m49_60\"},{\"name\":\"TI\",\"expression\":\"18\"},{\"name\":\"net_total\",\"expression\":\"total_face - TI\"},{\"name\":\"term\",\"expression\":\"60\"},{\"name\":\"annual_effective\",\"expression\":\"(net_total/term)*12\"},{\"name\":\"annual_face\",\"expression\":\"22.6\"}]}",
+  "call_id": "call_XMeXV0wS4taC5JfiHCpd1bAl",
+  "arguments": {
+    "steps": [
+      {
+        "name": "p",
+        "expression": "0.025"
+      },
+      {
+        "name": "m0",
+        "expression": "22.6/12"
+      },
+      {
+        "name": "sum1_m1_2",
+        "expression": "0"
+      },
+      {
+        "name": "sum1_m3_12",
+        "expression": "10*m0"
+      },
+      {
+        "name": "sum2_m13_24",
+        "expression": "12*m0*(1+p)"
+      },
+      {
+        "name": "sum3_m25_36",
+        "expression": "12*m0*((1+p)**2)"
+      },
+      {
+        "name": "sum4_m37_48",
+        "expression": "12*m0*((1+p)**3)"
+      },
+      {
+        "name": "sum5_m49_60",
+        "expression": "12*m0*((1+p)**4)"
+      },
+      {
+        "name": "total_face",
+        "expression": "sum1_m1_2+sum1_m3_12+sum2_m13_24+sum3_m25_36+sum4_m37_48+sum5_m49_60"
+      },
+      {
+        "name": "TI",
+        "expression": "18"
+      },
+      {
+        "name": "net_total",
+        "expression": "total_face - TI"
+      },
+      {
+        "name": "term",
+        "expression": "60"
+      },
+      {
+        "name": "annual_effective",
+        "expression": "(net_total/term)*12"
+      },
+      {
+        "name": "annual_face",
+        "expression": "22.6"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "p": 0.025,
+      "m0": 1.8833333333333335,
+      "sum1_m1_2": 0,
+      "sum1_m3_12": 18.833333333333336,
+      "sum2_m13_24": 23.165,
+      "sum3_m25_36": 23.744125,
+      "sum4_m37_48": 24.337728124999995,
+      "sum5_m49_60": 24.94617132812499,
+      "total_face": 115.02635778645832,
+      "TI": 18,
+      "net_total": 97.02635778645832,
+      "term": 60,
+      "annual_effective": 19.405271557291666,
+      "annual_face": 22.6
+    }
+  },
+  "status": "ok"
+}

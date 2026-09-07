@@ -1,0 +1,58 @@
+{
+  "case_id": "sponsor-leads-alder",
+  "system": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-07T02:20:57.445Z",
+  "observed_completed_at": "2026-09-07T02:26:31.471Z",
+  "packet_sha256": "59068690a67d0cf69e8b22f9f50b1bb33ff357d1a5412b37f662f3d6081ae51e",
+  "ui_whitespace_equivalent": true,
+  "operator_semantic_corrections": 0,
+  "artifacts": [
+    {
+      "path": "artifacts/alder_charlotte_mf_prospects.xlsx",
+      "sha256": "86857a125418a970866361d7ea8cfd967795b5a937f285f9b938599427cf7971",
+      "bytes": 9443
+    }
+  ],
+  "cost_usd": null,
+  "estimated_inference_cost_usd": 0.544048,
+  "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price",
+  "elapsed_seconds": 121.69,
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "trace_audit": {
+    "trace_id": "d08304ae-33a0-47ff-8d12-538b81bd708a",
+    "session_id": "c76551e3-bdbd-415c-90df-22230f6a21e9",
+    "started_at": "2026-09-06T22:22:21.140000-04:00",
+    "packet_match": "Trace prefix matches; connector truncates root input. Complete UI input was independently verified before submission.",
+    "event_count": 4,
+    "model_calls": 2,
+    "generation_costs_usd": [
+      0.3640655,
+      0.1799825
+    ],
+    "total_cost_usd": 0.544048,
+    "cost_sources": [
+      "openrouter"
+    ],
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "tools_called": [
+      "get_generated_file"
+    ],
+    "external_retrieval_audit": "no_retrieval_observed_partial_coverage",
+    "execution_coverage": "Recorded backend tools only; internal file-creation execution is not visible in the available trace metadata.",
+    "confirmed_common_corpus": false,
+    "tools_requiring_review": [],
+    "elapsed_seconds": 121.69,
+    "cost_scope": "Matched workflow generations and embeddings; duplicate run-summary excluded. Session naming, hosting, subscriptions, operator time and product credits excluded.",
+    "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price"
+  },
+  "access_audit": "no_retrieval_observed_partial_coverage"
+}

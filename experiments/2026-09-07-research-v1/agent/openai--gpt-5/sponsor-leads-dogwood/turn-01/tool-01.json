@@ -1,0 +1,91 @@
+{
+  "name": "export_csv",
+  "arguments_raw": "{\"headers\":[\"record_id\",\"entity_id\",\"firm_name\",\"transaction_size_usd\",\"event_date\",\"contact_name\",\"contact_role\",\"contact_email\",\"source_ids\"],\"rows\":[[\"R2197\",\"DOGWOOD-SPO-12301\",\"Dogwood Grove 6 Capital\",38500000,\"2026-07-10\",\"Morgan Dogwood6\",\"Head of Acquisitions\",\"person6@sponsor-leads-dogwood.example\",\"S-R2197\"],[\"R9831\",\"DOGWOOD-SPO-79419\",\"Dogwood Square 5 Capital\",36400000,\"2026-06-09\",\"Alex Dogwood5\",\"CFO\",null,\"S-R9831\"],[\"R3432\",\"DOGWOOD-SPO-28763\",\"Dogwood Square 4 Capital\",34300000,\"2026-05-08\",\"Taylor Dogwood4\",\"Head of Acquisitions\",\"person4@sponsor-leads-dogwood.example\",\"S-R3432\"],[\"R1761\",\"DOGWOOD-SPO-33898\",\"Dogwood Point 3 Capital\",32200000,\"2026-04-07\",\"Jordan Dogwood3\",\"CFO\",\"person3@sponsor-leads-dogwood.example\",\"S-R1761\"],[\"R9429\",\"DOGWOOD-SPO-39382\",\"Dogwood Crossing 2 Capital\",30100000,\"2026-03-06\",\"Drew Dogwood\",\"CFO\",\"new.cfo@sponsor-leads-dogwood.example\",\"S-R9429;U-R9429-1\"],[\"R6695\",\"DOGWOOD-SPO-18376\",\"Dogwood Park 1 Capital\",40600000,\"2026-02-11\",\"Alex Dogwood1\",\"CFO\",\"person1@sponsor-leads-dogwood.example\",\"S-R6695;S-R1890\"]]}",
+  "call_id": "call_QwUozBzikVrwQWSBYwF4kesN",
+  "arguments": {
+    "headers": [
+      "record_id",
+      "entity_id",
+      "firm_name",
+      "transaction_size_usd",
+      "event_date",
+      "contact_name",
+      "contact_role",
+      "contact_email",
+      "source_ids"
+    ],
+    "rows": [
+      [
+        "R2197",
+        "DOGWOOD-SPO-12301",
+        "Dogwood Grove 6 Capital",
+        38500000,
+        "2026-07-10",
+        "Morgan Dogwood6",
+        "Head of Acquisitions",
+        "person6@sponsor-leads-dogwood.example",
+        "S-R2197"
+      ],
+      [
+        "R9831",
+        "DOGWOOD-SPO-79419",
+        "Dogwood Square 5 Capital",
+        36400000,
+        "2026-06-09",
+        "Alex Dogwood5",
+        "CFO",
+        null,
+        "S-R9831"
+      ],
+      [
+        "R3432",
+        "DOGWOOD-SPO-28763",
+        "Dogwood Square 4 Capital",
+        34300000,
+        "2026-05-08",
+        "Taylor Dogwood4",
+        "Head of Acquisitions",
+        "person4@sponsor-leads-dogwood.example",
+        "S-R3432"
+      ],
+      [
+        "R1761",
+        "DOGWOOD-SPO-33898",
+        "Dogwood Point 3 Capital",
+        32200000,
+        "2026-04-07",
+        "Jordan Dogwood3",
+        "CFO",
+        "person3@sponsor-leads-dogwood.example",
+        "S-R1761"
+      ],
+      [
+        "R9429",
+        "DOGWOOD-SPO-39382",
+        "Dogwood Crossing 2 Capital",
+        30100000,
+        "2026-03-06",
+        "Drew Dogwood",
+        "CFO",
+        "new.cfo@sponsor-leads-dogwood.example",
+        "S-R9429;U-R9429-1"
+      ],
+      [
+        "R6695",
+        "DOGWOOD-SPO-18376",
+        "Dogwood Park 1 Capital",
+        40600000,
+        "2026-02-11",
+        "Alex Dogwood1",
+        "CFO",
+        "person1@sponsor-leads-dogwood.example",
+        "S-R6695;S-R1890"
+      ]
+    ]
+  },
+  "result": {
+    "created": "artifacts/prospects-v1.csv",
+    "rows": 6
+  },
+  "status": "ok"
+}

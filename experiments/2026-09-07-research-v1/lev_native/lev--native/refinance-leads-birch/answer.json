@@ -1,0 +1,292 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R7849",
+      "facts": {
+        "entity_id": "BIRCH-REF-71420",
+        "owner_entity_id": "O-BIRCH-REF-71420",
+        "maturity_date": "2027-01-15",
+        "original_principal_usd": 5760000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Birch1",
+        "contact_email": "finance1@refinance-leads-birch.example"
+      },
+      "source_ids": [
+        "S-R7849",
+        "S-R8920"
+      ],
+      "rationale": "Retail/Phoenix; loan active_confirmed; executed_note maturity 2027-01-15 is in-window; record_owner and Director of Finance both verified 2026-08-10. R8920 is a duplicate of the same entity/loan and is deduped into this row."
+    },
+    {
+      "record_id": "R2258",
+      "facts": {
+        "entity_id": "BIRCH-REF-42124",
+        "owner_entity_id": "O-BIRCH-REF-42124",
+        "maturity_date": "2027-03-15",
+        "original_principal_usd": 6624000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Birch3",
+        "contact_email": "finance3@refinance-leads-birch.example"
+      },
+      "source_ids": [
+        "S-R2258"
+      ],
+      "rationale": "Retail/Phoenix; active_confirmed; executed_note maturity 2027-03-15 in-window; record_owner and Director of Finance verified 2026-08-10. Update U-R2258-2 (recorded release) is published/effective 2026-09-10, after the 2026-08-31 cutoff, so it is not applied."
+    },
+    {
+      "record_id": "R3130",
+      "facts": {
+        "entity_id": "BIRCH-REF-46281",
+        "owner_entity_id": "O-BIRCH-REF-46281",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 7056000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Birch18",
+        "contact_email": "finance18@refinance-leads-birch.example"
+      },
+      "source_ids": [
+        "S-R3130"
+      ],
+      "rationale": "Retail/Phoenix; active_confirmed; executed_note maturity 2027-04-15 in-window; record_owner and Director of Finance verified 2026-08-10. Source published_at 2026-09-03 is after cutoff, but event_date 2026-07-22 and verification 2026-08-10 predate cutoff \u2014 see limitations."
+    },
+    {
+      "record_id": "R8680",
+      "facts": {
+        "entity_id": "BIRCH-REF-10272",
+        "owner_entity_id": "O-BIRCH-REF-10272",
+        "maturity_date": "2027-04-15",
+        "original_principal_usd": 7056000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Sam Birch4",
+        "contact_email": "finance4@refinance-leads-birch.example"
+      },
+      "source_ids": [
+        "S-R8680"
+      ],
+      "rationale": "Retail/Phoenix; active_confirmed; executed_note maturity 2027-04-15 in-window; record_owner and Director of Finance verified 2026-08-10. U-R8680-3 is an unsigned draft and is not applied."
+    },
+    {
+      "record_id": "R9318",
+      "facts": {
+        "entity_id": "BIRCH-REF-75599",
+        "owner_entity_id": "O-BIRCH-REF-75599",
+        "maturity_date": "2027-05-15",
+        "original_principal_usd": 7488000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Casey Birch5",
+        "contact_email": null
+      },
+      "source_ids": [
+        "S-R9318"
+      ],
+      "rationale": "Retail/Phoenix; active_confirmed; executed_note maturity 2027-05-15 in-window; record_owner and Director of Finance verified 2026-08-10; email not_published so contact_email is null (allowed)."
+    },
+    {
+      "record_id": "R7666",
+      "facts": {
+        "entity_id": "BIRCH-REF-37514",
+        "owner_entity_id": "O-BIRCH-REF-37514",
+        "maturity_date": "2027-06-15",
+        "original_principal_usd": 7920000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Riley Birch6",
+        "contact_email": "finance6@refinance-leads-birch.example"
+      },
+      "source_ids": [
+        "S-R7666"
+      ],
+      "rationale": "Retail/Phoenix; active_confirmed; executed_note maturity 2027-06-15 in-window; record_owner and Director of Finance verified 2026-08-10."
+    },
+    {
+      "record_id": "R8605",
+      "facts": {
+        "entity_id": "BIRCH-REF-88672",
+        "owner_entity_id": "O-BIRCH-REF-88672",
+        "maturity_date": "2027-07-15",
+        "original_principal_usd": 8352000,
+        "outstanding_balance_usd": null,
+        "contact_name": "Avery Birch7",
+        "contact_email": "finance7@refinance-leads-birch.example"
+      },
+      "source_ids": [
+        "S-R8605"
+      ],
+      "rationale": "Retail/Phoenix; active_confirmed; executed_note maturity 2027-07-15 in-window; record_owner and Director of Finance verified 2026-08-10."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R4713",
+      "eligible": false,
+      "reason": "loan_status is 'released' \u2014 excluded per rules.",
+      "source_ids": [
+        "S-R4713"
+      ]
+    },
+    {
+      "record_id": "R8097",
+      "eligible": false,
+      "reason": "Contact employment is 'former'; no qualifying current CFO/Head of Acq/Director of Finance verified since 2026-03-01.",
+      "source_ids": [
+        "S-R8097"
+      ]
+    },
+    {
+      "record_id": "R2258",
+      "eligible": true,
+      "reason": "Meets all rules. U-R2258-2 (recorded release) is dated 2026-09-10, after the 2026-08-31 cutoff, so not applied.",
+      "source_ids": [
+        "S-R2258"
+      ]
+    },
+    {
+      "record_id": "R2031",
+      "eligible": false,
+      "reason": "loan_status is 'status_unknown' \u2014 excluded (unknown status).",
+      "source_ids": [
+        "S-R2031"
+      ]
+    },
+    {
+      "record_id": "R3130",
+      "eligible": true,
+      "reason": "Meets all rules; verification and event predate cutoff even though publication is 2026-09-03.",
+      "source_ids": [
+        "S-R3130"
+      ]
+    },
+    {
+      "record_id": "R7666",
+      "eligible": true,
+      "reason": "Meets all rules.",
+      "source_ids": [
+        "S-R7666"
+      ]
+    },
+    {
+      "record_id": "R2900",
+      "eligible": false,
+      "reason": "Executed amendment U-R2900-1 (2026-08-20, pre-cutoff) moves maturity to 2028-09-30 with executed extension \u2014 new maturity is outside 2026-09-01 to 2027-08-31 window.",
+      "source_ids": [
+        "S-R2900",
+        "U-R2900-1"
+      ]
+    },
+    {
+      "record_id": "R8605",
+      "eligible": true,
+      "reason": "Meets all rules.",
+      "source_ids": [
+        "S-R8605"
+      ]
+    },
+    {
+      "record_id": "R8827",
+      "eligible": false,
+      "reason": "maturity_basis is 'inferred_from_origination' \u2014 unconfirmed maturity, excluded.",
+      "source_ids": [
+        "S-R8827"
+      ]
+    },
+    {
+      "record_id": "R9318",
+      "eligible": true,
+      "reason": "Meets all rules; contact_email null because not_published (allowed).",
+      "source_ids": [
+        "S-R9318"
+      ]
+    },
+    {
+      "record_id": "R7439",
+      "eligible": false,
+      "reason": "maturity_basis 'unconfirmed' and extension_status 'option_unresolved' \u2014 excluded.",
+      "source_ids": [
+        "S-R7439"
+      ]
+    },
+    {
+      "record_id": "R6767",
+      "eligible": false,
+      "reason": "ownership_verified_at 2024-01-01 is stale (before 2026-03-01) \u2014 excluded on record-owner verification requirement.",
+      "source_ids": [
+        "S-R6767"
+      ]
+    },
+    {
+      "record_id": "R8055",
+      "eligible": false,
+      "reason": "owner_relation is 'property_manager', not record_owner \u2014 excluded.",
+      "source_ids": [
+        "S-R8055"
+      ]
+    },
+    {
+      "record_id": "R1912",
+      "eligible": false,
+      "reason": "asset_type is Office, not Retail \u2014 out of scope.",
+      "source_ids": [
+        "S-R1912"
+      ]
+    },
+    {
+      "record_id": "R7849",
+      "eligible": true,
+      "reason": "Meets all rules. R8920 is a duplicate of the same entity/loan (BIRCH-REF-71420 / L-BIRCH-REF-71420) and is deduped into this record.",
+      "source_ids": [
+        "S-R7849",
+        "S-R8920"
+      ]
+    },
+    {
+      "record_id": "R8680",
+      "eligible": true,
+      "reason": "Meets all rules. U-R8680-3 is an unsigned draft and is not applied.",
+      "source_ids": [
+        "S-R8680"
+      ]
+    },
+    {
+      "record_id": "R8920",
+      "eligible": false,
+      "reason": "Duplicate of R7849 (same entity_id BIRCH-REF-71420 and loan L-BIRCH-REF-71420) \u2014 deduped; kept as supporting source_id on R7849.",
+      "source_ids": [
+        "S-R8920"
+      ]
+    },
+    {
+      "record_id": "R9844",
+      "eligible": false,
+      "reason": "contact_role is 'Registered Agent', not CFO/Head of Acquisitions/Director of Finance \u2014 no qualifying contact.",
+      "source_ids": [
+        "S-R9844"
+      ]
+    },
+    {
+      "record_id": "R9018",
+      "eligible": false,
+      "reason": "maturity_date 2028-02-01 is outside the 2026-09-01 to 2027-08-31 window.",
+      "source_ids": [
+        "S-R9018"
+      ]
+    },
+    {
+      "record_id": "R4315",
+      "eligible": false,
+      "reason": "market is Seattle, not Phoenix \u2014 out of scope.",
+      "source_ids": [
+        "S-R4315"
+      ]
+    }
+  ],
+  "summary": "Seven distinct Phoenix retail refinance opportunities qualify with active_confirmed loans, executed_note maturities inside the 2026-09-01 to 2027-08-31 window, fresh record-owner verification, and a current Director of Finance contact verified since 2026-03-01. Ranked by maturity ascending, then original principal descending: R7849, R2258, R3130, R8680, R9318, R7666, R8605. Outstanding balances are unknown across the packet (nulls preserved); original_principal is reported as-is and not treated as outstanding balance. Two source updates that would have changed outcomes were disqualified per rules: U-R2258-2 (recorded release) is post-cutoff and not applied; U-R8680-3 is an unsigned draft. U-R2900-1 is a pre-cutoff executed amendment and is applied, moving R2900 outside the window.",
+  "limitations": [
+    "outstanding_balance_usd is null for every record; only original principal is available. Refinance sizing cannot be inferred from these fields.",
+    "R3130's base source was published 2026-09-03 (after the 2026-08-31 cutoff), though its event_date (2026-07-22) and ownership/contact verification (2026-08-10) predate the cutoff. If the packet's 'published_at' is treated as the controlling evidence date, R3130 would be excluded.",
+    "R9318 has no published contact_email (email_basis 'not_published'); email is optional and reported null as instructed.",
+    "R6767 is excluded solely because ownership_verified_at (2024-01-01) is stale; the loan and contact otherwise meet all criteria. If a newer owner verification exists but was not in the packet, this record could qualify.",
+    "R8097 is excluded because its listed Director of Finance is 'former'; no replacement current contact was supplied in the packet.",
+    "R9844 is excluded because its only named contact is a Registered Agent (a role explicitly disqualified in scope).",
+    "Only three source updates were supplied; other records may have executed amendments, releases, or contact/owner changes not present in the packet that could affect eligibility.",
+    "Ranking ties on maturity (R3130 and R8680 both 2027-04-15 at $7,056,000 principal) are true ties on both keys; ordering between them is not further disambiguated by the supplied facts."
+  ]
+}

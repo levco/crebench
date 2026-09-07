@@ -1,0 +1,53 @@
+{
+  "case_id": "refinance-leads-cypress",
+  "system": "anthropic/claude-opus-5",
+  "track": "direct",
+  "status": "completed",
+  "started_at": "2026-09-07T02:37:39.601301+00:00",
+  "completed_at": "2026-09-07T02:39:25.992576+00:00",
+  "elapsed_seconds": 106.391,
+  "cost_usd": 0.210265,
+  "known_partial_cost_usd": 0.210265,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "model_calls": 1,
+  "tool_calls": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 10108,
+        "completion_tokens": 6389,
+        "total_tokens": 16497,
+        "cost": 0.210265,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1329,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.210265,
+        "gateway_cost": 0.210265
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 106.379,
+      "completed_at": "2026-09-07T02:39:25.990834+00:00"
+    }
+  ],
+  "artifacts": [],
+  "operator_semantic_corrections": 0
+}

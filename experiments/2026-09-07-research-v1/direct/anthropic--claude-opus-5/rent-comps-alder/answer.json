@@ -1,0 +1,254 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R1298",
+      "facts": {
+        "entity_id": "ALDER-REN-19075",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.28,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R1298"
+      ],
+      "rationale": "Executed multifamily lease in Charlotte, 0.80 mi, event date inside 2025-09-01..2026-08-31. Gross with known annual_expenses_psf 6.25, free_months 0, TI 12. Escalated face 21.00/21.525/22.063 = 64.588; less expenses (6.25/12 x 36 = 18.75) and TI 12 = 33.838 net over 36 months -> 11.28 $/sf/yr. Same underlying lease as duplicate R1927 (same entity ALDER-REN-19075); retained once."
+    },
+    {
+      "record_id": "R9957",
+      "facts": {
+        "entity_id": "ALDER-REN-19383",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.92,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R9957",
+        "U-R9957-1"
+      ],
+      "rationale": "Executed multifamily lease, 1.03 mi. Executed amendment U-R9957-1 (published/effective 2026-08-20, on or before cutoff) overrides base: free_months 4, TI 18. Face 1.87/sf/mo = 22.44/sf/yr; 8 paid months in yr1 (14.96) plus yrs 2-4 (22.991 + 23.566 + 24.155) = 85.672; NNN deduction zero; less TI 18 = 67.672 over 48 months -> 16.92 $/sf/yr."
+    },
+    {
+      "record_id": "R2302",
+      "facts": {
+        "entity_id": "ALDER-REN-80164",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.41,
+        "term_months": 60
+      },
+      "source_ids": [
+        "S-R2302"
+      ],
+      "rationale": "Executed multifamily lease, 1.26 mi. Amendment U-R2302-2 is later-dated (published/effective 2026-09-10, after the 2026-08-31 cutoff) and is not applied, so face stays 22.60 NNN, free 2, TI 18. Face 10 paid months yr1 (18.833) + yrs 2-5 (23.165 + 23.744 + 24.338 + 24.946) = 115.026; less TI 18 = 97.026 over 60 months -> 19.41 $/sf/yr."
+    },
+    {
+      "record_id": "R6740",
+      "facts": {
+        "entity_id": "ALDER-REN-24854",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.47,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R6740"
+      ],
+      "rationale": "Executed multifamily lease, 1.49 mi. U-R6740-3 is an unsigned draft (free_months 8) and is not applied; base free_months 3 retained. Face 2.01/sf/mo = 24.12/sf/yr; 9 paid months yr1 (18.09) + 24.723 + 25.341 = 68.154; gross expense deduction 6.25/12 x 36 = 18.75; less TI 21 = 28.404 over 36 months -> 9.47 $/sf/yr."
+    },
+    {
+      "record_id": "R6049",
+      "facts": {
+        "entity_id": "ALDER-REN-90122",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.12,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R6049"
+      ],
+      "rationale": "Executed multifamily lease, 1.72 mi. NNN, free 0, TI 12, all required fields known. Escalated face 24.20 + 24.805 + 25.425 + 26.061 = 100.491; NNN deduction zero; less TI 12 = 88.491 over 48 months -> 22.12 $/sf/yr."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8015",
+      "eligible": false,
+      "reason": "free_months is null (unknown, not zero); free rent is a required fact.",
+      "source_ids": [
+        "S-R8015"
+      ]
+    },
+    {
+      "record_id": "R1927",
+      "eligible": true,
+      "reason": "Meets all business rules (executed, Multifamily/Charlotte, 0.80 mi, 2026-02-05, gross with known expenses 6.25, free 0, TI 12, term 36). Duplicate of R1298 for entity ALDER-REN-19075 (evidence_kind: second_source_same_underlying_record); dropped at deduplication so the entity occupies only one slot.",
+      "source_ids": [
+        "S-R1927",
+        "S-R1298"
+      ]
+    },
+    {
+      "record_id": "R9957",
+      "eligible": true,
+      "reason": "Executed multifamily lease, 1.03 mi, in-window; executed amendment U-R9957-1 (effective 2026-08-20) applied for free_months 4 and TI 18. Selected.",
+      "source_ids": [
+        "S-R9957",
+        "U-R9957-1"
+      ]
+    },
+    {
+      "record_id": "R6049",
+      "eligible": true,
+      "reason": "Executed multifamily lease, 1.72 mi, in-window, positive rent, term 48, free 0, TI 12, NNN. Selected.",
+      "source_ids": [
+        "S-R6049"
+      ]
+    },
+    {
+      "record_id": "R2302",
+      "eligible": true,
+      "reason": "Executed multifamily lease, 1.26 mi, in-window, all required facts known; later-dated amendment U-R2302-2 (2026-09-10) excluded. Selected.",
+      "source_ids": [
+        "S-R2302",
+        "U-R2302-2"
+      ]
+    },
+    {
+      "record_id": "R6740",
+      "eligible": true,
+      "reason": "Executed multifamily lease, 1.49 mi, in-window; gross with known expenses 6.25, free 3, TI 21, term 36. Unsigned draft U-R6740-3 not applied. Selected.",
+      "source_ids": [
+        "S-R6740",
+        "U-R6740-3"
+      ]
+    },
+    {
+      "record_id": "R4257",
+      "eligible": false,
+      "reason": "status is 'asking'; asking/unsigned rents do not qualify.",
+      "source_ids": [
+        "S-R4257"
+      ]
+    },
+    {
+      "record_id": "R4144",
+      "eligible": false,
+      "reason": "ti_allowance_psf is null (unknown); TI is a required fact.",
+      "source_ids": [
+        "S-R4144"
+      ]
+    },
+    {
+      "record_id": "R4517",
+      "eligible": false,
+      "reason": "event_date 2024-02-10 falls outside the 2025-09-01 through 2026-08-31 window.",
+      "source_ids": [
+        "S-R4517"
+      ]
+    },
+    {
+      "record_id": "R7480",
+      "eligible": false,
+      "reason": "Gross lease with annual_expenses_psf null; gross leases require a known expense deduction.",
+      "source_ids": [
+        "S-R7480"
+      ]
+    },
+    {
+      "record_id": "R6844",
+      "eligible": true,
+      "reason": "Qualifies (executed, 2.18 mi, in-window, gross with expenses 6.25, free 2, TI 18, term 36; effective net ~12.77 $/sf/yr) but ranks 7th by distance and falls outside the five-comp cap.",
+      "source_ids": [
+        "S-R6844"
+      ]
+    },
+    {
+      "record_id": "R5477",
+      "eligible": false,
+      "reason": "rent_quote is null; positive rent required.",
+      "source_ids": [
+        "S-R5477"
+      ]
+    },
+    {
+      "record_id": "R8781",
+      "eligible": false,
+      "reason": "term_months is null; known term required.",
+      "source_ids": [
+        "S-R8781"
+      ]
+    },
+    {
+      "record_id": "R1298",
+      "eligible": true,
+      "reason": "Executed multifamily lease, 0.80 mi, in-window, gross with known expenses 6.25, free 0, TI 12, term 36. Retained record for entity ALDER-REN-19075 (duplicate R1927 dropped). Selected.",
+      "source_ids": [
+        "S-R1298",
+        "S-R1927"
+      ]
+    },
+    {
+      "record_id": "R7775",
+      "eligible": false,
+      "reason": "distance 18.6 miles exceeds the 8-mile radius.",
+      "source_ids": [
+        "S-R7775"
+      ]
+    },
+    {
+      "record_id": "R3818",
+      "eligible": false,
+      "reason": "asset_type is Office; outside the Multifamily scope.",
+      "source_ids": [
+        "S-R3818"
+      ]
+    },
+    {
+      "record_id": "R8821",
+      "eligible": false,
+      "reason": "status is 'unsigned_proposal'; unsigned rents do not qualify.",
+      "source_ids": [
+        "S-R8821"
+      ]
+    },
+    {
+      "record_id": "R2138",
+      "eligible": false,
+      "reason": "rent_quote is 0; positive rent required.",
+      "source_ids": [
+        "S-R2138"
+      ]
+    },
+    {
+      "record_id": "R2543",
+      "eligible": true,
+      "reason": "Qualifies (executed, 1.95 mi, 2026-07-10, NNN, free 1, TI 15, term 60; effective net ~23.69 $/sf/yr) but ranks 6th by distance and falls outside the five-comp cap.",
+      "source_ids": [
+        "S-R2543"
+      ]
+    },
+    {
+      "record_id": "R2337",
+      "eligible": false,
+      "reason": "Source published 2026-09-03, after the 2026-08-31 cutoff; later-dated evidence is not used.",
+      "source_ids": [
+        "S-R2337"
+      ]
+    }
+  ],
+  "summary": "Five unique qualifying executed multifamily leases in Charlotte within 8 miles and inside the 2025-09-01 to 2026-08-31 window were selected, ranked by distance ascending: R1298 (0.80 mi, 11.28 $/sf/yr effective net), R9957 (1.03 mi, 16.92), R2302 (1.26 mi, 19.41), R6740 (1.49 mi, 9.47) and R6049 (1.72 mi, 22.12). Two additional qualifying comps (R2543 at 1.95 mi, ~23.69; R6844 at 2.18 mi, ~12.77) were crowded out by the five-comp cap. Only one update was controlling: executed amendment U-R9957-1 (free_months 4, TI 18). U-R2302-2 was excluded as later-dated (2026-09-10) and U-R6740-3 as an unsigned draft; R2337 was excluded because its source was published after the cutoff. R1927 was treated as a duplicate of R1298 (entity ALDER-REN-19075) and consumes no second slot. Remaining records failed on status (asking/unsigned), missing required fields (free months, TI, term, rent), zero/null rent, unknown gross expenses, distance, asset type or date window. No SPV-to-parent mappings were present in the packet. Effective rents follow the client's undiscounted rent-only convention and are not appraisal-grade market rents. The requested comp-grid XLSX was not produced: artifact creation is outside this direct API control.",
+  "limitations": [
+    "Effective net rents use the prescribed undiscounted convention (annualized face, escalations at months 13/25/..., free months at the front, monthly gross expense deduction across the full term, one-time TI subtraction); no time value, no CAM reconciliation, no concession timing nuance.",
+    "Distances are taken as provided in the extracts; the reference point and measurement method are not stated and were not verified.",
+    "Null fields (e.g., free_months for R8015, TI for R4144, term for R8781, rent for R5477, gross expenses for R7480) were treated as unknown, causing exclusion; these leases might qualify if the missing values were supplied.",
+    "R1927 vs R1298 duplication was inferred from the shared entity_id ALDER-REN-19075 and identical terms plus the 'second_source_same_underlying_record' evidence kind; no separate reconciliation document was provided.",
+    "R2302's face rent may change once amendment U-R2302-2 (rent_quote 2, unit ambiguous relative to the base USD_per_sf_year quote) becomes effective 2026-09-10; it was excluded as later-dated and its unit was not resolved.",
+    "R2337 may be a qualifying comp but its only source was published after the cutoff, so it could not be evaluated on the merits.",
+    "Unit conversions from USD_per_sf_month to annual assume a straight x12 factor as instructed; lease commencement dates, rent start dates and any partial-month accounting are unknown.",
+    "No sponsor/parent-SPV mapping evidence was supplied, so no SPV consolidation was possible or needed.",
+    "The downloadable comp-grid XLSX was not generated in this direct API control; the same selected facts and citations are included above."
+  ]
+}

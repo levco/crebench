@@ -61,3 +61,18 @@ for (const explorer of document.querySelectorAll('[data-explorer]')) {
   failures.addEventListener('change', update);
   update();
 }
+'use strict';
+const researchCaseSelect = document.getElementById('research-case-select');
+if (researchCaseSelect) {
+  const researchCases = [...document.querySelectorAll('[data-research-case]')];
+  const showResearchCase = id => {
+    if (!researchCases.some(section => section.dataset.researchCase === id)) return;
+    researchCaseSelect.value = id;
+    for (const section of researchCases) section.hidden = section.dataset.researchCase !== id;
+  };
+  showResearchCase(new URLSearchParams(location.search).get('case') || researchCaseSelect.value);
+  researchCaseSelect.addEventListener('change', () => {
+    showResearchCase(researchCaseSelect.value);
+    history.replaceState(null, '', '?case=' + encodeURIComponent(researchCaseSelect.value));
+  });
+}

@@ -1,0 +1,38 @@
+{
+  "name": "export_csv",
+  "arguments_raw": "{\"headers\":[\"record_id\",\"entity_id\",\"owner_entity_id\",\"maturity_date\",\"original_principal_usd\",\"outstanding_balance_usd\",\"contact_name\",\"contact_email\",\"source_ids\",\"status\"],\"rows\":[[\"NO_QUALIFYING_LEADS\",null,null,null,null,null,null,null,\"S-R2813; S-R2663; S-R7919; S-R4743; S-R4927; S-R5151; S-R1776; S-R7702; S-R5451; S-R7436; S-R8900; S-R5181; S-R3402; S-R7201; S-R9169; S-R7833; S-R1118; S-R1203; S-R9426; S-R5442; U-R7833-10; U-R8900-5; U-R8900-1; U-R3402-9; U-R1118-6; U-R7702-7; U-R5151-4; U-R7201-8\",\"No record satisfied all criteria (Industrial + Dallas after executed amendments, active_confirmed debt, executed unextended maturity 2026-09-01..2027-08-31, record owner verified >=2026-03-01, current CFO/Head of Acquisitions/Director of Finance verified >=2026-03-01)\"]]}",
+  "call_id": "toolu_01VPnFSJnAzUbuPjkNcKwFTH",
+  "arguments": {
+    "headers": [
+      "record_id",
+      "entity_id",
+      "owner_entity_id",
+      "maturity_date",
+      "original_principal_usd",
+      "outstanding_balance_usd",
+      "contact_name",
+      "contact_email",
+      "source_ids",
+      "status"
+    ],
+    "rows": [
+      [
+        "NO_QUALIFYING_LEADS",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "S-R2813; S-R2663; S-R7919; S-R4743; S-R4927; S-R5151; S-R1776; S-R7702; S-R5451; S-R7436; S-R8900; S-R5181; S-R3402; S-R7201; S-R9169; S-R7833; S-R1118; S-R1203; S-R9426; S-R5442; U-R7833-10; U-R8900-5; U-R8900-1; U-R3402-9; U-R1118-6; U-R7702-7; U-R5151-4; U-R7201-8",
+        "No record satisfied all criteria (Industrial + Dallas after executed amendments, active_confirmed debt, executed unextended maturity 2026-09-01..2027-08-31, record owner verified >=2026-03-01, current CFO/Head of Acquisitions/Director of Finance verified >=2026-03-01)"
+      ]
+    ]
+  },
+  "result": {
+    "created": "artifacts/prospects-v1.csv",
+    "rows": 1
+  },
+  "status": "ok"
+}

@@ -1,0 +1,202 @@
+{
+  "case_id": "refinance-leads-birch",
+  "system": "openai/gpt-5",
+  "track": "agent",
+  "status": "completed",
+  "started_at": "2026-09-07T02:31:21.656461+00:00",
+  "completed_at": "2026-09-07T02:36:18.864828+00:00",
+  "elapsed_seconds": 297.207,
+  "cost_usd": 0.33343325,
+  "known_partial_cost_usd": 0.33343325,
+  "cost_basis": "Gateway-reported inference including every attempt; excludes operator, hosting and subscription",
+  "returned_models": [
+    "openai/gpt-5"
+  ],
+  "model_calls": 5,
+  "tool_calls": 5,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 7808,
+        "completion_tokens": 6852,
+        "total_tokens": 14660,
+        "cost": 0.07828,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6336,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.07828,
+        "gateway_cost": 0.07828
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 73.561,
+      "completed_at": "2026-09-07T02:32:35.238153+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8288,
+        "completion_tokens": 4185,
+        "total_tokens": 12473,
+        "cost": 0.04357,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 7680,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3776,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.04357,
+        "gateway_cost": 0.04357
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 38.311,
+      "completed_at": "2026-09-07T02:33:13.552858+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 8709,
+        "completion_tokens": 5468,
+        "total_tokens": 14177,
+        "cost": 0.05635025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8192,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4992,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.05635025,
+        "gateway_cost": 0.05635025
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 43.363,
+      "completed_at": "2026-09-07T02:33:56.919984+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 9189,
+        "completion_tokens": 6830,
+        "total_tokens": 16019,
+        "cost": 0.07013825,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8576,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6400,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.07013825,
+        "gateway_cost": 0.07013825
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 66.072,
+      "completed_at": "2026-09-07T02:35:02.996239+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 9615,
+        "completion_tokens": 8330,
+        "total_tokens": 17945,
+        "cost": 0.08509475,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 9088,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6336,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.08509475,
+        "gateway_cost": 0.08509475
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 75.859,
+      "completed_at": "2026-09-07T02:36:18.860318+00:00"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/prospects-v1.csv",
+      "sha256": "628c4841fd2e175320d1af74296110824dfced0235bd4cf37a3181849dce3689",
+      "bytes": 945
+    },
+    {
+      "path": "artifacts/prospects-v2.csv",
+      "sha256": "41a565359d510a8f9fb65252785d9ed333f1b8427567d31a6070e6f1388fdef7",
+      "bytes": 822
+    },
+    {
+      "path": "artifacts/prospects-v3.csv",
+      "sha256": "d5d7fd879374eda4daa03d72328d8a8c932cfe966f61ac208197f13dfa3b944b",
+      "bytes": 945
+    },
+    {
+      "path": "artifacts/prospects-v4.csv",
+      "sha256": "82dca5f5cb573d465ff547048e2b9c2a9f76f73b8dd5c6a947d8560e6ec009f9",
+      "bytes": 831
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

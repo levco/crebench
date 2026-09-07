@@ -1,0 +1,281 @@
+{
+  "name": "submit_research",
+  "arguments_raw": "{\"shortlist\":[{\"record_id\":\"R2245\",\"facts\":{\"entity_id\":\"BIRCH-SPO-58038\",\"firm_name\":\"Birch Point 6 Capital\",\"transaction_size_usd\":13200000,\"event_date\":\"2026-07-10\",\"contact_name\":\"Morgan Birch6\",\"contact_role\":\"Head of Acquisitions\",\"contact_email\":\"person6@sponsor-leads-birch.example\"},\"source_ids\":[\"S-R2245\"],\"rationale\":\"Closed single-asset Phoenix retail acquisition ($13.2M) on 2026-07-10; owner-operator; qualifying contact verified 2026-08-10.\"},{\"record_id\":\"R6968\",\"facts\":{\"entity_id\":\"BIRCH-SPO-48685\",\"firm_name\":\"Birch Park 5 Capital\",\"transaction_size_usd\":12480000,\"event_date\":\"2026-06-09\",\"contact_name\":\"Alex Birch5\",\"contact_role\":\"CFO\",\"contact_email\":null},\"source_ids\":[\"S-R6968\"],\"rationale\":\"Closed single-asset Phoenix retail acquisition ($12.48M) on 2026-06-09; owner-operator; qualifying contact verified 2026-08-10.\"},{\"record_id\":\"R8710\",\"facts\":{\"entity_id\":\"BIRCH-SPO-35519\",\"firm_name\":\"Birch Square 4 Capital\",\"transaction_size_usd\":11760000,\"event_date\":\"2026-05-08\",\"contact_name\":\"Taylor Birch4\",\"contact_role\":\"Head of Acquisitions\",\"contact_email\":\"person4@sponsor-leads-birch.example\"},\"source_ids\":[\"S-R8710\"],\"rationale\":\"Closed single-asset Phoenix retail acquisition ($11.76M) on 2026-05-08; owner-operator; qualifying contact verified 2026-08-10. Unsigned draft update is not controlling.\"},{\"record_id\":\"R1638\",\"facts\":{\"entity_id\":\"BIRCH-SPO-67736\",\"firm_name\":\"Birch Park 3 Capital\",\"transaction_size_usd\":11040000,\"event_date\":\"2026-04-07\",\"contact_name\":\"Jordan Birch3\",\"contact_role\":\"CFO\",\"contact_email\":\"person3@sponsor-leads-birch.example\"},\"source_ids\":[\"S-R1638\"],\"rationale\":\"Closed single-asset Phoenix retail acquisition ($11.04M) on 2026-04-07; owner-operator; qualifying contact verified 2026-08-10.\"},{\"record_id\":\"R7815\",\"facts\":{\"entity_id\":\"BIRCH-SPO-66254\",\"firm_name\":\"Birch Square 2 Capital\",\"transaction_size_usd\":10320000,\"event_date\":\"2026-03-06\",\"contact_name\":\"Drew Birch\",\"contact_role\":\"CFO\",\"contact_email\":\"new.cfo@sponsor-leads-birch.example\"},\"source_ids\":[\"S-R7815\",\"U-R7815-1\"],\"rationale\":\"Closed single-asset Phoenix retail acquisition ($10.32M) on 2026-03-06; owner-operator; CFO verified via current team-page update on 2026-08-20.\"},{\"record_id\":\"R2005\",\"facts\":{\"entity_id\":\"BIRCH-SPO-59032\",\"firm_name\":\"Birch Square 1 Capital\",\"transaction_size_usd\":13920000,\"event_date\":\"2026-02-11\",\"contact_name\":\"Alex Birch1\",\"contact_role\":\"CFO\",\"contact_email\":\"person1@sponsor-leads-birch.example\"},\"source_ids\":[\"S-R2005\",\"S-R1077\"],\"rationale\":\"SPV (Birch Square 7) closed Phoenix retail acquisition ($13.92M) on 2026-02-11 and is mapped by executed ownership schedule to operating parent Birch Square 1 Capital; using parent contact verified 2026-08-10.\"}],\"candidate_decisions\":[{\"record_id\":\"R6206\",\"eligible\":false,\"reason\":\"Portfolio total ($84,000,000) outside $6\u2013$18M range; portfolio totals excluded.\",\"source_ids\":[\"S-R6206\"]},{\"record_id\":\"R1638\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; owner-operator; size in range; CFO verified 2026-08-10.\",\"source_ids\":[\"S-R1638\"]},{\"record_id\":\"R2245\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; owner-operator; size in range; Head of Acquisitions verified 2026-08-10.\",\"source_ids\":[\"S-R2245\"]},{\"record_id\":\"R6226\",\"eligible\":false,\"reason\":\"Contact verification predates 2026-03-01 (verified 2024-01-10); fails required recency despite size in range.\",\"source_ids\":[\"S-R6226\"]},{\"record_id\":\"R2431\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; size in range; duplicate of R1077 for the same underlying acquisition.\",\"source_ids\":[\"S-R2431\"]},{\"record_id\":\"R2005\",\"eligible\":true,\"reason\":\"Property SPV with closed single-asset Phoenix retail; size in range; mapped to operating parent BIRCH-SPO-59032 by executed ownership schedule.\",\"source_ids\":[\"S-R2005\"]},{\"record_id\":\"R3377\",\"eligible\":false,\"reason\":\"Firm is a property_manager; managers are excluded even if a transaction closed.\",\"source_ids\":[\"S-R3377\"]},{\"record_id\":\"R1919\",\"eligible\":false,\"reason\":\"Market is Seattle, not Phoenix.\",\"source_ids\":[\"S-R1919\"]},{\"record_id\":\"R6320\",\"eligible\":false,\"reason\":\"Firm is a broker; brokers are excluded.\",\"source_ids\":[\"S-R6320\"]},{\"record_id\":\"R9716\",\"eligible\":false,\"reason\":\"Base source published 2026-09-03, after the 2026-08-31 cutoff; not usable within scope despite qualifying event date.\",\"source_ids\":[\"S-R9716\"]},{\"record_id\":\"R7842\",\"eligible\":false,\"reason\":\"Asset type Office; outside Retail scope.\",\"source_ids\":[\"S-R7842\"]},{\"record_id\":\"R7815\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; owner-operator; size in range; CFO verified via 2026-08-20 team-page update (post-2026-03-01).\",\"source_ids\":[\"S-R7815\",\"U-R7815-1\"]},{\"record_id\":\"R8710\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; owner-operator; size in range; unsigned draft update ignored.\",\"source_ids\":[\"S-R8710\"]},{\"record_id\":\"R6119\",\"eligible\":false,\"reason\":\"Event date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.\",\"source_ids\":[\"S-R6119\"]},{\"record_id\":\"R4272\",\"eligible\":false,\"reason\":\"Announced bid, not a closed acquisition.\",\"source_ids\":[\"S-R4272\"]},{\"record_id\":\"R1045\",\"eligible\":false,\"reason\":\"Contact employment is 'former'; requires a current CFO/Head of Acquisitions/Director of Finance verified since 2026-03-01.\",\"source_ids\":[\"S-R1045\"]},{\"record_id\":\"R6968\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; owner-operator; size in range; CFO verified 2026-08-10.\",\"source_ids\":[\"S-R6968\"]},{\"record_id\":\"R1077\",\"eligible\":true,\"reason\":\"Closed single-asset Phoenix retail; size in range; duplicate of R2431 for same acquisition and same sponsor as SPV R2005.\",\"source_ids\":[\"S-R1077\"]},{\"record_id\":\"R8692\",\"eligible\":false,\"reason\":\"Transaction size $2,400,000 is below the $6\u2013$18M window.\",\"source_ids\":[\"S-R8692\"]},{\"record_id\":\"R8208\",\"eligible\":false,\"reason\":\"Contact role is Registered Agent, which is not a qualifying finance/acquisitions lead.\",\"source_ids\":[\"S-R8208\"]}],\"summary\":\"Identified six distinct operating sponsors with qualifying closed single-asset Retail acquisitions in Phoenix between 2025-09-01 and 2026-08-31: Birch Point 6, Birch Park 5, Birch Square 4, Birch Park 3, Birch Square 2, and Birch Square 1 (via SPV Birch Square 7). Records with brokers/managers, portfolio totals, out-of-window dates, non-Phoenix markets, unqualified roles, or insufficiently verified contacts were excluded. A prospect CSV with citations has been created (artifacts/prospects-v2.csv).\",\"limitations\":[\"Some entities (e.g., Birch Square 19) failed the contact recency test due to older verification dates; no newer qualifying updates were provided.\",\"One sponsor (Birch Square 1 Capital) had multiple related records (parent plus SPV); we resolved to the operating parent and used the most recent qualifying transaction, which may reflect a different asset than other duplicates.\",\"Unsigned draft and post-cutoff updates were ignored by rule; if future executed updates alter sizes or roles, rankings could change.\",\"Only the supplied extracts and updates were used; no external corroboration or additional contacts were considered.\"]}",
+  "call_id": "call_CQHc99PpSrZWoGiDb4D1sJcQ",
+  "arguments": {
+    "shortlist": [
+      {
+        "record_id": "R2245",
+        "facts": {
+          "entity_id": "BIRCH-SPO-58038",
+          "firm_name": "Birch Point 6 Capital",
+          "transaction_size_usd": 13200000,
+          "event_date": "2026-07-10",
+          "contact_name": "Morgan Birch6",
+          "contact_role": "Head of Acquisitions",
+          "contact_email": "person6@sponsor-leads-birch.example"
+        },
+        "source_ids": [
+          "S-R2245"
+        ],
+        "rationale": "Closed single-asset Phoenix retail acquisition ($13.2M) on 2026-07-10; owner-operator; qualifying contact verified 2026-08-10."
+      },
+      {
+        "record_id": "R6968",
+        "facts": {
+          "entity_id": "BIRCH-SPO-48685",
+          "firm_name": "Birch Park 5 Capital",
+          "transaction_size_usd": 12480000,
+          "event_date": "2026-06-09",
+          "contact_name": "Alex Birch5",
+          "contact_role": "CFO",
+          "contact_email": null
+        },
+        "source_ids": [
+          "S-R6968"
+        ],
+        "rationale": "Closed single-asset Phoenix retail acquisition ($12.48M) on 2026-06-09; owner-operator; qualifying contact verified 2026-08-10."
+      },
+      {
+        "record_id": "R8710",
+        "facts": {
+          "entity_id": "BIRCH-SPO-35519",
+          "firm_name": "Birch Square 4 Capital",
+          "transaction_size_usd": 11760000,
+          "event_date": "2026-05-08",
+          "contact_name": "Taylor Birch4",
+          "contact_role": "Head of Acquisitions",
+          "contact_email": "person4@sponsor-leads-birch.example"
+        },
+        "source_ids": [
+          "S-R8710"
+        ],
+        "rationale": "Closed single-asset Phoenix retail acquisition ($11.76M) on 2026-05-08; owner-operator; qualifying contact verified 2026-08-10. Unsigned draft update is not controlling."
+      },
+      {
+        "record_id": "R1638",
+        "facts": {
+          "entity_id": "BIRCH-SPO-67736",
+          "firm_name": "Birch Park 3 Capital",
+          "transaction_size_usd": 11040000,
+          "event_date": "2026-04-07",
+          "contact_name": "Jordan Birch3",
+          "contact_role": "CFO",
+          "contact_email": "person3@sponsor-leads-birch.example"
+        },
+        "source_ids": [
+          "S-R1638"
+        ],
+        "rationale": "Closed single-asset Phoenix retail acquisition ($11.04M) on 2026-04-07; owner-operator; qualifying contact verified 2026-08-10."
+      },
+      {
+        "record_id": "R7815",
+        "facts": {
+          "entity_id": "BIRCH-SPO-66254",
+          "firm_name": "Birch Square 2 Capital",
+          "transaction_size_usd": 10320000,
+          "event_date": "2026-03-06",
+          "contact_name": "Drew Birch",
+          "contact_role": "CFO",
+          "contact_email": "new.cfo@sponsor-leads-birch.example"
+        },
+        "source_ids": [
+          "S-R7815",
+          "U-R7815-1"
+        ],
+        "rationale": "Closed single-asset Phoenix retail acquisition ($10.32M) on 2026-03-06; owner-operator; CFO verified via current team-page update on 2026-08-20."
+      },
+      {
+        "record_id": "R2005",
+        "facts": {
+          "entity_id": "BIRCH-SPO-59032",
+          "firm_name": "Birch Square 1 Capital",
+          "transaction_size_usd": 13920000,
+          "event_date": "2026-02-11",
+          "contact_name": "Alex Birch1",
+          "contact_role": "CFO",
+          "contact_email": "person1@sponsor-leads-birch.example"
+        },
+        "source_ids": [
+          "S-R2005",
+          "S-R1077"
+        ],
+        "rationale": "SPV (Birch Square 7) closed Phoenix retail acquisition ($13.92M) on 2026-02-11 and is mapped by executed ownership schedule to operating parent Birch Square 1 Capital; using parent contact verified 2026-08-10."
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "record_id": "R6206",
+        "eligible": false,
+        "reason": "Portfolio total ($84,000,000) outside $6\u2013$18M range; portfolio totals excluded.",
+        "source_ids": [
+          "S-R6206"
+        ]
+      },
+      {
+        "record_id": "R1638",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; owner-operator; size in range; CFO verified 2026-08-10.",
+        "source_ids": [
+          "S-R1638"
+        ]
+      },
+      {
+        "record_id": "R2245",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; owner-operator; size in range; Head of Acquisitions verified 2026-08-10.",
+        "source_ids": [
+          "S-R2245"
+        ]
+      },
+      {
+        "record_id": "R6226",
+        "eligible": false,
+        "reason": "Contact verification predates 2026-03-01 (verified 2024-01-10); fails required recency despite size in range.",
+        "source_ids": [
+          "S-R6226"
+        ]
+      },
+      {
+        "record_id": "R2431",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; size in range; duplicate of R1077 for the same underlying acquisition.",
+        "source_ids": [
+          "S-R2431"
+        ]
+      },
+      {
+        "record_id": "R2005",
+        "eligible": true,
+        "reason": "Property SPV with closed single-asset Phoenix retail; size in range; mapped to operating parent BIRCH-SPO-59032 by executed ownership schedule.",
+        "source_ids": [
+          "S-R2005"
+        ]
+      },
+      {
+        "record_id": "R3377",
+        "eligible": false,
+        "reason": "Firm is a property_manager; managers are excluded even if a transaction closed.",
+        "source_ids": [
+          "S-R3377"
+        ]
+      },
+      {
+        "record_id": "R1919",
+        "eligible": false,
+        "reason": "Market is Seattle, not Phoenix.",
+        "source_ids": [
+          "S-R1919"
+        ]
+      },
+      {
+        "record_id": "R6320",
+        "eligible": false,
+        "reason": "Firm is a broker; brokers are excluded.",
+        "source_ids": [
+          "S-R6320"
+        ]
+      },
+      {
+        "record_id": "R9716",
+        "eligible": false,
+        "reason": "Base source published 2026-09-03, after the 2026-08-31 cutoff; not usable within scope despite qualifying event date.",
+        "source_ids": [
+          "S-R9716"
+        ]
+      },
+      {
+        "record_id": "R7842",
+        "eligible": false,
+        "reason": "Asset type Office; outside Retail scope.",
+        "source_ids": [
+          "S-R7842"
+        ]
+      },
+      {
+        "record_id": "R7815",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; owner-operator; size in range; CFO verified via 2026-08-20 team-page update (post-2026-03-01).",
+        "source_ids": [
+          "S-R7815",
+          "U-R7815-1"
+        ]
+      },
+      {
+        "record_id": "R8710",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; owner-operator; size in range; unsigned draft update ignored.",
+        "source_ids": [
+          "S-R8710"
+        ]
+      },
+      {
+        "record_id": "R6119",
+        "eligible": false,
+        "reason": "Event date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window.",
+        "source_ids": [
+          "S-R6119"
+        ]
+      },
+      {
+        "record_id": "R4272",
+        "eligible": false,
+        "reason": "Announced bid, not a closed acquisition.",
+        "source_ids": [
+          "S-R4272"
+        ]
+      },
+      {
+        "record_id": "R1045",
+        "eligible": false,
+        "reason": "Contact employment is 'former'; requires a current CFO/Head of Acquisitions/Director of Finance verified since 2026-03-01.",
+        "source_ids": [
+          "S-R1045"
+        ]
+      },
+      {
+        "record_id": "R6968",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; owner-operator; size in range; CFO verified 2026-08-10.",
+        "source_ids": [
+          "S-R6968"
+        ]
+      },
+      {
+        "record_id": "R1077",
+        "eligible": true,
+        "reason": "Closed single-asset Phoenix retail; size in range; duplicate of R2431 for same acquisition and same sponsor as SPV R2005.",
+        "source_ids": [
+          "S-R1077"
+        ]
+      },
+      {
+        "record_id": "R8692",
+        "eligible": false,
+        "reason": "Transaction size $2,400,000 is below the $6\u2013$18M window.",
+        "source_ids": [
+          "S-R8692"
+        ]
+      },
+      {
+        "record_id": "R8208",
+        "eligible": false,
+        "reason": "Contact role is Registered Agent, which is not a qualifying finance/acquisitions lead.",
+        "source_ids": [
+          "S-R8208"
+        ]
+      }
+    ],
+    "summary": "Identified six distinct operating sponsors with qualifying closed single-asset Retail acquisitions in Phoenix between 2025-09-01 and 2026-08-31: Birch Point 6, Birch Park 5, Birch Square 4, Birch Park 3, Birch Square 2, and Birch Square 1 (via SPV Birch Square 7). Records with brokers/managers, portfolio totals, out-of-window dates, non-Phoenix markets, unqualified roles, or insufficiently verified contacts were excluded. A prospect CSV with citations has been created (artifacts/prospects-v2.csv).",
+    "limitations": [
+      "Some entities (e.g., Birch Square 19) failed the contact recency test due to older verification dates; no newer qualifying updates were provided.",
+      "One sponsor (Birch Square 1 Capital) had multiple related records (parent plus SPV); we resolved to the operating parent and used the most recent qualifying transaction, which may reflect a different asset than other duplicates.",
+      "Unsigned draft and post-cutoff updates were ignored by rule; if future executed updates alter sizes or roles, rankings could change.",
+      "Only the supplied extracts and updates were used; no external corroboration or additional contacts were considered."
+    ]
+  },
+  "result": {
+    "saved": true
+  },
+  "status": "ok"
+}

@@ -1,0 +1,258 @@
+{
+  "name": "submit_research",
+  "arguments_raw": "{\"shortlist\":[{\"record_id\":\"R5709\",\"facts\":{\"entity_id\":\"DOGWOOD-SAL-78916\",\"event_date\":\"2026-02-05\",\"consideration_usd\":28000000,\"property_size\":96,\"price_per_unit\":291666.67},\"source_ids\":[\"S-R5709\"],\"rationale\":\"Selected as one of the five closest eligible stabilized, fee-simple, single-asset multifamily sales within 8 miles and 78\u2013174 units; ranked by distance.\"},{\"record_id\":\"R1935\",\"facts\":{\"entity_id\":\"DOGWOOD-SAL-66133\",\"event_date\":\"2026-03-06\",\"consideration_usd\":32550000,\"property_size\":103,\"price_per_unit\":316019.42},\"source_ids\":[\"S-R1935\",\"U-R1935-1\"],\"rationale\":\"Eligible closed sale; consideration per executed amendment effective before cutoff; among five closest by distance.\"},{\"record_id\":\"R8685\",\"facts\":{\"entity_id\":\"DOGWOOD-SAL-12100\",\"event_date\":\"2026-04-07\",\"consideration_usd\":32200000,\"property_size\":110,\"price_per_unit\":292727.27},\"source_ids\":[\"S-R8685\"],\"rationale\":\"Eligible closed sale; executed amendment after cutoff not applied; among five closest by distance.\"},{\"record_id\":\"R1029\",\"facts\":{\"entity_id\":\"DOGWOOD-SAL-64711\",\"event_date\":\"2026-05-08\",\"consideration_usd\":34300000,\"property_size\":118,\"price_per_unit\":290677.97},\"source_ids\":[\"S-R1029\"],\"rationale\":\"Eligible closed sale; unsigned draft update ignored; among five closest by distance.\"},{\"record_id\":\"R4639\",\"facts\":{\"entity_id\":\"DOGWOOD-SAL-75833\",\"event_date\":\"2026-06-09\",\"consideration_usd\":36400000,\"property_size\":125,\"price_per_unit\":291200.0},\"source_ids\":[\"S-R4639\"],\"rationale\":\"Eligible closed sale; among five closest by distance.\"}],\"candidate_decisions\":[{\"record_id\":\"R4639\",\"eligible\":true,\"reason\":\"Eligible: 125 units (within 78\u2013174), closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive USD consideration.\",\"source_ids\":[\"S-R4639\"]},{\"record_id\":\"R3713\",\"eligible\":false,\"reason\":\"Ineligible: size_unit is acre (not units); does not meet 78\u2013174 unit requirement.\",\"source_ids\":[\"S-R3713\"]},{\"record_id\":\"R4402\",\"eligible\":false,\"reason\":\"Ineligible: 252 units (outside 78\u2013174 unit range).\",\"source_ids\":[\"S-R4402\"]},{\"record_id\":\"R5751\",\"eligible\":true,\"reason\":\"Eligible: 132 units, closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive consideration (USD_millions normalized).\",\"source_ids\":[\"S-R5751\"]},{\"record_id\":\"R1935\",\"eligible\":true,\"reason\":\"Eligible: 103 units; executed amendment sets consideration to USD 32,550,000 effective before cutoff.\",\"source_ids\":[\"S-R1935\",\"U-R1935-1\"]},{\"record_id\":\"R9886\",\"eligible\":true,\"reason\":\"Eligible: 139 units, closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive USD consideration.\",\"source_ids\":[\"S-R9886\"]},{\"record_id\":\"R3929\",\"eligible\":false,\"reason\":\"Ineligible: consideration unknown/null (must be known positive).\",\"source_ids\":[\"S-R3929\"]},{\"record_id\":\"R4855\",\"eligible\":false,\"reason\":\"Ineligible: minority_equity_interest (not fee simple).\",\"source_ids\":[\"S-R4855\"]},{\"record_id\":\"R5709\",\"eligible\":true,\"reason\":\"Eligible: 96 units, closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive USD consideration.\",\"source_ids\":[\"S-R5709\"]},{\"record_id\":\"R1347\",\"eligible\":false,\"reason\":\"Ineligible: asset_type Office (not Multifamily).\",\"source_ids\":[\"S-R1347\"]},{\"record_id\":\"R1328\",\"eligible\":false,\"reason\":\"Ineligible: portfolio_unallocated price (not a single-asset allocated sale).\",\"source_ids\":[\"S-R1328\"]},{\"record_id\":\"R7446\",\"eligible\":false,\"reason\":\"Ineligible: event_date 2024-02-10 is before the 2025-09-01 through 2026-08-31 window.\",\"source_ids\":[\"S-R7446\"]},{\"record_id\":\"R8685\",\"eligible\":true,\"reason\":\"Eligible: 110 units; closed, fee-simple, stabilized, single-asset, unrelated-party; later executed amendment published after cutoff not applied.\",\"source_ids\":[\"S-R8685\",\"U-R8685-2\"]},{\"record_id\":\"R4477\",\"eligible\":true,\"reason\":\"Eligible before dedupe but duplicate of R5709 (same entity_id; second source of same underlying record); will not be separately shortlisted.\",\"source_ids\":[\"S-R4477\",\"S-R5709\"]},{\"record_id\":\"R4014\",\"eligible\":false,\"reason\":\"Ineligible for this run: base source published 2026-09-03, after the 2026-08-31 cutoff.\",\"source_ids\":[\"S-R4014\"]},{\"record_id\":\"R3120\",\"eligible\":false,\"reason\":\"Ineligible: listing status (not a closed sale).\",\"source_ids\":[\"S-R3120\"]},{\"record_id\":\"R1029\",\"eligible\":true,\"reason\":\"Eligible: 118 units; unsigned draft update does not override base; closed, fee-simple, stabilized, single-asset, unrelated-party.\",\"source_ids\":[\"S-R1029\",\"U-R1029-3\"]},{\"record_id\":\"R4010\",\"eligible\":false,\"reason\":\"Ineligible: redevelopment (not stabilized).\",\"source_ids\":[\"S-R4010\"]},{\"record_id\":\"R7792\",\"eligible\":false,\"reason\":\"Ineligible: related-party transaction.\",\"source_ids\":[\"S-R7792\"]},{\"record_id\":\"R1717\",\"eligible\":false,\"reason\":\"Ineligible: distance 18.6 miles exceeds 8-mile radius.\",\"source_ids\":[\"S-R1717\"]}],\"summary\":\"Identified five qualifying multifamily sales comps in Tampa (event dates 2026-02-05 to 2026-06-09), each 78\u2013174 units, stabilized, fee-simple, single-asset, unrelated-party, within 8 miles, and with known positive USD consideration. Ranked by proximity: R5709 (0.8 mi), R1935 (1.03 mi, amended consideration), R8685 (1.26 mi), R1029 (1.49 mi), and R4639 (1.72 mi). Created a comp-grid XLSX with citations reflecting these selections. Several records were excluded due to wrong size unit, size out of range, missing consideration, minority interest, redevelopment, listing status, related-party, distance beyond 8 miles, portfolio-unallocated pricing, or publication after the 2026-08-31 cutoff.\",\"limitations\":[\"All facts rely solely on supplied extracts and updates; no external corroboration.\",\"Unsigned draft update for R1029 (U-R1029-3) and post-cutoff executed amendment for R8685 (U-R8685-2) were not applied; if controlling evidence changes, pricing/PPU could differ.\",\"Event R4014 (published after cutoff) was excluded; inclusion in a later run would affect comp availability and rankings.\",\"Distance values are taken as given; no geospatial validation performed.\",\"Price-per-unit is a simple total price divided by reported unit count; no adjustment for unit mix, condition variance or concessions.\"]}",
+  "call_id": "call_rd9ctrpIwSgNl9eavS9tUDWW",
+  "arguments": {
+    "shortlist": [
+      {
+        "record_id": "R5709",
+        "facts": {
+          "entity_id": "DOGWOOD-SAL-78916",
+          "event_date": "2026-02-05",
+          "consideration_usd": 28000000,
+          "property_size": 96,
+          "price_per_unit": 291666.67
+        },
+        "source_ids": [
+          "S-R5709"
+        ],
+        "rationale": "Selected as one of the five closest eligible stabilized, fee-simple, single-asset multifamily sales within 8 miles and 78\u2013174 units; ranked by distance."
+      },
+      {
+        "record_id": "R1935",
+        "facts": {
+          "entity_id": "DOGWOOD-SAL-66133",
+          "event_date": "2026-03-06",
+          "consideration_usd": 32550000,
+          "property_size": 103,
+          "price_per_unit": 316019.42
+        },
+        "source_ids": [
+          "S-R1935",
+          "U-R1935-1"
+        ],
+        "rationale": "Eligible closed sale; consideration per executed amendment effective before cutoff; among five closest by distance."
+      },
+      {
+        "record_id": "R8685",
+        "facts": {
+          "entity_id": "DOGWOOD-SAL-12100",
+          "event_date": "2026-04-07",
+          "consideration_usd": 32200000,
+          "property_size": 110,
+          "price_per_unit": 292727.27
+        },
+        "source_ids": [
+          "S-R8685"
+        ],
+        "rationale": "Eligible closed sale; executed amendment after cutoff not applied; among five closest by distance."
+      },
+      {
+        "record_id": "R1029",
+        "facts": {
+          "entity_id": "DOGWOOD-SAL-64711",
+          "event_date": "2026-05-08",
+          "consideration_usd": 34300000,
+          "property_size": 118,
+          "price_per_unit": 290677.97
+        },
+        "source_ids": [
+          "S-R1029"
+        ],
+        "rationale": "Eligible closed sale; unsigned draft update ignored; among five closest by distance."
+      },
+      {
+        "record_id": "R4639",
+        "facts": {
+          "entity_id": "DOGWOOD-SAL-75833",
+          "event_date": "2026-06-09",
+          "consideration_usd": 36400000,
+          "property_size": 125,
+          "price_per_unit": 291200.0
+        },
+        "source_ids": [
+          "S-R4639"
+        ],
+        "rationale": "Eligible closed sale; among five closest by distance."
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "record_id": "R4639",
+        "eligible": true,
+        "reason": "Eligible: 125 units (within 78\u2013174), closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive USD consideration.",
+        "source_ids": [
+          "S-R4639"
+        ]
+      },
+      {
+        "record_id": "R3713",
+        "eligible": false,
+        "reason": "Ineligible: size_unit is acre (not units); does not meet 78\u2013174 unit requirement.",
+        "source_ids": [
+          "S-R3713"
+        ]
+      },
+      {
+        "record_id": "R4402",
+        "eligible": false,
+        "reason": "Ineligible: 252 units (outside 78\u2013174 unit range).",
+        "source_ids": [
+          "S-R4402"
+        ]
+      },
+      {
+        "record_id": "R5751",
+        "eligible": true,
+        "reason": "Eligible: 132 units, closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive consideration (USD_millions normalized).",
+        "source_ids": [
+          "S-R5751"
+        ]
+      },
+      {
+        "record_id": "R1935",
+        "eligible": true,
+        "reason": "Eligible: 103 units; executed amendment sets consideration to USD 32,550,000 effective before cutoff.",
+        "source_ids": [
+          "S-R1935",
+          "U-R1935-1"
+        ]
+      },
+      {
+        "record_id": "R9886",
+        "eligible": true,
+        "reason": "Eligible: 139 units, closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive USD consideration.",
+        "source_ids": [
+          "S-R9886"
+        ]
+      },
+      {
+        "record_id": "R3929",
+        "eligible": false,
+        "reason": "Ineligible: consideration unknown/null (must be known positive).",
+        "source_ids": [
+          "S-R3929"
+        ]
+      },
+      {
+        "record_id": "R4855",
+        "eligible": false,
+        "reason": "Ineligible: minority_equity_interest (not fee simple).",
+        "source_ids": [
+          "S-R4855"
+        ]
+      },
+      {
+        "record_id": "R5709",
+        "eligible": true,
+        "reason": "Eligible: 96 units, closed, fee-simple, stabilized, single-asset, unrelated-party, within 8 miles, known positive USD consideration.",
+        "source_ids": [
+          "S-R5709"
+        ]
+      },
+      {
+        "record_id": "R1347",
+        "eligible": false,
+        "reason": "Ineligible: asset_type Office (not Multifamily).",
+        "source_ids": [
+          "S-R1347"
+        ]
+      },
+      {
+        "record_id": "R1328",
+        "eligible": false,
+        "reason": "Ineligible: portfolio_unallocated price (not a single-asset allocated sale).",
+        "source_ids": [
+          "S-R1328"
+        ]
+      },
+      {
+        "record_id": "R7446",
+        "eligible": false,
+        "reason": "Ineligible: event_date 2024-02-10 is before the 2025-09-01 through 2026-08-31 window.",
+        "source_ids": [
+          "S-R7446"
+        ]
+      },
+      {
+        "record_id": "R8685",
+        "eligible": true,
+        "reason": "Eligible: 110 units; closed, fee-simple, stabilized, single-asset, unrelated-party; later executed amendment published after cutoff not applied.",
+        "source_ids": [
+          "S-R8685",
+          "U-R8685-2"
+        ]
+      },
+      {
+        "record_id": "R4477",
+        "eligible": true,
+        "reason": "Eligible before dedupe but duplicate of R5709 (same entity_id; second source of same underlying record); will not be separately shortlisted.",
+        "source_ids": [
+          "S-R4477",
+          "S-R5709"
+        ]
+      },
+      {
+        "record_id": "R4014",
+        "eligible": false,
+        "reason": "Ineligible for this run: base source published 2026-09-03, after the 2026-08-31 cutoff.",
+        "source_ids": [
+          "S-R4014"
+        ]
+      },
+      {
+        "record_id": "R3120",
+        "eligible": false,
+        "reason": "Ineligible: listing status (not a closed sale).",
+        "source_ids": [
+          "S-R3120"
+        ]
+      },
+      {
+        "record_id": "R1029",
+        "eligible": true,
+        "reason": "Eligible: 118 units; unsigned draft update does not override base; closed, fee-simple, stabilized, single-asset, unrelated-party.",
+        "source_ids": [
+          "S-R1029",
+          "U-R1029-3"
+        ]
+      },
+      {
+        "record_id": "R4010",
+        "eligible": false,
+        "reason": "Ineligible: redevelopment (not stabilized).",
+        "source_ids": [
+          "S-R4010"
+        ]
+      },
+      {
+        "record_id": "R7792",
+        "eligible": false,
+        "reason": "Ineligible: related-party transaction.",
+        "source_ids": [
+          "S-R7792"
+        ]
+      },
+      {
+        "record_id": "R1717",
+        "eligible": false,
+        "reason": "Ineligible: distance 18.6 miles exceeds 8-mile radius.",
+        "source_ids": [
+          "S-R1717"
+        ]
+      }
+    ],
+    "summary": "Identified five qualifying multifamily sales comps in Tampa (event dates 2026-02-05 to 2026-06-09), each 78\u2013174 units, stabilized, fee-simple, single-asset, unrelated-party, within 8 miles, and with known positive USD consideration. Ranked by proximity: R5709 (0.8 mi), R1935 (1.03 mi, amended consideration), R8685 (1.26 mi), R1029 (1.49 mi), and R4639 (1.72 mi). Created a comp-grid XLSX with citations reflecting these selections. Several records were excluded due to wrong size unit, size out of range, missing consideration, minority interest, redevelopment, listing status, related-party, distance beyond 8 miles, portfolio-unallocated pricing, or publication after the 2026-08-31 cutoff.",
+    "limitations": [
+      "All facts rely solely on supplied extracts and updates; no external corroboration.",
+      "Unsigned draft update for R1029 (U-R1029-3) and post-cutoff executed amendment for R8685 (U-R8685-2) were not applied; if controlling evidence changes, pricing/PPU could differ.",
+      "Event R4014 (published after cutoff) was excluded; inclusion in a later run would affect comp availability and rankings.",
+      "Distance values are taken as given; no geospatial validation performed.",
+      "Price-per-unit is a simple total price divided by reported unit count; no adjustment for unit mix, condition variance or concessions."
+    ]
+  },
+  "result": {
+    "saved": true
+  },
+  "status": "ok"
+}

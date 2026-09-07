@@ -1,0 +1,702 @@
+{
+  "name": "create_workbook",
+  "arguments_raw": "{\"spec\":{\"sheets\":[{\"name\":\"Comp Grid\",\"freeze_rows\":3,\"column_widths\":{\"A\":10,\"B\":18,\"C\":18,\"D\":12,\"E\":10,\"F\":9,\"G\":10,\"H\":16,\"I\":12,\"J\":11,\"K\":11,\"L\":9,\"M\":9,\"N\":9,\"O\":12,\"P\":12,\"Q\":12,\"R\":14,\"S\":28},\"cells\":[{\"cell\":\"A1\",\"value\":\"Rent Comps - Alder / Multifamily / Charlotte\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"As of 2026-08-31. Executed leases 2025-09-01 to 2026-08-31, within 8 miles. Client convention: annualized face rent, escalation at months 13/25/etc., no face rent during free months, gross expense deduction every month, TI subtracted once, undiscounted.\",\"role\":\"note\",\"wrap\":true},{\"cell\":\"A3\",\"value\":\"record_id\",\"role\":\"header\"},{\"cell\":\"B3\",\"value\":\"entity_id\",\"role\":\"header\"},{\"cell\":\"C3\",\"value\":\"name\",\"role\":\"header\"},{\"cell\":\"D3\",\"value\":\"event_date\",\"role\":\"header\"},{\"cell\":\"E3\",\"value\":\"distance_miles\",\"role\":\"header\"},{\"cell\":\"F3\",\"value\":\"term_months\",\"role\":\"header\"},{\"cell\":\"G3\",\"value\":\"rent_quote\",\"role\":\"header\"},{\"cell\":\"H3\",\"value\":\"rent_quote_unit\",\"role\":\"header\"},{\"cell\":\"I3\",\"value\":\"annual_face_rent_psf\",\"role\":\"header\"},{\"cell\":\"J3\",\"value\":\"expense_basis\",\"role\":\"header\"},{\"cell\":\"K3\",\"value\":\"annual_expenses_psf\",\"role\":\"header\"},{\"cell\":\"L3\",\"value\":\"free_months\",\"role\":\"header\"},{\"cell\":\"M3\",\"value\":\"ti_allowance_psf\",\"role\":\"header\"},{\"cell\":\"N3\",\"value\":\"annual_increase_pct\",\"role\":\"header\"},{\"cell\":\"O3\",\"value\":\"face_total_psf_over_term\",\"role\":\"header\"},{\"cell\":\"P3\",\"value\":\"expense_deduction_psf\",\"role\":\"header\"},{\"cell\":\"Q3\",\"value\":\"net_total_psf\",\"role\":\"header\"},{\"cell\":\"R3\",\"value\":\"effective_net_rent_psf_year\",\"role\":\"header\"},{\"cell\":\"S3\",\"value\":\"source_ids\",\"role\":\"header\"},{\"cell\":\"A4\",\"value\":\"R1298\",\"role\":\"body\"},{\"cell\":\"B4\",\"value\":\"ALDER-REN-19075\",\"role\":\"body\"},{\"cell\":\"C4\",\"value\":\"Alder Park 1\",\"role\":\"body\"},{\"cell\":\"D4\",\"value\":\"2026-02-05\",\"role\":\"body\"},{\"cell\":\"E4\",\"value\":0.8,\"role\":\"input\"},{\"cell\":\"F4\",\"value\":36,\"role\":\"input\"},{\"cell\":\"G4\",\"value\":21,\"role\":\"input\"},{\"cell\":\"H4\",\"value\":\"USD_per_sf_year\",\"role\":\"body\"},{\"cell\":\"I4\",\"formula\":\"=G4\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J4\",\"value\":\"gross\",\"role\":\"body\"},{\"cell\":\"K4\",\"value\":6.25,\"role\":\"input\"},{\"cell\":\"L4\",\"value\":0,\"role\":\"input\"},{\"cell\":\"M4\",\"value\":12,\"role\":\"input\"},{\"cell\":\"N4\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O4\",\"formula\":\"=I4*(12-L4)/12+I4*((1+N4)+(1+N4)^2)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"P4\",\"formula\":\"=IF(J4=\\\"gross\\\",K4*F4/12,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q4\",\"formula\":\"=O4-P4-M4\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R4\",\"formula\":\"=Q4/F4*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"S4\",\"value\":\"S-R1298\",\"role\":\"body\"},{\"cell\":\"A5\",\"value\":\"R9957\",\"role\":\"body\"},{\"cell\":\"B5\",\"value\":\"ALDER-REN-19383\",\"role\":\"body\"},{\"cell\":\"C5\",\"value\":\"Alder Crossing 2\",\"role\":\"body\"},{\"cell\":\"D5\",\"value\":\"2026-03-06\",\"role\":\"body\"},{\"cell\":\"E5\",\"value\":1.03,\"role\":\"input\"},{\"cell\":\"F5\",\"value\":48,\"role\":\"input\"},{\"cell\":\"G5\",\"value\":1.87,\"role\":\"input\"},{\"cell\":\"H5\",\"value\":\"USD_per_sf_month\",\"role\":\"body\"},{\"cell\":\"I5\",\"formula\":\"=G5*12\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J5\",\"value\":\"NNN\",\"role\":\"body\"},{\"cell\":\"K5\",\"value\":null,\"role\":\"body\"},{\"cell\":\"L5\",\"value\":4,\"role\":\"input\"},{\"cell\":\"M5\",\"value\":18,\"role\":\"input\"},{\"cell\":\"N5\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O5\",\"formula\":\"=I5*(12-L5)/12+I5*((1+N5)+(1+N5)^2+(1+N5)^3)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"P5\",\"formula\":\"=IF(J5=\\\"gross\\\",K5*F5/12,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q5\",\"formula\":\"=O5-P5-M5\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R5\",\"formula\":\"=Q5/F5*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"S5\",\"value\":\"S-R9957; U-R9957-1\",\"role\":\"body\"},{\"cell\":\"A6\",\"value\":\"R2302\",\"role\":\"body\"},{\"cell\":\"B6\",\"value\":\"ALDER-REN-80164\",\"role\":\"body\"},{\"cell\":\"C6\",\"value\":\"Alder Grove 3\",\"role\":\"body\"},{\"cell\":\"D6\",\"value\":\"2026-04-07\",\"role\":\"body\"},{\"cell\":\"E6\",\"value\":1.26,\"role\":\"input\"},{\"cell\":\"F6\",\"value\":60,\"role\":\"input\"},{\"cell\":\"G6\",\"value\":22.6,\"role\":\"input\"},{\"cell\":\"H6\",\"value\":\"USD_per_sf_year\",\"role\":\"body\"},{\"cell\":\"I6\",\"formula\":\"=G6\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J6\",\"value\":\"NNN\",\"role\":\"body\"},{\"cell\":\"K6\",\"value\":null,\"role\":\"body\"},{\"cell\":\"L6\",\"value\":2,\"role\":\"input\"},{\"cell\":\"M6\",\"value\":18,\"role\":\"input\"},{\"cell\":\"N6\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O6\",\"formula\":\"=I6*(12-L6)/12+I6*((1+N6)+(1+N6)^2+(1+N6)^3+(1+N6)^4)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"P6\",\"formula\":\"=IF(J6=\\\"gross\\\",K6*F6/12,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q6\",\"formula\":\"=O6-P6-M6\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R6\",\"formula\":\"=Q6/F6*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"S6\",\"value\":\"S-R2302 (U-R2302-2 excluded: effective after cutoff)\",\"role\":\"body\"},{\"cell\":\"A7\",\"value\":\"R6740\",\"role\":\"body\"},{\"cell\":\"B7\",\"value\":\"ALDER-REN-24854\",\"role\":\"body\"},{\"cell\":\"C7\",\"value\":\"Alder Point 4\",\"role\":\"body\"},{\"cell\":\"D7\",\"value\":\"2026-05-08\",\"role\":\"body\"},{\"cell\":\"E7\",\"value\":1.49,\"role\":\"input\"},{\"cell\":\"F7\",\"value\":36,\"role\":\"input\"},{\"cell\":\"G7\",\"value\":2.01,\"role\":\"input\"},{\"cell\":\"H7\",\"value\":\"USD_per_sf_month\",\"role\":\"body\"},{\"cell\":\"I7\",\"formula\":\"=G7*12\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J7\",\"value\":\"gross\",\"role\":\"body\"},{\"cell\":\"K7\",\"value\":6.25,\"role\":\"input\"},{\"cell\":\"L7\",\"value\":3,\"role\":\"input\"},{\"cell\":\"M7\",\"value\":21,\"role\":\"input\"},{\"cell\":\"N7\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O7\",\"formula\":\"=I7*(12-L7)/12+I7*((1+N7)+(1+N7)^2)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"P7\",\"formula\":\"=IF(J7=\\\"gross\\\",K7*F7/12,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q7\",\"formula\":\"=O7-P7-M7\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R7\",\"formula\":\"=Q7/F7*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"S7\",\"value\":\"S-R6740 (U-R6740-3 excluded: unsigned draft)\",\"role\":\"body\"},{\"cell\":\"A8\",\"value\":\"R6049\",\"role\":\"body\"},{\"cell\":\"B8\",\"value\":\"ALDER-REN-90122\",\"role\":\"body\"},{\"cell\":\"C8\",\"value\":\"Alder Park 5\",\"role\":\"body\"},{\"cell\":\"D8\",\"value\":\"2026-06-09\",\"role\":\"body\"},{\"cell\":\"E8\",\"value\":1.72,\"role\":\"input\"},{\"cell\":\"F8\",\"value\":48,\"role\":\"input\"},{\"cell\":\"G8\",\"value\":24.2,\"role\":\"input\"},{\"cell\":\"H8\",\"value\":\"USD_per_sf_year\",\"role\":\"body\"},{\"cell\":\"I8\",\"formula\":\"=G8\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"J8\",\"value\":\"NNN\",\"role\":\"body\"},{\"cell\":\"K8\",\"value\":null,\"role\":\"body\"},{\"cell\":\"L8\",\"value\":0,\"role\":\"input\"},{\"cell\":\"M8\",\"value\":12,\"role\":\"input\"},{\"cell\":\"N8\",\"value\":0.025,\"role\":\"input\",\"number_format\":\"0.0%\"},{\"cell\":\"O8\",\"formula\":\"=I8*(12-L8)/12+I8*((1+N8)+(1+N8)^2+(1+N8)^3)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"P8\",\"formula\":\"=IF(J8=\\\"gross\\\",K8*F8/12,0)\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"Q8\",\"formula\":\"=O8-P8-M8\",\"role\":\"body\",\"number_format\":\"0.00\"},{\"cell\":\"R8\",\"formula\":\"=Q8/F8*12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"S8\",\"value\":\"S-R6049\",\"role\":\"body\"},{\"cell\":\"A10\",\"value\":\"Average effective net rent psf/yr (shortlist)\",\"role\":\"body\"},{\"cell\":\"R10\",\"formula\":\"=AVERAGE(R4:R8)\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"A11\",\"value\":\"Ranked by distance ascending, then latest lease date. R1927 is a duplicate of entity ALDER-REN-19075 (shown once via R1298). Blank annual_expenses_psf = unknown (NNN deduction is zero).\",\"role\":\"note\",\"wrap\":true}]}],\"input_map\":{\"annual_increase_pct\":\"Comp Grid!N4\",\"free_months\":\"Comp Grid!L4\",\"ti_allowance_psf\":\"Comp Grid!M4\",\"annual_expenses_psf\":\"Comp Grid!K4\",\"term_months\":\"Comp Grid!F4\",\"rent_quote\":\"Comp Grid!G4\"},\"output_map\":{\"effective_net_rent_psf_year_R1298\":\"Comp Grid!R4\",\"effective_net_rent_psf_year_R9957\":\"Comp Grid!R5\",\"effective_net_rent_psf_year_R2302\":\"Comp Grid!R6\",\"effective_net_rent_psf_year_R6740\":\"Comp Grid!R7\",\"effective_net_rent_psf_year_R6049\":\"Comp Grid!R8\",\"shortlist_average_effective_net_rent\":\"Comp Grid!R10\"}}}",
+  "call_id": "toolu_01LKeQjZXJYqciZMjYEAgyyy",
+  "arguments": {
+    "spec": {
+      "sheets": [
+        {
+          "name": "Comp Grid",
+          "freeze_rows": 3,
+          "column_widths": {
+            "A": 10,
+            "B": 18,
+            "C": 18,
+            "D": 12,
+            "E": 10,
+            "F": 9,
+            "G": 10,
+            "H": 16,
+            "I": 12,
+            "J": 11,
+            "K": 11,
+            "L": 9,
+            "M": 9,
+            "N": 9,
+            "O": 12,
+            "P": 12,
+            "Q": 12,
+            "R": 14,
+            "S": 28
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Rent Comps - Alder / Multifamily / Charlotte",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "As of 2026-08-31. Executed leases 2025-09-01 to 2026-08-31, within 8 miles. Client convention: annualized face rent, escalation at months 13/25/etc., no face rent during free months, gross expense deduction every month, TI subtracted once, undiscounted.",
+              "role": "note",
+              "wrap": true
+            },
+            {
+              "cell": "A3",
+              "value": "record_id",
+              "role": "header"
+            },
+            {
+              "cell": "B3",
+              "value": "entity_id",
+              "role": "header"
+            },
+            {
+              "cell": "C3",
+              "value": "name",
+              "role": "header"
+            },
+            {
+              "cell": "D3",
+              "value": "event_date",
+              "role": "header"
+            },
+            {
+              "cell": "E3",
+              "value": "distance_miles",
+              "role": "header"
+            },
+            {
+              "cell": "F3",
+              "value": "term_months",
+              "role": "header"
+            },
+            {
+              "cell": "G3",
+              "value": "rent_quote",
+              "role": "header"
+            },
+            {
+              "cell": "H3",
+              "value": "rent_quote_unit",
+              "role": "header"
+            },
+            {
+              "cell": "I3",
+              "value": "annual_face_rent_psf",
+              "role": "header"
+            },
+            {
+              "cell": "J3",
+              "value": "expense_basis",
+              "role": "header"
+            },
+            {
+              "cell": "K3",
+              "value": "annual_expenses_psf",
+              "role": "header"
+            },
+            {
+              "cell": "L3",
+              "value": "free_months",
+              "role": "header"
+            },
+            {
+              "cell": "M3",
+              "value": "ti_allowance_psf",
+              "role": "header"
+            },
+            {
+              "cell": "N3",
+              "value": "annual_increase_pct",
+              "role": "header"
+            },
+            {
+              "cell": "O3",
+              "value": "face_total_psf_over_term",
+              "role": "header"
+            },
+            {
+              "cell": "P3",
+              "value": "expense_deduction_psf",
+              "role": "header"
+            },
+            {
+              "cell": "Q3",
+              "value": "net_total_psf",
+              "role": "header"
+            },
+            {
+              "cell": "R3",
+              "value": "effective_net_rent_psf_year",
+              "role": "header"
+            },
+            {
+              "cell": "S3",
+              "value": "source_ids",
+              "role": "header"
+            },
+            {
+              "cell": "A4",
+              "value": "R1298",
+              "role": "body"
+            },
+            {
+              "cell": "B4",
+              "value": "ALDER-REN-19075",
+              "role": "body"
+            },
+            {
+              "cell": "C4",
+              "value": "Alder Park 1",
+              "role": "body"
+            },
+            {
+              "cell": "D4",
+              "value": "2026-02-05",
+              "role": "body"
+            },
+            {
+              "cell": "E4",
+              "value": 0.8,
+              "role": "input"
+            },
+            {
+              "cell": "F4",
+              "value": 36,
+              "role": "input"
+            },
+            {
+              "cell": "G4",
+              "value": 21,
+              "role": "input"
+            },
+            {
+              "cell": "H4",
+              "value": "USD_per_sf_year",
+              "role": "body"
+            },
+            {
+              "cell": "I4",
+              "formula": "=G4",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J4",
+              "value": "gross",
+              "role": "body"
+            },
+            {
+              "cell": "K4",
+              "value": 6.25,
+              "role": "input"
+            },
+            {
+              "cell": "L4",
+              "value": 0,
+              "role": "input"
+            },
+            {
+              "cell": "M4",
+              "value": 12,
+              "role": "input"
+            },
+            {
+              "cell": "N4",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O4",
+              "formula": "=I4*(12-L4)/12+I4*((1+N4)+(1+N4)^2)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P4",
+              "formula": "=IF(J4=\"gross\",K4*F4/12,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q4",
+              "formula": "=O4-P4-M4",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R4",
+              "formula": "=Q4/F4*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S4",
+              "value": "S-R1298",
+              "role": "body"
+            },
+            {
+              "cell": "A5",
+              "value": "R9957",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "value": "ALDER-REN-19383",
+              "role": "body"
+            },
+            {
+              "cell": "C5",
+              "value": "Alder Crossing 2",
+              "role": "body"
+            },
+            {
+              "cell": "D5",
+              "value": "2026-03-06",
+              "role": "body"
+            },
+            {
+              "cell": "E5",
+              "value": 1.03,
+              "role": "input"
+            },
+            {
+              "cell": "F5",
+              "value": 48,
+              "role": "input"
+            },
+            {
+              "cell": "G5",
+              "value": 1.87,
+              "role": "input"
+            },
+            {
+              "cell": "H5",
+              "value": "USD_per_sf_month",
+              "role": "body"
+            },
+            {
+              "cell": "I5",
+              "formula": "=G5*12",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J5",
+              "value": "NNN",
+              "role": "body"
+            },
+            {
+              "cell": "K5",
+              "value": null,
+              "role": "body"
+            },
+            {
+              "cell": "L5",
+              "value": 4,
+              "role": "input"
+            },
+            {
+              "cell": "M5",
+              "value": 18,
+              "role": "input"
+            },
+            {
+              "cell": "N5",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O5",
+              "formula": "=I5*(12-L5)/12+I5*((1+N5)+(1+N5)^2+(1+N5)^3)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P5",
+              "formula": "=IF(J5=\"gross\",K5*F5/12,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q5",
+              "formula": "=O5-P5-M5",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R5",
+              "formula": "=Q5/F5*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S5",
+              "value": "S-R9957; U-R9957-1",
+              "role": "body"
+            },
+            {
+              "cell": "A6",
+              "value": "R2302",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "value": "ALDER-REN-80164",
+              "role": "body"
+            },
+            {
+              "cell": "C6",
+              "value": "Alder Grove 3",
+              "role": "body"
+            },
+            {
+              "cell": "D6",
+              "value": "2026-04-07",
+              "role": "body"
+            },
+            {
+              "cell": "E6",
+              "value": 1.26,
+              "role": "input"
+            },
+            {
+              "cell": "F6",
+              "value": 60,
+              "role": "input"
+            },
+            {
+              "cell": "G6",
+              "value": 22.6,
+              "role": "input"
+            },
+            {
+              "cell": "H6",
+              "value": "USD_per_sf_year",
+              "role": "body"
+            },
+            {
+              "cell": "I6",
+              "formula": "=G6",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J6",
+              "value": "NNN",
+              "role": "body"
+            },
+            {
+              "cell": "K6",
+              "value": null,
+              "role": "body"
+            },
+            {
+              "cell": "L6",
+              "value": 2,
+              "role": "input"
+            },
+            {
+              "cell": "M6",
+              "value": 18,
+              "role": "input"
+            },
+            {
+              "cell": "N6",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O6",
+              "formula": "=I6*(12-L6)/12+I6*((1+N6)+(1+N6)^2+(1+N6)^3+(1+N6)^4)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P6",
+              "formula": "=IF(J6=\"gross\",K6*F6/12,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q6",
+              "formula": "=O6-P6-M6",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R6",
+              "formula": "=Q6/F6*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S6",
+              "value": "S-R2302 (U-R2302-2 excluded: effective after cutoff)",
+              "role": "body"
+            },
+            {
+              "cell": "A7",
+              "value": "R6740",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "value": "ALDER-REN-24854",
+              "role": "body"
+            },
+            {
+              "cell": "C7",
+              "value": "Alder Point 4",
+              "role": "body"
+            },
+            {
+              "cell": "D7",
+              "value": "2026-05-08",
+              "role": "body"
+            },
+            {
+              "cell": "E7",
+              "value": 1.49,
+              "role": "input"
+            },
+            {
+              "cell": "F7",
+              "value": 36,
+              "role": "input"
+            },
+            {
+              "cell": "G7",
+              "value": 2.01,
+              "role": "input"
+            },
+            {
+              "cell": "H7",
+              "value": "USD_per_sf_month",
+              "role": "body"
+            },
+            {
+              "cell": "I7",
+              "formula": "=G7*12",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J7",
+              "value": "gross",
+              "role": "body"
+            },
+            {
+              "cell": "K7",
+              "value": 6.25,
+              "role": "input"
+            },
+            {
+              "cell": "L7",
+              "value": 3,
+              "role": "input"
+            },
+            {
+              "cell": "M7",
+              "value": 21,
+              "role": "input"
+            },
+            {
+              "cell": "N7",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O7",
+              "formula": "=I7*(12-L7)/12+I7*((1+N7)+(1+N7)^2)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P7",
+              "formula": "=IF(J7=\"gross\",K7*F7/12,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q7",
+              "formula": "=O7-P7-M7",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R7",
+              "formula": "=Q7/F7*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S7",
+              "value": "S-R6740 (U-R6740-3 excluded: unsigned draft)",
+              "role": "body"
+            },
+            {
+              "cell": "A8",
+              "value": "R6049",
+              "role": "body"
+            },
+            {
+              "cell": "B8",
+              "value": "ALDER-REN-90122",
+              "role": "body"
+            },
+            {
+              "cell": "C8",
+              "value": "Alder Park 5",
+              "role": "body"
+            },
+            {
+              "cell": "D8",
+              "value": "2026-06-09",
+              "role": "body"
+            },
+            {
+              "cell": "E8",
+              "value": 1.72,
+              "role": "input"
+            },
+            {
+              "cell": "F8",
+              "value": 48,
+              "role": "input"
+            },
+            {
+              "cell": "G8",
+              "value": 24.2,
+              "role": "input"
+            },
+            {
+              "cell": "H8",
+              "value": "USD_per_sf_year",
+              "role": "body"
+            },
+            {
+              "cell": "I8",
+              "formula": "=G8",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "J8",
+              "value": "NNN",
+              "role": "body"
+            },
+            {
+              "cell": "K8",
+              "value": null,
+              "role": "body"
+            },
+            {
+              "cell": "L8",
+              "value": 0,
+              "role": "input"
+            },
+            {
+              "cell": "M8",
+              "value": 12,
+              "role": "input"
+            },
+            {
+              "cell": "N8",
+              "value": 0.025,
+              "role": "input",
+              "number_format": "0.0%"
+            },
+            {
+              "cell": "O8",
+              "formula": "=I8*(12-L8)/12+I8*((1+N8)+(1+N8)^2+(1+N8)^3)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "P8",
+              "formula": "=IF(J8=\"gross\",K8*F8/12,0)",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "Q8",
+              "formula": "=O8-P8-M8",
+              "role": "body",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "R8",
+              "formula": "=Q8/F8*12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "S8",
+              "value": "S-R6049",
+              "role": "body"
+            },
+            {
+              "cell": "A10",
+              "value": "Average effective net rent psf/yr (shortlist)",
+              "role": "body"
+            },
+            {
+              "cell": "R10",
+              "formula": "=AVERAGE(R4:R8)",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "A11",
+              "value": "Ranked by distance ascending, then latest lease date. R1927 is a duplicate of entity ALDER-REN-19075 (shown once via R1298). Blank annual_expenses_psf = unknown (NNN deduction is zero).",
+              "role": "note",
+              "wrap": true
+            }
+          ]
+        }
+      ],
+      "input_map": {
+        "annual_increase_pct": "Comp Grid!N4",
+        "free_months": "Comp Grid!L4",
+        "ti_allowance_psf": "Comp Grid!M4",
+        "annual_expenses_psf": "Comp Grid!K4",
+        "term_months": "Comp Grid!F4",
+        "rent_quote": "Comp Grid!G4"
+      },
+      "output_map": {
+        "effective_net_rent_psf_year_R1298": "Comp Grid!R4",
+        "effective_net_rent_psf_year_R9957": "Comp Grid!R5",
+        "effective_net_rent_psf_year_R2302": "Comp Grid!R6",
+        "effective_net_rent_psf_year_R6740": "Comp Grid!R7",
+        "effective_net_rent_psf_year_R6049": "Comp Grid!R8",
+        "shortlist_average_effective_net_rent": "Comp Grid!R10"
+      }
+    }
+  },
+  "result": {
+    "created": "artifacts/underwriting-v1.xlsx",
+    "bytes": 5600,
+    "inspection": {
+      "sheets": [
+        "Comp Grid"
+      ],
+      "formula_count": 26,
+      "formula_errors": [],
+      "outputs": {
+        "effective_net_rent_psf_year_R1298": 11.279374999999998,
+        "effective_net_rent_psf_year_R9957": 16.925612656249996,
+        "effective_net_rent_psf_year_R2302": 19.40527155729166,
+        "effective_net_rent_psf_year_R6740": 9.468024999999997,
+        "effective_net_rent_psf_year_R6049": 22.12271953125,
+        "shortlist_average_effective_net_rent": 15.84020074895833
+      }
+    }
+  },
+  "status": "ok"
+}

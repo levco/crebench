@@ -1,0 +1,392 @@
+{
+  "case_id": "sponsor-leads-elm",
+  "task": "sponsor_leads",
+  "target_count": 3,
+  "available_unique": 3,
+  "returned_count": 3,
+  "eligible_count": 3,
+  "verified_count": 3,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 1.0,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 21,
+    "total": 21
+  },
+  "evidence_accuracy": {
+    "passed": 3,
+    "total": 3
+  },
+  "candidate_accuracy": {
+    "passed": 20,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 4,
+    "total": 4
+  },
+  "ineligible_rejection": {
+    "passed": 16,
+    "total": 16
+  },
+  "ranking_pair_agreement": {
+    "passed": 3,
+    "total": 3
+  },
+  "material_errors": [],
+  "selected_checks": [
+    {
+      "record_id": "R2814",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-SPO-56859",
+          "expected": "ELM-SPO-56859",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Elm Grove 3 Capital",
+          "expected": "Elm Grove 3 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 16560000,
+          "expected": 16560000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-04-07",
+          "expected": "2026-04-07",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Jordan Elm3",
+          "expected": "Jordan Elm3",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person3@sponsor-leads-elm.example",
+          "expected": "person3@sponsor-leads-elm.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R2814"
+      ],
+      "reported_sources": [
+        "S-R2814"
+      ]
+    },
+    {
+      "record_id": "R8068",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-SPO-69766",
+          "expected": "ELM-SPO-69766",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Elm Square 2 Capital",
+          "expected": "Elm Square 2 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 15480000,
+          "expected": 15480000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-03-06",
+          "expected": "2026-03-06",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Drew Elm",
+          "expected": "Drew Elm",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "new.cfo@sponsor-leads-elm.example",
+          "expected": "new.cfo@sponsor-leads-elm.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R8068",
+        "U-R8068-1"
+      ],
+      "reported_sources": [
+        "S-R8068",
+        "U-R8068-1"
+      ]
+    },
+    {
+      "record_id": "R3531",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-SPO-34913",
+          "expected": "ELM-SPO-34913",
+          "passed": true
+        },
+        {
+          "field": "firm_name",
+          "actual": "Elm Point 1 Capital",
+          "expected": "Elm Point 1 Capital",
+          "passed": true
+        },
+        {
+          "field": "transaction_size_usd",
+          "actual": 14400000,
+          "expected": 14400000,
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-02-05",
+          "expected": "2026-02-05",
+          "passed": true
+        },
+        {
+          "field": "contact_name",
+          "actual": "Alex Elm1",
+          "expected": "Alex Elm1",
+          "passed": true
+        },
+        {
+          "field": "contact_role",
+          "actual": "CFO",
+          "expected": "CFO",
+          "passed": true
+        },
+        {
+          "field": "contact_email",
+          "actual": "person1@sponsor-leads-elm.example",
+          "expected": "person1@sponsor-leads-elm.example",
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R3531"
+      ],
+      "reported_sources": [
+        "S-R3531"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R3531",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R9425",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not a closed acquisition"
+      ]
+    },
+    {
+      "record_id": "R4981",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R9588",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4183",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R6876",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R3693",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R3654",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Event outside lookback"
+      ]
+    },
+    {
+      "record_id": "R2866",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong market"
+      ]
+    },
+    {
+      "record_id": "R2827",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact role does not qualify"
+      ]
+    },
+    {
+      "record_id": "R6495",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Contact is not current"
+      ]
+    },
+    {
+      "record_id": "R4894",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R9706",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Amount is not a single-asset purchase",
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R9106",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    },
+    {
+      "record_id": "R2109",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside transaction size band"
+      ]
+    },
+    {
+      "record_id": "R3292",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Not an evidenced operating sponsor"
+      ]
+    },
+    {
+      "record_id": "R2814",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R4621",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Stale contact verification"
+      ]
+    },
+    {
+      "record_id": "R8068",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3284",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ]
+}

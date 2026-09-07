@@ -1,0 +1,58 @@
+{
+  "case_id": "refinance-leads-cypress",
+  "system": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-07T02:38:07.018Z",
+  "observed_completed_at": "2026-09-07T02:40:12.762Z",
+  "packet_sha256": "429d0399e73da8cfa26dd89704f344ea2d5f33b82bd1868d349be0e65b0497da",
+  "ui_whitespace_equivalent": true,
+  "operator_semantic_corrections": 0,
+  "artifacts": [
+    {
+      "path": "artifacts/refinance_leads_cypress_prospects.csv",
+      "sha256": "f7072939d735f0e3ee0882e3b45b9c3489105cdca6ea2ee6171d89222f37c9b1",
+      "bytes": 1018
+    }
+  ],
+  "cost_usd": null,
+  "estimated_inference_cost_usd": 0.34473925,
+  "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price",
+  "elapsed_seconds": 78.64,
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "trace_audit": {
+    "trace_id": "95b2571b-dd6d-4bb6-b1ff-0e32ae87657f",
+    "session_id": "64998466-6cc0-4c28-a35b-2e37022fa2b1",
+    "started_at": "2026-09-06T22:38:49.466000-04:00",
+    "packet_match": "Trace prefix matches; connector truncates root input. Complete UI input was independently verified before submission.",
+    "event_count": 4,
+    "model_calls": 2,
+    "generation_costs_usd": [
+      0.210334,
+      0.13440525
+    ],
+    "total_cost_usd": 0.34473925,
+    "cost_sources": [
+      "openrouter"
+    ],
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "tools_called": [
+      "get_generated_file"
+    ],
+    "external_retrieval_audit": "no_retrieval_observed_partial_coverage",
+    "execution_coverage": "Recorded backend tools only; internal file-creation execution is not visible in the available trace metadata.",
+    "confirmed_common_corpus": false,
+    "tools_requiring_review": [],
+    "elapsed_seconds": 78.64,
+    "cost_scope": "Matched workflow generations and embeddings; duplicate run-summary excluded. Session naming, hosting, subscriptions, operator time and product credits excluded.",
+    "cost_basis": "PostHog model-rate estimate; not a billed Lev customer price"
+  },
+  "access_audit": "no_retrieval_observed_partial_coverage"
+}

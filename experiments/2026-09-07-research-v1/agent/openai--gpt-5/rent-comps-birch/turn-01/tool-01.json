@@ -1,0 +1,9 @@
+{
+  "name": "calculate",
+  "arguments_raw": "{\"expression\":\"\\n# R1695 Birch Square 1\\nm0=21/12; e=6.25/12; p=0.025; TI=12; \\n# Year 1 months 1-12\\nsum1=12*(m0 - e);\\n# Year 2 months 13-24\\nsum2=12*(m0*(1+p) - e);\\n# Year 3 months 25-36\\nsum3=12*(m0*((1+p)**2) - e);\\nTotal=sum1+sum2+sum3 - TI;\\nAnnual= (Total/36)*12;\\nAnnual\"}",
+  "call_id": "call_aDlowYFC1FOyPx2EI2rH8eGc",
+  "result": {
+    "error": "invalid syntax (<unknown>, line 3)"
+  },
+  "status": "error"
+}

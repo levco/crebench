@@ -1,0 +1,246 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R1298",
+      "facts": {
+        "entity_id": "ALDER-REN-19075",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21.0,
+        "effective_net_rent_psf_year": 11.279375,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R1298"
+      ],
+      "rationale": "Executed Multifamily lease within 8 miles (0.8 mi) and window; gross with known expenses (6.25), free_months=0 and TI=12 present (S-R1298). Duplicate exists (S-R1927) for same entity; using executed_lease_abstract version."
+    },
+    {
+      "record_id": "R9957",
+      "facts": {
+        "entity_id": "ALDER-REN-19383",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.92561265625,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R9957",
+        "U-R9957-1"
+      ],
+      "rationale": "Executed Multifamily lease within 8 miles (1.03 mi) and window; NNN, free_months and TI present and updated by executed amendment effective 2026-08-20 (free_months=4, TI=18) (S-R9957, U-R9957-1)."
+    },
+    {
+      "record_id": "R2302",
+      "facts": {
+        "entity_id": "ALDER-REN-80164",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.4052715572,
+        "term_months": 60
+      },
+      "source_ids": [
+        "S-R2302"
+      ],
+      "rationale": "Executed Multifamily lease within 8 miles (1.26 mi) and window; NNN with free_months=2 and TI=18 present (S-R2302). Later executed amendment dated 2026-09-10 ignored as post-cutoff (U-R2302-2)."
+    },
+    {
+      "record_id": "R6740",
+      "facts": {
+        "entity_id": "ALDER-REN-24854",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.467858333333,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R6740"
+      ],
+      "rationale": "Executed Multifamily lease within 8 miles (1.49 mi) and window; gross with known expenses (6.25), free_months=3 and TI=21 present (S-R6740). Unsigned draft changing free_months to 8 not applied (U-R6740-3)."
+    },
+    {
+      "record_id": "R6049",
+      "facts": {
+        "entity_id": "ALDER-REN-90122",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.12271953125,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R6049"
+      ],
+      "rationale": "Executed Multifamily lease within 8 miles (1.72 mi) and window; NNN with free_months=0 and TI=12 present (S-R6049)."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R8015",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range, but free_months is missing; free rent and TI must be known (S-R8015).",
+      "source_ids": [
+        "S-R8015"
+      ]
+    },
+    {
+      "record_id": "R1927",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; gross with expenses (6.25), free_months=0 and TI=12 present (S-R1927). Duplicate of R1298 for same entity ALDER-REN-19075; not shortlisted.",
+      "source_ids": [
+        "S-R1927"
+      ]
+    },
+    {
+      "record_id": "R9957",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; NNN; executed amendment effective 2026-08-20 updates free_months=4 and TI=18 (S-R9957, U-R9957-1).",
+      "source_ids": [
+        "S-R9957",
+        "U-R9957-1"
+      ]
+    },
+    {
+      "record_id": "R6049",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; NNN; free_months and TI present (S-R6049).",
+      "source_ids": [
+        "S-R6049"
+      ]
+    },
+    {
+      "record_id": "R2302",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; NNN; free_months and TI present (S-R2302). Post-cutoff amendment ignored (U-R2302-2).",
+      "source_ids": [
+        "S-R2302"
+      ]
+    },
+    {
+      "record_id": "R6740",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; gross with known expenses; free_months and TI present (S-R6740). Unsigned draft update not controlling (U-R6740-3).",
+      "source_ids": [
+        "S-R6740"
+      ]
+    },
+    {
+      "record_id": "R4257",
+      "eligible": false,
+      "reason": "Status is asking, not an executed lease (S-R4257).",
+      "source_ids": [
+        "S-R4257"
+      ]
+    },
+    {
+      "record_id": "R4144",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range, but TI is null; TI must be known (S-R4144).",
+      "source_ids": [
+        "S-R4144"
+      ]
+    },
+    {
+      "record_id": "R4517",
+      "eligible": false,
+      "reason": "Executed but event_date 2024-02-10 is outside the 2025-09-01 to 2026-08-31 window (S-R4517).",
+      "source_ids": [
+        "S-R4517"
+      ]
+    },
+    {
+      "record_id": "R7480",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range; gross lease missing annual_expenses_psf, which is required (S-R7480).",
+      "source_ids": [
+        "S-R7480"
+      ]
+    },
+    {
+      "record_id": "R6844",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; gross with known expenses; free_months and TI present. Eligible but ranked outside top five by distance for shortlist (S-R6844).",
+      "source_ids": [
+        "S-R6844"
+      ]
+    },
+    {
+      "record_id": "R5477",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range, but rent_quote is null; positive rent required (S-R5477).",
+      "source_ids": [
+        "S-R5477"
+      ]
+    },
+    {
+      "record_id": "R8781",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range, but term_months is null; known term required (S-R8781).",
+      "source_ids": [
+        "S-R8781"
+      ]
+    },
+    {
+      "record_id": "R1298",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; gross with known expenses; free_months and TI present. Selected over duplicate R1927 for same entity (S-R1298).",
+      "source_ids": [
+        "S-R1298"
+      ]
+    },
+    {
+      "record_id": "R7775",
+      "eligible": false,
+      "reason": "Executed Multifamily but distance 18.6 miles exceeds 8-mile limit (S-R7775).",
+      "source_ids": [
+        "S-R7775"
+      ]
+    },
+    {
+      "record_id": "R3818",
+      "eligible": false,
+      "reason": "Asset type Office; scope limited to Multifamily (S-R3818).",
+      "source_ids": [
+        "S-R3818"
+      ]
+    },
+    {
+      "record_id": "R8821",
+      "eligible": false,
+      "reason": "Status is unsigned_proposal, not executed (S-R8821).",
+      "source_ids": [
+        "S-R8821"
+      ]
+    },
+    {
+      "record_id": "R2138",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range, but rent_quote is 0; positive rent required (S-R2138).",
+      "source_ids": [
+        "S-R2138"
+      ]
+    },
+    {
+      "record_id": "R2543",
+      "eligible": true,
+      "reason": "Executed Multifamily within 8 miles and window; NNN with free_months and TI present. Eligible but ranked outside top five by distance for shortlist (S-R2543).",
+      "source_ids": [
+        "S-R2543"
+      ]
+    },
+    {
+      "record_id": "R2337",
+      "eligible": false,
+      "reason": "Executed Multifamily and in-range, but source published after cutoff (published_at 2026-09-03 > 2026-08-31); excluded (S-R2337).",
+      "source_ids": [
+        "S-R2337"
+      ]
+    }
+  ],
+  "summary": "Five executed Multifamily leases within 8 miles of Charlotte and dated 2025-09-01 to 2026-08-31 were shortlisted and ranked by distance: R1298, R9957 (amended via U-R9957-1), R2302, R6740, and R6049. Effective net rents were computed per the stated undiscounted convention with annual escalations, initial free months, gross expense deductions where applicable, and TI subtracted once. One duplicate pair (Alder Park 1) was resolved by selecting S-R1298 over S-R1927. Several records were excluded for being non-executed, missing required fields (free months, TI, expenses, rent, or term), outside the date window, beyond 8 miles, non-Multifamily, or published post-cutoff.",
+  "limitations": [
+    "Records with missing free_months (e.g., R8015) or TI (e.g., R4144) were excluded; if those data exist elsewhere, results could change.",
+    "Gross leases require annual_expenses_psf; where absent (e.g., R7480), comps could not be computed.",
+    "Post-cutoff evidence (e.g., U-R2302-2, S-R2337) was not applied; later changes may affect current economics.",
+    "Calculations follow an undiscounted rent-only convention and may differ from market appraisals; minor rounding may affect cents-level precision.",
+    "Assumes step-ups occur exactly at months 13, 25, etc.; no mid-period proration beyond initial free-month application."
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "applicable": true,
+  "required_format": ".xlsx",
+  "checks": [
+    {
+      "id": "readable_required_format",
+      "passed": true
+    },
+    {
+      "id": "identity_and_order",
+      "passed": true
+    },
+    {
+      "id": "selected_facts_and_unknowns",
+      "passed": true
+    },
+    {
+      "id": "source_identifiers",
+      "passed": true
+    }
+  ],
+  "file": "artifacts/underwriting-v1.xlsx",
+  "criterion": "Original artifact consistency with submitted answer; factual truth is scored separately",
+  "issues": [],
+  "sheets": [
+    "Comp Grid"
+  ],
+  "table_sheet": "Comp Grid",
+  "original_record_order": [
+    "R4105",
+    "R8422",
+    "R3397"
+  ],
+  "answer_record_order": [
+    "R4105",
+    "R8422",
+    "R3397"
+  ],
+  "field_checks": [
+    {
+      "record_id": "R4105",
+      "field": "entity_id",
+      "actual": "ELM-SAL-91902",
+      "original": "ELM-SAL-91902",
+      "expected": "ELM-SAL-91902",
+      "passed": true
+    },
+    {
+      "record_id": "R4105",
+      "field": "event_date",
+      "actual": "2026-02-05",
+      "original": "2026-02-05",
+      "expected": "2026-02-05",
+      "passed": true
+    },
+    {
+      "record_id": "R4105",
+      "field": "consideration_usd",
+      "actual": 14400000,
+      "original": 14400000,
+      "expected": 14400000,
+      "passed": true
+    },
+    {
+      "record_id": "R4105",
+      "field": "property_size",
+      "actual": 36000,
+      "original": 36000,
+      "expected": 36000,
+      "passed": true
+    },
+    {
+      "record_id": "R4105",
+      "field": "price_per_unit",
+      "actual": 400,
+      "original": 400,
+      "expected": 400,
+      "passed": true
+    },
+    {
+      "record_id": "R8422",
+      "field": "entity_id",
+      "actual": "ELM-SAL-64090",
+      "original": "ELM-SAL-64090",
+      "expected": "ELM-SAL-64090",
+      "passed": true
+    },
+    {
+      "record_id": "R8422",
+      "field": "event_date",
+      "actual": "2026-03-06",
+      "original": "2026-03-06",
+      "expected": "2026-03-06",
+      "passed": true
+    },
+    {
+      "record_id": "R8422",
+      "field": "consideration_usd",
+      "actual": 16740000,
+      "original": 16740000,
+      "expected": 16740000,
+      "passed": true
+    },
+    {
+      "record_id": "R8422",
+      "field": "property_size",
+      "actual": 38700,
+      "original": 38700,
+      "expected": 38700,
+      "passed": true
+    },
+    {
+      "record_id": "R8422",
+      "field": "price_per_unit",
+      "actual": 432.5581395348837,
+      "original": 432.5581395348837,
+      "expected": 432.56,
+      "passed": true
+    },
+    {
+      "record_id": "R3397",
+      "field": "entity_id",
+      "actual": "ELM-SAL-96210",
+      "original": "ELM-SAL-96210",
+      "expected": "ELM-SAL-96210",
+      "passed": true
+    },
+    {
+      "record_id": "R3397",
+      "field": "event_date",
+      "actual": "2026-04-07",
+      "original": "2026-04-07",
+      "expected": "2026-04-07",
+      "passed": true
+    },
+    {
+      "record_id": "R3397",
+      "field": "consideration_usd",
+      "actual": 16560000,
+      "original": 16560000,
+      "expected": 16560000,
+      "passed": true
+    },
+    {
+      "record_id": "R3397",
+      "field": "property_size",
+      "actual": 41400,
+      "original": 41400,
+      "expected": 41400,
+      "passed": true
+    },
+    {
+      "record_id": "R3397",
+      "field": "price_per_unit",
+      "actual": 400,
+      "original": 400,
+      "expected": 400,
+      "passed": true
+    }
+  ],
+  "harness_induced_null_annotations": 0,
+  "source_checks": [
+    {
+      "record_id": "R4105",
+      "passed": true,
+      "expected": [
+        "S-R4105"
+      ],
+      "actual": [
+        "S-R4105"
+      ]
+    },
+    {
+      "record_id": "R8422",
+      "passed": true,
+      "expected": [
+        "S-R8422",
+        "U-R8422-1"
+      ],
+      "actual": [
+        "S-R8422",
+        "U-R8422-1"
+      ]
+    },
+    {
+      "record_id": "R3397",
+      "passed": true,
+      "expected": [
+        "S-R3397"
+      ],
+      "actual": [
+        "S-R3397"
+      ]
+    }
+  ],
+  "source_sha256": "bab688a91681a04394f315d45846c848742e5a827db240b2f52464f7b023332d"
+}

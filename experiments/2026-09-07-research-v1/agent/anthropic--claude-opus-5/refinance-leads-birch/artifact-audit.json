@@ -1,0 +1,481 @@
+{
+  "applicable": true,
+  "required_format": ".csv",
+  "checks": [
+    {
+      "id": "readable_required_format",
+      "passed": true
+    },
+    {
+      "id": "identity_and_order",
+      "passed": true
+    },
+    {
+      "id": "selected_facts_and_unknowns",
+      "passed": false
+    },
+    {
+      "id": "source_identifiers",
+      "passed": true
+    }
+  ],
+  "file": "artifacts/prospects-v1.csv",
+  "criterion": "Original artifact consistency with submitted answer; factual truth is scored separately",
+  "issues": [
+    "7 blank unknown annotations were caused by the benchmark CSV writer after explicit model-supplied JSON nulls; these are harness delivery failures, not model factual errors.",
+    "R8920 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R2258 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R8680 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R9318 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R9318 / contact_email: artifact differs from answer or lacks explicit unknown",
+    "R7666 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown",
+    "R8605 / outstanding_balance_usd: artifact differs from answer or lacks explicit unknown"
+  ],
+  "sheets": [
+    "CSV"
+  ],
+  "table_sheet": "CSV",
+  "original_record_order": [
+    "R8920",
+    "R2258",
+    "R8680",
+    "R9318",
+    "R7666",
+    "R8605"
+  ],
+  "answer_record_order": [
+    "R8920",
+    "R2258",
+    "R8680",
+    "R9318",
+    "R7666",
+    "R8605"
+  ],
+  "field_checks": [
+    {
+      "record_id": "R8920",
+      "field": "entity_id",
+      "actual": "BIRCH-REF-71420",
+      "original": "BIRCH-REF-71420",
+      "expected": "BIRCH-REF-71420",
+      "passed": true
+    },
+    {
+      "record_id": "R8920",
+      "field": "owner_entity_id",
+      "actual": "O-BIRCH-REF-71420",
+      "original": "O-BIRCH-REF-71420",
+      "expected": "O-BIRCH-REF-71420",
+      "passed": true
+    },
+    {
+      "record_id": "R8920",
+      "field": "maturity_date",
+      "actual": "2027-01-15",
+      "original": "2027-01-15",
+      "expected": "2027-01-15",
+      "passed": true
+    },
+    {
+      "record_id": "R8920",
+      "field": "original_principal_usd",
+      "actual": "5760000",
+      "original": "5760000",
+      "expected": 5760000,
+      "passed": true
+    },
+    {
+      "record_id": "R8920",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R8920",
+      "field": "contact_name",
+      "actual": "Casey Birch1",
+      "original": "Casey Birch1",
+      "expected": "Casey Birch1",
+      "passed": true
+    },
+    {
+      "record_id": "R8920",
+      "field": "contact_email",
+      "actual": "finance1@refinance-leads-birch.example",
+      "original": "finance1@refinance-leads-birch.example",
+      "expected": "finance1@refinance-leads-birch.example",
+      "passed": true
+    },
+    {
+      "record_id": "R2258",
+      "field": "entity_id",
+      "actual": "BIRCH-REF-42124",
+      "original": "BIRCH-REF-42124",
+      "expected": "BIRCH-REF-42124",
+      "passed": true
+    },
+    {
+      "record_id": "R2258",
+      "field": "owner_entity_id",
+      "actual": "O-BIRCH-REF-42124",
+      "original": "O-BIRCH-REF-42124",
+      "expected": "O-BIRCH-REF-42124",
+      "passed": true
+    },
+    {
+      "record_id": "R2258",
+      "field": "maturity_date",
+      "actual": "2027-03-15",
+      "original": "2027-03-15",
+      "expected": "2027-03-15",
+      "passed": true
+    },
+    {
+      "record_id": "R2258",
+      "field": "original_principal_usd",
+      "actual": "6624000",
+      "original": "6624000",
+      "expected": 6624000,
+      "passed": true
+    },
+    {
+      "record_id": "R2258",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R2258",
+      "field": "contact_name",
+      "actual": "Avery Birch3",
+      "original": "Avery Birch3",
+      "expected": "Avery Birch3",
+      "passed": true
+    },
+    {
+      "record_id": "R2258",
+      "field": "contact_email",
+      "actual": "finance3@refinance-leads-birch.example",
+      "original": "finance3@refinance-leads-birch.example",
+      "expected": "finance3@refinance-leads-birch.example",
+      "passed": true
+    },
+    {
+      "record_id": "R8680",
+      "field": "entity_id",
+      "actual": "BIRCH-REF-10272",
+      "original": "BIRCH-REF-10272",
+      "expected": "BIRCH-REF-10272",
+      "passed": true
+    },
+    {
+      "record_id": "R8680",
+      "field": "owner_entity_id",
+      "actual": "O-BIRCH-REF-10272",
+      "original": "O-BIRCH-REF-10272",
+      "expected": "O-BIRCH-REF-10272",
+      "passed": true
+    },
+    {
+      "record_id": "R8680",
+      "field": "maturity_date",
+      "actual": "2027-04-15",
+      "original": "2027-04-15",
+      "expected": "2027-04-15",
+      "passed": true
+    },
+    {
+      "record_id": "R8680",
+      "field": "original_principal_usd",
+      "actual": "7056000",
+      "original": "7056000",
+      "expected": 7056000,
+      "passed": true
+    },
+    {
+      "record_id": "R8680",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R8680",
+      "field": "contact_name",
+      "actual": "Sam Birch4",
+      "original": "Sam Birch4",
+      "expected": "Sam Birch4",
+      "passed": true
+    },
+    {
+      "record_id": "R8680",
+      "field": "contact_email",
+      "actual": "finance4@refinance-leads-birch.example",
+      "original": "finance4@refinance-leads-birch.example",
+      "expected": "finance4@refinance-leads-birch.example",
+      "passed": true
+    },
+    {
+      "record_id": "R9318",
+      "field": "entity_id",
+      "actual": "BIRCH-REF-75599",
+      "original": "BIRCH-REF-75599",
+      "expected": "BIRCH-REF-75599",
+      "passed": true
+    },
+    {
+      "record_id": "R9318",
+      "field": "owner_entity_id",
+      "actual": "O-BIRCH-REF-75599",
+      "original": "O-BIRCH-REF-75599",
+      "expected": "O-BIRCH-REF-75599",
+      "passed": true
+    },
+    {
+      "record_id": "R9318",
+      "field": "maturity_date",
+      "actual": "2027-05-15",
+      "original": "2027-05-15",
+      "expected": "2027-05-15",
+      "passed": true
+    },
+    {
+      "record_id": "R9318",
+      "field": "original_principal_usd",
+      "actual": "7488000",
+      "original": "7488000",
+      "expected": 7488000,
+      "passed": true
+    },
+    {
+      "record_id": "R9318",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R9318",
+      "field": "contact_name",
+      "actual": "Casey Birch5",
+      "original": "Casey Birch5",
+      "expected": "Casey Birch5",
+      "passed": true
+    },
+    {
+      "record_id": "R9318",
+      "field": "contact_email",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R7666",
+      "field": "entity_id",
+      "actual": "BIRCH-REF-37514",
+      "original": "BIRCH-REF-37514",
+      "expected": "BIRCH-REF-37514",
+      "passed": true
+    },
+    {
+      "record_id": "R7666",
+      "field": "owner_entity_id",
+      "actual": "O-BIRCH-REF-37514",
+      "original": "O-BIRCH-REF-37514",
+      "expected": "O-BIRCH-REF-37514",
+      "passed": true
+    },
+    {
+      "record_id": "R7666",
+      "field": "maturity_date",
+      "actual": "2027-06-15",
+      "original": "2027-06-15",
+      "expected": "2027-06-15",
+      "passed": true
+    },
+    {
+      "record_id": "R7666",
+      "field": "original_principal_usd",
+      "actual": "7920000",
+      "original": "7920000",
+      "expected": 7920000,
+      "passed": true
+    },
+    {
+      "record_id": "R7666",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R7666",
+      "field": "contact_name",
+      "actual": "Riley Birch6",
+      "original": "Riley Birch6",
+      "expected": "Riley Birch6",
+      "passed": true
+    },
+    {
+      "record_id": "R7666",
+      "field": "contact_email",
+      "actual": "finance6@refinance-leads-birch.example",
+      "original": "finance6@refinance-leads-birch.example",
+      "expected": "finance6@refinance-leads-birch.example",
+      "passed": true
+    },
+    {
+      "record_id": "R8605",
+      "field": "entity_id",
+      "actual": "BIRCH-REF-88672",
+      "original": "BIRCH-REF-88672",
+      "expected": "BIRCH-REF-88672",
+      "passed": true
+    },
+    {
+      "record_id": "R8605",
+      "field": "owner_entity_id",
+      "actual": "O-BIRCH-REF-88672",
+      "original": "O-BIRCH-REF-88672",
+      "expected": "O-BIRCH-REF-88672",
+      "passed": true
+    },
+    {
+      "record_id": "R8605",
+      "field": "maturity_date",
+      "actual": "2027-07-15",
+      "original": "2027-07-15",
+      "expected": "2027-07-15",
+      "passed": true
+    },
+    {
+      "record_id": "R8605",
+      "field": "original_principal_usd",
+      "actual": "8352000",
+      "original": "8352000",
+      "expected": 8352000,
+      "passed": true
+    },
+    {
+      "record_id": "R8605",
+      "field": "outstanding_balance_usd",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/refinance-leads-birch/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R8605",
+      "field": "contact_name",
+      "actual": "Avery Birch7",
+      "original": "Avery Birch7",
+      "expected": "Avery Birch7",
+      "passed": true
+    },
+    {
+      "record_id": "R8605",
+      "field": "contact_email",
+      "actual": "finance7@refinance-leads-birch.example",
+      "original": "finance7@refinance-leads-birch.example",
+      "expected": "finance7@refinance-leads-birch.example",
+      "passed": true
+    }
+  ],
+  "harness_induced_null_annotations": 7,
+  "source_checks": [
+    {
+      "record_id": "R8920",
+      "passed": true,
+      "expected": [
+        "S-R7849",
+        "S-R8920"
+      ],
+      "actual": [
+        "S-R7849",
+        "S-R8920"
+      ]
+    },
+    {
+      "record_id": "R2258",
+      "passed": true,
+      "expected": [
+        "S-R2258"
+      ],
+      "actual": [
+        "S-R2258",
+        "U-R2258-2"
+      ]
+    },
+    {
+      "record_id": "R8680",
+      "passed": true,
+      "expected": [
+        "S-R8680"
+      ],
+      "actual": [
+        "S-R8680",
+        "U-R8680-3"
+      ]
+    },
+    {
+      "record_id": "R9318",
+      "passed": true,
+      "expected": [
+        "S-R9318"
+      ],
+      "actual": [
+        "S-R9318"
+      ]
+    },
+    {
+      "record_id": "R7666",
+      "passed": true,
+      "expected": [
+        "S-R7666"
+      ],
+      "actual": [
+        "S-R7666"
+      ]
+    },
+    {
+      "record_id": "R8605",
+      "passed": true,
+      "expected": [
+        "S-R8605"
+      ],
+      "actual": [
+        "S-R8605"
+      ]
+    }
+  ],
+  "source_sha256": "ce3a7d2415464ed92463dceb6ed377e1ab74a8ee056911b7743f7c08a2b9e103"
+}

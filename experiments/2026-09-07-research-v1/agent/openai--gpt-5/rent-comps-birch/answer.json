@@ -1,0 +1,246 @@
+{
+  "shortlist": [
+    {
+      "record_id": "R1695",
+      "facts": {
+        "entity_id": "BIRCH-REN-46690",
+        "event_date": "2026-02-05",
+        "annual_face_rent_psf": 21,
+        "effective_net_rent_psf_year": 11.279375,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R1695",
+        "S-R2614"
+      ],
+      "rationale": "Executed retail gross lease within 0.8 miles and window; 0 free months; 2.5% annual bumps at months 13 and 25; deducted $6.25/sf operating expenses monthly (gross) and subtracted $12/sf TI one-time; effective net rent computed per client convention. Duplicate base record S-R2614 corroborates the same deal."
+    },
+    {
+      "record_id": "R3353",
+      "facts": {
+        "entity_id": "BIRCH-REN-48467",
+        "event_date": "2026-03-06",
+        "annual_face_rent_psf": 22.44,
+        "effective_net_rent_psf_year": 16.92561265625,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R3353",
+        "U-R3353-1"
+      ],
+      "rationale": "Executed retail NNN within 1.03 miles and window; free months updated to 4 and TI to $18/sf per executed amendment; 2.5% annual bumps at months 13, 25, 37; NNN expense deduction is zero; subtracted TI once; computed per convention."
+    },
+    {
+      "record_id": "R2434",
+      "facts": {
+        "entity_id": "BIRCH-REN-81113",
+        "event_date": "2026-04-07",
+        "annual_face_rent_psf": 22.6,
+        "effective_net_rent_psf_year": 19.405271557291666,
+        "term_months": 60
+      },
+      "source_ids": [
+        "S-R2434"
+      ],
+      "rationale": "Executed retail NNN within 1.26 miles and window; 2 free months; 2.5% annual bumps at months 13, 25, 37, 49; NNN expense deduction is zero; $18/sf TI subtracted once; amendment dated after cutoff not applied."
+    },
+    {
+      "record_id": "R1930",
+      "facts": {
+        "entity_id": "BIRCH-REN-15479",
+        "event_date": "2026-05-08",
+        "annual_face_rent_psf": 24.12,
+        "effective_net_rent_psf_year": 9.468024999999992,
+        "term_months": 36
+      },
+      "source_ids": [
+        "S-R1930"
+      ],
+      "rationale": "Executed retail gross within 1.49 miles and window; 3 free months; 2.5% annual bumps at months 13 and 25; deducted $6.25/sf operating expenses monthly (even during free months) and subtracted $21/sf TI once; unsigned draft update ignored."
+    },
+    {
+      "record_id": "R6289",
+      "facts": {
+        "entity_id": "BIRCH-REN-11670",
+        "event_date": "2026-06-09",
+        "annual_face_rent_psf": 24.2,
+        "effective_net_rent_psf_year": 22.122719531249995,
+        "term_months": 48
+      },
+      "source_ids": [
+        "S-R6289"
+      ],
+      "rationale": "Executed retail NNN within 1.72 miles and window; no free rent; 2.5% annual bumps; NNN expense deduction is zero; $12/sf TI subtracted once; computed per convention."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "record_id": "R7254",
+      "eligible": false,
+      "reason": "Executed but event_date 2024-02-10 is before the 2025-09-01 to 2026-08-31 window.",
+      "source_ids": [
+        "S-R7254"
+      ]
+    },
+    {
+      "record_id": "R8772",
+      "eligible": true,
+      "reason": "Executed retail NNN within 8 miles and window; positive rent, term, free rent and TI present.",
+      "source_ids": [
+        "S-R8772"
+      ]
+    },
+    {
+      "record_id": "R2614",
+      "eligible": true,
+      "reason": "Eligible executed retail gross within 8 miles and window with required fields; duplicate of R1695 (same entity_id).",
+      "source_ids": [
+        "S-R2614"
+      ]
+    },
+    {
+      "record_id": "R8177",
+      "eligible": false,
+      "reason": "Executed but distance 18.6 miles exceeds 8-mile radius.",
+      "source_ids": [
+        "S-R8177"
+      ]
+    },
+    {
+      "record_id": "R6289",
+      "eligible": true,
+      "reason": "Executed retail NNN within 8 miles and window; positive rent, term, free/TI present.",
+      "source_ids": [
+        "S-R6289"
+      ]
+    },
+    {
+      "record_id": "R3353",
+      "eligible": true,
+      "reason": "Executed retail NNN within 8 miles and window; controlled executed amendment (U-R3353-1) updates free months and TI.",
+      "source_ids": [
+        "S-R3353",
+        "U-R3353-1"
+      ]
+    },
+    {
+      "record_id": "R3442",
+      "eligible": false,
+      "reason": "Executed but TI allowance is null; TI required.",
+      "source_ids": [
+        "S-R3442"
+      ]
+    },
+    {
+      "record_id": "R5629",
+      "eligible": false,
+      "reason": "Executed but free_months is null; free rent required.",
+      "source_ids": [
+        "S-R5629"
+      ]
+    },
+    {
+      "record_id": "R1930",
+      "eligible": true,
+      "reason": "Executed retail gross within 8 miles and window; positive rent, known expenses, term, free rent and TI present. Unsigned draft update ignored.",
+      "source_ids": [
+        "S-R1930"
+      ]
+    },
+    {
+      "record_id": "R1009",
+      "eligible": false,
+      "reason": "Executed but term_months is null; known term required.",
+      "source_ids": [
+        "S-R1009"
+      ]
+    },
+    {
+      "record_id": "R2434",
+      "eligible": true,
+      "reason": "Executed retail NNN within 8 miles and window; positive rent, term, free rent and TI present. Later-dated amendment ignored (effective after cutoff).",
+      "source_ids": [
+        "S-R2434"
+      ]
+    },
+    {
+      "record_id": "R9966",
+      "eligible": false,
+      "reason": "Asset type Office; outside Retail scope.",
+      "source_ids": [
+        "S-R9966"
+      ]
+    },
+    {
+      "record_id": "R7377",
+      "eligible": false,
+      "reason": "Executed but rent_quote is null; positive rent required.",
+      "source_ids": [
+        "S-R7377"
+      ]
+    },
+    {
+      "record_id": "R1695",
+      "eligible": true,
+      "reason": "Eligible executed retail gross within 8 miles and window with required fields; duplicate of R2614 (same entity_id).",
+      "source_ids": [
+        "S-R1695"
+      ]
+    },
+    {
+      "record_id": "R9256",
+      "eligible": false,
+      "reason": "Executed and within radius, but source published 2026-09-03 is after the 2026-08-31 cutoff; not usable.",
+      "source_ids": [
+        "S-R9256"
+      ]
+    },
+    {
+      "record_id": "R5471",
+      "eligible": false,
+      "reason": "Executed gross lease but annual_expenses_psf is null; gross leases require known expense deduction.",
+      "source_ids": [
+        "S-R5471"
+      ]
+    },
+    {
+      "record_id": "R7345",
+      "eligible": false,
+      "reason": "Status is unsigned_proposal; asking/unsigned rents do not qualify.",
+      "source_ids": [
+        "S-R7345"
+      ]
+    },
+    {
+      "record_id": "R3964",
+      "eligible": false,
+      "reason": "Status is asking; asking/unsigned rents do not qualify.",
+      "source_ids": [
+        "S-R3964"
+      ]
+    },
+    {
+      "record_id": "R5747",
+      "eligible": true,
+      "reason": "Executed retail gross within 8 miles and window; positive rent, known expenses, term, free rent and TI present.",
+      "source_ids": [
+        "S-R5747"
+      ]
+    },
+    {
+      "record_id": "R7562",
+      "eligible": false,
+      "reason": "Executed but rent_quote is zero; positive rent required.",
+      "source_ids": [
+        "S-R7562"
+      ]
+    }
+  ],
+  "summary": "Five executed retail leases within 8 miles and dated 2025-09-01 to 2026-08-31 were selected and ranked by distance: Birch Square 1 (0.8 mi), Birch Grove 2 (1.03 mi, with executed amendment), Birch Grove 3 (1.26 mi), Birch Point 4 (1.49 mi, gross with expenses), and Birch Point 5 (1.72 mi). Effective net rent was computed per client convention: face converted to annual $/sf, 2.5% annual bumps applied at months 13/25/etc., free months at zero face, gross leases deducted $6.25/sf annually each month, TI subtracted once, then annualized. Two additional executed leases (Birch Park 6 at 1.95 mi and Birch Crossing 7 at 2.18 mi) were eligible but fell outside the top five by distance. An executed amendment for Birch Grove 2 (U-R3353-1) was applied; a later-dated amendment for Birch Grove 3 and an unsigned draft for Birch Point 4 were not applied per rules. A comp-grid XLSX with the selected five comps and citations was created: artifacts/underwriting-v1.xlsx.",
+  "limitations": [
+    "Figures rely solely on the provided abstracts/updates; no external verification.",
+    "Undiscounted rent-only convention may differ from market appraisals; rounding may cause minor variances.",
+    "Duplicates were consolidated by entity_id; if latent differences exist between duplicate sources, they are not independently reconciled.",
+    "Later-dated or unpublished updates were excluded per cutoff rules, which could omit subsequent modifications."
+  ]
+}

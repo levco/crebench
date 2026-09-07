@@ -1,0 +1,355 @@
+{
+  "case_id": "rent-comps-elm",
+  "task": "rent_comps",
+  "target_count": 3,
+  "available_unique": 3,
+  "returned_count": 3,
+  "eligible_count": 3,
+  "verified_count": 3,
+  "eligible_yield": 1.0,
+  "verified_yield": 1.0,
+  "selection_precision": 1.0,
+  "correct_abstention": null,
+  "field_accuracy": {
+    "passed": 15,
+    "total": 15
+  },
+  "evidence_accuracy": {
+    "passed": 3,
+    "total": 3
+  },
+  "candidate_accuracy": {
+    "passed": 20,
+    "total": 20
+  },
+  "eligible_recall": {
+    "passed": 4,
+    "total": 4
+  },
+  "ineligible_rejection": {
+    "passed": 16,
+    "total": 16
+  },
+  "ranking_pair_agreement": {
+    "passed": 3,
+    "total": 3
+  },
+  "material_errors": [],
+  "selected_checks": [
+    {
+      "record_id": "R5361",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-REN-25776",
+          "expected": "ELM-REN-25776",
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-02-05",
+          "expected": "2026-02-05",
+          "passed": true
+        },
+        {
+          "field": "annual_face_rent_psf",
+          "actual": 21.0,
+          "expected": 21.0,
+          "passed": true
+        },
+        {
+          "field": "effective_net_rent_psf_year",
+          "actual": 11.28,
+          "expected": 11.279375000000003,
+          "passed": true
+        },
+        {
+          "field": "term_months",
+          "actual": 36,
+          "expected": 36,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R5361"
+      ],
+      "reported_sources": [
+        "S-R5361"
+      ]
+    },
+    {
+      "record_id": "R8528",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-REN-95631",
+          "expected": "ELM-REN-95631",
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-03-06",
+          "expected": "2026-03-06",
+          "passed": true
+        },
+        {
+          "field": "annual_face_rent_psf",
+          "actual": 22.44,
+          "expected": 22.44,
+          "passed": true
+        },
+        {
+          "field": "effective_net_rent_psf_year",
+          "actual": 16.93,
+          "expected": 16.925612656250006,
+          "passed": true
+        },
+        {
+          "field": "term_months",
+          "actual": 48,
+          "expected": 48,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R8528",
+        "U-R8528-1"
+      ],
+      "reported_sources": [
+        "S-R8528",
+        "U-R8528-1"
+      ]
+    },
+    {
+      "record_id": "R4908",
+      "eligible": true,
+      "duplicate": false,
+      "verified": true,
+      "field_checks": [
+        {
+          "field": "entity_id",
+          "actual": "ELM-REN-51407",
+          "expected": "ELM-REN-51407",
+          "passed": true
+        },
+        {
+          "field": "event_date",
+          "actual": "2026-04-07",
+          "expected": "2026-04-07",
+          "passed": true
+        },
+        {
+          "field": "annual_face_rent_psf",
+          "actual": 22.6,
+          "expected": 22.6,
+          "passed": true
+        },
+        {
+          "field": "effective_net_rent_psf_year",
+          "actual": 19.41,
+          "expected": 19.405271557291673,
+          "passed": true
+        },
+        {
+          "field": "term_months",
+          "actual": 60,
+          "expected": 60,
+          "passed": true
+        }
+      ],
+      "evidence_passed": true,
+      "required_sources": [
+        "S-R4908"
+      ],
+      "reported_sources": [
+        "S-R4908"
+      ]
+    }
+  ],
+  "decision_checks": [
+    {
+      "record_id": "R8323",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Unknown gross expense deduction"
+      ]
+    },
+    {
+      "record_id": "R5055",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R5909",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "No positive verified rent"
+      ]
+    },
+    {
+      "record_id": "R6803",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Outside radius"
+      ]
+    },
+    {
+      "record_id": "R4908",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R7763",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R8668",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Lease not executed"
+      ]
+    },
+    {
+      "record_id": "R6572",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R3616",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Unknown term_months"
+      ]
+    },
+    {
+      "record_id": "R3778",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R1184",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Unknown ti_allowance_psf"
+      ]
+    },
+    {
+      "record_id": "R8329",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R5806",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "No positive verified rent"
+      ]
+    },
+    {
+      "record_id": "R2825",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Event outside lookback"
+      ]
+    },
+    {
+      "record_id": "R9355",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Wrong asset type"
+      ]
+    },
+    {
+      "record_id": "R5361",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R8578",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Lease not executed"
+      ]
+    },
+    {
+      "record_id": "R8528",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "record_id": "R6603",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Unknown free_months"
+      ]
+    },
+    {
+      "record_id": "R4617",
+      "actual": false,
+      "expected": false,
+      "passed": true,
+      "reasons": [
+        "Source published after as-of date"
+      ]
+    }
+  ],
+  "limits": [
+    "Classification and shortlist assessment of supplied fictional extracts; not real-world discovery accuracy",
+    "Evidence checks match source IDs and controlling updates; prose rationale requires separate review"
+  ]
+}

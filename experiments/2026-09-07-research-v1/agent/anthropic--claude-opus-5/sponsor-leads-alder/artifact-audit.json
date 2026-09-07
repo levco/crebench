@@ -1,0 +1,461 @@
+{
+  "applicable": true,
+  "required_format": ".csv",
+  "checks": [
+    {
+      "id": "readable_required_format",
+      "passed": true
+    },
+    {
+      "id": "identity_and_order",
+      "passed": true
+    },
+    {
+      "id": "selected_facts_and_unknowns",
+      "passed": false
+    },
+    {
+      "id": "source_identifiers",
+      "passed": true
+    }
+  ],
+  "file": "artifacts/prospects-v1.csv",
+  "criterion": "Original artifact consistency with submitted answer; factual truth is scored separately",
+  "issues": [
+    "1 blank unknown annotations were caused by the benchmark CSV writer after explicit model-supplied JSON nulls; these are harness delivery failures, not model factual errors.",
+    "R4787 / contact_email: artifact differs from answer or lacks explicit unknown"
+  ],
+  "sheets": [
+    "CSV"
+  ],
+  "table_sheet": "CSV",
+  "original_record_order": [
+    "R3168",
+    "R4787",
+    "R4752",
+    "R2273",
+    "R1117",
+    "R7805"
+  ],
+  "answer_record_order": [
+    "R3168",
+    "R4787",
+    "R4752",
+    "R2273",
+    "R1117",
+    "R7805"
+  ],
+  "field_checks": [
+    {
+      "record_id": "R3168",
+      "field": "entity_id",
+      "actual": "ALDER-SPO-67037",
+      "original": "ALDER-SPO-67037",
+      "expected": "ALDER-SPO-67037",
+      "passed": true
+    },
+    {
+      "record_id": "R3168",
+      "field": "firm_name",
+      "actual": "Alder Square 6 Capital",
+      "original": "Alder Square 6 Capital",
+      "expected": "Alder Square 6 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R3168",
+      "field": "transaction_size_usd",
+      "actual": "33000000",
+      "original": "33000000",
+      "expected": 33000000,
+      "passed": true
+    },
+    {
+      "record_id": "R3168",
+      "field": "event_date",
+      "actual": "2026-07-10",
+      "original": "2026-07-10",
+      "expected": "2026-07-10",
+      "passed": true
+    },
+    {
+      "record_id": "R3168",
+      "field": "contact_name",
+      "actual": "Morgan Alder6",
+      "original": "Morgan Alder6",
+      "expected": "Morgan Alder6",
+      "passed": true
+    },
+    {
+      "record_id": "R3168",
+      "field": "contact_role",
+      "actual": "Head of Acquisitions",
+      "original": "Head of Acquisitions",
+      "expected": "Head of Acquisitions",
+      "passed": true
+    },
+    {
+      "record_id": "R3168",
+      "field": "contact_email",
+      "actual": "person6@sponsor-leads-alder.example",
+      "original": "person6@sponsor-leads-alder.example",
+      "expected": "person6@sponsor-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "entity_id",
+      "actual": "ALDER-SPO-19257",
+      "original": "ALDER-SPO-19257",
+      "expected": "ALDER-SPO-19257",
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "firm_name",
+      "actual": "Alder Square 5 Capital",
+      "original": "Alder Square 5 Capital",
+      "expected": "Alder Square 5 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "transaction_size_usd",
+      "actual": "31200000",
+      "original": "31200000",
+      "expected": 31200000,
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "event_date",
+      "actual": "2026-06-09",
+      "original": "2026-06-09",
+      "expected": "2026-06-09",
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "contact_name",
+      "actual": "Alex Alder5",
+      "original": "Alex Alder5",
+      "expected": "Alex Alder5",
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R4787",
+      "field": "contact_email",
+      "actual": "",
+      "original": "",
+      "expected": null,
+      "passed": false,
+      "attribution": "benchmark_csv_serializer",
+      "attribution_detail": "Model supplied explicit JSON null; the frozen CSV writer serialized it as a blank cell.",
+      "tool_evidence": "experiments/2026-09-07-research-v1/agent/anthropic--claude-opus-5/sponsor-leads-alder/turn-01/tool-01.json"
+    },
+    {
+      "record_id": "R4752",
+      "field": "entity_id",
+      "actual": "ALDER-SPO-13273",
+      "original": "ALDER-SPO-13273",
+      "expected": "ALDER-SPO-13273",
+      "passed": true
+    },
+    {
+      "record_id": "R4752",
+      "field": "firm_name",
+      "actual": "Alder Grove 4 Capital",
+      "original": "Alder Grove 4 Capital",
+      "expected": "Alder Grove 4 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R4752",
+      "field": "transaction_size_usd",
+      "actual": "29400000",
+      "original": "29400000",
+      "expected": 29400000,
+      "passed": true
+    },
+    {
+      "record_id": "R4752",
+      "field": "event_date",
+      "actual": "2026-05-08",
+      "original": "2026-05-08",
+      "expected": "2026-05-08",
+      "passed": true
+    },
+    {
+      "record_id": "R4752",
+      "field": "contact_name",
+      "actual": "Taylor Alder4",
+      "original": "Taylor Alder4",
+      "expected": "Taylor Alder4",
+      "passed": true
+    },
+    {
+      "record_id": "R4752",
+      "field": "contact_role",
+      "actual": "Head of Acquisitions",
+      "original": "Head of Acquisitions",
+      "expected": "Head of Acquisitions",
+      "passed": true
+    },
+    {
+      "record_id": "R4752",
+      "field": "contact_email",
+      "actual": "person4@sponsor-leads-alder.example",
+      "original": "person4@sponsor-leads-alder.example",
+      "expected": "person4@sponsor-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "entity_id",
+      "actual": "ALDER-SPO-21979",
+      "original": "ALDER-SPO-21979",
+      "expected": "ALDER-SPO-21979",
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "firm_name",
+      "actual": "Alder Park 3 Capital",
+      "original": "Alder Park 3 Capital",
+      "expected": "Alder Park 3 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "transaction_size_usd",
+      "actual": "27600000",
+      "original": "27600000",
+      "expected": 27600000,
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "event_date",
+      "actual": "2026-04-07",
+      "original": "2026-04-07",
+      "expected": "2026-04-07",
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "contact_name",
+      "actual": "Jordan Alder3",
+      "original": "Jordan Alder3",
+      "expected": "Jordan Alder3",
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R2273",
+      "field": "contact_email",
+      "actual": "person3@sponsor-leads-alder.example",
+      "original": "person3@sponsor-leads-alder.example",
+      "expected": "person3@sponsor-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "entity_id",
+      "actual": "ALDER-SPO-82903",
+      "original": "ALDER-SPO-82903",
+      "expected": "ALDER-SPO-82903",
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "firm_name",
+      "actual": "Alder Park 2 Capital",
+      "original": "Alder Park 2 Capital",
+      "expected": "Alder Park 2 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "transaction_size_usd",
+      "actual": "25800000",
+      "original": "25800000",
+      "expected": 25800000,
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "event_date",
+      "actual": "2026-03-06",
+      "original": "2026-03-06",
+      "expected": "2026-03-06",
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "contact_name",
+      "actual": "Drew Alder",
+      "original": "Drew Alder",
+      "expected": "Drew Alder",
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R1117",
+      "field": "contact_email",
+      "actual": "new.cfo@sponsor-leads-alder.example",
+      "original": "new.cfo@sponsor-leads-alder.example",
+      "expected": "new.cfo@sponsor-leads-alder.example",
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "entity_id",
+      "actual": "ALDER-SPO-80621",
+      "original": "ALDER-SPO-80621",
+      "expected": "ALDER-SPO-80621",
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "firm_name",
+      "actual": "Alder Grove 1 Capital",
+      "original": "Alder Grove 1 Capital",
+      "expected": "Alder Grove 1 Capital",
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "transaction_size_usd",
+      "actual": "24000000",
+      "original": "24000000",
+      "expected": 24000000,
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "event_date",
+      "actual": "2026-02-05",
+      "original": "2026-02-05",
+      "expected": "2026-02-05",
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "contact_name",
+      "actual": "Alex Alder1",
+      "original": "Alex Alder1",
+      "expected": "Alex Alder1",
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "contact_role",
+      "actual": "CFO",
+      "original": "CFO",
+      "expected": "CFO",
+      "passed": true
+    },
+    {
+      "record_id": "R7805",
+      "field": "contact_email",
+      "actual": "person1@sponsor-leads-alder.example",
+      "original": "person1@sponsor-leads-alder.example",
+      "expected": "person1@sponsor-leads-alder.example",
+      "passed": true
+    }
+  ],
+  "harness_induced_null_annotations": 1,
+  "source_checks": [
+    {
+      "record_id": "R3168",
+      "passed": true,
+      "expected": [
+        "S-R3168"
+      ],
+      "actual": [
+        "S-R3168"
+      ]
+    },
+    {
+      "record_id": "R4787",
+      "passed": true,
+      "expected": [
+        "S-R4787"
+      ],
+      "actual": [
+        "S-R4787"
+      ]
+    },
+    {
+      "record_id": "R4752",
+      "passed": true,
+      "expected": [
+        "S-R4752"
+      ],
+      "actual": [
+        "S-R4752",
+        "U-R4752-3"
+      ]
+    },
+    {
+      "record_id": "R2273",
+      "passed": true,
+      "expected": [
+        "S-R2273"
+      ],
+      "actual": [
+        "S-R2273",
+        "U-R2273-2"
+      ]
+    },
+    {
+      "record_id": "R1117",
+      "passed": true,
+      "expected": [
+        "S-R1117",
+        "U-R1117-1"
+      ],
+      "actual": [
+        "S-R1117",
+        "U-R1117-1"
+      ]
+    },
+    {
+      "record_id": "R7805",
+      "passed": true,
+      "expected": [
+        "S-R5723",
+        "S-R7756",
+        "S-R7805"
+      ],
+      "actual": [
+        "S-R5723",
+        "S-R7756",
+        "S-R7805"
+      ]
+    }
+  ],
+  "source_sha256": "fed84c21a6038dd9f19f674ceb897bc58aca6ee910f5a3d106a509f6caf9096d"
+}
