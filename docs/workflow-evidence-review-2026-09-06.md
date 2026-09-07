@@ -1,0 +1,11 @@
+# Source-location review, workflow v1
+
+The frozen rubric separates correct values from supporting citations. This review applies its location requirement to each of the 17 retained extraction facts. It does not change financial scores or infer that a system never read a document because its final citation is incomplete.
+
+The review uses the delivered analysis and its explicitly scoped headings, source tables and immediately linked calculations. A page reference in a T12 table heading can support its rows. Derived occupancy may inherit the source locations of its stated numerator and denominator. A uniquely identified original worksheet record, such as unit 136, is a row locator when the source and record set are explicit. Reproducing all four named source records with their inputs therefore supports a four-suite total. A filename alone, a vague “sum,” or a correct citation for only one input to a larger total does not suffice. The model's own output workbook is not the original source. Citations in an independently delivered workbook or memo are assessed in that artifact's own checks and are not silently imported into the analysis score.
+
+This is author review after outputs were available, with provider identities visible. Each review records the response evidence, any scoped context, the independently checked source, and a pass/fail rationale. Correct values with missing or incorrect locations fail evidence alone. Wrong values fail evidence even where a citation points to relevant material. Named clauses must support the specific claim, including conditional option exercise and executed-amendment authority.
+
+One example of ambiguity is retained explicitly: Lev's Juniper heading ends at worksheet row 41, while its detailed answer names units 101–136 and the three vacant units, including the final row 42. The complete named record set supports its calculations; the heading typo is disclosed. In Hawthorn, both Lev and GPT-5 cite incorrect source columns, and there is no complete correct source-record set to resolve that mismatch. The affected location checks fail uniformly.
+
+Reviews and delivered outputs are public so an independent practitioner can challenge these decisions. They are not blinded human-expert grades.

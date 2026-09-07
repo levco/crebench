@@ -1,0 +1,75 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01J2EmZnycfdVo66GRehXQGx",
+  "arguments_raw": "{\"steps\":[{\"name\":\"egi5_dscr\",\"expression\":\"(492452/1.25)/(12*-pmt(0.0625/12,360,1))\"},{\"name\":\"egi5_ltv\",\"expression\":\"0.65*503252/0.0575\"},{\"name\":\"egi5_dy\",\"expression\":\"492452/0.085\"},{\"name\":\"egi5_max\",\"expression\":\"min((492452/1.25)/(12*-pmt(0.0625/12,360,1)),0.65*503252/0.0575,492452/0.085)\"},{\"name\":\"cap625_value\",\"expression\":\"545960/0.0625\"},{\"name\":\"cap625_ltv\",\"expression\":\"0.65*545960/0.0625\"},{\"name\":\"cap625_max\",\"expression\":\"min(0.65*545960/0.0625,5794435.060223457,6296000)\"},{\"name\":\"orig_fee\",\"expression\":\"0.0075*5794435.060223457\"},{\"name\":\"post_io_ds\",\"expression\":\"5794435.060223457*12*-pmt(0.059/12,360,1)\"},{\"name\":\"combined_cash\",\"expression\":\"4812558.614707205*(1-0.0075)-3300000-45000\"},{\"name\":\"fy_dscr\",\"expression\":\"535160/341871.67\"},{\"name\":\"postio_dscr\",\"expression\":\"535160/412508\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "egi5_dscr",
+        "expression": "(492452/1.25)/(12*-pmt(0.0625/12,360,1))"
+      },
+      {
+        "name": "egi5_ltv",
+        "expression": "0.65*503252/0.0575"
+      },
+      {
+        "name": "egi5_dy",
+        "expression": "492452/0.085"
+      },
+      {
+        "name": "egi5_max",
+        "expression": "min((492452/1.25)/(12*-pmt(0.0625/12,360,1)),0.65*503252/0.0575,492452/0.085)"
+      },
+      {
+        "name": "cap625_value",
+        "expression": "545960/0.0625"
+      },
+      {
+        "name": "cap625_ltv",
+        "expression": "0.65*545960/0.0625"
+      },
+      {
+        "name": "cap625_max",
+        "expression": "min(0.65*545960/0.0625,5794435.060223457,6296000)"
+      },
+      {
+        "name": "orig_fee",
+        "expression": "0.0075*5794435.060223457"
+      },
+      {
+        "name": "post_io_ds",
+        "expression": "5794435.060223457*12*-pmt(0.059/12,360,1)"
+      },
+      {
+        "name": "combined_cash",
+        "expression": "4812558.614707205*(1-0.0075)-3300000-45000"
+      },
+      {
+        "name": "fy_dscr",
+        "expression": "535160/341871.67"
+      },
+      {
+        "name": "postio_dscr",
+        "expression": "535160/412508"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "egi5_dscr": 5332014.975478664,
+      "egi5_ltv": 5688935.652173912,
+      "egi5_dy": 5793552.94117647,
+      "egi5_max": 5332014.975478664,
+      "cap625_value": 8735360.0,
+      "cap625_ltv": 5677984.0,
+      "cap625_max": 5677984.0,
+      "orig_fee": 43458.262951675926,
+      "post_io_ds": 412426.9161744093,
+      "combined_cash": 1431464.425096902,
+      "fy_dscr": 1.5653827063236916,
+      "postio_dscr": 1.2973324153713381
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,35 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_IDfkNn7IBweKFYd77fB6dakS",
+  "arguments_raw": "{\"steps\":[{\"name\":\"t12_opex\",\"expression\":\"86400+25200+19200+28800+18000+14400+24000\"},{\"name\":\"t12_noi_brr\",\"expression\":\"723600 - t12_opex\"},{\"name\":\"t12_reserves\",\"expression\":\"9200\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi_brr - t12_reserves\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "t12_opex",
+        "expression": "86400+25200+19200+28800+18000+14400+24000"
+      },
+      {
+        "name": "t12_noi_brr",
+        "expression": "723600 - t12_opex"
+      },
+      {
+        "name": "t12_reserves",
+        "expression": "9200"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi_brr - t12_reserves"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "t12_opex": 216000,
+      "t12_noi_brr": 507600,
+      "t12_reserves": 9200,
+      "t12_ncf": 498400
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

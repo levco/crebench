@@ -1,0 +1,45 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_BvfOzJkuahAy6wMIMFSkVwbF",
+  "arguments_raw": "{\"steps\":[{\"name\":\"occupancy_area_pct\",\"expression\":\"20200/23000*100\"},{\"name\":\"sizing_debt_yield\",\"expression\":\"544218.24/5327927.692818299*100\"},{\"name\":\"annual_constant_contract\",\"expression\":\"12*pmt(0.0625/12,25*12,1)\"},{\"name\":\"first_year_annual_ds\",\"expression\":\"abs(annual_constant_contract)*5327927.692818299\"},{\"name\":\"sizing_annual_debt_service\",\"expression\":\"539618.24/1.25\"},{\"name\":\"cash_to_borrower\",\"expression\":\"5327927.692818299*0.99 - 3400000 - 48000\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "occupancy_area_pct",
+        "expression": "20200/23000*100"
+      },
+      {
+        "name": "sizing_debt_yield",
+        "expression": "544218.24/5327927.692818299*100"
+      },
+      {
+        "name": "annual_constant_contract",
+        "expression": "12*pmt(0.0625/12,25*12,1)"
+      },
+      {
+        "name": "first_year_annual_ds",
+        "expression": "abs(annual_constant_contract)*5327927.692818299"
+      },
+      {
+        "name": "sizing_annual_debt_service",
+        "expression": "539618.24/1.25"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "5327927.692818299*0.99 - 3400000 - 48000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "occupancy_area_pct": 87.82608695652175,
+      "sizing_debt_yield": 10.214444928251766,
+      "annual_constant_contract": -0.07916032539780565,
+      "first_year_annual_ds": 421760.48985947645,
+      "sizing_annual_debt_service": 431694.592,
+      "cash_to_borrower": 1826648.4158901162
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

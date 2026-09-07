@@ -1,0 +1,110 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01LAEh2DU8mdDVqxwzCEmMfr",
+  "arguments_raw": "{\"steps\":[{\"name\":\"total_sf\",\"expression\":\"1800+2200+2500+3200+4000+5000+1500+2800\"},{\"name\":\"occ_sf\",\"expression\":\"1800+2200+2500+3200+4000+5000+1500\"},{\"name\":\"occ_area_pct\",\"expression\":\"100*20200/23000\"},{\"name\":\"rr_base\",\"expression\":\"7000+5500+6000+7200+9000+10500+3400\"},{\"name\":\"t12_egi\",\"expression\":\"645600-46800-14400-3600+142800\"},{\"name\":\"t12_opex\",\"expression\":\"86400+25200+19200+28800+18000+14400+24000\"},{\"name\":\"t12_noi\",\"expression\":\"723600-216000\"},{\"name\":\"t12_ncf\",\"expression\":\"507600-9200\"},{\"name\":\"uw_egi\",\"expression\":\"657600*0.94+150000\"},{\"name\":\"mgmt\",\"expression\":\"max(24000,0.04*768144)\"},{\"name\":\"uw_opex\",\"expression\":\"90000+27600+19200+24000+18000+14400+30725.76\"},{\"name\":\"uw_noi\",\"expression\":\"768144-223925.76\"},{\"name\":\"uw_res\",\"expression\":\"0.20*23000\"},{\"name\":\"uw_ncf\",\"expression\":\"544218.24-4600\"},{\"name\":\"value\",\"expression\":\"544218.24/0.065\"},{\"name\":\"ltv\",\"expression\":\"0.65*8372588.3076923\"},{\"name\":\"constant\",\"expression\":\"12*abs(pmt(0.065/12,300,1))\"},{\"name\":\"dscr_limit\",\"expression\":\"(539618.24/1.25)/0.0806106345\"},{\"name\":\"dy_limit\",\"expression\":\"544218.24/0.09\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "total_sf",
+        "expression": "1800+2200+2500+3200+4000+5000+1500+2800"
+      },
+      {
+        "name": "occ_sf",
+        "expression": "1800+2200+2500+3200+4000+5000+1500"
+      },
+      {
+        "name": "occ_area_pct",
+        "expression": "100*20200/23000"
+      },
+      {
+        "name": "rr_base",
+        "expression": "7000+5500+6000+7200+9000+10500+3400"
+      },
+      {
+        "name": "t12_egi",
+        "expression": "645600-46800-14400-3600+142800"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "86400+25200+19200+28800+18000+14400+24000"
+      },
+      {
+        "name": "t12_noi",
+        "expression": "723600-216000"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "507600-9200"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "657600*0.94+150000"
+      },
+      {
+        "name": "mgmt",
+        "expression": "max(24000,0.04*768144)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "90000+27600+19200+24000+18000+14400+30725.76"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "768144-223925.76"
+      },
+      {
+        "name": "uw_res",
+        "expression": "0.20*23000"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "544218.24-4600"
+      },
+      {
+        "name": "value",
+        "expression": "544218.24/0.065"
+      },
+      {
+        "name": "ltv",
+        "expression": "0.65*8372588.3076923"
+      },
+      {
+        "name": "constant",
+        "expression": "12*abs(pmt(0.065/12,300,1))"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(539618.24/1.25)/0.0806106345"
+      },
+      {
+        "name": "dy_limit",
+        "expression": "544218.24/0.09"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "total_sf": 23000,
+      "occ_sf": 20200,
+      "occ_area_pct": 87.82608695652173,
+      "rr_base": 48600,
+      "t12_egi": 723600,
+      "t12_opex": 216000,
+      "t12_noi": 507600,
+      "t12_ncf": 498400,
+      "uw_egi": 768144.0,
+      "mgmt": 30725.760000000002,
+      "uw_opex": 223925.76,
+      "uw_noi": 544218.24,
+      "uw_res": 4600.0,
+      "uw_ncf": 539618.24,
+      "value": 8372588.307692307,
+      "ltv": 5442182.399999995,
+      "constant": 0.081024859361717,
+      "dscr_limit": 5355305.719619413,
+      "dy_limit": 6046869.333333333
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

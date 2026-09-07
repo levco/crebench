@@ -1,0 +1,325 @@
+{
+  "reviewer": "Codex author review with machine-assisted file inspection; not independent human validation",
+  "provider_blinded": false,
+  "rubric": "benchmarks/workflow-v1/RUBRIC.md",
+  "inspection_scope": "Full memo text and all page renders; original workbook input and source labels, historical totals after LibreOffice recalculation, live formulas and main underwriting rendering. Automatic base and perturbation checks in audit/.",
+  "summary": "All 39 headline source and financial checks, ten workbook checks and ten memo checks pass. The memo preserves provisional insurance, correctly separates contractual post-IO payments from sizing debt service and identifies all leases rolling before maturity.",
+  "workbook": [
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "Inputs, units, date and source references are identifiable.",
+      "evidence": "Delivered input/instruction/source sheets; non-formula cell inspection"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Historical and forward cash flows are separate and their totals reconcile.",
+      "evidence": "Recalculated historical sheet totals and original T12; independently tested underwriting outputs"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Main underwriting labels and numbers are visible and a reviewer can locate assumptions and decision outputs.",
+      "evidence": "Main underwriting sheet rendered at 1.3 scale; input and sizing cells inspected"
+    }
+  ],
+  "memo": [
+    {
+      "rubric_check": 1,
+      "passed": true,
+      "rationale": "A real PDF was downloaded and all pages rendered with readable main content.",
+      "evidence": "Original PDF and full-page render review"
+    },
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "The memo identifies the named property, August 31, 2026 as-of date and first-mortgage refinance purpose.",
+      "evidence": "PDF opening title, property table and recommendation"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Base loan, existing payoff, loan-based fee, fixed closing costs and net borrower cash reconcile to the supplied scenario.",
+      "evidence": "PDF sources/uses and independently checked key"
+    },
+    {
+      "rubric_check": 4,
+      "passed": true,
+      "rationale": "Historical T12 and forward underwriting are labeled separately, with NOI before reserves and NCF after reserves.",
+      "evidence": "PDF historical and underwriting tables; original T12 and plan"
+    },
+    {
+      "rubric_check": 5,
+      "passed": true,
+      "rationale": "Loan constraints, binding minimum and debt-service/coverage figures follow the lender terms.",
+      "evidence": "PDF financing/sizing section; Lender-Terms.pdf"
+    },
+    {
+      "rubric_check": 6,
+      "passed": true,
+      "rationale": "Occupancy and the subject lease are discussed against the supplied rent roll and controlling executed document.",
+      "evidence": "PDF property/lease discussion; Rent-Roll.xlsx and Lease-File.pdf"
+    },
+    {
+      "rubric_check": 7,
+      "passed": true,
+      "rationale": "Sensitivity, missing diligence and financing risks are disclosed without unsupported numerical conclusions.",
+      "evidence": "PDF sensitivity and risk/limitations sections"
+    },
+    {
+      "rubric_check": 8,
+      "passed": true,
+      "rationale": "The supplied forecast, lender conventions and any provisional items are labeled as assumptions.",
+      "evidence": "PDF assumptions and limitations; Property-and-Plan.pdf"
+    },
+    {
+      "rubric_check": 9,
+      "passed": true,
+      "rationale": "The memorandum identifies the five source files and their relevant content.",
+      "evidence": "PDF source references and source pointers in the analysis"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Rendered headings, tables and financial values are readable with no materially clipped content.",
+      "evidence": "Full-page PDF rendering inspection"
+    }
+  ],
+  "evidence": [
+    {
+      "field": "space_count",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx, worksheet 'Rent Roll', rows 7-9 (units 101, 102, 103)"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 3
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupied_count",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' F7:F9 = 'Occupied'"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 3
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "total_area_sf",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' E7=16000, E8=24000, E9=32000"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 72000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupied_area_sf",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' E7:E9 with F7:F9 = Occupied"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 72000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupancy_count_pct",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' rows 7-9"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 100.0
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupancy_area_pct",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' rows 7-9"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 100.0
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' G7=12800, G8=20400, G9=28800"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 62000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "effective_monthly_base",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx 'Rent Roll' G7:G9",
+        "Lease-File.pdf p.1 sections 3 and 6 (base rent $12,800/month as of 2026-08-31; signed amendment controls; none delivered)"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx and Lease-File.pdf / executed amendment where present",
+      "source_observation": {
+        "checked_value": 62000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_egi",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 annual column: GPR 744,000; vacancy 0; concessions -18,000; bad debt -2,400; other income 158,400"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 882000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_operating_expenses",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 annual column: taxes 102,000; insurance 26,400; utilities 9,600; R&M 19,200; payroll 12,000; admin 16,800; management 26,400"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 212400
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf pp.1-2 annual column",
+        "Property-and-Plan.pdf p.1 (identify NOI before reserves separately)"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 669600
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 'Replacement reserves (below NOI)' annual = 14,400"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 14400
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_ncf",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 annual column"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 655200
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 section 3 ('Base rent is $12,800 per month as of August 31, 2026'; no increase before 2027-09-01)",
+        "Rent-Roll.xlsx 'Rent Roll' G7=12800"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 12800
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_expiry",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 section 2 ('initial term expires 2028-08-31') and section 5 (do not extend on option existence alone)",
+        "Rent-Roll.xlsx 'Rent Roll' I7='2028-08-31'"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "2028-08-31"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_deposit",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 section 4 ('The security deposit is $25,600 and is not prepaid rent or recurring income')"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 25600
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "renewal_option_exercised",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 section 5 ('No exercise notice, landlord acknowledgment or amendment exercising this option is included in the packet')",
+        "Rent-Roll.xlsx 'Rent Roll' C14 ('no option exercise notice is included')"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "Not evidenced"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    }
+  ],
+  "evidence_review_status": "complete_author_review",
+  "findings": [
+    "Six-page PDF is readable. Some tables continue on the next page, with repeated headers and no hidden or clipped data.",
+    "The agent corrected its own memo within the frozen run; every version and tool call is retained. No operator answer correction was supplied."
+  ],
+  "critical_claims": [],
+  "insurance_ambiguity_policy": "docs/workflow-insurance-criterion-2026-09-06.md",
+  "evidence_policy": "docs/workflow-evidence-review-2026-09-06.md"
+}

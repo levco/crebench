@@ -1,0 +1,9 @@
+file:///Users/yjzar/Documents/Codex/2026-09-06/i/work/crebench/tools/workflow-workbook.mjs:21
+        if(typeof cell.formula!=='string'||!cell.formula.startsWith('=')||cell.formula.length>2000||/[\[\]{}|]/.test(cell.formula)||/WEBSERVICE|HYPERLINK|DDE|RTD|CALL|REGISTER|EXEC|IMPORT|EVALUATE|INDIRECT/i.test(cell.formula)) throw Error('Unsafe or unsupported formula');
+                                                                                                                                                                                                                                          ^
+
+Error: Unsafe or unsupported formula
+    at writeWorkbook (file:///Users/yjzar/Documents/Codex/2026-09-06/i/work/crebench/tools/workflow-workbook.mjs:21:235)
+    at file:///Users/yjzar/Documents/Codex/2026-09-06/i/work/crebench/tools/workflow-workbook.mjs:57:36
+
+Node.js v24.19.0

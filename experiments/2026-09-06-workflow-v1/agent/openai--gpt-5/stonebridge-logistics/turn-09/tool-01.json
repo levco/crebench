@@ -1,0 +1,115 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_ghbLaQM2YXq1gseddxplzg7L",
+  "arguments_raw": "{\"steps\":[{\"name\":\"annual_debt_constant\",\"expression\":\"abs(12*pmt(0.0725/12,25*12,1))\"},{\"name\":\"dscr_limit\",\"expression\":\"743710/(1.30*annual_debt_constant)\"},{\"name\":\"debt_yield_limit\",\"expression\":\"743710/0.10\"},{\"name\":\"ltv_limit\",\"expression\":\"0.60*11269777.777777776\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit, dscr_limit, debt_yield_limit)\"},{\"name\":\"sizing_annual_debt_service\",\"expression\":\"maximum_loan*annual_debt_constant\"},{\"name\":\"sizing_dscr\",\"expression\":\"743710/sizing_annual_debt_service\"},{\"name\":\"sizing_debt_yield\",\"expression\":\"743710/maximum_loan\"},{\"name\":\"first_year_debt_service\",\"expression\":\"maximum_loan*0.0675\"},{\"name\":\"cash_to_borrower\",\"expression\":\"maximum_loan - 4200000 - 0.0125*maximum_loan - 70000\"},{\"name\":\"stress_annual_debt_constant\",\"expression\":\"abs(12*pmt(0.0825/12,25*12,1))\"},{\"name\":\"stress_egi\",\"expression\":\"1023000*0.95\"},{\"name\":\"stress_mgmt\",\"expression\":\"max(25200, 0.03*stress_egi)\"},{\"name\":\"stress_op_ex\",\"expression\":\"231600 + stress_mgmt\"},{\"name\":\"stress_noi_before_reserves\",\"expression\":\"stress_egi - stress_op_ex\"},{\"name\":\"stress_ncf\",\"expression\":\"stress_noi_before_reserves - 17000\"},{\"name\":\"stress_ltv_limit\",\"expression\":\"0.60*(stress_noi_before_reserves/0.0675)\"},{\"name\":\"stress_dscr_limit\",\"expression\":\"stress_ncf/(1.30*stress_annual_debt_constant)\"},{\"name\":\"stress_debt_yield_limit\",\"expression\":\"stress_ncf/0.10\"},{\"name\":\"stress_maximum_loan\",\"expression\":\"min(stress_ltv_limit, stress_dscr_limit, stress_debt_yield_limit)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "annual_debt_constant",
+        "expression": "abs(12*pmt(0.0725/12,25*12,1))"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "743710/(1.30*annual_debt_constant)"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "743710/0.10"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.60*11269777.777777776"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit, dscr_limit, debt_yield_limit)"
+      },
+      {
+        "name": "sizing_annual_debt_service",
+        "expression": "maximum_loan*annual_debt_constant"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "743710/sizing_annual_debt_service"
+      },
+      {
+        "name": "sizing_debt_yield",
+        "expression": "743710/maximum_loan"
+      },
+      {
+        "name": "first_year_debt_service",
+        "expression": "maximum_loan*0.0675"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "maximum_loan - 4200000 - 0.0125*maximum_loan - 70000"
+      },
+      {
+        "name": "stress_annual_debt_constant",
+        "expression": "abs(12*pmt(0.0825/12,25*12,1))"
+      },
+      {
+        "name": "stress_egi",
+        "expression": "1023000*0.95"
+      },
+      {
+        "name": "stress_mgmt",
+        "expression": "max(25200, 0.03*stress_egi)"
+      },
+      {
+        "name": "stress_op_ex",
+        "expression": "231600 + stress_mgmt"
+      },
+      {
+        "name": "stress_noi_before_reserves",
+        "expression": "stress_egi - stress_op_ex"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "stress_noi_before_reserves - 17000"
+      },
+      {
+        "name": "stress_ltv_limit",
+        "expression": "0.60*(stress_noi_before_reserves/0.0675)"
+      },
+      {
+        "name": "stress_dscr_limit",
+        "expression": "stress_ncf/(1.30*stress_annual_debt_constant)"
+      },
+      {
+        "name": "stress_debt_yield_limit",
+        "expression": "stress_ncf/0.10"
+      },
+      {
+        "name": "stress_maximum_loan",
+        "expression": "min(stress_ltv_limit, stress_dscr_limit, stress_debt_yield_limit)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "annual_debt_constant": 0.08673682369165958,
+      "dscr_limit": 6595637.135829609,
+      "debt_yield_limit": 7437100.0,
+      "ltv_limit": 6761866.666666665,
+      "maximum_loan": 6595637.135829609,
+      "sizing_annual_debt_service": 572084.6153846154,
+      "sizing_dscr": 1.3,
+      "sizing_debt_yield": 0.11275787079915746,
+      "first_year_debt_service": 445205.5066684986,
+      "cash_to_borrower": 2243191.6716317385,
+      "stress_annual_debt_constant": 0.09461401616234266,
+      "stress_egi": 971850.0,
+      "stress_mgmt": 29155.5,
+      "stress_op_ex": 260755.5,
+      "stress_noi_before_reserves": 711094.5,
+      "stress_ncf": 694094.5,
+      "stress_ltv_limit": 6320839.999999999,
+      "stress_dscr_limit": 5643126.333816398,
+      "stress_debt_yield_limit": 6940945.0,
+      "stress_maximum_loan": 5643126.333816398
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.002
+}

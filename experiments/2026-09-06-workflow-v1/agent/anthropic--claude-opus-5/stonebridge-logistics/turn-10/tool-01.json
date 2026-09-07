@@ -1,0 +1,40 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_0143gB285yUJtbr1F9hb7QtE",
+  "arguments_raw": "{\"steps\":[{\"name\":\"dscr_only\",\"expression\":\"694094.5/(1.3*0.08673682369165958)\"},{\"name\":\"ltv_only\",\"expression\":\"0.6*711094.5/0.0675\"},{\"name\":\"stress_cash\",\"expression\":\"5643126.333816398*0.9875-4200000-70000\"},{\"name\":\"contract_amort\",\"expression\":\"-pmt(0.0675/12,300,6595637.135829609)*12\"},{\"name\":\"dscr_first_year\",\"expression\":\"743710/445205.5066684986\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "dscr_only",
+        "expression": "694094.5/(1.3*0.08673682369165958)"
+      },
+      {
+        "name": "ltv_only",
+        "expression": "0.6*711094.5/0.0675"
+      },
+      {
+        "name": "stress_cash",
+        "expression": "5643126.333816398*0.9875-4200000-70000"
+      },
+      {
+        "name": "contract_amort",
+        "expression": "-pmt(0.0675/12,300,6595637.135829609)*12"
+      },
+      {
+        "name": "dscr_first_year",
+        "expression": "743710/445205.5066684986"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "dscr_only": 6155619.071916587,
+      "ltv_only": 6320840.0,
+      "stress_cash": 1302587.2546436936,
+      "contract_amort": 546840.2055918253,
+      "dscr_first_year": 1.6704869748023325
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

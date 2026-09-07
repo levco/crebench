@@ -1,0 +1,359 @@
+{
+  "name": "submit_analysis",
+  "call_id": "toolu_01VoyuahCCh3H5BP8EbmJuhT",
+  "arguments_raw": "{\"summary\":\"Cedar Landing (48-unit multifamily, fictional) refinance analysis as of 2026-08-31. Historical T12 (Sep-2025 to Aug-2026) EGI $691,200, opex $371,200, NOI before reserves $320,000, reserves $14,400, NCF $305,600 \u2014 kept strictly separate from the supplied underwriting scenario (Sep-2026 forward): EGI $1,025,280 (GPR $1,056,000 less 7.00% combined loss plus $43,200 other income), normalized management fee $35,884.80 (3.50% of EGI > $28,000 T12 actual), opex before reserves $377,884.80, NOI before reserves $647,395.20, reserves $15,600 ($325 x 48 units), NCF $631,795.20. Indicative value at the 5.75% cap rate is $11,259,047. Occupancy from the dated rent roll is 33/48 units (68.75%) and 26,700/43,200 SF (61.81%); printed and effective monthly base rent are both $56,025 because no signed amendment was delivered. Sizing rate is 6.50% (greater of 6.25% contract rate and the 6.50% floor); annual debt constant 0.07584816 (30-yr monthly). Constraints: LTV $6,755,428; DSCR $6,407,490; debt yield $7,019,947 \u2014 maximum loan $6,407,490, DSCR binding, sizing DSCR 1.300x, sizing debt yield 9.86%, implied LTV 56.91%. First-year contractual debt service is interest-only at 6.25% = $400,468 (36-month IO), vs. $485,996 sizing debt service. Net cash to borrower is +$1,778,415 (loan less $4,500,000 payoff, $64,075 origination fee, $65,000 closing costs). Downside: EGI -5% NOI $597,925; combined EGI -5% and sizing rate +100 bps maximum loan $5,338,641. Unit 101 lease: $1,575/month, expiry 2027-06-30, $1,200 deposit, conditional renewal option not evidenced as exercised. The $45,600 insurance figure is a plan allowance; no insurer document was delivered, so a verified renewal premium remains unknown. Delivered: XLSX workbook (artifacts/underwriting-v1.xlsx, 8 sheets, 164 live formulas, editable cap rate/sizing rate/EGI with a Map sheet) and financing memorandum PDF (artifacts/memorandum-v2.pdf, 8 pages).\",\"qualifications\":[\"Insurance evidence is unresolved: Property-and-Plan.pdf p.2 asserts a fictional insurer renewal confirmation dated 2026-08-25 at $45,600 and instructs its use, but no insurer certificate, binder, quote or invoice is included in the packet. $45,600 is therefore used as a directed plan allowance in underwriting, while verified_renewal_insurance is reported as unknown (null). T12 actual insurance was $40,800.\",\"The underwriting plan is a supplied scenario, not a lender-approved forecast. It implies lease-up of the 15 vacant 1,100 SF units (38.2% of area); no signed leases, LOIs, pipeline or absorption evidence was supplied. Underwritten NOI before reserves ($647,395) is roughly double T12 NOI before reserves ($320,000), and underwritten GPR ($1,056,000) exceeds T12 GPR ($1,036,800) by $19,200.\",\"Historical T12 was not forced to reconcile to the point-in-time rent roll, per the plan's instruction. Annualized contractual rent from the rent roll is $672,300 and was not substituted for either the T12 or the underwritten revenue.\",\"Only one executed lease (premises 101) was delivered. Rents and expiries for the other 32 occupied units rest on the rent roll alone; no amendments were delivered for any unit, so effective base rent equals printed base rent.\",\"No renewal-option exercise notice, landlord acknowledgment or amendment exists in the packet for unit 101, so the current expiry is not extended beyond 2027-06-30.\",\"No appraisal, market comparables, rent survey, environmental/engineering report, property condition report, sponsor financials, guaranty, title, tax bill or completed credit approval was supplied. Indicative value is a mechanical capitalization of scenario NOI at the term-sheet cap rate and is not an appraised value.\",\"The term sheet is expressly nonbinding; this memorandum is an internal-review document, not a credit commitment, appraisal or legal opinion. The T12 is cash-basis and unaudited.\",\"Sizing uses unrounded intermediates; currency shown to the dollar is rounded for readers only. Maturity (60 months) occurs only 24 months after interest-only ends, so debt service steps up from $400,468 to about $473,424 annually at the contract rate in month 37.\"],\"fields\":[{\"id\":\"space_count\",\"value\":48,\"evidence\":[\"Rent-Roll.xlsx, worksheet 'Rent Roll', unit rows 7-54 (units 101-148)\"],\"calculation\":\"COUNTA of unit rows 7-54 = 48\"},{\"id\":\"occupied_count\",\"value\":33,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' Status column F, rows 7-39 'Occupied'; rows 40-54 'Vacant'\"],\"calculation\":\"COUNTIF(Status='Occupied') = 33\"},{\"id\":\"total_area_sf\",\"value\":43200,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' column E, rows 7-54\"],\"calculation\":\"24 x 700 + 24 x 1,100 = 16,800 + 26,400 = 43,200\"},{\"id\":\"occupied_area_sf\",\"value\":26700,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' rows 7-39 (occupied)\"],\"calculation\":\"24 x 700 + 9 x 1,100 = 16,800 + 9,900 = 26,700\"},{\"id\":\"occupancy_count_pct\",\"value\":68.75,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' rows 7-54\"],\"calculation\":\"33 / 48 x 100 = 68.75\"},{\"id\":\"occupancy_area_pct\",\"value\":61.81,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' rows 7-54, column E\"],\"calculation\":\"26,700 / 43,200 x 100 = 61.8056\"},{\"id\":\"rent_roll_monthly_base\",\"value\":56025,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' column G, rows 7-39; rows 40-54 blank (vacant, note at row 57)\"],\"calculation\":\"24 x 1,575 + 9 x 2,025 = 37,800 + 18,225 = 56,025\"},{\"id\":\"effective_monthly_base\",\"value\":56025,\"evidence\":[\"Rent-Roll.xlsx 'Rent Roll' column G; Lease-File.pdf p.1 sections 3 and 6 (base rent $1,575/month for 101; a signed amendment would be required to modify a rent schedule; none delivered)\"],\"calculation\":\"No executed amendment delivered for any unit; unit 101 lease rent ($1,575) equals rent roll, so effective = printed = $56,025\"},{\"id\":\"t12_egi\",\"value\":691200,\"evidence\":[\"T12-Statement.pdf p.2, Annual column (GPR 1,036,800; vacancy -302,400; concessions -64,800; bad debt -8,400; other income 30,000)\"],\"calculation\":\"1,036,800 - 302,400 - 64,800 - 8,400 + 30,000 = 691,200\"},{\"id\":\"t12_operating_expenses\",\"value\":371200,\"evidence\":[\"T12-Statement.pdf p.2 Annual column expense rows; Property-and-Plan.pdf p.1 (debt, capex, depreciation are not operating expenses)\"],\"calculation\":\"132,000 + 40,800 + 33,600 + 54,000 + 55,200 + 27,600 + 28,000 = 371,200 (excludes reserves 14,400, capex 184,000, P&I 294,000, depreciation 180,000)\"},{\"id\":\"t12_noi_before_reserves\",\"value\":320000,\"evidence\":[\"T12-Statement.pdf p.2 Annual column\"],\"calculation\":\"691,200 - 371,200 = 320,000\"},{\"id\":\"t12_reserves\",\"value\":14400,\"evidence\":[\"T12-Statement.pdf p.2, 'Replacement reserves (below NOI)' Annual = 14,400\"],\"calculation\":\"Sum of monthly reserves = 14,400 as printed\"},{\"id\":\"t12_ncf\",\"value\":305600,\"evidence\":[\"T12-Statement.pdf p.2; Property-and-Plan.pdf p.1 (owner may call cash flow after reserves 'property NOI')\"],\"calculation\":\"320,000 - 14,400 = 305,600\"},{\"id\":\"uw_egi\",\"value\":1025280,\"evidence\":[\"Property-and-Plan.pdf p.2 (GPR $1,056,000; combined revenue loss 7.00%; other income $43,200 added after loss)\"],\"calculation\":\"1,056,000 x (1 - 0.07) = 982,080; + 43,200 = 1,025,280\"},{\"id\":\"uw_management_fee\",\"value\":35884.8,\"evidence\":[\"Property-and-Plan.pdf p.2 (greater of T12 actual and 3.50% of underwritten EGI); T12-Statement.pdf p.2 (T12 management fee 28,000)\"],\"calculation\":\"MAX(28,000, 0.035 x 1,025,280 = 35,884.80) = 35,884.80\"},{\"id\":\"uw_operating_expenses\",\"value\":377884.8,\"evidence\":[\"Property-and-Plan.pdf p.2 expense table (taxes 138,000; insurance 45,600 allowance; utilities 33,600 T12; R&M T12 54,000 less 12,000 one-time casualty; payroll 55,200; admin 27,600)\"],\"calculation\":\"138,000 + 45,600 + 33,600 + 42,000 + 55,200 + 27,600 + 35,884.80 = 377,884.80\"},{\"id\":\"uw_noi_before_reserves\",\"value\":647395.2,\"evidence\":[\"Property-and-Plan.pdf p.2; workbook Underwriting!B18\"],\"calculation\":\"1,025,280 - 377,884.80 = 647,395.20\"},{\"id\":\"uw_reserves\",\"value\":15600,\"evidence\":[\"Property-and-Plan.pdf p.2 ($325.00 per unit per year, deducted after NOI); Rent-Roll.xlsx 48 units\"],\"calculation\":\"325 x 48 = 15,600\"},{\"id\":\"uw_ncf\",\"value\":631795.2,\"evidence\":[\"Property-and-Plan.pdf p.2; workbook Underwriting!B20\"],\"calculation\":\"647,395.20 - 15,600 = 631,795.20\"},{\"id\":\"capitalization_value\",\"value\":11259046.96,\"evidence\":[\"Lender-Terms.pdf p.1 (Valuation: underwritten NOI BEFORE reserves / 5.75% cap rate; no appraisal implied)\"],\"calculation\":\"647,395.20 / 0.0575 = 11,259,046.96\"},{\"id\":\"contract_rate\",\"value\":0.0625,\"evidence\":[\"Lender-Terms.pdf p.1, 'Contract rate 6.25% fixed annual contractual rate'\"],\"calculation\":\"As stated\"},{\"id\":\"sizing_rate\",\"value\":0.065,\"evidence\":[\"Lender-Terms.pdf p.1, 'Sizing rate: greater of current contractual rate and 6.50% underwriting floor'\"],\"calculation\":\"MAX(6.25%, 6.50%) = 6.50%\"},{\"id\":\"annual_debt_constant\",\"value\":0.0758481628,\"evidence\":[\"Lender-Terms.pdf p.1 (30-year monthly amortization; annual debt service = 12 monthly payments)\"],\"calculation\":\"12 x PMT(0.065/12, 360, 1) = 12 x 0.006320680 = 0.07584816281916 per $1 of principal\"},{\"id\":\"ltv_limit\",\"value\":6755428.17,\"evidence\":[\"Lender-Terms.pdf p.1 (LTV 60.00% of indicative value)\"],\"calculation\":\"0.60 x 11,259,046.96 = 6,755,428.17\"},{\"id\":\"dscr_limit\",\"value\":6407489.51,\"evidence\":[\"Lender-Terms.pdf p.1 (Minimum 1.30x using NCF AFTER reserves / annual amortizing debt service at sizing rate)\"],\"calculation\":\"(631,795.20 / 1.30) / 0.07584816281916 = 485,996.31 / 0.07584816 = 6,407,489.51\"},{\"id\":\"debt_yield_limit\",\"value\":7019946.67,\"evidence\":[\"Lender-Terms.pdf p.1 (Debt yield minimum 9.00%; numerator is underwritten NCF AFTER reserves)\"],\"calculation\":\"631,795.20 / 0.09 = 7,019,946.67\"},{\"id\":\"maximum_loan\",\"value\":6407489.51,\"evidence\":[\"Lender-Terms.pdf p.1 (Loan ceiling: lowest of LTV, DSCR and debt-yield constraints; no separate dollar cap); workbook Loan Sizing!B11\"],\"calculation\":\"MIN(6,755,428.17; 6,407,489.51; 7,019,946.67) = 6,407,489.51\"},{\"id\":\"binding_constraint\",\"value\":\"DSCR\",\"evidence\":[\"Workbook Loan Sizing!B12; Lender-Terms.pdf p.1\"],\"calculation\":\"DSCR constraint is the lowest of the three\"},{\"id\":\"sizing_annual_debt_service\",\"value\":485996.31,\"evidence\":[\"Lender-Terms.pdf p.1 (amortizing debt service at sizing rate, 12 monthly payments)\"],\"calculation\":\"6,407,489.51 x 0.07584816281916 = 485,996.31\"},{\"id\":\"sizing_dscr\",\"value\":1.3,\"evidence\":[\"Lender-Terms.pdf p.1; workbook Loan Sizing!B15\"],\"calculation\":\"631,795.20 / 485,996.31 = 1.300 (DSCR binding, at the minimum)\"},{\"id\":\"sizing_debt_yield\",\"value\":0.0986,\"evidence\":[\"Lender-Terms.pdf p.1 (numerator is underwritten NCF after reserves); workbook Loan Sizing!B16\"],\"calculation\":\"631,795.20 / 6,407,489.51 = 0.098603\"},{\"id\":\"first_year_debt_service\",\"value\":400468.09,\"evidence\":[\"Lender-Terms.pdf p.1 (6.25% contract rate; interest-only period 36 months); workbook Loan Sizing!B18\"],\"calculation\":\"Year 1 is inside the 36-month IO period: 6,407,489.51 x 6.25% = 400,468.09 ($33,372.34/month)\"},{\"id\":\"cash_to_borrower\",\"value\":1778414.62,\"evidence\":[\"Property-and-Plan.pdf p.1 (payoff $4,500,000; fixed closing costs $65,000); Lender-Terms.pdf p.1 (1.00% origination fee on actual initial principal)\"],\"calculation\":\"6,407,489.51 - 4,500,000 - (0.01 x 6,407,489.51 = 64,074.90) - 65,000 = +1,778,414.62 (cash out to borrower)\"},{\"id\":\"stress_uw_noi\",\"value\":597925.44,\"evidence\":[\"Property-and-Plan.pdf p.2 sensitivity instruction (reduce total underwritten EGI by 5%, recompute management minimum, hold other expenses and reserves constant); workbook Sensitivity!C16\"],\"calculation\":\"EGI 1,025,280 x 0.95 = 974,016; management MAX(28,000, 0.035 x 974,016 = 34,090.56) = 34,090.56; other opex 342,000; total opex 376,090.56; NOI = 974,016 - 376,090.56 = 597,925.44\"},{\"id\":\"stress_maximum_loan\",\"value\":5338641.2,\"evidence\":[\"Property-and-Plan.pdf p.2 (combined downside: EGI -5% and sizing rate +100 bps, cap rate unchanged); workbook Sensitivity!E26\"],\"calculation\":\"Stress NCF = 597,925.44 - 15,600 = 582,325.44. Value = 597,925.44/0.0575 = 10,398,703.30 -> LTV 6,239,221.98. Constant at 7.50% = 0.08390574103; DSCR limit = (582,325.44/1.30)/0.08390574103 = 5,338,641.20. Debt yield limit = 582,325.44/0.09 = 6,470,282.67. MIN = 5,338,641.20 (DSCR binding)\"},{\"id\":\"subject_lease_monthly_rent\",\"value\":1575,\"evidence\":[\"Lease-File.pdf p.1 section 3 ('Base rent is $1,575 per month as of August 31, 2026'); Rent-Roll.xlsx 'Rent Roll' G7 = 1575\"],\"calculation\":\"Executed lease and rent roll agree; no amendment delivered\"},{\"id\":\"subject_lease_expiry\",\"value\":\"2027-06-30\",\"evidence\":[\"Lease-File.pdf p.1 section 2 ('The initial term expires 2027-06-30'); Rent-Roll.xlsx I7 = 2027-06-30; Lease-File.pdf section 5 (do not extend on the existence of the option alone)\"],\"calculation\":\"Authoritative executed expiry; renewal option not evidenced as exercised\"},{\"id\":\"subject_lease_deposit\",\"value\":1200,\"evidence\":[\"Lease-File.pdf p.1 section 4 ('The security deposit is $1,200 and is not prepaid rent or recurring income')\"],\"calculation\":\"As stated; excluded from income\"},{\"id\":\"verified_renewal_insurance\",\"value\":null,\"evidence\":[\"Property-and-Plan.pdf p.2 states a fictional insurer renewal confirmation dated August 25, 2026 at $45,600 and instructs its use in underwriting, but the packet contains no insurer certificate, binder, quote or invoice\",\"T12-Statement.pdf p.2 shows T12 actual insurance of $40,800\"],\"calculation\":\"Unknown: no independent insurer document was delivered. The $45,600 used in underwriting is the scenario/plan allowance, not a verified premium\"},{\"id\":\"renewal_option_exercised\",\"value\":\"No - not evidenced\",\"evidence\":[\"Lease-File.pdf p.1 section 5 ('No exercise notice, landlord acknowledgment or amendment exercising this option is included in the packet')\",\"Rent-Roll.xlsx 'Rent Roll' C59 ('no option exercise notice is included')\"],\"calculation\":\"No exercise evidence delivered; option treated as unexercised and expiry not extended\"},{\"id\":\"prepayment_friction\",\"value\":\"1% of outstanding principal if prepaid in years 1-2; no stated bank penalty thereafter. No swap is assumed in this fictional scenario, so no swap termination/breakage payment applies. At the maximum loan a year-1 prepayment fee would be about $64,075 (1% of then-outstanding principal), plus accrued interest and any customary costs.\",\"evidence\":[\"Lender-Terms.pdf p.1, Prepayment row ('1% of outstanding principal if prepaid in years 1-2; no stated bank penalty thereafter. No swap is assumed in this fictional scenario.')\"],\"calculation\":\"1% x 6,407,489.51 = 64,074.90 illustrative year-1 fee at initial principal\"}],\"blocked\":[]}",
+  "arguments": {
+    "summary": "Cedar Landing (48-unit multifamily, fictional) refinance analysis as of 2026-08-31. Historical T12 (Sep-2025 to Aug-2026) EGI $691,200, opex $371,200, NOI before reserves $320,000, reserves $14,400, NCF $305,600 \u2014 kept strictly separate from the supplied underwriting scenario (Sep-2026 forward): EGI $1,025,280 (GPR $1,056,000 less 7.00% combined loss plus $43,200 other income), normalized management fee $35,884.80 (3.50% of EGI > $28,000 T12 actual), opex before reserves $377,884.80, NOI before reserves $647,395.20, reserves $15,600 ($325 x 48 units), NCF $631,795.20. Indicative value at the 5.75% cap rate is $11,259,047. Occupancy from the dated rent roll is 33/48 units (68.75%) and 26,700/43,200 SF (61.81%); printed and effective monthly base rent are both $56,025 because no signed amendment was delivered. Sizing rate is 6.50% (greater of 6.25% contract rate and the 6.50% floor); annual debt constant 0.07584816 (30-yr monthly). Constraints: LTV $6,755,428; DSCR $6,407,490; debt yield $7,019,947 \u2014 maximum loan $6,407,490, DSCR binding, sizing DSCR 1.300x, sizing debt yield 9.86%, implied LTV 56.91%. First-year contractual debt service is interest-only at 6.25% = $400,468 (36-month IO), vs. $485,996 sizing debt service. Net cash to borrower is +$1,778,415 (loan less $4,500,000 payoff, $64,075 origination fee, $65,000 closing costs). Downside: EGI -5% NOI $597,925; combined EGI -5% and sizing rate +100 bps maximum loan $5,338,641. Unit 101 lease: $1,575/month, expiry 2027-06-30, $1,200 deposit, conditional renewal option not evidenced as exercised. The $45,600 insurance figure is a plan allowance; no insurer document was delivered, so a verified renewal premium remains unknown. Delivered: XLSX workbook (artifacts/underwriting-v1.xlsx, 8 sheets, 164 live formulas, editable cap rate/sizing rate/EGI with a Map sheet) and financing memorandum PDF (artifacts/memorandum-v2.pdf, 8 pages).",
+    "qualifications": [
+      "Insurance evidence is unresolved: Property-and-Plan.pdf p.2 asserts a fictional insurer renewal confirmation dated 2026-08-25 at $45,600 and instructs its use, but no insurer certificate, binder, quote or invoice is included in the packet. $45,600 is therefore used as a directed plan allowance in underwriting, while verified_renewal_insurance is reported as unknown (null). T12 actual insurance was $40,800.",
+      "The underwriting plan is a supplied scenario, not a lender-approved forecast. It implies lease-up of the 15 vacant 1,100 SF units (38.2% of area); no signed leases, LOIs, pipeline or absorption evidence was supplied. Underwritten NOI before reserves ($647,395) is roughly double T12 NOI before reserves ($320,000), and underwritten GPR ($1,056,000) exceeds T12 GPR ($1,036,800) by $19,200.",
+      "Historical T12 was not forced to reconcile to the point-in-time rent roll, per the plan's instruction. Annualized contractual rent from the rent roll is $672,300 and was not substituted for either the T12 or the underwritten revenue.",
+      "Only one executed lease (premises 101) was delivered. Rents and expiries for the other 32 occupied units rest on the rent roll alone; no amendments were delivered for any unit, so effective base rent equals printed base rent.",
+      "No renewal-option exercise notice, landlord acknowledgment or amendment exists in the packet for unit 101, so the current expiry is not extended beyond 2027-06-30.",
+      "No appraisal, market comparables, rent survey, environmental/engineering report, property condition report, sponsor financials, guaranty, title, tax bill or completed credit approval was supplied. Indicative value is a mechanical capitalization of scenario NOI at the term-sheet cap rate and is not an appraised value.",
+      "The term sheet is expressly nonbinding; this memorandum is an internal-review document, not a credit commitment, appraisal or legal opinion. The T12 is cash-basis and unaudited.",
+      "Sizing uses unrounded intermediates; currency shown to the dollar is rounded for readers only. Maturity (60 months) occurs only 24 months after interest-only ends, so debt service steps up from $400,468 to about $473,424 annually at the contract rate in month 37."
+    ],
+    "fields": [
+      {
+        "id": "space_count",
+        "value": 48,
+        "evidence": [
+          "Rent-Roll.xlsx, worksheet 'Rent Roll', unit rows 7-54 (units 101-148)"
+        ],
+        "calculation": "COUNTA of unit rows 7-54 = 48"
+      },
+      {
+        "id": "occupied_count",
+        "value": 33,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' Status column F, rows 7-39 'Occupied'; rows 40-54 'Vacant'"
+        ],
+        "calculation": "COUNTIF(Status='Occupied') = 33"
+      },
+      {
+        "id": "total_area_sf",
+        "value": 43200,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' column E, rows 7-54"
+        ],
+        "calculation": "24 x 700 + 24 x 1,100 = 16,800 + 26,400 = 43,200"
+      },
+      {
+        "id": "occupied_area_sf",
+        "value": 26700,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' rows 7-39 (occupied)"
+        ],
+        "calculation": "24 x 700 + 9 x 1,100 = 16,800 + 9,900 = 26,700"
+      },
+      {
+        "id": "occupancy_count_pct",
+        "value": 68.75,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' rows 7-54"
+        ],
+        "calculation": "33 / 48 x 100 = 68.75"
+      },
+      {
+        "id": "occupancy_area_pct",
+        "value": 61.81,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' rows 7-54, column E"
+        ],
+        "calculation": "26,700 / 43,200 x 100 = 61.8056"
+      },
+      {
+        "id": "rent_roll_monthly_base",
+        "value": 56025,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' column G, rows 7-39; rows 40-54 blank (vacant, note at row 57)"
+        ],
+        "calculation": "24 x 1,575 + 9 x 2,025 = 37,800 + 18,225 = 56,025"
+      },
+      {
+        "id": "effective_monthly_base",
+        "value": 56025,
+        "evidence": [
+          "Rent-Roll.xlsx 'Rent Roll' column G; Lease-File.pdf p.1 sections 3 and 6 (base rent $1,575/month for 101; a signed amendment would be required to modify a rent schedule; none delivered)"
+        ],
+        "calculation": "No executed amendment delivered for any unit; unit 101 lease rent ($1,575) equals rent roll, so effective = printed = $56,025"
+      },
+      {
+        "id": "t12_egi",
+        "value": 691200,
+        "evidence": [
+          "T12-Statement.pdf p.2, Annual column (GPR 1,036,800; vacancy -302,400; concessions -64,800; bad debt -8,400; other income 30,000)"
+        ],
+        "calculation": "1,036,800 - 302,400 - 64,800 - 8,400 + 30,000 = 691,200"
+      },
+      {
+        "id": "t12_operating_expenses",
+        "value": 371200,
+        "evidence": [
+          "T12-Statement.pdf p.2 Annual column expense rows; Property-and-Plan.pdf p.1 (debt, capex, depreciation are not operating expenses)"
+        ],
+        "calculation": "132,000 + 40,800 + 33,600 + 54,000 + 55,200 + 27,600 + 28,000 = 371,200 (excludes reserves 14,400, capex 184,000, P&I 294,000, depreciation 180,000)"
+      },
+      {
+        "id": "t12_noi_before_reserves",
+        "value": 320000,
+        "evidence": [
+          "T12-Statement.pdf p.2 Annual column"
+        ],
+        "calculation": "691,200 - 371,200 = 320,000"
+      },
+      {
+        "id": "t12_reserves",
+        "value": 14400,
+        "evidence": [
+          "T12-Statement.pdf p.2, 'Replacement reserves (below NOI)' Annual = 14,400"
+        ],
+        "calculation": "Sum of monthly reserves = 14,400 as printed"
+      },
+      {
+        "id": "t12_ncf",
+        "value": 305600,
+        "evidence": [
+          "T12-Statement.pdf p.2; Property-and-Plan.pdf p.1 (owner may call cash flow after reserves 'property NOI')"
+        ],
+        "calculation": "320,000 - 14,400 = 305,600"
+      },
+      {
+        "id": "uw_egi",
+        "value": 1025280,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 (GPR $1,056,000; combined revenue loss 7.00%; other income $43,200 added after loss)"
+        ],
+        "calculation": "1,056,000 x (1 - 0.07) = 982,080; + 43,200 = 1,025,280"
+      },
+      {
+        "id": "uw_management_fee",
+        "value": 35884.8,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 (greater of T12 actual and 3.50% of underwritten EGI); T12-Statement.pdf p.2 (T12 management fee 28,000)"
+        ],
+        "calculation": "MAX(28,000, 0.035 x 1,025,280 = 35,884.80) = 35,884.80"
+      },
+      {
+        "id": "uw_operating_expenses",
+        "value": 377884.8,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 expense table (taxes 138,000; insurance 45,600 allowance; utilities 33,600 T12; R&M T12 54,000 less 12,000 one-time casualty; payroll 55,200; admin 27,600)"
+        ],
+        "calculation": "138,000 + 45,600 + 33,600 + 42,000 + 55,200 + 27,600 + 35,884.80 = 377,884.80"
+      },
+      {
+        "id": "uw_noi_before_reserves",
+        "value": 647395.2,
+        "evidence": [
+          "Property-and-Plan.pdf p.2; workbook Underwriting!B18"
+        ],
+        "calculation": "1,025,280 - 377,884.80 = 647,395.20"
+      },
+      {
+        "id": "uw_reserves",
+        "value": 15600,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 ($325.00 per unit per year, deducted after NOI); Rent-Roll.xlsx 48 units"
+        ],
+        "calculation": "325 x 48 = 15,600"
+      },
+      {
+        "id": "uw_ncf",
+        "value": 631795.2,
+        "evidence": [
+          "Property-and-Plan.pdf p.2; workbook Underwriting!B20"
+        ],
+        "calculation": "647,395.20 - 15,600 = 631,795.20"
+      },
+      {
+        "id": "capitalization_value",
+        "value": 11259046.96,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (Valuation: underwritten NOI BEFORE reserves / 5.75% cap rate; no appraisal implied)"
+        ],
+        "calculation": "647,395.20 / 0.0575 = 11,259,046.96"
+      },
+      {
+        "id": "contract_rate",
+        "value": 0.0625,
+        "evidence": [
+          "Lender-Terms.pdf p.1, 'Contract rate 6.25% fixed annual contractual rate'"
+        ],
+        "calculation": "As stated"
+      },
+      {
+        "id": "sizing_rate",
+        "value": 0.065,
+        "evidence": [
+          "Lender-Terms.pdf p.1, 'Sizing rate: greater of current contractual rate and 6.50% underwriting floor'"
+        ],
+        "calculation": "MAX(6.25%, 6.50%) = 6.50%"
+      },
+      {
+        "id": "annual_debt_constant",
+        "value": 0.0758481628,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (30-year monthly amortization; annual debt service = 12 monthly payments)"
+        ],
+        "calculation": "12 x PMT(0.065/12, 360, 1) = 12 x 0.006320680 = 0.07584816281916 per $1 of principal"
+      },
+      {
+        "id": "ltv_limit",
+        "value": 6755428.17,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (LTV 60.00% of indicative value)"
+        ],
+        "calculation": "0.60 x 11,259,046.96 = 6,755,428.17"
+      },
+      {
+        "id": "dscr_limit",
+        "value": 6407489.51,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (Minimum 1.30x using NCF AFTER reserves / annual amortizing debt service at sizing rate)"
+        ],
+        "calculation": "(631,795.20 / 1.30) / 0.07584816281916 = 485,996.31 / 0.07584816 = 6,407,489.51"
+      },
+      {
+        "id": "debt_yield_limit",
+        "value": 7019946.67,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (Debt yield minimum 9.00%; numerator is underwritten NCF AFTER reserves)"
+        ],
+        "calculation": "631,795.20 / 0.09 = 7,019,946.67"
+      },
+      {
+        "id": "maximum_loan",
+        "value": 6407489.51,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (Loan ceiling: lowest of LTV, DSCR and debt-yield constraints; no separate dollar cap); workbook Loan Sizing!B11"
+        ],
+        "calculation": "MIN(6,755,428.17; 6,407,489.51; 7,019,946.67) = 6,407,489.51"
+      },
+      {
+        "id": "binding_constraint",
+        "value": "DSCR",
+        "evidence": [
+          "Workbook Loan Sizing!B12; Lender-Terms.pdf p.1"
+        ],
+        "calculation": "DSCR constraint is the lowest of the three"
+      },
+      {
+        "id": "sizing_annual_debt_service",
+        "value": 485996.31,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (amortizing debt service at sizing rate, 12 monthly payments)"
+        ],
+        "calculation": "6,407,489.51 x 0.07584816281916 = 485,996.31"
+      },
+      {
+        "id": "sizing_dscr",
+        "value": 1.3,
+        "evidence": [
+          "Lender-Terms.pdf p.1; workbook Loan Sizing!B15"
+        ],
+        "calculation": "631,795.20 / 485,996.31 = 1.300 (DSCR binding, at the minimum)"
+      },
+      {
+        "id": "sizing_debt_yield",
+        "value": 0.0986,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (numerator is underwritten NCF after reserves); workbook Loan Sizing!B16"
+        ],
+        "calculation": "631,795.20 / 6,407,489.51 = 0.098603"
+      },
+      {
+        "id": "first_year_debt_service",
+        "value": 400468.09,
+        "evidence": [
+          "Lender-Terms.pdf p.1 (6.25% contract rate; interest-only period 36 months); workbook Loan Sizing!B18"
+        ],
+        "calculation": "Year 1 is inside the 36-month IO period: 6,407,489.51 x 6.25% = 400,468.09 ($33,372.34/month)"
+      },
+      {
+        "id": "cash_to_borrower",
+        "value": 1778414.62,
+        "evidence": [
+          "Property-and-Plan.pdf p.1 (payoff $4,500,000; fixed closing costs $65,000); Lender-Terms.pdf p.1 (1.00% origination fee on actual initial principal)"
+        ],
+        "calculation": "6,407,489.51 - 4,500,000 - (0.01 x 6,407,489.51 = 64,074.90) - 65,000 = +1,778,414.62 (cash out to borrower)"
+      },
+      {
+        "id": "stress_uw_noi",
+        "value": 597925.44,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 sensitivity instruction (reduce total underwritten EGI by 5%, recompute management minimum, hold other expenses and reserves constant); workbook Sensitivity!C16"
+        ],
+        "calculation": "EGI 1,025,280 x 0.95 = 974,016; management MAX(28,000, 0.035 x 974,016 = 34,090.56) = 34,090.56; other opex 342,000; total opex 376,090.56; NOI = 974,016 - 376,090.56 = 597,925.44"
+      },
+      {
+        "id": "stress_maximum_loan",
+        "value": 5338641.2,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 (combined downside: EGI -5% and sizing rate +100 bps, cap rate unchanged); workbook Sensitivity!E26"
+        ],
+        "calculation": "Stress NCF = 597,925.44 - 15,600 = 582,325.44. Value = 597,925.44/0.0575 = 10,398,703.30 -> LTV 6,239,221.98. Constant at 7.50% = 0.08390574103; DSCR limit = (582,325.44/1.30)/0.08390574103 = 5,338,641.20. Debt yield limit = 582,325.44/0.09 = 6,470,282.67. MIN = 5,338,641.20 (DSCR binding)"
+      },
+      {
+        "id": "subject_lease_monthly_rent",
+        "value": 1575,
+        "evidence": [
+          "Lease-File.pdf p.1 section 3 ('Base rent is $1,575 per month as of August 31, 2026'); Rent-Roll.xlsx 'Rent Roll' G7 = 1575"
+        ],
+        "calculation": "Executed lease and rent roll agree; no amendment delivered"
+      },
+      {
+        "id": "subject_lease_expiry",
+        "value": "2027-06-30",
+        "evidence": [
+          "Lease-File.pdf p.1 section 2 ('The initial term expires 2027-06-30'); Rent-Roll.xlsx I7 = 2027-06-30; Lease-File.pdf section 5 (do not extend on the existence of the option alone)"
+        ],
+        "calculation": "Authoritative executed expiry; renewal option not evidenced as exercised"
+      },
+      {
+        "id": "subject_lease_deposit",
+        "value": 1200,
+        "evidence": [
+          "Lease-File.pdf p.1 section 4 ('The security deposit is $1,200 and is not prepaid rent or recurring income')"
+        ],
+        "calculation": "As stated; excluded from income"
+      },
+      {
+        "id": "verified_renewal_insurance",
+        "value": null,
+        "evidence": [
+          "Property-and-Plan.pdf p.2 states a fictional insurer renewal confirmation dated August 25, 2026 at $45,600 and instructs its use in underwriting, but the packet contains no insurer certificate, binder, quote or invoice",
+          "T12-Statement.pdf p.2 shows T12 actual insurance of $40,800"
+        ],
+        "calculation": "Unknown: no independent insurer document was delivered. The $45,600 used in underwriting is the scenario/plan allowance, not a verified premium"
+      },
+      {
+        "id": "renewal_option_exercised",
+        "value": "No - not evidenced",
+        "evidence": [
+          "Lease-File.pdf p.1 section 5 ('No exercise notice, landlord acknowledgment or amendment exercising this option is included in the packet')",
+          "Rent-Roll.xlsx 'Rent Roll' C59 ('no option exercise notice is included')"
+        ],
+        "calculation": "No exercise evidence delivered; option treated as unexercised and expiry not extended"
+      },
+      {
+        "id": "prepayment_friction",
+        "value": "1% of outstanding principal if prepaid in years 1-2; no stated bank penalty thereafter. No swap is assumed in this fictional scenario, so no swap termination/breakage payment applies. At the maximum loan a year-1 prepayment fee would be about $64,075 (1% of then-outstanding principal), plus accrued interest and any customary costs.",
+        "evidence": [
+          "Lender-Terms.pdf p.1, Prepayment row ('1% of outstanding principal if prepaid in years 1-2; no stated bank penalty thereafter. No swap is assumed in this fictional scenario.')"
+        ],
+        "calculation": "1% x 6,407,489.51 = 64,074.90 illustrative year-1 fee at initial principal"
+      }
+    ],
+    "blocked": []
+  },
+  "result": {
+    "recorded": true,
+    "fields": 41,
+    "workbooks": 1,
+    "memos": 2
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.001
+}

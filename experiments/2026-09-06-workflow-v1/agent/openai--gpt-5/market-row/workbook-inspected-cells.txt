@@ -1,0 +1,94 @@
+Inputs | A1=Market Row | Underwriting Inputs
+Inputs | A3=Income assumptions
+Inputs | A4=Gross potential base rent (annual) | B4=657600
+Inputs | A5=Revenue loss % of GPR | B5=0.06
+Inputs | A6=Other income (annual) | B6=150000
+Inputs | A8=Management assumptions
+Inputs | A9=T12 management fee (annual) | B9=24000
+Inputs | A10=Management fee % of EGI | B10=0.04
+Inputs | A12=Operating expenses (UW)
+Inputs | A13=Real estate taxes (annual) | B13=90000
+Inputs | A14=Property insurance (annual) | B14=27600
+Inputs | A15=Utilities | B15=19200
+Inputs | A16=Repairs and maintenance (UW) | B16=24000
+Inputs | A17=Payroll / contract labor | B17=18000
+Inputs | A18=Administrative / legal | B18=14400
+Inputs | A20=Reserves and area
+Inputs | A21=Total rentable SF | B21=23000
+Inputs | A22=Reserves $/SF/year | B22=0.2
+Inputs | A24=Rates and sizing
+Inputs | A25=Cap rate | B25=0.065
+Inputs | A26=Debt yield minimum | B26=0.09
+Inputs | A27=Contract rate | B27=0.0625
+Inputs | A28=Sizing rate | B28=0.065
+Inputs | A29=Amortization years | B29=25
+Inputs | A30=Interest-only months | B30=0
+Inputs | A32=Transaction costs
+Inputs | A33=Existing debt payoff | B33=3400000
+Inputs | A34=Fixed closing costs | B34=48000
+Inputs | A35=Origination fee % of loan | B35=0.01
+Inputs | A37=Evidence inputs
+Inputs | A38=Verified renewal insurance (annual) | B38=27600
+T12 | A1=Market Row | Trailing twelve months (Sep 2025 - Aug 2026)
+T12 | A3=Gross potential base rent | B3=645600
+T12 | A4=Vacancy loss | B4=-46800
+T12 | A5=Concessions | B5=-14400
+T12 | A6=Bad debt | B6=-3600
+T12 | A7=Other income / recoveries | B7=142800
+T12 | A8=Effective gross income (EGI) | B8==SUM(B3:B7)
+T12 | A10=Operating expenses (above NOI)
+T12 | A11=Real estate taxes | B11=86400
+T12 | A12=Property insurance | B12=25200
+T12 | A13=Utilities | B13=19200
+T12 | A14=Repairs and maintenance | B14=28800
+T12 | A15=Payroll / contract labor | B15=18000
+T12 | A16=Administrative / legal | B16=14400
+T12 | A17=Management fee | B17=24000
+T12 | A18=Total operating expenses | B18==SUM(B11:B17)
+T12 | A20=NOI before reserves | B20==B8-B18
+T12 | A21=Replacement reserves (T12) | B21=9200
+T12 | A22=NCF after reserves | B22==B20-B21
+Underwriting | A1=Market Row | Underwriting (Sep 2026 forward)
+Underwriting | A3=Gross potential base rent (annual)
+Underwriting | A4==Inputs!B4
+Underwriting | A5=Revenue loss % of GPR
+Underwriting | A6==Inputs!B5
+Underwriting | A7=Other income (annual)
+Underwriting | A8==Inputs!B6
+Underwriting | A9=Effective gross income (EGI)
+Underwriting | A10==A4 - (A4*A6) + A8
+Underwriting | A12=Operating expenses (UW)
+Underwriting | A13=Real estate taxes
+Underwriting | A14==Inputs!B13
+Underwriting | A15=Property insurance
+Underwriting | A16==Inputs!B14
+Underwriting | A17=Utilities
+Underwriting | A18==Inputs!B15
+Underwriting | A19=Repairs and maintenance
+Underwriting | A20==Inputs!B16
+Underwriting | A21=Payroll / contract labor
+Underwriting | A22==Inputs!B17
+Underwriting | A23=Administrative / legal
+Underwriting | A24==Inputs!B18
+Underwriting | A25=Subtotal opex ex mgmt
+Underwriting | A26==SUM(A14,A16,A18,A20,A22,A24)
+Underwriting | A27=Management fee % of EGI
+Underwriting | A28==Inputs!B10
+Underwriting | A29=T12 management fee (actual)
+Underwriting | A30==Inputs!B9
+Underwriting | A31=Calculated mgmt @ % of EGI
+Underwriting | A32==A10*A28
+Underwriting | A33=Management fee (greater of)
+Underwriting | A34==MAX(A30,A32)
+Underwriting | A35=Total operating expenses
+Underwriting | A36==A26+A34
+Underwriting | A37=NOI before reserves
+Underwriting | A38==A10-A36
+Underwriting | A39=Reserves $/SF/year
+Underwriting | A40==Inputs!B22
+Underwriting | A41=Total rentable SF
+Underwriting | A42==Inputs!B21
+Underwriting | A43=Replacement reserves
+Underwriting | A44==A40*A42
+Underwriting | A45=NCF after reserves
+Underwriting | A46==A38-A44

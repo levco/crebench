@@ -1,0 +1,120 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01DzecouzGB3SKCC8mcrFRd5",
+  "arguments_raw": "{\"steps\":[{\"name\":\"t12_egi\",\"expression\":\"852000-150000-36000-6000+186000\"},{\"name\":\"t12_opex\",\"expression\":\"126000+30000+12000+24000+18000+18000+25200\"},{\"name\":\"t12_noi\",\"expression\":\"t12_egi-t12_opex\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi-17000\"},{\"name\":\"uw_egi\",\"expression\":\"900000*0.92+195000\"},{\"name\":\"mgmt\",\"expression\":\"max(25200,0.03*uw_egi)\"},{\"name\":\"uw_opex\",\"expression\":\"132000+33600+12000+18000+18000+18000+mgmt\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi-uw_opex\"},{\"name\":\"reserves\",\"expression\":\"0.20*85000\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-reserves\"},{\"name\":\"value\",\"expression\":\"uw_noi/0.0675\"},{\"name\":\"constant\",\"expression\":\"-pmt(0.0725/12,300,1)*12\"},{\"name\":\"ltv_limit\",\"expression\":\"0.60*value\"},{\"name\":\"dscr_limit\",\"expression\":\"uw_ncf/(1.30*constant)\"},{\"name\":\"dy_limit\",\"expression\":\"uw_ncf/0.10\"},{\"name\":\"max_loan\",\"expression\":\"min(ltv_limit,dscr_limit,dy_limit)\"},{\"name\":\"sizing_ads\",\"expression\":\"max_loan*constant\"},{\"name\":\"sizing_dscr\",\"expression\":\"uw_ncf/sizing_ads\"},{\"name\":\"sizing_dy\",\"expression\":\"uw_ncf/max_loan\"},{\"name\":\"first_year_ds\",\"expression\":\"max_loan*0.0675\"},{\"name\":\"cash_to_borrower\",\"expression\":\"max_loan-4200000-0.0125*max_loan-70000\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "t12_egi",
+        "expression": "852000-150000-36000-6000+186000"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "126000+30000+12000+24000+18000+18000+25200"
+      },
+      {
+        "name": "t12_noi",
+        "expression": "t12_egi-t12_opex"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi-17000"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "900000*0.92+195000"
+      },
+      {
+        "name": "mgmt",
+        "expression": "max(25200,0.03*uw_egi)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "132000+33600+12000+18000+18000+18000+mgmt"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi-uw_opex"
+      },
+      {
+        "name": "reserves",
+        "expression": "0.20*85000"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-reserves"
+      },
+      {
+        "name": "value",
+        "expression": "uw_noi/0.0675"
+      },
+      {
+        "name": "constant",
+        "expression": "-pmt(0.0725/12,300,1)*12"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.60*value"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "uw_ncf/(1.30*constant)"
+      },
+      {
+        "name": "dy_limit",
+        "expression": "uw_ncf/0.10"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(ltv_limit,dscr_limit,dy_limit)"
+      },
+      {
+        "name": "sizing_ads",
+        "expression": "max_loan*constant"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "uw_ncf/sizing_ads"
+      },
+      {
+        "name": "sizing_dy",
+        "expression": "uw_ncf/max_loan"
+      },
+      {
+        "name": "first_year_ds",
+        "expression": "max_loan*0.0675"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "max_loan-4200000-0.0125*max_loan-70000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "t12_egi": 846000,
+      "t12_opex": 253200,
+      "t12_noi": 592800,
+      "t12_ncf": 575800,
+      "uw_egi": 1023000.0,
+      "mgmt": 30690.0,
+      "uw_opex": 262290.0,
+      "uw_noi": 760710.0,
+      "reserves": 17000.0,
+      "uw_ncf": 743710.0,
+      "value": 11269777.777777776,
+      "constant": 0.08673682369165958,
+      "ltv_limit": 6761866.666666665,
+      "dscr_limit": 6595637.135829609,
+      "dy_limit": 7437100.0,
+      "max_loan": 6595637.135829609,
+      "sizing_ads": 572084.6153846154,
+      "sizing_dscr": 1.3,
+      "sizing_dy": 0.11275787079915746,
+      "first_year_ds": 445205.5066684986,
+      "cash_to_borrower": 2243191.6716317385
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.001
+}

@@ -1,0 +1,41 @@
+Inputs | A1=Juniper Flats | Underwriting Inputs
+Inputs | A3=As-of date | B3=2026-08-31
+Inputs | A5=Underwritten EGI (annual) | B5=854160
+Inputs | A6=Valuation cap rate | B6=0.0575
+Inputs | A7=Sizing rate (annual) | B7=0.0625
+Inputs | A8=Contractual rate (annual) | B8=0.059
+Inputs | A9=Interest-only months | B9=24
+Inputs | A10=Amortization (years) | B10=30
+Inputs | A12=Unit count | B12=36
+Inputs | A13=Reserves per unit per year | B13=300
+Inputs | A15=Existing debt payoff | B15=3300000
+Inputs | A16=Fixed closing costs | B16=45000
+Inputs | A17=Origination fee rate | B17=0.0075
+Inputs | A19=T12 actual management fee | B19=30000
+Inputs | A20=Management fee minimum percent of EGI | B20=0.03
+Inputs | A22=UW: Real estate taxes | B22=112000
+Inputs | A23=UW: Property insurance (renewal) | B23=33600
+Inputs | A24=UW: Utilities | B24=28800
+Inputs | A25=UW: Repairs and maintenance (adj) | B25=40200
+Inputs | A26=UW: Payroll / contract labor | B26=42000
+Inputs | A27=UW: Administrative / legal | B27=21600
+Inputs | A29=Debt yield minimum | B29=0.085
+Inputs | A30=LTV maximum percent | B30=0.65
+T12 | A1=Juniper Flats | Trailing 12 months (Sep 2025 - Aug 2026)
+T12 | A3=Gross potential base rent | B3=840000
+T12 | A4=Vacancy loss | B4=-42000
+T12 | A5=Concessions | B5=-12000
+T12 | A6=Bad debt | B6=-4500
+T12 | A7=Other income / recoveries | B7=39600
+T12 | A9=Effective gross income (EGI) | B9==B3+B4+B5+B6+B7
+T12 | A11=Real estate taxes | B11=108000
+T12 | A12=Property insurance | B12=31200
+T12 | A13=Utilities | B13=28800
+T12 | A14=Repairs and maintenance | B14=46200
+T12 | A15=Payroll / contract labor | B15=42000
+T12 | A16=Administrative / legal | B16=21600
+T12 | A17=Management fee | B17=30000
+T12 | A19=Total operating expenses (before reserves) | B19==SUM(B11:B17)
+T12 | A21=NOI before reserves | B21==B9-B19
+T12 | A23=Replacement reserves | B23=10800
+T12 | A25=NCF after reserves | B25==B21-B23

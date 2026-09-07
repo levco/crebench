@@ -1,0 +1,323 @@
+{
+  "reviewer": "Codex author review with machine-assisted file inspection; not independent human validation",
+  "provider_blinded": false,
+  "rubric": "benchmarks/workflow-v1/RUBRIC.md",
+  "inspection_scope": "Full memo text and all page renders; original workbook input and source labels, historical totals after LibreOffice recalculation, live formulas and main underwriting rendering. Automatic base and perturbation checks in audit/.",
+  "summary": "All 39 headline source and financial checks pass. The delivered workbook recalculates but has no source citations and displays its debt constant with a negative sign. The memo preserves provisional insurance correctly; its rent-roll citations point to the wrong original rows.",
+  "workbook": [
+    {
+      "rubric_check": 2,
+      "passed": false,
+      "rationale": "The workbook has dates and labeled inputs but no source-file/page or worksheet/row citations.",
+      "evidence": "Every populated non-formula cell inspected; no PDF/XLSX source references."
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Historical and forward cash flows are separate and their totals reconcile.",
+      "evidence": "Recalculated historical sheet totals and original T12; independently tested underwriting outputs"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Main underwriting labels and numbers are visible and a reviewer can locate assumptions and decision outputs.",
+      "evidence": "Main underwriting sheet rendered at 1.3 scale; input and sizing cells inspected"
+    }
+  ],
+  "memo": [
+    {
+      "rubric_check": 1,
+      "passed": true,
+      "rationale": "A real PDF was downloaded and all pages rendered with readable main content.",
+      "evidence": "Original PDF and full-page render review"
+    },
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "The memo identifies the named property, August 31, 2026 as-of date and first-mortgage refinance purpose.",
+      "evidence": "PDF opening title, property table and recommendation"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Base loan, existing payoff, loan-based fee, fixed closing costs and net borrower cash reconcile to the supplied scenario.",
+      "evidence": "PDF sources/uses and independently checked key"
+    },
+    {
+      "rubric_check": 4,
+      "passed": true,
+      "rationale": "Historical T12 and forward underwriting are labeled separately, with NOI before reserves and NCF after reserves.",
+      "evidence": "PDF historical and underwriting tables; original T12 and plan"
+    },
+    {
+      "rubric_check": 5,
+      "passed": true,
+      "rationale": "Loan constraints, binding minimum and debt-service/coverage figures follow the lender terms.",
+      "evidence": "PDF financing/sizing section; Lender-Terms.pdf"
+    },
+    {
+      "rubric_check": 6,
+      "passed": true,
+      "rationale": "Occupancy and the subject lease are discussed against the supplied rent roll and controlling executed document.",
+      "evidence": "PDF property/lease discussion; Rent-Roll.xlsx and Lease-File.pdf"
+    },
+    {
+      "rubric_check": 7,
+      "passed": true,
+      "rationale": "Sensitivity, missing diligence and financing risks are disclosed without unsupported numerical conclusions.",
+      "evidence": "PDF sensitivity and risk/limitations sections"
+    },
+    {
+      "rubric_check": 8,
+      "passed": true,
+      "rationale": "The supplied forecast, lender conventions and any provisional items are labeled as assumptions.",
+      "evidence": "PDF assumptions and limitations; Property-and-Plan.pdf"
+    },
+    {
+      "rubric_check": 9,
+      "passed": false,
+      "rationale": "Rent-roll citations point to the model-created workbook layout, not the original source.",
+      "evidence": "Meadow PDF p.5 says rows 4\u20138 instead of 7\u20139."
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Rendered headings, tables and financial values are readable with no materially clipped content.",
+      "evidence": "Full-page PDF rendering inspection"
+    }
+  ],
+  "evidence": [
+    {
+      "field": "space_count",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!A4:A6"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 3
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "occupied_count",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!D4:D6"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 3
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "total_area_sf",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!C4:C6, C8"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 72000
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "occupied_area_sf",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!D4:D6,C4:C6"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 72000
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "occupancy_count_pct",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!A4:A6,D4:D6"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 100.0
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "occupancy_area_pct",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!C4:C6,D4:D6"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 100.0
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx | Rent Roll!E4:E6, E8"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 62000
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "effective_monthly_base",
+      "passed": false,
+      "response_evidence": [
+        "Lease-File.pdf | p1 (Sec.3 base rent $12,800)",
+        "Rent-Roll.xlsx | Rent Roll!E4:E6"
+      ],
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx and Lease-File.pdf / executed amendment where present",
+      "source_observation": {
+        "checked_value": 62000
+      },
+      "rationale": "Citations point to the model-created workbook layout rather than the original source. Original source records start at row 7; area is column E and monthly rent column G."
+    },
+    {
+      "field": "t12_egi",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf | p2 Annual column"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 882000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_operating_expenses",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf | p2 Annual column"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 212400
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf | p2 Annual column"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 669600
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf | p2 Annual column 'Replacement reserves'"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 14400
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_ncf",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf | p2 Annual column"
+      ],
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 655200
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf | p1 Sec.3",
+        "Rent-Roll.xlsx | Rent Roll!E4"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 12800
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_expiry",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf | p1 Sec.2",
+        "Rent-Roll.xlsx | Rent Roll!G4"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "2028-08-31"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_deposit",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf | p1 Sec.4"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 25600
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "renewal_option_exercised",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf | p1 Sec.5"
+      ],
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "Not evidenced"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    }
+  ],
+  "evidence_review_status": "complete_author_review",
+  "findings": [
+    "Workbook Inputs & Outputs!B33 displays annual debt constant \u22120.075848163, the PMT cash-flow sign, rather than a positive debt-service-per-dollar constant. Downstream debt service and sizing formulas compensate and all numerical acceptance tests pass. This extra displayed-output error remains visible beyond the limited base-value checks.",
+    "Workbook says edit yellow cells but shows blue input values without yellow fill; inputs are identifiable.",
+    "Five-page PDF is readable; heading orphaning and an empty final band are polish issues."
+  ],
+  "insurance_ambiguity_policy": "docs/workflow-insurance-criterion-2026-09-06.md",
+  "evidence_policy": "docs/workflow-evidence-review-2026-09-06.md"
+}

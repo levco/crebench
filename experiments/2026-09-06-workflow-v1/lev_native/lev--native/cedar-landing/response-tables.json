@@ -1,0 +1,350 @@
+[
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "space_count",
+      "48",
+      "Rent-Roll.xlsx rows 7\u201354"
+    ],
+    [
+      "occupied_count",
+      "33",
+      "Status = \"Occupied\" (units 101\u2013133)"
+    ],
+    [
+      "total_area_sf",
+      "43,200",
+      "24 \u00d7 700 + 24 \u00d7 1,100"
+    ],
+    [
+      "occupied_area_sf",
+      "26,700",
+      "24 \u00d7 700 + 9 \u00d7 1,100"
+    ],
+    [
+      "occupancy_count_pct",
+      "68.7500",
+      "33 \u00f7 48"
+    ],
+    [
+      "occupancy_area_pct",
+      "61.8056",
+      "26,700 \u00f7 43,200"
+    ],
+    [
+      "rent_roll_monthly_base",
+      "$56,025",
+      "24 \u00d7 $1,575 + 9 \u00d7 $2,025 (occupied only; vacants have no contractual rent)"
+    ],
+    [
+      "effective_monthly_base",
+      "$56,025",
+      "Lease-File.pdf \u00a73 confirms Unit 101 rent = $1,575; no authoritative amendments in packet"
+    ],
+    [
+      "In-place annualized base rent",
+      "$672,300",
+      "$56,025 \u00d7 12 (distinct from T12 GPR and UW GPR)"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "t12_egi",
+      "$691,200",
+      "T12 p.2 annual: 1,036,800 \u2212 302,400 \u2212 64,800 \u2212 8,400 + 30,000"
+    ],
+    [
+      "t12_operating_expenses",
+      "$371,200",
+      "132,000 + 40,800 + 33,600 + 54,000 + 55,200 + 27,600 + 28,000 (T12 p.2, ex-reserves/capex/debt/depreciation)"
+    ],
+    [
+      "t12_noi_before_reserves",
+      "$320,000",
+      "691,200 \u2212 371,200"
+    ],
+    [
+      "t12_reserves",
+      "$14,400",
+      "T12 p.2 below-NOI line"
+    ],
+    [
+      "t12_ncf",
+      "$305,600",
+      "320,000 \u2212 14,400"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Basis (Property-and-Plan.pdf p.2)"
+    ],
+    [
+      "uw_egi",
+      "$1,025,280.00",
+      "1,056,000 \u00d7 (1 \u2212 7.00%) + 43,200"
+    ],
+    [
+      "uw_management_fee",
+      "$35,884.80",
+      "MAX(T12 $28,000; 3.50% \u00d7 UW EGI = $35,884.80) \u2192 3.50% floor binds"
+    ],
+    [
+      "uw_operating_expenses",
+      "$377,884.80",
+      "138,000 + 45,600 + 33,600 + (54,000\u221212,000) + 55,200 + 27,600 + 35,884.80"
+    ],
+    [
+      "uw_noi_before_reserves",
+      "$647,395.20",
+      "1,025,280 \u2212 377,884.80"
+    ],
+    [
+      "uw_reserves",
+      "$15,600.00",
+      "48 units \u00d7 $325"
+    ],
+    [
+      "uw_ncf",
+      "$631,795.20",
+      "647,395.20 \u2212 15,600"
+    ],
+    [
+      "capitalization_value",
+      "$11,259,046.96",
+      "647,395.20 \u00f7 5.75%"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "subject_lease_monthly_rent",
+      "$1,575",
+      "Lease-File.pdf \u00a73"
+    ],
+    [
+      "subject_lease_expiry",
+      "2027-06-30",
+      "Lease-File.pdf \u00a72 (initial term)"
+    ],
+    [
+      "subject_lease_deposit",
+      "$1,200",
+      "Lease-File.pdf \u00a74 (not prepaid rent)"
+    ],
+    [
+      "renewal_option_exercised",
+      "No",
+      "Lease-File.pdf \u00a75 \u2014 conditional option; no exercise notice in packet"
+    ],
+    [
+      "verified_renewal_insurance",
+      "$45,600",
+      "Property-and-Plan.pdf p.2 \u2014 fictional insurer renewal confirmation dated 2025-08-25 (this is the only insurance evidence supplied and the plan explicitly instructs its use)"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value"
+    ],
+    [
+      "contract_rate",
+      "6.250% (fixed)"
+    ],
+    [
+      "sizing_rate",
+      "6.500% (MAX of contract and 6.50% floor)"
+    ],
+    [
+      "annual_debt_constant",
+      "0.0758481628 (30-yr amort, monthly pmts, sizing rate)"
+    ]
+  ],
+  [
+    [
+      "Constraint",
+      "Formula",
+      "Max loan"
+    ],
+    [
+      "ltv_limit",
+      "60% \u00d7 $11,259,046.96",
+      "$6,755,428.17"
+    ],
+    [
+      "dscr_limit",
+      "$631,795.20 \u00f7 (1.30 \u00d7 0.07584816)",
+      "$6,407,489.51 \u2190 binds"
+    ],
+    [
+      "debt_yield_limit",
+      "$631,795.20 \u00f7 9.00%",
+      "$7,019,946.67"
+    ],
+    [
+      "maximum_loan",
+      "MIN of the three",
+      "$6,407,489.51"
+    ],
+    [
+      "binding_constraint",
+      "",
+      "DSCR"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value"
+    ],
+    [
+      "sizing_annual_debt_service",
+      "$485,996.31 (MaxLoan \u00d7 ADC)"
+    ],
+    [
+      "sizing_dscr",
+      "1.300x (binding by construction)"
+    ],
+    [
+      "sizing_debt_yield",
+      "9.860% (NCF \u00f7 MaxLoan)"
+    ],
+    [
+      "Actual LTV",
+      "56.91%"
+    ],
+    [
+      "first_year_debt_service",
+      "$400,468.09 (IO for 36 months at 6.25% contract rate)"
+    ],
+    [
+      "First-year DSCR on actual DS",
+      "1.578x (wider than sizing DSCR due to IO)"
+    ]
+  ],
+  [
+    [
+      "Sources",
+      "",
+      "Uses",
+      ""
+    ],
+    [
+      "New first mortgage",
+      "$6,407,489.51",
+      "Existing debt payoff",
+      "$4,500,000.00"
+    ],
+    [
+      "",
+      "",
+      "Origination fee (1.00%)",
+      "$64,074.90"
+    ],
+    [
+      "",
+      "",
+      "Fixed closing costs",
+      "$65,000.00"
+    ],
+    [
+      "",
+      "",
+      "Cash to borrower",
+      "$1,778,414.62"
+    ],
+    [
+      "Total",
+      "$6,407,489.51",
+      "Total",
+      "$6,407,489.51"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value"
+    ],
+    [
+      "stress_uw_noi",
+      "$597,925.44"
+    ],
+    [
+      "Stressed NCF",
+      "$582,325.44"
+    ],
+    [
+      "Stressed cap value (cap rate unchanged)",
+      "$10,398,703.30"
+    ],
+    [
+      "Stressed sizing rate",
+      "7.500% \u2192 ADC 0.0839057"
+    ],
+    [
+      "LTV limit",
+      "$6,239,221.98"
+    ],
+    [
+      "DSCR limit",
+      "$5,338,641.20 \u2190 binds"
+    ],
+    [
+      "DY limit",
+      "$6,470,282.67"
+    ],
+    [
+      "stress_maximum_loan",
+      "$5,338,641.20 (DSCR-binding)"
+    ],
+    [
+      "\u0394 vs base",
+      "\u2212$1,068,848.31 (\u221216.7%)"
+    ],
+    [
+      "Cash outcome",
+      "Cash-in (~ \u2212$280k) \u2014 loan is below existing $4.5M payoff + fees"
+    ]
+  ],
+  [
+    [
+      "Metric",
+      "Value"
+    ],
+    [
+      "Stressed cap value",
+      "$10,358,323.20"
+    ],
+    [
+      "LTV limit",
+      "$6,214,993.92 \u2190 binds (flips from DSCR)"
+    ],
+    [
+      "DSCR limit",
+      "$6,407,489.51 (unchanged)"
+    ],
+    [
+      "DY limit",
+      "$7,019,946.67 (unchanged)"
+    ],
+    [
+      "Cap+50 max loan",
+      "$6,214,993.92"
+    ]
+  ]
+]

@@ -1,0 +1,36 @@
+{
+  "case_id": "cedar-landing",
+  "requested_model": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-06T21:27:15.145Z",
+  "observed_completed_at": "2026-09-06T21:35:55.280Z",
+  "elapsed_seconds": 464.3,
+  "latency_basis": "Matched PostHog workflow trace; excludes setup and post-completion observation delay",
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "agent_version": "7.9",
+  "estimated_inference_cost_usd": 2.16735575,
+  "cost_basis": "PostHog trace estimate using OpenRouter model rates; two charged generation events; duplicate run-summary event excluded",
+  "cost_scope": "Matched native chat inference only. Setup extraction/classification, OCR, storage, hosting, subscription and operator time excluded; product credits not converted to USD.",
+  "operator_semantic_corrections": 0,
+  "operator_generation_confirmations": 0,
+  "latest_workbook": "artifacts/underwriting.xlsx",
+  "latest_memo": "artifacts/memorandum.pdf",
+  "model_calls_including_retries": null,
+  "tool_calls": null,
+  "source_commit": "bc0ffcb",
+  "source_hashes_match_frozen_packet": true,
+  "trace_evidence": {
+    "trace_id": "da4a215f-ba1e-4818-935c-c41a099d630a",
+    "session_id": "c58d5ee8-2f30-4796-baaa-39066f4de2ee",
+    "run_id": "b19b1d23-8d40-4426-aa2e-04e2def7cffd",
+    "source": "https://us.posthog.com/project/96754/ai-observability/traces/da4a215f-ba1e-4818-935c-c41a099d630a",
+    "attribution": "Exact session ID matches both rendered artifact download paths and trace prompt Cedar Landing; private internal prompts omitted",
+    "generation_costs_usd": [
+      1.76733325,
+      0.4000225
+    ]
+  }
+}

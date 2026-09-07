@@ -1,74 +1,52 @@
 # CRE Bench by Lev
 
-An open project for evaluating AI on commercial real estate documents, financial analysis, and work products.
+An open evaluation of commercial real estate document understanding, financial analysis and delivered work products. Published and funded by Lev, which also participates in the evaluation.
 
-**Development preview: no model benchmark results have been published.** The current executable slice is one original synthetic public case with a deterministic grader. It is not a validated CRE benchmark or a held-out test. Underwriting-workbook and OM evaluation are specified but not implemented yet.
+[Explore the results](https://crebench.vercel.app/results.html) · [Inspect the cases](https://crebench.vercel.app/tasks.html) · [Method](https://crebench.vercel.app/method.html) · [Reproduce](https://crebench.vercel.app/reproduce.html)
 
-## Reproduce the public example
+Workflow v1 uses six original fictional financing packets, each with four PDFs and an XLSX rent roll, across multifamily, retail and industrial. Lev's native product, GPT-5 in a generic agent harness and Claude Opus 5 in the same harness receive the same business brief and files. Separate direct API controls use a text-only representation. All responses and unfavorable findings are retained.
 
-Requires Python 3.11+ and Node 20+; no third-party dependencies for this slice.
+The four task scores cover 17 source facts, 22 financial outputs, ten workbook acceptance checks and ten memo acceptance checks per case. Source-location evidence is scored separately. There is no blended overall winner. Actual workbooks are recalculated and changed-input copies are tested; original PDFs receive text and page-layout review.
+
+**Limits:** One fresh attempt per case and system. AI-assisted case creation and author review with provider identities visible. No independent practitioner validation yet. Concise synthetic packets are not representative of all customer documents. Lev uses deployed agent 7.9 / Claude Opus 4.7; generic baselines use the recorded gateway model IDs. Tools, provider defaults and compute differ. These are custom agents, not the consumer ChatGPT or Claude applications. Costs distinguish gateway-reported inference from Lev trace estimates and exclude unattributed setup and platform costs.
+
+## Verify recorded results without model calls
+
+Requires Python 3.11+ and Node 20+.
 
 ```sh
-git clone https://github.com/levco/crebench.git
-cd crebench
+python3 -m pip install -r requirements-review.txt
+python3 tools/collect-workflow-results.py experiments/2026-09-06-workflow-v1
 python3 -m unittest discover -s tests -v
-python3 -m crebench verify cases/public/harbor-court-001
-python3 -m crebench grade cases/public/harbor-court-001 cases/public/harbor-court-001/reference-answer.json
 npm run build
+npm run check:site
 python3 -m http.server 4173 --directory dist
 ```
 
-The reference answer is a disclosed worked solution, not model output. Grading it verifies the public plumbing, not model capability. Author a separate answer to practice, using only the manifest's `system_inputs`. Use `--record path.json` to preserve hashes and a grade record; existing records cannot be overwritten. Exit codes: 0 all checks pass, 1 answer fails, 2 infrastructure/command error.
-
-## What exists
-
-- Original CSV rent roll and operating statement, a conflicting source summary, interest-only sizing assumptions, public answer key, output contract and manifest.
-- 27 financial/extraction fields, separate evidence checks, discrepancy set checks, arithmetical consistency and immutable local records.
-- Responsive static research website with a source-to-answer explorer, downloadable examples and truthful empty results.
-- Negative tests for false conflicts, incorrect occupancy, bad calculations, fabricated citations, malformed output and input/key drift.
-
-## What comes next
-
-See [methodology](docs/methodology.md), [roadmap](docs/roadmap.md), [governance](docs/governance.md) and [contributing](CONTRIBUTING.md). More formats, authentic documents, independent CRE review, provider and Lev adapters, workbook recalculation, OM rendering, calibrated judges and a costed pilot are required before scored publication.
-
-## Structure
-
-`crebench/` grader and CLI · `cases/public/` licensed public examples · `tests/` validation · `site/` website sources · `tools/` build utilities · `docs/` method and governance.
-
-Only `dist/` is deployed. The build copies an explicit public file list; it does not publish repository internals. Do not put customer documents, held-out keys or credentials in this repository or its history.
-
-## Ownership and license
-
-Created and published by Lev. New original code, documentation and the fictional example are MIT licensed; the license does not grant trademark rights. No consultant code or private customer material has been incorporated in this initial release. The initial scope was informed by an earlier methodology engagement with The AI Consulting Network; its private materials are not redistributed here. See [NOTICE](NOTICE).
-
-## Development pilot evidence
-
-Nine real API attempts on one public synthetic case are retained in
-[the accessible-model experiment](experiments/2026-09-06-accessible-pilot/RESULTS.md).
-The original parser rejected Markdown-wrapped responses. The corrected scorer
-evaluates all nine; [supplemental financial results](experiments/2026-09-06-accessible-pilot/FINANCIAL-RESULTS.md) preserve the initial records. These are development findings, not a ranking or real-world accuracy estimate.
-Rebuild the report with:
+To independently recalculate original and published perturbation workbooks, install LibreOffice and put `soffice` on PATH:
 
 ```sh
-python3 tools/report-pilot.py experiments/2026-09-06-accessible-pilot
+python3 tools/replay-workflow-audits.py experiments/2026-09-06-workflow-v1 \
+  --output work/independent-replay
 ```
 
-Native Lev product calibration is a separate track. Any input adaptation,
-manual correction, tool access and generated-artifact review will be disclosed.
+This makes no API calls. It verifies original hashes, changed input cells, preservation of other formulas and independently calculated expected outputs. It records the local LibreOffice version and formula errors; it does not silently repair the delivered workbooks. The scored engine was LibreOfficeDev 26.8.0.0.alpha0.
 
-## GPT-5 and Claude Opus 5
+## Inspect the protocol and records
 
-[Six real runs and financial results](experiments/2026-09-06-gpt5-opus5-v2/FINANCIAL-RESULTS.md)
-are published with all requests and original responses. Reproduce corrected scoring:
+- [`benchmarks/workflow-v1/`](benchmarks/workflow-v1/): six source packets, briefs, keys, reference workbooks, independent key checks and frozen rubric.
+- [`experiments/2026-09-06-workflow-v1/`](experiments/2026-09-06-workflow-v1/): frozen manifest, responses, API tool calls, original deliveries, recalculation/perturbation evidence and attributed reviews.
+- [`crebench/`](crebench/): source transforms, generic bounded tools, API runner, deterministic grader, presentation normalization and exact-context billing-resumption adapter.
+- [`experiments/2026-09-06-workflow-development/costs.json`](experiments/2026-09-06-workflow-development/costs.json): separate adapter smoke tests and costs, excluded from scored runs.
+- [`docs/`](docs/): disclosed corrections, source-location interpretation, governance and prior history.
+- [Earlier development pilot](https://crebench.vercel.app/pilot.html): a separate one-case cohort with its original limitations and corrections.
 
-```sh
-python3 tools/report-financial.py experiments/2026-09-06-gpt5-opus5-v2
-python3 tools/report-financial.py experiments/2026-09-06-accessible-pilot
-```
+The original runner and all 72 frozen manifest hashes are retained. Nine gateway credit interruptions resumed their exact saved requests, with original consumed turns, tools, artifacts and costs retained. Administrative credit waiting is excluded from active run latency and explicitly logged. Completed workflows were not selectively rerun.
 
-The legacy `grade` command and original execution records retain strict development
-checks. Current financial reports use the presentation-tolerant scorer. The exact
-runner used to generate the six GPT-5/Opus-5 responses is available at commit 7ace77c;
-its frozen requests must not be replayed in place. Prepare a new directory for a new
-experiment using `python3 -m crebench.run_v2 prepare <new-directory>` and a fresh
-model catalog, then execute it with the configured gateway credentials.
+**Artifact-generation reproduction limit:** The scored general-agent writer used the Codex-bundled `@oai/artifact-tool` runtime, unavailable from the public npm registry when checked. Its wrapper is open, but identical new artifact generation requires that runtime. Numerical regrading and independent replay of the published XLSX files use public dependencies only. A fully public generation adapter is future work and must not be represented as identical to the scored harness. Lev's backend remains proprietary; sanitized native outputs and review evidence are public.
+
+## Ownership and contributions
+
+Original benchmark code, website, fictional cases and reviews are MIT licensed. No trademark rights are granted. Private customer documents, credentials, native internal prompts and private account traces are not redistributed. The earlier consultant engagement informed project scope; this original implementation does not imply consultant endorsement.
+
+Report a case, source, key or scoring problem with the exact input and criterion. Corrections must apply uniformly to every affected system and retain original records. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [public governance page](https://crebench.vercel.app/governance.html).

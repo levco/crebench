@@ -1,0 +1,60 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_HKIfHyPkRU6RblMQAAJpBFQZ",
+  "arguments_raw": "{\"steps\":[{\"name\":\"capitalization_value\",\"expression\":\"544218.24/0.065\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*capitalization_value\"},{\"name\":\"sizing_rate\",\"expression\":\"0.065\"},{\"name\":\"debt_constant\",\"expression\":\"12*pmt(sizing_rate/12,25*12,1)\"},{\"name\":\"annual_debt_constant\",\"expression\":\"abs(debt_constant)\"},{\"name\":\"dscr_limit\",\"expression\":\"539618.24/(1.25*annual_debt_constant)\"},{\"name\":\"debt_yield_limit\",\"expression\":\"544218.24/0.09\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit,dscr_limit,debt_yield_limit)\"},{\"name\":\"binding_constraint\",\"expression\":\"2\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "capitalization_value",
+        "expression": "544218.24/0.065"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*capitalization_value"
+      },
+      {
+        "name": "sizing_rate",
+        "expression": "0.065"
+      },
+      {
+        "name": "debt_constant",
+        "expression": "12*pmt(sizing_rate/12,25*12,1)"
+      },
+      {
+        "name": "annual_debt_constant",
+        "expression": "abs(debt_constant)"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "539618.24/(1.25*annual_debt_constant)"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "544218.24/0.09"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit,dscr_limit,debt_yield_limit)"
+      },
+      {
+        "name": "binding_constraint",
+        "expression": "2"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "capitalization_value": 8372588.307692307,
+      "ltv_limit": 5442182.399999999,
+      "sizing_rate": 0.065,
+      "debt_constant": -0.081024859361717,
+      "annual_debt_constant": 0.081024859361717,
+      "dscr_limit": 5327927.692818299,
+      "debt_yield_limit": 6046869.333333333,
+      "maximum_loan": 5327927.692818299,
+      "binding_constraint": 2
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

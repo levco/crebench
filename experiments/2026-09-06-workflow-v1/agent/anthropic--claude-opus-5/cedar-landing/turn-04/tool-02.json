@@ -1,0 +1,90 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01HZuGdzfwng4u5okxv181qm",
+  "arguments_raw": "{\"steps\":[{\"name\":\"s_egi\",\"expression\":\"(1056000*0.93+43200)*0.95\"},{\"name\":\"s_mgmt\",\"expression\":\"max(28000,0.035*s_egi)\"},{\"name\":\"s_opex\",\"expression\":\"138000+45600+33600+42000+55200+27600+s_mgmt\"},{\"name\":\"s_noi\",\"expression\":\"s_egi-s_opex\"},{\"name\":\"s_ncf\",\"expression\":\"s_noi-15600\"},{\"name\":\"s_value\",\"expression\":\"s_noi/0.0575\"},{\"name\":\"s_ltv\",\"expression\":\"0.6*s_value\"},{\"name\":\"s_const\",\"expression\":\"12*abs(pmt(0.075/12,360,1))\"},{\"name\":\"s_dscr\",\"expression\":\"(s_ncf/1.3)/s_const\"},{\"name\":\"s_dy\",\"expression\":\"s_ncf/0.09\"},{\"name\":\"s_max\",\"expression\":\"min(s_ltv,s_dscr,s_dy)\"},{\"name\":\"cap50_value\",\"expression\":\"(1056000*0.93+43200-(138000+45600+33600+42000+55200+27600+max(28000,0.035*(1056000*0.93+43200))))/0.0625\"},{\"name\":\"occ_area\",\"expression\":\"26700/43200*100\"},{\"name\":\"occ_count\",\"expression\":\"33/48*100\"},{\"name\":\"rr_base\",\"expression\":\"24*1575+9*2025\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "s_egi",
+        "expression": "(1056000*0.93+43200)*0.95"
+      },
+      {
+        "name": "s_mgmt",
+        "expression": "max(28000,0.035*s_egi)"
+      },
+      {
+        "name": "s_opex",
+        "expression": "138000+45600+33600+42000+55200+27600+s_mgmt"
+      },
+      {
+        "name": "s_noi",
+        "expression": "s_egi-s_opex"
+      },
+      {
+        "name": "s_ncf",
+        "expression": "s_noi-15600"
+      },
+      {
+        "name": "s_value",
+        "expression": "s_noi/0.0575"
+      },
+      {
+        "name": "s_ltv",
+        "expression": "0.6*s_value"
+      },
+      {
+        "name": "s_const",
+        "expression": "12*abs(pmt(0.075/12,360,1))"
+      },
+      {
+        "name": "s_dscr",
+        "expression": "(s_ncf/1.3)/s_const"
+      },
+      {
+        "name": "s_dy",
+        "expression": "s_ncf/0.09"
+      },
+      {
+        "name": "s_max",
+        "expression": "min(s_ltv,s_dscr,s_dy)"
+      },
+      {
+        "name": "cap50_value",
+        "expression": "(1056000*0.93+43200-(138000+45600+33600+42000+55200+27600+max(28000,0.035*(1056000*0.93+43200))))/0.0625"
+      },
+      {
+        "name": "occ_area",
+        "expression": "26700/43200*100"
+      },
+      {
+        "name": "occ_count",
+        "expression": "33/48*100"
+      },
+      {
+        "name": "rr_base",
+        "expression": "24*1575+9*2025"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "s_egi": 974016.0,
+      "s_mgmt": 34090.560000000005,
+      "s_opex": 376090.56,
+      "s_noi": 597925.44,
+      "s_ncf": 582325.44,
+      "s_value": 10398703.304347824,
+      "s_ltv": 6239221.982608695,
+      "s_const": 0.08390574102633318,
+      "s_dscr": 5338641.20231371,
+      "s_dy": 6470282.666666666,
+      "s_max": 5338641.20231371,
+      "cap50_value": 10358323.2,
+      "occ_area": 61.80555555555556,
+      "occ_count": 68.75,
+      "rr_base": 56025
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,17 @@
+{
+  "mapping_source": "Reviewer located actual numeric cells using sheet labels and formulas. Delivered README points to several wrong rows (including C18 debt-yield limit for maximum loan); this finding is retained. No workbook cells repaired.",
+  "input_map": {
+    "cap_rate": "Assumptions!C7",
+    "sizing_rate": "Assumptions!C26",
+    "egi_gross_potential_rent": "Assumptions!C10",
+    "egi_other_income": "Assumptions!C12"
+  },
+  "output_map": {
+    "uw_noi_before_reserves": "Underwriting!C20",
+    "uw_ncf": "Underwriting!C22",
+    "capitalization_value": "Loan Sizing!C7",
+    "ltv_limit": "Loan Sizing!C16",
+    "dscr_limit": "Loan Sizing!C17",
+    "maximum_loan": "Loan Sizing!C19"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01Cxm6o4T4BujGWmugfDa6ut",
+  "arguments_raw": "{\"steps\":[{\"name\":\"egi5_dscr\",\"expression\":\"(502747.328/1.25)/0.081024859361717\"},{\"name\":\"egi5_ltv\",\"expression\":\"0.65*507347.328/0.065\"},{\"name\":\"egi5_dy\",\"expression\":\"507347.328/0.09\"},{\"name\":\"cap50_ltv\",\"expression\":\"0.65*544218.24/0.07\"},{\"name\":\"combined_cash\",\"expression\":\"4535438.2488*0.99-3400000-48000\"},{\"name\":\"occ_count_pct\",\"expression\":\"100*7/8\"},{\"name\":\"fy_dscr\",\"expression\":\"539618.24/421760.49\"},{\"name\":\"constant_contract\",\"expression\":\"12*abs(pmt(0.0625/12,300,1))\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "egi5_dscr",
+        "expression": "(502747.328/1.25)/0.081024859361717"
+      },
+      {
+        "name": "egi5_ltv",
+        "expression": "0.65*507347.328/0.065"
+      },
+      {
+        "name": "egi5_dy",
+        "expression": "507347.328/0.09"
+      },
+      {
+        "name": "cap50_ltv",
+        "expression": "0.65*544218.24/0.07"
+      },
+      {
+        "name": "combined_cash",
+        "expression": "4535438.2488*0.99-3400000-48000"
+      },
+      {
+        "name": "occ_count_pct",
+        "expression": "100*7/8"
+      },
+      {
+        "name": "fy_dscr",
+        "expression": "539618.24/421760.49"
+      },
+      {
+        "name": "constant_contract",
+        "expression": "12*abs(pmt(0.0625/12,300,1))"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "egi5_dscr": 4963882.264879713,
+      "egi5_ltv": 5073473.279999999,
+      "egi5_dy": 5637192.533333333,
+      "cap50_ltv": 5053455.085714285,
+      "combined_cash": 1042083.866312,
+      "occ_count_pct": 87.5,
+      "fy_dscr": 1.2794423678709212,
+      "constant_contract": 0.07916032539780565
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

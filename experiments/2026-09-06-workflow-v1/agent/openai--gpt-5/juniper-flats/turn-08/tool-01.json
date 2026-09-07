@@ -1,0 +1,55 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_FIOlw2D6eHKHrsTv5XU77xWy",
+  "arguments_raw": "{\"steps\":[{\"name\":\"uw_egi\",\"expression\":\"864000*(1-0.06)+42000\"},{\"name\":\"mgmt_3pct\",\"expression\":\"uw_egi*0.03\"},{\"name\":\"uw_mgmt\",\"expression\":\"max(30000, mgmt_3pct)\"},{\"name\":\"uw_opex\",\"expression\":\"112000+33600+28800+40200+42000+21600+uw_mgmt\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi-uw_opex\"},{\"name\":\"uw_reserves\",\"expression\":\"36*300\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-uw_reserves\"},{\"name\":\"cap_value\",\"expression\":\"uw_noi/0.0575\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "uw_egi",
+        "expression": "864000*(1-0.06)+42000"
+      },
+      {
+        "name": "mgmt_3pct",
+        "expression": "uw_egi*0.03"
+      },
+      {
+        "name": "uw_mgmt",
+        "expression": "max(30000, mgmt_3pct)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "112000+33600+28800+40200+42000+21600+uw_mgmt"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi-uw_opex"
+      },
+      {
+        "name": "uw_reserves",
+        "expression": "36*300"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-uw_reserves"
+      },
+      {
+        "name": "cap_value",
+        "expression": "uw_noi/0.0575"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "uw_egi": 854160.0,
+      "mgmt_3pct": 25624.8,
+      "uw_mgmt": 30000,
+      "uw_opex": 308200,
+      "uw_noi": 545960.0,
+      "uw_reserves": 10800,
+      "uw_ncf": 535160.0,
+      "cap_value": 9494956.52173913
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

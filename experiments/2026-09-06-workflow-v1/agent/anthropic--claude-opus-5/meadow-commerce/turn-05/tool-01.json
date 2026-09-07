@@ -1,0 +1,85 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_017DrDQgWXEG5aMhcfg8WoBp",
+  "arguments_raw": "{\"steps\":[{\"name\":\"stress_egi\",\"expression\":\"895320*0.95\"},{\"name\":\"stress_mgmt\",\"expression\":\"max(26400,0.03*stress_egi)\"},{\"name\":\"stress_opex\",\"expression\":\"108000+36000+9600+19200+12000+16800+stress_mgmt\"},{\"name\":\"stress_noi\",\"expression\":\"stress_egi-stress_opex\"},{\"name\":\"stress_ncf\",\"expression\":\"stress_noi-14400\"},{\"name\":\"stress_value\",\"expression\":\"stress_noi/0.065\"},{\"name\":\"stress_ltv\",\"expression\":\"0.60*stress_value\"},{\"name\":\"stress_constant\",\"expression\":\"12*(-pmt(0.075/12,360,1))\"},{\"name\":\"stress_dscr_limit\",\"expression\":\"stress_ncf/1.30/stress_constant\"},{\"name\":\"stress_dy\",\"expression\":\"stress_ncf/0.095\"},{\"name\":\"stress_max\",\"expression\":\"min(stress_ltv,stress_dscr_limit,stress_dy)\"},{\"name\":\"cap50_value\",\"expression\":\"666860.4/0.07\"},{\"name\":\"cap50_ltv\",\"expression\":\"0.6*cap50_value\"},{\"name\":\"monthly_base\",\"expression\":\"12800+20400+28800\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "stress_egi",
+        "expression": "895320*0.95"
+      },
+      {
+        "name": "stress_mgmt",
+        "expression": "max(26400,0.03*stress_egi)"
+      },
+      {
+        "name": "stress_opex",
+        "expression": "108000+36000+9600+19200+12000+16800+stress_mgmt"
+      },
+      {
+        "name": "stress_noi",
+        "expression": "stress_egi-stress_opex"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "stress_noi-14400"
+      },
+      {
+        "name": "stress_value",
+        "expression": "stress_noi/0.065"
+      },
+      {
+        "name": "stress_ltv",
+        "expression": "0.60*stress_value"
+      },
+      {
+        "name": "stress_constant",
+        "expression": "12*(-pmt(0.075/12,360,1))"
+      },
+      {
+        "name": "stress_dscr_limit",
+        "expression": "stress_ncf/1.30/stress_constant"
+      },
+      {
+        "name": "stress_dy",
+        "expression": "stress_ncf/0.095"
+      },
+      {
+        "name": "stress_max",
+        "expression": "min(stress_ltv,stress_dscr_limit,stress_dy)"
+      },
+      {
+        "name": "cap50_value",
+        "expression": "666860.4/0.07"
+      },
+      {
+        "name": "cap50_ltv",
+        "expression": "0.6*cap50_value"
+      },
+      {
+        "name": "monthly_base",
+        "expression": "12800+20400+28800"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "stress_egi": 850554.0,
+      "stress_mgmt": 26400,
+      "stress_opex": 228000,
+      "stress_noi": 622554.0,
+      "stress_ncf": 608154.0,
+      "stress_value": 9577753.846153846,
+      "stress_ltv": 5746652.307692307,
+      "stress_constant": 0.08390574102633318,
+      "stress_dscr_limit": 5575432.187458429,
+      "stress_dy": 6401621.052631578,
+      "stress_max": 5575432.187458429,
+      "cap50_value": 9526577.142857142,
+      "cap50_ltv": 5715946.2857142845,
+      "monthly_base": 62000
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,43 @@
+{
+  "case_id": "hawthorn-center",
+  "requested_model": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-06T21:30:31.122Z",
+  "observed_completed_at": "2026-09-06T21:43:47.514Z",
+  "elapsed_seconds": 683.11,
+  "latency_basis": "Matched PostHog workflow trace; excludes setup and post-completion observation delay",
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "agent_version": "7.9",
+  "estimated_inference_cost_usd": 4.03020025,
+  "cost_basis": "PostHog trace estimate using OpenRouter model rates; two charged generation events; duplicate run-summary event excluded",
+  "cost_scope": "Matched native chat inference only. Setup extraction/classification, OCR, storage, hosting, subscription and operator time excluded; product credits not converted to USD.",
+  "operator_semantic_corrections": 0,
+  "operator_generation_confirmations": 0,
+  "latest_workbook": "artifacts/underwriting.xlsx",
+  "latest_memo": "artifacts/memorandum.pdf",
+  "model_calls_including_retries": null,
+  "tool_calls": null,
+  "source_commit": "bc0ffcb",
+  "source_hashes_match_frozen_packet": true,
+  "trace_evidence": {
+    "trace_id": "f705ca15-4341-4190-a4a9-4aaa40ad1100",
+    "session_id": "269eeeaf-3a3d-40dc-89a5-16aba3b952f7",
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "generation_costs_usd": [
+      3.47541575,
+      0.5547845
+    ],
+    "total_cost_usd": 4.03020025,
+    "elapsed_seconds": 683.11,
+    "cost_model_source": "PostHog estimate using OpenRouter rates",
+    "attribution": "Exact session ID matches both artifact download paths; trace prompt identifies Hawthorn Center. Internal prompts omitted."
+  }
+}

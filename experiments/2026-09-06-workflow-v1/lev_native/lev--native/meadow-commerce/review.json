@@ -1,0 +1,362 @@
+{
+  "reviewer": "Codex author review with machine-assisted file inspection; not independent human validation",
+  "provider_blinded": false,
+  "rubric": "benchmarks/workflow-v1/RUBRIC.md",
+  "inspection_scope": "Full memo text and all page renders; original workbook input and source labels, historical totals after LibreOffice recalculation, live formulas and main underwriting rendering. Automatic base and perturbation checks in audit/.",
+  "summary": "All 39 requested fields and all ten workbook checks pass. Missing insurance evidence is clearly labeled provisional. The memo confuses sizing-rate debt service with the contractual payment after IO, misplaces lease expiry near loan maturity and clips source tables.",
+  "workbook": [
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "Inputs, units, date and source references are identifiable.",
+      "evidence": "Delivered input/instruction/source sheets; non-formula cell inspection"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Historical and forward cash flows are separate and their totals reconcile.",
+      "evidence": "Recalculated historical sheet totals and original T12; independently tested underwriting outputs"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Main underwriting labels and numbers are visible and a reviewer can locate assumptions and decision outputs.",
+      "evidence": "Main underwriting sheet rendered at 1.3 scale; input and sizing cells inspected"
+    }
+  ],
+  "memo": [
+    {
+      "rubric_check": 1,
+      "passed": true,
+      "rationale": "A real PDF was downloaded and all pages rendered with readable main content.",
+      "evidence": "Original PDF and full-page render review"
+    },
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "The memo identifies the named property, August 31, 2026 as-of date and first-mortgage refinance purpose.",
+      "evidence": "PDF opening title, property table and recommendation"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Base loan, existing payoff, loan-based fee, fixed closing costs and net borrower cash reconcile to the supplied scenario.",
+      "evidence": "PDF sources/uses and independently checked key"
+    },
+    {
+      "rubric_check": 4,
+      "passed": true,
+      "rationale": "Historical T12 and forward underwriting are labeled separately, with NOI before reserves and NCF after reserves.",
+      "evidence": "PDF historical and underwriting tables; original T12 and plan"
+    },
+    {
+      "rubric_check": 5,
+      "passed": false,
+      "rationale": "The memo uses the 6.50% sizing-rate payment as the month-13 contractual payment. Contract rate is fixed at 6.10%.",
+      "evidence": "PDF p.6: IO steps up to approximately $466,894; correct annual contractual amortizing payment is $447,633.89 on the original principal over 360 months."
+    },
+    {
+      "rubric_check": 6,
+      "passed": true,
+      "rationale": "Occupancy and the subject lease are discussed against the supplied rent roll and controlling executed document.",
+      "evidence": "PDF property/lease discussion; Rent-Roll.xlsx and Lease-File.pdf"
+    },
+    {
+      "rubric_check": 7,
+      "passed": false,
+      "rationale": "The memo equates August 2028 lease expiries with roughly the 60-month loan maturity. They occur about two years into a five-year loan.",
+      "evidence": "PDF p.5 lease rollover concentration; as-of 2026-08-31, 60-month maturity is approximately 2031."
+    },
+    {
+      "rubric_check": 8,
+      "passed": true,
+      "rationale": "The supplied forecast, lender conventions and any provisional items are labeled as assumptions.",
+      "evidence": "PDF assumptions and limitations; Property-and-Plan.pdf"
+    },
+    {
+      "rubric_check": 9,
+      "passed": true,
+      "rationale": "The memorandum identifies the five source files and their relevant content.",
+      "evidence": "PDF source references and source pointers in the analysis"
+    },
+    {
+      "rubric_check": 10,
+      "passed": false,
+      "rationale": "The source-reference table extends beyond the page and the prepayment row overlaps the explanation column.",
+      "evidence": "Rendered PDF p.6; historical table header overlap also visible on p.2."
+    }
+  ],
+  "evidence": [
+    {
+      "field": "space_count",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx C7:C9"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 3
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupied_count",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx F7:F9 all \"Occupied\""
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 3
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "total_area_sf",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx sum(E7:E9)"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 72000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupied_area_sf",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx sum where Occupied"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 72000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupancy_count_pct",
+      "passed": true,
+      "response_evidence": [
+        "3/3 \u00d7 100"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 100.0
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupancy_area_pct",
+      "passed": true,
+      "response_evidence": [
+        "72,000/72,000 \u00d7 100"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 100.0
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx SUM(G7:G9)"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 62000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "effective_monthly_base",
+      "passed": true,
+      "response_evidence": [
+        "Lease-authoritative; matches rent roll"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx and Lease-File.pdf / executed amendment where present",
+      "source_observation": {
+        "checked_value": 62000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_egi",
+      "passed": true,
+      "response_evidence": [
+        "744,000 GPR + 0 vac \u2212 18,000 conc \u2212 2,400 bad debt + 158,400 other"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 882000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_operating_expenses",
+      "passed": true,
+      "response_evidence": [
+        "102,000 + 26,400 + 9,600 + 19,200 + 12,000 + 16,800 + 26,400"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 212400
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "passed": true,
+      "response_evidence": [
+        "EGI \u2212 opex"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 669600
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12 line (below NOI)"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 14400
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_ncf",
+      "passed": true,
+      "response_evidence": [
+        "NOI \u2212 reserves"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 655200
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf \u00a73 (Unit 101)"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 12800
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_expiry",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf \u00a72"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "2028-08-31"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_deposit",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf \u00a74"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 25600
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "renewal_option_exercised",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf \u00a75 \u2014 no exercise notice/amendment in packet"
+      ],
+      "response_context": [
+        "Source: T12-Statement.pdf p.1\u20132, Annual column. Capex ($112,000), P&I ($294,000) and depreciation ($180,000) held below-the-line \u2014 not operating expenses per drafting instruction."
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "Not evidenced"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    }
+  ],
+  "evidence_review_status": "complete_author_review",
+  "findings": [
+    "All independent workbook base values and the three perturbations pass, with no formula errors.",
+    "The first-year interest-only debt service is correct; the extra payment-step-up narrative is where the contract/sizing-rate confusion occurs."
+  ],
+  "critical_claims": [
+    {
+      "severity": "material",
+      "location": "PDF p.6 interest-only step-up",
+      "claim": "Contractual annual debt service rises to about $466,894 in month 13.",
+      "correct_calculation": "12 \u00d7 PMT(6.10% / 12, 360, principal 6,155,634.461538462) = 447,633.8862499241 annual debt service.",
+      "rationale": "Overstates the future contractual payment by $19,260, about 4.3%, by using the underwriting floor rate."
+    }
+  ],
+  "insurance_ambiguity_policy": "docs/workflow-insurance-criterion-2026-09-06.md",
+  "evidence_policy": "docs/workflow-evidence-review-2026-09-06.md"
+}

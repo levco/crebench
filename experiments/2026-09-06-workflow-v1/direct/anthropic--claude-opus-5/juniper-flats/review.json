@@ -1,0 +1,197 @@
+{
+  "reviewer": "Codex author review with machine-assisted source inspection; not independent human validation",
+  "provider_blinded": false,
+  "rubric": "benchmarks/workflow-v1/RUBRIC.md",
+  "inspection_scope": "Final field answers and citations checked against original source pages and workbook cells. Direct text controls have no artifact obligation.",
+  "evidence": [
+    {
+      "field": "space_count",
+      "passed": true,
+      "response_evidence": "Rent-Roll.xlsx, worksheet 'Rent Roll', rows 7-42 (units 101-136)",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 36
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupied_count",
+      "passed": true,
+      "response_evidence": "Rent-Roll.xlsx rows 7-42, column F 'Status'; vacant rows: 15 (unit 109), 31 (unit 125), 42 (unit 136)",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 33
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "total_area_sf",
+      "passed": true,
+      "response_evidence": "Rent-Roll.xlsx column E, rows 7-42",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 31800
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupied_area_sf",
+      "passed": true,
+      "response_evidence": "Rent-Roll.xlsx column E/F, rows 7-42; vacant rows 15 (750 SF), 31 (1,050 SF), 42 (1,050 SF)",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 28950
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupancy_count_pct",
+      "passed": true,
+      "response_evidence": "Derived from Rent-Roll.xlsx rows 7-42",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 91.66666666666666
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "occupancy_area_pct",
+      "passed": true,
+      "response_evidence": "Derived from Rent-Roll.xlsx column E/F",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 91.0377358490566
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "passed": true,
+      "response_evidence": "Rent-Roll.xlsx column G, rows 7-42 (as printed; blank for vacant rows 15, 31, 42)",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 62275
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "effective_monthly_base",
+      "passed": true,
+      "response_evidence": "Rent-Roll.xlsx column G; Lease-File.pdf p.1 s.3 (unit 101 base rent $1,675/month as of 2026-08-31); Lease-File.pdf p.1 s.6 (amendment authority)",
+      "response_context": [],
+      "verified_source_location": "Rent-Roll.xlsx and Lease-File.pdf / executed amendment where present",
+      "source_observation": {
+        "checked_value": 62275
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_egi",
+      "passed": true,
+      "response_evidence": "T12-Statement.pdf p.2, 'Annual' column: GPR 840,000; vacancy (42,000); concessions (12,000); bad debt (4,500); other income 39,600",
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 821100
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_operating_expenses",
+      "passed": true,
+      "response_evidence": "T12-Statement.pdf p.2, 'Annual' column expense rows (taxes 108,000; insurance 31,200; utilities 28,800; R&M 46,200; payroll 42,000; admin/legal 21,600; management 30,000)",
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 307800
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "passed": true,
+      "response_evidence": "Derived from T12-Statement.pdf p.2 annual column",
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 513300
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_reserves",
+      "passed": true,
+      "response_evidence": "T12-Statement.pdf p.2, 'Replacement reserves (below NOI)' annual = 10,800",
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 10800
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "t12_ncf",
+      "passed": true,
+      "response_evidence": "Derived from T12-Statement.pdf p.2; label caution per Property-and-Plan.pdf p.1",
+      "response_context": [],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 502500
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "passed": true,
+      "response_evidence": "Lease-File.pdf p.1 s.3 ('Base rent is $1,675 per month as of August 31, 2026'); corroborated by Rent-Roll.xlsx G7",
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 1675
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_expiry",
+      "passed": true,
+      "response_evidence": "Lease-File.pdf p.1 s.2 ('initial term expires 2027-07-31'); Rent-Roll.xlsx I7",
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "2027-07-31"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_deposit",
+      "passed": true,
+      "response_evidence": "Lease-File.pdf p.1 s.4 ('The security deposit is $1,675 and is not prepaid rent or recurring income')",
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 1675
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "renewal_option_exercised",
+      "passed": true,
+      "response_evidence": "Lease-File.pdf p.1 s.5 ('No exercise notice, landlord acknowledgment or amendment exercising this option is included in the packet. Do not extend the current expiry based on the existence of the option alone'); Rent-Roll.xlsx C47",
+      "response_context": [],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "Not evidenced"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    }
+  ],
+  "evidence_review_status": "complete_author_review",
+  "evidence_policy": "docs/workflow-evidence-review-2026-09-06.md"
+}

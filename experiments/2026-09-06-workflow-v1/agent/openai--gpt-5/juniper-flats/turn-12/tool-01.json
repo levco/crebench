@@ -1,0 +1,75 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_CujNGfMOD2HQ2AyU9pUJBwoo",
+  "arguments_raw": "{\"steps\":[{\"name\":\"stress_egi\",\"expression\":\"0.95*854160\"},{\"name\":\"stress_mgmt\",\"expression\":\"max(30000,0.03*stress_egi)\"},{\"name\":\"stress_noi\",\"expression\":\"stress_egi-(112000+33600+28800+40200+42000+21600+stress_mgmt)\"},{\"name\":\"stress_reserves\",\"expression\":\"10800\"},{\"name\":\"stress_ncf\",\"expression\":\"stress_noi-stress_reserves\"},{\"name\":\"stress_rate\",\"expression\":\"0.0625+0.01\"},{\"name\":\"stress_debt_constant\",\"expression\":\"12*pmt(stress_rate/12,360,1)\"},{\"name\":\"stress_debt_constant_abs\",\"expression\":\"abs(stress_debt_constant)\"},{\"name\":\"stress_dscr_limit\",\"expression\":\"stress_ncf/stress_debt_constant_abs/1.25\"},{\"name\":\"stress_ltv_limit\",\"expression\":\"0.65*9494956.52173913\"},{\"name\":\"stress_debt_yield\",\"expression\":\"stress_ncf/0.085\"},{\"name\":\"stress_max_loan\",\"expression\":\"min(stress_dscr_limit,stress_ltv_limit,stress_debt_yield)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "stress_egi",
+        "expression": "0.95*854160"
+      },
+      {
+        "name": "stress_mgmt",
+        "expression": "max(30000,0.03*stress_egi)"
+      },
+      {
+        "name": "stress_noi",
+        "expression": "stress_egi-(112000+33600+28800+40200+42000+21600+stress_mgmt)"
+      },
+      {
+        "name": "stress_reserves",
+        "expression": "10800"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "stress_noi-stress_reserves"
+      },
+      {
+        "name": "stress_rate",
+        "expression": "0.0625+0.01"
+      },
+      {
+        "name": "stress_debt_constant",
+        "expression": "12*pmt(stress_rate/12,360,1)"
+      },
+      {
+        "name": "stress_debt_constant_abs",
+        "expression": "abs(stress_debt_constant)"
+      },
+      {
+        "name": "stress_dscr_limit",
+        "expression": "stress_ncf/stress_debt_constant_abs/1.25"
+      },
+      {
+        "name": "stress_ltv_limit",
+        "expression": "0.65*9494956.52173913"
+      },
+      {
+        "name": "stress_debt_yield",
+        "expression": "stress_ncf/0.085"
+      },
+      {
+        "name": "stress_max_loan",
+        "expression": "min(stress_dscr_limit,stress_ltv_limit,stress_debt_yield)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "stress_egi": 811452.0,
+      "stress_mgmt": 30000,
+      "stress_noi": 503252.0,
+      "stress_reserves": 10800,
+      "stress_ncf": 492452.0,
+      "stress_rate": 0.0725,
+      "stress_debt_constant": -0.08186115360674281,
+      "stress_debt_constant_abs": 0.08186115360674281,
+      "stress_dscr_limit": 4812558.614707206,
+      "stress_ltv_limit": 6171721.7391304355,
+      "stress_debt_yield": 5793552.94117647,
+      "stress_max_loan": 4812558.614707206
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

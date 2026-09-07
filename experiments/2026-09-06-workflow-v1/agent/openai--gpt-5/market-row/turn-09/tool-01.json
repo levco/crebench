@@ -1,0 +1,30 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_xVie0TFTAnD5jNTGwRgkLich",
+  "arguments_raw": "{\"steps\":[{\"name\":\"total_area\",\"expression\":\"1800+2200+2500+3200+4000+5000+1500+2800\"},{\"name\":\"occupied_area\",\"expression\":\"total_area-2800\"},{\"name\":\"rent_roll_monthly_base\",\"expression\":\"7000+5500+6000+7200+9000+10500+3400+0\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "total_area",
+        "expression": "1800+2200+2500+3200+4000+5000+1500+2800"
+      },
+      {
+        "name": "occupied_area",
+        "expression": "total_area-2800"
+      },
+      {
+        "name": "rent_roll_monthly_base",
+        "expression": "7000+5500+6000+7200+9000+10500+3400+0"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "total_area": 23000,
+      "occupied_area": 20200,
+      "rent_roll_monthly_base": 48600
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,700 @@
+{
+  "fields": [
+    {
+      "id": "space_count",
+      "value": "3",
+      "evidence": [
+        "Rent-Roll.xlsx C7:C9"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "space_count",
+        "3",
+        "Rent-Roll.xlsx C7:C9"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 1,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "occupied_count",
+      "value": "3",
+      "evidence": [
+        "Rent-Roll.xlsx F7:F9 all \"Occupied\""
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "occupied_count",
+        "3",
+        "Rent-Roll.xlsx F7:F9 all \"Occupied\""
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 2,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "total_area_sf",
+      "value": "72,000",
+      "evidence": [
+        "Rent-Roll.xlsx sum(E7:E9)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "total_area_sf",
+        "72,000",
+        "Rent-Roll.xlsx sum(E7:E9)"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 3,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "occupied_area_sf",
+      "value": "72,000",
+      "evidence": [
+        "Rent-Roll.xlsx sum where Occupied"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "occupied_area_sf",
+        "72,000",
+        "Rent-Roll.xlsx sum where Occupied"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 4,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "occupancy_count_pct",
+      "value": "100.00",
+      "evidence": [
+        "3/3 \u00d7 100"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "occupancy_count_pct",
+        "100.00",
+        "3/3 \u00d7 100"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 5,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "occupancy_area_pct",
+      "value": "100.00",
+      "evidence": [
+        "72,000/72,000 \u00d7 100"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "occupancy_area_pct",
+        "100.00",
+        "72,000/72,000 \u00d7 100"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 6,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "rent_roll_monthly_base",
+      "value": "$62,000",
+      "evidence": [
+        "Rent-Roll.xlsx SUM(G7:G9)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "rent_roll_monthly_base",
+        "$62,000",
+        "Rent-Roll.xlsx SUM(G7:G9)"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 7,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "effective_monthly_base",
+      "value": "$62,000",
+      "evidence": [
+        "Lease-authoritative; matches rent roll"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "effective_monthly_base",
+        "$62,000",
+        "Lease-authoritative; matches rent roll"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 8,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "subject_lease_monthly_rent",
+      "value": "$12,800",
+      "evidence": [
+        "Lease-File.pdf \u00a73 (Unit 101)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "subject_lease_monthly_rent",
+        "$12,800",
+        "Lease-File.pdf \u00a73 (Unit 101)"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 9,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "subject_lease_expiry",
+      "value": "2028-08-31",
+      "evidence": [
+        "Lease-File.pdf \u00a72"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "subject_lease_expiry",
+        "2028-08-31",
+        "Lease-File.pdf \u00a72"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 10,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "subject_lease_deposit",
+      "value": "$25,600",
+      "evidence": [
+        "Lease-File.pdf \u00a74"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "subject_lease_deposit",
+        "$25,600",
+        "Lease-File.pdf \u00a74"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 11,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "renewal_option_exercised",
+      "value": "FALSE",
+      "evidence": [
+        "Lease-File.pdf \u00a75 \u2014 no exercise notice/amendment in packet"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "renewal_option_exercised",
+        "FALSE",
+        "Lease-File.pdf \u00a75 \u2014 no exercise notice/amendment in packet"
+      ],
+      "transcription_location": {
+        "table": 0,
+        "row": 12,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "t12_egi",
+      "value": "$882,000",
+      "evidence": [
+        "744,000 GPR + 0 vac \u2212 18,000 conc \u2212 2,400 bad debt + 158,400 other"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "t12_egi",
+        "$882,000",
+        "744,000 GPR + 0 vac \u2212 18,000 conc \u2212 2,400 bad debt + 158,400 other"
+      ],
+      "transcription_location": {
+        "table": 1,
+        "row": 1,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "t12_operating_expenses",
+      "value": "$212,400",
+      "evidence": [
+        "102,000 + 26,400 + 9,600 + 19,200 + 12,000 + 16,800 + 26,400"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "t12_operating_expenses",
+        "$212,400",
+        "102,000 + 26,400 + 9,600 + 19,200 + 12,000 + 16,800 + 26,400"
+      ],
+      "transcription_location": {
+        "table": 1,
+        "row": 2,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "t12_noi_before_reserves",
+      "value": "$669,600",
+      "evidence": [
+        "EGI \u2212 opex"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "t12_noi_before_reserves",
+        "$669,600",
+        "EGI \u2212 opex"
+      ],
+      "transcription_location": {
+        "table": 1,
+        "row": 3,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "t12_reserves",
+      "value": "$14,400",
+      "evidence": [
+        "T12 line (below NOI)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "t12_reserves",
+        "$14,400",
+        "T12 line (below NOI)"
+      ],
+      "transcription_location": {
+        "table": 1,
+        "row": 4,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "t12_ncf",
+      "value": "$655,200",
+      "evidence": [
+        "NOI \u2212 reserves"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "t12_ncf",
+        "$655,200",
+        "NOI \u2212 reserves"
+      ],
+      "transcription_location": {
+        "table": 1,
+        "row": 5,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "uw_egi",
+      "value": "$895,320",
+      "evidence": [
+        "756,000 GPR \u2212 (3% \u00d7 756,000) + 162,000 other = 756,000 \u2212 22,680 + 162,000"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "uw_egi",
+        "$895,320",
+        "756,000 GPR \u2212 (3% \u00d7 756,000) + 162,000 other = 756,000 \u2212 22,680 + 162,000"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 1,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "uw_management_fee",
+      "value": "$26,859.60",
+      "evidence": [
+        "greater of T12 actual ($26,400) or 3% \u00d7 UW EGI ($26,859.60)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "uw_management_fee",
+        "$26,859.60",
+        "greater of T12 actual ($26,400) or 3% \u00d7 UW EGI ($26,859.60)"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 2,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "uw_operating_expenses",
+      "value": "$228,459.60",
+      "evidence": [
+        "108,000 tax + 36,000 ins* + 9,600 util + 19,200 R&M + 12,000 payroll + 16,800 admin + 26,859.60 mgmt"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "uw_operating_expenses",
+        "$228,459.60",
+        "108,000 tax + 36,000 ins* + 9,600 util + 19,200 R&M + 12,000 payroll + 16,800 admin + 26,859.60 mgmt"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 3,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "uw_noi_before_reserves",
+      "value": "$666,860.40",
+      "evidence": [
+        "UW EGI \u2212 UW opex"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "uw_noi_before_reserves",
+        "$666,860.40",
+        "UW EGI \u2212 UW opex"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 4,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "uw_reserves",
+      "value": "$14,400",
+      "evidence": [
+        "$0.20/SF \u00d7 72,000 SF"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "uw_reserves",
+        "$14,400",
+        "$0.20/SF \u00d7 72,000 SF"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 5,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "uw_ncf",
+      "value": "$652,460.40",
+      "evidence": [
+        "UW NOI \u2212 reserves"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "uw_ncf",
+        "$652,460.40",
+        "UW NOI \u2212 reserves"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 6,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "capitalization_value",
+      "value": "$10,259,390.77",
+      "evidence": [
+        "666,860.40 / 6.50%"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "capitalization_value",
+        "$10,259,390.77",
+        "666,860.40 / 6.50%"
+      ],
+      "transcription_location": {
+        "table": 2,
+        "row": 7,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "contract_rate",
+      "value": "0.0610",
+      "evidence": [
+        "Fixed contract rate"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "contract_rate",
+        "0.0610",
+        "Fixed contract rate"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 1,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "sizing_rate",
+      "value": "0.0650",
+      "evidence": [
+        "max(6.10%, 6.50% floor)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "sizing_rate",
+        "0.0650",
+        "max(6.10%, 6.50% floor)"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 2,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "annual_debt_constant",
+      "value": "0.075848",
+      "evidence": [
+        "12 \u00d7 PMT at 6.50%/12, 360 mo"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "annual_debt_constant",
+        "0.075848",
+        "12 \u00d7 PMT at 6.50%/12, 360 mo"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 3,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "ltv_limit",
+      "value": "$6,155,634.46",
+      "evidence": [
+        "60% \u00d7 $10,259,390.77"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "ltv_limit",
+        "$6,155,634.46",
+        "60% \u00d7 $10,259,390.77"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 4,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "dscr_limit",
+      "value": "$6,617,070.17",
+      "evidence": [
+        "$652,460.40 / (1.30 \u00d7 0.075848)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "dscr_limit",
+        "$6,617,070.17",
+        "$652,460.40 / (1.30 \u00d7 0.075848)"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 5,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "debt_yield_limit",
+      "value": "$6,868,004.21",
+      "evidence": [
+        "$652,460.40 / 9.50%"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "debt_yield_limit",
+        "$6,868,004.21",
+        "$652,460.40 / 9.50%"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 6,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "maximum_loan",
+      "value": "$6,155,634.46",
+      "evidence": [
+        "MIN of three"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "maximum_loan",
+        "$6,155,634.46",
+        "MIN of three"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 7,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "binding_constraint",
+      "value": "LTV",
+      "evidence": [
+        ""
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "binding_constraint",
+        "LTV",
+        ""
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 8,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "sizing_annual_debt_service",
+      "value": "$466,893.56",
+      "evidence": [
+        "Max loan \u00d7 ADC (amortizing @ sizing rate)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "sizing_annual_debt_service",
+        "$466,893.56",
+        "Max loan \u00d7 ADC (amortizing @ sizing rate)"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 9,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "sizing_dscr",
+      "value": "1.3974x",
+      "evidence": [
+        "NCF / sizing DS (vs. 1.30x min)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "sizing_dscr",
+        "1.3974x",
+        "NCF / sizing DS (vs. 1.30x min)"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 10,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "sizing_debt_yield",
+      "value": "10.5994%",
+      "evidence": [
+        "NCF / max loan (vs. 9.50% min)"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "sizing_debt_yield",
+        "10.5994%",
+        "NCF / max loan (vs. 9.50% min)"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 11,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "first_year_debt_service",
+      "value": "$375,493.70",
+      "evidence": [
+        "12 mo IO \u00d7 6.10% contract rate"
+      ],
+      "calculation": "",
+      "transcription_excerpt": [
+        "first_year_debt_service",
+        "$375,493.70",
+        "12 mo IO \u00d7 6.10% contract rate"
+      ],
+      "transcription_location": {
+        "table": 3,
+        "row": 12,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "cash_to_borrower",
+      "value": "$2,439,078.12 (positive = cash-out)",
+      "evidence": [],
+      "calculation": "",
+      "transcription_excerpt": [
+        "cash_to_borrower",
+        "$2,439,078.12 (positive = cash-out)"
+      ],
+      "transcription_location": {
+        "table": 4,
+        "row": 5,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "stress_uw_noi",
+      "value": "$622,554",
+      "evidence": [],
+      "calculation": "",
+      "transcription_excerpt": [
+        "stress_uw_noi (before reserves)",
+        "$622,554"
+      ],
+      "transcription_location": {
+        "table": 5,
+        "row": 3,
+        "value_column": 1
+      }
+    },
+    {
+      "id": "stress_maximum_loan",
+      "value": "$5,575,432",
+      "evidence": [],
+      "calculation": "",
+      "transcription_excerpt": [
+        "stress_maximum_loan",
+        "$5,575,432"
+      ],
+      "transcription_location": {
+        "table": 5,
+        "row": 10,
+        "value_column": 1
+      }
+    }
+  ],
+  "qualifications": [],
+  "blocked": [],
+  "transcription_method": "Exact displayed table values; table/row/column and complete row retained. No financial corrections."
+}

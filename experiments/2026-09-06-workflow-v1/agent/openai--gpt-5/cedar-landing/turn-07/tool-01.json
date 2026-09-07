@@ -1,0 +1,35 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_3u1AYKMe9ECQ2U8wMOsii0BH",
+  "arguments_raw": "{\"steps\":[{\"name\":\"t12_egi\",\"expression\":\"1036800 - 302400 - 64800 - 8400 + 30000\"},{\"name\":\"t12_opex_ex_res\",\"expression\":\"132000 + 40800 + 33600 + 54000 + 55200 + 27600 + 28000\"},{\"name\":\"t12_noi_bef_res\",\"expression\":\"t12_egi - t12_opex_ex_res\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi_bef_res - 14400\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "t12_egi",
+        "expression": "1036800 - 302400 - 64800 - 8400 + 30000"
+      },
+      {
+        "name": "t12_opex_ex_res",
+        "expression": "132000 + 40800 + 33600 + 54000 + 55200 + 27600 + 28000"
+      },
+      {
+        "name": "t12_noi_bef_res",
+        "expression": "t12_egi - t12_opex_ex_res"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi_bef_res - 14400"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "t12_egi": 691200,
+      "t12_opex_ex_res": 371200,
+      "t12_noi_bef_res": 320000,
+      "t12_ncf": 305600
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,54 @@
+Assumptions | A1=Market Row | Editable underwriting assumptions (as of 2026-08-31)
+Assumptions | A3=Item | B3=Value | C3=Source / note
+Assumptions | A4=Total rentable SF | B4=23000 | C4=Rent-Roll.xlsx rows 7-14 (sum of Area SF)
+Assumptions | A5=Gross potential base rent (annual, underwritten) | B5=657600 | C5=Property-and-Plan.pdf p.2 - supplied scenario, not from T12
+Assumptions | A6=Combined revenue loss % of gross potential rent | B6=0.06 | C6=Property-and-Plan.pdf p.2 - vacancy, concessions, bad debt
+Assumptions | A7=Other income / recoveries (annual, underwritten) | B7=150000 | C7=Property-and-Plan.pdf p.2 - added after revenue loss
+Assumptions | A8=Capitalization rate | B8=0.065 | C8=Lender-Terms.pdf p.1 - NOI before reserves / 6.50%
+Assumptions | A9=Contract rate (annual, fixed) | B9=0.0625 | C9=Lender-Terms.pdf p.1
+Assumptions | A10=Sizing rate floor | B10=0.065 | C10=Lender-Terms.pdf p.1 - greater of contract rate and 6.50%
+Assumptions | A11=Sizing rate increment (stress lever, e.g. 0.01 = +100 bps) | B11=0 | C11=Reviewer lever; base case 0
+Assumptions | A12=Sizing rate used = MAX(contract, floor) + increment | B12==MAX(B9,B10)+B11
+Assumptions | A13=Amortization (months) | B13=300 | C13=Lender-Terms.pdf p.1 - 25 years, monthly
+Assumptions | A14=Interest-only period (months) | B14=0 | C14=Lender-Terms.pdf p.1 - 0 months
+Assumptions | A15=Maximum LTV | B15=0.65
+Assumptions | A16=Minimum DSCR (NCF after reserves) | B16=1.25
+Assumptions | A17=Minimum debt yield (NOI before reserves) | B17=0.09
+Assumptions | A18=Origination fee % of initial principal | B18=0.01
+Assumptions | A19=Fixed closing costs | B19=48000 | C19=Property-and-Plan.pdf p.1
+Assumptions | A20=Existing debt payoff | B20=3400000 | C20=Property-and-Plan.pdf p.1
+Assumptions | A21=Replacement reserves per SF per year | B21=0.2
+Assumptions | A22=Management fee % of underwritten EGI (minimum test) | B22=0.04
+Assumptions | A23=T12 actual management fee (floor for UW fee) | B23=24000
+Assumptions | A24=Cap-rate sensitivity increment | B24=0.005
+Assumptions | A25=EGI stress factor (0.95 = EGI -5%) | B25=0.95
+Assumptions | A27=Underwritten operating expenses (before reserves) | B27=Annual | C27=Treatment
+Assumptions | A28=Real estate taxes | B28=90000 | C28=Plan p.2: T12 $86,400 stepped to $90,000
+Assumptions | A29=Property insurance | B29=27600 | C29=Plan p.2: renewal allowance in scenario (T12 $25,200)
+Assumptions | A30=Utilities | B30=19200 | C30=Plan p.2: T12 actual
+Assumptions | A31=Repairs and maintenance | B31=24000 | C31=Plan p.2: T12 $28,800 less $4,800 one-time casualty cleanup
+Assumptions | A32=Payroll / contract labor | B32=18000 | C32=Plan p.2: T12 actual
+Assumptions | A33=Administrative / legal | B33=14400 | C33=Plan p.2: T12 actual
+Assumptions | A34=Subtotal, expenses other than management fee | B34==SUM(B28:B33)
+Underwriting | A1=Underwritten cash flow | supplied scenario, September 2026 forward (Property-and-Plan.pdf p.2)
+Underwriting | A3=Gross potential base rent (annual) | B3==Assumptions!B5
+Underwriting | A4=Less combined revenue loss (vacancy, concessions, bad debt) | B4==-Assumptions!B6*B3
+Underwriting | A5=Effective base rental income | B5==B3+B4
+Underwriting | A6=Other income / recoveries | B6==Assumptions!B7
+Underwriting | A7=Underwritten EGI | B7==B5+B6
+Underwriting | A9=Real estate taxes | B9==Assumptions!B28
+Underwriting | A10=Property insurance | B10==Assumptions!B29
+Underwriting | A11=Utilities | B11==Assumptions!B30
+Underwriting | A12=Repairs and maintenance | B12==Assumptions!B31
+Underwriting | A13=Payroll / contract labor | B13==Assumptions!B32
+Underwriting | A14=Administrative / legal | B14==Assumptions!B33
+Underwriting | A15=Management fee (greater of T12 actual and 4.00% of UW EGI) | B15==MAX(Assumptions!B23,Assumptions!B22*B7)
+Underwriting | A16=Underwritten operating expenses before reserves | B16==SUM(B9:B15)
+Underwriting | A17=Underwritten NOI before replacement reserves | B17==B7-B16
+Underwriting | A18=Replacement reserves ($/SF x total SF) | B18==Assumptions!B21*Assumptions!B4
+Underwriting | A19=Underwritten NCF after replacement reserves | B19==B17-B18
+Underwriting | A21=Capitalization rate | B21==Assumptions!B8
+Underwriting | A22=Indicative capitalization value (UW NOI before reserves / cap rate) | B22==B17/B21
+Underwriting | A23=Underwritten expense ratio | B23==B16/B7
+Underwriting | A24=Value per SF | B24==B22/Assumptions!B4
+Underwriting | A26=The underwriting scenario is supplied by the plan and is not a lender-approved forecast; it is not reconciled to and should not be forced to equal T12 actuals or annualized point-in-time rent roll.

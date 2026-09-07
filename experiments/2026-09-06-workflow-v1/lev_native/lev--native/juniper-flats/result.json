@@ -1,0 +1,43 @@
+{
+  "case_id": "juniper-flats",
+  "requested_model": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-06T21:38:25.446Z",
+  "observed_completed_at": "2026-09-06T21:49:12.744Z",
+  "elapsed_seconds": 497.9,
+  "latency_basis": "Matched PostHog workflow trace; excludes setup and post-completion observation delay",
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "agent_version": "7.9",
+  "estimated_inference_cost_usd": 2.472894,
+  "cost_basis": "PostHog trace estimate using OpenRouter model rates; charged generation events summed, duplicate run-summary excluded",
+  "cost_scope": "Matched native chat inference only. Setup extraction/classification, OCR, storage, hosting, subscription and operator time excluded; product credits not converted to USD.",
+  "operator_semantic_corrections": 0,
+  "operator_generation_confirmations": 0,
+  "latest_workbook": "artifacts/underwriting.xlsx",
+  "latest_memo": "artifacts/memorandum.pdf",
+  "model_calls_including_retries": null,
+  "tool_calls": null,
+  "source_commit": "bc0ffcb",
+  "trace_evidence": {
+    "trace_id": "5606073a-3858-492d-beda-7062588b1114",
+    "session_id": "0c11ccbe-d803-4bd5-8fcc-41f7347c76a6",
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "generation_costs_usd": [
+      2.08796225,
+      0.38493175
+    ],
+    "total_cost_usd": 2.472894,
+    "elapsed_seconds": 497.9,
+    "cost_model_source": "PostHog estimate using OpenRouter rates",
+    "attribution": "Exact session ID matches both artifact download paths; trace prompt identifies Juniper Flats. Internal prompts omitted."
+  },
+  "input_delivery": "Five exact frozen files uploaded at deal setup and directly attached to a fresh deal-context chat; identical frozen brief."
+}

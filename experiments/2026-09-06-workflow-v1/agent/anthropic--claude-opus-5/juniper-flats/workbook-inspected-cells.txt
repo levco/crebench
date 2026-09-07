@@ -1,0 +1,86 @@
+Assumptions | A1=Juniper Flats | Editable underwriting assumptions
+Assumptions | A2=As of 2026-08-31. [INPUT] cells may be changed; all downstream sheets recalculate.
+Assumptions | A4=Revenue inputs (underwriting scenario, Sep-2026 forward)
+Assumptions | A5=Gross potential base rent (annual) [INPUT] | B5=864000 | C5=Property-and-Plan.pdf p.2, scenario amount
+Assumptions | A6=Combined revenue loss % of GPR [INPUT] | B6=0.06 | C6=Vacancy, concessions, bad debt
+Assumptions | A7=Other income / recoveries (annual) [INPUT] | B7=42000 | C7=Added after revenue loss
+Assumptions | A8=Underwritten EGI (calculated) | B8==B5*(1-B6)+B7
+Assumptions | A10=Underwritten operating expense inputs (before reserves)
+Assumptions | A11=Real estate taxes [INPUT] | B11=112000
+Assumptions | A12=Property insurance (renewal quote in plan) [INPUT] | B12=33600
+Assumptions | A13=Utilities (T12 actual) [INPUT] | B13=28800
+Assumptions | A14=Repairs and maintenance (T12 46,200 less 6,000 casualty) [INPUT] | B14=40200
+Assumptions | A15=Payroll / contract labor (T12 actual) [INPUT] | B15=42000
+Assumptions | A16=Administrative / legal (T12 actual) [INPUT] | B16=21600
+Assumptions | A17=Management fee - T12 actual floor [INPUT] | B17=30000
+Assumptions | A18=Management fee - % of underwritten EGI [INPUT] | B18=0.03
+Assumptions | A19=Normalized management fee (greater of) | B19==MAX(B17,B18*B8)
+Assumptions | A21=Reserves
+Assumptions | A22=Units (rent roll count) [INPUT] | B22=36
+Assumptions | A23=Replacement reserves per unit per year [INPUT] | B23=300
+Assumptions | A24=Underwritten replacement reserves | B24==B22*B23
+Assumptions | A26=Valuation and loan terms
+Assumptions | A27=Capitalization rate [INPUT] | B27=0.0575
+Assumptions | A28=Cap rate sensitivity increment (separate test) [INPUT] | B28=0.005
+Assumptions | A29=Contract rate (fixed, actual debt service) [INPUT] | B29=0.059
+Assumptions | A30=Underwriting rate floor [INPUT] | B30=0.0625
+Assumptions | A31=Sizing rate base = greater of contract and floor | B31==MAX(B29,B30)
+Assumptions | A32=Sizing rate increment [INPUT] | B32=0
+Assumptions | A33=Sizing rate used | B33==B31+B32
+Assumptions | A34=Amortization (years) [INPUT] | B34=30
+Assumptions | A35=Payments per year [INPUT] | B35=12
+Assumptions | A36=Interest-only period (months) [INPUT] | B36=24
+Assumptions | A37=Maximum LTV [INPUT] | B37=0.65
+Assumptions | A38=Minimum DSCR (NCF after reserves) [INPUT] | B38=1.25
+Assumptions | A39=Minimum debt yield (NCF after reserves) [INPUT] | B39=0.085
+Assumptions | A40=Origination fee % of initial principal [INPUT] | B40=0.0075
+Assumptions | A41=Existing debt payoff [INPUT] | B41=3300000
+Assumptions | A42=Fixed closing costs [INPUT] | B42=45000
+Assumptions | A44=Downside test parameters
+Assumptions | A45=EGI stress factor [INPUT] | B45=0.95
+Assumptions | A46=Sizing rate stress (bps as decimal) [INPUT] | B46=0.01
+T12 | A1=Historical T12 | September 2025 - August 2026 (actual)
+T12 | A2=Source: T12-Statement.pdf pp.1-2, Annual column. Historical only - not underwriting.
+T12 | A4=Gross potential base rent | B4=840000
+T12 | A5=Vacancy loss | B5=-42000
+T12 | A6=Concessions | B6=-12000
+T12 | A7=Bad debt | B7=-4500
+T12 | A8=Net rental income | B8==SUM(B4:B7)
+T12 | A9=Other income / recoveries | B9=39600
+T12 | A10=T12 effective gross income (EGI) | B10==B8+B9
+T12 | A12=Real estate taxes | B12=108000
+T12 | A13=Property insurance | B13=31200
+T12 | A14=Utilities | B14=28800
+T12 | A15=Repairs and maintenance (incl. 6,000 one-time casualty) | B15=46200
+T12 | A16=Payroll / contract labor | B16=42000
+T12 | A17=Administrative / legal | B17=21600
+T12 | A18=Management fee | B18=30000
+T12 | A19=T12 operating expenses (excl. reserves/capex/debt/depreciation) | B19==SUM(B12:B18)
+T12 | A20=T12 NOI before replacement reserves | B20==B10-B19
+T12 | A21=Replacement reserves (below NOI) | B21=10800
+T12 | A22=T12 NCF after replacement reserves | B22==B20-B21
+T12 | A24=Below-the-line items shown for reconciliation only
+T12 | A25=Capital improvements | B25=62000
+T12 | A26=Loan principal and interest (existing debt) | B26=294000
+T12 | A27=Depreciation (noncash) | B27=180000
+T12 | A29=Note: the accounting package may label cash flow after reserves as 'property NOI'; both measures are shown separately above.
+Underwriting | A1=Underwritten cash flow | scenario, September 2026 forward
+Underwriting | A2=Driven by editable inputs on Assumptions. Separate from historical T12.
+Underwriting | A4=Gross potential base rent | B4==Assumptions!B5
+Underwriting | A5=Combined revenue loss (vacancy/concessions/bad debt) | B5==-Assumptions!B5*Assumptions!B6
+Underwriting | A6=Other income / recoveries | B6==Assumptions!B7
+Underwriting | A7=Underwritten EGI (uw_egi) | B7==B4+B5+B6
+Underwriting | A9=Real estate taxes | B9==Assumptions!B11
+Underwriting | A10=Property insurance | B10==Assumptions!B12
+Underwriting | A11=Utilities | B11==Assumptions!B13
+Underwriting | A12=Repairs and maintenance (normalized) | B12==Assumptions!B14
+Underwriting | A13=Payroll / contract labor | B13==Assumptions!B15
+Underwriting | A14=Administrative / legal | B14==Assumptions!B16
+Underwriting | A15=Management fee (lender-normalized, greater-of test) | B15==MAX(Assumptions!B17,Assumptions!B18*B7)
+Underwriting | A16=Total underwritten operating expenses before reserves | B16==SUM(B9:B15)
+Underwriting | A17=Underwritten NOI before reserves | B17==B7-B16
+Underwriting | A18=Replacement reserves ($/unit/yr x units) | B18==Assumptions!B24
+Underwriting | A19=Underwritten NCF after reserves | B19==B17-B18
+Underwriting | A21=Capitalization rate | B21==Assumptions!B27
+Underwriting | A22=Indicative capitalization value (NOI before reserves / cap rate) | B22==B17/B21
+Underwriting | A24=Expense ratio (opex before reserves / EGI) | B24==B16/B7

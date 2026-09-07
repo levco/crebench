@@ -1,0 +1,75 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_019ZSqjnvQHt3UPFDPfanz4N",
+  "arguments_raw": "{\"steps\":[{\"name\":\"s_egi\",\"expression\":\"1023000*0.95\"},{\"name\":\"s_mgmt\",\"expression\":\"max(25200,0.03*s_egi)\"},{\"name\":\"s_opex\",\"expression\":\"132000+33600+12000+18000+18000+18000+s_mgmt\"},{\"name\":\"s_noi\",\"expression\":\"s_egi-s_opex\"},{\"name\":\"s_ncf\",\"expression\":\"s_noi-17000\"},{\"name\":\"s_const\",\"expression\":\"-pmt(0.0825/12,300,1)*12\"},{\"name\":\"s_ltv\",\"expression\":\"0.60*s_noi/0.0675\"},{\"name\":\"s_dscr\",\"expression\":\"s_ncf/(1.30*s_const)\"},{\"name\":\"s_dy\",\"expression\":\"s_ncf/0.10\"},{\"name\":\"s_max\",\"expression\":\"min(s_ltv,s_dscr,s_dy)\"},{\"name\":\"caprate50_value\",\"expression\":\"760710/0.0725\"},{\"name\":\"caprate50_ltv\",\"expression\":\"0.6*caprate50_value\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "s_egi",
+        "expression": "1023000*0.95"
+      },
+      {
+        "name": "s_mgmt",
+        "expression": "max(25200,0.03*s_egi)"
+      },
+      {
+        "name": "s_opex",
+        "expression": "132000+33600+12000+18000+18000+18000+s_mgmt"
+      },
+      {
+        "name": "s_noi",
+        "expression": "s_egi-s_opex"
+      },
+      {
+        "name": "s_ncf",
+        "expression": "s_noi-17000"
+      },
+      {
+        "name": "s_const",
+        "expression": "-pmt(0.0825/12,300,1)*12"
+      },
+      {
+        "name": "s_ltv",
+        "expression": "0.60*s_noi/0.0675"
+      },
+      {
+        "name": "s_dscr",
+        "expression": "s_ncf/(1.30*s_const)"
+      },
+      {
+        "name": "s_dy",
+        "expression": "s_ncf/0.10"
+      },
+      {
+        "name": "s_max",
+        "expression": "min(s_ltv,s_dscr,s_dy)"
+      },
+      {
+        "name": "caprate50_value",
+        "expression": "760710/0.0725"
+      },
+      {
+        "name": "caprate50_ltv",
+        "expression": "0.6*caprate50_value"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "s_egi": 971850.0,
+      "s_mgmt": 29155.5,
+      "s_opex": 260755.5,
+      "s_noi": 711094.5,
+      "s_ncf": 694094.5,
+      "s_const": 0.09461401616234266,
+      "s_ltv": 6320840.0,
+      "s_dscr": 5643126.333816398,
+      "s_dy": 6940945.0,
+      "s_max": 5643126.333816398,
+      "caprate50_value": 10492551.724137932,
+      "caprate50_ltv": 6295531.034482759
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

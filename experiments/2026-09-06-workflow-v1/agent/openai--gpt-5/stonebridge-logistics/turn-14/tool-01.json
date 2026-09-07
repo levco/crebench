@@ -1,0 +1,354 @@
+{
+  "name": "submit_analysis",
+  "call_id": "call_Sa5KVFGLa4lYBYjf6WorvR6N",
+  "arguments_raw": "{\"fields\":[{\"id\":\"space_count\",\"value\":4,\"evidence\":[\"Rent-Roll.xlsx Row 4-7\"],\"calculation\":\"Count of suites on rent roll rows 4-7 = 4\"},{\"id\":\"occupied_count\",\"value\":3,\"evidence\":[\"Rent-Roll.xlsx Row 4-7\"],\"calculation\":\"Rows marked Occupied: 101,102,103 = 3\"},{\"id\":\"total_area_sf\",\"value\":85000,\"evidence\":[\"Rent-Roll.xlsx C4:C7\"],\"calculation\":\"18,000+22,000+30,000+15,000=85,000 SF\"},{\"id\":\"occupied_area_sf\",\"value\":70000,\"evidence\":[\"Rent-Roll.xlsx C4:C6\"],\"calculation\":\"18,000+22,000+30,000=70,000 SF\"},{\"id\":\"occupancy_count_pct\",\"value\":75,\"evidence\":[\"Rent-Roll.xlsx rows 4-7\"],\"calculation\":\"3 occupied / 4 total = 0.75 = 75%\"},{\"id\":\"occupancy_area_pct\",\"value\":82.3529411764706,\"evidence\":[\"Rent-Roll.xlsx C4:C7\"],\"calculation\":\"70,000 / 85,000 = 0.8235294118 = 82.3529%\"},{\"id\":\"rent_roll_monthly_base\",\"value\":60700,\"evidence\":[\"Rent-Roll.xlsx E4:E7\"],\"calculation\":\"15,000 + 18,700 + 27,000 + 0 = 60,700 per month\"},{\"id\":\"effective_monthly_base\",\"value\":60700,\"evidence\":[\"Rent-Roll.xlsx E4:E7\",\"Lease-File.pdf p1 \u00a73\"],\"calculation\":\"No amendments supplied; Lease 101 confirms $15,000/mo. Effective monthly base equals printed roll = $60,700\"},{\"id\":\"t12_egi\",\"value\":846000,\"evidence\":[\"T12-Statement.pdf p2 Annual column\"],\"calculation\":\"852,000 -150,000 -36,000 -6,000 +186,000 = 846,000\"},{\"id\":\"t12_operating_expenses\",\"value\":253200,\"evidence\":[\"T12-Statement.pdf p2 Annual column rows taxes through management\"],\"calculation\":\"126,000 +30,000 +12,000 +24,000 +18,000 +18,000 +25,200 = 253,200\"},{\"id\":\"t12_noi_before_reserves\",\"value\":592800,\"evidence\":[\"T12-Statement.pdf p2 Annual column\"],\"calculation\":\"846,000 - 253,200 = 592,800\"},{\"id\":\"t12_reserves\",\"value\":17000,\"evidence\":[\"T12-Statement.pdf p2 Annual column 'Replacement reserves'\"],\"calculation\":\"Given\"},{\"id\":\"t12_ncf\",\"value\":575800,\"evidence\":[\"T12-Statement.pdf p2 Annual column; calc\"],\"calculation\":\"592,800 - 17,000 = 575,800\"},{\"id\":\"uw_egi\",\"value\":1023000,\"evidence\":[\"Property-and-Plan.pdf p2 underwriting plan\"],\"calculation\":\"$900,000*(1-8%) + $195,000 = $1,023,000\"},{\"id\":\"uw_management_fee\",\"value\":30690,\"evidence\":[\"Property-and-Plan.pdf p2 rule; T12-Statement.pdf p2 mgmt $25,200\"],\"calculation\":\"Greater of $25,200 and 3% of EGI = 0.03 * 1,023,000 = 30,690\"},{\"id\":\"uw_operating_expenses\",\"value\":262290,\"evidence\":[\"Property-and-Plan.pdf p2 underwriting treatments\"],\"calculation\":\"Taxes 132,000 + Insurance 33,600 + Utilities 12,000 + R&M 18,000 + Payroll 18,000 + Admin 18,000 + Mgmt 30,690 = 262,290\"},{\"id\":\"uw_noi_before_reserves\",\"value\":760710,\"evidence\":[\"Property-and-Plan.pdf p2 and calc\"],\"calculation\":\"EGI 1,023,000 - OpEx before reserves 262,290 = 760,710\"},{\"id\":\"uw_reserves\",\"value\":17000,\"evidence\":[\"Property-and-Plan.pdf p2 reserves $0.20/SF/yr; Rent-Roll.xlsx total SF 85,000\"],\"calculation\":\"0.20 * 85,000 SF = 17,000\"},{\"id\":\"uw_ncf\",\"value\":743710,\"evidence\":[\"Calc from above\"],\"calculation\":\"760,710 - 17,000 = 743,710\"},{\"id\":\"capitalization_value\",\"value\":11269777.777777778,\"evidence\":[\"Lender-Terms.pdf p1 cap rate 6.75%\",\"UW NOI before reserves 760,710\"],\"calculation\":\"760,710 / 0.0675 = 11,269,777.78\"},{\"id\":\"contract_rate\",\"value\":0.0675,\"evidence\":[\"Lender-Terms.pdf p1 contract rate = index floor 4.00% + 2.75% spread\"],\"calculation\":\"4.00% floor + 2.75% = 6.75%\"},{\"id\":\"sizing_rate\",\"value\":0.0725,\"evidence\":[\"Lender-Terms.pdf p1 sizing rate greater of contractual and 7.25% floor\"],\"calculation\":\"Greater of 6.75% and 7.25% = 7.25%\"},{\"id\":\"annual_debt_constant\",\"value\":0.08673682369165958,\"evidence\":[\"Lender-Terms.pdf p1; 25-yr monthly amortization\"],\"calculation\":\"12*PMT(7.25%/12, 25*12, 1) = 0.0867368237\"},{\"id\":\"ltv_limit\",\"value\":6761866.666666665,\"evidence\":[\"Lender-Terms.pdf p1 60% LTV; capitalization value above\"],\"calculation\":\"60% * 11,269,777.78 = 6,761,866.67\"},{\"id\":\"dscr_limit\",\"value\":6595637.135829609,\"evidence\":[\"Lender-Terms.pdf p1 DSCR 1.30x using NCF and sizing constant\"],\"calculation\":\"743,710 / (1.30 * 0.0867368237) = 6,595,637.14\"},{\"id\":\"debt_yield_limit\",\"value\":7437100,\"evidence\":[\"Lender-Terms.pdf p1 10% debt yield; numerator NCF\"],\"calculation\":\"743,710 / 0.10 = 7,437,100\"},{\"id\":\"maximum_loan\",\"value\":6595637.135829609,\"evidence\":[\"Minimum of LTV, DSCR, Debt yield limits above\"],\"calculation\":\"min(6,761,866.67, 6,595,637.14, 7,437,100) = 6,595,637.14\"},{\"id\":\"binding_constraint\",\"value\":\"DSCR\",\"evidence\":[\"Comparison of constraints above\"],\"calculation\":\"DSCR limit is the lowest\"},{\"id\":\"sizing_annual_debt_service\",\"value\":572084.6153846154,\"evidence\":[\"Annual constant * maximum loan\"],\"calculation\":\"0.0867368237 * 6,595,637.14 = 572,084.62\"},{\"id\":\"sizing_dscr\",\"value\":1.3,\"evidence\":[\"Definition DSCR = NCF / sizing P&I\"],\"calculation\":\"743,710 / 572,084.62 = 1.30x\"},{\"id\":\"sizing_debt_yield\",\"value\":0.11275787079915746,\"evidence\":[\"Debt yield = NCF / loan\"],\"calculation\":\"743,710 / 6,595,637.14 = 11.275787%\"},{\"id\":\"first_year_debt_service\",\"value\":445205.5066684986,\"evidence\":[\"Lender-Terms.pdf p1 IO year 1; contractual rate 6.75%\"],\"calculation\":\"Loan * 6.75% = 6,595,637.14 * 0.0675 = 445,205.51\"},{\"id\":\"cash_to_borrower\",\"value\":2243191.6716317385,\"evidence\":[\"Property-and-Plan.pdf p1 payoff and costs; Lender-Terms.pdf origination 1.25%\"],\"calculation\":\"Loan - payoff - closing costs - 1.25% origination = 6,595,637.14 - 4,200,000 - 70,000 - 82,445.46 = 2,243,191.67 cash out\"},{\"id\":\"stress_uw_noi\",\"value\":711094.5,\"evidence\":[\"Plan p2 sensitivity instruction\"],\"calculation\":\"EGI stressed = 1,023,000*0.95=971,850; mgmt = max(25,200, 3%*971,850=29,155.50); other OpEx unchanged (231,600); NOI before reserves = 971,850 - (231,600+29,155.50) = 711,094.50\"},{\"id\":\"stress_maximum_loan\",\"value\":5643126.333816398,\"evidence\":[\"Plan p2 downside instruction; Lender terms sizing\"],\"calculation\":\"At sizing rate +100 bps: constant = 0.0946140162; Stress NCF = 694,094.5; LTV = 60%*(711,094.5/0.0675)=6,320,840; DSCR = 694,094.5/(1.30*0.0946140162)=5,643,126.33; DY = 6,940,945; Minimum = 5,643,126.33\"},{\"id\":\"subject_lease_monthly_rent\",\"value\":15000,\"evidence\":[\"Lease-File.pdf p1 \u00a73; Rent-Roll.xlsx row 4\"],\"calculation\":\"Given $15,000/mo as of 2026-08-31\"},{\"id\":\"subject_lease_expiry\",\"value\":\"2030-08-31\",\"evidence\":[\"Lease-File.pdf p1 \u00a72; Rent-Roll.xlsx row 4\"],\"calculation\":\"Given\"},{\"id\":\"subject_lease_deposit\",\"value\":30000,\"evidence\":[\"Lease-File.pdf p1 \u00a74\"],\"calculation\":\"Given security deposit $30,000\"},{\"id\":\"verified_renewal_insurance\",\"value\":33600,\"evidence\":[\"Property-and-Plan.pdf p2 Insurance evidence line\"],\"calculation\":\"Given renewal premium\"},{\"id\":\"renewal_option_exercised\",\"value\":\"No\",\"evidence\":[\"Lease-File.pdf p1 \u00a75; Rent-Roll.xlsx C15 note\"],\"calculation\":\"Packet states no exercise notice included; treat as not exercised\"},{\"id\":\"prepayment_friction\",\"value\":\"1% of outstanding principal if prepaid in years 1\u20132; no stated penalty thereafter; no swap assumed.\",\"evidence\":[\"Lender-Terms.pdf p1 Prepayment\"],\"calculation\":\"Given lender term sheet language\"}],\"qualifications\":[\"All results are based solely on the supplied packet as of 2026-08-31.\",\"Historicals are actual cash; underwriting follows the provided plan and lender\u2019s definitions without external adjustments.\",\"No appraisal, market rent study, sponsor review or legal diligence was provided; this is not a commitment.\"],\"summary\":\"Prepared T12, rent roll and lease extractions; computed underwriting, value and loan sizing per lender rules. Maximum loan $6.596MM (DSCR). First-year IO debt service at contract rate 6.75% equals $445k. Net cash to borrower estimated $2.243MM after payoff, origination and fixed costs. Stress case with EGI -5% and +100 bps sizing rate sizes to $5.643MM. Workbook with live formulas and an internal memorandum PDF are attached and cited.\",\"blocked\":[]}",
+  "arguments": {
+    "fields": [
+      {
+        "id": "space_count",
+        "value": 4,
+        "evidence": [
+          "Rent-Roll.xlsx Row 4-7"
+        ],
+        "calculation": "Count of suites on rent roll rows 4-7 = 4"
+      },
+      {
+        "id": "occupied_count",
+        "value": 3,
+        "evidence": [
+          "Rent-Roll.xlsx Row 4-7"
+        ],
+        "calculation": "Rows marked Occupied: 101,102,103 = 3"
+      },
+      {
+        "id": "total_area_sf",
+        "value": 85000,
+        "evidence": [
+          "Rent-Roll.xlsx C4:C7"
+        ],
+        "calculation": "18,000+22,000+30,000+15,000=85,000 SF"
+      },
+      {
+        "id": "occupied_area_sf",
+        "value": 70000,
+        "evidence": [
+          "Rent-Roll.xlsx C4:C6"
+        ],
+        "calculation": "18,000+22,000+30,000=70,000 SF"
+      },
+      {
+        "id": "occupancy_count_pct",
+        "value": 75,
+        "evidence": [
+          "Rent-Roll.xlsx rows 4-7"
+        ],
+        "calculation": "3 occupied / 4 total = 0.75 = 75%"
+      },
+      {
+        "id": "occupancy_area_pct",
+        "value": 82.3529411764706,
+        "evidence": [
+          "Rent-Roll.xlsx C4:C7"
+        ],
+        "calculation": "70,000 / 85,000 = 0.8235294118 = 82.3529%"
+      },
+      {
+        "id": "rent_roll_monthly_base",
+        "value": 60700,
+        "evidence": [
+          "Rent-Roll.xlsx E4:E7"
+        ],
+        "calculation": "15,000 + 18,700 + 27,000 + 0 = 60,700 per month"
+      },
+      {
+        "id": "effective_monthly_base",
+        "value": 60700,
+        "evidence": [
+          "Rent-Roll.xlsx E4:E7",
+          "Lease-File.pdf p1 \u00a73"
+        ],
+        "calculation": "No amendments supplied; Lease 101 confirms $15,000/mo. Effective monthly base equals printed roll = $60,700"
+      },
+      {
+        "id": "t12_egi",
+        "value": 846000,
+        "evidence": [
+          "T12-Statement.pdf p2 Annual column"
+        ],
+        "calculation": "852,000 -150,000 -36,000 -6,000 +186,000 = 846,000"
+      },
+      {
+        "id": "t12_operating_expenses",
+        "value": 253200,
+        "evidence": [
+          "T12-Statement.pdf p2 Annual column rows taxes through management"
+        ],
+        "calculation": "126,000 +30,000 +12,000 +24,000 +18,000 +18,000 +25,200 = 253,200"
+      },
+      {
+        "id": "t12_noi_before_reserves",
+        "value": 592800,
+        "evidence": [
+          "T12-Statement.pdf p2 Annual column"
+        ],
+        "calculation": "846,000 - 253,200 = 592,800"
+      },
+      {
+        "id": "t12_reserves",
+        "value": 17000,
+        "evidence": [
+          "T12-Statement.pdf p2 Annual column 'Replacement reserves'"
+        ],
+        "calculation": "Given"
+      },
+      {
+        "id": "t12_ncf",
+        "value": 575800,
+        "evidence": [
+          "T12-Statement.pdf p2 Annual column; calc"
+        ],
+        "calculation": "592,800 - 17,000 = 575,800"
+      },
+      {
+        "id": "uw_egi",
+        "value": 1023000,
+        "evidence": [
+          "Property-and-Plan.pdf p2 underwriting plan"
+        ],
+        "calculation": "$900,000*(1-8%) + $195,000 = $1,023,000"
+      },
+      {
+        "id": "uw_management_fee",
+        "value": 30690,
+        "evidence": [
+          "Property-and-Plan.pdf p2 rule; T12-Statement.pdf p2 mgmt $25,200"
+        ],
+        "calculation": "Greater of $25,200 and 3% of EGI = 0.03 * 1,023,000 = 30,690"
+      },
+      {
+        "id": "uw_operating_expenses",
+        "value": 262290,
+        "evidence": [
+          "Property-and-Plan.pdf p2 underwriting treatments"
+        ],
+        "calculation": "Taxes 132,000 + Insurance 33,600 + Utilities 12,000 + R&M 18,000 + Payroll 18,000 + Admin 18,000 + Mgmt 30,690 = 262,290"
+      },
+      {
+        "id": "uw_noi_before_reserves",
+        "value": 760710,
+        "evidence": [
+          "Property-and-Plan.pdf p2 and calc"
+        ],
+        "calculation": "EGI 1,023,000 - OpEx before reserves 262,290 = 760,710"
+      },
+      {
+        "id": "uw_reserves",
+        "value": 17000,
+        "evidence": [
+          "Property-and-Plan.pdf p2 reserves $0.20/SF/yr; Rent-Roll.xlsx total SF 85,000"
+        ],
+        "calculation": "0.20 * 85,000 SF = 17,000"
+      },
+      {
+        "id": "uw_ncf",
+        "value": 743710,
+        "evidence": [
+          "Calc from above"
+        ],
+        "calculation": "760,710 - 17,000 = 743,710"
+      },
+      {
+        "id": "capitalization_value",
+        "value": 11269777.777777778,
+        "evidence": [
+          "Lender-Terms.pdf p1 cap rate 6.75%",
+          "UW NOI before reserves 760,710"
+        ],
+        "calculation": "760,710 / 0.0675 = 11,269,777.78"
+      },
+      {
+        "id": "contract_rate",
+        "value": 0.0675,
+        "evidence": [
+          "Lender-Terms.pdf p1 contract rate = index floor 4.00% + 2.75% spread"
+        ],
+        "calculation": "4.00% floor + 2.75% = 6.75%"
+      },
+      {
+        "id": "sizing_rate",
+        "value": 0.0725,
+        "evidence": [
+          "Lender-Terms.pdf p1 sizing rate greater of contractual and 7.25% floor"
+        ],
+        "calculation": "Greater of 6.75% and 7.25% = 7.25%"
+      },
+      {
+        "id": "annual_debt_constant",
+        "value": 0.08673682369165958,
+        "evidence": [
+          "Lender-Terms.pdf p1; 25-yr monthly amortization"
+        ],
+        "calculation": "12*PMT(7.25%/12, 25*12, 1) = 0.0867368237"
+      },
+      {
+        "id": "ltv_limit",
+        "value": 6761866.666666665,
+        "evidence": [
+          "Lender-Terms.pdf p1 60% LTV; capitalization value above"
+        ],
+        "calculation": "60% * 11,269,777.78 = 6,761,866.67"
+      },
+      {
+        "id": "dscr_limit",
+        "value": 6595637.135829609,
+        "evidence": [
+          "Lender-Terms.pdf p1 DSCR 1.30x using NCF and sizing constant"
+        ],
+        "calculation": "743,710 / (1.30 * 0.0867368237) = 6,595,637.14"
+      },
+      {
+        "id": "debt_yield_limit",
+        "value": 7437100,
+        "evidence": [
+          "Lender-Terms.pdf p1 10% debt yield; numerator NCF"
+        ],
+        "calculation": "743,710 / 0.10 = 7,437,100"
+      },
+      {
+        "id": "maximum_loan",
+        "value": 6595637.135829609,
+        "evidence": [
+          "Minimum of LTV, DSCR, Debt yield limits above"
+        ],
+        "calculation": "min(6,761,866.67, 6,595,637.14, 7,437,100) = 6,595,637.14"
+      },
+      {
+        "id": "binding_constraint",
+        "value": "DSCR",
+        "evidence": [
+          "Comparison of constraints above"
+        ],
+        "calculation": "DSCR limit is the lowest"
+      },
+      {
+        "id": "sizing_annual_debt_service",
+        "value": 572084.6153846154,
+        "evidence": [
+          "Annual constant * maximum loan"
+        ],
+        "calculation": "0.0867368237 * 6,595,637.14 = 572,084.62"
+      },
+      {
+        "id": "sizing_dscr",
+        "value": 1.3,
+        "evidence": [
+          "Definition DSCR = NCF / sizing P&I"
+        ],
+        "calculation": "743,710 / 572,084.62 = 1.30x"
+      },
+      {
+        "id": "sizing_debt_yield",
+        "value": 0.11275787079915746,
+        "evidence": [
+          "Debt yield = NCF / loan"
+        ],
+        "calculation": "743,710 / 6,595,637.14 = 11.275787%"
+      },
+      {
+        "id": "first_year_debt_service",
+        "value": 445205.5066684986,
+        "evidence": [
+          "Lender-Terms.pdf p1 IO year 1; contractual rate 6.75%"
+        ],
+        "calculation": "Loan * 6.75% = 6,595,637.14 * 0.0675 = 445,205.51"
+      },
+      {
+        "id": "cash_to_borrower",
+        "value": 2243191.6716317385,
+        "evidence": [
+          "Property-and-Plan.pdf p1 payoff and costs; Lender-Terms.pdf origination 1.25%"
+        ],
+        "calculation": "Loan - payoff - closing costs - 1.25% origination = 6,595,637.14 - 4,200,000 - 70,000 - 82,445.46 = 2,243,191.67 cash out"
+      },
+      {
+        "id": "stress_uw_noi",
+        "value": 711094.5,
+        "evidence": [
+          "Plan p2 sensitivity instruction"
+        ],
+        "calculation": "EGI stressed = 1,023,000*0.95=971,850; mgmt = max(25,200, 3%*971,850=29,155.50); other OpEx unchanged (231,600); NOI before reserves = 971,850 - (231,600+29,155.50) = 711,094.50"
+      },
+      {
+        "id": "stress_maximum_loan",
+        "value": 5643126.333816398,
+        "evidence": [
+          "Plan p2 downside instruction; Lender terms sizing"
+        ],
+        "calculation": "At sizing rate +100 bps: constant = 0.0946140162; Stress NCF = 694,094.5; LTV = 60%*(711,094.5/0.0675)=6,320,840; DSCR = 694,094.5/(1.30*0.0946140162)=5,643,126.33; DY = 6,940,945; Minimum = 5,643,126.33"
+      },
+      {
+        "id": "subject_lease_monthly_rent",
+        "value": 15000,
+        "evidence": [
+          "Lease-File.pdf p1 \u00a73; Rent-Roll.xlsx row 4"
+        ],
+        "calculation": "Given $15,000/mo as of 2026-08-31"
+      },
+      {
+        "id": "subject_lease_expiry",
+        "value": "2030-08-31",
+        "evidence": [
+          "Lease-File.pdf p1 \u00a72; Rent-Roll.xlsx row 4"
+        ],
+        "calculation": "Given"
+      },
+      {
+        "id": "subject_lease_deposit",
+        "value": 30000,
+        "evidence": [
+          "Lease-File.pdf p1 \u00a74"
+        ],
+        "calculation": "Given security deposit $30,000"
+      },
+      {
+        "id": "verified_renewal_insurance",
+        "value": 33600,
+        "evidence": [
+          "Property-and-Plan.pdf p2 Insurance evidence line"
+        ],
+        "calculation": "Given renewal premium"
+      },
+      {
+        "id": "renewal_option_exercised",
+        "value": "No",
+        "evidence": [
+          "Lease-File.pdf p1 \u00a75; Rent-Roll.xlsx C15 note"
+        ],
+        "calculation": "Packet states no exercise notice included; treat as not exercised"
+      },
+      {
+        "id": "prepayment_friction",
+        "value": "1% of outstanding principal if prepaid in years 1\u20132; no stated penalty thereafter; no swap assumed.",
+        "evidence": [
+          "Lender-Terms.pdf p1 Prepayment"
+        ],
+        "calculation": "Given lender term sheet language"
+      }
+    ],
+    "qualifications": [
+      "All results are based solely on the supplied packet as of 2026-08-31.",
+      "Historicals are actual cash; underwriting follows the provided plan and lender\u2019s definitions without external adjustments.",
+      "No appraisal, market rent study, sponsor review or legal diligence was provided; this is not a commitment."
+    ],
+    "summary": "Prepared T12, rent roll and lease extractions; computed underwriting, value and loan sizing per lender rules. Maximum loan $6.596MM (DSCR). First-year IO debt service at contract rate 6.75% equals $445k. Net cash to borrower estimated $2.243MM after payoff, origination and fixed costs. Stress case with EGI -5% and +100 bps sizing rate sizes to $5.643MM. Workbook with live formulas and an internal memorandum PDF are attached and cited.",
+    "blocked": []
+  },
+  "result": {
+    "recorded": true,
+    "fields": 41,
+    "workbooks": 2,
+    "memos": 1
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

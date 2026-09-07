@@ -1,0 +1,115 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01CMGyiMZtgLihB5GyK28hqX",
+  "arguments_raw": "{\"steps\":[{\"name\":\"rr_monthly\",\"expression\":\"3000+4000+4900+5600+6500+7400+8600+9200+10800\"},{\"name\":\"total_sf\",\"expression\":\"1400+1800+2200+2500+3000+3300+3800+4200+5000+1600\"},{\"name\":\"occ_sf\",\"expression\":\"1400+1800+2200+2500+3000+3300+3800+4200+5000\"},{\"name\":\"occ_area_pct\",\"expression\":\"27200/28800*100\"},{\"name\":\"t12_egi\",\"expression\":\"759600-40800-22800-6000+176400\"},{\"name\":\"t12_opex\",\"expression\":\"114000+32400+21600+36000+24000+18000+18000\"},{\"name\":\"t12_noi\",\"expression\":\"866400-264000\"},{\"name\":\"t12_ncf\",\"expression\":\"602400-11520\"},{\"name\":\"uw_egi\",\"expression\":\"780000*0.95+180000\"},{\"name\":\"uw_mgmt\",\"expression\":\"max(18000,0.04*921000)\"},{\"name\":\"uw_opex\",\"expression\":\"120000+34800+21600+36000+24000+18000+36840\"},{\"name\":\"uw_noi\",\"expression\":\"921000-291240\"},{\"name\":\"uw_res\",\"expression\":\"0.15*28800\"},{\"name\":\"uw_ncf\",\"expression\":\"629760-4320\"},{\"name\":\"value\",\"expression\":\"629760/0.0625\"},{\"name\":\"ltv_limit\",\"expression\":\"0.625*10076160\"},{\"name\":\"const\",\"expression\":\"-pmt(0.0635/12,300,1)*12\"},{\"name\":\"dscr_limit\",\"expression\":\"(625440/1.25)/const\"},{\"name\":\"dy_limit\",\"expression\":\"629760/0.09\"},{\"name\":\"max_loan\",\"expression\":\"min(ltv_limit,dscr_limit,dy_limit)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "rr_monthly",
+        "expression": "3000+4000+4900+5600+6500+7400+8600+9200+10800"
+      },
+      {
+        "name": "total_sf",
+        "expression": "1400+1800+2200+2500+3000+3300+3800+4200+5000+1600"
+      },
+      {
+        "name": "occ_sf",
+        "expression": "1400+1800+2200+2500+3000+3300+3800+4200+5000"
+      },
+      {
+        "name": "occ_area_pct",
+        "expression": "27200/28800*100"
+      },
+      {
+        "name": "t12_egi",
+        "expression": "759600-40800-22800-6000+176400"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "114000+32400+21600+36000+24000+18000+18000"
+      },
+      {
+        "name": "t12_noi",
+        "expression": "866400-264000"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "602400-11520"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "780000*0.95+180000"
+      },
+      {
+        "name": "uw_mgmt",
+        "expression": "max(18000,0.04*921000)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "120000+34800+21600+36000+24000+18000+36840"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "921000-291240"
+      },
+      {
+        "name": "uw_res",
+        "expression": "0.15*28800"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "629760-4320"
+      },
+      {
+        "name": "value",
+        "expression": "629760/0.0625"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.625*10076160"
+      },
+      {
+        "name": "const",
+        "expression": "-pmt(0.0635/12,300,1)*12"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(625440/1.25)/const"
+      },
+      {
+        "name": "dy_limit",
+        "expression": "629760/0.09"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(ltv_limit,dscr_limit,dy_limit)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "rr_monthly": 60000,
+      "total_sf": 28800,
+      "occ_sf": 27200,
+      "occ_area_pct": 94.44444444444444,
+      "t12_egi": 866400,
+      "t12_opex": 264000,
+      "t12_noi": 602400,
+      "t12_ncf": 590880,
+      "uw_egi": 921000.0,
+      "uw_mgmt": 36840.0,
+      "uw_opex": 291240,
+      "uw_noi": 629760,
+      "uw_res": 4320.0,
+      "uw_ncf": 625440,
+      "value": 10076160.0,
+      "ltv_limit": 6297600.0,
+      "const": 0.07990371531238384,
+      "dscr_limit": 6261936.607626719,
+      "dy_limit": 6997333.333333334,
+      "max_loan": 6261936.607626719
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,225 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_UV8caTlzpPLTW7YYg1aH4J4M",
+  "arguments_raw": "{\"steps\":[{\"name\":\"total_area\",\"expression\":\"1400+1800+2200+2500+3000+3300+3800+4200+5000+1600\"},{\"name\":\"occupied_area\",\"expression\":\"total_area-1600\"},{\"name\":\"occupancy_count_pct\",\"expression\":\"(9/10)*100\"},{\"name\":\"occupancy_area_pct\",\"expression\":\"(occupied_area/total_area)*100\"},{\"name\":\"rent_roll_monthly_base\",\"expression\":\"3000+4000+4900+5600+6500+7400+8600+9200+10800\"},{\"name\":\"t12_egi\",\"expression\":\"759600-40800-22800-6000+176400\"},{\"name\":\"t12_opex\",\"expression\":\"114000+32400+21600+36000+24000+18000+18000\"},{\"name\":\"t12_noi_bfr_res\",\"expression\":\"t12_egi - t12_opex\"},{\"name\":\"t12_reserves\",\"expression\":\"11520\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi_bfr_res - t12_reserves\"},{\"name\":\"uw_egi\",\"expression\":\"780000 - 0.05*780000 + 180000\"},{\"name\":\"uw_mgmt\",\"expression\":\"max(18000, 0.04*uw_egi)\"},{\"name\":\"uw_opex_bfr_res\",\"expression\":\"120000+34800+21600+36000+24000+18000+uw_mgmt\"},{\"name\":\"uw_noi_bfr_res\",\"expression\":\"uw_egi - uw_opex_bfr_res\"},{\"name\":\"total_sf\",\"expression\":\"total_area\"},{\"name\":\"uw_reserves\",\"expression\":\"0.15*total_sf\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi_bfr_res - uw_reserves\"},{\"name\":\"cap_value\",\"expression\":\"uw_noi_bfr_res / 0.0625\"},{\"name\":\"ltv_limit\",\"expression\":\"0.625 * cap_value\"},{\"name\":\"monthly_rate\",\"expression\":\"0.0635/12\"},{\"name\":\"pmt_per_1_monthly\",\"expression\":\"pmt(monthly_rate, 25*12, 1)\"},{\"name\":\"annual_debt_constant\",\"expression\":\"12 * pmt_per_1_monthly\"},{\"name\":\"dscr_limit\",\"expression\":\"uw_ncf / (1.25 * annual_debt_constant)\"},{\"name\":\"debt_yield_limit\",\"expression\":\"uw_noi_bfr_res / 0.09\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit, dscr_limit, debt_yield_limit)\"},{\"name\":\"sizing_ads\",\"expression\":\"maximum_loan * annual_debt_constant\"},{\"name\":\"sizing_dscr\",\"expression\":\"uw_ncf / sizing_ads\"},{\"name\":\"sizing_debt_yield\",\"expression\":\"uw_noi_bfr_res / maximum_loan\"},{\"name\":\"first_year_ads\",\"expression\":\"sizing_ads\"},{\"name\":\"cash_to_borrower\",\"expression\":\"maximum_loan*(1-0.008) - 4200000 - 52000\"},{\"name\":\"stress_egi\",\"expression\":\"0.95*uw_egi\"},{\"name\":\"stress_mgmt\",\"expression\":\"max(18000, 0.04*stress_egi)\"},{\"name\":\"opex_excl_mgmt\",\"expression\":\"uw_opex_bfr_res - uw_mgmt\"},{\"name\":\"stress_noi_bfr_res\",\"expression\":\"stress_egi - (opex_excl_mgmt + stress_mgmt)\"},{\"name\":\"stress_ncf\",\"expression\":\"stress_noi_bfr_res - uw_reserves\"},{\"name\":\"monthly_rate_stress\",\"expression\":\"0.0735/12\"},{\"name\":\"pmt_per_1_monthly_stress\",\"expression\":\"pmt(monthly_rate_stress, 25*12, 1)\"},{\"name\":\"annual_debt_constant_stress\",\"expression\":\"12 * pmt_per_1_monthly_stress\"},{\"name\":\"ltv_limit_stress\",\"expression\":\"0.625 * (stress_noi_bfr_res/0.0625)\"},{\"name\":\"dscr_limit_stress\",\"expression\":\"stress_ncf / (1.25*annual_debt_constant_stress)\"},{\"name\":\"debt_yield_limit_stress\",\"expression\":\"stress_noi_bfr_res / 0.09\"},{\"name\":\"stress_maximum_loan\",\"expression\":\"min(ltv_limit_stress, dscr_limit_stress, debt_yield_limit_stress)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "total_area",
+        "expression": "1400+1800+2200+2500+3000+3300+3800+4200+5000+1600"
+      },
+      {
+        "name": "occupied_area",
+        "expression": "total_area-1600"
+      },
+      {
+        "name": "occupancy_count_pct",
+        "expression": "(9/10)*100"
+      },
+      {
+        "name": "occupancy_area_pct",
+        "expression": "(occupied_area/total_area)*100"
+      },
+      {
+        "name": "rent_roll_monthly_base",
+        "expression": "3000+4000+4900+5600+6500+7400+8600+9200+10800"
+      },
+      {
+        "name": "t12_egi",
+        "expression": "759600-40800-22800-6000+176400"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "114000+32400+21600+36000+24000+18000+18000"
+      },
+      {
+        "name": "t12_noi_bfr_res",
+        "expression": "t12_egi - t12_opex"
+      },
+      {
+        "name": "t12_reserves",
+        "expression": "11520"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi_bfr_res - t12_reserves"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "780000 - 0.05*780000 + 180000"
+      },
+      {
+        "name": "uw_mgmt",
+        "expression": "max(18000, 0.04*uw_egi)"
+      },
+      {
+        "name": "uw_opex_bfr_res",
+        "expression": "120000+34800+21600+36000+24000+18000+uw_mgmt"
+      },
+      {
+        "name": "uw_noi_bfr_res",
+        "expression": "uw_egi - uw_opex_bfr_res"
+      },
+      {
+        "name": "total_sf",
+        "expression": "total_area"
+      },
+      {
+        "name": "uw_reserves",
+        "expression": "0.15*total_sf"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi_bfr_res - uw_reserves"
+      },
+      {
+        "name": "cap_value",
+        "expression": "uw_noi_bfr_res / 0.0625"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.625 * cap_value"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "0.0635/12"
+      },
+      {
+        "name": "pmt_per_1_monthly",
+        "expression": "pmt(monthly_rate, 25*12, 1)"
+      },
+      {
+        "name": "annual_debt_constant",
+        "expression": "12 * pmt_per_1_monthly"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "uw_ncf / (1.25 * annual_debt_constant)"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "uw_noi_bfr_res / 0.09"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit, dscr_limit, debt_yield_limit)"
+      },
+      {
+        "name": "sizing_ads",
+        "expression": "maximum_loan * annual_debt_constant"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "uw_ncf / sizing_ads"
+      },
+      {
+        "name": "sizing_debt_yield",
+        "expression": "uw_noi_bfr_res / maximum_loan"
+      },
+      {
+        "name": "first_year_ads",
+        "expression": "sizing_ads"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "maximum_loan*(1-0.008) - 4200000 - 52000"
+      },
+      {
+        "name": "stress_egi",
+        "expression": "0.95*uw_egi"
+      },
+      {
+        "name": "stress_mgmt",
+        "expression": "max(18000, 0.04*stress_egi)"
+      },
+      {
+        "name": "opex_excl_mgmt",
+        "expression": "uw_opex_bfr_res - uw_mgmt"
+      },
+      {
+        "name": "stress_noi_bfr_res",
+        "expression": "stress_egi - (opex_excl_mgmt + stress_mgmt)"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "stress_noi_bfr_res - uw_reserves"
+      },
+      {
+        "name": "monthly_rate_stress",
+        "expression": "0.0735/12"
+      },
+      {
+        "name": "pmt_per_1_monthly_stress",
+        "expression": "pmt(monthly_rate_stress, 25*12, 1)"
+      },
+      {
+        "name": "annual_debt_constant_stress",
+        "expression": "12 * pmt_per_1_monthly_stress"
+      },
+      {
+        "name": "ltv_limit_stress",
+        "expression": "0.625 * (stress_noi_bfr_res/0.0625)"
+      },
+      {
+        "name": "dscr_limit_stress",
+        "expression": "stress_ncf / (1.25*annual_debt_constant_stress)"
+      },
+      {
+        "name": "debt_yield_limit_stress",
+        "expression": "stress_noi_bfr_res / 0.09"
+      },
+      {
+        "name": "stress_maximum_loan",
+        "expression": "min(ltv_limit_stress, dscr_limit_stress, debt_yield_limit_stress)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "total_area": 28800,
+      "occupied_area": 27200,
+      "occupancy_count_pct": 90.0,
+      "occupancy_area_pct": 94.44444444444444,
+      "rent_roll_monthly_base": 60000,
+      "t12_egi": 866400,
+      "t12_opex": 264000,
+      "t12_noi_bfr_res": 602400,
+      "t12_reserves": 11520,
+      "t12_ncf": 590880,
+      "uw_egi": 921000.0,
+      "uw_mgmt": 36840.0,
+      "uw_opex_bfr_res": 291240.0,
+      "uw_noi_bfr_res": 629760.0,
+      "total_sf": 28800,
+      "uw_reserves": 4320.0,
+      "uw_ncf": 625440.0,
+      "cap_value": 10076160.0,
+      "ltv_limit": 6297600.0,
+      "monthly_rate": 0.005291666666666667,
+      "pmt_per_1_monthly": -0.006658642942698654,
+      "annual_debt_constant": -0.07990371531238384,
+      "dscr_limit": -6261936.607626719,
+      "debt_yield_limit": 6997333.333333334,
+      "maximum_loan": -6261936.607626719,
+      "sizing_ads": 500352.0,
+      "sizing_dscr": 1.25,
+      "sizing_debt_yield": -0.10056952656355295,
+      "first_year_ads": 500352.0,
+      "cash_to_borrower": -10463841.114765706,
+      "stress_egi": 874950.0,
+      "stress_mgmt": 34998.0,
+      "opex_excl_mgmt": 254400.0,
+      "stress_noi_bfr_res": 585552.0,
+      "stress_ncf": 581232.0,
+      "monthly_rate_stress": 0.006124999999999999,
+      "pmt_per_1_monthly_stress": -0.007292619804472381,
+      "annual_debt_constant_stress": -0.08751143765366858,
+      "ltv_limit_stress": 5855520.0,
+      "dscr_limit_stress": -5313426.592763869,
+      "debt_yield_limit_stress": 6506133.333333334,
+      "stress_maximum_loan": -5313426.592763869
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

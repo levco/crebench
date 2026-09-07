@@ -1,0 +1,39 @@
+{
+  "case_id": "stonebridge-logistics",
+  "requested_model": "openai/gpt-5",
+  "returned_models": [],
+  "track": "direct",
+  "status": "infrastructure_error",
+  "started_at": "2026-09-06T22:02:39.560640+00:00",
+  "completed_at": "2026-09-06T22:02:39.727051+00:00",
+  "elapsed_seconds": 0.166,
+  "model_calls_including_retries": 1,
+  "tool_calls": 0,
+  "artifact_versions": {
+    "workbook": 0,
+    "memo": 0
+  },
+  "gateway_reported_cost_usd": null,
+  "known_partial_cost_usd": 0,
+  "cost_complete": false,
+  "cost_basis": "Gateway usage.cost; all attempts included; absent usage remains unknown",
+  "subscription_or_host_cost_usd": null,
+  "operator_semantic_corrections": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 402,
+      "error": "{\"error\":{\"message\":\"A positive credit balance is required for all requests, including BYOK, so fallback providers remain available. Add credits at https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fai%3Fmodal%3Dtop-up to continue.\",\"type\":\"insufficient_funds\"}}",
+      "elapsed_seconds": 0.129,
+      "completed_at": "2026-09-06T22:02:39.726721+00:00"
+    }
+  ],
+  "latest_workbook": null,
+  "latest_memo": null,
+  "limitations": [
+    "Synthetic authored suite; no independent human review",
+    "Custom bounded general-purpose harness; not consumer ChatGPT or Claude",
+    "Provider defaults and gateway routing; not equal compute",
+    "Neutral artifact renderer constrains presentation choices"
+  ]
+}

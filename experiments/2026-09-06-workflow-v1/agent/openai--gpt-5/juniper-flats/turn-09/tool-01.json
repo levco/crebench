@@ -1,0 +1,40 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_vNIkKipOswgbxqGurN28gNW4",
+  "arguments_raw": "{\"steps\":[{\"name\":\"sizing_rate\",\"expression\":\"max(0.059,0.0625)\"},{\"name\":\"annual_debt_constant\",\"expression\":\"12*pmt(sizing_rate/12,30*12,1)\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*9494956.52173913\"},{\"name\":\"dscr_limit\",\"expression\":\"535160/annual_debt_constant/1.25\"},{\"name\":\"debt_yield_limit\",\"expression\":\"535160/0.085\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "sizing_rate",
+        "expression": "max(0.059,0.0625)"
+      },
+      {
+        "name": "annual_debt_constant",
+        "expression": "12*pmt(sizing_rate/12,30*12,1)"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*9494956.52173913"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "535160/annual_debt_constant/1.25"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "535160/0.085"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "sizing_rate": 0.0625,
+      "annual_debt_constant": -0.07388606405116734,
+      "ltv_limit": 6171721.7391304355,
+      "dscr_limit": -5794435.060223457,
+      "debt_yield_limit": 6296000.0
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

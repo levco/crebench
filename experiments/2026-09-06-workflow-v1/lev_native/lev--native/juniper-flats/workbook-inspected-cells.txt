@@ -1,0 +1,107 @@
+README | B2=Juniper Flats — Underwriting Workbook
+README | B3=Fictional refinance scenario | As of 2026-08-31 | USD | Prepared 2026-09-06
+README | B5=Cell Color Legend
+README | B6=Yellow = Editable Input
+README | B7=Green = Key Output
+README | B8=White = Formula / calculated
+README | B10=Sheet Map
+README | B11=Sheet | C11=Purpose
+README | B12=Inputs | C12=Central editable assumptions — Cap Rate (B21), Sizing Rate (B22), UW EGI drivers (B10:B12), Op-Ex line items, loan terms
+README | B13=Rent_Roll | C13=Unit-level rent roll and derived occupancy / contractual rent
+README | B14=T12_Historical | C14=T12 monthly income statement and annual totals; NOI before reserves; NCF
+README | B15=Underwriting | C15=Underwritten EGI, OpEx (incl. lender mgmt normalization), NOI, NCF — linked to Inputs
+README | B16=Loan_Sizing | C16=LTV, DSCR and Debt-Yield constraints; binding maximum; first-year DS; sources & uses; cash to borrower
+README | B17=Sensitivity | C17=Combined downside (EGI -5%, sizing rate +100 bps) and cap-rate +50 bps sensitivity
+README | B18=Reported_Fields | C18=All requested field IDs with values, formulas and source citations
+README | B21=Key Editable Inputs (jump to Inputs sheet)
+README | B22=Cap Rate | C22==Inputs!B21
+README | B23=Sizing Rate (floor) | C23==Inputs!B22
+README | B24=Contract Rate | C24==Inputs!B23
+README | B25=UW GPR (annual) | C25==Inputs!B10
+README | B26=UW Revenue Loss % | C26==Inputs!B11
+README | B27=UW Other Income | C27==Inputs!B12
+README | B32=Key Outputs (live)
+README | B33=UW NOI (before reserves) | C33==Underwriting!B22
+README | B34=UW NCF (after reserves) | C34==Underwriting!B24
+README | B35=Capitalized Value | C35==Loan_Sizing!B7
+README | B36=Maximum Loan | C36==Loan_Sizing!B22
+README | B37=Binding Constraint | C37==Loan_Sizing!B23
+README | B38=Cash to Borrower | C38==Loan_Sizing!B36
+Inputs | A1=Inputs — Editable Assumptions
+Inputs | A3=Underwriting Revenue
+Inputs | A4=Field | B4=Value | C4=Note
+Inputs | A5=Unit count (space_count) | B5=36 | C5=Rent roll count
+Inputs | A6=Occupied count | B6=33 | C6=Rent roll status
+Inputs | A7=Total rentable SF | B7=31800 | C7=20 x 750 + 16 x 1050
+Inputs | A8=Occupied SF | B8=28950 | C8=Rent roll
+Inputs | A10=UW Gross Potential Base Rent (annual) | B10=864000 | C10=Property-and-Plan p.2 (supplied scenario)
+Inputs | A11=UW Combined Revenue Loss % | B11=0.06 | C11=6.00% of UW GPR — vacancy/concessions/bad debt
+Inputs | A12=UW Other Income / Recoveries (annual) | B12=42000 | C12=Property-and-Plan p.2 (added AFTER revenue loss)
+Inputs | A14=Management Fee — T12 actual (floor) | B14=30000 | C14=T12-Statement annual col
+Inputs | A15=Management Fee — % of UW EGI (rate) | B15=0.03 | C15=3.00% per lender convention
+Inputs | A17=Loan Assumptions
+Inputs | A18=Field | B18=Value | C18=Note
+Inputs | A19=LTV maximum | B19=0.65 | C19=Lender-Terms
+Inputs | A20=Loan-sizing DSCR minimum | B20=1.25 | C20=Lender-Terms
+Inputs | A21=Cap Rate (valuation) | B21=0.0575 | C21=Lender-Terms — applied to UW NOI BEFORE reserves
+Inputs | A22=Sizing Rate (floor) | B22=0.0625 | C22=Lender-Terms — greater of contract rate and 6.25%
+Inputs | A23=Contract Rate (annual, fixed) | B23=0.059 | C23=Lender-Terms
+Inputs | A24=Debt-Yield minimum (on NCF) | B24=0.085 | C24=Lender-Terms
+Inputs | A25=Amortization (years) | B25=30 | C25=Lender-Terms
+Inputs | A26=Interest-Only period (months) | B26=24 | C26=Lender-Terms
+Inputs | A27=Maturity (months) | B27=84 | C27=Lender-Terms
+Inputs | A28=Origination fee (% of initial principal) | B28=0.0075 | C28=Lender-Terms
+Inputs | A29=Existing debt payoff | B29=3300000 | C29=Property-and-Plan
+Inputs | A30=Fixed closing costs | B30=45000 | C30=Property-and-Plan
+Inputs | A31=Replacement Reserves ($/unit/yr) | B31=300 | C31=Property-and-Plan
+Inputs | A34=UW Operating Expenses (per Property-and-Plan)
+Inputs | A35=Line item | B35=UW annual $ | C35=Basis
+Inputs | A36=Real estate taxes | B36=112000 | C36=Property-and-Plan table
+Inputs | A37=Property insurance | B37=33600 | C37=Renewal quote in packet ($33,600)
+Inputs | A38=Utilities | B38=28800 | C38=T12 actual
+Inputs | A39=Repairs & maintenance | B39=40200 | C39=T12 46,200 less 6,000 one-time casualty
+Inputs | A40=Payroll / contract labor | B40=42000 | C40=T12 actual
+Inputs | A41=Administrative / legal | B41=21600 | C41=T12 actual
+T12_Historical | A1=T12 Historical Income Statement (Sep-2025 through Aug-2026)
+T12_Historical | A2=Source: T12-Statement.pdf p.1-2
+T12_Historical | A4=Account | B4=Sep-25 | C4=Oct-25 | D4=Nov-25 | E4=Dec-25 | F4=Jan-26 | G4=Feb-26 | H4=Mar-26 | I4=Apr-26 | J4=May-26 | K4=Jun-26 | L4=Jul-26 | M4=Aug-26 | N4=Annual | O4=Source note
+T12_Historical | A5=Gross potential base rent | B5=65800 | C5=67200 | D5=68600 | E5=69300 | F5=70700 | G5=72100 | H5=72800 | I5=74200 | J5=72100 | K5=70700 | L5=68600 | M5=67900 | N5==SUM(B5:M5) | O5=T12 p.1-2, Annual col = 840,000
+T12_Historical | A6=Vacancy loss | B6=-3360 | C6=-3430 | D6=-3465 | E6=-3535 | F6=-3605 | G6=-3640 | H6=-3710 | I6=-3605 | J6=-3535 | K6=-3430 | L6=-3395 | M6=-3290 | N6==SUM(B6:M6) | O6=Negative revenue
+T12_Historical | A7=Concessions | B7=-980 | C7=-990 | D7=-1010 | E7=-1030 | F7=-1040 | G7=-1060 | H7=-1030 | I7=-1010 | J7=-980 | K7=-970 | L7=-940 | M7=-960 | N7==SUM(B7:M7)
+T12_Historical | A8=Bad debt | B8=-371 | C8=-379 | D8=-386 | E8=-390 | F8=-398 | G8=-386 | H8=-379 | I8=-368 | J8=-364 | K8=-352 | L8=-360 | M8=-367 | N8==SUM(B8:M8)
+T12_Historical | A9=Other income / recoveries | B9=3333 | C9=3399 | D9=3432 | E9=3498 | F9=3399 | G9=3333 | H9=3234 | I9=3201 | J9=3102 | K9=3168 | L9=3234 | M9=3267 | N9==SUM(B9:M9) | O9=Reimbursements/other
+T12_Historical | A10=Real estate taxes | B10=9270 | C10=9360 | D10=9540 | E10=9270 | F10=9090 | G10=8820 | H10=8730 | I10=8460 | J10=8640 | K10=8820 | L10=8910 | M10=9090 | N10==SUM(B10:M10)
+T12_Historical | A11=Property insurance | B11=2704 | C11=2756 | D11=2678 | E11=2626 | F11=2548 | G11=2522 | H11=2444 | I11=2496 | J11=2548 | K11=2574 | L11=2626 | M11=2678 | N11==SUM(B11:M11)
+T12_Historical | A12=Utilities | B12=2544 | C12=2472 | D12=2424 | E12=2352 | F12=2328 | G12=2256 | H12=2304 | I12=2352 | J12=2376 | K12=2424 | L12=2472 | M12=2496 | N12==SUM(B12:M12)
+T12_Historical | A13=Repairs and maintenance | B13=3966 | C13=3888 | D13=3773 | E13=3734 | F13=3619 | G13=3696 | H13=3773 | I13=3812 | J13=3888 | K13=3966 | L13=4004 | M13=4081 | N13==SUM(B13:M13) | O13=Includes $6k one-time casualty
+T12_Historical | A14=Payroll / contract labor | B14=3535 | C14=3430 | D14=3395 | E14=3290 | F14=3360 | G14=3430 | H14=3465 | I14=3535 | J14=3605 | K14=3640 | L14=3710 | M14=3605 | N14==SUM(B14:M14)
+T12_Historical | A15=Administrative / legal | B15=1764 | C15=1746 | D15=1692 | E15=1728 | F15=1764 | G15=1782 | H15=1818 | I15=1854 | J15=1872 | K15=1908 | L15=1854 | M15=1818 | N15==SUM(B15:M15)
+T12_Historical | A16=Management fee | B16=2425 | C16=2350 | D16=2400 | E16=2450 | F16=2475 | G16=2525 | H16=2575 | I16=2600 | J16=2650 | K16=2575 | L16=2525 | M16=2450 | N16==SUM(B16:M16)
+T12_Historical | A17=Replacement reserves (below NOI) | B17=846 | C17=864 | D17=882 | E17=891 | F17=909 | G17=927 | H17=936 | I17=954 | J17=927 | K17=909 | L17=882 | M17=873 | N17==SUM(B17:M17) | O17=Below NOI
+T12_Historical | A18=Capital improvements (below cash flow) | B18=4960 | C18=5063 | D18=5115 | E18=5218 | F18=5322 | G18=5373 | H18=5477 | I18=5322 | J18=5218 | K18=5063 | L18=5012 | M18=4857 | N18==SUM(B18:M18) | O18=Below cash flow
+T12_Historical | A19=Loan principal and interest (below CF) | B19=24010 | C19=24255 | D19=24745 | E19=25235 | F19=25480 | G19=25970 | H19=25235 | I19=24745 | J19=24010 | K19=23765 | L19=23030 | M19=23520 | N19==SUM(B19:M19) | O19=Below cash flow
+T12_Historical | A20=Depreciation (noncash) | B20=14850 | C20=15150 | D20=15450 | E20=15600 | F20=15900 | G20=15450 | H20=15150 | I20=14700 | J20=14550 | K20=14100 | L20=14400 | M20=14700 | N20==SUM(B20:M20) | O20=Noncash — not operating
+T12_Historical | A22=T12 EGI | N22==N5+N6+N7+N8+N9
+T12_Historical | A23=T12 Operating Expenses | N23==SUM(N10:N16)
+T12_Historical | A24=T12 NOI (before reserves) | N24==N22-N23
+T12_Historical | A25=T12 Replacement reserves | N25==N17
+T12_Historical | A26=T12 NCF (after reserves) | N26==N24-N25
+Underwriting | A1=Underwritten Cash Flow (linked to Inputs)
+Underwriting | A2=All rates and assumptions per Property-and-Plan
+Underwriting | A4=Line | B4=Amount | C4=Formula / Basis
+Underwriting | A5=UW Gross Potential Base Rent | B5==UW_GPR | C5=Inputs B10
+Underwriting | A6=Less: combined revenue loss (vacancy/concessions/bad debt) | B6==-UW_RevLoss*UW_GPR | C6==-6.00% x UW GPR
+Underwriting | A7=Plus: other income / recoveries | B7==UW_OtherInc | C7=Inputs B12
+Underwriting | A8=Underwritten EGI (uw_egi) | B8==B5+B6+B7 | C8=GPR - loss + other
+Underwriting | A10=UW Operating Expenses
+Underwriting | A11=Real estate taxes | B11==Inputs!B36 | C11=Inputs B36
+Underwriting | A12=Property insurance | B12==Inputs!B37 | C12=Renewal quote
+Underwriting | A13=Utilities | B13==Inputs!B38 | C13=T12 actual
+Underwriting | A14=Repairs & maintenance (T12 less $6k one-time) | B14==Inputs!B39 | C14=Inputs B39
+Underwriting | A15=Payroll / contract labor | B15==Inputs!B40 | C15=T12 actual
+Underwriting | A16=Administrative / legal | B16==Inputs!B41 | C16=T12 actual
+Underwriting | A17=Management fee (uw_management_fee) | B17==MAX(MgmtFloor,MgmtPct*B8) | C17=MAX(T12 $30,000; 3% x EGI)
+Underwriting | A19=Total UW OpEx (uw_operating_expenses) | B19==SUM(B11:B17) | C19=Excludes reserves/capex/debt/depr.
+Underwriting | A22=UW NOI before reserves (uw_noi_before_reserves) | B22==B8-B19
+Underwriting | A23=Less: Replacement reserves ($300/unit) | B23==ReservesPerUnit*UnitCount
+Underwriting | A24=UW NCF after reserves (uw_ncf) | B24==B22-B23

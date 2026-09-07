@@ -1,0 +1,70 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_46CryhRIzzfPtvCAM2K1Ea7a",
+  "arguments_raw": "{\"steps\":[{\"name\":\"annual_debt_constant\",\"expression\":\"12*abs(pmt(0.065/12,360,1))\"},{\"name\":\"capitalization_value\",\"expression\":\"647395.2/0.0575\"},{\"name\":\"ltv_limit\",\"expression\":\"0.6*capitalization_value\"},{\"name\":\"dscr_limit\",\"expression\":\"631795.2/(1.30*annual_debt_constant)\"},{\"name\":\"debt_yield_limit\",\"expression\":\"631795.2/0.09\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit, dscr_limit, debt_yield_limit)\"},{\"name\":\"sizing_annual_debt_service\",\"expression\":\"annual_debt_constant*maximum_loan\"},{\"name\":\"sizing_dscr\",\"expression\":\"631795.2/sizing_annual_debt_service\"},{\"name\":\"sizing_debt_yield\",\"expression\":\"631795.2/maximum_loan\"},{\"name\":\"first_year_debt_service\",\"expression\":\"0.0625*maximum_loan\"},{\"name\":\"cash_to_borrower\",\"expression\":\"maximum_loan - 4500000 - 0.01*maximum_loan - 65000\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "annual_debt_constant",
+        "expression": "12*abs(pmt(0.065/12,360,1))"
+      },
+      {
+        "name": "capitalization_value",
+        "expression": "647395.2/0.0575"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.6*capitalization_value"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "631795.2/(1.30*annual_debt_constant)"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "631795.2/0.09"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit, dscr_limit, debt_yield_limit)"
+      },
+      {
+        "name": "sizing_annual_debt_service",
+        "expression": "annual_debt_constant*maximum_loan"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "631795.2/sizing_annual_debt_service"
+      },
+      {
+        "name": "sizing_debt_yield",
+        "expression": "631795.2/maximum_loan"
+      },
+      {
+        "name": "first_year_debt_service",
+        "expression": "0.0625*maximum_loan"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "maximum_loan - 4500000 - 0.01*maximum_loan - 65000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "annual_debt_constant": 0.07584816281915584,
+      "capitalization_value": 11259046.956521738,
+      "ltv_limit": 6755428.173913043,
+      "dscr_limit": 6407489.510999293,
+      "debt_yield_limit": 7019946.666666666,
+      "maximum_loan": 6407489.510999293,
+      "sizing_annual_debt_service": 485996.3076923076,
+      "sizing_dscr": 1.3000000000000003,
+      "sizing_debt_yield": 0.0986026116649026,
+      "first_year_debt_service": 400468.0944374558,
+      "cash_to_borrower": 1778414.6158893001
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

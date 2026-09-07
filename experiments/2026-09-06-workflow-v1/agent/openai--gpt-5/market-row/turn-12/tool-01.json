@@ -1,0 +1,30 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_AX430y91He5IX9hG2cDvPj3q",
+  "arguments_raw": "{\"steps\":[{\"name\":\"debt_constant\",\"expression\":\"abs(-0.081024859361717)\"},{\"name\":\"uw_ncf\",\"expression\":\"539618.24\"},{\"name\":\"dscr_limit\",\"expression\":\"uw_ncf/(1.25*debt_constant)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "debt_constant",
+        "expression": "abs(-0.081024859361717)"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "539618.24"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "uw_ncf/(1.25*debt_constant)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "debt_constant": 0.081024859361717,
+      "uw_ncf": 539618.24,
+      "dscr_limit": 5327927.692818299
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

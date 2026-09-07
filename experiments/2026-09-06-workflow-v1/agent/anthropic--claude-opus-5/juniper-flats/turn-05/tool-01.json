@@ -1,0 +1,50 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_017uKiDCjDh6kMGSDp91r2UK",
+  "arguments_raw": "{\"steps\":[{\"name\":\"pmt_per_dollar\",\"expression\":\"-pmt(0.0625/12,360,1)\"},{\"name\":\"annual_constant\",\"expression\":\"12*-pmt(0.0625/12,360,1)\"},{\"name\":\"value\",\"expression\":\"545960/0.0575\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*545960/0.0575\"},{\"name\":\"dscr_limit\",\"expression\":\"(535160/1.25)/(12*-pmt(0.0625/12,360,1))\"},{\"name\":\"dy_limit\",\"expression\":\"535160/0.085\"},{\"name\":\"max_loan\",\"expression\":\"min(0.65*545960/0.0575,(535160/1.25)/(12*-pmt(0.0625/12,360,1)),535160/0.085)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "pmt_per_dollar",
+        "expression": "-pmt(0.0625/12,360,1)"
+      },
+      {
+        "name": "annual_constant",
+        "expression": "12*-pmt(0.0625/12,360,1)"
+      },
+      {
+        "name": "value",
+        "expression": "545960/0.0575"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*545960/0.0575"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(535160/1.25)/(12*-pmt(0.0625/12,360,1))"
+      },
+      {
+        "name": "dy_limit",
+        "expression": "535160/0.085"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(0.65*545960/0.0575,(535160/1.25)/(12*-pmt(0.0625/12,360,1)),535160/0.085)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "pmt_per_dollar": 0.006157172004263945,
+      "annual_constant": 0.07388606405116734,
+      "value": 9494956.52173913,
+      "ltv_limit": 6171721.739130435,
+      "dscr_limit": 5794435.060223457,
+      "dy_limit": 6296000.0,
+      "max_loan": 5794435.060223457
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

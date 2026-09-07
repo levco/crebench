@@ -1,0 +1,2696 @@
+{
+  "name": "create_workbook",
+  "call_id": "toolu_018TQpzo6Ap7QzxXAharVpyY",
+  "arguments_raw": "{\"spec\":{\"sheets\":[{\"name\":\"Assumptions\",\"freeze_rows\":4,\"column_widths\":{\"A\":42,\"B\":18,\"C\":52},\"cells\":[{\"cell\":\"A1\",\"value\":\"Stonebridge Logistics - Refinance underwriting assumptions\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"As of 2026-08-31 | fictional packet | USD\",\"role\":\"note\"},{\"cell\":\"A3\",\"value\":\"Cells in column B are editable inputs driving all downstream sheets\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Assumption\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"Value\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"Source\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"Valuation cap rate (INPUT)\",\"role\":\"body\"},{\"cell\":\"B5\",\"value\":0.0675,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C5\",\"value\":\"Lender-Terms.pdf p1 Valuation\",\"role\":\"note\"},{\"cell\":\"A6\",\"value\":\"Index rate\",\"role\":\"body\"},{\"cell\":\"B6\",\"value\":0.0325,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C6\",\"value\":\"Lender-Terms.pdf p1 Contract rate\",\"role\":\"note\"},{\"cell\":\"A7\",\"value\":\"Index floor\",\"role\":\"body\"},{\"cell\":\"B7\",\"value\":0.04,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C7\",\"value\":\"Lender-Terms.pdf p1 Contract rate\",\"role\":\"note\"},{\"cell\":\"A8\",\"value\":\"Spread (applied after floor)\",\"role\":\"body\"},{\"cell\":\"B8\",\"value\":0.0275,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C8\",\"value\":\"Lender-Terms.pdf p1 Contract rate\",\"role\":\"note\"},{\"cell\":\"A9\",\"value\":\"Contract rate (computed)\",\"role\":\"total\"},{\"cell\":\"B9\",\"formula\":\"=MAX(B6,B7)+B8\",\"role\":\"total\",\"number_format\":\"0.00%\"},{\"cell\":\"C9\",\"value\":\"MAX(index, floor) + spread\",\"role\":\"note\"},{\"cell\":\"A10\",\"value\":\"Underwriting (sizing) rate floor\",\"role\":\"body\"},{\"cell\":\"B10\",\"value\":0.0725,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C10\",\"value\":\"Lender-Terms.pdf p1 Sizing rate\",\"role\":\"note\"},{\"cell\":\"A11\",\"value\":\"Sizing rate increment (INPUT; 0.01 = +100bps)\",\"role\":\"body\"},{\"cell\":\"B11\",\"value\":0,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C11\",\"value\":\"Property-and-Plan.pdf p2 sensitivity instruction\",\"role\":\"note\"},{\"cell\":\"A12\",\"value\":\"Sizing rate (computed, INPUT-driven)\",\"role\":\"total\"},{\"cell\":\"B12\",\"formula\":\"=MAX(B9,B10)+B11\",\"role\":\"total\",\"number_format\":\"0.00%\"},{\"cell\":\"C12\",\"value\":\"MAX(contract rate, 7.25% floor) + increment\",\"role\":\"note\"},{\"cell\":\"A13\",\"value\":\"Amortization term (months)\",\"role\":\"body\"},{\"cell\":\"B13\",\"value\":300,\"role\":\"input\",\"number_format\":\"0\"},{\"cell\":\"C13\",\"value\":\"Lender-Terms.pdf p1 Amortization 25 years\",\"role\":\"note\"},{\"cell\":\"A14\",\"value\":\"Interest-only period (months)\",\"role\":\"body\"},{\"cell\":\"B14\",\"value\":12,\"role\":\"input\",\"number_format\":\"0\"},{\"cell\":\"C14\",\"value\":\"Lender-Terms.pdf p1 IO period\",\"role\":\"note\"},{\"cell\":\"A15\",\"value\":\"Gross potential base rent (INPUT, annual)\",\"role\":\"body\"},{\"cell\":\"B15\",\"value\":900000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C15\",\"value\":\"Property-and-Plan.pdf p2 supplied scenario\",\"role\":\"note\"},{\"cell\":\"A16\",\"value\":\"Combined revenue loss % of GPR\",\"role\":\"body\"},{\"cell\":\"B16\",\"value\":0.08,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C16\",\"value\":\"Property-and-Plan.pdf p2\",\"role\":\"note\"},{\"cell\":\"A17\",\"value\":\"Other income / recoveries (INPUT, annual)\",\"role\":\"body\"},{\"cell\":\"B17\",\"value\":195000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C17\",\"value\":\"Property-and-Plan.pdf p2, added after revenue loss\",\"role\":\"note\"},{\"cell\":\"A18\",\"value\":\"EGI multiplier (INPUT; 0.95 = EGI -5%)\",\"role\":\"body\"},{\"cell\":\"B18\",\"value\":1,\"role\":\"input\",\"number_format\":\"0.000\"},{\"cell\":\"C18\",\"value\":\"Scales GPR and other income; loss % held constant\",\"role\":\"note\"},{\"cell\":\"A19\",\"value\":\"Total rentable SF\",\"role\":\"body\"},{\"cell\":\"B19\",\"value\":85000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C19\",\"value\":\"Rent-Roll.xlsx rows 7-10\",\"role\":\"note\"},{\"cell\":\"A20\",\"value\":\"Replacement reserves per SF per year\",\"role\":\"body\"},{\"cell\":\"B20\",\"value\":0.2,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"C20\",\"value\":\"Property-and-Plan.pdf p2\",\"role\":\"note\"},{\"cell\":\"A21\",\"value\":\"Management fee % of underwritten EGI\",\"role\":\"body\"},{\"cell\":\"B21\",\"value\":0.03,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C21\",\"value\":\"Property-and-Plan.pdf p2 greater of T12 or 3%\",\"role\":\"note\"},{\"cell\":\"A22\",\"value\":\"T12 actual management fee\",\"role\":\"body\"},{\"cell\":\"B22\",\"value\":25200,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C22\",\"value\":\"T12-Statement.pdf p2 annual column\",\"role\":\"note\"},{\"cell\":\"A23\",\"value\":\"Maximum LTV\",\"role\":\"body\"},{\"cell\":\"B23\",\"value\":0.6,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C23\",\"value\":\"Lender-Terms.pdf p1 LTV\",\"role\":\"note\"},{\"cell\":\"A24\",\"value\":\"Minimum DSCR (NCF after reserves)\",\"role\":\"body\"},{\"cell\":\"B24\",\"value\":1.3,\"role\":\"input\",\"number_format\":\"0.00\"},{\"cell\":\"C24\",\"value\":\"Lender-Terms.pdf p1 DSCR\",\"role\":\"note\"},{\"cell\":\"A25\",\"value\":\"Minimum debt yield (NCF after reserves)\",\"role\":\"body\"},{\"cell\":\"B25\",\"value\":0.1,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C25\",\"value\":\"Lender-Terms.pdf p1 Debt yield\",\"role\":\"note\"},{\"cell\":\"A26\",\"value\":\"Origination fee % of principal\",\"role\":\"body\"},{\"cell\":\"B26\",\"value\":0.0125,\"role\":\"input\",\"number_format\":\"0.00%\"},{\"cell\":\"C26\",\"value\":\"Lender-Terms.pdf p1 Origination fee\",\"role\":\"note\"},{\"cell\":\"A27\",\"value\":\"Existing debt payoff\",\"role\":\"body\"},{\"cell\":\"B27\",\"value\":4200000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C27\",\"value\":\"Property-and-Plan.pdf p1\",\"role\":\"note\"},{\"cell\":\"A28\",\"value\":\"Fixed closing costs\",\"role\":\"body\"},{\"cell\":\"B28\",\"value\":70000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C28\",\"value\":\"Property-and-Plan.pdf p1\",\"role\":\"note\"},{\"cell\":\"A30\",\"value\":\"Underwritten operating expenses excluding management\",\"role\":\"header\"},{\"cell\":\"B30\",\"value\":\"Annual\",\"role\":\"header\"},{\"cell\":\"C30\",\"value\":\"Basis\",\"role\":\"header\"},{\"cell\":\"A31\",\"value\":\"Real estate taxes\",\"role\":\"body\"},{\"cell\":\"B31\",\"value\":132000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C31\",\"value\":\"Property-and-Plan.pdf p2 (T12 actual $126,000)\",\"role\":\"note\"},{\"cell\":\"A32\",\"value\":\"Property insurance\",\"role\":\"body\"},{\"cell\":\"B32\",\"value\":33600,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C32\",\"value\":\"Plan p2 renewal confirmation dated 2026-08-25\",\"role\":\"note\"},{\"cell\":\"A33\",\"value\":\"Utilities\",\"role\":\"body\"},{\"cell\":\"B33\",\"value\":12000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C33\",\"value\":\"T12 actual per plan\",\"role\":\"note\"},{\"cell\":\"A34\",\"value\":\"Repairs and maintenance\",\"role\":\"body\"},{\"cell\":\"B34\",\"value\":18000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C34\",\"value\":\"T12 $24,000 less $6,000 one-time casualty cleanup\",\"role\":\"note\"},{\"cell\":\"A35\",\"value\":\"Payroll / contract labor\",\"role\":\"body\"},{\"cell\":\"B35\",\"value\":18000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C35\",\"value\":\"T12 actual per plan\",\"role\":\"note\"},{\"cell\":\"A36\",\"value\":\"Administrative / legal\",\"role\":\"body\"},{\"cell\":\"B36\",\"value\":18000,\"role\":\"input\",\"number_format\":\"#,##0\"},{\"cell\":\"C36\",\"value\":\"T12 actual per plan\",\"role\":\"note\"}]},{\"name\":\"Historical T12\",\"freeze_rows\":4,\"column_widths\":{\"A\":46,\"B\":18,\"C\":46},\"cells\":[{\"cell\":\"A1\",\"value\":\"Historical T12 - September 2025 through August 2026 actual\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Source: T12-Statement.pdf pages 1-2, Annual column\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Line\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"T12 actual\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"Note\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"Gross potential base rent\",\"role\":\"body\"},{\"cell\":\"B5\",\"value\":852000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A6\",\"value\":\"Vacancy loss\",\"role\":\"body\"},{\"cell\":\"B6\",\"value\":-150000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A7\",\"value\":\"Concessions\",\"role\":\"body\"},{\"cell\":\"B7\",\"value\":-36000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A8\",\"value\":\"Bad debt\",\"role\":\"body\"},{\"cell\":\"B8\",\"value\":-6000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A9\",\"value\":\"Other income / recoveries\",\"role\":\"body\"},{\"cell\":\"B9\",\"value\":186000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A10\",\"value\":\"T12 effective gross income\",\"role\":\"total\"},{\"cell\":\"B10\",\"formula\":\"=SUM(B5:B9)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A12\",\"value\":\"Real estate taxes\",\"role\":\"body\"},{\"cell\":\"B12\",\"value\":126000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A13\",\"value\":\"Property insurance\",\"role\":\"body\"},{\"cell\":\"B13\",\"value\":30000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A14\",\"value\":\"Utilities\",\"role\":\"body\"},{\"cell\":\"B14\",\"value\":12000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A15\",\"value\":\"Repairs and maintenance\",\"role\":\"body\"},{\"cell\":\"B15\",\"value\":24000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C15\",\"value\":\"Includes $6,000 one-time casualty cleanup\",\"role\":\"note\"},{\"cell\":\"A16\",\"value\":\"Payroll / contract labor\",\"role\":\"body\"},{\"cell\":\"B16\",\"value\":18000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A17\",\"value\":\"Administrative / legal\",\"role\":\"body\"},{\"cell\":\"B17\",\"value\":18000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A18\",\"value\":\"Management fee\",\"role\":\"body\"},{\"cell\":\"B18\",\"value\":25200,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A19\",\"value\":\"T12 operating expenses (excl. reserves, capex, debt, depreciation)\",\"role\":\"total\"},{\"cell\":\"B19\",\"formula\":\"=SUM(B12:B18)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A21\",\"value\":\"T12 NOI before replacement reserves\",\"role\":\"total\"},{\"cell\":\"B21\",\"formula\":\"=B10-B19\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A22\",\"value\":\"T12 replacement reserves (below NOI)\",\"role\":\"body\"},{\"cell\":\"B22\",\"value\":17000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A23\",\"value\":\"T12 NCF after replacement reserves\",\"role\":\"total\"},{\"cell\":\"B23\",\"formula\":\"=B21-B22\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A25\",\"value\":\"Memo: capital improvements (below cash flow)\",\"role\":\"body\"},{\"cell\":\"B25\",\"value\":220000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A26\",\"value\":\"Memo: loan principal and interest (below cash flow)\",\"role\":\"body\"},{\"cell\":\"B26\",\"value\":294000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A27\",\"value\":\"Memo: depreciation (noncash)\",\"role\":\"body\"},{\"cell\":\"B27\",\"value\":180000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A29\",\"value\":\"Historical results are actuals, not annualized rent roll and not underwriting.\",\"role\":\"note\",\"wrap\":true}]},{\"name\":\"Rent Roll\",\"freeze_rows\":4,\"column_widths\":{\"A\":14,\"B\":20,\"C\":14,\"D\":14,\"E\":20,\"F\":20,\"G\":16},\"cells\":[{\"cell\":\"A1\",\"value\":\"Contractual rent and occupancy as of 2026-08-31\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Source: Rent-Roll.xlsx rows 7-10; Lease-File.pdf p1 for premises 101\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Unit\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"Tenant\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"Area SF\",\"role\":\"header\"},{\"cell\":\"D4\",\"value\":\"Status\",\"role\":\"header\"},{\"cell\":\"E4\",\"value\":\"Monthly base rent\",\"role\":\"header\"},{\"cell\":\"F4\",\"value\":\"Market monthly rent\",\"role\":\"header\"},{\"cell\":\"G4\",\"value\":\"Lease expiry\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"101\",\"role\":\"body\"},{\"cell\":\"B5\",\"value\":\"Tenant A LLC\",\"role\":\"body\"},{\"cell\":\"C5\",\"value\":18000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D5\",\"value\":\"Occupied\",\"role\":\"body\"},{\"cell\":\"E5\",\"value\":15000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"F5\",\"value\":15000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"G5\",\"value\":\"2030-08-31\",\"role\":\"body\"},{\"cell\":\"A6\",\"value\":\"102\",\"role\":\"body\"},{\"cell\":\"B6\",\"value\":\"Tenant B LLC\",\"role\":\"body\"},{\"cell\":\"C6\",\"value\":22000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D6\",\"value\":\"Occupied\",\"role\":\"body\"},{\"cell\":\"E6\",\"value\":18700,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"F6\",\"value\":18700,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"G6\",\"value\":\"2028-08-31\",\"role\":\"body\"},{\"cell\":\"A7\",\"value\":\"103\",\"role\":\"body\"},{\"cell\":\"B7\",\"value\":\"Tenant C LLC\",\"role\":\"body\"},{\"cell\":\"C7\",\"value\":30000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D7\",\"value\":\"Occupied\",\"role\":\"body\"},{\"cell\":\"E7\",\"value\":27000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"F7\",\"value\":27000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"G7\",\"value\":\"2029-08-31\",\"role\":\"body\"},{\"cell\":\"A8\",\"value\":\"104\",\"role\":\"body\"},{\"cell\":\"B8\",\"value\":\"Vacant\",\"role\":\"body\"},{\"cell\":\"C8\",\"value\":15000,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D8\",\"value\":\"Vacant\",\"role\":\"body\"},{\"cell\":\"E8\",\"value\":0,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"F8\",\"value\":12500,\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"G8\",\"value\":\"n/a\",\"role\":\"body\"},{\"cell\":\"A10\",\"value\":\"Totals\",\"role\":\"total\"},{\"cell\":\"C10\",\"formula\":\"=SUM(C5:C8)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"E10\",\"formula\":\"=SUM(E5:E8)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A12\",\"value\":\"Space count\",\"role\":\"body\"},{\"cell\":\"C12\",\"formula\":\"=COUNTA(A5:A8)\",\"role\":\"total\",\"number_format\":\"0\"},{\"cell\":\"A13\",\"value\":\"Occupied count\",\"role\":\"body\"},{\"cell\":\"C13\",\"formula\":\"=COUNTIF(D5:D8,\\\"Occupied\\\")\",\"role\":\"total\",\"number_format\":\"0\"},{\"cell\":\"A14\",\"value\":\"Occupied SF\",\"role\":\"body\"},{\"cell\":\"C14\",\"formula\":\"=SUMIF(D5:D8,\\\"Occupied\\\",C5:C8)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A15\",\"value\":\"Occupancy by count (percent)\",\"role\":\"body\"},{\"cell\":\"C15\",\"formula\":\"=100*C13/C12\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"A16\",\"value\":\"Occupancy by area (percent)\",\"role\":\"body\"},{\"cell\":\"C16\",\"formula\":\"=100*C14/C10\",\"role\":\"total\",\"number_format\":\"0.00\"},{\"cell\":\"A17\",\"value\":\"Annualized contractual base rent (context only)\",\"role\":\"body\"},{\"cell\":\"C17\",\"formula\":\"=E10*12\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A19\",\"value\":\"Executed lease for premises 101 confirms $15,000 per month, expiry 2030-08-31, $30,000 security deposit; no amendment or renewal exercise notice is in the packet.\",\"role\":\"note\",\"wrap\":true}]},{\"name\":\"Underwriting\",\"freeze_rows\":4,\"column_widths\":{\"A\":48,\"B\":18,\"C\":46},\"cells\":[{\"cell\":\"A1\",\"value\":\"Underwritten cash flow - supplied scenario, September 2026 forward\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Source: Property-and-Plan.pdf p2; live links to Assumptions\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Line\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"Underwritten\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"Basis\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"Gross potential base rent\",\"role\":\"body\"},{\"cell\":\"B5\",\"formula\":\"=Assumptions!B15*Assumptions!B18\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C5\",\"value\":\"GPR input times EGI multiplier\",\"role\":\"note\"},{\"cell\":\"A6\",\"value\":\"Combined revenue loss (vacancy, concessions, bad debt)\",\"role\":\"body\"},{\"cell\":\"B6\",\"formula\":\"=-B5*Assumptions!B16\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C6\",\"value\":\"8.00% of underwritten GPR\",\"role\":\"note\"},{\"cell\":\"A7\",\"value\":\"Other income / recoveries\",\"role\":\"body\"},{\"cell\":\"B7\",\"formula\":\"=Assumptions!B17*Assumptions!B18\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C7\",\"value\":\"Added after revenue loss\",\"role\":\"note\"},{\"cell\":\"A8\",\"value\":\"Underwritten effective gross income (EGI)\",\"role\":\"total\"},{\"cell\":\"B8\",\"formula\":\"=B5+B6+B7\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A10\",\"value\":\"Real estate taxes\",\"role\":\"body\"},{\"cell\":\"B10\",\"formula\":\"=Assumptions!B31\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A11\",\"value\":\"Property insurance\",\"role\":\"body\"},{\"cell\":\"B11\",\"formula\":\"=Assumptions!B32\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A12\",\"value\":\"Utilities\",\"role\":\"body\"},{\"cell\":\"B12\",\"formula\":\"=Assumptions!B33\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A13\",\"value\":\"Repairs and maintenance\",\"role\":\"body\"},{\"cell\":\"B13\",\"formula\":\"=Assumptions!B34\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A14\",\"value\":\"Payroll / contract labor\",\"role\":\"body\"},{\"cell\":\"B14\",\"formula\":\"=Assumptions!B35\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A15\",\"value\":\"Administrative / legal\",\"role\":\"body\"},{\"cell\":\"B15\",\"formula\":\"=Assumptions!B36\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A16\",\"value\":\"Management fee (greater of T12 actual and 3.00% of EGI)\",\"role\":\"body\"},{\"cell\":\"B16\",\"formula\":\"=MAX(Assumptions!B22,Assumptions!B21*B8)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A17\",\"value\":\"Underwritten operating expenses before reserves\",\"role\":\"total\"},{\"cell\":\"B17\",\"formula\":\"=SUM(B10:B16)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A19\",\"value\":\"Underwritten NOI before replacement reserves\",\"role\":\"total\"},{\"cell\":\"B19\",\"formula\":\"=B8-B17\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A20\",\"value\":\"Replacement reserves (per SF times SF)\",\"role\":\"body\"},{\"cell\":\"B20\",\"formula\":\"=Assumptions!B19*Assumptions!B20\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A21\",\"value\":\"Underwritten NCF after replacement reserves\",\"role\":\"total\"},{\"cell\":\"B21\",\"formula\":\"=B19-B20\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A23\",\"value\":\"Indicative capitalized value (NOI before reserves / cap rate)\",\"role\":\"total\"},{\"cell\":\"B23\",\"formula\":\"=B19/Assumptions!B5\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A24\",\"value\":\"Expense ratio (opex / EGI)\",\"role\":\"body\"},{\"cell\":\"B24\",\"formula\":\"=B17/B8\",\"role\":\"body\",\"number_format\":\"0.0%\"}]},{\"name\":\"Loan Sizing\",\"freeze_rows\":4,\"column_widths\":{\"A\":50,\"B\":18,\"C\":46},\"cells\":[{\"cell\":\"A1\",\"value\":\"Loan sizing - three constraints\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Source: Lender-Terms.pdf p1; unrounded intermediates\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Item\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"Value\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"Definition\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"Contract rate (current; first-year debt service)\",\"role\":\"body\"},{\"cell\":\"B5\",\"formula\":\"=Assumptions!B9\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"C5\",\"value\":\"MAX(3.25% index, 4.00% floor) plus 2.75% spread\",\"role\":\"note\"},{\"cell\":\"A6\",\"value\":\"Sizing rate (underwriting)\",\"role\":\"body\"},{\"cell\":\"B6\",\"formula\":\"=Assumptions!B12\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"C6\",\"value\":\"Greater of contract rate and 7.25% floor plus increment\",\"role\":\"note\"},{\"cell\":\"A7\",\"value\":\"Annual debt constant per $1 at sizing rate\",\"role\":\"total\"},{\"cell\":\"B7\",\"formula\":\"=-PMT(B6/12,Assumptions!B13,1)*12\",\"role\":\"total\",\"number_format\":\"0.00000000\"},{\"cell\":\"C7\",\"value\":\"12 monthly payments, 300-month amortization\",\"role\":\"note\"},{\"cell\":\"A9\",\"value\":\"LTV limit\",\"role\":\"body\"},{\"cell\":\"B9\",\"formula\":\"=Assumptions!B23*Underwriting!B23\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C9\",\"value\":\"60.00% times capitalized value\",\"role\":\"note\"},{\"cell\":\"A10\",\"value\":\"DSCR limit\",\"role\":\"body\"},{\"cell\":\"B10\",\"formula\":\"=Underwriting!B21/(Assumptions!B24*B7)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C10\",\"value\":\"UW NCF divided by (1.30 times annual constant)\",\"role\":\"note\"},{\"cell\":\"A11\",\"value\":\"Debt yield limit\",\"role\":\"body\"},{\"cell\":\"B11\",\"formula\":\"=Underwriting!B21/Assumptions!B25\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C11\",\"value\":\"UW NCF divided by 10.00%\",\"role\":\"note\"},{\"cell\":\"A12\",\"value\":\"Maximum loan (lowest constraint)\",\"role\":\"total\"},{\"cell\":\"B12\",\"formula\":\"=MIN(B9:B11)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A13\",\"value\":\"Binding constraint\",\"role\":\"total\"},{\"cell\":\"B13\",\"formula\":\"=IF(B12=B9,\\\"LTV\\\",IF(B12=B10,\\\"DSCR\\\",\\\"Debt yield\\\"))\",\"role\":\"total\"},{\"cell\":\"A15\",\"value\":\"Sizing annual debt service (amortizing, sizing rate)\",\"role\":\"total\"},{\"cell\":\"B15\",\"formula\":\"=B12*B7\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A16\",\"value\":\"Sizing DSCR (UW NCF / sizing debt service)\",\"role\":\"total\"},{\"cell\":\"B16\",\"formula\":\"=Underwriting!B21/B15\",\"role\":\"total\",\"number_format\":\"0.000\"},{\"cell\":\"A17\",\"value\":\"Sizing debt yield (UW NCF / maximum loan)\",\"role\":\"total\"},{\"cell\":\"B17\",\"formula\":\"=Underwriting!B21/B12\",\"role\":\"total\",\"number_format\":\"0.00%\"},{\"cell\":\"A18\",\"value\":\"First-year contractual debt service (12-month IO at contract rate)\",\"role\":\"total\"},{\"cell\":\"B18\",\"formula\":\"=IF(Assumptions!B14>=12,B12*B5,-PMT(B5/12,Assumptions!B13,B12)*12)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A19\",\"value\":\"Memo: amortizing annual debt service at contract rate\",\"role\":\"body\"},{\"cell\":\"B19\",\"formula\":\"=-PMT(B5/12,Assumptions!B13,B12)*12\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A20\",\"value\":\"Memo: DSCR on first-year contractual (IO) debt service\",\"role\":\"body\"},{\"cell\":\"B20\",\"formula\":\"=Underwriting!B21/B18\",\"role\":\"body\",\"number_format\":\"0.000\"},{\"cell\":\"A21\",\"value\":\"Memo: loan per rentable SF\",\"role\":\"body\"},{\"cell\":\"B21\",\"formula\":\"=B12/Assumptions!B19\",\"role\":\"body\",\"number_format\":\"#,##0.00\"}]},{\"name\":\"Sources Uses\",\"freeze_rows\":4,\"column_widths\":{\"A\":44,\"B\":18,\"C\":40},\"cells\":[{\"cell\":\"A1\",\"value\":\"Sources and uses at the maximum loan\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"Source: Property-and-Plan.pdf p1; Lender-Terms.pdf p1\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Sources\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"Amount\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"Reference\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"New first-mortgage loan proceeds\",\"role\":\"body\"},{\"cell\":\"B5\",\"formula\":\"='Loan Sizing'!B12\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C5\",\"value\":\"Loan Sizing!B12\",\"role\":\"note\"},{\"cell\":\"A6\",\"value\":\"Borrower cash contribution (if required)\",\"role\":\"body\"},{\"cell\":\"B6\",\"formula\":\"=MAX(0,-B14)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C6\",\"value\":\"Cash-in only if proceeds are insufficient\",\"role\":\"note\"},{\"cell\":\"A7\",\"value\":\"Total sources\",\"role\":\"total\"},{\"cell\":\"B7\",\"formula\":\"=B5+B6\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A9\",\"value\":\"Uses\",\"role\":\"header\"},{\"cell\":\"A10\",\"value\":\"Existing debt payoff\",\"role\":\"body\"},{\"cell\":\"B10\",\"formula\":\"=Assumptions!B27\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C10\",\"value\":\"Property-and-Plan.pdf p1\",\"role\":\"note\"},{\"cell\":\"A11\",\"value\":\"Origination fee (1.25% of principal)\",\"role\":\"body\"},{\"cell\":\"B11\",\"formula\":\"=Assumptions!B26*B5\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C11\",\"value\":\"Lender-Terms.pdf p1\",\"role\":\"note\"},{\"cell\":\"A12\",\"value\":\"Fixed closing costs\",\"role\":\"body\"},{\"cell\":\"B12\",\"formula\":\"=Assumptions!B28\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C12\",\"value\":\"Property-and-Plan.pdf p1\",\"role\":\"note\"},{\"cell\":\"A13\",\"value\":\"Total uses before distribution\",\"role\":\"total\"},{\"cell\":\"B13\",\"formula\":\"=SUM(B10:B12)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A14\",\"value\":\"Net cash to borrower (negative equals cash in)\",\"role\":\"total\"},{\"cell\":\"B14\",\"formula\":\"=B5-B13\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A16\",\"value\":\"No fee capitalization, interest reserve, holdback or earn-out is assumed (Lender-Terms.pdf p1).\",\"role\":\"note\",\"wrap\":true}]},{\"name\":\"Sensitivity\",\"freeze_rows\":4,\"column_widths\":{\"A\":46,\"B\":18,\"C\":18,\"D\":22,\"E\":18},\"cells\":[{\"cell\":\"A1\",\"value\":\"Sensitivity scenarios\",\"role\":\"title\"},{\"cell\":\"A2\",\"value\":\"EGI -5% recomputes the management minimum; other operating expenses and reserves held constant (Property-and-Plan.pdf p2)\",\"role\":\"note\"},{\"cell\":\"A4\",\"value\":\"Metric\",\"role\":\"header\"},{\"cell\":\"B4\",\"value\":\"Base case\",\"role\":\"header\"},{\"cell\":\"C4\",\"value\":\"EGI -5%\",\"role\":\"header\"},{\"cell\":\"D4\",\"value\":\"EGI -5% and rate +100bps\",\"role\":\"header\"},{\"cell\":\"E4\",\"value\":\"Cap rate +50bps\",\"role\":\"header\"},{\"cell\":\"A5\",\"value\":\"EGI\",\"role\":\"body\"},{\"cell\":\"B5\",\"formula\":\"=Underwriting!B8\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C5\",\"formula\":\"=Underwriting!B8*0.95\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D5\",\"formula\":\"=C5\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E5\",\"formula\":\"=B5\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A6\",\"value\":\"Management fee\",\"role\":\"body\"},{\"cell\":\"B6\",\"formula\":\"=Underwriting!B16\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C6\",\"formula\":\"=MAX(Assumptions!B22,Assumptions!B21*C5)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D6\",\"formula\":\"=C6\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E6\",\"formula\":\"=B6\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A7\",\"value\":\"Other operating expenses (unchanged)\",\"role\":\"body\"},{\"cell\":\"B7\",\"formula\":\"=Underwriting!B17-Underwriting!B16\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C7\",\"formula\":\"=B7\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D7\",\"formula\":\"=B7\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E7\",\"formula\":\"=B7\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A8\",\"value\":\"NOI before reserves\",\"role\":\"total\"},{\"cell\":\"B8\",\"formula\":\"=B5-B6-B7\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"C8\",\"formula\":\"=C5-C6-C7\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"D8\",\"formula\":\"=D5-D6-D7\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"E8\",\"formula\":\"=E5-E6-E7\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A9\",\"value\":\"Replacement reserves\",\"role\":\"body\"},{\"cell\":\"B9\",\"formula\":\"=Underwriting!B20\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C9\",\"formula\":\"=B9\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D9\",\"formula\":\"=B9\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E9\",\"formula\":\"=B9\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A10\",\"value\":\"NCF after reserves\",\"role\":\"total\"},{\"cell\":\"B10\",\"formula\":\"=B8-B9\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"C10\",\"formula\":\"=C8-C9\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"D10\",\"formula\":\"=D8-D9\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"E10\",\"formula\":\"=E8-E9\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A11\",\"value\":\"Cap rate used\",\"role\":\"body\"},{\"cell\":\"B11\",\"formula\":\"=Assumptions!B5\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"C11\",\"formula\":\"=Assumptions!B5\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"D11\",\"formula\":\"=Assumptions!B5\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"E11\",\"formula\":\"=Assumptions!B5+0.005\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"A12\",\"value\":\"Indicative value\",\"role\":\"body\"},{\"cell\":\"B12\",\"formula\":\"=B8/B11\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C12\",\"formula\":\"=C8/C11\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D12\",\"formula\":\"=D8/D11\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E12\",\"formula\":\"=E8/E11\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A13\",\"value\":\"Sizing rate used\",\"role\":\"body\"},{\"cell\":\"B13\",\"formula\":\"=Assumptions!B12\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"C13\",\"formula\":\"=Assumptions!B12\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"D13\",\"formula\":\"=Assumptions!B12+0.01\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"E13\",\"formula\":\"=Assumptions!B12\",\"role\":\"body\",\"number_format\":\"0.00%\"},{\"cell\":\"A14\",\"value\":\"Annual debt constant\",\"role\":\"body\"},{\"cell\":\"B14\",\"formula\":\"=-PMT(B13/12,Assumptions!B13,1)*12\",\"role\":\"body\",\"number_format\":\"0.00000000\"},{\"cell\":\"C14\",\"formula\":\"=-PMT(C13/12,Assumptions!B13,1)*12\",\"role\":\"body\",\"number_format\":\"0.00000000\"},{\"cell\":\"D14\",\"formula\":\"=-PMT(D13/12,Assumptions!B13,1)*12\",\"role\":\"body\",\"number_format\":\"0.00000000\"},{\"cell\":\"E14\",\"formula\":\"=-PMT(E13/12,Assumptions!B13,1)*12\",\"role\":\"body\",\"number_format\":\"0.00000000\"},{\"cell\":\"A15\",\"value\":\"LTV limit\",\"role\":\"body\"},{\"cell\":\"B15\",\"formula\":\"=Assumptions!B23*B12\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C15\",\"formula\":\"=Assumptions!B23*C12\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D15\",\"formula\":\"=Assumptions!B23*D12\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E15\",\"formula\":\"=Assumptions!B23*E12\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A16\",\"value\":\"DSCR limit\",\"role\":\"body\"},{\"cell\":\"B16\",\"formula\":\"=B10/(Assumptions!B24*B14)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C16\",\"formula\":\"=C10/(Assumptions!B24*C14)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D16\",\"formula\":\"=D10/(Assumptions!B24*D14)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E16\",\"formula\":\"=E10/(Assumptions!B24*E14)\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A17\",\"value\":\"Debt yield limit\",\"role\":\"body\"},{\"cell\":\"B17\",\"formula\":\"=B10/Assumptions!B25\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C17\",\"formula\":\"=C10/Assumptions!B25\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D17\",\"formula\":\"=D10/Assumptions!B25\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E17\",\"formula\":\"=E10/Assumptions!B25\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"A18\",\"value\":\"Maximum loan\",\"role\":\"total\"},{\"cell\":\"B18\",\"formula\":\"=MIN(B15:B17)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"C18\",\"formula\":\"=MIN(C15:C17)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"D18\",\"formula\":\"=MIN(D15:D17)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"E18\",\"formula\":\"=MIN(E15:E17)\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A19\",\"value\":\"Binding constraint\",\"role\":\"total\"},{\"cell\":\"B19\",\"formula\":\"=IF(B18=B15,\\\"LTV\\\",IF(B18=B16,\\\"DSCR\\\",\\\"Debt yield\\\"))\",\"role\":\"total\"},{\"cell\":\"C19\",\"formula\":\"=IF(C18=C15,\\\"LTV\\\",IF(C18=C16,\\\"DSCR\\\",\\\"Debt yield\\\"))\",\"role\":\"total\"},{\"cell\":\"D19\",\"formula\":\"=IF(D18=D15,\\\"LTV\\\",IF(D18=D16,\\\"DSCR\\\",\\\"Debt yield\\\"))\",\"role\":\"total\"},{\"cell\":\"E19\",\"formula\":\"=IF(E18=E15,\\\"LTV\\\",IF(E18=E16,\\\"DSCR\\\",\\\"Debt yield\\\"))\",\"role\":\"total\"},{\"cell\":\"A20\",\"value\":\"Net cash to borrower (negative equals cash in)\",\"role\":\"body\"},{\"cell\":\"B20\",\"formula\":\"=B18-Assumptions!B27-Assumptions!B26*B18-Assumptions!B28\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"C20\",\"formula\":\"=C18-Assumptions!B27-Assumptions!B26*C18-Assumptions!B28\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"D20\",\"formula\":\"=D18-Assumptions!B27-Assumptions!B26*D18-Assumptions!B28\",\"role\":\"body\",\"number_format\":\"#,##0\"},{\"cell\":\"E20\",\"formula\":\"=E18-Assumptions!B27-Assumptions!B26*E18-Assumptions!B28\",\"role\":\"body\",\"number_format\":\"#,##0\"}]},{\"name\":\"Input Output Map\",\"column_widths\":{\"A\":42,\"B\":26,\"C\":50},\"cells\":[{\"cell\":\"A1\",\"value\":\"Reviewer map - editable inputs and key outputs\",\"role\":\"title\"},{\"cell\":\"A3\",\"value\":\"Editable input\",\"role\":\"header\"},{\"cell\":\"B3\",\"value\":\"Location\",\"role\":\"header\"},{\"cell\":\"C3\",\"value\":\"Note\",\"role\":\"header\"},{\"cell\":\"A4\",\"value\":\"Cap rate\",\"role\":\"body\"},{\"cell\":\"B4\",\"value\":\"Assumptions!B5\",\"role\":\"body\"},{\"cell\":\"C4\",\"value\":\"Valuation cap rate; +50bps case in Sensitivity column E\",\"role\":\"note\"},{\"cell\":\"A5\",\"value\":\"Sizing rate increment\",\"role\":\"body\"},{\"cell\":\"B5\",\"value\":\"Assumptions!B11\",\"role\":\"body\"},{\"cell\":\"C5\",\"value\":\"Enter 0.01 for +100bps; sizing rate computes at Assumptions!B12\",\"role\":\"note\"},{\"cell\":\"A6\",\"value\":\"Gross potential base rent\",\"role\":\"body\"},{\"cell\":\"B6\",\"value\":\"Assumptions!B15\",\"role\":\"body\"},{\"cell\":\"C6\",\"value\":\"Drives underwritten EGI\",\"role\":\"note\"},{\"cell\":\"A7\",\"value\":\"Other income / recoveries\",\"role\":\"body\"},{\"cell\":\"B7\",\"value\":\"Assumptions!B17\",\"role\":\"body\"},{\"cell\":\"C7\",\"value\":\"Added after revenue loss\",\"role\":\"note\"},{\"cell\":\"A8\",\"value\":\"EGI multiplier\",\"role\":\"body\"},{\"cell\":\"B8\",\"value\":\"Assumptions!B18\",\"role\":\"body\"},{\"cell\":\"C8\",\"value\":\"Set 0.95 to scale EGI down 5%, loss % constant\",\"role\":\"note\"},{\"cell\":\"A9\",\"value\":\"Revenue loss percentage\",\"role\":\"body\"},{\"cell\":\"B9\",\"value\":\"Assumptions!B16\",\"role\":\"body\"},{\"cell\":\"A10\",\"value\":\"Expense, reserve and loan term inputs\",\"role\":\"body\"},{\"cell\":\"B10\",\"value\":\"Assumptions!B10:B36\",\"role\":\"body\"},{\"cell\":\"A12\",\"value\":\"Key output\",\"role\":\"header\"},{\"cell\":\"B12\",\"value\":\"Location\",\"role\":\"header\"},{\"cell\":\"C12\",\"value\":\"Live value\",\"role\":\"header\"},{\"cell\":\"A13\",\"value\":\"Underwritten NOI before reserves\",\"role\":\"body\"},{\"cell\":\"B13\",\"value\":\"Underwriting!B19\",\"role\":\"body\"},{\"cell\":\"C13\",\"formula\":\"=Underwriting!B19\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A14\",\"value\":\"Underwritten NCF after reserves\",\"role\":\"body\"},{\"cell\":\"B14\",\"value\":\"Underwriting!B21\",\"role\":\"body\"},{\"cell\":\"C14\",\"formula\":\"=Underwriting!B21\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A15\",\"value\":\"Capitalized value\",\"role\":\"body\"},{\"cell\":\"B15\",\"value\":\"Underwriting!B23\",\"role\":\"body\"},{\"cell\":\"C15\",\"formula\":\"=Underwriting!B23\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A16\",\"value\":\"LTV limit\",\"role\":\"body\"},{\"cell\":\"B16\",\"value\":\"Loan Sizing!B9\",\"role\":\"body\"},{\"cell\":\"C16\",\"formula\":\"='Loan Sizing'!B9\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A17\",\"value\":\"DSCR limit\",\"role\":\"body\"},{\"cell\":\"B17\",\"value\":\"Loan Sizing!B10\",\"role\":\"body\"},{\"cell\":\"C17\",\"formula\":\"='Loan Sizing'!B10\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A18\",\"value\":\"Debt yield limit\",\"role\":\"body\"},{\"cell\":\"B18\",\"value\":\"Loan Sizing!B11\",\"role\":\"body\"},{\"cell\":\"C18\",\"formula\":\"='Loan Sizing'!B11\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A19\",\"value\":\"Maximum loan\",\"role\":\"body\"},{\"cell\":\"B19\",\"value\":\"Loan Sizing!B12\",\"role\":\"body\"},{\"cell\":\"C19\",\"formula\":\"='Loan Sizing'!B12\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A20\",\"value\":\"Binding constraint\",\"role\":\"body\"},{\"cell\":\"B20\",\"value\":\"Loan Sizing!B13\",\"role\":\"body\"},{\"cell\":\"C20\",\"formula\":\"='Loan Sizing'!B13\",\"role\":\"total\"},{\"cell\":\"A21\",\"value\":\"First-year contractual debt service\",\"role\":\"body\"},{\"cell\":\"B21\",\"value\":\"Loan Sizing!B18\",\"role\":\"body\"},{\"cell\":\"C21\",\"formula\":\"='Loan Sizing'!B18\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A22\",\"value\":\"Net cash to borrower\",\"role\":\"body\"},{\"cell\":\"B22\",\"value\":\"Sources Uses!B14\",\"role\":\"body\"},{\"cell\":\"C22\",\"formula\":\"='Sources Uses'!B14\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A23\",\"value\":\"Stress NOI (EGI -5%)\",\"role\":\"body\"},{\"cell\":\"B23\",\"value\":\"Sensitivity!C8\",\"role\":\"body\"},{\"cell\":\"C23\",\"formula\":\"=Sensitivity!C8\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A24\",\"value\":\"Stress maximum loan (EGI -5%, rate +100bps)\",\"role\":\"body\"},{\"cell\":\"B24\",\"value\":\"Sensitivity!D18\",\"role\":\"body\"},{\"cell\":\"C24\",\"formula\":\"=Sensitivity!D18\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A25\",\"value\":\"T12 NOI before reserves\",\"role\":\"body\"},{\"cell\":\"B25\",\"value\":\"Historical T12!B21\",\"role\":\"body\"},{\"cell\":\"C25\",\"formula\":\"='Historical T12'!B21\",\"role\":\"total\",\"number_format\":\"#,##0\"},{\"cell\":\"A26\",\"value\":\"T12 NCF after reserves\",\"role\":\"body\"},{\"cell\":\"B26\",\"value\":\"Historical T12!B23\",\"role\":\"body\"},{\"cell\":\"C26\",\"formula\":\"='Historical T12'!B23\",\"role\":\"total\",\"number_format\":\"#,##0\"}]}],\"input_map\":{\"cap_rate\":\"Assumptions!B5\",\"sizing_rate_increment\":\"Assumptions!B11\",\"sizing_rate\":\"Assumptions!B12\",\"egi_gross_potential_rent\":\"Assumptions!B15\",\"egi_other_income\":\"Assumptions!B17\",\"egi_multiplier\":\"Assumptions!B18\"},\"output_map\":{\"maximum_loan\":\"Loan Sizing!B12\",\"uw_noi_before_reserves\":\"Underwriting!B19\",\"uw_ncf\":\"Underwriting!B21\",\"capitalization_value\":\"Underwriting!B23\",\"ltv_limit\":\"Loan Sizing!B9\",\"dscr_limit\":\"Loan Sizing!B10\",\"debt_yield_limit\":\"Loan Sizing!B11\",\"binding_constraint\":\"Loan Sizing!B13\",\"sizing_annual_debt_service\":\"Loan Sizing!B15\",\"sizing_dscr\":\"Loan Sizing!B16\",\"sizing_debt_yield\":\"Loan Sizing!B17\",\"first_year_debt_service\":\"Loan Sizing!B18\",\"cash_to_borrower\":\"Sources Uses!B14\",\"stress_uw_noi\":\"Sensitivity!C8\",\"stress_maximum_loan\":\"Sensitivity!D18\",\"uw_egi\":\"Underwriting!B8\",\"uw_management_fee\":\"Underwriting!B16\",\"uw_operating_expenses\":\"Underwriting!B17\",\"uw_reserves\":\"Underwriting!B20\",\"t12_egi\":\"Historical T12!B10\",\"t12_operating_expenses\":\"Historical T12!B19\",\"t12_noi_before_reserves\":\"Historical T12!B21\",\"t12_ncf\":\"Historical T12!B23\",\"annual_debt_constant\":\"Loan Sizing!B7\",\"contract_rate\":\"Loan Sizing!B5\"}}}",
+  "arguments": {
+    "spec": {
+      "sheets": [
+        {
+          "name": "Assumptions",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 42,
+            "B": 18,
+            "C": 52
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Stonebridge Logistics - Refinance underwriting assumptions",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "As of 2026-08-31 | fictional packet | USD",
+              "role": "note"
+            },
+            {
+              "cell": "A3",
+              "value": "Cells in column B are editable inputs driving all downstream sheets",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Assumption",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "Value",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "Source",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "Valuation cap rate (INPUT)",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "value": 0.0675,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C5",
+              "value": "Lender-Terms.pdf p1 Valuation",
+              "role": "note"
+            },
+            {
+              "cell": "A6",
+              "value": "Index rate",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "value": 0.0325,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C6",
+              "value": "Lender-Terms.pdf p1 Contract rate",
+              "role": "note"
+            },
+            {
+              "cell": "A7",
+              "value": "Index floor",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "value": 0.04,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C7",
+              "value": "Lender-Terms.pdf p1 Contract rate",
+              "role": "note"
+            },
+            {
+              "cell": "A8",
+              "value": "Spread (applied after floor)",
+              "role": "body"
+            },
+            {
+              "cell": "B8",
+              "value": 0.0275,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C8",
+              "value": "Lender-Terms.pdf p1 Contract rate",
+              "role": "note"
+            },
+            {
+              "cell": "A9",
+              "value": "Contract rate (computed)",
+              "role": "total"
+            },
+            {
+              "cell": "B9",
+              "formula": "=MAX(B6,B7)+B8",
+              "role": "total",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C9",
+              "value": "MAX(index, floor) + spread",
+              "role": "note"
+            },
+            {
+              "cell": "A10",
+              "value": "Underwriting (sizing) rate floor",
+              "role": "body"
+            },
+            {
+              "cell": "B10",
+              "value": 0.0725,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C10",
+              "value": "Lender-Terms.pdf p1 Sizing rate",
+              "role": "note"
+            },
+            {
+              "cell": "A11",
+              "value": "Sizing rate increment (INPUT; 0.01 = +100bps)",
+              "role": "body"
+            },
+            {
+              "cell": "B11",
+              "value": 0,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C11",
+              "value": "Property-and-Plan.pdf p2 sensitivity instruction",
+              "role": "note"
+            },
+            {
+              "cell": "A12",
+              "value": "Sizing rate (computed, INPUT-driven)",
+              "role": "total"
+            },
+            {
+              "cell": "B12",
+              "formula": "=MAX(B9,B10)+B11",
+              "role": "total",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C12",
+              "value": "MAX(contract rate, 7.25% floor) + increment",
+              "role": "note"
+            },
+            {
+              "cell": "A13",
+              "value": "Amortization term (months)",
+              "role": "body"
+            },
+            {
+              "cell": "B13",
+              "value": 300,
+              "role": "input",
+              "number_format": "0"
+            },
+            {
+              "cell": "C13",
+              "value": "Lender-Terms.pdf p1 Amortization 25 years",
+              "role": "note"
+            },
+            {
+              "cell": "A14",
+              "value": "Interest-only period (months)",
+              "role": "body"
+            },
+            {
+              "cell": "B14",
+              "value": 12,
+              "role": "input",
+              "number_format": "0"
+            },
+            {
+              "cell": "C14",
+              "value": "Lender-Terms.pdf p1 IO period",
+              "role": "note"
+            },
+            {
+              "cell": "A15",
+              "value": "Gross potential base rent (INPUT, annual)",
+              "role": "body"
+            },
+            {
+              "cell": "B15",
+              "value": 900000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C15",
+              "value": "Property-and-Plan.pdf p2 supplied scenario",
+              "role": "note"
+            },
+            {
+              "cell": "A16",
+              "value": "Combined revenue loss % of GPR",
+              "role": "body"
+            },
+            {
+              "cell": "B16",
+              "value": 0.08,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C16",
+              "value": "Property-and-Plan.pdf p2",
+              "role": "note"
+            },
+            {
+              "cell": "A17",
+              "value": "Other income / recoveries (INPUT, annual)",
+              "role": "body"
+            },
+            {
+              "cell": "B17",
+              "value": 195000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C17",
+              "value": "Property-and-Plan.pdf p2, added after revenue loss",
+              "role": "note"
+            },
+            {
+              "cell": "A18",
+              "value": "EGI multiplier (INPUT; 0.95 = EGI -5%)",
+              "role": "body"
+            },
+            {
+              "cell": "B18",
+              "value": 1,
+              "role": "input",
+              "number_format": "0.000"
+            },
+            {
+              "cell": "C18",
+              "value": "Scales GPR and other income; loss % held constant",
+              "role": "note"
+            },
+            {
+              "cell": "A19",
+              "value": "Total rentable SF",
+              "role": "body"
+            },
+            {
+              "cell": "B19",
+              "value": 85000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C19",
+              "value": "Rent-Roll.xlsx rows 7-10",
+              "role": "note"
+            },
+            {
+              "cell": "A20",
+              "value": "Replacement reserves per SF per year",
+              "role": "body"
+            },
+            {
+              "cell": "B20",
+              "value": 0.2,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "C20",
+              "value": "Property-and-Plan.pdf p2",
+              "role": "note"
+            },
+            {
+              "cell": "A21",
+              "value": "Management fee % of underwritten EGI",
+              "role": "body"
+            },
+            {
+              "cell": "B21",
+              "value": 0.03,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C21",
+              "value": "Property-and-Plan.pdf p2 greater of T12 or 3%",
+              "role": "note"
+            },
+            {
+              "cell": "A22",
+              "value": "T12 actual management fee",
+              "role": "body"
+            },
+            {
+              "cell": "B22",
+              "value": 25200,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C22",
+              "value": "T12-Statement.pdf p2 annual column",
+              "role": "note"
+            },
+            {
+              "cell": "A23",
+              "value": "Maximum LTV",
+              "role": "body"
+            },
+            {
+              "cell": "B23",
+              "value": 0.6,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C23",
+              "value": "Lender-Terms.pdf p1 LTV",
+              "role": "note"
+            },
+            {
+              "cell": "A24",
+              "value": "Minimum DSCR (NCF after reserves)",
+              "role": "body"
+            },
+            {
+              "cell": "B24",
+              "value": 1.3,
+              "role": "input",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "C24",
+              "value": "Lender-Terms.pdf p1 DSCR",
+              "role": "note"
+            },
+            {
+              "cell": "A25",
+              "value": "Minimum debt yield (NCF after reserves)",
+              "role": "body"
+            },
+            {
+              "cell": "B25",
+              "value": 0.1,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C25",
+              "value": "Lender-Terms.pdf p1 Debt yield",
+              "role": "note"
+            },
+            {
+              "cell": "A26",
+              "value": "Origination fee % of principal",
+              "role": "body"
+            },
+            {
+              "cell": "B26",
+              "value": 0.0125,
+              "role": "input",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C26",
+              "value": "Lender-Terms.pdf p1 Origination fee",
+              "role": "note"
+            },
+            {
+              "cell": "A27",
+              "value": "Existing debt payoff",
+              "role": "body"
+            },
+            {
+              "cell": "B27",
+              "value": 4200000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C27",
+              "value": "Property-and-Plan.pdf p1",
+              "role": "note"
+            },
+            {
+              "cell": "A28",
+              "value": "Fixed closing costs",
+              "role": "body"
+            },
+            {
+              "cell": "B28",
+              "value": 70000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C28",
+              "value": "Property-and-Plan.pdf p1",
+              "role": "note"
+            },
+            {
+              "cell": "A30",
+              "value": "Underwritten operating expenses excluding management",
+              "role": "header"
+            },
+            {
+              "cell": "B30",
+              "value": "Annual",
+              "role": "header"
+            },
+            {
+              "cell": "C30",
+              "value": "Basis",
+              "role": "header"
+            },
+            {
+              "cell": "A31",
+              "value": "Real estate taxes",
+              "role": "body"
+            },
+            {
+              "cell": "B31",
+              "value": 132000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C31",
+              "value": "Property-and-Plan.pdf p2 (T12 actual $126,000)",
+              "role": "note"
+            },
+            {
+              "cell": "A32",
+              "value": "Property insurance",
+              "role": "body"
+            },
+            {
+              "cell": "B32",
+              "value": 33600,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C32",
+              "value": "Plan p2 renewal confirmation dated 2026-08-25",
+              "role": "note"
+            },
+            {
+              "cell": "A33",
+              "value": "Utilities",
+              "role": "body"
+            },
+            {
+              "cell": "B33",
+              "value": 12000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C33",
+              "value": "T12 actual per plan",
+              "role": "note"
+            },
+            {
+              "cell": "A34",
+              "value": "Repairs and maintenance",
+              "role": "body"
+            },
+            {
+              "cell": "B34",
+              "value": 18000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C34",
+              "value": "T12 $24,000 less $6,000 one-time casualty cleanup",
+              "role": "note"
+            },
+            {
+              "cell": "A35",
+              "value": "Payroll / contract labor",
+              "role": "body"
+            },
+            {
+              "cell": "B35",
+              "value": 18000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C35",
+              "value": "T12 actual per plan",
+              "role": "note"
+            },
+            {
+              "cell": "A36",
+              "value": "Administrative / legal",
+              "role": "body"
+            },
+            {
+              "cell": "B36",
+              "value": 18000,
+              "role": "input",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C36",
+              "value": "T12 actual per plan",
+              "role": "note"
+            }
+          ]
+        },
+        {
+          "name": "Historical T12",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 46,
+            "B": 18,
+            "C": 46
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Historical T12 - September 2025 through August 2026 actual",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Source: T12-Statement.pdf pages 1-2, Annual column",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Line",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "T12 actual",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "Note",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "Gross potential base rent",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "value": 852000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A6",
+              "value": "Vacancy loss",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "value": -150000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A7",
+              "value": "Concessions",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "value": -36000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A8",
+              "value": "Bad debt",
+              "role": "body"
+            },
+            {
+              "cell": "B8",
+              "value": -6000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A9",
+              "value": "Other income / recoveries",
+              "role": "body"
+            },
+            {
+              "cell": "B9",
+              "value": 186000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A10",
+              "value": "T12 effective gross income",
+              "role": "total"
+            },
+            {
+              "cell": "B10",
+              "formula": "=SUM(B5:B9)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A12",
+              "value": "Real estate taxes",
+              "role": "body"
+            },
+            {
+              "cell": "B12",
+              "value": 126000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A13",
+              "value": "Property insurance",
+              "role": "body"
+            },
+            {
+              "cell": "B13",
+              "value": 30000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A14",
+              "value": "Utilities",
+              "role": "body"
+            },
+            {
+              "cell": "B14",
+              "value": 12000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A15",
+              "value": "Repairs and maintenance",
+              "role": "body"
+            },
+            {
+              "cell": "B15",
+              "value": 24000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C15",
+              "value": "Includes $6,000 one-time casualty cleanup",
+              "role": "note"
+            },
+            {
+              "cell": "A16",
+              "value": "Payroll / contract labor",
+              "role": "body"
+            },
+            {
+              "cell": "B16",
+              "value": 18000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A17",
+              "value": "Administrative / legal",
+              "role": "body"
+            },
+            {
+              "cell": "B17",
+              "value": 18000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A18",
+              "value": "Management fee",
+              "role": "body"
+            },
+            {
+              "cell": "B18",
+              "value": 25200,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A19",
+              "value": "T12 operating expenses (excl. reserves, capex, debt, depreciation)",
+              "role": "total"
+            },
+            {
+              "cell": "B19",
+              "formula": "=SUM(B12:B18)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A21",
+              "value": "T12 NOI before replacement reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B21",
+              "formula": "=B10-B19",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A22",
+              "value": "T12 replacement reserves (below NOI)",
+              "role": "body"
+            },
+            {
+              "cell": "B22",
+              "value": 17000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A23",
+              "value": "T12 NCF after replacement reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B23",
+              "formula": "=B21-B22",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A25",
+              "value": "Memo: capital improvements (below cash flow)",
+              "role": "body"
+            },
+            {
+              "cell": "B25",
+              "value": 220000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A26",
+              "value": "Memo: loan principal and interest (below cash flow)",
+              "role": "body"
+            },
+            {
+              "cell": "B26",
+              "value": 294000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A27",
+              "value": "Memo: depreciation (noncash)",
+              "role": "body"
+            },
+            {
+              "cell": "B27",
+              "value": 180000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A29",
+              "value": "Historical results are actuals, not annualized rent roll and not underwriting.",
+              "role": "note",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "name": "Rent Roll",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 14,
+            "B": 20,
+            "C": 14,
+            "D": 14,
+            "E": 20,
+            "F": 20,
+            "G": 16
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Contractual rent and occupancy as of 2026-08-31",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Source: Rent-Roll.xlsx rows 7-10; Lease-File.pdf p1 for premises 101",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Unit",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "Tenant",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "Area SF",
+              "role": "header"
+            },
+            {
+              "cell": "D4",
+              "value": "Status",
+              "role": "header"
+            },
+            {
+              "cell": "E4",
+              "value": "Monthly base rent",
+              "role": "header"
+            },
+            {
+              "cell": "F4",
+              "value": "Market monthly rent",
+              "role": "header"
+            },
+            {
+              "cell": "G4",
+              "value": "Lease expiry",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "101",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "value": "Tenant A LLC",
+              "role": "body"
+            },
+            {
+              "cell": "C5",
+              "value": 18000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D5",
+              "value": "Occupied",
+              "role": "body"
+            },
+            {
+              "cell": "E5",
+              "value": 15000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "F5",
+              "value": 15000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G5",
+              "value": "2030-08-31",
+              "role": "body"
+            },
+            {
+              "cell": "A6",
+              "value": "102",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "value": "Tenant B LLC",
+              "role": "body"
+            },
+            {
+              "cell": "C6",
+              "value": 22000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D6",
+              "value": "Occupied",
+              "role": "body"
+            },
+            {
+              "cell": "E6",
+              "value": 18700,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "F6",
+              "value": 18700,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G6",
+              "value": "2028-08-31",
+              "role": "body"
+            },
+            {
+              "cell": "A7",
+              "value": "103",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "value": "Tenant C LLC",
+              "role": "body"
+            },
+            {
+              "cell": "C7",
+              "value": 30000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D7",
+              "value": "Occupied",
+              "role": "body"
+            },
+            {
+              "cell": "E7",
+              "value": 27000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "F7",
+              "value": 27000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G7",
+              "value": "2029-08-31",
+              "role": "body"
+            },
+            {
+              "cell": "A8",
+              "value": "104",
+              "role": "body"
+            },
+            {
+              "cell": "B8",
+              "value": "Vacant",
+              "role": "body"
+            },
+            {
+              "cell": "C8",
+              "value": 15000,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D8",
+              "value": "Vacant",
+              "role": "body"
+            },
+            {
+              "cell": "E8",
+              "value": 0,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "F8",
+              "value": 12500,
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "G8",
+              "value": "n/a",
+              "role": "body"
+            },
+            {
+              "cell": "A10",
+              "value": "Totals",
+              "role": "total"
+            },
+            {
+              "cell": "C10",
+              "formula": "=SUM(C5:C8)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E10",
+              "formula": "=SUM(E5:E8)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A12",
+              "value": "Space count",
+              "role": "body"
+            },
+            {
+              "cell": "C12",
+              "formula": "=COUNTA(A5:A8)",
+              "role": "total",
+              "number_format": "0"
+            },
+            {
+              "cell": "A13",
+              "value": "Occupied count",
+              "role": "body"
+            },
+            {
+              "cell": "C13",
+              "formula": "=COUNTIF(D5:D8,\"Occupied\")",
+              "role": "total",
+              "number_format": "0"
+            },
+            {
+              "cell": "A14",
+              "value": "Occupied SF",
+              "role": "body"
+            },
+            {
+              "cell": "C14",
+              "formula": "=SUMIF(D5:D8,\"Occupied\",C5:C8)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A15",
+              "value": "Occupancy by count (percent)",
+              "role": "body"
+            },
+            {
+              "cell": "C15",
+              "formula": "=100*C13/C12",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "A16",
+              "value": "Occupancy by area (percent)",
+              "role": "body"
+            },
+            {
+              "cell": "C16",
+              "formula": "=100*C14/C10",
+              "role": "total",
+              "number_format": "0.00"
+            },
+            {
+              "cell": "A17",
+              "value": "Annualized contractual base rent (context only)",
+              "role": "body"
+            },
+            {
+              "cell": "C17",
+              "formula": "=E10*12",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A19",
+              "value": "Executed lease for premises 101 confirms $15,000 per month, expiry 2030-08-31, $30,000 security deposit; no amendment or renewal exercise notice is in the packet.",
+              "role": "note",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "name": "Underwriting",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 48,
+            "B": 18,
+            "C": 46
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Underwritten cash flow - supplied scenario, September 2026 forward",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Source: Property-and-Plan.pdf p2; live links to Assumptions",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Line",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "Underwritten",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "Basis",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "Gross potential base rent",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "formula": "=Assumptions!B15*Assumptions!B18",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C5",
+              "value": "GPR input times EGI multiplier",
+              "role": "note"
+            },
+            {
+              "cell": "A6",
+              "value": "Combined revenue loss (vacancy, concessions, bad debt)",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "formula": "=-B5*Assumptions!B16",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C6",
+              "value": "8.00% of underwritten GPR",
+              "role": "note"
+            },
+            {
+              "cell": "A7",
+              "value": "Other income / recoveries",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "formula": "=Assumptions!B17*Assumptions!B18",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C7",
+              "value": "Added after revenue loss",
+              "role": "note"
+            },
+            {
+              "cell": "A8",
+              "value": "Underwritten effective gross income (EGI)",
+              "role": "total"
+            },
+            {
+              "cell": "B8",
+              "formula": "=B5+B6+B7",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A10",
+              "value": "Real estate taxes",
+              "role": "body"
+            },
+            {
+              "cell": "B10",
+              "formula": "=Assumptions!B31",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A11",
+              "value": "Property insurance",
+              "role": "body"
+            },
+            {
+              "cell": "B11",
+              "formula": "=Assumptions!B32",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A12",
+              "value": "Utilities",
+              "role": "body"
+            },
+            {
+              "cell": "B12",
+              "formula": "=Assumptions!B33",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A13",
+              "value": "Repairs and maintenance",
+              "role": "body"
+            },
+            {
+              "cell": "B13",
+              "formula": "=Assumptions!B34",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A14",
+              "value": "Payroll / contract labor",
+              "role": "body"
+            },
+            {
+              "cell": "B14",
+              "formula": "=Assumptions!B35",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A15",
+              "value": "Administrative / legal",
+              "role": "body"
+            },
+            {
+              "cell": "B15",
+              "formula": "=Assumptions!B36",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A16",
+              "value": "Management fee (greater of T12 actual and 3.00% of EGI)",
+              "role": "body"
+            },
+            {
+              "cell": "B16",
+              "formula": "=MAX(Assumptions!B22,Assumptions!B21*B8)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A17",
+              "value": "Underwritten operating expenses before reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B17",
+              "formula": "=SUM(B10:B16)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A19",
+              "value": "Underwritten NOI before replacement reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B19",
+              "formula": "=B8-B17",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A20",
+              "value": "Replacement reserves (per SF times SF)",
+              "role": "body"
+            },
+            {
+              "cell": "B20",
+              "formula": "=Assumptions!B19*Assumptions!B20",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A21",
+              "value": "Underwritten NCF after replacement reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B21",
+              "formula": "=B19-B20",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A23",
+              "value": "Indicative capitalized value (NOI before reserves / cap rate)",
+              "role": "total"
+            },
+            {
+              "cell": "B23",
+              "formula": "=B19/Assumptions!B5",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A24",
+              "value": "Expense ratio (opex / EGI)",
+              "role": "body"
+            },
+            {
+              "cell": "B24",
+              "formula": "=B17/B8",
+              "role": "body",
+              "number_format": "0.0%"
+            }
+          ]
+        },
+        {
+          "name": "Loan Sizing",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 50,
+            "B": 18,
+            "C": 46
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Loan sizing - three constraints",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Source: Lender-Terms.pdf p1; unrounded intermediates",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Item",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "Value",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "Definition",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "Contract rate (current; first-year debt service)",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "formula": "=Assumptions!B9",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C5",
+              "value": "MAX(3.25% index, 4.00% floor) plus 2.75% spread",
+              "role": "note"
+            },
+            {
+              "cell": "A6",
+              "value": "Sizing rate (underwriting)",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "formula": "=Assumptions!B12",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C6",
+              "value": "Greater of contract rate and 7.25% floor plus increment",
+              "role": "note"
+            },
+            {
+              "cell": "A7",
+              "value": "Annual debt constant per $1 at sizing rate",
+              "role": "total"
+            },
+            {
+              "cell": "B7",
+              "formula": "=-PMT(B6/12,Assumptions!B13,1)*12",
+              "role": "total",
+              "number_format": "0.00000000"
+            },
+            {
+              "cell": "C7",
+              "value": "12 monthly payments, 300-month amortization",
+              "role": "note"
+            },
+            {
+              "cell": "A9",
+              "value": "LTV limit",
+              "role": "body"
+            },
+            {
+              "cell": "B9",
+              "formula": "=Assumptions!B23*Underwriting!B23",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C9",
+              "value": "60.00% times capitalized value",
+              "role": "note"
+            },
+            {
+              "cell": "A10",
+              "value": "DSCR limit",
+              "role": "body"
+            },
+            {
+              "cell": "B10",
+              "formula": "=Underwriting!B21/(Assumptions!B24*B7)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C10",
+              "value": "UW NCF divided by (1.30 times annual constant)",
+              "role": "note"
+            },
+            {
+              "cell": "A11",
+              "value": "Debt yield limit",
+              "role": "body"
+            },
+            {
+              "cell": "B11",
+              "formula": "=Underwriting!B21/Assumptions!B25",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C11",
+              "value": "UW NCF divided by 10.00%",
+              "role": "note"
+            },
+            {
+              "cell": "A12",
+              "value": "Maximum loan (lowest constraint)",
+              "role": "total"
+            },
+            {
+              "cell": "B12",
+              "formula": "=MIN(B9:B11)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A13",
+              "value": "Binding constraint",
+              "role": "total"
+            },
+            {
+              "cell": "B13",
+              "formula": "=IF(B12=B9,\"LTV\",IF(B12=B10,\"DSCR\",\"Debt yield\"))",
+              "role": "total"
+            },
+            {
+              "cell": "A15",
+              "value": "Sizing annual debt service (amortizing, sizing rate)",
+              "role": "total"
+            },
+            {
+              "cell": "B15",
+              "formula": "=B12*B7",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A16",
+              "value": "Sizing DSCR (UW NCF / sizing debt service)",
+              "role": "total"
+            },
+            {
+              "cell": "B16",
+              "formula": "=Underwriting!B21/B15",
+              "role": "total",
+              "number_format": "0.000"
+            },
+            {
+              "cell": "A17",
+              "value": "Sizing debt yield (UW NCF / maximum loan)",
+              "role": "total"
+            },
+            {
+              "cell": "B17",
+              "formula": "=Underwriting!B21/B12",
+              "role": "total",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "A18",
+              "value": "First-year contractual debt service (12-month IO at contract rate)",
+              "role": "total"
+            },
+            {
+              "cell": "B18",
+              "formula": "=IF(Assumptions!B14>=12,B12*B5,-PMT(B5/12,Assumptions!B13,B12)*12)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A19",
+              "value": "Memo: amortizing annual debt service at contract rate",
+              "role": "body"
+            },
+            {
+              "cell": "B19",
+              "formula": "=-PMT(B5/12,Assumptions!B13,B12)*12",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A20",
+              "value": "Memo: DSCR on first-year contractual (IO) debt service",
+              "role": "body"
+            },
+            {
+              "cell": "B20",
+              "formula": "=Underwriting!B21/B18",
+              "role": "body",
+              "number_format": "0.000"
+            },
+            {
+              "cell": "A21",
+              "value": "Memo: loan per rentable SF",
+              "role": "body"
+            },
+            {
+              "cell": "B21",
+              "formula": "=B12/Assumptions!B19",
+              "role": "body",
+              "number_format": "#,##0.00"
+            }
+          ]
+        },
+        {
+          "name": "Sources Uses",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 44,
+            "B": 18,
+            "C": 40
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Sources and uses at the maximum loan",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "Source: Property-and-Plan.pdf p1; Lender-Terms.pdf p1",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Sources",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "Amount",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "Reference",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "New first-mortgage loan proceeds",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "formula": "='Loan Sizing'!B12",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C5",
+              "value": "Loan Sizing!B12",
+              "role": "note"
+            },
+            {
+              "cell": "A6",
+              "value": "Borrower cash contribution (if required)",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "formula": "=MAX(0,-B14)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C6",
+              "value": "Cash-in only if proceeds are insufficient",
+              "role": "note"
+            },
+            {
+              "cell": "A7",
+              "value": "Total sources",
+              "role": "total"
+            },
+            {
+              "cell": "B7",
+              "formula": "=B5+B6",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A9",
+              "value": "Uses",
+              "role": "header"
+            },
+            {
+              "cell": "A10",
+              "value": "Existing debt payoff",
+              "role": "body"
+            },
+            {
+              "cell": "B10",
+              "formula": "=Assumptions!B27",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C10",
+              "value": "Property-and-Plan.pdf p1",
+              "role": "note"
+            },
+            {
+              "cell": "A11",
+              "value": "Origination fee (1.25% of principal)",
+              "role": "body"
+            },
+            {
+              "cell": "B11",
+              "formula": "=Assumptions!B26*B5",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C11",
+              "value": "Lender-Terms.pdf p1",
+              "role": "note"
+            },
+            {
+              "cell": "A12",
+              "value": "Fixed closing costs",
+              "role": "body"
+            },
+            {
+              "cell": "B12",
+              "formula": "=Assumptions!B28",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C12",
+              "value": "Property-and-Plan.pdf p1",
+              "role": "note"
+            },
+            {
+              "cell": "A13",
+              "value": "Total uses before distribution",
+              "role": "total"
+            },
+            {
+              "cell": "B13",
+              "formula": "=SUM(B10:B12)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A14",
+              "value": "Net cash to borrower (negative equals cash in)",
+              "role": "total"
+            },
+            {
+              "cell": "B14",
+              "formula": "=B5-B13",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A16",
+              "value": "No fee capitalization, interest reserve, holdback or earn-out is assumed (Lender-Terms.pdf p1).",
+              "role": "note",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "name": "Sensitivity",
+          "freeze_rows": 4,
+          "column_widths": {
+            "A": 46,
+            "B": 18,
+            "C": 18,
+            "D": 22,
+            "E": 18
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Sensitivity scenarios",
+              "role": "title"
+            },
+            {
+              "cell": "A2",
+              "value": "EGI -5% recomputes the management minimum; other operating expenses and reserves held constant (Property-and-Plan.pdf p2)",
+              "role": "note"
+            },
+            {
+              "cell": "A4",
+              "value": "Metric",
+              "role": "header"
+            },
+            {
+              "cell": "B4",
+              "value": "Base case",
+              "role": "header"
+            },
+            {
+              "cell": "C4",
+              "value": "EGI -5%",
+              "role": "header"
+            },
+            {
+              "cell": "D4",
+              "value": "EGI -5% and rate +100bps",
+              "role": "header"
+            },
+            {
+              "cell": "E4",
+              "value": "Cap rate +50bps",
+              "role": "header"
+            },
+            {
+              "cell": "A5",
+              "value": "EGI",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "formula": "=Underwriting!B8",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C5",
+              "formula": "=Underwriting!B8*0.95",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D5",
+              "formula": "=C5",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E5",
+              "formula": "=B5",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A6",
+              "value": "Management fee",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "formula": "=Underwriting!B16",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C6",
+              "formula": "=MAX(Assumptions!B22,Assumptions!B21*C5)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D6",
+              "formula": "=C6",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E6",
+              "formula": "=B6",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A7",
+              "value": "Other operating expenses (unchanged)",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "formula": "=Underwriting!B17-Underwriting!B16",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C7",
+              "formula": "=B7",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D7",
+              "formula": "=B7",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E7",
+              "formula": "=B7",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A8",
+              "value": "NOI before reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B8",
+              "formula": "=B5-B6-B7",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C8",
+              "formula": "=C5-C6-C7",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D8",
+              "formula": "=D5-D6-D7",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E8",
+              "formula": "=E5-E6-E7",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A9",
+              "value": "Replacement reserves",
+              "role": "body"
+            },
+            {
+              "cell": "B9",
+              "formula": "=Underwriting!B20",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C9",
+              "formula": "=B9",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D9",
+              "formula": "=B9",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E9",
+              "formula": "=B9",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A10",
+              "value": "NCF after reserves",
+              "role": "total"
+            },
+            {
+              "cell": "B10",
+              "formula": "=B8-B9",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C10",
+              "formula": "=C8-C9",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D10",
+              "formula": "=D8-D9",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E10",
+              "formula": "=E8-E9",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A11",
+              "value": "Cap rate used",
+              "role": "body"
+            },
+            {
+              "cell": "B11",
+              "formula": "=Assumptions!B5",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C11",
+              "formula": "=Assumptions!B5",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "D11",
+              "formula": "=Assumptions!B5",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "E11",
+              "formula": "=Assumptions!B5+0.005",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "A12",
+              "value": "Indicative value",
+              "role": "body"
+            },
+            {
+              "cell": "B12",
+              "formula": "=B8/B11",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C12",
+              "formula": "=C8/C11",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D12",
+              "formula": "=D8/D11",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E12",
+              "formula": "=E8/E11",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A13",
+              "value": "Sizing rate used",
+              "role": "body"
+            },
+            {
+              "cell": "B13",
+              "formula": "=Assumptions!B12",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "C13",
+              "formula": "=Assumptions!B12",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "D13",
+              "formula": "=Assumptions!B12+0.01",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "E13",
+              "formula": "=Assumptions!B12",
+              "role": "body",
+              "number_format": "0.00%"
+            },
+            {
+              "cell": "A14",
+              "value": "Annual debt constant",
+              "role": "body"
+            },
+            {
+              "cell": "B14",
+              "formula": "=-PMT(B13/12,Assumptions!B13,1)*12",
+              "role": "body",
+              "number_format": "0.00000000"
+            },
+            {
+              "cell": "C14",
+              "formula": "=-PMT(C13/12,Assumptions!B13,1)*12",
+              "role": "body",
+              "number_format": "0.00000000"
+            },
+            {
+              "cell": "D14",
+              "formula": "=-PMT(D13/12,Assumptions!B13,1)*12",
+              "role": "body",
+              "number_format": "0.00000000"
+            },
+            {
+              "cell": "E14",
+              "formula": "=-PMT(E13/12,Assumptions!B13,1)*12",
+              "role": "body",
+              "number_format": "0.00000000"
+            },
+            {
+              "cell": "A15",
+              "value": "LTV limit",
+              "role": "body"
+            },
+            {
+              "cell": "B15",
+              "formula": "=Assumptions!B23*B12",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C15",
+              "formula": "=Assumptions!B23*C12",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D15",
+              "formula": "=Assumptions!B23*D12",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E15",
+              "formula": "=Assumptions!B23*E12",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A16",
+              "value": "DSCR limit",
+              "role": "body"
+            },
+            {
+              "cell": "B16",
+              "formula": "=B10/(Assumptions!B24*B14)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C16",
+              "formula": "=C10/(Assumptions!B24*C14)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D16",
+              "formula": "=D10/(Assumptions!B24*D14)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E16",
+              "formula": "=E10/(Assumptions!B24*E14)",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A17",
+              "value": "Debt yield limit",
+              "role": "body"
+            },
+            {
+              "cell": "B17",
+              "formula": "=B10/Assumptions!B25",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C17",
+              "formula": "=C10/Assumptions!B25",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D17",
+              "formula": "=D10/Assumptions!B25",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E17",
+              "formula": "=E10/Assumptions!B25",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A18",
+              "value": "Maximum loan",
+              "role": "total"
+            },
+            {
+              "cell": "B18",
+              "formula": "=MIN(B15:B17)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C18",
+              "formula": "=MIN(C15:C17)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D18",
+              "formula": "=MIN(D15:D17)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E18",
+              "formula": "=MIN(E15:E17)",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A19",
+              "value": "Binding constraint",
+              "role": "total"
+            },
+            {
+              "cell": "B19",
+              "formula": "=IF(B18=B15,\"LTV\",IF(B18=B16,\"DSCR\",\"Debt yield\"))",
+              "role": "total"
+            },
+            {
+              "cell": "C19",
+              "formula": "=IF(C18=C15,\"LTV\",IF(C18=C16,\"DSCR\",\"Debt yield\"))",
+              "role": "total"
+            },
+            {
+              "cell": "D19",
+              "formula": "=IF(D18=D15,\"LTV\",IF(D18=D16,\"DSCR\",\"Debt yield\"))",
+              "role": "total"
+            },
+            {
+              "cell": "E19",
+              "formula": "=IF(E18=E15,\"LTV\",IF(E18=E16,\"DSCR\",\"Debt yield\"))",
+              "role": "total"
+            },
+            {
+              "cell": "A20",
+              "value": "Net cash to borrower (negative equals cash in)",
+              "role": "body"
+            },
+            {
+              "cell": "B20",
+              "formula": "=B18-Assumptions!B27-Assumptions!B26*B18-Assumptions!B28",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "C20",
+              "formula": "=C18-Assumptions!B27-Assumptions!B26*C18-Assumptions!B28",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "D20",
+              "formula": "=D18-Assumptions!B27-Assumptions!B26*D18-Assumptions!B28",
+              "role": "body",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "E20",
+              "formula": "=E18-Assumptions!B27-Assumptions!B26*E18-Assumptions!B28",
+              "role": "body",
+              "number_format": "#,##0"
+            }
+          ]
+        },
+        {
+          "name": "Input Output Map",
+          "column_widths": {
+            "A": 42,
+            "B": 26,
+            "C": 50
+          },
+          "cells": [
+            {
+              "cell": "A1",
+              "value": "Reviewer map - editable inputs and key outputs",
+              "role": "title"
+            },
+            {
+              "cell": "A3",
+              "value": "Editable input",
+              "role": "header"
+            },
+            {
+              "cell": "B3",
+              "value": "Location",
+              "role": "header"
+            },
+            {
+              "cell": "C3",
+              "value": "Note",
+              "role": "header"
+            },
+            {
+              "cell": "A4",
+              "value": "Cap rate",
+              "role": "body"
+            },
+            {
+              "cell": "B4",
+              "value": "Assumptions!B5",
+              "role": "body"
+            },
+            {
+              "cell": "C4",
+              "value": "Valuation cap rate; +50bps case in Sensitivity column E",
+              "role": "note"
+            },
+            {
+              "cell": "A5",
+              "value": "Sizing rate increment",
+              "role": "body"
+            },
+            {
+              "cell": "B5",
+              "value": "Assumptions!B11",
+              "role": "body"
+            },
+            {
+              "cell": "C5",
+              "value": "Enter 0.01 for +100bps; sizing rate computes at Assumptions!B12",
+              "role": "note"
+            },
+            {
+              "cell": "A6",
+              "value": "Gross potential base rent",
+              "role": "body"
+            },
+            {
+              "cell": "B6",
+              "value": "Assumptions!B15",
+              "role": "body"
+            },
+            {
+              "cell": "C6",
+              "value": "Drives underwritten EGI",
+              "role": "note"
+            },
+            {
+              "cell": "A7",
+              "value": "Other income / recoveries",
+              "role": "body"
+            },
+            {
+              "cell": "B7",
+              "value": "Assumptions!B17",
+              "role": "body"
+            },
+            {
+              "cell": "C7",
+              "value": "Added after revenue loss",
+              "role": "note"
+            },
+            {
+              "cell": "A8",
+              "value": "EGI multiplier",
+              "role": "body"
+            },
+            {
+              "cell": "B8",
+              "value": "Assumptions!B18",
+              "role": "body"
+            },
+            {
+              "cell": "C8",
+              "value": "Set 0.95 to scale EGI down 5%, loss % constant",
+              "role": "note"
+            },
+            {
+              "cell": "A9",
+              "value": "Revenue loss percentage",
+              "role": "body"
+            },
+            {
+              "cell": "B9",
+              "value": "Assumptions!B16",
+              "role": "body"
+            },
+            {
+              "cell": "A10",
+              "value": "Expense, reserve and loan term inputs",
+              "role": "body"
+            },
+            {
+              "cell": "B10",
+              "value": "Assumptions!B10:B36",
+              "role": "body"
+            },
+            {
+              "cell": "A12",
+              "value": "Key output",
+              "role": "header"
+            },
+            {
+              "cell": "B12",
+              "value": "Location",
+              "role": "header"
+            },
+            {
+              "cell": "C12",
+              "value": "Live value",
+              "role": "header"
+            },
+            {
+              "cell": "A13",
+              "value": "Underwritten NOI before reserves",
+              "role": "body"
+            },
+            {
+              "cell": "B13",
+              "value": "Underwriting!B19",
+              "role": "body"
+            },
+            {
+              "cell": "C13",
+              "formula": "=Underwriting!B19",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A14",
+              "value": "Underwritten NCF after reserves",
+              "role": "body"
+            },
+            {
+              "cell": "B14",
+              "value": "Underwriting!B21",
+              "role": "body"
+            },
+            {
+              "cell": "C14",
+              "formula": "=Underwriting!B21",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A15",
+              "value": "Capitalized value",
+              "role": "body"
+            },
+            {
+              "cell": "B15",
+              "value": "Underwriting!B23",
+              "role": "body"
+            },
+            {
+              "cell": "C15",
+              "formula": "=Underwriting!B23",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A16",
+              "value": "LTV limit",
+              "role": "body"
+            },
+            {
+              "cell": "B16",
+              "value": "Loan Sizing!B9",
+              "role": "body"
+            },
+            {
+              "cell": "C16",
+              "formula": "='Loan Sizing'!B9",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A17",
+              "value": "DSCR limit",
+              "role": "body"
+            },
+            {
+              "cell": "B17",
+              "value": "Loan Sizing!B10",
+              "role": "body"
+            },
+            {
+              "cell": "C17",
+              "formula": "='Loan Sizing'!B10",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A18",
+              "value": "Debt yield limit",
+              "role": "body"
+            },
+            {
+              "cell": "B18",
+              "value": "Loan Sizing!B11",
+              "role": "body"
+            },
+            {
+              "cell": "C18",
+              "formula": "='Loan Sizing'!B11",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A19",
+              "value": "Maximum loan",
+              "role": "body"
+            },
+            {
+              "cell": "B19",
+              "value": "Loan Sizing!B12",
+              "role": "body"
+            },
+            {
+              "cell": "C19",
+              "formula": "='Loan Sizing'!B12",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A20",
+              "value": "Binding constraint",
+              "role": "body"
+            },
+            {
+              "cell": "B20",
+              "value": "Loan Sizing!B13",
+              "role": "body"
+            },
+            {
+              "cell": "C20",
+              "formula": "='Loan Sizing'!B13",
+              "role": "total"
+            },
+            {
+              "cell": "A21",
+              "value": "First-year contractual debt service",
+              "role": "body"
+            },
+            {
+              "cell": "B21",
+              "value": "Loan Sizing!B18",
+              "role": "body"
+            },
+            {
+              "cell": "C21",
+              "formula": "='Loan Sizing'!B18",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A22",
+              "value": "Net cash to borrower",
+              "role": "body"
+            },
+            {
+              "cell": "B22",
+              "value": "Sources Uses!B14",
+              "role": "body"
+            },
+            {
+              "cell": "C22",
+              "formula": "='Sources Uses'!B14",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A23",
+              "value": "Stress NOI (EGI -5%)",
+              "role": "body"
+            },
+            {
+              "cell": "B23",
+              "value": "Sensitivity!C8",
+              "role": "body"
+            },
+            {
+              "cell": "C23",
+              "formula": "=Sensitivity!C8",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A24",
+              "value": "Stress maximum loan (EGI -5%, rate +100bps)",
+              "role": "body"
+            },
+            {
+              "cell": "B24",
+              "value": "Sensitivity!D18",
+              "role": "body"
+            },
+            {
+              "cell": "C24",
+              "formula": "=Sensitivity!D18",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A25",
+              "value": "T12 NOI before reserves",
+              "role": "body"
+            },
+            {
+              "cell": "B25",
+              "value": "Historical T12!B21",
+              "role": "body"
+            },
+            {
+              "cell": "C25",
+              "formula": "='Historical T12'!B21",
+              "role": "total",
+              "number_format": "#,##0"
+            },
+            {
+              "cell": "A26",
+              "value": "T12 NCF after reserves",
+              "role": "body"
+            },
+            {
+              "cell": "B26",
+              "value": "Historical T12!B23",
+              "role": "body"
+            },
+            {
+              "cell": "C26",
+              "formula": "='Historical T12'!B23",
+              "role": "total",
+              "number_format": "#,##0"
+            }
+          ]
+        }
+      ],
+      "input_map": {
+        "cap_rate": "Assumptions!B5",
+        "sizing_rate_increment": "Assumptions!B11",
+        "sizing_rate": "Assumptions!B12",
+        "egi_gross_potential_rent": "Assumptions!B15",
+        "egi_other_income": "Assumptions!B17",
+        "egi_multiplier": "Assumptions!B18"
+      },
+      "output_map": {
+        "maximum_loan": "Loan Sizing!B12",
+        "uw_noi_before_reserves": "Underwriting!B19",
+        "uw_ncf": "Underwriting!B21",
+        "capitalization_value": "Underwriting!B23",
+        "ltv_limit": "Loan Sizing!B9",
+        "dscr_limit": "Loan Sizing!B10",
+        "debt_yield_limit": "Loan Sizing!B11",
+        "binding_constraint": "Loan Sizing!B13",
+        "sizing_annual_debt_service": "Loan Sizing!B15",
+        "sizing_dscr": "Loan Sizing!B16",
+        "sizing_debt_yield": "Loan Sizing!B17",
+        "first_year_debt_service": "Loan Sizing!B18",
+        "cash_to_borrower": "Sources Uses!B14",
+        "stress_uw_noi": "Sensitivity!C8",
+        "stress_maximum_loan": "Sensitivity!D18",
+        "uw_egi": "Underwriting!B8",
+        "uw_management_fee": "Underwriting!B16",
+        "uw_operating_expenses": "Underwriting!B17",
+        "uw_reserves": "Underwriting!B20",
+        "t12_egi": "Historical T12!B10",
+        "t12_operating_expenses": "Historical T12!B19",
+        "t12_noi_before_reserves": "Historical T12!B21",
+        "t12_ncf": "Historical T12!B23",
+        "annual_debt_constant": "Loan Sizing!B7",
+        "contract_rate": "Loan Sizing!B5"
+      }
+    }
+  },
+  "result": {
+    "created": "artifacts/underwriting-v2.xlsx",
+    "bytes": 16167,
+    "inspection": {
+      "sheets": [
+        "Assumptions",
+        "Historical T12",
+        "Rent Roll",
+        "Underwriting",
+        "Loan Sizing",
+        "Sources Uses",
+        "Sensitivity",
+        "Input Output Map"
+      ],
+      "formula_count": 132,
+      "formula_errors": [],
+      "outputs": {
+        "maximum_loan": 6595637.1358295875,
+        "uw_noi_before_reserves": 760710,
+        "uw_ncf": 743710,
+        "capitalization_value": 11269777.777777776,
+        "ltv_limit": 6761866.666666665,
+        "dscr_limit": 6595637.1358295875,
+        "debt_yield_limit": 7437100,
+        "binding_constraint": "DSCR",
+        "sizing_annual_debt_service": 572084.6153846154,
+        "sizing_dscr": 1.3,
+        "sizing_debt_yield": 0.11275787079915782,
+        "first_year_debt_service": 445205.50666849717,
+        "cash_to_borrower": 2243191.671631718,
+        "stress_uw_noi": 711094.5,
+        "stress_maximum_loan": 5643126.333816406,
+        "uw_egi": 1023000,
+        "uw_management_fee": 30690,
+        "uw_operating_expenses": 262290,
+        "uw_reserves": 17000,
+        "t12_egi": 846000,
+        "t12_operating_expenses": 253200,
+        "t12_noi_before_reserves": 592800,
+        "t12_ncf": 575800,
+        "annual_debt_constant": 0.08673682369165987,
+        "contract_rate": 0.0675
+      }
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.576
+}

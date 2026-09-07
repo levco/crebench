@@ -1,0 +1,140 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_T8VNqAo19jG6GTcM0YBGcjP4",
+  "arguments_raw": "{\"steps\":[{\"name\":\"t12_egi\",\"expression\":\"744000 - 18000 - 2400 + 158400\"},{\"name\":\"t12_opex\",\"expression\":\"102000 + 26400 + 9600 + 19200 + 12000 + 16800 + 26400\"},{\"name\":\"t12_noi_before_reserves\",\"expression\":\"t12_egi - t12_opex\"},{\"name\":\"t12_reserves\",\"expression\":\"14400\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi_before_reserves - t12_reserves\"},{\"name\":\"uw_revenue_loss\",\"expression\":\"0.03 * 756000\"},{\"name\":\"uw_egi\",\"expression\":\"756000 - uw_revenue_loss + 162000\"},{\"name\":\"uw_management_fee\",\"expression\":\"max(26400, 0.03*uw_egi)\"},{\"name\":\"uw_opex\",\"expression\":\"108000 + 36000 + 9600 + 19200 + 12000 + 16800 + uw_management_fee\"},{\"name\":\"uw_noi_before_reserves\",\"expression\":\"uw_egi - uw_opex\"},{\"name\":\"uw_reserves\",\"expression\":\"0.20*72000\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi_before_reserves - uw_reserves\"},{\"name\":\"value\",\"expression\":\"uw_noi_before_reserves/0.065\"},{\"name\":\"ltv_limit\",\"expression\":\"0.60*value\"},{\"name\":\"monthly_rate\",\"expression\":\"0.065/12\"},{\"name\":\"annual_debt_constant\",\"expression\":\"abs(12*pmt(monthly_rate,360,1))\"},{\"name\":\"dscr_limit\",\"expression\":\"(uw_ncf/1.30)/annual_debt_constant\"},{\"name\":\"debt_yield_limit\",\"expression\":\"uw_ncf/0.095\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit, dscr_limit, debt_yield_limit)\"},{\"name\":\"sizing_annual_debt_service\",\"expression\":\"maximum_loan*annual_debt_constant\"},{\"name\":\"sizing_dscr\",\"expression\":\"uw_ncf/sizing_annual_debt_service\"},{\"name\":\"sizing_debt_yield\",\"expression\":\"uw_ncf/maximum_loan\"},{\"name\":\"first_year_debt_service\",\"expression\":\"0.061*maximum_loan\"},{\"name\":\"origination_fee\",\"expression\":\"0.01*maximum_loan\"},{\"name\":\"cash_to_borrower\",\"expression\":\"maximum_loan - 3600000 - origination_fee - 55000\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "t12_egi",
+        "expression": "744000 - 18000 - 2400 + 158400"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "102000 + 26400 + 9600 + 19200 + 12000 + 16800 + 26400"
+      },
+      {
+        "name": "t12_noi_before_reserves",
+        "expression": "t12_egi - t12_opex"
+      },
+      {
+        "name": "t12_reserves",
+        "expression": "14400"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi_before_reserves - t12_reserves"
+      },
+      {
+        "name": "uw_revenue_loss",
+        "expression": "0.03 * 756000"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "756000 - uw_revenue_loss + 162000"
+      },
+      {
+        "name": "uw_management_fee",
+        "expression": "max(26400, 0.03*uw_egi)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "108000 + 36000 + 9600 + 19200 + 12000 + 16800 + uw_management_fee"
+      },
+      {
+        "name": "uw_noi_before_reserves",
+        "expression": "uw_egi - uw_opex"
+      },
+      {
+        "name": "uw_reserves",
+        "expression": "0.20*72000"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi_before_reserves - uw_reserves"
+      },
+      {
+        "name": "value",
+        "expression": "uw_noi_before_reserves/0.065"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.60*value"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "0.065/12"
+      },
+      {
+        "name": "annual_debt_constant",
+        "expression": "abs(12*pmt(monthly_rate,360,1))"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(uw_ncf/1.30)/annual_debt_constant"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "uw_ncf/0.095"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit, dscr_limit, debt_yield_limit)"
+      },
+      {
+        "name": "sizing_annual_debt_service",
+        "expression": "maximum_loan*annual_debt_constant"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "uw_ncf/sizing_annual_debt_service"
+      },
+      {
+        "name": "sizing_debt_yield",
+        "expression": "uw_ncf/maximum_loan"
+      },
+      {
+        "name": "first_year_debt_service",
+        "expression": "0.061*maximum_loan"
+      },
+      {
+        "name": "origination_fee",
+        "expression": "0.01*maximum_loan"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "maximum_loan - 3600000 - origination_fee - 55000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "t12_egi": 882000,
+      "t12_opex": 212400,
+      "t12_noi_before_reserves": 669600,
+      "t12_reserves": 14400,
+      "t12_ncf": 655200,
+      "uw_revenue_loss": 22680.0,
+      "uw_egi": 895320.0,
+      "uw_management_fee": 26859.6,
+      "uw_opex": 228459.6,
+      "uw_noi_before_reserves": 666860.4,
+      "uw_reserves": 14400.0,
+      "uw_ncf": 652460.4,
+      "value": 10259390.76923077,
+      "ltv_limit": 6155634.461538462,
+      "monthly_rate": 0.005416666666666667,
+      "annual_debt_constant": 0.07584816281915584,
+      "dscr_limit": 6617070.166633751,
+      "debt_yield_limit": 6868004.2105263155,
+      "maximum_loan": 6155634.461538462,
+      "sizing_annual_debt_service": 466893.5648939759,
+      "sizing_dscr": 1.3974499737390114,
+      "sizing_debt_yield": 0.10599401313978157,
+      "first_year_debt_service": 375493.70215384616,
+      "origination_fee": 61556.34461538462,
+      "cash_to_borrower": 2439078.1169230775
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

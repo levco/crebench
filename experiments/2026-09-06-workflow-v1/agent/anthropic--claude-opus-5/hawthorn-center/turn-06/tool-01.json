@@ -1,0 +1,115 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01UTk4ZdJBWrPkffUY2YRQr1",
+  "arguments_raw": "{\"steps\":[{\"name\":\"max_loan\",\"expression\":\"6261936.607626719\"},{\"name\":\"const\",\"expression\":\"-pmt(0.0635/12,300,1)*12\"},{\"name\":\"sizing_ds\",\"expression\":\"max_loan*const\"},{\"name\":\"sizing_dscr\",\"expression\":\"625440/sizing_ds\"},{\"name\":\"sizing_dy\",\"expression\":\"629760/max_loan\"},{\"name\":\"first_year_ds\",\"expression\":\"sizing_ds\"},{\"name\":\"cash_to_borrower\",\"expression\":\"max_loan-4200000-0.008*max_loan-52000\"},{\"name\":\"stress_egi\",\"expression\":\"921000*0.95\"},{\"name\":\"stress_mgmt\",\"expression\":\"max(18000,0.04*stress_egi)\"},{\"name\":\"stress_opex\",\"expression\":\"120000+34800+21600+36000+24000+18000+stress_mgmt\"},{\"name\":\"stress_noi\",\"expression\":\"stress_egi-stress_opex\"},{\"name\":\"stress_ncf\",\"expression\":\"stress_noi-4320\"},{\"name\":\"stress_value\",\"expression\":\"stress_noi/0.0625\"},{\"name\":\"stress_ltv\",\"expression\":\"0.625*stress_value\"},{\"name\":\"stress_const\",\"expression\":\"-pmt(0.0735/12,300,1)*12\"},{\"name\":\"stress_dscr_limit\",\"expression\":\"(stress_ncf/1.25)/stress_const\"},{\"name\":\"stress_dy_limit\",\"expression\":\"stress_noi/0.09\"},{\"name\":\"stress_max\",\"expression\":\"min(stress_ltv,stress_dscr_limit,stress_dy_limit)\"},{\"name\":\"cap50_value\",\"expression\":\"629760/0.0675\"},{\"name\":\"cap50_ltv\",\"expression\":\"0.625*cap50_value\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "max_loan",
+        "expression": "6261936.607626719"
+      },
+      {
+        "name": "const",
+        "expression": "-pmt(0.0635/12,300,1)*12"
+      },
+      {
+        "name": "sizing_ds",
+        "expression": "max_loan*const"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "625440/sizing_ds"
+      },
+      {
+        "name": "sizing_dy",
+        "expression": "629760/max_loan"
+      },
+      {
+        "name": "first_year_ds",
+        "expression": "sizing_ds"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "max_loan-4200000-0.008*max_loan-52000"
+      },
+      {
+        "name": "stress_egi",
+        "expression": "921000*0.95"
+      },
+      {
+        "name": "stress_mgmt",
+        "expression": "max(18000,0.04*stress_egi)"
+      },
+      {
+        "name": "stress_opex",
+        "expression": "120000+34800+21600+36000+24000+18000+stress_mgmt"
+      },
+      {
+        "name": "stress_noi",
+        "expression": "stress_egi-stress_opex"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "stress_noi-4320"
+      },
+      {
+        "name": "stress_value",
+        "expression": "stress_noi/0.0625"
+      },
+      {
+        "name": "stress_ltv",
+        "expression": "0.625*stress_value"
+      },
+      {
+        "name": "stress_const",
+        "expression": "-pmt(0.0735/12,300,1)*12"
+      },
+      {
+        "name": "stress_dscr_limit",
+        "expression": "(stress_ncf/1.25)/stress_const"
+      },
+      {
+        "name": "stress_dy_limit",
+        "expression": "stress_noi/0.09"
+      },
+      {
+        "name": "stress_max",
+        "expression": "min(stress_ltv,stress_dscr_limit,stress_dy_limit)"
+      },
+      {
+        "name": "cap50_value",
+        "expression": "629760/0.0675"
+      },
+      {
+        "name": "cap50_ltv",
+        "expression": "0.625*cap50_value"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "max_loan": 6261936.607626719,
+      "const": 0.07990371531238384,
+      "sizing_ds": 500352.0,
+      "sizing_dscr": 1.25,
+      "sizing_dy": 0.10056952656355295,
+      "first_year_ds": 500352.0,
+      "cash_to_borrower": 1959841.1147657055,
+      "stress_egi": 874950.0,
+      "stress_mgmt": 34998.0,
+      "stress_opex": 289398.0,
+      "stress_noi": 585552.0,
+      "stress_ncf": 581232.0,
+      "stress_value": 9368832.0,
+      "stress_ltv": 5855520.0,
+      "stress_const": 0.08751143765366858,
+      "stress_dscr_limit": 5313426.592763869,
+      "stress_dy_limit": 6506133.333333334,
+      "stress_max": 5313426.592763869,
+      "cap50_value": 9329777.777777778,
+      "cap50_ltv": 5831111.111111111
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

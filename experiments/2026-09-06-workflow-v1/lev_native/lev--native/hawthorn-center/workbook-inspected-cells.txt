@@ -1,0 +1,106 @@
+Instructions | A1=Hawthorn Center | Refinance Underwriting Model
+Instructions | A2=Prepared: | B2=2026-09-01
+Instructions | A3=As-of date: | B3=2026-08-31
+Instructions | A4=Purpose: | B4=First-mortgage cash-out refinance sizing (internal review)
+Instructions | A5=Source packet: | B5=Property-and-Plan.pdf, Rent-Roll.xlsx, T12-Statement.pdf, Lease-File.pdf, Lender-Terms.pdf
+Instructions | A7=How to use this workbook
+Instructions | A8=Editable inputs | B8=Yellow-filled cells with blue text on the Assumptions tab. Change any and every dependent calculation recalculates.
+Instructions | A9=Recalculate | B9=The model uses formulas, not baked values. Open in Excel/LibreOffice and press F9 if needed.
+Instructions | A10=Never edit | B10=Black-text formulas and green-text cross-sheet links. Historical T12 numbers on the T12 tab are hardcoded from the source PDF and marked as such.
+Instructions | A11=Sensitivities | B11=The Sensitivity tab uses the same formula engine driven by scenario inputs on Assumptions.
+Instructions | A13=Location map — key inputs and outputs
+Instructions | A14=Item | B14=Sheet | C14=Cell
+Instructions | A15=Cap rate (input) | B15=Assumptions | C15=B26
+Instructions | A16=Sizing rate (calc) | B16=Assumptions | C16=B25
+Instructions | A17=Contract rate (input) | B17=Assumptions | C17=B24
+Instructions | A18=Amortization years (input) | B18=Assumptions | C18=B27
+Instructions | A19=LTV cap (input) | B19=Assumptions | C19=B29
+Instructions | A20=DSCR floor (input) | B20=Assumptions | C20=B30
+Instructions | A21=Debt yield floor (input) | B21=Assumptions | C21=B31
+Instructions | A22=Origination fee % (input) | B22=Assumptions | C22=B32
+Instructions | A23=UW GPR (input) | B23=Assumptions | C23=B7
+Instructions | A24=UW combined revenue loss % (input) | B24=Assumptions | C24=B8
+Instructions | A25=UW Other income (input) | B25=Assumptions | C25=B9
+Instructions | A26=EGI (calculated) | B26=Assumptions | C26=B10
+Instructions | A27=UW NOI before reserves (calc) | B27=Assumptions | C27=B20
+Instructions | A28=UW NCF after reserves (calc) | B28=Assumptions | C28=B22
+Instructions | A29=Indicative value (calc) | B29=Loan Sizing | C29=B7
+Instructions | A30=Annual debt constant (calc) | B30=Loan Sizing | C30=B9
+Instructions | A31=LTV constraint (calc) | B31=Loan Sizing | C31=B12
+Instructions | A32=DSCR constraint (calc) | B32=Loan Sizing | C32=B13
+Instructions | A33=Debt yield constraint (calc) | B33=Loan Sizing | C33=B14
+Instructions | A34=MAXIMUM LOAN (calc) | B34=Loan Sizing | C34=B16
+Instructions | A35=Binding constraint (calc) | B35=Loan Sizing | C35=B17
+Instructions | A36=First-year debt service (calc) | B36=Loan Sizing | C36=B20
+Instructions | A37=Cash to borrower (calc) | B37=Sources & Uses | C37=B14
+Instructions | A38=Combined downside — Max loan | B38=Sensitivity | C38=B14
+Instructions | A39=Cap rate +50bps — Max loan | B39=Sensitivity | C39=C14
+Instructions | A41=Legend
+Instructions | A42=Blue text + yellow fill | B42=Editable input
+Instructions | A43=Black text | B43=Formula (do not overwrite)
+Instructions | A44=Green text | B44=Link to another sheet
+T12 | A1=Hawthorn Center | T12 Sep-2025 through Aug-2026 (source: T12-Statement.pdf)
+T12 | A3=Account | B3=Sep-25 | C3=Oct-25 | D3=Nov-25 | E3=Dec-25 | F3=Jan-26 | G3=Feb-26 | H3=Mar-26 | I3=Apr-26 | J3=May-26 | K3=Jun-26 | L3=Jul-26 | M3=Aug-26 | N3=Annual (formula) | O3=Annual (source)
+T12 | A4=Gross potential base rent | B4=59502 | C4=60768 | D4=62034 | E4=62667 | F4=63933 | G4=65199 | H4=65832 | I4=67098 | J4=65199 | K4=63933 | L4=62034 | M4=61401 | N4==SUM(B4:M4) | O4=759600
+T12 | A5=Vacancy loss | B5=-3264 | C5=-3332 | D5=-3366 | E5=-3434 | F5=-3502 | G5=-3536 | H5=-3604 | I5=-3502 | J5=-3434 | K5=-3332 | L5=-3298 | M5=-3196 | N5==SUM(B5:M5) | O5=-40800
+T12 | A6=Concessions | B6=-1862 | C6=-1881 | D6=-1919 | E6=-1957 | F6=-1976 | G6=-2014 | H6=-1957 | I6=-1919 | J6=-1862 | K6=-1843 | L6=-1786 | M6=-1824 | N6==SUM(B6:M6) | O6=-22800
+T12 | A7=Bad debt | B7=-495 | C7=-505 | D7=-515 | E7=-520 | F7=-530 | G7=-515 | H7=-505 | I7=-490 | J7=-485 | K7=-470 | L7=-480 | M7=-490 | N7==SUM(B7:M7) | O7=-6000
+T12 | A8=Other income / recoveries | B8=14847 | C8=15141 | D8=15288 | E8=15582 | F8=15141 | G8=14847 | H8=14406 | I8=14259 | J8=13818 | K8=14112 | L8=14406 | M8=14553 | N8==SUM(B8:M8) | O8=176400
+T12 | A9=Real estate taxes | B9=9785 | C9=9880 | D9=10070 | E9=9785 | F9=9595 | G9=9310 | H9=9215 | I9=8930 | J9=9120 | K9=9310 | L9=9405 | M9=9595 | N9==SUM(B9:M9) | O9=114000
+T12 | A10=Property insurance | B10=2808 | C10=2862 | D10=2781 | E10=2727 | F10=2646 | G10=2619 | H10=2538 | I10=2592 | J10=2646 | K10=2673 | L10=2727 | M10=2781 | N10==SUM(B10:M10) | O10=32400
+T12 | A11=Utilities | B11=1908 | C11=1854 | D11=1818 | E11=1764 | F11=1746 | G11=1692 | H11=1728 | I11=1764 | J11=1782 | K11=1818 | L11=1854 | M11=1872 | N11==SUM(B11:M11) | O11=21600
+T12 | A12=Repairs and maintenance | B12=3090 | C12=3030 | D12=2940 | E12=2910 | F12=2820 | G12=2880 | H12=2940 | I12=2970 | J12=3030 | K12=3090 | L12=3120 | M12=3180 | N12==SUM(B12:M12) | O12=36000
+T12 | A13=Payroll / contract labor | B13=2020 | C13=1960 | D13=1940 | E13=1880 | F13=1920 | G13=1960 | H13=1980 | I13=2020 | J13=2060 | K13=2080 | L13=2120 | M13=2060 | N13==SUM(B13:M13) | O13=24000
+T12 | A14=Administrative / legal | B14=1470 | C14=1455 | D14=1410 | E14=1440 | F14=1470 | G14=1485 | H14=1515 | I14=1545 | J14=1560 | K14=1590 | L14=1545 | M14=1515 | N14==SUM(B14:M14) | O14=18000
+T12 | A15=Management fee | B15=1455 | C15=1410 | D15=1440 | E15=1470 | F15=1485 | G15=1515 | H15=1545 | I15=1560 | J15=1590 | K15=1545 | L15=1515 | M15=1470 | N15==SUM(B15:M15) | O15=18000
+T12 | A16=Replacement reserves (below NOI) | B16=902 | C16=922 | D16=941 | E16=950 | F16=970 | G16=989 | H16=998 | I16=1018 | J16=989 | K16=970 | L16=941 | M16=930 | N16==SUM(B16:M16) | O16=11520
+T12 | A17=Capital improvements (below cash flow) | B17=5920 | C17=6043 | D17=6105 | E17=6228 | F17=6352 | G17=6413 | H17=6537 | I17=6352 | J17=6228 | K17=6043 | L17=5982 | M17=5797 | N17==SUM(B17:M17) | O17=74000
+T12 | A18=Loan principal and interest (below CF) | B18=24010 | C18=24255 | D18=24745 | E18=25235 | F18=25480 | G18=25970 | H18=25235 | I18=24745 | J18=24010 | K18=23765 | L18=23030 | M18=23520 | N18==SUM(B18:M18) | O18=294000
+T12 | A19=Depreciation (noncash) | B19=14850 | C19=15150 | D19=15450 | E19=15600 | F19=15900 | G19=15450 | H19=15150 | I19=14700 | J19=14550 | K19=14100 | L19=14400 | M19=14700 | N19==SUM(B19:M19) | O19=180000
+T12 | A21=Reconciled T12 (calculated, based on 'Annual (source)')
+T12 | A22=t12_gpr | B22==O4
+T12 | A23=t12_revenue_loss (vac+conc+bad) | B23==O5+O6+O7
+T12 | A24=t12_other_income | B24==O8
+T12 | A25=t12_egi | B25==O4+O5+O6+O7+O8 | C25=EGI = GPR + vac + conc + bad + other (vac/conc/bad are negative)
+T12 | A26=t12_operating_expenses | B26==O9+O10+O11+O12+O13+O14+O15 | C26=Excludes reserves, capex, debt, depreciation
+T12 | A27=t12_noi_before_reserves | B27==O4+O5+O6+O7+O8-(O9+O10+O11+O12+O13+O14+O15)
+T12 | A28=t12_reserves | B28==O16
+T12 | A29=t12_ncf | B29==O4+O5+O6+O7+O8-(O9+O10+O11+O12+O13+O14+O15)-O16
+Assumptions | A1=Underwriting Assumptions — inputs are yellow-fill / blue-text
+Assumptions | A3=Property basics
+Assumptions | A4=Total rentable SF (from Rent Roll) | B4=='Rent Roll'!C14 | C4=Green = link. Source: Rent Roll tab row-total
+Assumptions | A5=As-of date | B5=2026-08-31
+Assumptions | A6=Underwriting revenue (from Property-and-Plan.pdf, page 2)
+Assumptions | A7=UW GPR (annual, supplied scenario) | B7=780000 | C7=Plan: $780,000 annual; not inferred from T12
+Assumptions | A8=Combined revenue loss % (vac+conc+bad) | B8=0.05 | C8=Plan: 5.00% of UW GPR
+Assumptions | A9=Other income / recoveries (annual) | B9=180000 | C9=Plan: $180,000; add after revenue loss
+Assumptions | A10=UW EGI (calc) | B10==B7-B7*B8+B9 | C10=GPR − loss + other
+Assumptions | A11=Underwriting operating expenses (annual)
+Assumptions | A12=Real estate taxes | B12=120000 | C12=Plan: $120,000
+Assumptions | A13=Property insurance | B13=34800 | C13=Plan: fictional insurer renewal 2026-08-25, $34,800
+Assumptions | A14=Utilities (T12 actual) | B14==T12!O11
+Assumptions | A15=Repairs & maintenance (T12 actual; no removal) | B15==T12!O12
+Assumptions | A16=Payroll / contract labor (T12) | B16==T12!O13
+Assumptions | A17=Administrative / legal (T12) | B17==T12!O14
+Assumptions | A18=T12 management fee (for max()) | B18==T12!O15
+Assumptions | A19=UW management fee = MAX(T12, 4% × EGI) | B19==MAX(B18,0.04*B10) | C19=Lender rule: greater of T12 or 4.00% of UW EGI
+Assumptions | A20=UW NOI before reserves (calc) | B20==B10-(B12+B13+B14+B15+B16+B17+B19)
+Assumptions | A21=UW replacement reserves ($0.15/SF/yr) | B21==0.15*B4 | C21=Plan: deduct after NOI
+Assumptions | A22=UW NCF after reserves (calc) | B22==B20-B21
+Assumptions | A23=Lender terms (Lender-Terms.pdf)
+Assumptions | A24=Contract rate (annual) | B24=0.0635 | C24=Term sheet: 6.35% fixed
+Assumptions | A25=Sizing rate = MAX(contract, 6.35% floor) | B25==MAX(B24,0.0635)
+Assumptions | A26=Cap rate (valuation) | B26=0.0625 | C26=Term sheet: 6.25%
+Assumptions | A27=Amortization (years) | B27=25 | C27=Term sheet: 25 years, monthly
+Assumptions | A28=IO months | B28=0 | C28=Term sheet: 0
+Assumptions | A29=LTV cap | B29=0.625 | C29=Term sheet: 62.50%
+Assumptions | A30=DSCR minimum | B30=1.25 | C30=NCF after reserves / annual amortizing DS at sizing rate
+Assumptions | A31=Debt yield minimum | B31=0.09 | C31=Numerator: NOI before reserves
+Assumptions | A32=Origination fee % | B32=0.008 | C32=0.80% of actual initial principal
+Assumptions | A33=Transaction context (Property-and-Plan.pdf, page 1)
+Assumptions | A34=Existing debt payoff | B34=4200000
+Assumptions | A35=Fixed closing costs | B35=52000
+Assumptions | A36=Sensitivity levers (used on Sensitivity tab)
+Assumptions | A37=Downside — EGI haircut | B37=-0.05 | C37=Plan: reduce total UW EGI by 5%
+Assumptions | A38=Downside — sizing rate delta (bps) | B38=100 | C38=Plan: +100 bps in combined downside
+Assumptions | A39=Cap rate sensitivity — delta (bps) | B39=50 | C39=Plan: separate +50bps cap-rate sensitivity

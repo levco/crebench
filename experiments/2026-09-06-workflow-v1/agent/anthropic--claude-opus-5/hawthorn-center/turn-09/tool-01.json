@@ -1,0 +1,486 @@
+{
+  "name": "create_memo",
+  "call_id": "toolu_01LqnuBEYWqoiqzTmysgPBE7",
+  "arguments_raw": "{\"title\":\"Hawthorn Center | Refinance Analysis and Financing Memorandum\",\"subtitle\":\"Internal review draft | As of August 31, 2026 | Fictional evaluation packet | Not a credit commitment or legal opinion\",\"sections\":[{\"heading\":\"Purpose and Scope\",\"paragraphs\":[\"This memorandum supports internal review of a proposed first-mortgage refinance of Hawthorn Center, a retail property described in the supplied packet as located at 3200 Hawthorn Bench Road, Greenville, SC 29607, owned by Hawthorn Center Owner LLC. All parties, addresses and figures are fictional and originate solely in the five delivered documents: Lease-File.pdf, Lender-Terms.pdf, Property-and-Plan.pdf, Rent-Roll.xlsx and T12-Statement.pdf. No appraisal, environmental report, market comparables, sponsor track record or completed credit approval was supplied, and none has been assumed or researched.\",\"Three cash-flow bases are kept strictly separate throughout: (1) historical trailing twelve months, September 2025 through August 2026, from the T12 statement; (2) current contractual rent and occupancy as of August 31, 2026, from the rent roll reconciled to the executed lease; and (3) the supplied forward underwriting scenario for September 2026 forward, which is the sponsor/plan scenario and not a lender-approved forecast.\",\"Accompanying this memorandum is a live Excel workbook (underwriting-v2.xlsx) with editable assumptions, historical and underwritten sections separated, loan sizing, sources and uses, and sensitivity outputs.\"],\"table\":null},{\"heading\":\"Financing Decision and Recommendation\",\"paragraphs\":[\"Recommendation: proceed to full underwriting on an indicative first-mortgage amount of $6,261,937, which is the DSCR-constrained maximum under the indicative terms. Sizing is binding at the 1.25x DSCR test, with modest headroom under the 62.50% LTV test ($6,297,600) and substantial headroom under the 9.00% debt-yield test ($6,997,333). At the maximum loan the debt yield is 10.06% and the implied LTV is 62.15%.\",\"Proceeds fund the $4,200,000 existing debt payoff, a $50,096 origination fee (0.80% of principal) and $52,000 of fixed closing costs, leaving approximately $1,959,841 of cash out to the borrower. The cash-out objective in the property plan is therefore achievable on the supplied scenario without a cash-in requirement.\",\"The recommendation is conditional. It rests on the supplied EGI scenario ($921,000) rather than on a trailing-twelve-month run rate: T12 NOI before reserves was $602,400 versus $629,760 underwritten, a 4.5% forward uplift driven by a scenario gross potential rent of $780,000 against $759,600 actual. Because sizing binds on DSCR at exactly 1.25x, there is no cushion for adverse revenue or rate movement; the combined downside case (EGI -5% and sizing rate +100 bps) reduces the maximum loan to $5,313,427, a $948,510 reduction that would leave roughly $1.0 million of cash out.\"],\"table\":{\"headers\":[\"Metric\",\"Value\",\"Basis\"],\"rows\":[[\"Underwritten NOI before reserves\",\"$629,760\",\"Sep-2026 forward scenario\"],[\"Underwritten NCF after reserves\",\"$625,440\",\"After $4,320 reserves\"],[\"Indicative value\",\"$10,076,160\",\"NOI before reserves / 6.25%\"],[\"Maximum loan\",\"$6,261,937\",\"Minimum of three tests\"],[\"Binding constraint\",\"DSCR\",\"1.25x on NCF\"],[\"Sizing / first-year debt service\",\"$500,352\",\"6.35%, 25-yr amortization, 0 months IO\"],[\"Debt yield at maximum loan\",\"10.06%\",\"NOI before reserves / loan\"],[\"Implied LTV at maximum loan\",\"62.15%\",\"Loan / indicative value\"],[\"Net cash to borrower\",\"$1,959,841\",\"Cash out\"]]}},{\"heading\":\"Historical Performance (T12: September 2025 - August 2026)\",\"paragraphs\":[\"The trailing twelve months are actual cash accounting per T12-Statement.pdf. Replacement reserves, capital improvements, existing loan principal and interest, and depreciation are presented below operating income and are excluded from operating expense. The property plan warns that the accounting package may label cash flow after reserves as \\\"property NOI\\\"; this memorandum reports NOI before reserves and NCF after reserves separately and does not treat any subtotal as an additional expense.\"],\"table\":{\"headers\":[\"T12 line (Sep-2025 to Aug-2026)\",\"Amount\",\"Source\"],\"rows\":[[\"Gross potential base rent\",\"$759,600\",\"T12 p.2 Annual\"],[\"Vacancy loss\",\"($40,800)\",\"T12 p.2 Annual\"],[\"Concessions\",\"($22,800)\",\"T12 p.2 Annual\"],[\"Bad debt\",\"($6,000)\",\"T12 p.2 Annual\"],[\"Other income / recoveries\",\"$176,400\",\"T12 p.2 Annual\"],[\"T12 EGI\",\"$866,400\",\"Sum of above\"],[\"Operating expenses (7 lines, excl. reserves)\",\"$264,000\",\"T12 p.2 Annual\"],[\"T12 NOI before reserves\",\"$602,400\",\"EGI less opex\"],[\"Replacement reserves (below NOI)\",\"$11,520\",\"T12 p.2 Annual\"],[\"T12 NCF after reserves\",\"$590,880\",\"NOI less reserves\"],[\"Memo: capital improvements\",\"$74,000\",\"Below cash flow\"],[\"Memo: existing loan P&I\",\"$294,000\",\"Below cash flow\"],[\"Memo: depreciation (noncash)\",\"$180,000\",\"Noncash\"]]}},{\"heading\":\"Current Contractual Rent, Occupancy and Tenancy\",\"paragraphs\":[\"The rent roll dated August 31, 2026 shows 10 suites totaling 28,800 rentable square feet, of which 9 suites and 27,200 square feet are occupied: 90.00% occupancy by count and 94.44% by area. Printed monthly contractual base rent is $60,000 ($720,000 annualized), and after reconciliation to the executed lease evidence the effective monthly contractual base rent is unchanged at $60,000. Suite 110 (1,600 SF) is vacant; its $3,400 market monthly rent is contextual only and is not collected income, so it is excluded from contractual rent.\",\"Lease rollover is staggered: suite 106 (3,300 SF, $7,400/month) expires 2027-08-31 within the 60-month loan term, followed by suites 102 and 107 in 2028 and suites 101, 103 and 108 in 2029. Roughly 44% of occupied area rolls before the 2031 maturity of the longest lease, and the 2027 and 2028 expirations occur during the loan term. Rent roll market rents equal contractual rents for every occupied suite, indicating no embedded mark-to-market gain on renewal in the supplied data.\",\"Premises 101 (Tenant A LLC, 1,400 SF) is documented by an executed lease extract signed August 15, 2025 with a September 1, 2025 commencement. Authoritative current terms are base rent of $3,000 per month, expiry 2029-08-31, and a $6,000 security deposit, which is not prepaid rent or recurring income and is excluded from income. No base-rent increase applies before September 1, 2027. The rent roll agrees with the lease on rent and expiry, so no amendment-driven adjustment to contractual rent is required.\",\"The 101 lease contains one conditional renewal option requiring no uncured default and written notice at least 180 days before expiration. The packet contains no exercise notice, landlord acknowledgment or amendment exercising the option. The renewal option is therefore treated as unexercised and the current expiry is not extended.\",\"Tenant credit, sales, co-tenancy and recovery-structure detail were not supplied; nine unrelated single-asset tenant entities are presented without financial statements, so tenant credit quality is unknown.\"],\"table\":{\"headers\":[\"Occupancy / rent metric\",\"Value\"],\"rows\":[[\"Suites\",\"10\"],[\"Occupied suites\",\"9\"],[\"Total rentable SF\",\"28,800\"],[\"Occupied SF\",\"27,200\"],[\"Occupancy by count\",\"90.00%\"],[\"Occupancy by area\",\"94.44%\"],[\"Monthly base rent as printed\",\"$60,000\"],[\"Effective monthly base rent after lease reconciliation\",\"$60,000\"],[\"Annualized contractual base rent (point in time)\",\"$720,000\"]]}},{\"heading\":\"Underwritten Scenario (September 2026 Forward)\",\"paragraphs\":[\"The plan supplies gross potential base rent of $780,000, a 5.00% combined revenue loss allowance for vacancy, concessions and bad debt, and $180,000 of other income added after the loss deduction, producing underwritten EGI of $921,000. The management fee is the greater of the T12 actual $18,000 and 4.00% of underwritten EGI, so 4.00% of $921,000, or $36,840, governs. Replacement reserves are $0.15 per rentable square foot on 28,800 SF, or $4,320, deducted after NOI. The scenario is not reconciled to, and should not be forced to equal, the point-in-time annualized rent roll of $720,000; the difference reflects the plan's forward assumptions on the vacant suite and loss factors and is a scenario risk rather than a contractual fact.\"],\"table\":{\"headers\":[\"Underwritten line (annual)\",\"Amount\",\"Treatment\"],\"rows\":[[\"Gross potential base rent\",\"$780,000\",\"Plan p.2 scenario\"],[\"Combined revenue loss at 5.00%\",\"($39,000)\",\"Vacancy, concessions, bad debt\"],[\"Other income / recoveries\",\"$180,000\",\"Added after loss\"],[\"Underwritten EGI\",\"$921,000\",\"Sum of above\"],[\"Real estate taxes\",\"$120,000\",\"Plan step-up from $114,000 T12\"],[\"Property insurance\",\"$34,800\",\"Plan-stated renewal allowance\"],[\"Utilities\",\"$21,600\",\"T12 actual\"],[\"Repairs and maintenance\",\"$36,000\",\"T12 actual; $0 one-time removed\"],[\"Payroll / contract labor\",\"$24,000\",\"T12 actual\"],[\"Administrative / legal\",\"$18,000\",\"T12 actual\"],[\"Management fee\",\"$36,840\",\"Greater of $18,000 and 4.00% of EGI\"],[\"Underwritten operating expenses before reserves\",\"$291,240\",\"31.6% of EGI\"],[\"Underwritten NOI before reserves\",\"$629,760\",\"EGI less opex\"],[\"Replacement reserves\",\"$4,320\",\"$0.15/SF x 28,800 SF\"],[\"Underwritten NCF after reserves\",\"$625,440\",\"NOI less reserves\"],[\"Indicative value at 6.25% cap\",\"$10,076,160\",\"NOI before reserves / cap rate\"]]}},{\"heading\":\"Loan Sizing Under the Three Constraints\",\"paragraphs\":[\"Terms per Lender-Terms.pdf: 62.50% LTV on value derived from underwritten NOI before reserves at a 6.25% cap rate; minimum 1.25x DSCR on NCF after reserves against annual amortizing debt service at the sizing rate; minimum 9.00% debt yield on NOI before reserves; 6.35% fixed contract rate; sizing rate equal to the greater of the contract rate and the 6.35% floor, hence 6.35%; 25-year monthly amortization with annual debt service taken as 12 monthly payments; and a 0-month interest-only period. The annual debt constant is 0.0799037153 per dollar of principal.\",\"Sizing uses unrounded intermediates; displayed dollars are rounded for readability. The DSCR test governs at $6,261,937, so the sizing DSCR is exactly 1.250x. Because the contract rate equals the sizing rate and there is no interest-only period, first-year contractual debt service equals sizing debt service at $500,352. Maturity is 60 months against a 25-year amortization schedule, so a substantial balloon balance will be outstanding at maturity.\"],\"table\":{\"headers\":[\"Sizing test\",\"Formula\",\"Maximum principal\"],\"rows\":[[\"LTV\",\"62.50% x $10,076,160\",\"$6,297,600\"],[\"DSCR\",\"($625,440 / 1.25) / 0.0799037153\",\"$6,261,937\"],[\"Debt yield\",\"$629,760 / 9.00%\",\"$6,997,333\"],[\"Maximum loan (minimum of three)\",\"Binding: DSCR\",\"$6,261,937\"],[\"Sizing annual debt service\",\"$6,261,937 x 0.0799037153\",\"$500,352\"],[\"Sizing DSCR\",\"$625,440 / $500,352\",\"1.250x\"],[\"Sizing debt yield\",\"$629,760 / $6,261,937\",\"10.06%\"],[\"First-year contractual debt service\",\"6.35% contract rate, 0 months IO\",\"$500,352\"]]}},{\"heading\":\"Sources, Uses and Net Cash to Borrower\",\"paragraphs\":[\"Net cash to the borrower is the loan less the existing payoff, the loan-based origination fee and fixed closing costs. No fee capitalization, interest reserve, cash sweep, earn-out or holdback is assumed. Escrow funding, title, transfer and swap-related amounts beyond the stated fixed closing costs were not supplied and are excluded.\"],\"table\":{\"headers\":[\"Item\",\"Amount\"],\"rows\":[[\"Sources: new first-mortgage loan\",\"$6,261,937\"],[\"Uses: existing debt payoff\",\"$4,200,000\"],[\"Uses: origination fee at 0.80% of principal\",\"$50,096\"],[\"Uses: fixed closing costs\",\"$52,000\"],[\"Net cash to borrower (positive = cash out)\",\"$1,959,841\"]]}},{\"heading\":\"Sensitivity and Downside\",\"paragraphs\":[\"The prescribed downside reduces total underwritten EGI by 5%, recomputes the management minimum and holds all other operating expense and reserve assumptions constant. At $874,950 of EGI the management fee falls to $34,998 (4.00% of stressed EGI still exceeds the $18,000 T12 floor), total operating expenses fall to $289,398, and NOI before reserves declines to $585,552, a 7.0% reduction, with NCF of $581,232.\",\"The combined downside adds 100 basis points to the sizing rate (7.35%, debt constant 0.0875114377) while holding the 6.25% cap rate unchanged. The maximum loan falls to $5,313,427, still DSCR-bound, a decline of $948,510 or 15.1%. At that level cash to borrower would fall to approximately $1,019,920. A separate cap-rate sensitivity of +50 basis points (6.75%) reduces indicative value to $9,329,778 and the LTV limit to $5,831,111, which would make LTV the binding constraint at that cap rate in the base cash-flow case; the workbook computes this case in the Sensitivity sheet column E.\"],\"table\":{\"headers\":[\"Case\",\"NOI before reserves\",\"Indicative value\",\"Maximum loan\",\"Binding test\"],\"rows\":[[\"Base\",\"$629,760\",\"$10,076,160\",\"$6,261,937\",\"DSCR\"],[\"EGI -5% only (6.35% sizing rate)\",\"$585,552\",\"$9,368,832\",\"$5,821,000 approx.\",\"DSCR\"],[\"Combined: EGI -5% and rate +100 bps\",\"$585,552\",\"$9,368,832\",\"$5,313,427\",\"DSCR\"],[\"Cap rate +50 bps only\",\"$629,760\",\"$9,329,778\",\"$5,831,111\",\"LTV\"]]}},{\"heading\":\"Assumptions and Permitted Provisional Items\",\"paragraphs\":[\"Kept exactly as supplied: 6.25% cap rate; 62.50% LTV; 1.25x DSCR on NCF after reserves; 9.00% debt yield on NOI before reserves; 6.35% contract rate; sizing rate as the greater of contract rate and the 6.35% floor; 25-year monthly amortization with annual debt service as 12 monthly payments; 0-month interest-only period; 60-month maturity; 0.80% origination fee on actual principal; $4,200,000 existing payoff; $52,000 fixed closing costs; $780,000 gross potential rent; 5.00% combined revenue loss; $180,000 other income; management fee as the greater of $18,000 T12 actual and 4.00% of underwritten EGI; $0.15 per SF reserves; and $0 removal of one-time casualty cleanup from repairs.\",\"Provisional and clearly labeled: the $34,800 insurance figure is used in underwriting because the plan instructs it, but it is a plan-asserted renewal allowance. The packet contains no insurer certificate, binder, quote document or endorsement, so the annual renewal premium is not independently verified and is reported as unknown for verification purposes. Underwritten NOI, value and all three sizing tests are conditional on that allowance; each $1,000 of additional annual premium would reduce NOI by $1,000, value by $16,000 at a 6.25% cap rate and the DSCR-bound loan by roughly $12,500.\",\"No provisional assumption has been made about renewal of the 101 option, tenant credit, lease recoveries beyond the supplied other-income line, escrow requirements, swap notional or mark-to-market, reserve or holdback structures, or exit financing.\"],\"table\":null},{\"heading\":\"Limitations, Unresolved Evidence and Risks\",\"paragraphs\":[\"Limitations. No appraisal, environmental or engineering report, insurance certificate, tax bill, estoppel, sponsor financial statement or credit approval was supplied. Indicative value here is a direct capitalization of a supplied scenario NOI at a supplied cap rate and is not an appraisal or an opinion of market value. This memorandum is an internal-review financing analysis, not a legal opinion, an appraisal or a credit commitment; the lender terms are expressly nonbinding discussion terms dated September 1, 2026.\",\"Unresolved evidence. (1) The insurance renewal premium is asserted in the plan but no insurer document is in the packet. (2) Only the premises 101 lease is documented; the other eight occupied suites rest on the rent roll alone with no leases or estoppels. (3) The 101 renewal option has no exercise notice, so the 2029-08-31 expiry stands. (4) The underwriting scenario's $780,000 gross potential rent exceeds both the T12 actual $759,600 and the annualized contractual $720,000; the source of the incremental rent, including any lease-up of vacant suite 110, is not documented. (5) T12 capital improvements of $74,000 far exceed the $4,320 underwritten reserve, suggesting deferred capital or nonrecurring projects that were not itemized; no property condition report was supplied to test the reserve.\",\"Prepayment friction. The term sheet states there is no bank prepayment penalty, but also that a separately documented interest-rate swap may carry a termination payment or receipt, so \\\"no penalty\\\" does not mean a cost-free exit. The swap document, notional, fixed rate, maturity and current mark were not supplied, so the exit cost or benefit is unquantifiable from this packet and could be material in either direction. Additional friction includes the 60-month maturity against 25-year amortization, which leaves refinancing or sale as the only exit at a balloon balance.\",\"Key risks. DSCR binds at exactly 1.25x with no cushion, so any reduction in underwritten cash flow or increase in the sizing rate reduces proceeds roughly proportionally, as shown in the downside table. Rate risk at the 60-month maturity is untested against any forward curve. Rollover risk concentrates in 2027-2029, with market rents equal to in-place rents and therefore no supplied cushion for downtime, leasing commissions or tenant improvements, none of which are funded in the underwriting scenario. Suite 110 remains vacant with no signed lease. Expense risk is concentrated in taxes (stepped up 5.3% to $120,000 with no assessment evidence) and insurance (up 7.4% on an unverified allowance). Single-asset, single-property sponsorship with no supplied track record or guaranty structure is an additional credit consideration.\"],\"table\":null},{\"heading\":\"Source References\",\"paragraphs\":[\"Lender-Terms.pdf p.1: purpose, loan ceiling, 62.50% LTV, valuation convention and 6.25% cap rate, 1.25x DSCR on NCF, 9.00% debt yield on NOI before reserves, 6.35% contract rate, sizing-rate floor, 25-year monthly amortization, 0-month IO, 60-month maturity, 0.80% origination fee, prepayment and swap language, unrounded-intermediates instruction.\",\"Property-and-Plan.pdf p.1: property, market, scenario address, sponsor, 2026-08-31 as-of date, $4,200,000 existing payoff, $52,000 fixed closing costs, transaction context, occupancy measurement instruction, NOI/NCF labeling instruction. Page 2: $780,000 gross potential rent, 5.00% combined revenue loss, $180,000 other income, management-fee test, $0.15/SF reserves, insurance renewal statement, expense-by-expense underwriting treatment table, sensitivity instructions.\",\"T12-Statement.pdf pp.1-2: monthly and annual actuals for September 2025 through August 2026, including the annual column used here and the below-the-line reserve, capital improvement, debt service and depreciation rows.\",\"Rent-Roll.xlsx, worksheet \\\"Rent Roll\\\": header rows 2-6; suite detail rows 7-16 (unit, tenant, area SF, status, monthly base rent, market monthly rent, lease expiry); note row 19 on vacant premises and market rent; note row 21 directing review of executed lease evidence for premises 101.\",\"Lease-File.pdf p.1: parties and 1,400 SF premises 101 (section 1); term commencing 2025-09-01 and expiring 2029-08-31 (section 2); $3,000 monthly base rent as of 2026-08-31 and no increase before 2027-09-01 (section 3); $6,000 security deposit (section 4); conditional renewal option with 180-day notice and no exercise notice in the packet (section 5); amendment authority (section 6).\",\"Workbook underwriting-v2.xlsx: Assumptions (editable inputs), Rent Roll (rows 4-13 detail, rows 16-24 metrics), Historical T12 (rows 4-25), Underwriting (rows 4-21), Loan Sizing (rows 4-20), Sources and Uses (rows 5-13), Sensitivity (rows 4-20), Input-Output Map (input and output cell locations).\"],\"table\":null}]}",
+  "arguments": {
+    "title": "Hawthorn Center | Refinance Analysis and Financing Memorandum",
+    "subtitle": "Internal review draft | As of August 31, 2026 | Fictional evaluation packet | Not a credit commitment or legal opinion",
+    "sections": [
+      {
+        "heading": "Purpose and Scope",
+        "paragraphs": [
+          "This memorandum supports internal review of a proposed first-mortgage refinance of Hawthorn Center, a retail property described in the supplied packet as located at 3200 Hawthorn Bench Road, Greenville, SC 29607, owned by Hawthorn Center Owner LLC. All parties, addresses and figures are fictional and originate solely in the five delivered documents: Lease-File.pdf, Lender-Terms.pdf, Property-and-Plan.pdf, Rent-Roll.xlsx and T12-Statement.pdf. No appraisal, environmental report, market comparables, sponsor track record or completed credit approval was supplied, and none has been assumed or researched.",
+          "Three cash-flow bases are kept strictly separate throughout: (1) historical trailing twelve months, September 2025 through August 2026, from the T12 statement; (2) current contractual rent and occupancy as of August 31, 2026, from the rent roll reconciled to the executed lease; and (3) the supplied forward underwriting scenario for September 2026 forward, which is the sponsor/plan scenario and not a lender-approved forecast.",
+          "Accompanying this memorandum is a live Excel workbook (underwriting-v2.xlsx) with editable assumptions, historical and underwritten sections separated, loan sizing, sources and uses, and sensitivity outputs."
+        ],
+        "table": null
+      },
+      {
+        "heading": "Financing Decision and Recommendation",
+        "paragraphs": [
+          "Recommendation: proceed to full underwriting on an indicative first-mortgage amount of $6,261,937, which is the DSCR-constrained maximum under the indicative terms. Sizing is binding at the 1.25x DSCR test, with modest headroom under the 62.50% LTV test ($6,297,600) and substantial headroom under the 9.00% debt-yield test ($6,997,333). At the maximum loan the debt yield is 10.06% and the implied LTV is 62.15%.",
+          "Proceeds fund the $4,200,000 existing debt payoff, a $50,096 origination fee (0.80% of principal) and $52,000 of fixed closing costs, leaving approximately $1,959,841 of cash out to the borrower. The cash-out objective in the property plan is therefore achievable on the supplied scenario without a cash-in requirement.",
+          "The recommendation is conditional. It rests on the supplied EGI scenario ($921,000) rather than on a trailing-twelve-month run rate: T12 NOI before reserves was $602,400 versus $629,760 underwritten, a 4.5% forward uplift driven by a scenario gross potential rent of $780,000 against $759,600 actual. Because sizing binds on DSCR at exactly 1.25x, there is no cushion for adverse revenue or rate movement; the combined downside case (EGI -5% and sizing rate +100 bps) reduces the maximum loan to $5,313,427, a $948,510 reduction that would leave roughly $1.0 million of cash out."
+        ],
+        "table": {
+          "headers": [
+            "Metric",
+            "Value",
+            "Basis"
+          ],
+          "rows": [
+            [
+              "Underwritten NOI before reserves",
+              "$629,760",
+              "Sep-2026 forward scenario"
+            ],
+            [
+              "Underwritten NCF after reserves",
+              "$625,440",
+              "After $4,320 reserves"
+            ],
+            [
+              "Indicative value",
+              "$10,076,160",
+              "NOI before reserves / 6.25%"
+            ],
+            [
+              "Maximum loan",
+              "$6,261,937",
+              "Minimum of three tests"
+            ],
+            [
+              "Binding constraint",
+              "DSCR",
+              "1.25x on NCF"
+            ],
+            [
+              "Sizing / first-year debt service",
+              "$500,352",
+              "6.35%, 25-yr amortization, 0 months IO"
+            ],
+            [
+              "Debt yield at maximum loan",
+              "10.06%",
+              "NOI before reserves / loan"
+            ],
+            [
+              "Implied LTV at maximum loan",
+              "62.15%",
+              "Loan / indicative value"
+            ],
+            [
+              "Net cash to borrower",
+              "$1,959,841",
+              "Cash out"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Historical Performance (T12: September 2025 - August 2026)",
+        "paragraphs": [
+          "The trailing twelve months are actual cash accounting per T12-Statement.pdf. Replacement reserves, capital improvements, existing loan principal and interest, and depreciation are presented below operating income and are excluded from operating expense. The property plan warns that the accounting package may label cash flow after reserves as \"property NOI\"; this memorandum reports NOI before reserves and NCF after reserves separately and does not treat any subtotal as an additional expense."
+        ],
+        "table": {
+          "headers": [
+            "T12 line (Sep-2025 to Aug-2026)",
+            "Amount",
+            "Source"
+          ],
+          "rows": [
+            [
+              "Gross potential base rent",
+              "$759,600",
+              "T12 p.2 Annual"
+            ],
+            [
+              "Vacancy loss",
+              "($40,800)",
+              "T12 p.2 Annual"
+            ],
+            [
+              "Concessions",
+              "($22,800)",
+              "T12 p.2 Annual"
+            ],
+            [
+              "Bad debt",
+              "($6,000)",
+              "T12 p.2 Annual"
+            ],
+            [
+              "Other income / recoveries",
+              "$176,400",
+              "T12 p.2 Annual"
+            ],
+            [
+              "T12 EGI",
+              "$866,400",
+              "Sum of above"
+            ],
+            [
+              "Operating expenses (7 lines, excl. reserves)",
+              "$264,000",
+              "T12 p.2 Annual"
+            ],
+            [
+              "T12 NOI before reserves",
+              "$602,400",
+              "EGI less opex"
+            ],
+            [
+              "Replacement reserves (below NOI)",
+              "$11,520",
+              "T12 p.2 Annual"
+            ],
+            [
+              "T12 NCF after reserves",
+              "$590,880",
+              "NOI less reserves"
+            ],
+            [
+              "Memo: capital improvements",
+              "$74,000",
+              "Below cash flow"
+            ],
+            [
+              "Memo: existing loan P&I",
+              "$294,000",
+              "Below cash flow"
+            ],
+            [
+              "Memo: depreciation (noncash)",
+              "$180,000",
+              "Noncash"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Current Contractual Rent, Occupancy and Tenancy",
+        "paragraphs": [
+          "The rent roll dated August 31, 2026 shows 10 suites totaling 28,800 rentable square feet, of which 9 suites and 27,200 square feet are occupied: 90.00% occupancy by count and 94.44% by area. Printed monthly contractual base rent is $60,000 ($720,000 annualized), and after reconciliation to the executed lease evidence the effective monthly contractual base rent is unchanged at $60,000. Suite 110 (1,600 SF) is vacant; its $3,400 market monthly rent is contextual only and is not collected income, so it is excluded from contractual rent.",
+          "Lease rollover is staggered: suite 106 (3,300 SF, $7,400/month) expires 2027-08-31 within the 60-month loan term, followed by suites 102 and 107 in 2028 and suites 101, 103 and 108 in 2029. Roughly 44% of occupied area rolls before the 2031 maturity of the longest lease, and the 2027 and 2028 expirations occur during the loan term. Rent roll market rents equal contractual rents for every occupied suite, indicating no embedded mark-to-market gain on renewal in the supplied data.",
+          "Premises 101 (Tenant A LLC, 1,400 SF) is documented by an executed lease extract signed August 15, 2025 with a September 1, 2025 commencement. Authoritative current terms are base rent of $3,000 per month, expiry 2029-08-31, and a $6,000 security deposit, which is not prepaid rent or recurring income and is excluded from income. No base-rent increase applies before September 1, 2027. The rent roll agrees with the lease on rent and expiry, so no amendment-driven adjustment to contractual rent is required.",
+          "The 101 lease contains one conditional renewal option requiring no uncured default and written notice at least 180 days before expiration. The packet contains no exercise notice, landlord acknowledgment or amendment exercising the option. The renewal option is therefore treated as unexercised and the current expiry is not extended.",
+          "Tenant credit, sales, co-tenancy and recovery-structure detail were not supplied; nine unrelated single-asset tenant entities are presented without financial statements, so tenant credit quality is unknown."
+        ],
+        "table": {
+          "headers": [
+            "Occupancy / rent metric",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Suites",
+              "10"
+            ],
+            [
+              "Occupied suites",
+              "9"
+            ],
+            [
+              "Total rentable SF",
+              "28,800"
+            ],
+            [
+              "Occupied SF",
+              "27,200"
+            ],
+            [
+              "Occupancy by count",
+              "90.00%"
+            ],
+            [
+              "Occupancy by area",
+              "94.44%"
+            ],
+            [
+              "Monthly base rent as printed",
+              "$60,000"
+            ],
+            [
+              "Effective monthly base rent after lease reconciliation",
+              "$60,000"
+            ],
+            [
+              "Annualized contractual base rent (point in time)",
+              "$720,000"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Underwritten Scenario (September 2026 Forward)",
+        "paragraphs": [
+          "The plan supplies gross potential base rent of $780,000, a 5.00% combined revenue loss allowance for vacancy, concessions and bad debt, and $180,000 of other income added after the loss deduction, producing underwritten EGI of $921,000. The management fee is the greater of the T12 actual $18,000 and 4.00% of underwritten EGI, so 4.00% of $921,000, or $36,840, governs. Replacement reserves are $0.15 per rentable square foot on 28,800 SF, or $4,320, deducted after NOI. The scenario is not reconciled to, and should not be forced to equal, the point-in-time annualized rent roll of $720,000; the difference reflects the plan's forward assumptions on the vacant suite and loss factors and is a scenario risk rather than a contractual fact."
+        ],
+        "table": {
+          "headers": [
+            "Underwritten line (annual)",
+            "Amount",
+            "Treatment"
+          ],
+          "rows": [
+            [
+              "Gross potential base rent",
+              "$780,000",
+              "Plan p.2 scenario"
+            ],
+            [
+              "Combined revenue loss at 5.00%",
+              "($39,000)",
+              "Vacancy, concessions, bad debt"
+            ],
+            [
+              "Other income / recoveries",
+              "$180,000",
+              "Added after loss"
+            ],
+            [
+              "Underwritten EGI",
+              "$921,000",
+              "Sum of above"
+            ],
+            [
+              "Real estate taxes",
+              "$120,000",
+              "Plan step-up from $114,000 T12"
+            ],
+            [
+              "Property insurance",
+              "$34,800",
+              "Plan-stated renewal allowance"
+            ],
+            [
+              "Utilities",
+              "$21,600",
+              "T12 actual"
+            ],
+            [
+              "Repairs and maintenance",
+              "$36,000",
+              "T12 actual; $0 one-time removed"
+            ],
+            [
+              "Payroll / contract labor",
+              "$24,000",
+              "T12 actual"
+            ],
+            [
+              "Administrative / legal",
+              "$18,000",
+              "T12 actual"
+            ],
+            [
+              "Management fee",
+              "$36,840",
+              "Greater of $18,000 and 4.00% of EGI"
+            ],
+            [
+              "Underwritten operating expenses before reserves",
+              "$291,240",
+              "31.6% of EGI"
+            ],
+            [
+              "Underwritten NOI before reserves",
+              "$629,760",
+              "EGI less opex"
+            ],
+            [
+              "Replacement reserves",
+              "$4,320",
+              "$0.15/SF x 28,800 SF"
+            ],
+            [
+              "Underwritten NCF after reserves",
+              "$625,440",
+              "NOI less reserves"
+            ],
+            [
+              "Indicative value at 6.25% cap",
+              "$10,076,160",
+              "NOI before reserves / cap rate"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Loan Sizing Under the Three Constraints",
+        "paragraphs": [
+          "Terms per Lender-Terms.pdf: 62.50% LTV on value derived from underwritten NOI before reserves at a 6.25% cap rate; minimum 1.25x DSCR on NCF after reserves against annual amortizing debt service at the sizing rate; minimum 9.00% debt yield on NOI before reserves; 6.35% fixed contract rate; sizing rate equal to the greater of the contract rate and the 6.35% floor, hence 6.35%; 25-year monthly amortization with annual debt service taken as 12 monthly payments; and a 0-month interest-only period. The annual debt constant is 0.0799037153 per dollar of principal.",
+          "Sizing uses unrounded intermediates; displayed dollars are rounded for readability. The DSCR test governs at $6,261,937, so the sizing DSCR is exactly 1.250x. Because the contract rate equals the sizing rate and there is no interest-only period, first-year contractual debt service equals sizing debt service at $500,352. Maturity is 60 months against a 25-year amortization schedule, so a substantial balloon balance will be outstanding at maturity."
+        ],
+        "table": {
+          "headers": [
+            "Sizing test",
+            "Formula",
+            "Maximum principal"
+          ],
+          "rows": [
+            [
+              "LTV",
+              "62.50% x $10,076,160",
+              "$6,297,600"
+            ],
+            [
+              "DSCR",
+              "($625,440 / 1.25) / 0.0799037153",
+              "$6,261,937"
+            ],
+            [
+              "Debt yield",
+              "$629,760 / 9.00%",
+              "$6,997,333"
+            ],
+            [
+              "Maximum loan (minimum of three)",
+              "Binding: DSCR",
+              "$6,261,937"
+            ],
+            [
+              "Sizing annual debt service",
+              "$6,261,937 x 0.0799037153",
+              "$500,352"
+            ],
+            [
+              "Sizing DSCR",
+              "$625,440 / $500,352",
+              "1.250x"
+            ],
+            [
+              "Sizing debt yield",
+              "$629,760 / $6,261,937",
+              "10.06%"
+            ],
+            [
+              "First-year contractual debt service",
+              "6.35% contract rate, 0 months IO",
+              "$500,352"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Sources, Uses and Net Cash to Borrower",
+        "paragraphs": [
+          "Net cash to the borrower is the loan less the existing payoff, the loan-based origination fee and fixed closing costs. No fee capitalization, interest reserve, cash sweep, earn-out or holdback is assumed. Escrow funding, title, transfer and swap-related amounts beyond the stated fixed closing costs were not supplied and are excluded."
+        ],
+        "table": {
+          "headers": [
+            "Item",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "Sources: new first-mortgage loan",
+              "$6,261,937"
+            ],
+            [
+              "Uses: existing debt payoff",
+              "$4,200,000"
+            ],
+            [
+              "Uses: origination fee at 0.80% of principal",
+              "$50,096"
+            ],
+            [
+              "Uses: fixed closing costs",
+              "$52,000"
+            ],
+            [
+              "Net cash to borrower (positive = cash out)",
+              "$1,959,841"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Sensitivity and Downside",
+        "paragraphs": [
+          "The prescribed downside reduces total underwritten EGI by 5%, recomputes the management minimum and holds all other operating expense and reserve assumptions constant. At $874,950 of EGI the management fee falls to $34,998 (4.00% of stressed EGI still exceeds the $18,000 T12 floor), total operating expenses fall to $289,398, and NOI before reserves declines to $585,552, a 7.0% reduction, with NCF of $581,232.",
+          "The combined downside adds 100 basis points to the sizing rate (7.35%, debt constant 0.0875114377) while holding the 6.25% cap rate unchanged. The maximum loan falls to $5,313,427, still DSCR-bound, a decline of $948,510 or 15.1%. At that level cash to borrower would fall to approximately $1,019,920. A separate cap-rate sensitivity of +50 basis points (6.75%) reduces indicative value to $9,329,778 and the LTV limit to $5,831,111, which would make LTV the binding constraint at that cap rate in the base cash-flow case; the workbook computes this case in the Sensitivity sheet column E."
+        ],
+        "table": {
+          "headers": [
+            "Case",
+            "NOI before reserves",
+            "Indicative value",
+            "Maximum loan",
+            "Binding test"
+          ],
+          "rows": [
+            [
+              "Base",
+              "$629,760",
+              "$10,076,160",
+              "$6,261,937",
+              "DSCR"
+            ],
+            [
+              "EGI -5% only (6.35% sizing rate)",
+              "$585,552",
+              "$9,368,832",
+              "$5,821,000 approx.",
+              "DSCR"
+            ],
+            [
+              "Combined: EGI -5% and rate +100 bps",
+              "$585,552",
+              "$9,368,832",
+              "$5,313,427",
+              "DSCR"
+            ],
+            [
+              "Cap rate +50 bps only",
+              "$629,760",
+              "$9,329,778",
+              "$5,831,111",
+              "LTV"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Assumptions and Permitted Provisional Items",
+        "paragraphs": [
+          "Kept exactly as supplied: 6.25% cap rate; 62.50% LTV; 1.25x DSCR on NCF after reserves; 9.00% debt yield on NOI before reserves; 6.35% contract rate; sizing rate as the greater of contract rate and the 6.35% floor; 25-year monthly amortization with annual debt service as 12 monthly payments; 0-month interest-only period; 60-month maturity; 0.80% origination fee on actual principal; $4,200,000 existing payoff; $52,000 fixed closing costs; $780,000 gross potential rent; 5.00% combined revenue loss; $180,000 other income; management fee as the greater of $18,000 T12 actual and 4.00% of underwritten EGI; $0.15 per SF reserves; and $0 removal of one-time casualty cleanup from repairs.",
+          "Provisional and clearly labeled: the $34,800 insurance figure is used in underwriting because the plan instructs it, but it is a plan-asserted renewal allowance. The packet contains no insurer certificate, binder, quote document or endorsement, so the annual renewal premium is not independently verified and is reported as unknown for verification purposes. Underwritten NOI, value and all three sizing tests are conditional on that allowance; each $1,000 of additional annual premium would reduce NOI by $1,000, value by $16,000 at a 6.25% cap rate and the DSCR-bound loan by roughly $12,500.",
+          "No provisional assumption has been made about renewal of the 101 option, tenant credit, lease recoveries beyond the supplied other-income line, escrow requirements, swap notional or mark-to-market, reserve or holdback structures, or exit financing."
+        ],
+        "table": null
+      },
+      {
+        "heading": "Limitations, Unresolved Evidence and Risks",
+        "paragraphs": [
+          "Limitations. No appraisal, environmental or engineering report, insurance certificate, tax bill, estoppel, sponsor financial statement or credit approval was supplied. Indicative value here is a direct capitalization of a supplied scenario NOI at a supplied cap rate and is not an appraisal or an opinion of market value. This memorandum is an internal-review financing analysis, not a legal opinion, an appraisal or a credit commitment; the lender terms are expressly nonbinding discussion terms dated September 1, 2026.",
+          "Unresolved evidence. (1) The insurance renewal premium is asserted in the plan but no insurer document is in the packet. (2) Only the premises 101 lease is documented; the other eight occupied suites rest on the rent roll alone with no leases or estoppels. (3) The 101 renewal option has no exercise notice, so the 2029-08-31 expiry stands. (4) The underwriting scenario's $780,000 gross potential rent exceeds both the T12 actual $759,600 and the annualized contractual $720,000; the source of the incremental rent, including any lease-up of vacant suite 110, is not documented. (5) T12 capital improvements of $74,000 far exceed the $4,320 underwritten reserve, suggesting deferred capital or nonrecurring projects that were not itemized; no property condition report was supplied to test the reserve.",
+          "Prepayment friction. The term sheet states there is no bank prepayment penalty, but also that a separately documented interest-rate swap may carry a termination payment or receipt, so \"no penalty\" does not mean a cost-free exit. The swap document, notional, fixed rate, maturity and current mark were not supplied, so the exit cost or benefit is unquantifiable from this packet and could be material in either direction. Additional friction includes the 60-month maturity against 25-year amortization, which leaves refinancing or sale as the only exit at a balloon balance.",
+          "Key risks. DSCR binds at exactly 1.25x with no cushion, so any reduction in underwritten cash flow or increase in the sizing rate reduces proceeds roughly proportionally, as shown in the downside table. Rate risk at the 60-month maturity is untested against any forward curve. Rollover risk concentrates in 2027-2029, with market rents equal to in-place rents and therefore no supplied cushion for downtime, leasing commissions or tenant improvements, none of which are funded in the underwriting scenario. Suite 110 remains vacant with no signed lease. Expense risk is concentrated in taxes (stepped up 5.3% to $120,000 with no assessment evidence) and insurance (up 7.4% on an unverified allowance). Single-asset, single-property sponsorship with no supplied track record or guaranty structure is an additional credit consideration."
+        ],
+        "table": null
+      },
+      {
+        "heading": "Source References",
+        "paragraphs": [
+          "Lender-Terms.pdf p.1: purpose, loan ceiling, 62.50% LTV, valuation convention and 6.25% cap rate, 1.25x DSCR on NCF, 9.00% debt yield on NOI before reserves, 6.35% contract rate, sizing-rate floor, 25-year monthly amortization, 0-month IO, 60-month maturity, 0.80% origination fee, prepayment and swap language, unrounded-intermediates instruction.",
+          "Property-and-Plan.pdf p.1: property, market, scenario address, sponsor, 2026-08-31 as-of date, $4,200,000 existing payoff, $52,000 fixed closing costs, transaction context, occupancy measurement instruction, NOI/NCF labeling instruction. Page 2: $780,000 gross potential rent, 5.00% combined revenue loss, $180,000 other income, management-fee test, $0.15/SF reserves, insurance renewal statement, expense-by-expense underwriting treatment table, sensitivity instructions.",
+          "T12-Statement.pdf pp.1-2: monthly and annual actuals for September 2025 through August 2026, including the annual column used here and the below-the-line reserve, capital improvement, debt service and depreciation rows.",
+          "Rent-Roll.xlsx, worksheet \"Rent Roll\": header rows 2-6; suite detail rows 7-16 (unit, tenant, area SF, status, monthly base rent, market monthly rent, lease expiry); note row 19 on vacant premises and market rent; note row 21 directing review of executed lease evidence for premises 101.",
+          "Lease-File.pdf p.1: parties and 1,400 SF premises 101 (section 1); term commencing 2025-09-01 and expiring 2029-08-31 (section 2); $3,000 monthly base rent as of 2026-08-31 and no increase before 2027-09-01 (section 3); $6,000 security deposit (section 4); conditional renewal option with 180-day notice and no exercise notice in the packet (section 5); amendment authority (section 6).",
+          "Workbook underwriting-v2.xlsx: Assumptions (editable inputs), Rent Roll (rows 4-13 detail, rows 16-24 metrics), Historical T12 (rows 4-25), Underwriting (rows 4-21), Loan Sizing (rows 4-20), Sources and Uses (rows 5-13), Sensitivity (rows 4-20), Input-Output Map (input and output cell locations)."
+        ],
+        "table": null
+      }
+    ]
+  },
+  "result": {
+    "created": "artifacts/memorandum-v1.pdf",
+    "bytes": 82639,
+    "pages": 8,
+    "extracted_text": "PAGE 1\n       Hawthorn Center | Refinance Analysis and Financing\n                                                    Memorandum\n\n Internal review draft | As of August 31, 2026 | Fictional evaluation packet | Not a credit commitment or legal\n opinion\n\n\n Purpose and Scope\n\n This memorandum supports internal review of a proposed first-mortgage refinance of Hawthorn Center, a retail\n property described in the supplied packet as located at 3200 Hawthorn Bench Road, Greenville, SC 29607,\n owned by Hawthorn Center Owner LLC. All parties, addresses and figures are fictional and originate solely in\n the five delivered documents: Lease-File.pdf, Lender-Terms.pdf, Property-and-Plan.pdf, Rent-Roll.xlsx and\n T12-Statement.pdf. No appraisal, environmental report, market comparables, sponsor track record or\n completed credit approval was supplied, and none has been assumed or researched.\n\n Three cash-flow bases are kept strictly separate throughout: (1) historical trailing twelve months, September\n 2025 through August 2026, from the T12 statement; (2) current contractual rent and occupancy as of August\n 31, 2026, from the rent roll reconciled to the executed lease; and (3) the supplied forward underwriting scenario\n for September 2026 forward, which is the sponsor/plan scenario and not a lender-approved forecast.\n\n Accompanying this memorandum is a live Excel workbook (underwriting-v2.xlsx) with editable assumptions,\n historical and underwritten sections separated, loan sizing, sources and uses, and sensitivity outputs.\n\n Financing Decision and Recommendation\n\n Recommendation: proceed to full underwriting on an indicative first-mortgage amount of $6,261,937, which is\n the DSCR-constrained maximum under the indicative terms. Sizing is binding at the 1.25x DSCR test, with\n modest headroom under the 62.50% LTV test ($6,297,600) and substantial headroom under the 9.00%\n debt-yield test ($6,997,333). At the maximum loan the debt yield is 10.06% and the implied LTV is 62.15%.\n\n Proceeds fund the $4,200,000 existing debt payoff, a $50,096 origination fee (0.80% of principal) and $52,000\n of fixed closing costs, leaving approximately $1,959,841 of cash out to the borrower. The cash-out objective in\n the property plan is therefore achievable on the supplied scenario without a cash-in requirement.\n\n The recommendation is conditional. It rests on the supplied EGI scenario ($921,000) rather than on a\n trailing-twelve-month run rate: T12 NOI before reserves was $602,400 versus $629,760 underwritten, a 4.5%\n forward uplift driven by a scenario gross potential rent of $780,000 against $759,600 actual. Because sizing\n binds on DSCR at exactly 1.25x, there is no cushion for adverse revenue or rate movement; the combined\n downside case (EGI -5% and sizing rate +100 bps) reduces the maximum loan to $5,313,427, a $948,510\n reduction that would leave roughly $1.0 million of cash out.\n\n\n   Metric                                       Value                                         Basis\n\n   Underwritten NOI before reserves             $629,760                                      Sep-2026 forward scenario\n\n   Underwritten NCF after reserves              $625,440                                      After $4,320 reserves\n\n\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                     1\n\nPAGE 2\n   Metric                                         Value                                          Basis\n\n   Indicative value                               $10,076,160                                    NOI before reserves / 6.25%\n\n   Maximum loan                                   $6,261,937                                     Minimum of three tests\n\n   Binding constraint                             DSCR                                           1.25x on NCF\n\n   Sizing / first-year debt service               $500,352                                       6.35%, 25-yr amortization, 0 months IO\n\n   Debt yield at maximum loan                     10.06%                                         NOI before reserves / loan\n\n   Implied LTV at maximum loan                    62.15%                                         Loan / indicative value\n\n   Net cash to borrower                           $1,959,841                                     Cash out\n\n\n Historical Performance (T12: September 2025 - August 2026)\n\n The trailing twelve months are actual cash accounting per T12-Statement.pdf. Replacement reserves, capital\n improvements, existing loan principal and interest, and depreciation are presented below operating income and\n are excluded from operating expense. The property plan warns that the accounting package may label cash\n flow after reserves as \"property NOI\"; this memorandum reports NOI before reserves and NCF after reserves\n separately and does not treat any subtotal as an additional expense.\n\n\n   T12 line (Sep-2025 to Aug-2026)                Amount                                         Source\n\n   Gross potential base rent                      $759,600                                       T12 p.2 Annual\n\n   Vacancy loss                                   ($40,800)                                      T12 p.2 Annual\n\n   Concessions                                    ($22,800)                                      T12 p.2 Annual\n\n   Bad debt                                       ($6,000)                                       T12 p.2 Annual\n\n   Other income / recoveries                      $176,400                                       T12 p.2 Annual\n\n   T12 EGI                                        $866,400                                       Sum of above\n\n   Operating expenses (7 lines, excl.             $264,000                                       T12 p.2 Annual\n   reserves)\n\n   T12 NOI before reserves                        $602,400                                       EGI less opex\n\n   Replacement reserves (below NOI)               $11,520                                        T12 p.2 Annual\n\n   T12 NCF after reserves                         $590,880                                       NOI less reserves\n\n   Memo: capital improvements                     $74,000                                        Below cash flow\n\n   Memo: existing loan P&I                        $294,000                                       Below cash flow\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                          2\n\nPAGE 3\n   T12 line (Sep-2025 to Aug-2026)                Amount                                        Source\n\n   Memo: depreciation (noncash)                   $180,000                                      Noncash\n\n\n Current Contractual Rent, Occupancy and Tenancy\n\n The rent roll dated August 31, 2026 shows 10 suites totaling 28,800 rentable square feet, of which 9 suites and\n 27,200 square feet are occupied: 90.00% occupancy by count and 94.44% by area. Printed monthly contractual\n base rent is $60,000 ($720,000 annualized), and after reconciliation to the executed lease evidence the\n effective monthly contractual base rent is unchanged at $60,000. Suite 110 (1,600 SF) is vacant; its $3,400\n market monthly rent is contextual only and is not collected income, so it is excluded from contractual rent.\n\n Lease rollover is staggered: suite 106 (3,300 SF, $7,400/month) expires 2027-08-31 within the 60-month loan\n term, followed by suites 102 and 107 in 2028 and suites 101, 103 and 108 in 2029. Roughly 44% of occupied\n area rolls before the 2031 maturity of the longest lease, and the 2027 and 2028 expirations occur during the\n loan term. Rent roll market rents equal contractual rents for every occupied suite, indicating no embedded\n mark-to-market gain on renewal in the supplied data.\n\n Premises 101 (Tenant A LLC, 1,400 SF) is documented by an executed lease extract signed August 15, 2025\n with a September 1, 2025 commencement. Authoritative current terms are base rent of $3,000 per month,\n expiry 2029-08-31, and a $6,000 security deposit, which is not prepaid rent or recurring income and is excluded\n from income. No base-rent increase applies before September 1, 2027. The rent roll agrees with the lease on\n rent and expiry, so no amendment-driven adjustment to contractual rent is required.\n\n The 101 lease contains one conditional renewal option requiring no uncured default and written notice at least\n 180 days before expiration. The packet contains no exercise notice, landlord acknowledgment or amendment\n exercising the option. The renewal option is therefore treated as unexercised and the current expiry is not\n extended.\n\n Tenant credit, sales, co-tenancy and recovery-structure detail were not supplied; nine unrelated single-asset\n tenant entities are presented without financial statements, so tenant credit quality is unknown.\n\n\n   Occupancy / rent metric                                               Value\n\n   Suites                                                                10\n\n   Occupied suites                                                       9\n\n   Total rentable SF                                                     28,800\n\n   Occupied SF                                                           27,200\n\n   Occupancy by count                                                    90.00%\n\n   Occupancy by area                                                     94.44%\n\n   Monthly base rent as printed                                          $60,000\n\n\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                        3\n\nPAGE 4\n   Occupancy / rent metric                                                 Value\n\n   Effective monthly base rent after lease reconciliation                  $60,000\n\n   Annualized contractual base rent (point in time)                        $720,000\n\n\n Underwritten Scenario (September 2026 Forward)\n\n The plan supplies gross potential base rent of $780,000, a 5.00% combined revenue loss allowance for\n vacancy, concessions and bad debt, and $180,000 of other income added after the loss deduction, producing\n underwritten EGI of $921,000. The management fee is the greater of the T12 actual $18,000 and 4.00% of\n underwritten EGI, so 4.00% of $921,000, or $36,840, governs. Replacement reserves are $0.15 per rentable\n square foot on 28,800 SF, or $4,320, deducted after NOI. The scenario is not reconciled to, and should not be\n forced to equal, the point-in-time annualized rent roll of $720,000; the difference reflects the plan's forward\n assumptions on the vacant suite and loss factors and is a scenario risk rather than a contractual fact.\n\n\n   Underwritten line (annual)                      Amount                                          Treatment\n\n   Gross potential base rent                       $780,000                                        Plan p.2 scenario\n\n   Combined revenue loss at 5.00%                  ($39,000)                                       Vacancy, concessions, bad debt\n\n   Other income / recoveries                       $180,000                                        Added after loss\n\n   Underwritten EGI                                $921,000                                        Sum of above\n\n   Real estate taxes                               $120,000                                        Plan step-up from $114,000 T12\n\n   Property insurance                              $34,800                                         Plan-stated renewal allowance\n\n   Utilities                                       $21,600                                         T12 actual\n\n   Repairs and maintenance                         $36,000                                         T12 actual; $0 one-time removed\n\n   Payroll / contract labor                        $24,000                                         T12 actual\n\n   Administrative / legal                          $18,000                                         T12 actual\n\n   Management fee                                  $36,840                                         Greater of $18,000 and 4.00% of EGI\n\n   Underwritten operating expenses                 $291,240                                        31.6% of EGI\n   before reserves\n\n   Underwritten NOI before reserves                $629,760                                        EGI less opex\n\n   Replacement reserves                            $4,320                                          $0.15/SF x 28,800 SF\n\n   Underwritten NCF after reserves                 $625,440                                        NOI less reserves\n\n\n\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                            4\n\nPAGE 5\n   Underwritten line (annual)                     Amount                                         Treatment\n\n   Indicative value at 6.25% cap                  $10,076,160                                    NOI before reserves / cap rate\n\n\n Loan Sizing Under the Three Constraints\n\n Terms per Lender-Terms.pdf: 62.50% LTV on value derived from underwritten NOI before reserves at a 6.25%\n cap rate; minimum 1.25x DSCR on NCF after reserves against annual amortizing debt service at the sizing rate;\n minimum 9.00% debt yield on NOI before reserves; 6.35% fixed contract rate; sizing rate equal to the greater of\n the contract rate and the 6.35% floor, hence 6.35%; 25-year monthly amortization with annual debt service\n taken as 12 monthly payments; and a 0-month interest-only period. The annual debt constant is 0.0799037153\n per dollar of principal.\n\n Sizing uses unrounded intermediates; displayed dollars are rounded for readability. The DSCR test governs at\n $6,261,937, so the sizing DSCR is exactly 1.250x. Because the contract rate equals the sizing rate and there is\n no interest-only period, first-year contractual debt service equals sizing debt service at $500,352. Maturity is 60\n months against a 25-year amortization schedule, so a substantial balloon balance will be outstanding at\n maturity.\n\n\n   Sizing test                                    Formula                                        Maximum principal\n\n   LTV                                            62.50% x $10,076,160                           $6,297,600\n\n   DSCR                                           ($625,440 / 1.25) / 0.0799037153               $6,261,937\n\n   Debt yield                                     $629,760 / 9.00%                               $6,997,333\n\n   Maximum loan (minimum of three)                Binding: DSCR                                  $6,261,937\n\n   Sizing annual debt service                     $6,261,937 x 0.0799037153                      $500,352\n\n   Sizing DSCR                                    $625,440 / $500,352                            1.250x\n\n   Sizing debt yield                              $629,760 / $6,261,937                          10.06%\n\n   First-year contractual debt service            6.35% contract rate, 0 months IO               $500,352\n\n\n Sources, Uses and Net Cash to Borrower\n\n Net cash to the borrower is the loan less the existing payoff, the loan-based origination fee and fixed closing\n costs. No fee capitalization, interest reserve, cash sweep, earn-out or holdback is assumed. Escrow funding,\n title, transfer and swap-related amounts beyond the stated fixed closing costs were not supplied and are\n excluded.\n\n\n   Item                                                                  Amount\n\n   Sources: new first-mortgage loan                                      $6,261,937\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                         5\n\nPAGE 6\n   Item                                                                 Amount\n\n   Uses: existing debt payoff                                           $4,200,000\n\n   Uses: origination fee at 0.80% of principal                          $50,096\n\n   Uses: fixed closing costs                                            $52,000\n\n   Net cash to borrower (positive = cash out)                           $1,959,841\n\n\n Sensitivity and Downside\n\n The prescribed downside reduces total underwritten EGI by 5%, recomputes the management minimum and\n holds all other operating expense and reserve assumptions constant. At $874,950 of EGI the management fee\n falls to $34,998 (4.00% of stressed EGI still exceeds the $18,000 T12 floor), total operating expenses fall to\n $289,398, and NOI before reserves declines to $585,552, a 7.0% reduction, with NCF of $581,232.\n\n The combined downside adds 100 basis points to the sizing rate (7.35%, debt constant 0.0875114377) while\n holding the 6.25% cap rate unchanged. The maximum loan falls to $5,313,427, still DSCR-bound, a decline of\n $948,510 or 15.1%. At that level cash to borrower would fall to approximately $1,019,920. A separate cap-rate\n sensitivity of +50 basis points (6.75%) reduces indicative value to $9,329,778 and the LTV limit to $5,831,111,\n which would make LTV the binding constraint at that cap rate in the base cash-flow case; the workbook\n computes this case in the Sensitivity sheet column E.\n\n\n   Case                        NOI before reserves        Indicative value            Maximum loan                Binding test\n\n   Base                        $629,760                   $10,076,160                 $6,261,937                  DSCR\n\n   EGI -5% only (6.35%         $585,552                   $9,368,832                  $5,821,000 approx.          DSCR\n   sizing rate)\n\n   Combined: EGI -5%           $585,552                   $9,368,832                  $5,313,427                  DSCR\n   and rate +100 bps\n\n   Cap rate +50 bps only       $629,760                   $9,329,778                  $5,831,111                  LTV\n\n\n Assumptions and Permitted Provisional Items\n\n Kept exactly as supplied: 6.25% cap rate; 62.50% LTV; 1.25x DSCR on NCF after reserves; 9.00% debt yield\n on NOI before reserves; 6.35% contract rate; sizing rate as the greater of contract rate and the 6.35% floor;\n 25-year monthly amortization with annual debt service as 12 monthly payments; 0-month interest-only period;\n 60-month maturity; 0.80% origination fee on actual principal; $4,200,000 existing payoff; $52,000 fixed closing\n costs; $780,000 gross potential rent; 5.00% combined revenue loss; $180,000 other income; management fee\n as the greater of $18,000 T12 actual and 4.00% of underwritten EGI; $0.15 per SF reserves; and $0 removal of\n one-time casualty cleanup from repairs.\n\n\n\n\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                       6\n\nPAGE 7\n Provisional and clearly labeled: the $34,800 insurance figure is used in underwriting because the plan instructs\n it, but it is a plan-asserted renewal allowance. The packet contains no insurer certificate, binder, quote\n document or endorsement, so the annual renewal premium is not independently verified and is reported as\n unknown for verification purposes. Underwritten NOI, value and all three sizing tests are conditional on that\n allowance; each $1,000 of additional annual premium would reduce NOI by $1,000, value by $16,000 at a\n 6.25% cap rate and the DSCR-bound loan by roughly $12,500.\n\n No provisional assumption has been made about renewal of the 101 option, tenant credit, lease recoveries\n beyond the supplied other-income line, escrow requirements, swap notional or mark-to-market, reserve or\n holdback structures, or exit financing.\n\n Limitations, Unresolved Evidence and Risks\n\n Limitations. No appraisal, environmental or engineering report, insurance certificate, tax bill, estoppel, sponsor\n financial statement or credit approval was supplied. Indicative value here is a direct capitalization of a supplied\n scenario NOI at a supplied cap rate and is not an appraisal or an opinion of market value. This memorandum is\n an internal-review financing analysis, not a legal opinion, an appraisal or a credit commitment; the lender terms\n are expressly nonbinding discussion terms dated September 1, 2026.\n\n Unresolved evidence. (1) The insurance renewal premium is asserted in the plan but no insurer document is in\n the packet. (2) Only the premises 101 lease is documented; the other eight occupied suites rest on the rent roll\n alone with no leases or estoppels. (3) The 101 renewal option has no exercise notice, so the 2029-08-31 expiry\n stands. (4) The underwriting scenario's $780,000 gross potential rent exceeds both the T12 actual $759,600\n and the annualized contractual $720,000; the source of the incremental rent, including any lease-up of vacant\n suite 110, is not documented. (5) T12 capital improvements of $74,000 far exceed the $4,320 underwritten\n reserve, suggesting deferred capital or nonrecurring projects that were not itemized; no property condition\n report was supplied to test the reserve.\n\n Prepayment friction. The term sheet states there is no bank prepayment penalty, but also that a separately\n documented interest-rate swap may carry a termination payment or receipt, so \"no penalty\" does not mean a\n cost-free exit. The swap document, notional, fixed rate, maturity and current mark were not supplied, so the exit\n cost or benefit is unquantifiable from this packet and could be material in either direction. Additional friction\n includes the 60-month maturity against 25-year amortization, which leaves refinancing or sale as the only exit at\n a balloon balance.\n\n Key risks. DSCR binds at exactly 1.25x with no cushion, so any reduction in underwritten cash flow or increase\n in the sizing rate reduces proceeds roughly proportionally, as shown in the downside table. Rate risk at the\n 60-month maturity is untested against any forward curve. Rollover risk concentrates in 2027-2029, with market\n rents equal to in-place rents and therefore no supplied cushion for downtime, leasing commissions or tenant\n improvements, none of which are funded in the underwriting scenario. Suite 110 remains vacant with no signed\n lease. Expense risk is concentrated in taxes (stepped up 5.3% to $120,000 with no assessment evidence) and\n insurance (up 7.4% on an unverified allowance). Single-asset, single-property sponsorship with no supplied\n track record or guaranty structure is an additional credit consideration.\n\n Source References\n\n Lender-Terms.pdf p.1: purpose, loan ceiling, 62.50% LTV, valuation convention and 6.25% cap rate, 1.25x\n DSCR on NCF, 9.00% debt yield on NOI before reserves, 6.35% contract rate, sizing-rate floor, 25-year\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                         7\n\nPAGE 8\n monthly amortization, 0-month IO, 60-month maturity, 0.80% origination fee, prepayment and swap language,\n unrounded-intermediates instruction.\n\n Property-and-Plan.pdf p.1: property, market, scenario address, sponsor, 2026-08-31 as-of date, $4,200,000\n existing payoff, $52,000 fixed closing costs, transaction context, occupancy measurement instruction, NOI/NCF\n labeling instruction. Page 2: $780,000 gross potential rent, 5.00% combined revenue loss, $180,000 other\n income, management-fee test, $0.15/SF reserves, insurance renewal statement, expense-by-expense\n underwriting treatment table, sensitivity instructions.\n\n T12-Statement.pdf pp.1-2: monthly and annual actuals for September 2025 through August 2026, including the\n annual column used here and the below-the-line reserve, capital improvement, debt service and depreciation\n rows.\n\n Rent-Roll.xlsx, worksheet \"Rent Roll\": header rows 2-6; suite detail rows 7-16 (unit, tenant, area SF, status,\n monthly base rent, market monthly rent, lease expiry); note row 19 on vacant premises and market rent; note\n row 21 directing review of executed lease evidence for premises 101.\n\n Lease-File.pdf p.1: parties and 1,400 SF premises 101 (section 1); term commencing 2025-09-01 and expiring\n 2029-08-31 (section 2); $3,000 monthly base rent as of 2026-08-31 and no increase before 2027-09-01\n (section 3); $6,000 security deposit (section 4); conditional renewal option with 180-day notice and no exercise\n notice in the packet (section 5); amendment authority (section 6).\n\n Workbook underwriting-v2.xlsx: Assumptions (editable inputs), Rent Roll (rows 4-13 detail, rows 16-24 metrics),\n Historical T12 (rows 4-25), Underwriting (rows 4-21), Loan Sizing (rows 4-20), Sources and Uses (rows 5-13),\n Sensitivity (rows 4-20), Input-Output Map (input and output cell locations).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinancing memorandum | Internal review | Fictional evaluation case                                                                          8"
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.057
+}

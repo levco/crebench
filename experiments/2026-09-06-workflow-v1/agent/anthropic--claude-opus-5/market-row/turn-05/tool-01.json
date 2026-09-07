@@ -1,0 +1,110 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_011ihgTJ3qZ35oZ49NQgsc65",
+  "arguments_raw": "{\"steps\":[{\"name\":\"constant_650\",\"expression\":\"12*abs(pmt(0.065/12,300,1))\"},{\"name\":\"dscr_limit\",\"expression\":\"(539618.24/1.25)/constant_650\"},{\"name\":\"max_loan\",\"expression\":\"min(5442182.4, dscr_limit, 6046869.333333333)\"},{\"name\":\"sizing_ads\",\"expression\":\"max_loan*constant_650\"},{\"name\":\"sizing_dscr\",\"expression\":\"539618.24/sizing_ads\"},{\"name\":\"sizing_dy\",\"expression\":\"544218.24/max_loan\"},{\"name\":\"fy_ds\",\"expression\":\"max_loan*12*abs(pmt(0.0625/12,300,1))\"},{\"name\":\"cash_to_borrower\",\"expression\":\"max_loan-3400000-0.01*max_loan-48000\"},{\"name\":\"stress_egi\",\"expression\":\"768144*0.95\"},{\"name\":\"stress_mgmt\",\"expression\":\"max(24000,0.04*stress_egi)\"},{\"name\":\"stress_noi\",\"expression\":\"stress_egi-(193200+stress_mgmt)\"},{\"name\":\"stress_ncf\",\"expression\":\"stress_noi-4600\"},{\"name\":\"stress_value\",\"expression\":\"stress_noi/0.065\"},{\"name\":\"stress_ltv\",\"expression\":\"0.65*stress_value\"},{\"name\":\"constant_750\",\"expression\":\"12*abs(pmt(0.075/12,300,1))\"},{\"name\":\"stress_dscr_limit\",\"expression\":\"(stress_ncf/1.25)/constant_750\"},{\"name\":\"stress_dy_limit\",\"expression\":\"stress_noi/0.09\"},{\"name\":\"stress_max_loan\",\"expression\":\"min(stress_ltv,stress_dscr_limit,stress_dy_limit)\"},{\"name\":\"caprate_plus50_value\",\"expression\":\"544218.24/0.07\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "constant_650",
+        "expression": "12*abs(pmt(0.065/12,300,1))"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(539618.24/1.25)/constant_650"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(5442182.4, dscr_limit, 6046869.333333333)"
+      },
+      {
+        "name": "sizing_ads",
+        "expression": "max_loan*constant_650"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "539618.24/sizing_ads"
+      },
+      {
+        "name": "sizing_dy",
+        "expression": "544218.24/max_loan"
+      },
+      {
+        "name": "fy_ds",
+        "expression": "max_loan*12*abs(pmt(0.0625/12,300,1))"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "max_loan-3400000-0.01*max_loan-48000"
+      },
+      {
+        "name": "stress_egi",
+        "expression": "768144*0.95"
+      },
+      {
+        "name": "stress_mgmt",
+        "expression": "max(24000,0.04*stress_egi)"
+      },
+      {
+        "name": "stress_noi",
+        "expression": "stress_egi-(193200+stress_mgmt)"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "stress_noi-4600"
+      },
+      {
+        "name": "stress_value",
+        "expression": "stress_noi/0.065"
+      },
+      {
+        "name": "stress_ltv",
+        "expression": "0.65*stress_value"
+      },
+      {
+        "name": "constant_750",
+        "expression": "12*abs(pmt(0.075/12,300,1))"
+      },
+      {
+        "name": "stress_dscr_limit",
+        "expression": "(stress_ncf/1.25)/constant_750"
+      },
+      {
+        "name": "stress_dy_limit",
+        "expression": "stress_noi/0.09"
+      },
+      {
+        "name": "stress_max_loan",
+        "expression": "min(stress_ltv,stress_dscr_limit,stress_dy_limit)"
+      },
+      {
+        "name": "caprate_plus50_value",
+        "expression": "544218.24/0.07"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "constant_650": 0.081024859361717,
+      "dscr_limit": 5327927.692818299,
+      "max_loan": 5327927.692818299,
+      "sizing_ads": 431694.59199999995,
+      "sizing_dscr": 1.2500000000000002,
+      "sizing_dy": 0.10214444928251765,
+      "fy_ds": 421760.48985947645,
+      "cash_to_borrower": 1826648.415890116,
+      "stress_egi": 729736.7999999999,
+      "stress_mgmt": 29189.471999999998,
+      "stress_noi": 507347.3279999999,
+      "stress_ncf": 502747.3279999999,
+      "stress_value": 7805343.507692306,
+      "stress_ltv": 5073473.279999999,
+      "constant_750": 0.08867894133569469,
+      "stress_dscr_limit": 4535438.248833817,
+      "stress_dy_limit": 5637192.533333332,
+      "stress_max_loan": 4535438.248833817,
+      "caprate_plus50_value": 7774546.2857142845
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

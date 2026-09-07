@@ -1,0 +1,697 @@
+{
+  "case_id": "juniper-flats",
+  "checks": [
+    {
+      "field": "space_count",
+      "group": "extraction",
+      "present": true,
+      "actual": 36,
+      "expected": 36,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx, 'Rent Roll' rows 7-42 (units 101-136)"
+      ],
+      "calculation": "20 one-bedroom units (101-120) + 16 two-bedroom units (121-136) = 36",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "occupied_count",
+      "group": "extraction",
+      "present": true,
+      "actual": 33,
+      "expected": 33,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx rows 7-42, Status column F; vacant at rows 15 (unit 109), 31 (125), 42 (136)"
+      ],
+      "calculation": "36 total - 3 vacant = 33",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "total_area_sf",
+      "group": "extraction",
+      "present": true,
+      "actual": 31800,
+      "expected": 31800,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx column E rows 7-42"
+      ],
+      "calculation": "20 x 750 + 16 x 1,050 = 15,000 + 16,800 = 31,800",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "occupied_area_sf",
+      "group": "extraction",
+      "present": true,
+      "actual": 28950,
+      "expected": 28950,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx columns E/F rows 7-42"
+      ],
+      "calculation": "19 x 750 + 14 x 1,050 = 14,250 + 14,700 = 28,950",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "occupancy_count_pct",
+      "group": "extraction",
+      "present": true,
+      "actual": 91.67,
+      "expected": 91.66666666666666,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx rows 7-42"
+      ],
+      "calculation": "33 / 36 x 100 = 91.6667",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "occupancy_area_pct",
+      "group": "extraction",
+      "present": true,
+      "actual": 91.04,
+      "expected": 91.0377358490566,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx rows 7-42"
+      ],
+      "calculation": "28,950 / 31,800 x 100 = 91.0377",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "group": "extraction",
+      "present": true,
+      "actual": 62275,
+      "expected": 62275,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx column G rows 7-42; note C45 (vacant premises have no contractual rent)"
+      ],
+      "calculation": "19 x 1,675 + 14 x 2,175 = 31,825 + 30,450 = 62,275",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "effective_monthly_base",
+      "group": "extraction",
+      "present": true,
+      "actual": 62275,
+      "expected": 62275,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent-Roll.xlsx column G rows 7-42",
+        "Lease-File.pdf p.1 s.3 (unit 101 base rent $1,675 as of 2026-08-31); s.6 amendment authority"
+      ],
+      "calculation": "No executed amendment alters any rent; the executed lease for unit 101 confirms $1,675, matching the rent roll, so effective = printed = 62,275",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "t12_egi",
+      "group": "extraction",
+      "present": true,
+      "actual": 821100,
+      "expected": 821100,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "T12-Statement.pdf pp.1-2, Annual column"
+      ],
+      "calculation": "840,000 - 42,000 - 12,000 - 4,500 + 39,600 = 821,100",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "t12_operating_expenses",
+      "group": "extraction",
+      "present": true,
+      "actual": 307800,
+      "expected": 307800,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "T12-Statement.pdf pp.1-2, Annual column",
+        "Property-and-Plan.pdf p.1 (debt, capital improvements and depreciation are not operating expenses)"
+      ],
+      "calculation": "108,000 + 31,200 + 28,800 + 46,200 + 42,000 + 21,600 + 30,000 = 307,800 (excludes reserves 10,800, capex 62,000, P&I 294,000, depreciation 180,000)",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "group": "extraction",
+      "present": true,
+      "actual": 513300,
+      "expected": 513300,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "T12-Statement.pdf pp.1-2, Annual column"
+      ],
+      "calculation": "821,100 - 307,800 = 513,300",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "t12_reserves",
+      "group": "extraction",
+      "present": true,
+      "actual": 10800,
+      "expected": 10800,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "T12-Statement.pdf pp.1-2, 'Replacement reserves (below NOI)' Annual 10,800"
+      ],
+      "calculation": "As reported in the T12 annual column",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "t12_ncf",
+      "group": "extraction",
+      "present": true,
+      "actual": 502500,
+      "expected": 502500,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "T12-Statement.pdf pp.1-2"
+      ],
+      "calculation": "513,300 - 10,800 = 502,500",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "group": "extraction",
+      "present": true,
+      "actual": 1675,
+      "expected": 1675,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease-File.pdf p.1 s.3 ('Base rent is $1,675 per month as of August 31, 2026')",
+        "Rent-Roll.xlsx row 7 (G7 = 1675)"
+      ],
+      "calculation": "Executed lease and rent roll agree; no amendment is included in the packet",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "subject_lease_expiry",
+      "group": "extraction",
+      "present": true,
+      "actual": "2027-07-31",
+      "expected": "2027-07-31",
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease-File.pdf p.1 s.2 ('The initial term expires 2027-07-31')",
+        "Rent-Roll.xlsx I7 = '2027-07-31'"
+      ],
+      "calculation": "Not extended: the renewal option requires timely written notice and none is delivered (Lease-File.pdf p.1 s.5)",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "subject_lease_deposit",
+      "group": "extraction",
+      "present": true,
+      "actual": 1675,
+      "expected": 1675,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease-File.pdf p.1 s.4 ('The security deposit is $1,675 and is not prepaid rent or recurring income')"
+      ],
+      "calculation": "Stated; excluded from income",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "verified_renewal_insurance",
+      "group": "extraction",
+      "present": true,
+      "actual": null,
+      "expected": 33600,
+      "passed": false,
+      "critical_error": true,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 ('Fictional insurer renewal confirmation dated August 25, 2026: annual premium $33,600; use in underwriting') - the confirmation document itself is not included in the packet",
+        "No insurance certificate or binder exists among the five supplied sources"
+      ],
+      "calculation": "Unknown: no verifiable insurer renewal confirmation is provided. The $33,600 applied in underwriting is the plan's scenario allowance/instruction, not independently verified evidence",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "renewal_option_exercised",
+      "group": "extraction",
+      "present": true,
+      "actual": "Not evidenced",
+      "expected": "Not evidenced",
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease-File.pdf p.1 s.5 ('No exercise notice, landlord acknowledgment or amendment exercising this option is included in the packet. Do not extend the current expiry based on the existence of the option alone.')",
+        "Rent-Roll.xlsx C47 ('no option exercise notice is included')"
+      ],
+      "calculation": "No delivered material evidences exercise; the option is treated as unexercised",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "uw_egi",
+      "group": "financial",
+      "present": true,
+      "actual": 854160,
+      "expected": 854160.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 (GPR 864,000; 6.00% combined revenue loss; other income 42,000 added after loss)"
+      ],
+      "calculation": "864,000 x (1 - 0.06) + 42,000 = 812,160 + 42,000 = 854,160",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "uw_management_fee",
+      "group": "financial",
+      "present": true,
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 (greater of T12 actual and 3.00% of underwritten EGI)",
+        "T12-Statement.pdf p.2 (T12 management fee 30,000)"
+      ],
+      "calculation": "max(30,000; 0.03 x 854,160 = 25,624.80) = 30,000",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "uw_operating_expenses",
+      "group": "financial",
+      "present": true,
+      "actual": 308200,
+      "expected": 308200,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 expense treatment table"
+      ],
+      "calculation": "112,000 taxes + 33,600 insurance + 28,800 utilities + 40,200 R&M (46,200 - 6,000 one-time casualty) + 42,000 payroll + 21,600 admin + 30,000 management = 308,200",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "uw_noi_before_reserves",
+      "group": "financial",
+      "present": true,
+      "actual": 545960,
+      "expected": 545960.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2",
+        "Workbook Underwriting!B17"
+      ],
+      "calculation": "854,160 - 308,200 = 545,960",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "uw_reserves",
+      "group": "financial",
+      "present": true,
+      "actual": 10800,
+      "expected": 10800,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 ($300.00 per unit per year, deducted after NOI)",
+        "Rent-Roll.xlsx rows 7-42 (36 units)"
+      ],
+      "calculation": "36 units x 300 = 10,800",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "uw_ncf",
+      "group": "financial",
+      "present": true,
+      "actual": 535160,
+      "expected": 535160.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Workbook Underwriting!B19"
+      ],
+      "calculation": "545,960 - 10,800 = 535,160",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "capitalization_value",
+      "group": "financial",
+      "present": true,
+      "actual": 9494956.52,
+      "expected": 9494956.52173913,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (underwritten NOI BEFORE reserves divided by 5.75% cap rate; no appraisal implied)"
+      ],
+      "calculation": "545,960 / 0.0575 = 9,494,956.52",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "contract_rate",
+      "group": "financial",
+      "present": true,
+      "actual": 0.059,
+      "expected": 0.059,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 'Contract rate 5.90% fixed annual contractual rate'"
+      ],
+      "calculation": "Stated",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "sizing_rate",
+      "group": "financial",
+      "present": true,
+      "actual": 0.0625,
+      "expected": 0.0625,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 'Sizing rate: greater of current contractual rate and 6.25% underwriting floor'"
+      ],
+      "calculation": "max(5.90%, 6.25%) = 6.25%",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "annual_debt_constant",
+      "group": "financial",
+      "present": true,
+      "actual": 0.0738860641,
+      "expected": 0.07388606405116734,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (30-year amortization, monthly payments; annual debt service = 12 monthly payments)",
+        "Workbook Sizing!B7"
+      ],
+      "calculation": "12 x PMT(0.0625/12, 360, 1) = 12 x 0.006157172 = 0.07388606405",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "ltv_limit",
+      "group": "financial",
+      "present": true,
+      "actual": 6171721.74,
+      "expected": 6171721.7391304355,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (LTV 65.00% of indicative value)",
+        "Workbook Sizing!B10"
+      ],
+      "calculation": "0.65 x 9,494,956.52 = 6,171,721.74",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "dscr_limit",
+      "group": "financial",
+      "present": true,
+      "actual": 5794435.06,
+      "expected": 5794435.060223457,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (minimum 1.25x using NCF after reserves over annual amortizing debt service at sizing rate)",
+        "Workbook Sizing!B11"
+      ],
+      "calculation": "(535,160 / 1.25) / 0.07388606405 = 428,128 / 0.07388606405 = 5,794,435.06",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "debt_yield_limit",
+      "group": "financial",
+      "present": true,
+      "actual": 6296000,
+      "expected": 6296000.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (minimum 8.50%; numerator is underwritten NCF AFTER reserves)",
+        "Workbook Sizing!B12"
+      ],
+      "calculation": "535,160 / 0.085 = 6,296,000",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "maximum_loan",
+      "group": "financial",
+      "present": true,
+      "actual": 5794435.06,
+      "expected": 5794435.060223457,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (loan ceiling is the lowest of the three constraints; no separate dollar cap)",
+        "Workbook Sizing!B14"
+      ],
+      "calculation": "min(6,171,721.74; 5,794,435.06; 6,296,000) = 5,794,435.06",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "binding_constraint",
+      "group": "financial",
+      "present": true,
+      "actual": "DSCR",
+      "expected": "DSCR",
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Workbook Sizing!B15"
+      ],
+      "calculation": "The DSCR constraint is the lowest of the three",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "sizing_annual_debt_service",
+      "group": "financial",
+      "present": true,
+      "actual": 428128,
+      "expected": 428128.00000000006,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1",
+        "Workbook Sizing!B17"
+      ],
+      "calculation": "5,794,435.06 x 0.07388606405 = 428,128.00",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "sizing_dscr",
+      "group": "financial",
+      "present": true,
+      "actual": 1.25,
+      "expected": 1.2499999999999998,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Workbook Sizing!B18"
+      ],
+      "calculation": "535,160 / 428,128 = 1.250 (binding exactly at the minimum)",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "sizing_debt_yield",
+      "group": "financial",
+      "present": true,
+      "actual": 0.0924,
+      "expected": 0.09235758006395917,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (debt-yield numerator is NCF after reserves)",
+        "Workbook Sizing!B19"
+      ],
+      "calculation": "535,160 / 5,794,435.06 = 0.092358",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "first_year_debt_service",
+      "group": "financial",
+      "present": true,
+      "actual": 341871.67,
+      "expected": 341871.66855318396,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lender-Terms.pdf p.1 (interest-only period 24 months; contract rate 5.90%)",
+        "Workbook Sizing!B21"
+      ],
+      "calculation": "Year 1 is interest-only: 5,794,435.06 x 0.059 = 341,871.67",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "cash_to_borrower",
+      "group": "financial",
+      "present": true,
+      "actual": 2405976.8,
+      "expected": 2405976.7972717816,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.1 (existing debt payoff $3,300,000; fixed closing costs $45,000)",
+        "Lender-Terms.pdf p.1 (origination fee 0.75% of actual initial principal)",
+        "Workbook SourcesUses!B12"
+      ],
+      "calculation": "5,794,435.06 - 3,300,000 - (0.0075 x 5,794,435.06 = 43,458.26) - 45,000 = 2,405,976.80 (positive = cash out)",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "stress_uw_noi",
+      "group": "financial",
+      "present": true,
+      "actual": 503252,
+      "expected": 503252.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 sensitivity instruction",
+        "Workbook Sensitivity!B11"
+      ],
+      "calculation": "EGI 854,160 x 0.95 = 811,452; management = max(30,000; 0.03 x 811,452 = 24,343.56) = 30,000 so total opex stays 308,200; NOI = 811,452 - 308,200 = 503,252",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    },
+    {
+      "field": "stress_maximum_loan",
+      "group": "financial",
+      "present": true,
+      "actual": 4812558.61,
+      "expected": 4812558.614707205,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Property-and-Plan.pdf p.2 (combined downside: EGI -5% and sizing rate +100 bps; cap rate constant)",
+        "Workbook Sensitivity!C18"
+      ],
+      "calculation": "Stressed NCF = 503,252 - 10,800 = 492,452. Sizing rate 7.25%, annual constant 0.08186115. LTV = 0.65 x (503,252/0.0575) = 5,688,935.65; DSCR = (492,452/1.25)/0.08186115 = 4,812,558.61; debt yield = 492,452/0.085 = 5,793,552.94; minimum = 4,812,558.61 (DSCR-bound)",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": null
+    }
+  ],
+  "groups": {
+    "extraction": {
+      "passed": 17,
+      "total": 18,
+      "percent": 94.44444444444444
+    },
+    "financial": {
+      "passed": 22,
+      "total": 22,
+      "percent": 100.0
+    }
+  },
+  "critical_errors": 1,
+  "missing_fields": [],
+  "duplicate_fields": [],
+  "evidence_score": null,
+  "evidence_status": "Requires source-supported review, not regex citation credit",
+  "qualifications": [
+    "All property, borrower, tenant, address and lender details are fictional; no external research, geocoding, comparables or outreach was performed. Only the five supplied files were used.",
+    "The September-2026-forward operating figures are a supplied underwriting scenario (Property-and-Plan.pdf p.2), not a lender-approved forecast, appraisal or credit approval. Indicative value is arithmetic capitalization of underwritten NOI before reserves at the stated 5.75% cap rate and is not an appraised value.",
+    "Historical T12 (Sep-2025 to Aug-2026) was not forced to equal the point-in-time annualized rent roll; T12 GPR of $840,000, annualized contractual rent of $747,300 and scenario GPR of $864,000 are distinct and reported separately.",
+    "NOI before replacement reserves and NCF after reserves are reported separately for both the historical and underwritten views, per the plan's instruction about accounting labels. Replacement reserves ($10,800), capital improvements ($62,000), existing loan P&I ($294,000) and depreciation ($180,000) are excluded from operating expenses.",
+    "verified_renewal_insurance is reported as unknown/null: the plan references an insurer renewal confirmation for $33,600 but that confirmation document is not in the packet. The $33,600 is used in underwriting only because the plan expressly instructs it as the allowance.",
+    "Unit 101's renewal option is treated as unexercised and the expiry held at 2027-07-31 because no exercise notice, acknowledgment or amendment was delivered.",
+    "Sizing used unrounded intermediates; displayed dollars are rounded for readers only. Sizing DSCR is exactly 1.25x, so the maximum loan is DSCR-bound and highly sensitive to underwritten NCF.",
+    "Existing debt payoff ($3,300,000) is the plan amount, not a lender payoff statement; no per-diem interest, escrow settlement, fee capitalization, interest reserve, cash sweep, earn-out or holdback is assumed.",
+    "The cap-rate +50 bps test is a separate sensitivity only (value $8,735,360; LTV constraint $5,677,984, which becomes binding in that isolated test). The combined downside holds the cap rate at 5.75% as instructed.",
+    "Post-interest-only amortizing debt service at the contract rate (approximately $412,427 per year, 1.30x on underwritten NCF) is shown as context; the reported first_year_debt_service observes the stated 24-month interest-only period at the 5.90% contract rate.",
+    "Deliverables created: artifacts/underwriting-v2.xlsx (workbook, inspected: 138 live formulas, zero formula errors) and artifacts/memorandum-v2.pdf (7-page financing memorandum). Nothing was blocked; all five source files were readable."
+  ],
+  "blocked": []
+}

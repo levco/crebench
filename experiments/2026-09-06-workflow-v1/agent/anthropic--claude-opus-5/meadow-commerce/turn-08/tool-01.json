@@ -1,0 +1,35 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01U6neU2CGrrWo3s3maQDH4R",
+  "arguments_raw": "{\"steps\":[{\"name\":\"contract_constant\",\"expression\":\"12*(-pmt(0.061/12,360,1))\"},{\"name\":\"post_io_ds\",\"expression\":\"6155634.461538462*contract_constant\"},{\"name\":\"gap\",\"expression\":\"466893.5648939759-post_io_ds\"},{\"name\":\"stress_cash\",\"expression\":\"5575432.187458429*0.99-3600000-55000\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "contract_constant",
+        "expression": "12*(-pmt(0.061/12,360,1))"
+      },
+      {
+        "name": "post_io_ds",
+        "expression": "6155634.461538462*contract_constant"
+      },
+      {
+        "name": "gap",
+        "expression": "466893.5648939759-post_io_ds"
+      },
+      {
+        "name": "stress_cash",
+        "expression": "5575432.187458429*0.99-3600000-55000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "contract_constant": 0.07271937426545112,
+      "post_io_ds": 447633.88624992414,
+      "gap": 19259.678644051775,
+      "stress_cash": 1864677.8655838445
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

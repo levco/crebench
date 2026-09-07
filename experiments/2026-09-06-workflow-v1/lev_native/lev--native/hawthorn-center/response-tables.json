@@ -1,0 +1,254 @@
+[
+  [
+    [
+      "Field ID",
+      "Value",
+      "Source / calc"
+    ],
+    [
+      "space_count",
+      "10",
+      "Rent roll row count"
+    ],
+    [
+      "occupied_count",
+      "9",
+      "9 of 10 units occupied"
+    ],
+    [
+      "total_area_sf",
+      "28,800",
+      "Sum of column C"
+    ],
+    [
+      "occupied_area_sf",
+      "27,200",
+      "Excludes Unit 110 vacancy"
+    ],
+    [
+      "occupancy_count_pct",
+      "90.00",
+      "9 ÷ 10 × 100"
+    ],
+    [
+      "occupancy_area_pct",
+      "94.44",
+      "27,200 ÷ 28,800 × 100"
+    ],
+    [
+      "rent_roll_monthly_base",
+      "$60,000",
+      "Sum of column E (rent-roll printed monthly base rent)"
+    ],
+    [
+      "effective_monthly_base",
+      "$60,000",
+      "No amendment overrides rent-roll totals. Lease-File.pdf §3 confirms Unit 101 $3,000/mo"
+    ]
+  ],
+  [
+    [
+      "Field ID",
+      "Value",
+      "Source / calc"
+    ],
+    [
+      "t12_egi",
+      "$866,400",
+      "GPR 759,600 + Other 176,400 − (Vac 40,800 + Conc 22,800 + Bad 6,000)"
+    ],
+    [
+      "t12_operating_expenses",
+      "$264,000",
+      "Tax 114 + Ins 32.4 + Util 21.6 + R&M 36 + Payroll 24 + Admin 18 + Mgmt 18 (in $000). Excludes reserves, capex, debt, depreciation"
+    ],
+    [
+      "t12_noi_before_reserves",
+      "$602,400",
+      "EGI − OpEx"
+    ],
+    [
+      "t12_reserves",
+      "$11,520",
+      "T12 replacement reserves (below NOI)"
+    ],
+    [
+      "t12_ncf",
+      "$590,880",
+      "NOI − reserves. Capex $74,000, debt P&I $294,000, depreciation $180,000 shown below cash flow per plan; excluded from OpEx"
+    ]
+  ],
+  [
+    [
+      "Field ID",
+      "Value",
+      "Source / calc"
+    ],
+    [
+      "uw_egi",
+      "$921,000",
+      "GPR 780,000 − 5% loss (39,000) + Other 180,000"
+    ],
+    [
+      "uw_management_fee",
+      "$36,840",
+      "MAX(T12 $18,000; 4% × EGI $36,840) — 4% × EGI binds"
+    ],
+    [
+      "uw_operating_expenses",
+      "$291,240",
+      "Tax 120 (plan) + Ins 34.8 (renewal) + Util 21.6 (T12) + R&M 36 (T12, no removal) + Payroll 24 (T12) + Admin 18 (T12) + Mgmt 36.84"
+    ],
+    [
+      "uw_noi_before_reserves",
+      "$629,760",
+      "EGI − OpEx"
+    ],
+    [
+      "uw_reserves",
+      "$4,320",
+      "$0.15 × 28,800 SF"
+    ],
+    [
+      "uw_ncf",
+      "$625,440",
+      "NOI − reserves"
+    ],
+    [
+      "capitalization_value",
+      "$10,076,160",
+      "629,760 ÷ 6.25% cap"
+    ]
+  ],
+  [
+    [
+      "Field ID",
+      "Value",
+      "Source"
+    ],
+    [
+      "subject_lease_monthly_rent",
+      "$3,000",
+      "Lease §3"
+    ],
+    [
+      "subject_lease_expiry",
+      "2029-08-31",
+      "Lease §2. §5 renewal option not exercised on evidence supplied"
+    ],
+    [
+      "subject_lease_deposit",
+      "$6,000",
+      "Lease §4 (not prepaid rent)"
+    ],
+    [
+      "verified_renewal_insurance",
+      "$34,800",
+      "Property-and-Plan.pdf: fictional insurer renewal 2026-08-25"
+    ],
+    [
+      "renewal_option_exercised",
+      "No",
+      "Lease §5: option exists; no exercise notice, landlord acknowledgment, or amendment supplied"
+    ],
+    [
+      "prepayment_friction",
+      "No bank prepayment penalty; a separately documented interest-rate swap may carry a termination payment or receipt — \"no penalty\" ≠ cost-free exit",
+      "Lender-Terms.pdf"
+    ]
+  ],
+  [
+    [
+      "Field ID",
+      "Value",
+      "Formula"
+    ],
+    [
+      "contract_rate",
+      "0.0635",
+      "Term sheet: 6.35% fixed"
+    ],
+    [
+      "sizing_rate",
+      "0.0635",
+      "MAX(contract, 6.35% floor)"
+    ],
+    [
+      "annual_debt_constant",
+      "0.079904",
+      "PMT(6.35%/12, 300, 1) × 12"
+    ],
+    [
+      "ltv_limit",
+      "$6,297,600",
+      "$10,076,160 × 62.50%"
+    ],
+    [
+      "dscr_limit",
+      "$6,261,937",
+      "$625,440 ÷ 1.25 ÷ 0.079904"
+    ],
+    [
+      "debt_yield_limit",
+      "$6,997,333",
+      "$629,760 ÷ 9.00%"
+    ],
+    [
+      "maximum_loan",
+      "$6,261,937",
+      "MIN of the three"
+    ],
+    [
+      "binding_constraint",
+      "DSCR",
+      "1.25x binds"
+    ],
+    [
+      "sizing_annual_debt_service",
+      "$500,352",
+      "Max loan × debt constant"
+    ],
+    [
+      "sizing_dscr",
+      "1.25x",
+      "$625,440 ÷ $500,352 (by construction)"
+    ],
+    [
+      "sizing_debt_yield",
+      "10.06%",
+      "$629,760 ÷ $6,261,937"
+    ],
+    [
+      "first_year_debt_service",
+      "$500,352",
+      "IO = 0 months → contract-rate amortizing DS (contract = sizing rate here)"
+    ],
+    [
+      "cash_to_borrower",
+      "+$1,959,841",
+      "Loan $6,261,937 − Payoff $4,200,000 − Origination $50,095 (0.80%) − Fixed closing $52,000. Positive = cash-out"
+    ]
+  ],
+  [
+    [
+      "Field ID",
+      "Value",
+      "Notes"
+    ],
+    [
+      "stress_uw_noi",
+      "$585,552",
+      "EGI −5% ($874,950); mgmt recalc $34,998; other OpEx unchanged"
+    ],
+    [
+      "stress_maximum_loan",
+      "$5,313,427",
+      "Combined downside: EGI −5% AND sizing rate +100 bps (to 7.35%); cap rate unchanged. DSCR still binds"
+    ],
+    [
+      "Cap rate +50 bps (isolated)",
+      "$5,831,111",
+      "Cap 6.75%; NOI unchanged; LTV binds"
+    ]
+  ]
+]

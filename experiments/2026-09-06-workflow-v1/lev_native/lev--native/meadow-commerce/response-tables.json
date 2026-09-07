@@ -1,0 +1,286 @@
+[
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "space_count",
+      "3",
+      "Rent-Roll.xlsx C7:C9"
+    ],
+    [
+      "occupied_count",
+      "3",
+      "Rent-Roll.xlsx F7:F9 all \"Occupied\""
+    ],
+    [
+      "total_area_sf",
+      "72,000",
+      "Rent-Roll.xlsx sum(E7:E9)"
+    ],
+    [
+      "occupied_area_sf",
+      "72,000",
+      "Rent-Roll.xlsx sum where Occupied"
+    ],
+    [
+      "occupancy_count_pct",
+      "100.00",
+      "3/3 × 100"
+    ],
+    [
+      "occupancy_area_pct",
+      "100.00",
+      "72,000/72,000 × 100"
+    ],
+    [
+      "rent_roll_monthly_base",
+      "$62,000",
+      "Rent-Roll.xlsx SUM(G7:G9)"
+    ],
+    [
+      "effective_monthly_base",
+      "$62,000",
+      "Lease-authoritative; matches rent roll"
+    ],
+    [
+      "subject_lease_monthly_rent",
+      "$12,800",
+      "Lease-File.pdf §3 (Unit 101)"
+    ],
+    [
+      "subject_lease_expiry",
+      "2028-08-31",
+      "Lease-File.pdf §2"
+    ],
+    [
+      "subject_lease_deposit",
+      "$25,600",
+      "Lease-File.pdf §4"
+    ],
+    [
+      "renewal_option_exercised",
+      "FALSE",
+      "Lease-File.pdf §5 — no exercise notice/amendment in packet"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Derivation"
+    ],
+    [
+      "t12_egi",
+      "$882,000",
+      "744,000 GPR + 0 vac − 18,000 conc − 2,400 bad debt + 158,400 other"
+    ],
+    [
+      "t12_operating_expenses",
+      "$212,400",
+      "102,000 + 26,400 + 9,600 + 19,200 + 12,000 + 16,800 + 26,400"
+    ],
+    [
+      "t12_noi_before_reserves",
+      "$669,600",
+      "EGI − opex"
+    ],
+    [
+      "t12_reserves",
+      "$14,400",
+      "T12 line (below NOI)"
+    ],
+    [
+      "t12_ncf",
+      "$655,200",
+      "NOI − reserves"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Derivation"
+    ],
+    [
+      "uw_egi",
+      "$895,320",
+      "756,000 GPR − (3% × 756,000) + 162,000 other = 756,000 − 22,680 + 162,000"
+    ],
+    [
+      "uw_management_fee",
+      "$26,859.60",
+      "greater of T12 actual ($26,400) or 3% × UW EGI ($26,859.60)"
+    ],
+    [
+      "uw_operating_expenses",
+      "$228,459.60",
+      "108,000 tax + 36,000 ins* + 9,600 util + 19,200 R&M + 12,000 payroll + 16,800 admin + 26,859.60 mgmt"
+    ],
+    [
+      "uw_noi_before_reserves",
+      "$666,860.40",
+      "UW EGI − UW opex"
+    ],
+    [
+      "uw_reserves",
+      "$14,400",
+      "$0.20/SF × 72,000 SF"
+    ],
+    [
+      "uw_ncf",
+      "$652,460.40",
+      "UW NOI − reserves"
+    ],
+    [
+      "capitalization_value",
+      "$10,259,390.77",
+      "666,860.40 / 6.50%"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Formula"
+    ],
+    [
+      "contract_rate",
+      "0.0610",
+      "Fixed contract rate"
+    ],
+    [
+      "sizing_rate",
+      "0.0650",
+      "max(6.10%, 6.50% floor)"
+    ],
+    [
+      "annual_debt_constant",
+      "0.075848",
+      "12 × PMT at 6.50%/12, 360 mo"
+    ],
+    [
+      "ltv_limit",
+      "$6,155,634.46",
+      "60% × $10,259,390.77"
+    ],
+    [
+      "dscr_limit",
+      "$6,617,070.17",
+      "$652,460.40 / (1.30 × 0.075848)"
+    ],
+    [
+      "debt_yield_limit",
+      "$6,868,004.21",
+      "$652,460.40 / 9.50%"
+    ],
+    [
+      "maximum_loan",
+      "$6,155,634.46",
+      "MIN of three"
+    ],
+    [
+      "binding_constraint",
+      "LTV",
+      ""
+    ],
+    [
+      "sizing_annual_debt_service",
+      "$466,893.56",
+      "Max loan × ADC (amortizing @ sizing rate)"
+    ],
+    [
+      "sizing_dscr",
+      "1.3974x",
+      "NCF / sizing DS (vs. 1.30x min)"
+    ],
+    [
+      "sizing_debt_yield",
+      "10.5994%",
+      "NCF / max loan (vs. 9.50% min)"
+    ],
+    [
+      "first_year_debt_service",
+      "$375,493.70",
+      "12 mo IO × 6.10% contract rate"
+    ]
+  ],
+  [
+    [
+      "",
+      "Amount"
+    ],
+    [
+      "New first mortgage",
+      "$6,155,634.46"
+    ],
+    [
+      "Existing debt payoff",
+      "($3,600,000)"
+    ],
+    [
+      "Origination fee (1% × loan)",
+      "($61,556.34)"
+    ],
+    [
+      "Fixed closing costs",
+      "($55,000)"
+    ],
+    [
+      "cash_to_borrower",
+      "$2,439,078.12 (positive = cash-out)"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value"
+    ],
+    [
+      "Stress EGI",
+      "$850,554"
+    ],
+    [
+      "Stress management fee",
+      "$26,400 (T12 actual now binds)"
+    ],
+    [
+      "stress_uw_noi (before reserves)",
+      "$622,554"
+    ],
+    [
+      "Stress NCF",
+      "$608,154"
+    ],
+    [
+      "Stress sizing rate",
+      "7.50%"
+    ],
+    [
+      "Stress ADC",
+      "0.083906"
+    ],
+    [
+      "Stress LTV limit",
+      "$5,746,652"
+    ],
+    [
+      "Stress DSCR limit",
+      "$5,575,432"
+    ],
+    [
+      "Stress DY limit",
+      "$6,401,621"
+    ],
+    [
+      "stress_maximum_loan",
+      "$5,575,432"
+    ],
+    [
+      "Stress binding constraint",
+      "DSCR"
+    ]
+  ]
+]

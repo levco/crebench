@@ -1,0 +1,46 @@
+{
+  "case_id": "stonebridge-logistics",
+  "requested_model": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-06T21:57:15.540Z",
+  "observed_completed_at": "2026-09-06T22:11:59.298Z",
+  "elapsed_seconds": 550.13,
+  "latency_basis": "Matched PostHog workflow trace; excludes setup and post-completion observation delay",
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "agent_version": "7.9",
+  "estimated_inference_cost_usd": 2.85262375,
+  "cost_basis": "PostHog trace estimate using OpenRouter model rates; charged generation events summed, duplicate run-summary excluded",
+  "cost_scope": "Matched native chat inference only. Setup extraction/classification, OCR, storage, hosting, subscription and operator time excluded; product credits not converted to USD.",
+  "operator_semantic_corrections": 0,
+  "operator_generation_confirmations": 0,
+  "latest_workbook": "artifacts/underwriting.xlsx",
+  "latest_memo": "artifacts/memorandum.pdf",
+  "model_calls_including_retries": null,
+  "tool_calls": null,
+  "source_commit": "bc0ffcb",
+  "trace_evidence": {
+    "trace_id": "fdb34f6a-6833-4ee0-bd33-65c1a96b794d",
+    "session_id": "764fc294-012e-46bf-b56d-746b1ec9855a",
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "generation_costs_usd": [
+      0.19587625,
+      2.21846625,
+      0.43828125
+    ],
+    "total_cost_usd": 2.85262375,
+    "elapsed_seconds": 550.13,
+    "cost_basis": "PostHog estimate using OpenRouter model rates; charge-bearing generation events only; excludes duplicate run-summary event",
+    "scope": "Matched native chat inference only; setup extraction/classification, OCR, storage, subscription and operator time excluded",
+    "trace_url": "https://us.posthog.com/project/96754/ai-observability/traces/fdb34f6a-6833-4ee0-bd33-65c1a96b794d",
+    "identity_verification": "Trace aiSessionId matches session in both downloaded original artifact object paths."
+  },
+  "input_delivery": "Five exact frozen files uploaded at deal setup and directly attached to a fresh deal-context chat; identical frozen brief."
+}

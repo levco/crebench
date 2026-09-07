@@ -1,0 +1,115 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_014gUyvS2tK8NUTH9KWC6ctT",
+  "arguments_raw": "{\"steps\":[{\"name\":\"t12_egi\",\"expression\":\"744000-18000-2400+158400\"},{\"name\":\"t12_opex\",\"expression\":\"102000+26400+9600+19200+12000+16800+26400\"},{\"name\":\"t12_noi\",\"expression\":\"t12_egi-t12_opex\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi-14400\"},{\"name\":\"uw_egi\",\"expression\":\"756000*0.97+162000\"},{\"name\":\"mgmt\",\"expression\":\"max(26400,0.03*uw_egi)\"},{\"name\":\"uw_opex\",\"expression\":\"108000+36000+9600+19200+12000+16800+mgmt\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi-uw_opex\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-14400\"},{\"name\":\"value\",\"expression\":\"uw_noi/0.065\"},{\"name\":\"ltv_limit\",\"expression\":\"0.60*value\"},{\"name\":\"constant\",\"expression\":\"12*(-pmt(0.065/12,360,1))\"},{\"name\":\"dscr_limit\",\"expression\":\"uw_ncf/1.30/constant\"},{\"name\":\"dy_limit\",\"expression\":\"uw_ncf/0.095\"},{\"name\":\"max_loan\",\"expression\":\"min(ltv_limit,dscr_limit,dy_limit)\"},{\"name\":\"sizing_ds\",\"expression\":\"max_loan*constant\"},{\"name\":\"sizing_dscr\",\"expression\":\"uw_ncf/sizing_ds\"},{\"name\":\"sizing_dy\",\"expression\":\"uw_ncf/max_loan\"},{\"name\":\"first_year_ds\",\"expression\":\"max_loan*0.061\"},{\"name\":\"cash_to_borrower\",\"expression\":\"max_loan-3600000-0.01*max_loan-55000\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "t12_egi",
+        "expression": "744000-18000-2400+158400"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "102000+26400+9600+19200+12000+16800+26400"
+      },
+      {
+        "name": "t12_noi",
+        "expression": "t12_egi-t12_opex"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi-14400"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "756000*0.97+162000"
+      },
+      {
+        "name": "mgmt",
+        "expression": "max(26400,0.03*uw_egi)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "108000+36000+9600+19200+12000+16800+mgmt"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi-uw_opex"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-14400"
+      },
+      {
+        "name": "value",
+        "expression": "uw_noi/0.065"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.60*value"
+      },
+      {
+        "name": "constant",
+        "expression": "12*(-pmt(0.065/12,360,1))"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "uw_ncf/1.30/constant"
+      },
+      {
+        "name": "dy_limit",
+        "expression": "uw_ncf/0.095"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(ltv_limit,dscr_limit,dy_limit)"
+      },
+      {
+        "name": "sizing_ds",
+        "expression": "max_loan*constant"
+      },
+      {
+        "name": "sizing_dscr",
+        "expression": "uw_ncf/sizing_ds"
+      },
+      {
+        "name": "sizing_dy",
+        "expression": "uw_ncf/max_loan"
+      },
+      {
+        "name": "first_year_ds",
+        "expression": "max_loan*0.061"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "max_loan-3600000-0.01*max_loan-55000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "t12_egi": 882000,
+      "t12_opex": 212400,
+      "t12_noi": 669600,
+      "t12_ncf": 655200,
+      "uw_egi": 895320.0,
+      "mgmt": 26859.6,
+      "uw_opex": 228459.6,
+      "uw_noi": 666860.4,
+      "uw_ncf": 652460.4,
+      "value": 10259390.76923077,
+      "ltv_limit": 6155634.461538462,
+      "constant": 0.07584816281915584,
+      "dscr_limit": 6617070.166633751,
+      "dy_limit": 6868004.2105263155,
+      "max_loan": 6155634.461538462,
+      "sizing_ds": 466893.5648939759,
+      "sizing_dscr": 1.3974499737390114,
+      "sizing_dy": 0.10599401313978157,
+      "first_year_ds": 375493.70215384616,
+      "cash_to_borrower": 2439078.1169230775
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

@@ -1,0 +1,9 @@
+file:///Users/yjzar/Documents/Codex/2026-09-06/i/work/crebench/tools/workflow-workbook.mjs:10
+  if(new Set(names.map(n=>String(n).toLowerCase())).size!==names.length || names.some(n=>typeof n!=='string'||!n.trim()||n.length>31||/[\\/?*:\[\]]/.test(n))) throw Error('Unique Excel sheet names of 1-31 characters required; no \\, /, ?, *, :, [ or ]');
+                                                                                                                                                                     ^
+
+Error: Unique Excel sheet names of 1-31 characters required; no \, /, ?, *, :, [ or ]
+    at writeWorkbook (file:///Users/yjzar/Documents/Codex/2026-09-06/i/work/crebench/tools/workflow-workbook.mjs:10:166)
+    at file:///Users/yjzar/Documents/Codex/2026-09-06/i/work/crebench/tools/workflow-workbook.mjs:57:36
+
+Node.js v24.19.0

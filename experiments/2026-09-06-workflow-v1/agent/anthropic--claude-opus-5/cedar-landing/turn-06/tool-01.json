@@ -1,0 +1,60 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01EPvdgzpzrPj8nwAZbGshuq",
+  "arguments_raw": "{\"steps\":[{\"name\":\"const625\",\"expression\":\"12*abs(pmt(0.0625/12,360,1))\"},{\"name\":\"postio_ads\",\"expression\":\"6407489.510999309*const625\"},{\"name\":\"cap50_ltv\",\"expression\":\"0.6*10358323.2\"},{\"name\":\"cap50_max\",\"expression\":\"min(0.6*10358323.2,6407489.510999309,7019946.666666666)\"},{\"name\":\"io_monthly\",\"expression\":\"6407489.510999309*0.0625/12\"},{\"name\":\"ltv_at_max\",\"expression\":\"6407489.510999309/11259046.956521738\"},{\"name\":\"dy_stress\",\"expression\":\"582325.44/5338641.2023136895\"},{\"name\":\"annual_rr\",\"expression\":\"56025*12\"},{\"name\":\"t12_gpr_vs_uw\",\"expression\":\"1056000-1036800\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "const625",
+        "expression": "12*abs(pmt(0.0625/12,360,1))"
+      },
+      {
+        "name": "postio_ads",
+        "expression": "6407489.510999309*const625"
+      },
+      {
+        "name": "cap50_ltv",
+        "expression": "0.6*10358323.2"
+      },
+      {
+        "name": "cap50_max",
+        "expression": "min(0.6*10358323.2,6407489.510999309,7019946.666666666)"
+      },
+      {
+        "name": "io_monthly",
+        "expression": "6407489.510999309*0.0625/12"
+      },
+      {
+        "name": "ltv_at_max",
+        "expression": "6407489.510999309/11259046.956521738"
+      },
+      {
+        "name": "dy_stress",
+        "expression": "582325.44/5338641.2023136895"
+      },
+      {
+        "name": "annual_rr",
+        "expression": "56025*12"
+      },
+      {
+        "name": "t12_gpr_vs_uw",
+        "expression": "1056000-1036800"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "const625": 0.07388606405116734,
+      "postio_ads": 473424.1804168778,
+      "cap50_ltv": 6214993.919999999,
+      "cap50_max": 6214993.919999999,
+      "io_monthly": 33372.3412031214,
+      "ltv_at_max": 0.5690969702624614,
+      "dy_stress": 0.10907746333423354,
+      "annual_rr": 672300,
+      "t12_gpr_vs_uw": 19200
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

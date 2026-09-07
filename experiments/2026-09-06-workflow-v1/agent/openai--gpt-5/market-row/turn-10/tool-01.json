@@ -1,0 +1,95 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_KMskRNlne4Xm1xkkMThSm5lR",
+  "arguments_raw": "{\"steps\":[{\"name\":\"uw_gross_potential\",\"expression\":\"657600\"},{\"name\":\"uw_loss\",\"expression\":\"0.06*uw_gross_potential\"},{\"name\":\"uw_other_income\",\"expression\":\"150000\"},{\"name\":\"uw_egi\",\"expression\":\"uw_gross_potential - uw_loss + uw_other_income\"},{\"name\":\"uw_mgmt_fee\",\"expression\":\"max(24000,0.04*uw_egi)\"},{\"name\":\"uw_opex_ex_mgmt\",\"expression\":\"90000+27600+19200+24000+18000+14400\"},{\"name\":\"uw_opex\",\"expression\":\"uw_opex_ex_mgmt + uw_mgmt_fee\"},{\"name\":\"uw_noi_brr\",\"expression\":\"uw_egi - uw_opex\"},{\"name\":\"reserves_per_sf\",\"expression\":\"0.20\"},{\"name\":\"total_sf\",\"expression\":\"23000\"},{\"name\":\"uw_reserves\",\"expression\":\"reserves_per_sf * total_sf\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi_brr - uw_reserves\"},{\"name\":\"cap_rate\",\"expression\":\"0.065\"},{\"name\":\"value\",\"expression\":\"uw_noi_brr / cap_rate\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*value\"},{\"name\":\"debt_yield_limit\",\"expression\":\"uw_noi_brr / 0.09\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "uw_gross_potential",
+        "expression": "657600"
+      },
+      {
+        "name": "uw_loss",
+        "expression": "0.06*uw_gross_potential"
+      },
+      {
+        "name": "uw_other_income",
+        "expression": "150000"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "uw_gross_potential - uw_loss + uw_other_income"
+      },
+      {
+        "name": "uw_mgmt_fee",
+        "expression": "max(24000,0.04*uw_egi)"
+      },
+      {
+        "name": "uw_opex_ex_mgmt",
+        "expression": "90000+27600+19200+24000+18000+14400"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "uw_opex_ex_mgmt + uw_mgmt_fee"
+      },
+      {
+        "name": "uw_noi_brr",
+        "expression": "uw_egi - uw_opex"
+      },
+      {
+        "name": "reserves_per_sf",
+        "expression": "0.20"
+      },
+      {
+        "name": "total_sf",
+        "expression": "23000"
+      },
+      {
+        "name": "uw_reserves",
+        "expression": "reserves_per_sf * total_sf"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi_brr - uw_reserves"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.065"
+      },
+      {
+        "name": "value",
+        "expression": "uw_noi_brr / cap_rate"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*value"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "uw_noi_brr / 0.09"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "uw_gross_potential": 657600,
+      "uw_loss": 39456.0,
+      "uw_other_income": 150000,
+      "uw_egi": 768144.0,
+      "uw_mgmt_fee": 30725.760000000002,
+      "uw_opex_ex_mgmt": 193200,
+      "uw_opex": 223925.76,
+      "uw_noi_brr": 544218.24,
+      "reserves_per_sf": 0.2,
+      "total_sf": 23000,
+      "uw_reserves": 4600.0,
+      "uw_ncf": 539618.24,
+      "cap_rate": 0.065,
+      "value": 8372588.307692307,
+      "ltv_limit": 5442182.399999999,
+      "debt_yield_limit": 6046869.333333333
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

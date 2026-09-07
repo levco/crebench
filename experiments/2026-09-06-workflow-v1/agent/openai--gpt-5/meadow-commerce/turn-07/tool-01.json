@@ -1,0 +1,65 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_dttaHSgqr0H9ZiHtFR6iWezi",
+  "arguments_raw": "{\"steps\":[{\"name\":\"t12_egi\",\"expression\":\"744000 - 18000 - 2400 + 158400\"},{\"name\":\"t12_opex\",\"expression\":\"102000 + 26400 + 9600 + 19200 + 12000 + 16800 + 26400\"},{\"name\":\"t12_noi_before_reserves\",\"expression\":\"t12_egi - t12_opex\"},{\"name\":\"t12_ncf\",\"expression\":\"t12_noi_before_reserves - 14400\"},{\"name\":\"uw_revenue_loss\",\"expression\":\"0.03 * 756000\"},{\"name\":\"uw_egi\",\"expression\":\"756000 - uw_revenue_loss + 162000\"},{\"name\":\"uw_management_fee\",\"expression\":\"max(26400, 0.03*uw_egi)\"},{\"name\":\"uw_opex\",\"expression\":\"108000 + 36000 + 9600 + 19200 + 12000 + 16800 + uw_management_fee\"},{\"name\":\"uw_noi_before_reserves\",\"expression\":\"uw_egi - uw_opex\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi_before_reserves - (0.20*72000)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "t12_egi",
+        "expression": "744000 - 18000 - 2400 + 158400"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "102000 + 26400 + 9600 + 19200 + 12000 + 16800 + 26400"
+      },
+      {
+        "name": "t12_noi_before_reserves",
+        "expression": "t12_egi - t12_opex"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "t12_noi_before_reserves - 14400"
+      },
+      {
+        "name": "uw_revenue_loss",
+        "expression": "0.03 * 756000"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "756000 - uw_revenue_loss + 162000"
+      },
+      {
+        "name": "uw_management_fee",
+        "expression": "max(26400, 0.03*uw_egi)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "108000 + 36000 + 9600 + 19200 + 12000 + 16800 + uw_management_fee"
+      },
+      {
+        "name": "uw_noi_before_reserves",
+        "expression": "uw_egi - uw_opex"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi_before_reserves - (0.20*72000)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "t12_egi": 882000,
+      "t12_opex": 212400,
+      "t12_noi_before_reserves": 669600,
+      "t12_ncf": 655200,
+      "uw_revenue_loss": 22680.0,
+      "uw_egi": 895320.0,
+      "uw_management_fee": 26859.6,
+      "uw_opex": 228459.6,
+      "uw_noi_before_reserves": 666860.4,
+      "uw_ncf": 652460.4
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

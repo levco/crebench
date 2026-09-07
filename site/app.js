@@ -43,3 +43,21 @@ if (rate) {
     document.getElementById('binding').textContent = `${binding} is the binding constraint.`;
   });
 }
+for (const explorer of document.querySelectorAll('[data-explorer]')) {
+  const select = explorer.querySelector('[data-system-select]');
+  const failures = explorer.querySelector('[data-failures-only]');
+  const update = () => {
+    let count = 0;
+    for (const block of explorer.querySelectorAll('[data-system-block]')) {
+      block.hidden = select.value !== 'all' && block.dataset.systemBlock !== select.value;
+      for (const row of block.querySelectorAll('[data-field-row]')) {
+        row.hidden = failures.checked && row.dataset.failed !== 'true';
+        if (!block.hidden && !row.hidden) count++;
+      }
+    }
+    explorer.querySelector('[data-visible-count]').textContent = `${count} checks shown`;
+  };
+  select.addEventListener('change', update);
+  failures.addEventListener('change', update);
+  update();
+}

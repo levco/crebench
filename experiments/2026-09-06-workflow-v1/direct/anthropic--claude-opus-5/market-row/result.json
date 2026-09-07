@@ -1,0 +1,66 @@
+{
+  "case_id": "market-row",
+  "requested_model": "anthropic/claude-opus-5",
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "track": "direct",
+  "status": "completed",
+  "started_at": "2026-09-06T21:59:17.012020+00:00",
+  "completed_at": "2026-09-06T22:02:38.267968+00:00",
+  "elapsed_seconds": 201.255,
+  "model_calls_including_retries": 1,
+  "tool_calls": 0,
+  "artifact_versions": {
+    "workbook": 0,
+    "memo": 0
+  },
+  "gateway_reported_cost_usd": 0.5165,
+  "known_partial_cost_usd": 0.5165,
+  "cost_complete": true,
+  "cost_basis": "Gateway usage.cost; all attempts included; absent usage remains unknown",
+  "subscription_or_host_cost_usd": null,
+  "operator_semantic_corrections": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 7465,
+        "completion_tokens": 19167,
+        "total_tokens": 26632,
+        "cost": 0.5165,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 9581,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.5165,
+        "gateway_cost": 0.5165
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 201.208,
+      "completed_at": "2026-09-06T22:02:38.266895+00:00"
+    }
+  ],
+  "latest_workbook": null,
+  "latest_memo": null,
+  "limitations": [
+    "Synthetic authored suite; no independent human review",
+    "Custom bounded general-purpose harness; not consumer ChatGPT or Claude",
+    "Provider defaults and gateway routing; not equal compute",
+    "Neutral artifact renderer constrains presentation choices"
+  ]
+}

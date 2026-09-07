@@ -1,0 +1,296 @@
+[
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "space_count",
+      "36",
+      "Units 101–120 (20 × 750 SF) + 121–136 (16 × 1,050 SF)"
+    ],
+    [
+      "occupied_count",
+      "33",
+      "Vacants: 109, 125, 136"
+    ],
+    [
+      "total_area_sf",
+      "31,800",
+      "20×750 + 16×1,050"
+    ],
+    [
+      "occupied_area_sf",
+      "28,950",
+      "19×750 + 14×1,050"
+    ],
+    [
+      "occupancy_count_pct",
+      "91.67",
+      "33 / 36 × 100"
+    ],
+    [
+      "occupancy_area_pct",
+      "91.04",
+      "28,950 / 31,800 × 100"
+    ],
+    [
+      "rent_roll_monthly_base",
+      "$62,275",
+      "SUM occupied contractual = 19×$1,675 + 14×$2,175"
+    ],
+    [
+      "effective_monthly_base",
+      "$62,275",
+      "Lease-File §3 unit 101 rent $1,675 matches rent roll; no authoritative amendment supersedes"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "t12_egi",
+      "$821,100",
+      "840,000 − 42,000 − 12,000 − 4,500 + 39,600"
+    ],
+    [
+      "t12_operating_expenses",
+      "$307,800",
+      "108,000 + 31,200 + 28,800 + 46,200 + 42,000 + 21,600 + 30,000"
+    ],
+    [
+      "t12_noi_before_reserves",
+      "$513,300",
+      "EGI − OpEx"
+    ],
+    [
+      "t12_reserves",
+      "$10,800",
+      "Replacement reserves annual (below NOI)"
+    ],
+    [
+      "t12_ncf",
+      "$502,500",
+      "NOI − reserves"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Basis"
+    ],
+    [
+      "uw_egi",
+      "$854,160",
+      "864,000 − 6% × 864,000 + 42,000"
+    ],
+    [
+      "uw_management_fee",
+      "$30,000",
+      "MAX(T12 $30,000; 3% × UW EGI $25,624.80) — floor binds"
+    ],
+    [
+      "uw_operating_expenses",
+      "$308,200",
+      "112,000 + 33,600 + 28,800 + 40,200* + 42,000 + 21,600 + 30,000"
+    ],
+    [
+      "uw_noi_before_reserves",
+      "$545,960",
+      "UW EGI − UW OpEx"
+    ],
+    [
+      "uw_reserves",
+      "$10,800",
+      "$300 × 36 units"
+    ],
+    [
+      "uw_ncf",
+      "$535,160",
+      "UW NOI − reserves"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Formula"
+    ],
+    [
+      "capitalization_value",
+      "$9,494,956.52",
+      "$545,960 / 5.75% (UW NOI before reserves)"
+    ],
+    [
+      "contract_rate",
+      "5.9000%",
+      "Lender-Terms"
+    ],
+    [
+      "sizing_rate",
+      "6.2500%",
+      "MAX(5.90%, 6.25% floor)"
+    ],
+    [
+      "annual_debt_constant",
+      "0.07388606",
+      "30-yr amort, monthly, at 6.25%"
+    ],
+    [
+      "ltv_limit",
+      "$6,171,721.74",
+      "65% × value"
+    ],
+    [
+      "dscr_limit",
+      "$5,794,435.06",
+      "$535,160 / 1.25 / 0.07388606"
+    ],
+    [
+      "debt_yield_limit",
+      "$6,296,000.00",
+      "$535,160 / 8.50%"
+    ],
+    [
+      "maximum_loan",
+      "$5,794,435.06",
+      "MIN of three"
+    ],
+    [
+      "binding_constraint",
+      "DSCR",
+      ""
+    ],
+    [
+      "sizing_annual_debt_service",
+      "$428,128.00",
+      "Max loan × ADC"
+    ],
+    [
+      "sizing_dscr",
+      "1.2500x",
+      "NCF / Sizing ADS"
+    ],
+    [
+      "sizing_debt_yield",
+      "9.24%",
+      "NCF / Max loan"
+    ],
+    [
+      "first_year_debt_service",
+      "$341,871.67",
+      "Loan × 5.90% (year 1 within 24-mo IO — interest only)"
+    ],
+    [
+      "cash_to_borrower",
+      "$2,405,976.80 (cash-out)",
+      "5,794,435.06 − 3,300,000 − 0.75% × loan ($43,458.26) − $45,000"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value"
+    ],
+    [
+      "stress_uw_egi",
+      "$811,452"
+    ],
+    [
+      "stress_mgmt_fee",
+      "$30,000 (floor still binds)"
+    ],
+    [
+      "stress_uw_noi",
+      "$503,252"
+    ],
+    [
+      "stress_ncf",
+      "$492,452"
+    ],
+    [
+      "stress_sizing_rate",
+      "7.25% (ADC 0.08186115)"
+    ],
+    [
+      "stress_ltv_limit",
+      "$5,688,935.65"
+    ],
+    [
+      "stress_dscr_limit",
+      "$4,812,558.61"
+    ],
+    [
+      "stress_dy_limit",
+      "$5,793,552.94"
+    ],
+    [
+      "stress_maximum_loan",
+      "$4,812,558.61 (DSCR-bound)"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value"
+    ],
+    [
+      "alt_value @ 6.25% cap",
+      "$8,735,360"
+    ],
+    [
+      "LTV limit",
+      "$5,677,984"
+    ],
+    [
+      "DSCR / DY limits",
+      "unchanged"
+    ],
+    [
+      "alt maximum_loan",
+      "$5,677,984 (now LTV-bound)"
+    ]
+  ],
+  [
+    [
+      "Field",
+      "Value",
+      "Source"
+    ],
+    [
+      "subject_lease_monthly_rent",
+      "$1,675",
+      "Lease-File §3"
+    ],
+    [
+      "subject_lease_expiry",
+      "2027-07-31",
+      "Lease-File §2"
+    ],
+    [
+      "subject_lease_deposit",
+      "$1,675",
+      "Lease-File §4"
+    ],
+    [
+      "verified_renewal_insurance",
+      "$33,600",
+      "Property-and-Plan p.2 renewal quote dated 2026-08-25"
+    ],
+    [
+      "renewal_option_exercised",
+      "No — option exists per Lease-File §5 (≥180-day notice + no uncured default) but no signed exercise notice in packet",
+      "Lease-File §5; Rent-Roll footer"
+    ],
+    [
+      "prepayment_friction",
+      "1% of outstanding principal in years 1–2; none stated thereafter. No swap assumed, so no swap breakage",
+      "Lender-Terms"
+    ]
+  ]
+]

@@ -1,0 +1,45 @@
+{
+  "case_id": "meadow-commerce",
+  "requested_model": "lev/native",
+  "track": "lev_native",
+  "status": "completed",
+  "started_at": "2026-09-06T21:51:51.869Z",
+  "observed_completed_at": "2026-09-06T22:11:59.205Z",
+  "elapsed_seconds": 864.5,
+  "latency_basis": "Matched PostHog workflow trace; excludes setup and post-completion observation delay",
+  "returned_models": [
+    "claude-opus-4-7"
+  ],
+  "agent_version": "7.9",
+  "estimated_inference_cost_usd": 3.305615,
+  "cost_basis": "PostHog trace estimate using OpenRouter model rates; charged generation events summed, duplicate run-summary excluded",
+  "cost_scope": "Matched native chat inference only. Setup extraction/classification, OCR, storage, hosting, subscription and operator time excluded; product credits not converted to USD.",
+  "operator_semantic_corrections": 0,
+  "operator_generation_confirmations": 0,
+  "latest_workbook": "artifacts/underwriting.xlsx",
+  "latest_memo": "artifacts/memorandum.pdf",
+  "model_calls_including_retries": null,
+  "tool_calls": null,
+  "source_commit": "bc0ffcb",
+  "trace_evidence": {
+    "trace_id": "4f9999dd-04ce-44f8-afcf-9612da9c50fe",
+    "session_id": "f3152760-ac4c-46ac-906c-02fa01dd7474",
+    "models": [
+      "claude-opus-4-7"
+    ],
+    "agent_versions": [
+      "7.9"
+    ],
+    "generation_costs_usd": [
+      2.8384875,
+      0.4671275
+    ],
+    "total_cost_usd": 3.305615,
+    "elapsed_seconds": 864.5,
+    "cost_basis": "PostHog estimate using OpenRouter model rates; charge-bearing generation events only; excludes duplicate run-summary event",
+    "scope": "Matched native chat inference only; setup extraction/classification, OCR, storage, subscription and operator time excluded",
+    "trace_url": "https://us.posthog.com/project/96754/ai-observability/traces/4f9999dd-04ce-44f8-afcf-9612da9c50fe",
+    "identity_verification": "Trace aiSessionId matches session in both downloaded original artifact object paths."
+  },
+  "input_delivery": "Five exact frozen files uploaded at deal setup and directly attached to a fresh deal-context chat; identical frozen brief."
+}

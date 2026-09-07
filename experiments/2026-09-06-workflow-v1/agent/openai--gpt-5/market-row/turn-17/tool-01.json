@@ -1,0 +1,10 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_XkAUOl0lWYncVTqEARcetcpt",
+  "arguments_raw": "{\"steps\":[{\"name\":\"sizing_annual_debt_service\",\"expression\":\"maximum_loan*annual_debt_constant\"},{\"name\":\"sizing_dscr\",\"expression\":\"539618.24/sizing_annual_debt_service\"},{\"name\":\"sizing_debt_yield\",\"expression\":\"544218.24/maximum_loan\"},{\"name\":\"annual_constant_contract\",\"expression\":\"12*pmt(0.0625/12,25*12,1)\"},{\"name\":\"first_year_debt_service\",\"expression\":\"abs(annual_constant_contract)*maximum_loan\"},{\"name\":\"cash_to_borrower\",\"expression\":\"maximum_loan - 0.01*maximum_loan - 3400000 - 48000\"}]}",
+  "result": {
+    "error": "Arithmetic only"
+  },
+  "status": "error",
+  "elapsed_seconds": 0.0
+}

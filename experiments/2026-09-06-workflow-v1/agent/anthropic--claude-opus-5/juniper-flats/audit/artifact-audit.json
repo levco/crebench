@@ -1,0 +1,202 @@
+{
+  "case_id": "juniper-flats",
+  "source_workbook": "underwriting-v2.xlsx",
+  "mapping_source": "underwriting-v2.json",
+  "engine": "LibreOfficeDev 26.8.0.0.alpha0",
+  "checks": [
+    {
+      "rubric_check": 1,
+      "passed": true,
+      "detail": "XLSX opens"
+    },
+    {
+      "rubric_check": 4,
+      "passed": true,
+      "detail": [
+        {
+          "field": "uw_noi_before_reserves",
+          "actual": 545960,
+          "expected": 545960.0,
+          "passed": true
+        },
+        {
+          "field": "uw_ncf",
+          "actual": 535160,
+          "expected": 535160.0,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5794435.06022348,
+          "expected": 5794435.060223457,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "rubric_check": 5,
+      "passed": true,
+      "detail": {
+        "uw_noi_before_reserves": true,
+        "uw_ncf": true,
+        "maximum_loan": true,
+        "capitalization_value": true,
+        "dscr_limit": true
+      }
+    },
+    {
+      "rubric_check": 6,
+      "passed": true,
+      "detail": [
+        {
+          "field": "capitalization_value",
+          "actual": 8735360,
+          "expected": 8735360.0,
+          "passed": true
+        },
+        {
+          "field": "ltv_limit",
+          "actual": 5677984,
+          "expected": 5677984.0,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5677984,
+          "expected": 5677984.0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "rubric_check": 7,
+      "passed": true,
+      "detail": [
+        {
+          "field": "dscr_limit",
+          "actual": 5229928.74076398,
+          "expected": 5229928.740763942,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5229928.74076398,
+          "expected": 5229928.740763942,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "rubric_check": 8,
+      "passed": true,
+      "detail": [
+        {
+          "field": "uw_noi_before_reserves",
+          "actual": 503252,
+          "expected": 503252.0,
+          "passed": true
+        },
+        {
+          "field": "uw_ncf",
+          "actual": 492452,
+          "expected": 492452.0,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5332014.97547869,
+          "expected": 5332014.975478739,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "rubric_check": 9,
+      "passed": true,
+      "detail": {
+        "formula_errors": [],
+        "external_links_or_macros": []
+      }
+    }
+  ],
+  "scenarios": {
+    "cap": {
+      "changes": {
+        "Assumptions!B27": 0.0625
+      },
+      "checks": [
+        {
+          "field": "capitalization_value",
+          "actual": 8735360,
+          "expected": 8735360.0,
+          "passed": true
+        },
+        {
+          "field": "ltv_limit",
+          "actual": 5677984,
+          "expected": 5677984.0,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5677984,
+          "expected": 5677984.0,
+          "passed": true
+        }
+      ]
+    },
+    "rate": {
+      "changes": {
+        "Assumptions!B32": 0.01
+      },
+      "checks": [
+        {
+          "field": "dscr_limit",
+          "actual": 5229928.74076398,
+          "expected": 5229928.740763942,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5229928.74076398,
+          "expected": 5229928.740763942,
+          "passed": true
+        }
+      ]
+    },
+    "egi": {
+      "changes": {
+        "Assumptions!B5": 820800.0,
+        "Assumptions!B7": 39900.0
+      },
+      "checks": [
+        {
+          "field": "uw_noi_before_reserves",
+          "actual": 503252,
+          "expected": 503252.0,
+          "passed": true
+        },
+        {
+          "field": "uw_ncf",
+          "actual": 492452,
+          "expected": 492452.0,
+          "passed": true
+        },
+        {
+          "field": "maximum_loan",
+          "actual": 5332014.97547869,
+          "expected": 5332014.975478739,
+          "passed": true
+        }
+      ]
+    }
+  },
+  "manual_checks_pending": [
+    2,
+    3,
+    10
+  ],
+  "automatic_checks_passed": 7,
+  "automatic_checks_total": 7,
+  "source_workbook_sha256": "872df0666c14b2b2bdb51d73106433e3f12d24e45addd12aca2a2ebbbaf63336"
+}

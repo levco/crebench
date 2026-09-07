@@ -1,0 +1,829 @@
+{
+  "case_id": "hawthorn-center",
+  "checks": [
+    {
+      "field": "space_count",
+      "group": "extraction",
+      "present": true,
+      "actual": "10",
+      "expected": 10,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Rent roll row count"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "space_count",
+        "10",
+        "Rent roll row count"
+      ]
+    },
+    {
+      "field": "occupied_count",
+      "group": "extraction",
+      "present": true,
+      "actual": "9",
+      "expected": 9,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "9 of 10 units occupied"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "occupied_count",
+        "9",
+        "9 of 10 units occupied"
+      ]
+    },
+    {
+      "field": "total_area_sf",
+      "group": "extraction",
+      "present": true,
+      "actual": "28,800",
+      "expected": 28800,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Sum of column C"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "total_area_sf",
+        "28,800",
+        "Sum of column C"
+      ]
+    },
+    {
+      "field": "occupied_area_sf",
+      "group": "extraction",
+      "present": true,
+      "actual": "27,200",
+      "expected": 27200,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Excludes Unit 110 vacancy"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "occupied_area_sf",
+        "27,200",
+        "Excludes Unit 110 vacancy"
+      ]
+    },
+    {
+      "field": "occupancy_count_pct",
+      "group": "extraction",
+      "present": true,
+      "actual": "90.00",
+      "expected": 90.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "9 \u00f7 10 \u00d7 100"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "occupancy_count_pct",
+        "90.00",
+        "9 \u00f7 10 \u00d7 100"
+      ]
+    },
+    {
+      "field": "occupancy_area_pct",
+      "group": "extraction",
+      "present": true,
+      "actual": "94.44",
+      "expected": 94.44444444444444,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "27,200 \u00f7 28,800 \u00d7 100"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "occupancy_area_pct",
+        "94.44",
+        "27,200 \u00f7 28,800 \u00d7 100"
+      ]
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "group": "extraction",
+      "present": true,
+      "actual": "$60,000",
+      "expected": 60000,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Sum of column E (rent-roll printed monthly base rent)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "rent_roll_monthly_base",
+        "$60,000",
+        "Sum of column E (rent-roll printed monthly base rent)"
+      ]
+    },
+    {
+      "field": "effective_monthly_base",
+      "group": "extraction",
+      "present": true,
+      "actual": "$60,000",
+      "expected": 60000,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "No amendment overrides rent-roll totals. Lease-File.pdf \u00a73 confirms Unit 101 $3,000/mo"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "effective_monthly_base",
+        "$60,000",
+        "No amendment overrides rent-roll totals. Lease-File.pdf \u00a73 confirms Unit 101 $3,000/mo"
+      ]
+    },
+    {
+      "field": "t12_egi",
+      "group": "extraction",
+      "present": true,
+      "actual": "$866,400",
+      "expected": 866400,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "GPR 759,600 + Other 176,400 \u2212 (Vac 40,800 + Conc 22,800 + Bad 6,000)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "t12_egi",
+        "$866,400",
+        "GPR 759,600 + Other 176,400 \u2212 (Vac 40,800 + Conc 22,800 + Bad 6,000)"
+      ]
+    },
+    {
+      "field": "t12_operating_expenses",
+      "group": "extraction",
+      "present": true,
+      "actual": "$264,000",
+      "expected": 264000,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Tax 114 + Ins 32.4 + Util 21.6 + R&M 36 + Payroll 24 + Admin 18 + Mgmt 18 (in $000). Excludes reserves, capex, debt, depreciation"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "t12_operating_expenses",
+        "$264,000",
+        "Tax 114 + Ins 32.4 + Util 21.6 + R&M 36 + Payroll 24 + Admin 18 + Mgmt 18 (in $000). Excludes reserves, capex, debt, depreciation"
+      ]
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "group": "extraction",
+      "present": true,
+      "actual": "$602,400",
+      "expected": 602400,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "EGI \u2212 OpEx"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "t12_noi_before_reserves",
+        "$602,400",
+        "EGI \u2212 OpEx"
+      ]
+    },
+    {
+      "field": "t12_reserves",
+      "group": "extraction",
+      "present": true,
+      "actual": "$11,520",
+      "expected": 11520,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "T12 replacement reserves (below NOI)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "t12_reserves",
+        "$11,520",
+        "T12 replacement reserves (below NOI)"
+      ]
+    },
+    {
+      "field": "t12_ncf",
+      "group": "extraction",
+      "present": true,
+      "actual": "$590,880",
+      "expected": 590880,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "NOI \u2212 reserves. Capex $74,000, debt P&I $294,000, depreciation $180,000 shown below cash flow per plan; excluded from OpEx"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "t12_ncf",
+        "$590,880",
+        "NOI \u2212 reserves. Capex $74,000, debt P&I $294,000, depreciation $180,000 shown below cash flow per plan; excluded from OpEx"
+      ]
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "group": "extraction",
+      "present": true,
+      "actual": "$3,000",
+      "expected": 3000,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease \u00a73"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "subject_lease_monthly_rent",
+        "$3,000",
+        "Lease \u00a73"
+      ]
+    },
+    {
+      "field": "subject_lease_expiry",
+      "group": "extraction",
+      "present": true,
+      "actual": "2029-08-31",
+      "expected": "2029-08-31",
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease \u00a72. \u00a75 renewal option not exercised on evidence supplied"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "subject_lease_expiry",
+        "2029-08-31",
+        "Lease \u00a72. \u00a75 renewal option not exercised on evidence supplied"
+      ]
+    },
+    {
+      "field": "subject_lease_deposit",
+      "group": "extraction",
+      "present": true,
+      "actual": "$6,000",
+      "expected": 6000,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease \u00a74 (not prepaid rent)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "subject_lease_deposit",
+        "$6,000",
+        "Lease \u00a74 (not prepaid rent)"
+      ]
+    },
+    {
+      "field": "renewal_option_exercised",
+      "group": "extraction",
+      "present": true,
+      "actual": "Not evidenced",
+      "expected": "Not evidenced",
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Lease \u00a75: option exists; no exercise notice, landlord acknowledgment, or amendment supplied"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "renewal_option_exercised",
+        "No",
+        "Lease \u00a75: option exists; no exercise notice, landlord acknowledgment, or amendment supplied"
+      ]
+    },
+    {
+      "field": "uw_egi",
+      "group": "financial",
+      "present": true,
+      "actual": "$921,000",
+      "expected": 921000.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "GPR 780,000 \u2212 5% loss (39,000) + Other 180,000"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "uw_egi",
+        "$921,000",
+        "GPR 780,000 \u2212 5% loss (39,000) + Other 180,000"
+      ]
+    },
+    {
+      "field": "uw_management_fee",
+      "group": "financial",
+      "present": true,
+      "actual": "$36,840",
+      "expected": 36840.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "MAX(T12 $18,000; 4% \u00d7 EGI $36,840) \u2014 4% \u00d7 EGI binds"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "uw_management_fee",
+        "$36,840",
+        "MAX(T12 $18,000; 4% \u00d7 EGI $36,840) \u2014 4% \u00d7 EGI binds"
+      ]
+    },
+    {
+      "field": "uw_operating_expenses",
+      "group": "financial",
+      "present": true,
+      "actual": "$291,240",
+      "expected": 291240.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Tax 120 (plan) + Ins 34.8 (renewal) + Util 21.6 (T12) + R&M 36 (T12, no removal) + Payroll 24 (T12) + Admin 18 (T12) + Mgmt 36.84"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "uw_operating_expenses",
+        "$291,240",
+        "Tax 120 (plan) + Ins 34.8 (renewal) + Util 21.6 (T12) + R&M 36 (T12, no removal) + Payroll 24 (T12) + Admin 18 (T12) + Mgmt 36.84"
+      ]
+    },
+    {
+      "field": "uw_noi_before_reserves",
+      "group": "financial",
+      "present": true,
+      "actual": "$629,760",
+      "expected": 629760.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "EGI \u2212 OpEx"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "uw_noi_before_reserves",
+        "$629,760",
+        "EGI \u2212 OpEx"
+      ]
+    },
+    {
+      "field": "uw_reserves",
+      "group": "financial",
+      "present": true,
+      "actual": "$4,320",
+      "expected": 4320.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "$0.15 \u00d7 28,800 SF"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "uw_reserves",
+        "$4,320",
+        "$0.15 \u00d7 28,800 SF"
+      ]
+    },
+    {
+      "field": "uw_ncf",
+      "group": "financial",
+      "present": true,
+      "actual": "$625,440",
+      "expected": 625440.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "NOI \u2212 reserves"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "uw_ncf",
+        "$625,440",
+        "NOI \u2212 reserves"
+      ]
+    },
+    {
+      "field": "capitalization_value",
+      "group": "financial",
+      "present": true,
+      "actual": "$10,076,160",
+      "expected": 10076160.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "629,760 \u00f7 6.25% cap"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "capitalization_value",
+        "$10,076,160",
+        "629,760 \u00f7 6.25% cap"
+      ]
+    },
+    {
+      "field": "contract_rate",
+      "group": "financial",
+      "present": true,
+      "actual": "0.0635",
+      "expected": 0.0635,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Term sheet: 6.35% fixed"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "contract_rate",
+        "0.0635",
+        "Term sheet: 6.35% fixed"
+      ]
+    },
+    {
+      "field": "sizing_rate",
+      "group": "financial",
+      "present": true,
+      "actual": "0.0635",
+      "expected": 0.0635,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "MAX(contract, 6.35% floor)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "sizing_rate",
+        "0.0635",
+        "MAX(contract, 6.35% floor)"
+      ]
+    },
+    {
+      "field": "annual_debt_constant",
+      "group": "financial",
+      "present": true,
+      "actual": "0.079904",
+      "expected": 0.07990371531238386,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "PMT(6.35%/12, 300, 1) \u00d7 12"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "annual_debt_constant",
+        "0.079904",
+        "PMT(6.35%/12, 300, 1) \u00d7 12"
+      ]
+    },
+    {
+      "field": "ltv_limit",
+      "group": "financial",
+      "present": true,
+      "actual": "$6,297,600",
+      "expected": 6297600.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "$10,076,160 \u00d7 62.50%"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "ltv_limit",
+        "$6,297,600",
+        "$10,076,160 \u00d7 62.50%"
+      ]
+    },
+    {
+      "field": "dscr_limit",
+      "group": "financial",
+      "present": true,
+      "actual": "$6,261,937",
+      "expected": 6261936.6076267185,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "$625,440 \u00f7 1.25 \u00f7 0.079904"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "dscr_limit",
+        "$6,261,937",
+        "$625,440 \u00f7 1.25 \u00f7 0.079904"
+      ]
+    },
+    {
+      "field": "debt_yield_limit",
+      "group": "financial",
+      "present": true,
+      "actual": "$6,997,333",
+      "expected": 6997333.333333334,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "$629,760 \u00f7 9.00%"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "debt_yield_limit",
+        "$6,997,333",
+        "$629,760 \u00f7 9.00%"
+      ]
+    },
+    {
+      "field": "maximum_loan",
+      "group": "financial",
+      "present": true,
+      "actual": "$6,261,937",
+      "expected": 6261936.6076267185,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "MIN of the three"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "maximum_loan",
+        "$6,261,937",
+        "MIN of the three"
+      ]
+    },
+    {
+      "field": "binding_constraint",
+      "group": "financial",
+      "present": true,
+      "actual": "DSCR",
+      "expected": "DSCR",
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "1.25x binds"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "binding_constraint",
+        "DSCR",
+        "1.25x binds"
+      ]
+    },
+    {
+      "field": "sizing_annual_debt_service",
+      "group": "financial",
+      "present": true,
+      "actual": "$500,352",
+      "expected": 500352.00000000006,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Max loan \u00d7 debt constant"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "sizing_annual_debt_service",
+        "$500,352",
+        "Max loan \u00d7 debt constant"
+      ]
+    },
+    {
+      "field": "sizing_dscr",
+      "group": "financial",
+      "present": true,
+      "actual": "1.25x",
+      "expected": 1.2499999999999998,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "$625,440 \u00f7 $500,352 (by construction)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "sizing_dscr",
+        "1.25x",
+        "$625,440 \u00f7 $500,352 (by construction)"
+      ]
+    },
+    {
+      "field": "sizing_debt_yield",
+      "group": "financial",
+      "present": true,
+      "actual": "10.06%",
+      "expected": 0.10056952656355296,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "$629,760 \u00f7 $6,261,937"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "sizing_debt_yield",
+        "10.06%",
+        "$629,760 \u00f7 $6,261,937"
+      ]
+    },
+    {
+      "field": "first_year_debt_service",
+      "group": "financial",
+      "present": true,
+      "actual": "$500,352",
+      "expected": 500352.00000000006,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "IO = 0 months \u2192 contract-rate amortizing DS (contract = sizing rate here)"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "first_year_debt_service",
+        "$500,352",
+        "IO = 0 months \u2192 contract-rate amortizing DS (contract = sizing rate here)"
+      ]
+    },
+    {
+      "field": "cash_to_borrower",
+      "group": "financial",
+      "present": true,
+      "actual": "+$1,959,841",
+      "expected": 1959841.1147657046,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Loan $6,261,937 \u2212 Payoff $4,200,000 \u2212 Origination $50,095 (0.80%) \u2212 Fixed closing $52,000. Positive = cash-out"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "cash_to_borrower",
+        "+$1,959,841",
+        "Loan $6,261,937 \u2212 Payoff $4,200,000 \u2212 Origination $50,095 (0.80%) \u2212 Fixed closing $52,000. Positive = cash-out"
+      ]
+    },
+    {
+      "field": "stress_uw_noi",
+      "group": "financial",
+      "present": true,
+      "actual": "$585,552",
+      "expected": 585552.0,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "EGI \u22125% ($874,950); mgmt recalc $34,998; other OpEx unchanged"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "stress_uw_noi",
+        "$585,552",
+        "EGI \u22125% ($874,950); mgmt recalc $34,998; other OpEx unchanged"
+      ]
+    },
+    {
+      "field": "stress_maximum_loan",
+      "group": "financial",
+      "present": true,
+      "actual": "$5,313,427",
+      "expected": 5313426.592763869,
+      "passed": true,
+      "critical_error": false,
+      "deviation": null,
+      "evidence": [
+        "Combined downside: EGI \u22125% AND sizing rate +100 bps (to 7.35%); cap rate unchanged. DSCR still binds"
+      ],
+      "calculation": "",
+      "evidence_support_status": "pending_source_review",
+      "transcription_excerpt": [
+        "stress_maximum_loan",
+        "$5,313,427",
+        "Combined downside: EGI \u22125% AND sizing rate +100 bps (to 7.35%); cap rate unchanged. DSCR still binds"
+      ]
+    }
+  ],
+  "groups": {
+    "extraction": {
+      "passed": 17,
+      "total": 17,
+      "percent": 100.0
+    },
+    "financial": {
+      "passed": 22,
+      "total": 22,
+      "percent": 100.0
+    }
+  },
+  "critical_errors": 0,
+  "missing_fields": [],
+  "duplicate_fields": [],
+  "evidence_score": null,
+  "evidence_status": "Requires source-supported review, not regex citation credit",
+  "qualifications": [],
+  "blocked": [],
+  "diagnostic_exclusions": {
+    "policy": "docs/workflow-insurance-criterion-2026-09-06.md",
+    "checks": [
+      {
+        "field": "verified_renewal_insurance",
+        "group": "extraction",
+        "present": true,
+        "actual": "$34,800",
+        "expected": 34800,
+        "passed": true,
+        "critical_error": false,
+        "deviation": null,
+        "evidence": [
+          "Property-and-Plan.pdf: fictional insurer renewal 2026-08-25"
+        ],
+        "calculation": "",
+        "evidence_support_status": "pending_source_review",
+        "transcription_excerpt": [
+          "verified_renewal_insurance",
+          "$34,800",
+          "Property-and-Plan.pdf: fictional insurer renewal 2026-08-25"
+        ]
+      }
+    ]
+  }
+}

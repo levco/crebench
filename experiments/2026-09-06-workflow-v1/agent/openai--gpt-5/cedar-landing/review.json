@@ -1,0 +1,267 @@
+{
+  "reviewer": "Codex author review with machine-assisted file inspection; not independent human validation",
+  "provider_blinded": false,
+  "rubric": "benchmarks/workflow-v1/RUBRIC.md",
+  "inspection_scope": "Full memo text and all PDF page renders; workbook formulas, input sheets, historical/UW separation and main underwriting rendering. Independent arithmetic and perturbations are in audit/.",
+  "summary": "Loan math and the changing-input workbook tests pass. An extra occupied apartment causes six source-fact errors that carry into the memo. The workbook omits source references.",
+  "workbook": [
+    {
+      "rubric_check": 2,
+      "passed": false,
+      "rationale": "Inputs and as-of date are present, but the delivered workbook contains no source file/page or clause references.",
+      "evidence": "Inputs and remaining workbook cell text: no PDF/XLSX source names or source-location notes."
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Historical and underwritten statements are separate and reconcile to their independently checked totals.",
+      "evidence": "T12 and underwriting sheets; historical NOI 320,000 / NCF 305,600; UW NOI 647,395.20 / NCF 631,795.20"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "The main underwriting sheet has readable labels, period columns and unclipped financial outputs.",
+      "evidence": "Rendered underwriting sheet; instruction/input and loan-sizing cells inspected"
+    }
+  ],
+  "memo": [
+    {
+      "rubric_check": 1,
+      "passed": true,
+      "rationale": "Actual delivered PDF opens and rendered text/tables are readable.",
+      "evidence": "artifacts PDF; all rendered pages reviewed"
+    },
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "Cedar Landing, August 31, 2026 and internal refinance purpose are stated.",
+      "evidence": "PDF opening title and property discussion"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Base sources/uses show loan 6,407,490, payoff 4,500,000, origination 64,075, closing 65,000 and cash out 1,778,415.",
+      "evidence": "PDF sources and uses"
+    },
+    {
+      "rubric_check": 4,
+      "passed": true,
+      "rationale": "Historical NOI 320,000 / NCF 305,600 remain separate from UW NOI 647,395 / NCF 631,795.",
+      "evidence": "PDF historical and underwritten tables"
+    },
+    {
+      "rubric_check": 5,
+      "passed": true,
+      "rationale": "DSCR binds at 6,407,490, with 1.30x sizing coverage and 9.86% debt yield; year-one IO debt service uses 6.25% contract rate.",
+      "evidence": "PDF financing and sizing tables"
+    },
+    {
+      "rubric_check": 6,
+      "passed": false,
+      "rationale": "The memo reports 34 occupied units, 27,800 occupied SF and $58,050 monthly rent; the source has 33, 26,700 and $56,025.",
+      "evidence": "PDF p.1 Property, rent roll and leases; p.2 source table."
+    },
+    {
+      "rubric_check": 7,
+      "passed": true,
+      "rationale": "Sensitivity and missing diligence are disclosed as risks and unresolved evidence.",
+      "evidence": "PDF downside and limitations sections"
+    },
+    {
+      "rubric_check": 8,
+      "passed": true,
+      "rationale": "Supplied underwriting scenario and lender assumptions are explicitly separated from historical actuals; no appraisal or credit commitment claimed.",
+      "evidence": "PDF assumptions and scope"
+    },
+    {
+      "rubric_check": 9,
+      "passed": true,
+      "rationale": "Source list identifies all five input files with locations for the financial and lease tables.",
+      "evidence": "PDF source-reference section"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Section hierarchy and tables can be read at normal page scale.",
+      "evidence": "Rendered full PDF"
+    }
+  ],
+  "evidence": [
+    {
+      "field": "space_count",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx C7:C54; Property-and-Plan.pdf p.2 unit-based reserves 48 units"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!C7:C54",
+      "source_observation": "48 listed units, numbered 101 through 148.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "occupied_count",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx rows C7:C39 occupied; C40:C54 vacant"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!F7:F54",
+      "source_observation": "Units 101\u2013133 are Occupied; 134\u2013148 are Vacant. The occupied total is 33.",
+      "rationale": "The cited source does not support the reported value; see source observation."
+    },
+    {
+      "field": "total_area_sf",
+      "passed": true,
+      "response_evidence": [
+        "Rent-Roll.xlsx E7:E54 total; 34 units x 700 sf (24, - actually 24 units at 700 sf and 24 units at 1100 sf) = (24*700)+(24*1100)=16800+26400=43200"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!E7:E54",
+      "source_observation": "24 \u00d7 700 + 24 \u00d7 1,100 = 43,200 SF.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "occupied_area_sf",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx occupied areas: 101\u2013133 occupied (700 sf x 23 = 16,100) and 125\u2013133 1100 sf x 9 = 9,900 and 134 occupied 1100; check sum."
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!E7:F54",
+      "source_observation": "Occupied units comprise 24 \u00d7 700 SF and 9 \u00d7 1,100 SF = 26,700 SF.",
+      "rationale": "The cited source does not support the reported value; see source observation."
+    },
+    {
+      "field": "occupancy_count_pct",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx counts as above"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!C7:F54",
+      "source_observation": "33 occupied / 48 total = 68.75%.",
+      "rationale": "The cited source does not support the reported value; see source observation."
+    },
+    {
+      "field": "occupancy_area_pct",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx areas as above"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!E7:F54",
+      "source_observation": "26,700 occupied SF / 43,200 total SF = 61.8056%.",
+      "rationale": "The cited source does not support the reported value; see source observation."
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "passed": false,
+      "response_evidence": [
+        "Rent-Roll.xlsx B9 summary created in workbook; source G7:G39 sum"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!F7:G54",
+      "source_observation": "24 occupied units \u00d7 $1,575 + 9 \u00d7 $2,025 = $56,025. Vacant monthly base cells are blank.",
+      "rationale": "The cited source does not support the reported value; see source observation."
+    },
+    {
+      "field": "effective_monthly_base",
+      "passed": false,
+      "response_evidence": [
+        "Lease-File.pdf p.1 confirms Unit 101 rent $1,575; no amendments changing any printed rents were provided"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx, Rent Roll!F7:G54; Lease-File.pdf \u00a73, \u00a76",
+      "source_observation": "Unit 101 remains $1,575 and no amendment is supplied, so contractual total remains $56,025.",
+      "rationale": "The cited source does not support the reported value; see source observation."
+    },
+    {
+      "field": "t12_egi",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 annual totals"
+      ],
+      "verified_source_location": "T12-Statement.pdf p.2 Annual column",
+      "source_observation": "1,036,800 \u2212 302,400 \u2212 64,800 \u2212 8,400 + 30,000 = 691,200.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "t12_operating_expenses",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 annual totals lines taxes through management fee"
+      ],
+      "verified_source_location": "T12-Statement.pdf p.2 Annual column",
+      "source_observation": "Tax 132,000; insurance 40,800; utilities 33,600; R&M 54,000; payroll 55,200; admin 27,600; management 28,000. Sum 371,200; excludes reserves/capex/debt/depreciation.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 EGI and opex totals"
+      ],
+      "verified_source_location": "T12-Statement.pdf p.2 Annual column",
+      "source_observation": "EGI 691,200 less operating expenses 371,200 = NOI 320,000.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "t12_reserves",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 Replacement reserves annual"
+      ],
+      "verified_source_location": "T12-Statement.pdf p.2 Annual column",
+      "source_observation": "Replacement reserves (below NOI): 14,400.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "t12_ncf",
+      "passed": true,
+      "response_evidence": [
+        "T12-Statement.pdf p.2 NOI before reserves and reserves"
+      ],
+      "verified_source_location": "T12-Statement.pdf p.2 Annual column",
+      "source_observation": "NOI before reserves 320,000 less 14,400 reserves = NCF 305,600.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 Sec. 3; Rent-Roll.xlsx G7"
+      ],
+      "verified_source_location": "Lease-File.pdf \u00a73",
+      "source_observation": "$1,575 per month as of August 31, 2026.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "subject_lease_expiry",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 Sec. 2; Rent-Roll.xlsx I7"
+      ],
+      "verified_source_location": "Lease-File.pdf \u00a72",
+      "source_observation": "The initial term expires 2027-06-30.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "subject_lease_deposit",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 Sec. 4"
+      ],
+      "verified_source_location": "Lease-File.pdf \u00a74",
+      "source_observation": "$1,200 security deposit; it is not prepaid rent or recurring income.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    },
+    {
+      "field": "renewal_option_exercised",
+      "passed": true,
+      "response_evidence": [
+        "Lease-File.pdf p.1 Sec. 5 notes no exercise notice in packet"
+      ],
+      "verified_source_location": "Lease-File.pdf \u00a75",
+      "source_observation": "No exercise notice, landlord acknowledgment or exercising amendment is included.",
+      "rationale": "Provided source locations and the scoped table context support this value; relevant source contents were checked."
+    }
+  ],
+  "findings": [
+    "The PDF has a trailing footer-only page and unsupported hyphen glyphs in some dates. Core table content remains readable, so these are polish findings rather than an additional acceptance-check failure.",
+    "A single extra occupied unit propagates into six source-fact errors. Source citations do not validate those wrong numbers."
+  ],
+  "critical_claims": [],
+  "insurance_ambiguity_policy": "docs/workflow-insurance-criterion-2026-09-06.md"
+}

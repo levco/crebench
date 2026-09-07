@@ -1,0 +1,12 @@
+# Workflow display normalization
+
+Recorded during execution, after the first Cedar Landing outputs were inspected. Original runner, grader and manifest remain unchanged. The release retains the original unnormalized field scores and publishes supplemental scores with a separate presentation-normalization record for every changed value. No evaluated system is rerun for this change.
+
+The shared brief explicitly says JSON is optional and asks for the numeric result in a readable table. A displayed value such as `6.250% (fixed)` is the numeric token `6.250%` with an annotation; stripping that annotation is transcription, not an answer correction. The same rule applies to every system and case. Ambiguous multiple answers remain unresolved; dates and free text are not treated as numbers.
+
+The `renewal_option_exercised` question asks **whether delivered materials evidence exercise**, not whether the tenant exercised the option outside the packet. A bare `No` therefore answers the same question as the key's `Not evidenced`. The original label allowlist was too narrow. This alias applies to every retained response, with the original value preserved. Unsupported claims about actual exercise remain subject to source and narrative review.
+
+Native answer tables are transcribed with exact table, row, column and full-row excerpts. If an answer appears under another plain-language heading, a reviewer can map it with an exact excerpt and rationale; missing facts are not filled from a key. Workbook output locations can likewise be located from the actual artifact's labels and formulas. An incorrect delivered location map is retained as a usability finding; it does not turn a correct adjacent numeric cell into a wrong number. The delivered workbook is never repaired during this process.
+# Additional equivalent displays found during all-run review
+
+The same normalization applies to JSON `false` and displayed `FALSE` for the question asking whether the delivered packet evidences option exercise. The multiplication glyph in a numeric ratio, such as `1.250×`, is the same unit suffix as `1.250x`. These conversions preserve original values and exact excerpts, apply across every system and do not change any number. An annotation that revises or contradicts a number is not stripped. These extensions were recorded before final aggregate publication; the original strict scores remain available.

@@ -1,0 +1,396 @@
+{
+  "reviewer": "Codex author review with machine-assisted file inspection; not independent human validation",
+  "provider_blinded": false,
+  "rubric": "benchmarks/workflow-v1/RUBRIC.md",
+  "inspection_scope": "Full memo text and all page renders; original workbook input and source labels, historical totals after LibreOffice recalculation, live formulas and main underwriting rendering. Automatic base and perturbation checks in audit/.",
+  "summary": "All 39 requested source and financial checks pass and the workbook passes all ten acceptance checks. The memo correctly handles the swap caveat but overstates downside cash-out in its opening recommendation; later pages give the correct amount.",
+  "workbook": [
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "Inputs, units, date and source references are identifiable.",
+      "evidence": "Delivered input/instruction/source sheets; non-formula cell inspection"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Historical and forward cash flows are separate and their totals reconcile.",
+      "evidence": "Recalculated historical sheet totals and original T12; independently tested underwriting outputs"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Main underwriting labels and numbers are visible and a reviewer can locate assumptions and decision outputs.",
+      "evidence": "Main underwriting sheet rendered at 1.3 scale; input and sizing cells inspected"
+    }
+  ],
+  "memo": [
+    {
+      "rubric_check": 1,
+      "passed": true,
+      "rationale": "A real PDF was downloaded and all pages rendered with readable main content.",
+      "evidence": "Original PDF and full-page render review"
+    },
+    {
+      "rubric_check": 2,
+      "passed": true,
+      "rationale": "The memo identifies the named property, August 31, 2026 as-of date and first-mortgage refinance purpose.",
+      "evidence": "PDF opening title, property table and recommendation"
+    },
+    {
+      "rubric_check": 3,
+      "passed": true,
+      "rationale": "Base loan, existing payoff, loan-based fee, fixed closing costs and net borrower cash reconcile to the supplied scenario.",
+      "evidence": "PDF sources/uses and independently checked key"
+    },
+    {
+      "rubric_check": 4,
+      "passed": true,
+      "rationale": "Historical T12 and forward underwriting are labeled separately, with NOI before reserves and NCF after reserves.",
+      "evidence": "PDF historical and underwriting tables; original T12 and plan"
+    },
+    {
+      "rubric_check": 5,
+      "passed": true,
+      "rationale": "Loan constraints, binding minimum and debt-service/coverage figures follow the lender terms.",
+      "evidence": "PDF financing/sizing section; Lender-Terms.pdf"
+    },
+    {
+      "rubric_check": 6,
+      "passed": true,
+      "rationale": "Occupancy and the subject lease are discussed against the supplied rent roll and controlling executed document.",
+      "evidence": "PDF property/lease discussion; Rent-Roll.xlsx and Lease-File.pdf"
+    },
+    {
+      "rubric_check": 7,
+      "passed": false,
+      "rationale": "Opening downside cash-out is inconsistent with its own later analysis and the fee-inclusive calculation.",
+      "evidence": "PDF p.1: roughly $1.06 million after fees; pp.3 and 5: approximately $1,019,000."
+    },
+    {
+      "rubric_check": 8,
+      "passed": true,
+      "rationale": "The supplied forecast, lender conventions and any provisional items are labeled as assumptions.",
+      "evidence": "PDF assumptions and limitations; Property-and-Plan.pdf"
+    },
+    {
+      "rubric_check": 9,
+      "passed": true,
+      "rationale": "The memorandum identifies the five source files and their relevant content.",
+      "evidence": "PDF source references and source pointers in the analysis"
+    },
+    {
+      "rubric_check": 10,
+      "passed": true,
+      "rationale": "Rendered headings, tables and financial values are readable with no materially clipped content.",
+      "evidence": "Full-page PDF rendering inspection"
+    }
+  ],
+  "evidence": [
+    {
+      "field": "space_count",
+      "passed": false,
+      "response_evidence": [
+        "Rent roll row count"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 10
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "occupied_count",
+      "passed": false,
+      "response_evidence": [
+        "9 of 10 units occupied"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 9
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "total_area_sf",
+      "passed": false,
+      "response_evidence": [
+        "Sum of column C"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 28800
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "occupied_area_sf",
+      "passed": false,
+      "response_evidence": [
+        "Excludes Unit 110 vacancy"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 27200
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "occupancy_count_pct",
+      "passed": false,
+      "response_evidence": [
+        "9 \u00f7 10 \u00d7 100"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 90.0
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "occupancy_area_pct",
+      "passed": false,
+      "response_evidence": [
+        "27,200 \u00f7 28,800 \u00d7 100"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 94.44444444444444
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "rent_roll_monthly_base",
+      "passed": false,
+      "response_evidence": [
+        "Sum of column E (rent-roll printed monthly base rent)"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx / Rent Roll rows 7 onward",
+      "source_observation": {
+        "checked_value": 60000
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "effective_monthly_base",
+      "passed": false,
+      "response_evidence": [
+        "No amendment overrides rent-roll totals. Lease-File.pdf \u00a73 confirms Unit 101 $3,000/mo"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Rent-Roll.xlsx and Lease-File.pdf / executed amendment where present",
+      "source_observation": {
+        "checked_value": 60000
+      },
+      "rationale": "Filename-only table heading and no complete correct original source location. Area column C and rent column E refer to the wrong source columns; derived fields inherit the unsupported inputs."
+    },
+    {
+      "field": "t12_egi",
+      "passed": false,
+      "response_evidence": [
+        "GPR 759,600 + Other 176,400 \u2212 (Vac 40,800 + Conc 22,800 + Bad 6,000)"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 866400
+      },
+      "rationale": "Historical amounts and arithmetic are correct, but the final T12 table cites no page or named source clause."
+    },
+    {
+      "field": "t12_operating_expenses",
+      "passed": false,
+      "response_evidence": [
+        "Tax 114 + Ins 32.4 + Util 21.6 + R&M 36 + Payroll 24 + Admin 18 + Mgmt 18 (in $000). Excludes reserves, capex, debt, depreciation"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 264000
+      },
+      "rationale": "Historical amounts and arithmetic are correct, but the final T12 table cites no page or named source clause."
+    },
+    {
+      "field": "t12_noi_before_reserves",
+      "passed": false,
+      "response_evidence": [
+        "EGI \u2212 OpEx"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 602400
+      },
+      "rationale": "Historical amounts and arithmetic are correct, but the final T12 table cites no page or named source clause."
+    },
+    {
+      "field": "t12_reserves",
+      "passed": false,
+      "response_evidence": [
+        "T12 replacement reserves (below NOI)"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 11520
+      },
+      "rationale": "Historical amounts and arithmetic are correct, but the final T12 table cites no page or named source clause."
+    },
+    {
+      "field": "t12_ncf",
+      "passed": false,
+      "response_evidence": [
+        "NOI \u2212 reserves. Capex $74,000, debt P&I $294,000, depreciation $180,000 shown below cash flow per plan; excluded from OpEx"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "T12-Statement.pdf / annual column, page 2",
+      "source_observation": {
+        "checked_value": 590880
+      },
+      "rationale": "Historical amounts and arithmetic are correct, but the final T12 table cites no page or named source clause."
+    },
+    {
+      "field": "subject_lease_monthly_rent",
+      "passed": true,
+      "response_evidence": [
+        "Lease \u00a73"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 3000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_expiry",
+      "passed": true,
+      "response_evidence": [
+        "Lease \u00a72. \u00a75 renewal option not exercised on evidence supplied"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "2029-08-31"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "subject_lease_deposit",
+      "passed": true,
+      "response_evidence": [
+        "Lease \u00a74 (not prepaid rent)"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": 6000
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    },
+    {
+      "field": "renewal_option_exercised",
+      "passed": true,
+      "response_evidence": [
+        "Lease \u00a75: option exists; no exercise notice, landlord acknowledgment, or amendment supplied"
+      ],
+      "response_context": [
+        "Rent roll \u2014 as of 2026-08-31 (source: Rent-Roll.xlsx)",
+        "Historical T12 (Sep-2025 through Aug-2026, source: T12-Statement.pdf)",
+        "Subject lease \u2014 Unit 101 (source: Lease-File.pdf)"
+      ],
+      "verified_source_location": "Lease-File.pdf / clauses 2-5, including executed amendment where present",
+      "source_observation": {
+        "checked_value": "Not evidenced"
+      },
+      "rationale": "The cited original source location, including explicitly linked calculations and scoped table context, supports the reported value."
+    }
+  ],
+  "evidence_review_status": "complete_author_review",
+  "findings": [
+    "Opening downside cash-out should be $1,018,919.18: $5,313,426.59 \u00d7 99.2% \u2212 $4.2M payoff \u2212 $52,000 closing. The $1.06M claim overstates it by about $41,081.",
+    "Six pages are readable; the property and financial tables remain legible."
+  ],
+  "critical_claims": [
+    {
+      "severity": "material",
+      "location": "PDF p.1 financing decision",
+      "claim": "Downside cash-out is roughly $1.06 million after fees.",
+      "correct_calculation": "5,313,426.592763869 \u00d7 (1 \u2212 .008) \u2212 4,200,000 \u2212 52,000 = 1,018,919.1800217582.",
+      "rationale": "The opening recommendation overstates downside net proceeds by approximately 4%; later pages correct it."
+    }
+  ],
+  "insurance_ambiguity_policy": "docs/workflow-insurance-criterion-2026-09-06.md",
+  "evidence_policy": "docs/workflow-evidence-review-2026-09-06.md"
+}

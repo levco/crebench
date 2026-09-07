@@ -1,0 +1,93 @@
+Assumptions | B1=Hawthorn Center | Editable underwriting assumptions
+Assumptions | B2=As of 2026-08-31 | fictional packet | USD
+Assumptions | B4=Item | C4=Value | D4=Source
+Assumptions | B6=Capitalization rate (EDITABLE) | C6=0.0625 | D6=Lender-Terms.pdf p.1 Valuation
+Assumptions | B7=Maximum LTV | C7=0.625 | D7=Lender-Terms.pdf p.1 LTV
+Assumptions | B8=Minimum DSCR (NCF after reserves) | C8=1.25 | D8=Lender-Terms.pdf p.1 DSCR
+Assumptions | B9=Minimum debt yield (NOI before reserves) | C9=0.09 | D9=Lender-Terms.pdf p.1 Debt yield
+Assumptions | B10=Contract rate (fixed) | C10=0.0635 | D10=Lender-Terms.pdf p.1 Contract rate
+Assumptions | B11=Sizing rate input / floor (EDITABLE) | C11=0.0635 | D11=Sizing = MAX(contract, floor)
+Assumptions | B12=Amortization (years) | C12=25
+Assumptions | B13=Interest-only period (months) | C13=0
+Assumptions | B14=Origination fee (% of principal) | C14=0.008
+Assumptions | B15=Fixed closing costs | C15=52000
+Assumptions | B16=Existing debt payoff | C16=4200000 | D16=Property-and-Plan.pdf p.1
+Assumptions | B17=Gross potential base rent (EDITABLE) | C17=780000 | D17=Property-and-Plan.pdf p.2
+Assumptions | B18=Combined revenue loss % | C18=0.05
+Assumptions | B19=Other income / recoveries (EDITABLE) | C19=180000
+Assumptions | B20=Management fee % of EGI | C20=0.04
+Assumptions | B21=T12 actual management fee (floor) | C21=18000
+Assumptions | B22=Replacement reserves per SF | C22=0.15
+Assumptions | B23=Total rentable SF (rent roll) | C23=='Rent Roll'!C16
+Assumptions | B24=EGI stress factor | C24=0.95
+Assumptions | B25=Sizing rate shock (downside) | C25=0.01
+Assumptions | B26=Cap rate shock (separate case) | C26=0.005
+Historical T12 | B1=Historical T12 | September 2025 - August 2026 (actual)
+Historical T12 | B2=Source: T12-Statement.pdf p.2 Annual column. Historical only.
+Historical T12 | B3=Line | C3=Annual
+Historical T12 | B4=Gross potential base rent | C4=759600
+Historical T12 | B5=Vacancy loss | C5=-40800
+Historical T12 | B6=Concessions | C6=-22800
+Historical T12 | B7=Bad debt | C7=-6000
+Historical T12 | B8=Other income / recoveries | C8=176400
+Historical T12 | B9=t12_egi | C9==SUM(C4:C8)
+Historical T12 | B10=Real estate taxes | C10=114000
+Historical T12 | B11=Property insurance | C11=32400
+Historical T12 | B12=Utilities | C12=21600
+Historical T12 | B13=Repairs and maintenance | C13=36000
+Historical T12 | B14=Payroll / contract labor | C14=24000
+Historical T12 | B15=Administrative / legal | C15=18000
+Historical T12 | B16=Management fee | C16=18000
+Historical T12 | B17=t12_operating_expenses | C17==SUM(C10:C16)
+Historical T12 | B18=t12_noi_before_reserves | C18==C9-C17
+Historical T12 | B19=t12_reserves | C19=11520
+Historical T12 | B20=t12_ncf (after reserves) | C20==C18-C19
+Historical T12 | B22=Below cash flow (not operating expense)
+Historical T12 | B23=Capital improvements | C23=74000
+Historical T12 | B24=Existing loan principal and interest | C24=294000
+Historical T12 | B25=Depreciation (noncash) | C25=180000
+Historical T12 | B27=The accounting package may call cash flow after reserves 'property NOI'; NOI before reserves and NCF after reserves are shown separately (Property-and-Plan.pdf p.1).
+Underwriting | B1=Underwritten scenario | September 2026 forward (annual)
+Underwriting | B2=Source: Property-and-Plan.pdf p.2. Supplied scenario, not a lender-approved forecast.
+Underwriting | B3=Line | C3=Annual | D3=Basis
+Underwriting | B4=Gross potential base rent | C4==Assumptions!C17 | D4=Assumptions!C17
+Underwriting | B5=Combined revenue loss | C5==-C4*Assumptions!C18 | D5=5.00% of gross potential rent
+Underwriting | B6=Net rental income | C6==C4+C5
+Underwriting | B7=Other income / recoveries | C7==Assumptions!C19 | D7=Added after loss
+Underwriting | B8=uw_egi | C8==C6+C7
+Underwriting | B9=Real estate taxes | C9=120000 | D9=Plan underwriting treatment
+Underwriting | B10=Property insurance | C10=34800 | D10=Scenario renewal allowance
+Underwriting | B11=Utilities | C11=21600 | D11=T12 actual
+Underwriting | B12=Repairs and maintenance | C12=36000 | D12=T12 actual; $0 one-time removed
+Underwriting | B13=Payroll / contract labor | C13=24000 | D13=T12 actual
+Underwriting | B14=Administrative / legal | C14=18000 | D14=T12 actual
+Underwriting | B15=uw_management_fee | C15==MAX(Assumptions!C21,Assumptions!C20*C8) | D15=Greater of T12 actual and 4.00% of EGI
+Underwriting | B16=uw_operating_expenses (before reserves) | C16==SUM(C9:C15)
+Underwriting | B17=uw_noi_before_reserves | C17==C8-C16
+Underwriting | B18=uw_reserves | C18==Assumptions!C22*Assumptions!C23 | D18=$0.15/SF x rentable SF
+Underwriting | B19=uw_ncf (after reserves) | C19==C17-C18
+Underwriting | B20=capitalization_value | C20==C17/Assumptions!C6 | D20=NOI before reserves / cap rate
+Underwriting | B21=Expense ratio (opex / EGI) | C21==C16/C8
+Input-Output Map | B1=Reviewer guide | editable inputs and key outputs
+Input-Output Map | B3=Editable input | C3=Location | D3=Effect
+Input-Output Map | B4=Capitalization rate | C4=Assumptions!C6 | D4=Value, LTV limit, cap sensitivity
+Input-Output Map | B5=Sizing interest rate | C5=Assumptions!C11 | D5=Debt constant, DSCR limit
+Input-Output Map | B6=EGI: gross potential base rent | C6=Assumptions!C17 | D6=EGI, management fee, NOI, all limits
+Input-Output Map | B7=EGI: other income | C7=Assumptions!C19 | D7=EGI and downstream outputs
+Input-Output Map | B8=Other assumptions | C8=Assumptions!C7:C26; Underwriting!C9:C14 | D8=Tests, fees, reserves, expenses
+Input-Output Map | B10=Key output | C10=Location
+Input-Output Map | B11=uw_egi | C11=Underwriting!C8
+Input-Output Map | B12=uw_management_fee | C12=Underwriting!C15
+Input-Output Map | B13=uw_operating_expenses | C13=Underwriting!C16
+Input-Output Map | B14=uw_noi_before_reserves | C14=Underwriting!C17
+Input-Output Map | B15=uw_reserves / uw_ncf | C15=Underwriting!C18 / C19
+Input-Output Map | B16=capitalization_value | C16=Underwriting!C20
+Input-Output Map | B17=annual_debt_constant | C17=Loan Sizing!C5
+Input-Output Map | B18=ltv_limit / dscr_limit / debt_yield_limit | C18=Loan Sizing!C8 / C9 / C10
+Input-Output Map | B19=maximum_loan / binding_constraint | C19=Loan Sizing!C12 / C13
+Input-Output Map | B20=sizing DS / DSCR / debt yield | C20=Loan Sizing!C14 / C15 / C16
+Input-Output Map | B21=first_year_debt_service | C21=Loan Sizing!C19
+Input-Output Map | B22=cash_to_borrower | C22=Sources and Uses!C12
+Input-Output Map | B23=stress_uw_noi / stress_maximum_loan | C23=Sensitivity!D8 / D18
+Input-Output Map | B24=Historical T12 (separate) | C24='Historical T12'!C9:C20
+Input-Output Map | B25=Rent roll metrics | C25='Rent Roll'!C16:C24

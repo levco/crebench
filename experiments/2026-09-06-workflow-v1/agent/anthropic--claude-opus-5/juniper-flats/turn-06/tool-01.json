@@ -1,0 +1,135 @@
+{
+  "name": "calculate_batch",
+  "call_id": "toolu_01T6DNPvSW781tK5rRsbyYJE",
+  "arguments_raw": "{\"steps\":[{\"name\":\"uw_egi\",\"expression\":\"864000*0.94+42000\"},{\"name\":\"mgmt3pct\",\"expression\":\"0.03*(864000*0.94+42000)\"},{\"name\":\"uw_opex\",\"expression\":\"112000+33600+28800+40200+42000+21600+30000\"},{\"name\":\"uw_noi\",\"expression\":\"(864000*0.94+42000)-(112000+33600+28800+40200+42000+21600+30000)\"},{\"name\":\"uw_ncf\",\"expression\":\"545960-10800\"},{\"name\":\"t12_egi\",\"expression\":\"840000-42000-12000-4500+39600\"},{\"name\":\"t12_opex\",\"expression\":\"108000+31200+28800+46200+42000+21600+30000\"},{\"name\":\"t12_noi\",\"expression\":\"821100-307800\"},{\"name\":\"t12_ncf\",\"expression\":\"513300-10800\"},{\"name\":\"sizing_ads\",\"expression\":\"5794435.060223457*0.07388606405116734\"},{\"name\":\"sizing_dy\",\"expression\":\"535160/5794435.060223457\"},{\"name\":\"fy_ds\",\"expression\":\"5794435.060223457*0.059\"},{\"name\":\"cash_to_borrower\",\"expression\":\"5794435.060223457*(1-0.0075)-3300000-45000\"},{\"name\":\"stress_egi\",\"expression\":\"854160*0.95\"},{\"name\":\"stress_noi\",\"expression\":\"811452-308200\"},{\"name\":\"stress_ncf\",\"expression\":\"503252-10800\"},{\"name\":\"const725\",\"expression\":\"12*-pmt(0.0725/12,360,1)\"},{\"name\":\"stress_ltv\",\"expression\":\"0.65*503252/0.0575\"},{\"name\":\"stress_dscr_limit\",\"expression\":\"(492452/1.25)/(12*-pmt(0.0725/12,360,1))\"},{\"name\":\"stress_dy_limit\",\"expression\":\"492452/0.085\"},{\"name\":\"stress_max\",\"expression\":\"min(0.65*503252/0.0575,(492452/1.25)/(12*-pmt(0.0725/12,360,1)),492452/0.085)\"},{\"name\":\"occ_area_pct\",\"expression\":\"28950/31800*100\"},{\"name\":\"occ_count_pct\",\"expression\":\"33/36*100\"},{\"name\":\"monthly_base\",\"expression\":\"19*1675+14*2175\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "uw_egi",
+        "expression": "864000*0.94+42000"
+      },
+      {
+        "name": "mgmt3pct",
+        "expression": "0.03*(864000*0.94+42000)"
+      },
+      {
+        "name": "uw_opex",
+        "expression": "112000+33600+28800+40200+42000+21600+30000"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "(864000*0.94+42000)-(112000+33600+28800+40200+42000+21600+30000)"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "545960-10800"
+      },
+      {
+        "name": "t12_egi",
+        "expression": "840000-42000-12000-4500+39600"
+      },
+      {
+        "name": "t12_opex",
+        "expression": "108000+31200+28800+46200+42000+21600+30000"
+      },
+      {
+        "name": "t12_noi",
+        "expression": "821100-307800"
+      },
+      {
+        "name": "t12_ncf",
+        "expression": "513300-10800"
+      },
+      {
+        "name": "sizing_ads",
+        "expression": "5794435.060223457*0.07388606405116734"
+      },
+      {
+        "name": "sizing_dy",
+        "expression": "535160/5794435.060223457"
+      },
+      {
+        "name": "fy_ds",
+        "expression": "5794435.060223457*0.059"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "5794435.060223457*(1-0.0075)-3300000-45000"
+      },
+      {
+        "name": "stress_egi",
+        "expression": "854160*0.95"
+      },
+      {
+        "name": "stress_noi",
+        "expression": "811452-308200"
+      },
+      {
+        "name": "stress_ncf",
+        "expression": "503252-10800"
+      },
+      {
+        "name": "const725",
+        "expression": "12*-pmt(0.0725/12,360,1)"
+      },
+      {
+        "name": "stress_ltv",
+        "expression": "0.65*503252/0.0575"
+      },
+      {
+        "name": "stress_dscr_limit",
+        "expression": "(492452/1.25)/(12*-pmt(0.0725/12,360,1))"
+      },
+      {
+        "name": "stress_dy_limit",
+        "expression": "492452/0.085"
+      },
+      {
+        "name": "stress_max",
+        "expression": "min(0.65*503252/0.0575,(492452/1.25)/(12*-pmt(0.0725/12,360,1)),492452/0.085)"
+      },
+      {
+        "name": "occ_area_pct",
+        "expression": "28950/31800*100"
+      },
+      {
+        "name": "occ_count_pct",
+        "expression": "33/36*100"
+      },
+      {
+        "name": "monthly_base",
+        "expression": "19*1675+14*2175"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "uw_egi": 854160.0,
+      "mgmt3pct": 25624.8,
+      "uw_opex": 308200,
+      "uw_noi": 545960.0,
+      "uw_ncf": 535160,
+      "t12_egi": 821100,
+      "t12_opex": 307800,
+      "t12_noi": 513300,
+      "t12_ncf": 502500,
+      "sizing_ads": 428128.00000000006,
+      "sizing_dy": 0.09235758006395917,
+      "fy_ds": 341871.66855318396,
+      "cash_to_borrower": 2405976.7972717816,
+      "stress_egi": 811452.0,
+      "stress_noi": 503252,
+      "stress_ncf": 492452,
+      "const725": 0.08186115360674281,
+      "stress_ltv": 5688935.652173912,
+      "stress_dscr_limit": 4812558.614707205,
+      "stress_dy_limit": 5793552.94117647,
+      "stress_max": 4812558.614707205,
+      "occ_area_pct": 91.0377358490566,
+      "occ_count_pct": 91.66666666666666,
+      "monthly_base": 62275
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

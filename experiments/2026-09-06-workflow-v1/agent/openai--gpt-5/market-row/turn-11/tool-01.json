@@ -1,0 +1,40 @@
+{
+  "name": "calculate_batch",
+  "call_id": "call_4Qd3kYbDomOOW2ZdKGla17mS",
+  "arguments_raw": "{\"steps\":[{\"name\":\"contract_rate\",\"expression\":\"0.0625\"},{\"name\":\"sizing_rate\",\"expression\":\"max(contract_rate,0.065)\"},{\"name\":\"monthly_rate\",\"expression\":\"sizing_rate/12\"},{\"name\":\"nper\",\"expression\":\"25*12\"},{\"name\":\"annual_debt_constant\",\"expression\":\"12*pmt(monthly_rate,nper,1)\"}]}",
+  "arguments": {
+    "steps": [
+      {
+        "name": "contract_rate",
+        "expression": "0.0625"
+      },
+      {
+        "name": "sizing_rate",
+        "expression": "max(contract_rate,0.065)"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "sizing_rate/12"
+      },
+      {
+        "name": "nper",
+        "expression": "25*12"
+      },
+      {
+        "name": "annual_debt_constant",
+        "expression": "12*pmt(monthly_rate,nper,1)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "contract_rate": 0.0625,
+      "sizing_rate": 0.065,
+      "monthly_rate": 0.005416666666666667,
+      "nper": 300,
+      "annual_debt_constant": -0.081024859361717
+    }
+  },
+  "status": "ok",
+  "elapsed_seconds": 0.0
+}

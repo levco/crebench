@@ -1,0 +1,43 @@
+Assumptions | A1=Cap rate | B1=0.0625
+Assumptions | A2=Sizing rate (annual) | B2=0.0635
+Assumptions | A3=EGI (annual) | B3=921000
+Assumptions | A4=Gross potential base rent (scenario) | B4=780000
+Assumptions | A5=Combined revenue loss % (scenario) | B5=0.05
+Assumptions | A6=Other income (scenario) | B6=180000
+Assumptions | A7=EGI from scenario = GPR*(1-Loss%)+Other | B7==B4*(1-B5)+B6
+Assumptions | A8=Rentable SF | B8=28800
+Assumptions | A9=Reserve per SF (annual) | B9=0.15
+Assumptions | A10=T12 management fee (annual) | B10=18000
+Assumptions | A11=Contract rate (annual) | B11=0.0635
+T12 | A1=Hawthorn Center | T12 summary (Sep 2025 - Aug 2026)
+T12 | A3=Gross potential base rent | B3=759600
+T12 | A4=Vacancy loss | B4=40800
+T12 | A5=Concessions | B5=22800
+T12 | A6=Bad debt | B6=6000
+T12 | A7=Other income / recoveries | B7=176400
+T12 | A8=EGI (calculated) | B8==B3-B4-B5-B6+B7
+T12 | A10=Real estate taxes | B10=114000
+T12 | A11=Property insurance | B11=32400
+T12 | A12=Utilities | B12=21600
+T12 | A13=Repairs and maintenance | B13=36000
+T12 | A14=Payroll / contract labor | B14=24000
+T12 | A15=Administrative / legal | B15=18000
+T12 | A16=Management fee | B16=18000
+T12 | A17=Operating expenses total (before reserves) | B17==SUM(B10:B16)
+T12 | A18=NOI before reserves | B18==B8-B17
+T12 | A20=Replacement reserves (below NOI) | B20=11520
+T12 | A21=NCF after reserves | B21==B18-B20
+Underwriting | A1=Underwriting summary
+Underwriting | A3=EGI (input) | B3=='Assumptions'!B3
+Underwriting | A5=Operating expenses (before reserves)
+Underwriting | A6=Real estate taxes | B6=120000
+Underwriting | A7=Property insurance (renewal) | B7=34800
+Underwriting | A8=Utilities | B8=21600
+Underwriting | A9=Repairs and maintenance | B9=36000
+Underwriting | A10=Payroll / contract labor | B10=24000
+Underwriting | A11=Administrative / legal | B11=18000
+Underwriting | A12=Management fee (greater of T12 or 4% of EGI) | B12==MAX('Assumptions'!B10,0.04*B3)
+Underwriting | A13=Operating expenses total (before reserves) | B13==SUM(B6:B12)
+Underwriting | A15=NOI before reserves | B15==B3-B13
+Underwriting | A17=Replacement reserves | B17=='Assumptions'!B8*'Assumptions'!B9
+Underwriting | A18=NCF after reserves | B18==B15-B17
