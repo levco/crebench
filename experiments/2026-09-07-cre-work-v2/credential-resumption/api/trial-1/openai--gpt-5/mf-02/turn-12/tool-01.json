@@ -1,0 +1,29 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"loan\",\"expression\":\"8821131.436016398\"},{\"name\":\"orig_fee\",\"expression\":\"loan*0.01\"},{\"name\":\"cash_to_borrower\",\"expression\":\"loan-orig_fee-45000-7200000\"}]}",
+  "call_id": "call_Tu9VNkSW0hOgJnRMg05n25kM",
+  "arguments": {
+    "steps": [
+      {
+        "name": "loan",
+        "expression": "8821131.436016398"
+      },
+      {
+        "name": "orig_fee",
+        "expression": "loan*0.01"
+      },
+      {
+        "name": "cash_to_borrower",
+        "expression": "loan-orig_fee-45000-7200000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "loan": 8821131.436016398,
+      "orig_fee": 88211.31436016397,
+      "cash_to_borrower": 1487920.1216562334
+    }
+  },
+  "status": "ok"
+}

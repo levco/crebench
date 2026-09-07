@@ -1,0 +1,49 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"io_interest\",\"expression\":\"8400193.75*0.061\"},{\"name\":\"implied_ltv\",\"expression\":\"8400193.75/13924619.23\"},{\"name\":\"implied_dy\",\"expression\":\"902700.25/8400193.75\"},{\"name\":\"d_capval\",\"expression\":\"13924619.23-14441795.2\"},{\"name\":\"d_loan\",\"expression\":\"8400193.75-9020580.43\"},{\"name\":\"d_nco\",\"expression\":\"471191.81-1085374.62\"},{\"name\":\"orig_fee\",\"expression\":\"8400193.75*0.01\"}]}",
+  "call_id": "toolu_01LEozXgGGe9PYp9xASKW2iL",
+  "arguments": {
+    "steps": [
+      {
+        "name": "io_interest",
+        "expression": "8400193.75*0.061"
+      },
+      {
+        "name": "implied_ltv",
+        "expression": "8400193.75/13924619.23"
+      },
+      {
+        "name": "implied_dy",
+        "expression": "902700.25/8400193.75"
+      },
+      {
+        "name": "d_capval",
+        "expression": "13924619.23-14441795.2"
+      },
+      {
+        "name": "d_loan",
+        "expression": "8400193.75-9020580.43"
+      },
+      {
+        "name": "d_nco",
+        "expression": "471191.81-1085374.62"
+      },
+      {
+        "name": "orig_fee",
+        "expression": "8400193.75*0.01"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "io_interest": 512411.81875,
+      "implied_ltv": 0.6032620074739379,
+      "implied_dy": 0.10746183681775197,
+      "d_capval": -517175.9699999988,
+      "d_loan": -620386.6799999997,
+      "d_nco": -614182.81,
+      "orig_fee": 84001.9375
+    }
+  },
+  "status": "ok"
+}

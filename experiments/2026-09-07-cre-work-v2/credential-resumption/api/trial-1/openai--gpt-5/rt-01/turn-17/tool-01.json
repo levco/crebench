@@ -1,0 +1,99 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"monthly_scheduled_all_revised\",\"expression\":\"6650*4 + 7025 + 6800*2 + 7075*3\"},{\"name\":\"gpr_revised\",\"expression\":\"(6650*4 + 7025 + 6800*2 + 7075*3) * 12\"},{\"name\":\"uw_egi_revised\",\"expression\":\"gpr_revised * 0.95 + 350*10\"},{\"name\":\"mgmt_fee_revised\",\"expression\":\"uw_egi_revised * 0.03\"},{\"name\":\"tot_opex_excl_res_revised\",\"expression\":\"85964 + 28655 + 114618 + mgmt_fee_revised\"},{\"name\":\"uw_noi_revised\",\"expression\":\"uw_egi_revised - tot_opex_excl_res_revised\"},{\"name\":\"uw_ncf_revised\",\"expression\":\"uw_noi_revised - 3000\"},{\"name\":\"cap_rate_revised\",\"expression\":\"0.0675 + 0.0025\"},{\"name\":\"value_revised\",\"expression\":\"uw_noi_revised / cap_rate_revised\"},{\"name\":\"sizing_rate_revised\",\"expression\":\"0.065 + 0.0075\"},{\"name\":\"annual_constant_revised\",\"expression\":\"abs(pmt(sizing_rate_revised/12,360,1))*12\"},{\"name\":\"ltv_limit_revised\",\"expression\":\"value_revised * 0.65\"},{\"name\":\"dscr_limit_revised\",\"expression\":\"(uw_ncf_revised/1.25)/annual_constant_revised\"},{\"name\":\"debt_yield_limit_revised\",\"expression\":\"uw_ncf_revised / 0.09\"},{\"name\":\"maximum_loan_revised\",\"expression\":\"min(ltv_limit_revised, dscr_limit_revised, debt_yield_limit_revised)\"},{\"name\":\"orig_fee_revised\",\"expression\":\"maximum_loan_revised * 0.01\"},{\"name\":\"net_cash_out_revised\",\"expression\":\"maximum_loan_revised - (orig_fee_revised + 45000 + 4300000)\"}]}",
+  "call_id": "call_BeM7lJIz9pHtWasoT8qvshEa",
+  "arguments": {
+    "steps": [
+      {
+        "name": "monthly_scheduled_all_revised",
+        "expression": "6650*4 + 7025 + 6800*2 + 7075*3"
+      },
+      {
+        "name": "gpr_revised",
+        "expression": "(6650*4 + 7025 + 6800*2 + 7075*3) * 12"
+      },
+      {
+        "name": "uw_egi_revised",
+        "expression": "gpr_revised * 0.95 + 350*10"
+      },
+      {
+        "name": "mgmt_fee_revised",
+        "expression": "uw_egi_revised * 0.03"
+      },
+      {
+        "name": "tot_opex_excl_res_revised",
+        "expression": "85964 + 28655 + 114618 + mgmt_fee_revised"
+      },
+      {
+        "name": "uw_noi_revised",
+        "expression": "uw_egi_revised - tot_opex_excl_res_revised"
+      },
+      {
+        "name": "uw_ncf_revised",
+        "expression": "uw_noi_revised - 3000"
+      },
+      {
+        "name": "cap_rate_revised",
+        "expression": "0.0675 + 0.0025"
+      },
+      {
+        "name": "value_revised",
+        "expression": "uw_noi_revised / cap_rate_revised"
+      },
+      {
+        "name": "sizing_rate_revised",
+        "expression": "0.065 + 0.0075"
+      },
+      {
+        "name": "annual_constant_revised",
+        "expression": "abs(pmt(sizing_rate_revised/12,360,1))*12"
+      },
+      {
+        "name": "ltv_limit_revised",
+        "expression": "value_revised * 0.65"
+      },
+      {
+        "name": "dscr_limit_revised",
+        "expression": "(uw_ncf_revised/1.25)/annual_constant_revised"
+      },
+      {
+        "name": "debt_yield_limit_revised",
+        "expression": "uw_ncf_revised / 0.09"
+      },
+      {
+        "name": "maximum_loan_revised",
+        "expression": "min(ltv_limit_revised, dscr_limit_revised, debt_yield_limit_revised)"
+      },
+      {
+        "name": "orig_fee_revised",
+        "expression": "maximum_loan_revised * 0.01"
+      },
+      {
+        "name": "net_cash_out_revised",
+        "expression": "maximum_loan_revised - (orig_fee_revised + 45000 + 4300000)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "monthly_scheduled_all_revised": 68450,
+      "gpr_revised": 821400,
+      "uw_egi_revised": 783830.0,
+      "mgmt_fee_revised": 23514.899999999998,
+      "tot_opex_excl_res_revised": 252751.9,
+      "uw_noi_revised": 531078.1,
+      "uw_ncf_revised": 528078.1,
+      "cap_rate_revised": 0.07,
+      "value_revised": 7586829.999999999,
+      "sizing_rate_revised": 0.07250000000000001,
+      "annual_constant_revised": 0.08186115360674281,
+      "ltv_limit_revised": 4931439.5,
+      "dscr_limit_revised": 5160719.84557523,
+      "debt_yield_limit_revised": 5867534.444444444,
+      "maximum_loan_revised": 4931439.5,
+      "orig_fee_revised": 49314.395000000004,
+      "net_cash_out_revised": 537125.1050000004
+    }
+  },
+  "status": "ok"
+}

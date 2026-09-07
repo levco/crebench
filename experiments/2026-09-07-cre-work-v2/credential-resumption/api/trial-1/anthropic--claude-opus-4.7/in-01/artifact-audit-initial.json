@@ -1,0 +1,193 @@
+{
+  "stage": "initial",
+  "workbook": {
+    "readable": true,
+    "base_checks": [
+      {
+        "field": "uw_egi",
+        "actual": 1335320,
+        "expected": 1335460.0,
+        "passed": false,
+        "live_formula": true
+      },
+      {
+        "field": "uw_noi",
+        "actual": 902476.4,
+        "expected": 902612.2,
+        "passed": false,
+        "live_formula": true
+      },
+      {
+        "field": "uw_ncf",
+        "actual": 900076.4,
+        "expected": 900212.2,
+        "passed": false,
+        "live_formula": true
+      },
+      {
+        "field": "capitalization_value",
+        "actual": 14439622.4,
+        "expected": 14441795.2,
+        "passed": false,
+        "live_formula": true
+      },
+      {
+        "field": "maximum_loan",
+        "actual": 9019219.64341535,
+        "expected": 9020580.427930512,
+        "passed": false,
+        "live_formula": true
+      },
+      {
+        "field": "net_cash_out",
+        "actual": 1084027.44698119,
+        "expected": 1085374.6236512065,
+        "passed": false,
+        "live_formula": true
+      }
+    ],
+    "perturbations": [
+      {
+        "input": "cap_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1335320,
+            "expected": 1335460.0,
+            "passed": false
+          },
+          {
+            "field": "uw_noi",
+            "actual": 902476.4,
+            "expected": 902612.2,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 900076.4,
+            "expected": 900212.2,
+            "passed": false
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 13370020.7407407,
+            "expected": 13372032.592592591,
+            "passed": false
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 8690513.48148148,
+            "expected": 8691821.185185185,
+            "passed": false
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 758608.346666666,
+            "expected": 759902.9733333327,
+            "passed": false
+          }
+        ],
+        "passed": false
+      },
+      {
+        "input": "gross_potential_rent",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1268687,
+            "expected": 1268827.0,
+            "passed": false
+          },
+          {
+            "field": "uw_noi",
+            "actual": 837842.39,
+            "expected": 837978.19,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 835442.39,
+            "expected": 835578.19,
+            "passed": false
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 13405478.24,
+            "expected": 13407651.04,
+            "passed": false
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 8371554.25342767,
+            "expected": 8372915.037942834,
+            "passed": false
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 442838.710893394,
+            "expected": 444185.88756340556,
+            "passed": false
+          }
+        ],
+        "passed": false
+      },
+      {
+        "input": "sizing_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1335320,
+            "expected": 1335460.0,
+            "passed": false
+          },
+          {
+            "field": "uw_noi",
+            "actual": 902476.4,
+            "expected": 902612.2,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 900076.4,
+            "expected": 900212.2,
+            "passed": false
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 14439622.4,
+            "expected": 14441795.2,
+            "passed": false
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 8177703.78530125,
+            "expected": 8178937.605201456,
+            "passed": false
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 250926.747448238,
+            "expected": 252148.22914944123,
+            "passed": false
+          }
+        ],
+        "passed": false
+      }
+    ],
+    "all_base_outputs_correct": false,
+    "all_sensitivities_correct": false
+  },
+  "om": {
+    "readable": true,
+    "pages": 3,
+    "characters": 5198,
+    "approved_copy_present": true,
+    "financial_and_presentation_review": "pending; readable PDF is not acceptance"
+  },
+  "professional_acceptance": null,
+  "human_review": "pending",
+  "original_hashes": {
+    "artifacts/underwriting-v1.xlsx": "20bc582b4b464f0bcc3532b9f4d249cfdf7449fabf6739d07d8d06a52f9da8c3",
+    "artifacts/memorandum-v1.pdf": "52c3ea8602df50a80b3a87efb56b89daf25d6ecf3420c6c6a0ece23a98abbca4"
+  }
+}

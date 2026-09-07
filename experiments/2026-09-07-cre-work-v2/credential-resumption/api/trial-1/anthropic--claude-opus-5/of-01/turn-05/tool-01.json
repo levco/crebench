@@ -1,0 +1,104 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr\",\"expression\":\"4*(11050+11200+11475)*12\"},{\"name\":\"other\",\"expression\":\"350*12\"},{\"name\":\"egi\",\"expression\":\"gpr*0.95+other\"},{\"name\":\"mgmt\",\"expression\":\"0.03*egi\"},{\"name\":\"opex\",\"expression\":\"169974+56658+226632+mgmt\"},{\"name\":\"noi\",\"expression\":\"egi-opex\"},{\"name\":\"ncf\",\"expression\":\"noi-300*12\"},{\"name\":\"capval\",\"expression\":\"noi/0.075\"},{\"name\":\"ltv\",\"expression\":\"0.6*capval\"},{\"name\":\"dy\",\"expression\":\"ncf/0.09\"},{\"name\":\"mpmt\",\"expression\":\"ncf/1.25/12\"},{\"name\":\"dscrloan\",\"expression\":\"mpmt*(1-(1+0.0675/12)**(-360))/(0.0675/12)\"},{\"name\":\"maxloan\",\"expression\":\"min(ltv,dy,dscrloan)\"},{\"name\":\"fee\",\"expression\":\"0.01*min(ltv,dy,dscrloan)\"},{\"name\":\"netcash\",\"expression\":\"maxloan-fee-45000-6500000\"},{\"name\":\"inplace\",\"expression\":\"3*(11050+11200+11475)*12\"},{\"name\":\"occarea\",\"expression\":\"3*(5380+5500+5710)\"},{\"name\":\"totarea\",\"expression\":\"4*(5380+5500+5710)\"}]}",
+  "call_id": "toolu_01XDpnBNR9baDUV9FpQmWTop",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr",
+        "expression": "4*(11050+11200+11475)*12"
+      },
+      {
+        "name": "other",
+        "expression": "350*12"
+      },
+      {
+        "name": "egi",
+        "expression": "gpr*0.95+other"
+      },
+      {
+        "name": "mgmt",
+        "expression": "0.03*egi"
+      },
+      {
+        "name": "opex",
+        "expression": "169974+56658+226632+mgmt"
+      },
+      {
+        "name": "noi",
+        "expression": "egi-opex"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi-300*12"
+      },
+      {
+        "name": "capval",
+        "expression": "noi/0.075"
+      },
+      {
+        "name": "ltv",
+        "expression": "0.6*capval"
+      },
+      {
+        "name": "dy",
+        "expression": "ncf/0.09"
+      },
+      {
+        "name": "mpmt",
+        "expression": "ncf/1.25/12"
+      },
+      {
+        "name": "dscrloan",
+        "expression": "mpmt*(1-(1+0.0675/12)**(-360))/(0.0675/12)"
+      },
+      {
+        "name": "maxloan",
+        "expression": "min(ltv,dy,dscrloan)"
+      },
+      {
+        "name": "fee",
+        "expression": "0.01*min(ltv,dy,dscrloan)"
+      },
+      {
+        "name": "netcash",
+        "expression": "maxloan-fee-45000-6500000"
+      },
+      {
+        "name": "inplace",
+        "expression": "3*(11050+11200+11475)*12"
+      },
+      {
+        "name": "occarea",
+        "expression": "3*(5380+5500+5710)"
+      },
+      {
+        "name": "totarea",
+        "expression": "4*(5380+5500+5710)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr": 1618800,
+      "other": 4200,
+      "egi": 1542060.0,
+      "mgmt": 46261.799999999996,
+      "opex": 499525.8,
+      "noi": 1042534.2,
+      "ncf": 1038934.2,
+      "capval": 13900456.0,
+      "ltv": 8340273.6,
+      "dy": 11543713.333333334,
+      "mpmt": 69262.28,
+      "dscrloan": 10678767.077250497,
+      "maxloan": 8340273.6,
+      "fee": 83402.736,
+      "netcash": 1711870.864,
+      "inplace": 1214100,
+      "occarea": 49770,
+      "totarea": 66360
+    }
+  },
+  "status": "ok"
+}

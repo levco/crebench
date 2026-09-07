@@ -1,0 +1,159 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"monthly_rent_sum_all\",\"expression\":\"14450+14600+14875+14450+14600+14875+14450+14600\"},{\"name\":\"gross_potential_rent\",\"expression\":\"monthly_rent_sum_all*12\"},{\"name\":\"monthly_rent_sum_occupied\",\"expression\":\"14450+14600+14875+14450+14600+14875+14450\"},{\"name\":\"annual_in_place_rent\",\"expression\":\"monthly_rent_sum_occupied*12\"},{\"name\":\"total_area_sf\",\"expression\":\"21880+22000+22210+21880+22000+22210+21880+22000\"},{\"name\":\"occupied_area_sf\",\"expression\":\"total_area_sf-22000\"},{\"name\":\"unit_occupancy\",\"expression\":\"7/8\"},{\"name\":\"area_occupancy\",\"expression\":\"occupied_area_sf/total_area_sf\"},{\"name\":\"other_income\",\"expression\":\"350*8\"},{\"name\":\"uw_egi\",\"expression\":\"gross_potential_rent*0.95+other_income\"},{\"name\":\"uw_tax\",\"expression\":\"147294\"},{\"name\":\"uw_insurance\",\"expression\":\"49098\"},{\"name\":\"other_opex\",\"expression\":\"196392\"},{\"name\":\"management_fee\",\"expression\":\"uw_egi*0.03\"},{\"name\":\"uw_operating_expenses\",\"expression\":\"other_opex+management_fee\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi-uw_tax-uw_insurance-uw_operating_expenses\"},{\"name\":\"reserves\",\"expression\":\"300*8\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-reserves\"},{\"name\":\"cap_rate\",\"expression\":\"0.0625\"},{\"name\":\"capitalization_value\",\"expression\":\"uw_noi/cap_rate\"},{\"name\":\"sizing_rate\",\"expression\":\"max(0.061,0.07)\"},{\"name\":\"monthly_rate\",\"expression\":\"sizing_rate/12\"},{\"name\":\"debt_constant_annual\",\"expression\":\"12*pmt(monthly_rate,360,1)\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*capitalization_value\"},{\"name\":\"dscr_limit\",\"expression\":\"uw_ncf/1.25/debt_constant_annual\"},{\"name\":\"debt_yield_limit\",\"expression\":\"uw_ncf/0.09\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit,dscr_limit,debt_yield_limit)\"},{\"name\":\"origination_fee\",\"expression\":\"0.01*maximum_loan\"},{\"name\":\"net_cash_out\",\"expression\":\"maximum_loan - origination_fee - 45000 - 7800000\"}]}",
+  "call_id": "call_Jat0mOxu3zLmnOkbxtOVi5wI",
+  "arguments": {
+    "steps": [
+      {
+        "name": "monthly_rent_sum_all",
+        "expression": "14450+14600+14875+14450+14600+14875+14450+14600"
+      },
+      {
+        "name": "gross_potential_rent",
+        "expression": "monthly_rent_sum_all*12"
+      },
+      {
+        "name": "monthly_rent_sum_occupied",
+        "expression": "14450+14600+14875+14450+14600+14875+14450"
+      },
+      {
+        "name": "annual_in_place_rent",
+        "expression": "monthly_rent_sum_occupied*12"
+      },
+      {
+        "name": "total_area_sf",
+        "expression": "21880+22000+22210+21880+22000+22210+21880+22000"
+      },
+      {
+        "name": "occupied_area_sf",
+        "expression": "total_area_sf-22000"
+      },
+      {
+        "name": "unit_occupancy",
+        "expression": "7/8"
+      },
+      {
+        "name": "area_occupancy",
+        "expression": "occupied_area_sf/total_area_sf"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*8"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "gross_potential_rent*0.95+other_income"
+      },
+      {
+        "name": "uw_tax",
+        "expression": "147294"
+      },
+      {
+        "name": "uw_insurance",
+        "expression": "49098"
+      },
+      {
+        "name": "other_opex",
+        "expression": "196392"
+      },
+      {
+        "name": "management_fee",
+        "expression": "uw_egi*0.03"
+      },
+      {
+        "name": "uw_operating_expenses",
+        "expression": "other_opex+management_fee"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi-uw_tax-uw_insurance-uw_operating_expenses"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*8"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-reserves"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.0625"
+      },
+      {
+        "name": "capitalization_value",
+        "expression": "uw_noi/cap_rate"
+      },
+      {
+        "name": "sizing_rate",
+        "expression": "max(0.061,0.07)"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "sizing_rate/12"
+      },
+      {
+        "name": "debt_constant_annual",
+        "expression": "12*pmt(monthly_rate,360,1)"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*capitalization_value"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "uw_ncf/1.25/debt_constant_annual"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "uw_ncf/0.09"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit,dscr_limit,debt_yield_limit)"
+      },
+      {
+        "name": "origination_fee",
+        "expression": "0.01*maximum_loan"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "maximum_loan - origination_fee - 45000 - 7800000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "monthly_rent_sum_all": 116900,
+      "gross_potential_rent": 1402800,
+      "monthly_rent_sum_occupied": 102300,
+      "annual_in_place_rent": 1227600,
+      "total_area_sf": 176060,
+      "occupied_area_sf": 154060,
+      "unit_occupancy": 0.875,
+      "area_occupancy": 0.8750425991139384,
+      "other_income": 2800,
+      "uw_egi": 1335460.0,
+      "uw_tax": 147294,
+      "uw_insurance": 49098,
+      "other_opex": 196392,
+      "management_fee": 40063.799999999996,
+      "uw_operating_expenses": 236455.8,
+      "uw_noi": 902612.2,
+      "reserves": 2400,
+      "uw_ncf": 900212.2,
+      "cap_rate": 0.0625,
+      "capitalization_value": 14441795.2,
+      "sizing_rate": 0.07,
+      "monthly_rate": 0.005833333333333334,
+      "debt_constant_annual": -0.07983629942150189,
+      "ltv_limit": 9387166.879999999,
+      "dscr_limit": -9020580.427930512,
+      "debt_yield_limit": 10002357.777777778,
+      "maximum_loan": -9020580.427930512,
+      "origination_fee": -90205.80427930511,
+      "net_cash_out": -16775374.623651206
+    }
+  },
+  "status": "ok"
+}

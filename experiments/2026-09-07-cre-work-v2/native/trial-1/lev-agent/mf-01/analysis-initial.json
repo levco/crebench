@@ -1,0 +1,510 @@
+{
+  "fields": [
+    {
+      "id": "total_units",
+      "value": 48,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "rows 5\u201352"
+        }
+      ],
+      "calculation": "COUNTA suites"
+    },
+    {
+      "id": "occupied_units",
+      "value": 44,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col D=active"
+        }
+      ],
+      "calculation": "COUNTIF possession='active'"
+    },
+    {
+      "id": "pending_units",
+      "value": 1,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "row 49 (suite 045)"
+        }
+      ],
+      "calculation": "COUNTIF possession='pending'"
+    },
+    {
+      "id": "total_area_sf",
+      "value": 40800,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col C rows 5\u201352"
+        }
+      ],
+      "calculation": "16*700+16*820+16*1030"
+    },
+    {
+      "id": "occupied_area_sf",
+      "value": 36680,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col C where D='active'"
+        }
+      ],
+      "calculation": "16*700+16*820+12*1030"
+    },
+    {
+      "id": "unit_occupancy",
+      "value": 0.9167,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "derived"
+        }
+      ],
+      "calculation": "44/48"
+    },
+    {
+      "id": "area_occupancy",
+      "value": 0.899,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "derived"
+        }
+      ],
+      "calculation": "36680/40800"
+    },
+    {
+      "id": "annual_in_place_rent",
+      "value": 974400,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col E \u00d7 12"
+        }
+      ],
+      "calculation": "81,200/mo \u00d7 12"
+    },
+    {
+      "id": "unit_001_monthly_rent",
+      "value": 1850,
+      "evidence": [
+        {
+          "file": "lease-001.pdf",
+          "loc": "p.1"
+        },
+        {
+          "file": "lease-correspondence.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "1500 base + 350 signed amendment (effective 2026-08-01)"
+    },
+    {
+      "id": "gross_potential_rent",
+      "value": 974400,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        },
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col E"
+        }
+      ],
+      "calculation": "all-suite scheduled \u00d7 12, pre-amendment"
+    },
+    {
+      "id": "uw_egi",
+      "value": 942480.0,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "974400*(1-0.05)+350*48"
+    },
+    {
+      "id": "uw_tax",
+      "value": 102312,
+      "evidence": [
+        {
+          "file": "operating-statement.pdf",
+          "loc": "p.1 table"
+        }
+      ],
+      "calculation": "prescribed"
+    },
+    {
+      "id": "uw_insurance",
+      "value": 34104,
+      "evidence": [
+        {
+          "file": "operating-statement.pdf",
+          "loc": "p.1 table"
+        }
+      ],
+      "calculation": "prescribed (distinct from GL limit)"
+    },
+    {
+      "id": "uw_operating_expenses",
+      "value": 301106.4,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "102312+34104+136416+0.03*942480"
+    },
+    {
+      "id": "uw_noi",
+      "value": 641373.6,
+      "evidence": [
+        {
+          "file": "computed",
+          "loc": "Summary!B30"
+        }
+      ],
+      "calculation": "EGI - Opex (before reserves)"
+    },
+    {
+      "id": "uw_ncf",
+      "value": 626973.6,
+      "evidence": [
+        {
+          "file": "computed",
+          "loc": "Summary!B32"
+        }
+      ],
+      "calculation": "NOI - 300*48 reserves"
+    },
+    {
+      "id": "sizing_rate",
+      "value": 0.0625,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "MAX(note 6.25%, floor 6.00%)"
+    },
+    {
+      "id": "cap_rate",
+      "value": 0.0575,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "prescribed"
+    },
+    {
+      "id": "capitalization_value",
+      "value": 11154323,
+      "evidence": [
+        {
+          "file": "computed",
+          "loc": "Summary!B33"
+        }
+      ],
+      "calculation": "641373.60/0.0575"
+    },
+    {
+      "id": "ltv_limit",
+      "value": 0.65,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "prescribed"
+    },
+    {
+      "id": "dscr_limit",
+      "value": 1.25,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "prescribed on NCF"
+    },
+    {
+      "id": "debt_yield_limit",
+      "value": 0.09,
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "prescribed on NCF"
+    },
+    {
+      "id": "maximum_loan",
+      "value": 6788545,
+      "evidence": [
+        {
+          "file": "computed",
+          "loc": "Summary!B42"
+        }
+      ],
+      "calculation": "MIN(LTV=7250310, DSCR=6788545, DY=6966373) \u2014 DSCR binds"
+    },
+    {
+      "id": "net_cash_out",
+      "value": 2475660,
+      "evidence": [
+        {
+          "file": "computed",
+          "loc": "Summary!B51"
+        }
+      ],
+      "calculation": "6788545 - (4200000 + 0.01*6788545 + 45000)"
+    },
+    {
+      "id": "insurance_policy_limit",
+      "value": 2000000,
+      "evidence": [
+        {
+          "file": "insurance.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "GL aggregate limit"
+    },
+    {
+      "id": "selected_roll_date",
+      "value": "2026-08-31",
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "A2"
+        }
+      ],
+      "calculation": "certified roll; archive dated 2026-06-30 superseded"
+    },
+    {
+      "id": "reported_t12_noi",
+      "value": 604128,
+      "evidence": [
+        {
+          "file": "operating-statement.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "reported; before reserves; different definition from UW NCF"
+    },
+    {
+      "id": "type_a_units",
+      "value": 16,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col B=Studio"
+        },
+        {
+          "file": "manager-cover.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "A=Studio per manager mapping"
+    },
+    {
+      "id": "type_a_occupied",
+      "value": 16,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "B=Studio,D=active"
+        }
+      ],
+      "calculation": "all Studios active"
+    },
+    {
+      "id": "type_b_units",
+      "value": 16,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col B=1BR"
+        },
+        {
+          "file": "manager-cover.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "B=1BR"
+    },
+    {
+      "id": "type_b_occupied",
+      "value": 16,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "B=1BR,D=active"
+        }
+      ],
+      "calculation": "all 1BR active"
+    },
+    {
+      "id": "type_c_units",
+      "value": 16,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col B=2BR"
+        },
+        {
+          "file": "manager-cover.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "C=2BR"
+    },
+    {
+      "id": "type_c_occupied",
+      "value": 12,
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "B=2BR,D=active"
+        }
+      ],
+      "calculation": "045 pending, 048 vacant"
+    },
+    {
+      "id": "risk_pending_in_occupancy",
+      "value": "present",
+      "evidence": [
+        {
+          "file": "manager-cover.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "manager headline treats pending as leased"
+    },
+    {
+      "id": "risk_near_term_rollover",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "rent-roll-certified.xlsx",
+          "loc": "col F all 2029-08-31"
+        }
+      ],
+      "calculation": "no active expiry within 12 months of 2026-08-31"
+    },
+    {
+      "id": "risk_missing_insurance",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "insurance.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "GL policy in force through 2027-06-30"
+    },
+    {
+      "id": "risk_capital_in_opex",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "operating-statement.pdf",
+          "loc": "p.1 'Roof replacement booked in repairs' = 0"
+        }
+      ],
+      "calculation": "historical ledger correctly classifies roof as capital"
+    },
+    {
+      "id": "risk_unsigned_rent_change",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "lease-correspondence.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "only rent change in packet is signed amendment"
+    },
+    {
+      "id": "risk_temporary_free_rent",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "lease-001.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "stated 'No free-rent concession applies as of the evaluation date'"
+    },
+    {
+      "id": "risk_sizing_floor_binding",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "loc": "p.1"
+        }
+      ],
+      "calculation": "note 6.25% > floor 6.00%; note binds"
+    },
+    {
+      "id": "risk_refinance_shortfall",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "computed",
+          "loc": "Summary!B51"
+        }
+      ],
+      "calculation": "net_cash_out = +$2,475,660"
+    }
+  ],
+  "qualifications": [
+    "Suite 001 monthly rent \u2014 resolvable source conflict: certified roll dated 2026-08-31 still shows $1,500 (pre-amendment); signed amendment effective 2026-08-01 raises to $1,850. Amendment controls per lease-001.pdf. Per underwriting-instructions.pdf, UW GPR is calculated on the certified roll BEFORE the Suite 001 amendment, so this does not affect UW GPR.",
+    "Historical T12 collections ($876,960) are cash-basis actual \u2014 NOT an annualized rent-roll total. UW GPR ($974,400) is scheduled all-suite \u00d7 12.",
+    "Reported historical NOI ($604,128) is before reserves; UW NCF ($626,974) is after reserves. Definitions differ \u2014 labeled explicitly.",
+    "Manager headline 'leased 45 of 48' includes 1 pending unit not in possession. Physical (possession-based) occupancy is 44/48.",
+    "Insurance policy aggregate limit ($2,000,000) is distinct from and much larger than the annual insurance expense ($34,104).",
+    "Roof replacement is capital; operating statement confirms it is NOT booked in recurring repairs.",
+    "First 24 months are interest-only; sizing uses amortizing constant on the greater rate (6.25%) as instructed.",
+    "Photos, asking price, market sales comps, market rent comps, and sponsor history are NOT SUPPLIED; their absence is labeled, not filled."
+  ],
+  "summary": "48-unit multifamily, Raleigh NC. Certified roll (2026-08-31) controls: 44 active, 1 pending, 3 vacant. UW EGI $942,480 \u2192 NOI $641,374 \u2192 NCF $626,974. Cap value at 5.75% = $11.15M. Sized on 6.25% note (floor not binding), 30-yr amort: max loan $6,788,545 (DSCR binds); net cash-out \u2248 +$2,475,660 after $4.2M payoff and $112,885 fees/costs. No refinance shortfall. Primary risks: manager overstates occupancy by counting pending as leased; four routine diligence workstreams (legal, environmental, PCA, title) not yet completed.",
+  "blocked": [
+    "Photos \u2014 not supplied",
+    "Asking price \u2014 not supplied",
+    "Market sales comps \u2014 not supplied; no external research used",
+    "Market rent comps \u2014 not supplied; no external research used",
+    "Sponsor history / credentials \u2014 not supplied",
+    "Legal review \u2014 pending per diligence-status.pdf",
+    "Environmental review \u2014 pending per diligence-status.pdf",
+    "Property condition assessment \u2014 pending per diligence-status.pdf",
+    "Title review \u2014 pending per diligence-status.pdf"
+  ],
+  "input_map": {
+    "gross_potential_rent": "Summary!B6",
+    "cap_rate": "Summary!B7",
+    "sizing_rate": "Summary!B8"
+  },
+  "output_map": {
+    "uw_egi": "Summary!B28",
+    "uw_noi": "Summary!B30",
+    "uw_ncf": "Summary!B32",
+    "capitalization_value": "Summary!B33",
+    "maximum_loan": "Summary!B42",
+    "net_cash_out": "Summary!B51"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly\",\"expression\":\"112875+225\"},{\"name\":\"gpr_annual\",\"expression\":\"gpr_monthly*12\"},{\"name\":\"other_income\",\"expression\":\"350*64\"},{\"name\":\"egi\",\"expression\":\"gpr_annual*(1-0.05)+other_income\"},{\"name\":\"mgmt_fee\",\"expression\":\"egi*0.03\"},{\"name\":\"uw_noi\",\"expression\":\"egi-142222-47408-189630-mgmt_fee\"},{\"name\":\"reserves\",\"expression\":\"300*64\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-reserves\"},{\"name\":\"cap_rate\",\"expression\":\"0.0625\"},{\"name\":\"cap_value\",\"expression\":\"uw_noi/cap_rate\"},{\"name\":\"ltv_limit\",\"expression\":\"cap_value*0.6\"},{\"name\":\"rate\",\"expression\":\"0.0765\"},{\"name\":\"pmt_monthly_per1\",\"expression\":\"pmt(rate/12,360,1)\"},{\"name\":\"annual_debt_service_per1\",\"expression\":\"12*abs(pmt_monthly_per1)\"},{\"name\":\"dscr_limit\",\"expression\":\"(uw_ncf/1.25)/annual_debt_service_per1\"},{\"name\":\"dy_limit\",\"expression\":\"uw_ncf/0.09\"}]}",
+  "call_id": "call_xPdWHJUGUnaiyvX6HqE8XdAP",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly",
+        "expression": "112875+225"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "gpr_monthly*12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*64"
+      },
+      {
+        "name": "egi",
+        "expression": "gpr_annual*(1-0.05)+other_income"
+      },
+      {
+        "name": "mgmt_fee",
+        "expression": "egi*0.03"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "egi-142222-47408-189630-mgmt_fee"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*64"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-reserves"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.0625"
+      },
+      {
+        "name": "cap_value",
+        "expression": "uw_noi/cap_rate"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "cap_value*0.6"
+      },
+      {
+        "name": "rate",
+        "expression": "0.0765"
+      },
+      {
+        "name": "pmt_monthly_per1",
+        "expression": "pmt(rate/12,360,1)"
+      },
+      {
+        "name": "annual_debt_service_per1",
+        "expression": "12*abs(pmt_monthly_per1)"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(uw_ncf/1.25)/annual_debt_service_per1"
+      },
+      {
+        "name": "dy_limit",
+        "expression": "uw_ncf/0.09"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly": 113100,
+      "gpr_annual": 1357200,
+      "other_income": 22400,
+      "egi": 1311740.0,
+      "mgmt_fee": 39352.2,
+      "uw_noi": 893127.8,
+      "reserves": 19200,
+      "uw_ncf": 873927.8,
+      "cap_rate": 0.0625,
+      "cap_value": 14290044.8,
+      "ltv_limit": 8574026.88,
+      "rate": 0.0765,
+      "pmt_monthly_per1": -0.007095143249541955,
+      "annual_debt_service_per1": 0.08514171899450346,
+      "dscr_limit": 8211511.91515331,
+      "dy_limit": 9710308.88888889
+    }
+  },
+  "status": "ok"
+}

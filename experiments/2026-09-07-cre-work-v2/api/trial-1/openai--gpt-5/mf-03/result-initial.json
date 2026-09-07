@@ -1,0 +1,30 @@
+{
+  "case_id": "mf-03",
+  "model": "openai/gpt-5",
+  "trial": 1,
+  "stage": "initial",
+  "status": "infrastructure_error",
+  "completed_at": "2026-09-07T12:41:48.503013+00:00",
+  "elapsed_seconds": 0.083,
+  "model_calls_including_retries": 1,
+  "tool_calls": 0,
+  "known_partial_cost_usd": 0,
+  "cost_usd": null,
+  "returned_models": [],
+  "latest_workbook": null,
+  "latest_memo": null,
+  "artifact_versions": {
+    "workbook": 0,
+    "memo": 0
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 401,
+      "error": "{\"error\":{\"message\":\"Authentication failed. Create an API key and set in AI_GATEWAY_API_KEY environment variable: https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fai-gateway%2Fapi-keys%3FshowCreateKeyModal\",\"type\":\"authentication_error\"}}",
+      "elapsed_seconds": 0.08,
+      "completed_at": "2026-09-07T12:41:48.502486+00:00"
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

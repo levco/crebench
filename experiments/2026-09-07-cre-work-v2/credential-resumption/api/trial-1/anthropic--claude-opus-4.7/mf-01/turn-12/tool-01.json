@@ -1,0 +1,94 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr\",\"expression\":\"(16*1500 + 16*1650 + 15*1925 + 1*2150)*12\"},{\"name\":\"egi\",\"expression\":\"gpr*0.95 + 350*48\"},{\"name\":\"mgmt\",\"expression\":\"egi*0.03\"},{\"name\":\"opex\",\"expression\":\"102312+34104+136416+mgmt\"},{\"name\":\"noi\",\"expression\":\"egi-opex\"},{\"name\":\"reserves\",\"expression\":\"300*48\"},{\"name\":\"ncf\",\"expression\":\"noi-reserves\"},{\"name\":\"cap_value\",\"expression\":\"noi/0.06\"},{\"name\":\"ltv_amt\",\"expression\":\"0.65*cap_value\"},{\"name\":\"constant\",\"expression\":\"(0.07/12)*(1+0.07/12)**360/((1+0.07/12)**360-1)\"},{\"name\":\"dscr_loan\",\"expression\":\"ncf/1.25/12/constant\"},{\"name\":\"dy_loan\",\"expression\":\"ncf/0.09\"},{\"name\":\"max_loan\",\"expression\":\"min(ltv_amt,dscr_loan,dy_loan)\"},{\"name\":\"net_cash_out\",\"expression\":\"max_loan - max_loan*0.01 - 45000 - 4200000\"},{\"name\":\"annual_in_place\",\"expression\":\"(1*1850 + 14*1500 + 15*1650 + 14*1925 + 1*2150)*12\"},{\"name\":\"occupied_area\",\"expression\":\"16*700 + 16*820 + 15*1030\"}]}",
+  "call_id": "toolu_018g2fVoQ1K4nkdLWcPkzEYS",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr",
+        "expression": "(16*1500 + 16*1650 + 15*1925 + 1*2150)*12"
+      },
+      {
+        "name": "egi",
+        "expression": "gpr*0.95 + 350*48"
+      },
+      {
+        "name": "mgmt",
+        "expression": "egi*0.03"
+      },
+      {
+        "name": "opex",
+        "expression": "102312+34104+136416+mgmt"
+      },
+      {
+        "name": "noi",
+        "expression": "egi-opex"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*48"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi-reserves"
+      },
+      {
+        "name": "cap_value",
+        "expression": "noi/0.06"
+      },
+      {
+        "name": "ltv_amt",
+        "expression": "0.65*cap_value"
+      },
+      {
+        "name": "constant",
+        "expression": "(0.07/12)*(1+0.07/12)**360/((1+0.07/12)**360-1)"
+      },
+      {
+        "name": "dscr_loan",
+        "expression": "ncf/1.25/12/constant"
+      },
+      {
+        "name": "dy_loan",
+        "expression": "ncf/0.09"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(ltv_amt,dscr_loan,dy_loan)"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "max_loan - max_loan*0.01 - 45000 - 4200000"
+      },
+      {
+        "name": "annual_in_place",
+        "expression": "(1*1850 + 14*1500 + 15*1650 + 14*1925 + 1*2150)*12"
+      },
+      {
+        "name": "occupied_area",
+        "expression": "16*700 + 16*820 + 15*1030"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr": 977100,
+      "egi": 945045.0,
+      "mgmt": 28351.35,
+      "opex": 301183.35,
+      "noi": 643861.65,
+      "reserves": 14400,
+      "ncf": 629461.65,
+      "cap_value": 10731027.5,
+      "ltv_amt": 6975167.875,
+      "constant": 0.006653024951791824,
+      "dscr_loan": 6307523.315194847,
+      "dy_loan": 6994018.333333334,
+      "max_loan": 6307523.315194847,
+      "net_cash_out": 1999448.082042899,
+      "annual_in_place": 920400,
+      "occupied_area": 39770
+    }
+  },
+  "status": "ok"
+}

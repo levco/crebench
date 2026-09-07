@@ -1,0 +1,114 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly_new\",\"expression\":\"135125\"},{\"name\":\"gpr_annual_new\",\"expression\":\"gpr_monthly_new*12\"},{\"name\":\"uw_egi_new\",\"expression\":\"gpr_annual_new*0.95 + 350*12\"},{\"name\":\"mgmt_new\",\"expression\":\"uw_egi_new*0.03\"},{\"name\":\"opex_new\",\"expression\":\"169974 + 56658 + 226632 + mgmt_new\"},{\"name\":\"noi_before_res_new\",\"expression\":\"uw_egi_new - opex_new\"},{\"name\":\"reserves\",\"expression\":\"300*12\"},{\"name\":\"ncf_new\",\"expression\":\"noi_before_res_new - reserves\"},{\"name\":\"cap_rate_new\",\"expression\":\"0.0775\"},{\"name\":\"cap_value_new\",\"expression\":\"noi_before_res_new / cap_rate_new\"},{\"name\":\"sizing_rate_new\",\"expression\":\"0.075\"},{\"name\":\"annual_debt_service_max\",\"expression\":\"ncf_new/1.25\"},{\"name\":\"monthly_rate\",\"expression\":\"sizing_rate_new/12\"},{\"name\":\"payment_per_1\",\"expression\":\"pmt(monthly_rate,360,1)\"},{\"name\":\"loan_dscr_new\",\"expression\":\"(annual_debt_service_max/12)/abs(payment_per_1)\"},{\"name\":\"loan_dy_new\",\"expression\":\"ncf_new / 0.09\"},{\"name\":\"loan_ltv_new\",\"expression\":\"cap_value_new*0.6\"},{\"name\":\"max_loan_new\",\"expression\":\"min(loan_dscr_new, loan_dy_new, loan_ltv_new)\"},{\"name\":\"orig_fee_new\",\"expression\":\"max_loan_new*0.01\"},{\"name\":\"net_cash_out_new\",\"expression\":\"max_loan_new - orig_fee_new - 45000 - 6500000\"}]}",
+  "call_id": "call_9onIH5kyMy6USRgYkFpZ3OHa",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly_new",
+        "expression": "135125"
+      },
+      {
+        "name": "gpr_annual_new",
+        "expression": "gpr_monthly_new*12"
+      },
+      {
+        "name": "uw_egi_new",
+        "expression": "gpr_annual_new*0.95 + 350*12"
+      },
+      {
+        "name": "mgmt_new",
+        "expression": "uw_egi_new*0.03"
+      },
+      {
+        "name": "opex_new",
+        "expression": "169974 + 56658 + 226632 + mgmt_new"
+      },
+      {
+        "name": "noi_before_res_new",
+        "expression": "uw_egi_new - opex_new"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*12"
+      },
+      {
+        "name": "ncf_new",
+        "expression": "noi_before_res_new - reserves"
+      },
+      {
+        "name": "cap_rate_new",
+        "expression": "0.0775"
+      },
+      {
+        "name": "cap_value_new",
+        "expression": "noi_before_res_new / cap_rate_new"
+      },
+      {
+        "name": "sizing_rate_new",
+        "expression": "0.075"
+      },
+      {
+        "name": "annual_debt_service_max",
+        "expression": "ncf_new/1.25"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "sizing_rate_new/12"
+      },
+      {
+        "name": "payment_per_1",
+        "expression": "pmt(monthly_rate,360,1)"
+      },
+      {
+        "name": "loan_dscr_new",
+        "expression": "(annual_debt_service_max/12)/abs(payment_per_1)"
+      },
+      {
+        "name": "loan_dy_new",
+        "expression": "ncf_new / 0.09"
+      },
+      {
+        "name": "loan_ltv_new",
+        "expression": "cap_value_new*0.6"
+      },
+      {
+        "name": "max_loan_new",
+        "expression": "min(loan_dscr_new, loan_dy_new, loan_ltv_new)"
+      },
+      {
+        "name": "orig_fee_new",
+        "expression": "max_loan_new*0.01"
+      },
+      {
+        "name": "net_cash_out_new",
+        "expression": "max_loan_new - orig_fee_new - 45000 - 6500000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly_new": 135125,
+      "gpr_annual_new": 1621500,
+      "uw_egi_new": 1544625.0,
+      "mgmt_new": 46338.75,
+      "opex_new": 499602.75,
+      "noi_before_res_new": 1045022.25,
+      "reserves": 3600,
+      "ncf_new": 1041422.25,
+      "cap_rate_new": 0.0775,
+      "cap_value_new": 13484158.064516129,
+      "sizing_rate_new": 0.075,
+      "annual_debt_service_max": 833137.8,
+      "monthly_rate": 0.0062499999999999995,
+      "payment_per_1": -0.0069921450855277645,
+      "loan_dscr_new": 9929449.282123927,
+      "loan_dy_new": 11571358.333333334,
+      "loan_ltv_new": 8090494.838709677,
+      "max_loan_new": 8090494.838709677,
+      "orig_fee_new": 80904.94838709677,
+      "net_cash_out_new": 1464589.89032258
+    }
+  },
+  "status": "ok"
+}

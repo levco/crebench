@@ -1,0 +1,29 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"sum_active_monthly\",\"expression\":\"7000+6800+7075+6650+6800+7075+6650+6800+7075\"},{\"name\":\"in_place_annual\",\"expression\":\"sum_active_monthly*12\"},{\"name\":\"area_occ_ratio\",\"expression\":\"29070/32150\"}]}",
+  "call_id": "toolu_0192jB9Jmkvfb5TjejKP2vJ4",
+  "arguments": {
+    "steps": [
+      {
+        "name": "sum_active_monthly",
+        "expression": "7000+6800+7075+6650+6800+7075+6650+6800+7075"
+      },
+      {
+        "name": "in_place_annual",
+        "expression": "sum_active_monthly*12"
+      },
+      {
+        "name": "area_occ_ratio",
+        "expression": "29070/32150"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "sum_active_monthly": 61925,
+      "in_place_annual": 743100,
+      "area_occ_ratio": 0.904199066874028
+    }
+  },
+  "status": "ok"
+}

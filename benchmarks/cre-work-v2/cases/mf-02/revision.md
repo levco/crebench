@@ -1,0 +1,1 @@
+Continue the same deal and conversation. Apply the attached revision notice and revised rent roll. Deliver revised XLSX and OM PDF and the same named analysis fields and cell maps. Preserve all unaffected facts and the approved sentence. Explain the changes. Do not replace your prior outputs in the audit archive.

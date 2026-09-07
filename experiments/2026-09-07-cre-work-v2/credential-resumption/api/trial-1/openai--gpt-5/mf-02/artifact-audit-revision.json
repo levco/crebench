@@ -1,0 +1,164 @@
+{
+  "stage": "revision",
+  "workbook": {
+    "readable": true,
+    "base_checks": [
+      {
+        "field": "uw_egi",
+        "actual": 1311740,
+        "expected": 1311740.0,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "uw_noi",
+        "actual": null,
+        "expected": 893127.8,
+        "passed": false,
+        "live_formula": false
+      },
+      {
+        "field": "uw_ncf",
+        "actual": 873927.8,
+        "expected": 873927.8,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "capitalization_value",
+        "actual": 14290044.8,
+        "expected": 14290044.8,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "maximum_loan",
+        "actual": 8211511.9151533,
+        "expected": 8211511.915153307,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "net_cash_out",
+        "actual": 884396.796001771,
+        "expected": 884396.7960017733,
+        "passed": true,
+        "live_formula": true
+      }
+    ],
+    "perturbations": [
+      {
+        "input": "cap_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1311740,
+            "expected": 1311740.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": null,
+            "expected": 893127.8,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 873927.8,
+            "expected": 873927.8,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 13231522.962963,
+            "expected": 13231522.962962963,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 7938913.77777778,
+            "expected": 7938913.777777777,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 614524.64,
+            "expected": 614524.6399999997,
+            "passed": true
+          }
+        ],
+        "passed": false
+      },
+      {
+        "input": "gross_potential_rent",
+        "passed": false,
+        "error": "'gross_potential_rent'"
+      },
+      {
+        "input": "sizing_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1311740,
+            "expected": 1311740.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": null,
+            "expected": 893127.8,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 873927.8,
+            "expected": 873927.8,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 14290044.8,
+            "expected": 14290044.8,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 7473596.7027515,
+            "expected": 7473596.702751482,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 153860.735723983,
+            "expected": 153860.73572396673,
+            "passed": true
+          }
+        ],
+        "passed": false
+      }
+    ],
+    "all_base_outputs_correct": false,
+    "all_sensitivities_correct": false
+  },
+  "om": {
+    "readable": true,
+    "pages": 5,
+    "characters": 6284,
+    "approved_copy_present": true,
+    "financial_and_presentation_review": "pending; readable PDF is not acceptance"
+  },
+  "professional_acceptance": null,
+  "human_review": "pending",
+  "original_hashes": {
+    "artifacts/underwriting-v2.xlsx": "7ea8bb8d4547c5b1a46a471acc4078ab4c13d490782450fde7775d2a12c9d73f",
+    "artifacts/memorandum-v3.pdf": "66b5af889aed7b05d33a3d74dfa706c8564fda409873880cee2c79c79d971ff0"
+  },
+  "unchanged_facts": {
+    "passed": 20,
+    "total": 20
+  },
+  "revision_files_changed": {
+    "workbook": true,
+    "om": true
+  }
+}

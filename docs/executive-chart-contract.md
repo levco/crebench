@@ -1,0 +1,12 @@
+# Executive summary figure contract
+
+Surface: two standalone publication figures for the ongoing CRE Bench release, exported with Matplotlib as PNG, SVG and a two-page PDF. These are research figures intended for sharing; they use the existing site's branded palette, not a new dashboard runtime.
+
+1. **Financing workflow quality:** grouped horizontal bars for five acceptance categories across native Lev and the two tool-assisted baselines. Fifteen aggregate observations, each from the same six financing cases. Show percent passed and exact numerator/denominator. Keep a 0–100% axis. Display six-case inference cost beside each condition's legend. Takeaway: Lev ties on facts and calculations; Opus 5 leads workbook, memo and citation checks. Direct-call financial control is noted separately because it has different inputs and no artifact requirements.
+2. **Comp and lead research performance:** five consistently ordered rows with three aligned horizontal-bar panels: verified shortlist yield, ineligible entries returned, and inference cost. Show screening success alongside each condition name. Retain all 99 planned target slots; the timed-out GPT-5 direct case receives no delivery credit and its missing charges are unknown. Takeaway: high verified yield does not remove Lev's seven ineligible selections.
+
+Use the established Lev forest #08331F, GPT blue #3B69BC and Opus terracotta #B56750 as explicit category colors, white background and quiet neutral guides. Stable order within financing groups adds non-color identification. Direct research controls have open, hatched bars and explicit names. No blended score, invented confidence interval, cropped percentage axis, or selective exclusion.
+
+Sources: the published workflow-v1 and research-v1.1 results JSON. Export exact plotted values and source SHA-256 hashes alongside figures. Cost scopes distinguish native model-rate estimates from reported API inference, exclude subscription/operator/platform overhead, and disclose incomplete charges. Source packets are synthetic, author-reviewed and not independently validated. Native research internal execution has partial audit coverage.
+
+Output: outputs/benchmark-summary-charts/financing-summary.{png,svg}, research-summary.{png,svg}, benchmark-summary.pdf, chart-data.csv and source-manifest.json. Inspect both PNGs at presentation size before delivery. All plot arithmetic comes from existing recorded results; no model calls, rescoring or original artifact changes.

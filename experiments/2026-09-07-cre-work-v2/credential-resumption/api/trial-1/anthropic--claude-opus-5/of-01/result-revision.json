@@ -1,0 +1,193 @@
+{
+  "case_id": "of-01",
+  "model": "anthropic/claude-opus-5",
+  "trial": 1,
+  "stage": "revision",
+  "status": "completed",
+  "completed_at": "2026-09-07T13:29:00.588493+00:00",
+  "elapsed_seconds": 290.2689467910244,
+  "model_calls_including_retries": 6,
+  "tool_calls": 6,
+  "known_partial_cost_usd": 2.492445,
+  "cost_usd": null,
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "latest_workbook": "artifacts/underwriting-v3.xlsx",
+  "latest_memo": "artifacts/memorandum-v2.pdf",
+  "artifact_versions": {
+    "workbook": 3,
+    "memo": 2
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 55923,
+        "completion_tokens": 111,
+        "total_tokens": 56034,
+        "cost": 0.28239,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.28239,
+        "gateway_cost": 0.28239
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 2.335,
+      "completed_at": "2026-09-07T13:11:39.788919+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 57443,
+        "completion_tokens": 1171,
+        "total_tokens": 58614,
+        "cost": 0.31649,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 649,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.31649,
+        "gateway_cost": 0.31649
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 14.838,
+      "completed_at": "2026-09-07T13:11:54.635089+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 402,
+      "error": "{\"error\":{\"message\":\"A positive credit balance is required for all requests, including BYOK, so fallback providers remain available. Add credits at https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fai%3Fmodal%3Dtop-up to continue.\",\"type\":\"insufficient_funds\"}}",
+      "elapsed_seconds": 0.469,
+      "completed_at": "2026-09-07T13:11:55.109764+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 58174,
+        "completion_tokens": 17694,
+        "total_tokens": 75868,
+        "cost": 0.73322,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 397,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.73322,
+        "gateway_cost": 0.73322
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 141.836,
+      "completed_at": "2026-09-07T13:26:49.817596+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 75768,
+        "completion_tokens": 6621,
+        "total_tokens": 82389,
+        "cost": 0.544365,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 361,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.544365,
+        "gateway_cost": 0.544365
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 68.333,
+      "completed_at": "2026-09-07T13:27:59.475772+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 89081,
+        "completion_tokens": 6823,
+        "total_tokens": 95904,
+        "cost": 0.61598,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 170,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.61598,
+        "gateway_cost": 0.61598
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 61.06,
+      "completed_at": "2026-09-07T13:29:00.586470+00:00"
+    }
+  ],
+  "operator_semantic_corrections": 0,
+  "administrative_resumption": "HTTP402 credit interruption; original result in funding-continuation/before-result files"
+}

@@ -1,0 +1,381 @@
+{
+  "name": "submit_analysis",
+  "arguments_raw": "{\"fields\":[{\"id\":\"total_units\",\"value\":8,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!A5:A12\"],\"calculation\":\"Count of listed suites = 8\"},{\"id\":\"occupied_units\",\"value\":7,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!D5:D12\"],\"calculation\":\"Count of status = \\\"active\\\" = 7\"},{\"id\":\"pending_units\",\"value\":0,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!D5:D12\",\"manager-cover.pdf p.1\"],\"calculation\":\"Count of status = \\\"pending\\\" on the certified roll = 0 (manager headline includes pending in leased counts but certified detail controls).\"},{\"id\":\"total_area_sf\",\"value\":176060,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!C5:C12\"],\"calculation\":\"SUM(C5:C12) = 21,880+22,000+22,210+21,880+22,000+22,210+21,880+22,000 = 176,060 SF\"},{\"id\":\"occupied_area_sf\",\"value\":154060,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!C5:C12, D5:D12\"],\"calculation\":\"SUM(area where status=\\\"active\\\") = total_area_sf (176,060) - area of vacant Unit 008 (22,000) = 154,060 SF\"},{\"id\":\"unit_occupancy\",\"value\":0.875,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!D5:D12\"],\"calculation\":\"occupied_units / total_units = 7 / 8 = 0.875\"},{\"id\":\"area_occupancy\",\"value\":0.8750425991139384,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!C5:C12, D5:D12\"],\"calculation\":\"occupied_area_sf / total_area_sf = 154,060 / 176,060 = 0.8750425991\"},{\"id\":\"annual_in_place_rent\",\"value\":1227600,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!E5:E12, D5:D12\"],\"calculation\":\"SUM(monthly rent where status=\\\"active\\\") * 12 = (14,450+14,600+14,875+14,450+14,600+14,875+14,450)*12 = 102,300*12 = 1,227,600\"},{\"id\":\"unit_001_monthly_rent\",\"value\":14450,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!E5\",\"lease-001.pdf p.1\"],\"calculation\":\"Per certified roll and executed lease for Suite 001\"},{\"id\":\"gross_potential_rent\",\"value\":1402800,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!E5:E12\"],\"calculation\":\"SUM(all-suite monthly rent)*12 = (14,450+14,600+14,875+14,450+14,600+14,875+14,450+14,600)*12 = 116,900*12 = 1,402,800\"},{\"id\":\"uw_egi\",\"value\":1335460,\"evidence\":[\"underwriting-instructions.pdf p.1\",\"rent-roll-certified.xlsx Rent Roll!E5:E12\"],\"calculation\":\"Underwriting: GPR* (1-5% loss) + other income ($350/unit*8) = 1,402,800*0.95 + 2,800 = 1,332,660 + 2,800 = 1,335,460\"},{\"id\":\"uw_tax\",\"value\":147294,\"evidence\":[\"operating-statement.pdf p.1\"],\"calculation\":\"Real estate tax per T12 = 147,294\"},{\"id\":\"uw_insurance\",\"value\":49098,\"evidence\":[\"operating-statement.pdf p.1\"],\"calculation\":\"Insurance expense per T12 = 49,098\"},{\"id\":\"uw_operating_expenses\",\"value\":236455.8,\"evidence\":[\"operating-statement.pdf p.1\",\"underwriting-instructions.pdf p.1\"],\"calculation\":\"Other recurring opex 196,392 + management fee 3% of UW EGI (0.03*1,335,460 = 40,063.8) = 236,455.8\"},{\"id\":\"uw_noi\",\"value\":902612.2,\"evidence\":[\"underwriting-instructions.pdf p.1\",\"operating-statement.pdf p.1\"],\"calculation\":\"UW EGI - taxes - insurance - UW opex = 1,335,460 - 147,294 - 49,098 - 236,455.8 = 902,612.2 (NOI before reserves per instructions)\"},{\"id\":\"uw_ncf\",\"value\":900212.2,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"NCF after reserves = UW NOI - reserves ($300/unit*8 = 2,400) = 902,612.2 - 2,400 = 900,212.2\"},{\"id\":\"sizing_rate\",\"value\":0.07,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"Greater of note rate 0.0610 and floor 0.0700 \u2192 0.0700\"},{\"id\":\"cap_rate\",\"value\":0.0625,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"Given capitalization rate 6.2500%\"},{\"id\":\"capitalization_value\",\"value\":14441795.2,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"NOI / cap rate = 902,612.2 / 0.0625 = 14,441,795.2\"},{\"id\":\"ltv_limit\",\"value\":9387166.88,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"65% LTV of capitalization value = 0.65 * 14,441,795.2 = 9,387,166.88\"},{\"id\":\"dscr_limit\",\"value\":9020580.427930512,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"UW NCF / 1.25 / annual debt constant at 7.00%, 30-year amortization. Annual constant = 12*PMT(0.07/12,360,1) = 0.0798362994. DSCR-limited loan = 900,212.2 / 1.25 / 0.0798362994 = 9,020,580.43\"},{\"id\":\"debt_yield_limit\",\"value\":10002357.777777778,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"UW NCF / 9% = 900,212.2 / 0.09 = 10,002,357.78\"},{\"id\":\"maximum_loan\",\"value\":9020580.427930512,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"MIN(ltv_limit 9,387,166.88, dscr_limit 9,020,580.43, debt_yield_limit 10,002,357.78) = 9,020,580.43\"},{\"id\":\"net_cash_out\",\"value\":1085374.6236512065,\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"maximum_loan - origination(1%) - closing(45,000) - existing payoff(7,800,000) = 9,020,580.43 - 90,205.80 - 45,000 - 7,800,000 = 1,085,374.62\"},{\"id\":\"insurance_policy_limit\",\"value\":2000000,\"evidence\":[\"insurance.pdf p.1\"],\"calculation\":\"General liability aggregate limit per policy declaration\"},{\"id\":\"selected_roll_date\",\"value\":\"2026-08-31\",\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!B2\"],\"calculation\":\"As-of date on certified rent roll\"},{\"id\":\"reported_t12_noi\",\"value\":869736,\"evidence\":[\"operating-statement.pdf p.1\"],\"calculation\":\"Reported NOI on T12 statement\"},{\"id\":\"type_a_units\",\"value\":3,\"evidence\":[\"manager-cover.pdf p.1\",\"rent-roll-certified.xlsx Rent Roll!B5:B12\"],\"calculation\":\"Type A = Small suite; count of \\\"Small suite\\\" = 3 (Units 001, 004, 007)\"},{\"id\":\"type_a_occupied\",\"value\":3,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!B5:B12, D5:D12\"],\"calculation\":\"Small suites with status = active = 3 (001, 004, 007)\"},{\"id\":\"type_b_units\",\"value\":3,\"evidence\":[\"manager-cover.pdf p.1\",\"rent-roll-certified.xlsx Rent Roll!B5:B12\"],\"calculation\":\"Type B = Standard suite; count of \\\"Standard suite\\\" = 3 (002, 005, 008)\"},{\"id\":\"type_b_occupied\",\"value\":2,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!B5:B12, D5:D12\"],\"calculation\":\"Standard suites with status = active = 2 (002, 005); 008 is vacant\"},{\"id\":\"type_c_units\",\"value\":2,\"evidence\":[\"manager-cover.pdf p.1\",\"rent-roll-certified.xlsx Rent Roll!B5:B12\"],\"calculation\":\"Type C = Large suite; count of \\\"Large suite\\\" = 2 (003, 006)\"},{\"id\":\"type_c_occupied\",\"value\":2,\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!B5:B12, D5:D12\"],\"calculation\":\"Large suites with status = active = 2 (003, 006)\"},{\"id\":\"risk_pending_in_occupancy\",\"value\":\"present\",\"evidence\":[\"manager-cover.pdf p.1\"],\"calculation\":\"Manager headline counts occupied plus pending as leased; certified detail must control. Risk relates to inclusion of unpossessed pending in occupancy reporting.\"},{\"id\":\"risk_near_term_rollover\",\"value\":\"absent\",\"evidence\":[\"rent-roll-certified.xlsx Rent Roll!F5:F12\",\"underwriting-instructions.pdf p.1\"],\"calculation\":\"All expirations are 2029-08-31; no active suite expires within next 12 months.\"},{\"id\":\"risk_missing_insurance\",\"value\":\"absent\",\"evidence\":[\"insurance.pdf p.1\"],\"calculation\":\"Insurance policy record with limits and dates supplied.\"},{\"id\":\"risk_capital_in_opex\",\"value\":\"absent\",\"evidence\":[\"operating-statement.pdf p.1\"],\"calculation\":\"Packet clarifies roof replacement is a capital improvement; no recurring repair component included in opex.\"},{\"id\":\"risk_unsigned_rent_change\",\"value\":\"absent\",\"evidence\":[\"lease-001.pdf p.1\",\"lease-correspondence.pdf p.1\"],\"calculation\":\"Unsigned proposals do not control; PM confirms no amendments or concessions affecting Suite 001.\"},{\"id\":\"risk_temporary_free_rent\",\"value\":\"absent\",\"evidence\":[\"lease-001.pdf p.1\"],\"calculation\":\"Lease excerpt states no free-rent concession applies as of the evaluation date.\"},{\"id\":\"risk_sizing_floor_binding\",\"value\":\"present\",\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"Note rate 6.10% vs floor 7.00%; sizing uses the greater rate (floor binds).\"},{\"id\":\"risk_refinance_shortfall\",\"value\":\"absent\",\"evidence\":[\"underwriting-instructions.pdf p.1\"],\"calculation\":\"Sized proceeds exceed payoff and costs; net cash out is positive, not a shortfall.\"}],\"qualifications\":[\"This is a source-backed analysis for a fictional evaluation. Photos, market sales/rent comps, sponsor history and asking price are not provided and are not inferred.\",\"Legal, environmental, property condition and title reviews are pending per the packet; no defects are asserted.\",\"Historical T12 figures are cash-based collections; underwritten NOI/NCF are based on scheduled rent roll with prescribed loss, other income, management fee and reserves, per instructions. These definitions differ.\",\"Reimbursement income is already included in collections per instructions and is not added again.\",\"Certified rent roll controls physical occupancy; the manager headline that may count pending as leased is not used for underwriting.\",\"Insurance record provided is a general liability policy limit; separate property insurance policy details are not included beyond the expense line in the T12.\"],\"summary\":\"Deliverables created: (1) Underwriting workbook with live formulas and inputs/outputs (artifacts/underwriting-v1.xlsx) including sensitivity and source register; (2) Concise investment/sales OM PDF (artifacts/memorandum-v1.pdf). As of 2026-08-31, 7 of 8 suites are occupied (87.5% by units and ~87.5% by area). Underwritten EGI $1.335MM; NOI before reserves $0.903MM; NCF after reserves $0.900MM. Capitalized at 6.25% implies $14.44MM value. Loan sizing at the 7.00% floor with 30-year amortization yields maximum proceeds $9.021MM, DSCR-constrained; after 1% origination, $45k closing and $7.80MM payoff, net cash out is about $1.085MM. No near-term rollover; policy insurance limit is $2.0MM; capital costs are not embedded in opex; no unsigned rent changes or free rent affect Suite 001. Sizing floor binds. All figures trace to cited packet sources and the modeling assumptions in underwriting-instructions.pdf.\",\"blocked\":[\"Property photos not provided\",\"Market sales or rent comps not provided\",\"Sponsor history not provided\",\"Asking price not provided\",\"Environmental, legal, title, and property condition reports not provided\"],\"input_map\":{\"gross_potential_rent\":\"UW!B8\",\"cap_rate\":\"UW!B9\",\"sizing_rate\":\"UW!B10\"},\"output_map\":{\"uw_egi\":\"UW!B15\",\"uw_noi\":\"UW!B22\",\"uw_ncf\":\"UW!B24\",\"capitalization_value\":\"UW!B26\",\"maximum_loan\":\"UW!B33\",\"net_cash_out\":\"UW!B37\"}}",
+  "call_id": "call_s2ORAMT4SP1OkS4CUWvlBBhQ",
+  "arguments": {
+    "fields": [
+      {
+        "id": "total_units",
+        "value": 8,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!A5:A12"
+        ],
+        "calculation": "Count of listed suites = 8"
+      },
+      {
+        "id": "occupied_units",
+        "value": 7,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!D5:D12"
+        ],
+        "calculation": "Count of status = \"active\" = 7"
+      },
+      {
+        "id": "pending_units",
+        "value": 0,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!D5:D12",
+          "manager-cover.pdf p.1"
+        ],
+        "calculation": "Count of status = \"pending\" on the certified roll = 0 (manager headline includes pending in leased counts but certified detail controls)."
+      },
+      {
+        "id": "total_area_sf",
+        "value": 176060,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!C5:C12"
+        ],
+        "calculation": "SUM(C5:C12) = 21,880+22,000+22,210+21,880+22,000+22,210+21,880+22,000 = 176,060 SF"
+      },
+      {
+        "id": "occupied_area_sf",
+        "value": 154060,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!C5:C12, D5:D12"
+        ],
+        "calculation": "SUM(area where status=\"active\") = total_area_sf (176,060) - area of vacant Unit 008 (22,000) = 154,060 SF"
+      },
+      {
+        "id": "unit_occupancy",
+        "value": 0.875,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!D5:D12"
+        ],
+        "calculation": "occupied_units / total_units = 7 / 8 = 0.875"
+      },
+      {
+        "id": "area_occupancy",
+        "value": 0.8750425991139384,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!C5:C12, D5:D12"
+        ],
+        "calculation": "occupied_area_sf / total_area_sf = 154,060 / 176,060 = 0.8750425991"
+      },
+      {
+        "id": "annual_in_place_rent",
+        "value": 1227600,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!E5:E12, D5:D12"
+        ],
+        "calculation": "SUM(monthly rent where status=\"active\") * 12 = (14,450+14,600+14,875+14,450+14,600+14,875+14,450)*12 = 102,300*12 = 1,227,600"
+      },
+      {
+        "id": "unit_001_monthly_rent",
+        "value": 14450,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!E5",
+          "lease-001.pdf p.1"
+        ],
+        "calculation": "Per certified roll and executed lease for Suite 001"
+      },
+      {
+        "id": "gross_potential_rent",
+        "value": 1402800,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!E5:E12"
+        ],
+        "calculation": "SUM(all-suite monthly rent)*12 = (14,450+14,600+14,875+14,450+14,600+14,875+14,450+14,600)*12 = 116,900*12 = 1,402,800"
+      },
+      {
+        "id": "uw_egi",
+        "value": 1335460,
+        "evidence": [
+          "underwriting-instructions.pdf p.1",
+          "rent-roll-certified.xlsx Rent Roll!E5:E12"
+        ],
+        "calculation": "Underwriting: GPR* (1-5% loss) + other income ($350/unit*8) = 1,402,800*0.95 + 2,800 = 1,332,660 + 2,800 = 1,335,460"
+      },
+      {
+        "id": "uw_tax",
+        "value": 147294,
+        "evidence": [
+          "operating-statement.pdf p.1"
+        ],
+        "calculation": "Real estate tax per T12 = 147,294"
+      },
+      {
+        "id": "uw_insurance",
+        "value": 49098,
+        "evidence": [
+          "operating-statement.pdf p.1"
+        ],
+        "calculation": "Insurance expense per T12 = 49,098"
+      },
+      {
+        "id": "uw_operating_expenses",
+        "value": 236455.8,
+        "evidence": [
+          "operating-statement.pdf p.1",
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "Other recurring opex 196,392 + management fee 3% of UW EGI (0.03*1,335,460 = 40,063.8) = 236,455.8"
+      },
+      {
+        "id": "uw_noi",
+        "value": 902612.2,
+        "evidence": [
+          "underwriting-instructions.pdf p.1",
+          "operating-statement.pdf p.1"
+        ],
+        "calculation": "UW EGI - taxes - insurance - UW opex = 1,335,460 - 147,294 - 49,098 - 236,455.8 = 902,612.2 (NOI before reserves per instructions)"
+      },
+      {
+        "id": "uw_ncf",
+        "value": 900212.2,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "NCF after reserves = UW NOI - reserves ($300/unit*8 = 2,400) = 902,612.2 - 2,400 = 900,212.2"
+      },
+      {
+        "id": "sizing_rate",
+        "value": 0.07,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "Greater of note rate 0.0610 and floor 0.0700 \u2192 0.0700"
+      },
+      {
+        "id": "cap_rate",
+        "value": 0.0625,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "Given capitalization rate 6.2500%"
+      },
+      {
+        "id": "capitalization_value",
+        "value": 14441795.2,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "NOI / cap rate = 902,612.2 / 0.0625 = 14,441,795.2"
+      },
+      {
+        "id": "ltv_limit",
+        "value": 9387166.88,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "65% LTV of capitalization value = 0.65 * 14,441,795.2 = 9,387,166.88"
+      },
+      {
+        "id": "dscr_limit",
+        "value": 9020580.427930512,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "UW NCF / 1.25 / annual debt constant at 7.00%, 30-year amortization. Annual constant = 12*PMT(0.07/12,360,1) = 0.0798362994. DSCR-limited loan = 900,212.2 / 1.25 / 0.0798362994 = 9,020,580.43"
+      },
+      {
+        "id": "debt_yield_limit",
+        "value": 10002357.777777778,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "UW NCF / 9% = 900,212.2 / 0.09 = 10,002,357.78"
+      },
+      {
+        "id": "maximum_loan",
+        "value": 9020580.427930512,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "MIN(ltv_limit 9,387,166.88, dscr_limit 9,020,580.43, debt_yield_limit 10,002,357.78) = 9,020,580.43"
+      },
+      {
+        "id": "net_cash_out",
+        "value": 1085374.6236512065,
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "maximum_loan - origination(1%) - closing(45,000) - existing payoff(7,800,000) = 9,020,580.43 - 90,205.80 - 45,000 - 7,800,000 = 1,085,374.62"
+      },
+      {
+        "id": "insurance_policy_limit",
+        "value": 2000000,
+        "evidence": [
+          "insurance.pdf p.1"
+        ],
+        "calculation": "General liability aggregate limit per policy declaration"
+      },
+      {
+        "id": "selected_roll_date",
+        "value": "2026-08-31",
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!B2"
+        ],
+        "calculation": "As-of date on certified rent roll"
+      },
+      {
+        "id": "reported_t12_noi",
+        "value": 869736,
+        "evidence": [
+          "operating-statement.pdf p.1"
+        ],
+        "calculation": "Reported NOI on T12 statement"
+      },
+      {
+        "id": "type_a_units",
+        "value": 3,
+        "evidence": [
+          "manager-cover.pdf p.1",
+          "rent-roll-certified.xlsx Rent Roll!B5:B12"
+        ],
+        "calculation": "Type A = Small suite; count of \"Small suite\" = 3 (Units 001, 004, 007)"
+      },
+      {
+        "id": "type_a_occupied",
+        "value": 3,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!B5:B12, D5:D12"
+        ],
+        "calculation": "Small suites with status = active = 3 (001, 004, 007)"
+      },
+      {
+        "id": "type_b_units",
+        "value": 3,
+        "evidence": [
+          "manager-cover.pdf p.1",
+          "rent-roll-certified.xlsx Rent Roll!B5:B12"
+        ],
+        "calculation": "Type B = Standard suite; count of \"Standard suite\" = 3 (002, 005, 008)"
+      },
+      {
+        "id": "type_b_occupied",
+        "value": 2,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!B5:B12, D5:D12"
+        ],
+        "calculation": "Standard suites with status = active = 2 (002, 005); 008 is vacant"
+      },
+      {
+        "id": "type_c_units",
+        "value": 2,
+        "evidence": [
+          "manager-cover.pdf p.1",
+          "rent-roll-certified.xlsx Rent Roll!B5:B12"
+        ],
+        "calculation": "Type C = Large suite; count of \"Large suite\" = 2 (003, 006)"
+      },
+      {
+        "id": "type_c_occupied",
+        "value": 2,
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!B5:B12, D5:D12"
+        ],
+        "calculation": "Large suites with status = active = 2 (003, 006)"
+      },
+      {
+        "id": "risk_pending_in_occupancy",
+        "value": "present",
+        "evidence": [
+          "manager-cover.pdf p.1"
+        ],
+        "calculation": "Manager headline counts occupied plus pending as leased; certified detail must control. Risk relates to inclusion of unpossessed pending in occupancy reporting."
+      },
+      {
+        "id": "risk_near_term_rollover",
+        "value": "absent",
+        "evidence": [
+          "rent-roll-certified.xlsx Rent Roll!F5:F12",
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "All expirations are 2029-08-31; no active suite expires within next 12 months."
+      },
+      {
+        "id": "risk_missing_insurance",
+        "value": "absent",
+        "evidence": [
+          "insurance.pdf p.1"
+        ],
+        "calculation": "Insurance policy record with limits and dates supplied."
+      },
+      {
+        "id": "risk_capital_in_opex",
+        "value": "absent",
+        "evidence": [
+          "operating-statement.pdf p.1"
+        ],
+        "calculation": "Packet clarifies roof replacement is a capital improvement; no recurring repair component included in opex."
+      },
+      {
+        "id": "risk_unsigned_rent_change",
+        "value": "absent",
+        "evidence": [
+          "lease-001.pdf p.1",
+          "lease-correspondence.pdf p.1"
+        ],
+        "calculation": "Unsigned proposals do not control; PM confirms no amendments or concessions affecting Suite 001."
+      },
+      {
+        "id": "risk_temporary_free_rent",
+        "value": "absent",
+        "evidence": [
+          "lease-001.pdf p.1"
+        ],
+        "calculation": "Lease excerpt states no free-rent concession applies as of the evaluation date."
+      },
+      {
+        "id": "risk_sizing_floor_binding",
+        "value": "present",
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "Note rate 6.10% vs floor 7.00%; sizing uses the greater rate (floor binds)."
+      },
+      {
+        "id": "risk_refinance_shortfall",
+        "value": "absent",
+        "evidence": [
+          "underwriting-instructions.pdf p.1"
+        ],
+        "calculation": "Sized proceeds exceed payoff and costs; net cash out is positive, not a shortfall."
+      }
+    ],
+    "qualifications": [
+      "This is a source-backed analysis for a fictional evaluation. Photos, market sales/rent comps, sponsor history and asking price are not provided and are not inferred.",
+      "Legal, environmental, property condition and title reviews are pending per the packet; no defects are asserted.",
+      "Historical T12 figures are cash-based collections; underwritten NOI/NCF are based on scheduled rent roll with prescribed loss, other income, management fee and reserves, per instructions. These definitions differ.",
+      "Reimbursement income is already included in collections per instructions and is not added again.",
+      "Certified rent roll controls physical occupancy; the manager headline that may count pending as leased is not used for underwriting.",
+      "Insurance record provided is a general liability policy limit; separate property insurance policy details are not included beyond the expense line in the T12."
+    ],
+    "summary": "Deliverables created: (1) Underwriting workbook with live formulas and inputs/outputs (artifacts/underwriting-v1.xlsx) including sensitivity and source register; (2) Concise investment/sales OM PDF (artifacts/memorandum-v1.pdf). As of 2026-08-31, 7 of 8 suites are occupied (87.5% by units and ~87.5% by area). Underwritten EGI $1.335MM; NOI before reserves $0.903MM; NCF after reserves $0.900MM. Capitalized at 6.25% implies $14.44MM value. Loan sizing at the 7.00% floor with 30-year amortization yields maximum proceeds $9.021MM, DSCR-constrained; after 1% origination, $45k closing and $7.80MM payoff, net cash out is about $1.085MM. No near-term rollover; policy insurance limit is $2.0MM; capital costs are not embedded in opex; no unsigned rent changes or free rent affect Suite 001. Sizing floor binds. All figures trace to cited packet sources and the modeling assumptions in underwriting-instructions.pdf.",
+    "blocked": [
+      "Property photos not provided",
+      "Market sales or rent comps not provided",
+      "Sponsor history not provided",
+      "Asking price not provided",
+      "Environmental, legal, title, and property condition reports not provided"
+    ],
+    "input_map": {
+      "gross_potential_rent": "UW!B8",
+      "cap_rate": "UW!B9",
+      "sizing_rate": "UW!B10"
+    },
+    "output_map": {
+      "uw_egi": "UW!B15",
+      "uw_noi": "UW!B22",
+      "uw_ncf": "UW!B24",
+      "capitalization_value": "UW!B26",
+      "maximum_loan": "UW!B33",
+      "net_cash_out": "UW!B37"
+    }
+  },
+  "result": {
+    "submitted": true,
+    "stage": "initial"
+  },
+  "status": "ok"
+}

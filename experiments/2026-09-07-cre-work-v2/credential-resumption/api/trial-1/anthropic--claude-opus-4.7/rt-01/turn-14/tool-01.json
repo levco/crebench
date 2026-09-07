@@ -1,0 +1,114 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly\",\"expression\":\"6650+7025+7075+6650+6800+7075+6650+6800+7075+6650\"},{\"name\":\"gpr_annual\",\"expression\":\"gpr_monthly*12\"},{\"name\":\"other_inc\",\"expression\":\"350*10\"},{\"name\":\"gross\",\"expression\":\"gpr_annual+other_inc\"},{\"name\":\"egi\",\"expression\":\"gross*0.95\"},{\"name\":\"mgmt\",\"expression\":\"egi*0.03\"},{\"name\":\"opex\",\"expression\":\"85964+28655+114618+mgmt\"},{\"name\":\"noi\",\"expression\":\"egi-opex\"},{\"name\":\"ncf\",\"expression\":\"noi-3000\"},{\"name\":\"cap_val\",\"expression\":\"noi/0.07\"},{\"name\":\"ltv_loan\",\"expression\":\"cap_val*0.65\"},{\"name\":\"sizing_rate\",\"expression\":\"0.0725\"},{\"name\":\"ds_per_dollar\",\"expression\":\"pmt(sizing_rate/12,360,-1)*12\"},{\"name\":\"dscr_loan\",\"expression\":\"ncf/(1.25*ds_per_dollar)\"},{\"name\":\"dy_loan\",\"expression\":\"ncf/0.09\"},{\"name\":\"max_loan\",\"expression\":\"min(ltv_loan, dscr_loan, dy_loan)\"},{\"name\":\"fee\",\"expression\":\"max_loan*0.01\"},{\"name\":\"net_cash_out\",\"expression\":\"max_loan-4300000-45000-fee\"},{\"name\":\"in_place_annual\",\"expression\":\"(7000+7025+7075+6650+6800+7075+6650+6800+7075)*12\"},{\"name\":\"in_place_monthly_sum\",\"expression\":\"7000+7025+7075+6650+6800+7075+6650+6800+7075\"}]}",
+  "call_id": "toolu_01YR3w7VNNPorStCmAbVfWqe",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly",
+        "expression": "6650+7025+7075+6650+6800+7075+6650+6800+7075+6650"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "gpr_monthly*12"
+      },
+      {
+        "name": "other_inc",
+        "expression": "350*10"
+      },
+      {
+        "name": "gross",
+        "expression": "gpr_annual+other_inc"
+      },
+      {
+        "name": "egi",
+        "expression": "gross*0.95"
+      },
+      {
+        "name": "mgmt",
+        "expression": "egi*0.03"
+      },
+      {
+        "name": "opex",
+        "expression": "85964+28655+114618+mgmt"
+      },
+      {
+        "name": "noi",
+        "expression": "egi-opex"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi-3000"
+      },
+      {
+        "name": "cap_val",
+        "expression": "noi/0.07"
+      },
+      {
+        "name": "ltv_loan",
+        "expression": "cap_val*0.65"
+      },
+      {
+        "name": "sizing_rate",
+        "expression": "0.0725"
+      },
+      {
+        "name": "ds_per_dollar",
+        "expression": "pmt(sizing_rate/12,360,-1)*12"
+      },
+      {
+        "name": "dscr_loan",
+        "expression": "ncf/(1.25*ds_per_dollar)"
+      },
+      {
+        "name": "dy_loan",
+        "expression": "ncf/0.09"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(ltv_loan, dscr_loan, dy_loan)"
+      },
+      {
+        "name": "fee",
+        "expression": "max_loan*0.01"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "max_loan-4300000-45000-fee"
+      },
+      {
+        "name": "in_place_annual",
+        "expression": "(7000+7025+7075+6650+6800+7075+6650+6800+7075)*12"
+      },
+      {
+        "name": "in_place_monthly_sum",
+        "expression": "7000+7025+7075+6650+6800+7075+6650+6800+7075"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly": 68450,
+      "gpr_annual": 821400,
+      "other_inc": 3500,
+      "gross": 824900,
+      "egi": 783655.0,
+      "mgmt": 23509.649999999998,
+      "opex": 252746.65,
+      "noi": 530908.35,
+      "ncf": 527908.35,
+      "cap_val": 7584404.999999999,
+      "ltv_loan": 4929863.25,
+      "sizing_rate": 0.0725,
+      "ds_per_dollar": 0.08186115360674281,
+      "dscr_loan": 5159060.939072979,
+      "dy_loan": 5865648.333333333,
+      "max_loan": 4929863.25,
+      "fee": 49298.6325,
+      "net_cash_out": 535564.6175,
+      "in_place_annual": 745800,
+      "in_place_monthly_sum": 62150
+    }
+  },
+  "status": "ok"
+}

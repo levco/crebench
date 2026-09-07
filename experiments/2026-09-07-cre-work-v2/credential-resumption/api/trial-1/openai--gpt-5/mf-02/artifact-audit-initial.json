@@ -1,0 +1,156 @@
+{
+  "stage": "initial",
+  "workbook": {
+    "readable": true,
+    "base_checks": [
+      {
+        "field": "uw_egi",
+        "actual": 1309175,
+        "expected": 1309175.0,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "uw_noi",
+        "actual": null,
+        "expected": 890639.75,
+        "passed": false,
+        "live_formula": false
+      },
+      {
+        "field": "uw_ncf",
+        "actual": 871439.75,
+        "expected": 871439.75,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "capitalization_value",
+        "actual": 14843995.8333333,
+        "expected": 14843995.833333334,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "maximum_loan",
+        "actual": 8821131.43601643,
+        "expected": 8821131.436016398,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "net_cash_out",
+        "actual": 1487920.12165627,
+        "expected": 1487920.1216562334,
+        "passed": true,
+        "live_formula": true
+      }
+    ],
+    "perturbations": [
+      {
+        "input": "cap_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1309175,
+            "expected": 1309175.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": null,
+            "expected": 890639.75,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 871439.75,
+            "expected": 871439.75,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 13702150,
+            "expected": 13702150.0,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 8221290,
+            "expected": 8221290.0,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 894077.1,
+            "expected": 894077.0999999996,
+            "passed": true
+          }
+        ],
+        "passed": false
+      },
+      {
+        "input": "gross_potential_rent",
+        "passed": false,
+        "error": "'gross_potential_rent'"
+      },
+      {
+        "input": "sizing_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 1309175,
+            "expected": 1309175.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": null,
+            "expected": 890639.75,
+            "passed": false
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 871439.75,
+            "expected": 871439.75,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 14843995.8333333,
+            "expected": 14843995.833333334,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 7993333.96719712,
+            "expected": 7993333.9671971295,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 668400.627525144,
+            "expected": 668400.6275251582,
+            "passed": true
+          }
+        ],
+        "passed": false
+      }
+    ],
+    "all_base_outputs_correct": false,
+    "all_sensitivities_correct": false
+  },
+  "om": {
+    "readable": true,
+    "pages": 4,
+    "characters": 6143,
+    "approved_copy_present": true,
+    "financial_and_presentation_review": "pending; readable PDF is not acceptance"
+  },
+  "professional_acceptance": null,
+  "human_review": "pending",
+  "original_hashes": {
+    "artifacts/underwriting-v1.xlsx": "e28e75cd28f0a63f0a4c1930f66bc1d10d83c1c156c024185172e851f59af738",
+    "artifacts/memorandum-v2.pdf": "faba3d8f085c7a525eb49315a8991910c71a8e86caf10cf1f75e0a6a3c835364"
+  }
+}

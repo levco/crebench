@@ -1,0 +1,69 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"monthly_rate\",\"expression\":\"0.07/12\"},{\"name\":\"pmt_val\",\"expression\":\"pmt(monthly_rate,360,1)\"},{\"name\":\"debt_constant_annual\",\"expression\":\"abs(12*pmt_val)\"},{\"name\":\"uw_ncf\",\"expression\":\"900212.2\"},{\"name\":\"dscr_limit\",\"expression\":\"uw_ncf/1.25/debt_constant_annual\"},{\"name\":\"capitalization_value\",\"expression\":\"14441795.2\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*capitalization_value\"},{\"name\":\"debt_yield_limit\",\"expression\":\"uw_ncf/0.09\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit,dscr_limit,debt_yield_limit)\"},{\"name\":\"origination_fee\",\"expression\":\"0.01*maximum_loan\"},{\"name\":\"net_cash_out\",\"expression\":\"maximum_loan - origination_fee - 45000 - 7800000\"}]}",
+  "call_id": "call_TP4NkwYycthmG3Kcevh6POvn",
+  "arguments": {
+    "steps": [
+      {
+        "name": "monthly_rate",
+        "expression": "0.07/12"
+      },
+      {
+        "name": "pmt_val",
+        "expression": "pmt(monthly_rate,360,1)"
+      },
+      {
+        "name": "debt_constant_annual",
+        "expression": "abs(12*pmt_val)"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "900212.2"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "uw_ncf/1.25/debt_constant_annual"
+      },
+      {
+        "name": "capitalization_value",
+        "expression": "14441795.2"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*capitalization_value"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "uw_ncf/0.09"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit,dscr_limit,debt_yield_limit)"
+      },
+      {
+        "name": "origination_fee",
+        "expression": "0.01*maximum_loan"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "maximum_loan - origination_fee - 45000 - 7800000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "monthly_rate": 0.005833333333333334,
+      "pmt_val": -0.006653024951791824,
+      "debt_constant_annual": 0.07983629942150189,
+      "uw_ncf": 900212.2,
+      "dscr_limit": 9020580.427930512,
+      "capitalization_value": 14441795.2,
+      "ltv_limit": 9387166.879999999,
+      "debt_yield_limit": 10002357.777777778,
+      "maximum_loan": 9020580.427930512,
+      "origination_fee": 90205.80427930511,
+      "net_cash_out": 1085374.6236512065
+    }
+  },
+  "status": "ok"
+}

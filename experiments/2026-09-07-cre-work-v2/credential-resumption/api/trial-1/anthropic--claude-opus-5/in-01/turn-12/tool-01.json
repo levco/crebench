@@ -1,0 +1,109 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_month\",\"expression\":\"14450+14825+14875+14450+14600+14875+14450+14600\"},{\"name\":\"gpr\",\"expression\":\"gpr_month*12\"},{\"name\":\"inplace\",\"expression\":\"(14450+14825+14875+14450+14600+14875+14450)*12\"},{\"name\":\"egi\",\"expression\":\"gpr*0.95+2800\"},{\"name\":\"mgmt\",\"expression\":\"0.03*egi\"},{\"name\":\"opex\",\"expression\":\"147294+49098+196392+mgmt\"},{\"name\":\"noi\",\"expression\":\"egi-opex\"},{\"name\":\"ncf\",\"expression\":\"noi-2400\"},{\"name\":\"capval\",\"expression\":\"noi/0.065\"},{\"name\":\"ltv\",\"expression\":\"0.65*capval\"},{\"name\":\"const775\",\"expression\":\"pmt(0.0775/12,360,-1)*12\"},{\"name\":\"dscr775\",\"expression\":\"(ncf/1.25)/const775\"},{\"name\":\"const700\",\"expression\":\"pmt(0.07/12,360,-1)*12\"},{\"name\":\"dscr700\",\"expression\":\"(ncf/1.25)/const700\"},{\"name\":\"dy\",\"expression\":\"ncf/0.09\"},{\"name\":\"maxloan775\",\"expression\":\"min(ltv,dscr775,dy)\"},{\"name\":\"maxloan700\",\"expression\":\"min(ltv,dscr700,dy)\"},{\"name\":\"nco775\",\"expression\":\"maxloan775*0.99-45000-7800000\"},{\"name\":\"nco700\",\"expression\":\"maxloan700*0.99-45000-7800000\"}]}",
+  "call_id": "toolu_01LKR2vMwY8nEPNscwayps1o",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_month",
+        "expression": "14450+14825+14875+14450+14600+14875+14450+14600"
+      },
+      {
+        "name": "gpr",
+        "expression": "gpr_month*12"
+      },
+      {
+        "name": "inplace",
+        "expression": "(14450+14825+14875+14450+14600+14875+14450)*12"
+      },
+      {
+        "name": "egi",
+        "expression": "gpr*0.95+2800"
+      },
+      {
+        "name": "mgmt",
+        "expression": "0.03*egi"
+      },
+      {
+        "name": "opex",
+        "expression": "147294+49098+196392+mgmt"
+      },
+      {
+        "name": "noi",
+        "expression": "egi-opex"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi-2400"
+      },
+      {
+        "name": "capval",
+        "expression": "noi/0.065"
+      },
+      {
+        "name": "ltv",
+        "expression": "0.65*capval"
+      },
+      {
+        "name": "const775",
+        "expression": "pmt(0.0775/12,360,-1)*12"
+      },
+      {
+        "name": "dscr775",
+        "expression": "(ncf/1.25)/const775"
+      },
+      {
+        "name": "const700",
+        "expression": "pmt(0.07/12,360,-1)*12"
+      },
+      {
+        "name": "dscr700",
+        "expression": "(ncf/1.25)/const700"
+      },
+      {
+        "name": "dy",
+        "expression": "ncf/0.09"
+      },
+      {
+        "name": "maxloan775",
+        "expression": "min(ltv,dscr775,dy)"
+      },
+      {
+        "name": "maxloan700",
+        "expression": "min(ltv,dscr700,dy)"
+      },
+      {
+        "name": "nco775",
+        "expression": "maxloan775*0.99-45000-7800000"
+      },
+      {
+        "name": "nco700",
+        "expression": "maxloan700*0.99-45000-7800000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_month": 117125,
+      "gpr": 1405500,
+      "inplace": 1230300,
+      "egi": 1338025.0,
+      "mgmt": 40140.75,
+      "opex": 432924.75,
+      "noi": 905100.25,
+      "ncf": 902700.25,
+      "capval": 13924619.23076923,
+      "ltv": 9051002.5,
+      "const775": 0.08596946946708553,
+      "dscr775": 8400193.74874109,
+      "const700": 0.07983629942150189,
+      "dscr700": 9045511.944226017,
+      "dy": 10030002.777777778,
+      "maxloan775": 8400193.74874109,
+      "maxloan700": 9045511.944226017,
+      "nco775": 471191.811253679,
+      "nco700": 1110056.8247837573
+    }
+  },
+  "status": "ok"
+}

@@ -1,0 +1,22 @@
+```json
+{
+  "classification": "fits_disclosed_property_financial_criteria_approval_unverified",
+  "reason": "Every property- and financial-level parameter disclosed in the Fannie Mae Conventional Properties term sheet summary is satisfied by the stated scenario: the asset is an existing stabilized multifamily property with 40 units (term sheet requires at least five units); the transaction is an acquisition, which the term sheet lists as an eligible first-lien use; the 75% LTV is within the 80% maximum; the 1.30x DSCR clears the 1.25x minimum; and 95% occupancy for 120 days exceeds the typical stabilized threshold of 90% for 90 days, so no pre-stabilized case-by-case treatment is needed. Because the property meets the standard stabilized profile, the 'case_by_case' classification does not apply, and none of the disclosed thresholds are breached, so 'not_eligible' does not apply either. This is more than a bare amount-range match, since the fit is established on the substantive LTV, DSCR, occupancy, unit-count, and use criteria rather than on loan size alone; in fact no loan amount was provided at all. However, the term sheet summary expressly states that guidelines do not establish approval of a specific borrower, and the question itself notes that credit and third-party reports remain unreviewed, so this is a guideline-level fit only and not an eligibility determination or an approval. The Freddie Mac Conventional Small announcement is not relied upon: it concerns a different lender's program, discloses only a $2 million to $10 million range plus a legacy Small Balance Loan application cutoff of April 30, 2026, does not state a complete set of underwriting criteria, and has no bearing on Fannie Mae conventional term-sheet fit. No outreach or CRM changes were made.",
+  "source_ids": [
+    "fannie-conventional"
+  ],
+  "missing_information": [
+    "Requested loan amount and property value/purchase price, needed to size the loan and to test the over-$750,000 threshold for nonrecourse execution with standard carve-outs",
+    "Borrower and sponsor credit review, financial statements, net worth and liquidity, and multifamily operating experience",
+    "Third-party reports: appraisal, property condition assessment, and environmental (all explicitly unreviewed)",
+    "Documentation and verification of the single-asset borrower entity structure and required carve-out guarantor",
+    "Independent verification of the 95%/120-day occupancy figure via rent roll and of the DSCR via underwritten NOI, including the amortization, index/spread, and term assumptions used to derive 1.30x",
+    "Property location, market/submarket, vintage, and unit mix",
+    "Whether any affordability, rent restriction, or program overlay applies",
+    "Publication or last-updated date for the Fannie Mae conventional term sheet (publication_date is null; only a 2026-09-07 retrieval date is available), so current effective terms cannot be confirmed",
+    "Loan term, amortization, prepayment structure, and rate lock requirements sought by the borrower",
+    "Lender-specific credit overlays applied by the delegated underwriting servicer, which may be stricter than the published term sheet"
+  ],
+  "approved": false
+}
+```

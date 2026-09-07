@@ -1,0 +1,44 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"in_place_monthly\",\"expression\":\"14450+14600+14875+14450+14600+14875+14450\"},{\"name\":\"in_place_annual\",\"expression\":\"(14450+14600+14875+14450+14600+14875+14450)*12\"},{\"name\":\"total_sf\",\"expression\":\"21880+22000+22210+21880+22000+22210+21880+22000\"},{\"name\":\"occupied_sf\",\"expression\":\"21880+22000+22210+21880+22000+22210+21880\"},{\"name\":\"unit_occ\",\"expression\":\"7/8\"},{\"name\":\"area_occ\",\"expression\":\"(21880+22000+22210+21880+22000+22210+21880)/(21880+22000+22210+21880+22000+22210+21880+22000)\"}]}",
+  "call_id": "toolu_01Dc8hjafgoGJjuq8ei9BCqL",
+  "arguments": {
+    "steps": [
+      {
+        "name": "in_place_monthly",
+        "expression": "14450+14600+14875+14450+14600+14875+14450"
+      },
+      {
+        "name": "in_place_annual",
+        "expression": "(14450+14600+14875+14450+14600+14875+14450)*12"
+      },
+      {
+        "name": "total_sf",
+        "expression": "21880+22000+22210+21880+22000+22210+21880+22000"
+      },
+      {
+        "name": "occupied_sf",
+        "expression": "21880+22000+22210+21880+22000+22210+21880"
+      },
+      {
+        "name": "unit_occ",
+        "expression": "7/8"
+      },
+      {
+        "name": "area_occ",
+        "expression": "(21880+22000+22210+21880+22000+22210+21880)/(21880+22000+22210+21880+22000+22210+21880+22000)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "in_place_monthly": 102300,
+      "in_place_annual": 1227600,
+      "total_sf": 176060,
+      "occupied_sf": 154060,
+      "unit_occ": 0.875,
+      "area_occ": 0.8750425991139384
+    }
+  },
+  "status": "ok"
+}

@@ -1,0 +1,165 @@
+{
+  "name": "create_workbook",
+  "arguments_raw": "{\"spec\":{\"sheets\":[{\"name\":\"UW\",\"cells\":[{\"cell\":\"B46\",\"formula\":\"=(B45/12)/B44\",\"number_format\":\"$#,##0\",\"role\":\"total\"}]},{\"name\":\"Sensitivity\",\"cells\":[{\"cell\":\"B4\",\"formula\":\"=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"C4\",\"formula\":\"=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"D4\",\"formula\":\"=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"B5\",\"formula\":\"=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"C5\",\"formula\":\"=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"D5\",\"formula\":\"=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"B6\",\"formula\":\"=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"C6\",\"formula\":\"=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"},{\"cell\":\"D6\",\"formula\":\"=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)\",\"number_format\":\"$#,##0\"}]}], \"input_map\":{\"cap_rate\":\"UW!B6\",\"sizing_rate\":\"UW!B24\",\"egi_gross_potential_rent\":\"UW!B4\",\"egi_other_income\":\"UW!B9\"}, \"output_map\":{\"uw_egi\":\"UW!B29\",\"uw_noi\":\"UW!B36\",\"uw_ncf\":\"UW!B38\",\"capitalization_value\":\"UW!B39\",\"ltv_limit\":\"UW!B41\",\"dscr_limit\":\"UW!B46\",\"debt_yield_limit\":\"UW!B47\",\"maximum_loan\":\"UW!B48\",\"net_cash_out\":\"UW!B50\"}}}",
+  "call_id": "call_FwHuFbpsm5yC2M1KhHARGu84",
+  "arguments": {
+    "spec": {
+      "sheets": [
+        {
+          "name": "UW",
+          "cells": [
+            {
+              "cell": "B46",
+              "formula": "=(B45/12)/B44",
+              "number_format": "$#,##0",
+              "role": "total"
+            }
+          ]
+        },
+        {
+          "name": "Sensitivity",
+          "cells": [
+            {
+              "cell": "B4",
+              "formula": "=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "C4",
+              "formula": "=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "D4",
+              "formula": "=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "B5",
+              "formula": "=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "C5",
+              "formula": "=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "D5",
+              "formula": "=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "B6",
+              "formula": "=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "C6",
+              "formula": "=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            },
+            {
+              "cell": "D6",
+              "formula": "=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)",
+              "number_format": "$#,##0"
+            }
+          ]
+        }
+      ],
+      "input_map": {
+        "cap_rate": "UW!B6",
+        "sizing_rate": "UW!B24",
+        "egi_gross_potential_rent": "UW!B4",
+        "egi_other_income": "UW!B9"
+      },
+      "output_map": {
+        "uw_egi": "UW!B29",
+        "uw_noi": "UW!B36",
+        "uw_ncf": "UW!B38",
+        "capitalization_value": "UW!B39",
+        "ltv_limit": "UW!B41",
+        "dscr_limit": "UW!B46",
+        "debt_yield_limit": "UW!B47",
+        "maximum_loan": "UW!B48",
+        "net_cash_out": "UW!B50"
+      }
+    }
+  },
+  "result": {
+    "created": "artifacts/underwriting-v2.xlsx",
+    "bytes": 5707,
+    "inspection": {
+      "sheets": [
+        "UW",
+        "Sensitivity"
+      ],
+      "output_values": {
+        "uw_egi": null,
+        "uw_noi": null,
+        "uw_ncf": null,
+        "capitalization_value": null,
+        "ltv_limit": null,
+        "dscr_limit": "#DIV/0!",
+        "debt_yield_limit": null,
+        "maximum_loan": null,
+        "net_cash_out": null
+      },
+      "formula_errors": [
+        {
+          "sheet": "UW",
+          "cell": "B46",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "B4",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "C4",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "D4",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "B5",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "C5",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "D5",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "B6",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "C6",
+          "value": "#DIV/0!"
+        },
+        {
+          "sheet": "Sensitivity",
+          "cell": "D6",
+          "value": "#DIV/0!"
+        }
+      ],
+      "file": "artifacts/underwriting-v2.xlsx",
+      "recalculated": true
+    }
+  },
+  "status": "ok"
+}

@@ -1,0 +1,79 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly\",\"expression\":\"11050+11200+11475+11050+11200+11475+11050+11200+11475+11050+11200+11475\"},{\"name\":\"gpr_annual\",\"expression\":\"gpr_monthly*12\"},{\"name\":\"other_income\",\"expression\":\"350*12\"},{\"name\":\"gross_income\",\"expression\":\"gpr_annual+other_income\"},{\"name\":\"loss\",\"expression\":\"gross_income*0.05\"},{\"name\":\"uw_egi\",\"expression\":\"gross_income-loss\"},{\"name\":\"mgmt\",\"expression\":\"uw_egi*0.03\"},{\"name\":\"opex\",\"expression\":\"169974+56658+226632+mgmt\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi-opex\"},{\"name\":\"reserves\",\"expression\":\"300*12\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-reserves\"},{\"name\":\"cap_value\",\"expression\":\"uw_noi/0.075\"},{\"name\":\"annual_in_place\",\"expression\":\"(11050+11200+11475+11050+11200+11475+11050+11200+11475)*12\"}]}",
+  "call_id": "toolu_019TPWcEsLyt2YMkDFpLz7C7",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly",
+        "expression": "11050+11200+11475+11050+11200+11475+11050+11200+11475+11050+11200+11475"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "gpr_monthly*12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*12"
+      },
+      {
+        "name": "gross_income",
+        "expression": "gpr_annual+other_income"
+      },
+      {
+        "name": "loss",
+        "expression": "gross_income*0.05"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "gross_income-loss"
+      },
+      {
+        "name": "mgmt",
+        "expression": "uw_egi*0.03"
+      },
+      {
+        "name": "opex",
+        "expression": "169974+56658+226632+mgmt"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi-opex"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*12"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-reserves"
+      },
+      {
+        "name": "cap_value",
+        "expression": "uw_noi/0.075"
+      },
+      {
+        "name": "annual_in_place",
+        "expression": "(11050+11200+11475+11050+11200+11475+11050+11200+11475)*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly": 134900,
+      "gpr_annual": 1618800,
+      "other_income": 4200,
+      "gross_income": 1623000,
+      "loss": 81150.0,
+      "uw_egi": 1541850.0,
+      "mgmt": 46255.5,
+      "opex": 499519.5,
+      "uw_noi": 1042330.5,
+      "reserves": 3600,
+      "uw_ncf": 1038730.5,
+      "cap_value": 13897740.0,
+      "annual_in_place": 1214100
+    }
+  },
+  "status": "ok"
+}

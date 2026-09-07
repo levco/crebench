@@ -1,0 +1,79 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly_before\",\"expression\":\"6300+6800+7075+6650+6800+7075+6650+6800+7075+6650\"},{\"name\":\"gpr_annual\",\"expression\":\"gpr_monthly_before*12\"},{\"name\":\"other_income\",\"expression\":\"350*10\"},{\"name\":\"gross_revenue\",\"expression\":\"gpr_annual+other_income\"},{\"name\":\"egi\",\"expression\":\"gross_revenue*0.95\"},{\"name\":\"mgmt\",\"expression\":\"egi*0.03\"},{\"name\":\"opex\",\"expression\":\"85964+28655+114618+mgmt\"},{\"name\":\"noi\",\"expression\":\"egi-opex\"},{\"name\":\"reserves\",\"expression\":\"300*10\"},{\"name\":\"ncf\",\"expression\":\"noi-reserves\"},{\"name\":\"cap_value\",\"expression\":\"noi/0.0675\"},{\"name\":\"ltv_loan\",\"expression\":\"cap_value*0.65\"},{\"name\":\"in_place_rent_annual\",\"expression\":\"(6650+6800+7075+6650+6800+7075+6650+6800+7075)*12\"}]}",
+  "call_id": "toolu_01N6CPZF1ZhjydNr12Mq8dJH",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly_before",
+        "expression": "6300+6800+7075+6650+6800+7075+6650+6800+7075+6650"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "gpr_monthly_before*12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*10"
+      },
+      {
+        "name": "gross_revenue",
+        "expression": "gpr_annual+other_income"
+      },
+      {
+        "name": "egi",
+        "expression": "gross_revenue*0.95"
+      },
+      {
+        "name": "mgmt",
+        "expression": "egi*0.03"
+      },
+      {
+        "name": "opex",
+        "expression": "85964+28655+114618+mgmt"
+      },
+      {
+        "name": "noi",
+        "expression": "egi-opex"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*10"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi-reserves"
+      },
+      {
+        "name": "cap_value",
+        "expression": "noi/0.0675"
+      },
+      {
+        "name": "ltv_loan",
+        "expression": "cap_value*0.65"
+      },
+      {
+        "name": "in_place_rent_annual",
+        "expression": "(6650+6800+7075+6650+6800+7075+6650+6800+7075)*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly_before": 67875,
+      "gpr_annual": 814500,
+      "other_income": 3500,
+      "gross_revenue": 818000,
+      "egi": 777100.0,
+      "mgmt": 23313.0,
+      "opex": 252550.0,
+      "noi": 524550.0,
+      "reserves": 3000,
+      "ncf": 521550.0,
+      "cap_value": 7771111.111111111,
+      "ltv_loan": 5051222.222222222,
+      "in_place_rent_annual": 738900
+    }
+  },
+  "status": "ok"
+}

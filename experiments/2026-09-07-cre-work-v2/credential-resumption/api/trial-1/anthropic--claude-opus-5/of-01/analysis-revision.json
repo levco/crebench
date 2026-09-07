@@ -1,0 +1,417 @@
+{
+  "summary": "Revision 1 applies revision-notice.pdf p.1 and the revised certified roll dated 2026-09-01 (rent-roll-revised.xlsx), which supersedes the 2026-08-31 roll. Changes: (1) Suite 010 moves from pending to active, so occupied units go 9 to 10 and occupied area 49,770 to 55,150 SF (unit occupancy 0.8333, area occupancy 0.8311); (2) Suite 010's rent rises $225 to $11,275, so all-suite scheduled rent is $135,125/mo and GPR $1,621,500 (from $1,618,800); annual in-place rent rises to $1,349,400; (3) the initial sizing rate rises 75 bps to 7.5000% and the cap rate 25 bps to 7.7500%. Revised EGI $1,544,625, opex $499,603 (tax $169,974, insurance $56,658, other $226,632, 3% mgmt $46,339), NOI before reserves $1,045,022, NCF after $3,600 reserves $1,041,422. Capitalized value $13,484,158 (down $416,298). Limits: LTV $8,090,495 (binding), DSCR $9,929,449, debt yield $11,571,358; maximum loan $8,090,495 (down $249,779), implied DSCR ~1.53x, debt yield ~12.87%. Net cash-out $1,464,590 after $6,500,000 payoff, $80,905 fee and $45,000 costs (down $247,281). Unaffected and preserved: 12 suites, 66,360 SF, Suite 001 at $11,050 expiring 2027-02-28, all other expiries 2029-08-31, expense and sizing rules, payoff, T12 statement and reported NOI $1,003,656, $2,000,000 insurance limit, diligence status, group mapping, and the approved sentence \"Source-backed analysis. Assumptions remain subject to diligence.\" New deliverables: artifacts/underwriting-v3.xlsx (adds a Revision Bridge sheet) and artifacts/memorandum-v2.pdf (7 pages, leads with a change summary). The initial artifacts underwriting-v2.xlsx and memorandum-v1.pdf remain in the audit archive unchanged.",
+  "qualifications": [
+    "Roll supersession: the 2026-09-01 revised certified roll controls; the 2026-08-31 certified roll and 2026-06-30 archive are superseded and retained only in the change bridge.",
+    "Underwritten EGI still credits all 12 suites' scheduled rent net of the prescribed 5% loss while 11,210 SF (Suites 011, 012) remains vacant; the underwritten NOI is stabilized and above T12 actuals and depends on lease-up at roll rents.",
+    "The revision notice references prior executed Suite 001 amendments, but no amendment document is supplied and manager correspondence dated 2026-08-31 states none affect Suite 001; Suite 001 rent is therefore carried at the executed and certified $11,050, unchanged.",
+    "The Suite 010 lease document is not supplied; its active status and $11,275 rent are evidenced only by the revised certified roll and the revision notice.",
+    "T12 statement does not report a management fee, reserves or NCF; those historical amounts remain unknown, not zero, and the T12 is unchanged by the revision.",
+    "Capitalized value is an income-approach indication at the prescribed 7.7500% rate; asking price, photos, market sales/rent comps and sponsor history are not supplied and were not invented.",
+    "Sizing uses a 30-year amortizing payment at the revised sizing rate as instructed despite 24 months of interest-only; the 7.5000% sizing rate results from the +75 bps revision to the initial sizing rate, not from the 6.00% floor.",
+    "Legal, environmental, property condition and title reviews remain incomplete per diligence-status.pdf; no defect finding is asserted."
+  ],
+  "blocked": [],
+  "input_map": {
+    "gross_potential_rent": "UW!B4",
+    "cap_rate": "UW!B7",
+    "sizing_rate": "UW!B8",
+    "egi_gross_potential_rent": "UW!B4",
+    "egi_other_income": "UW!B5"
+  },
+  "output_map": {
+    "uw_egi": "UW!B29",
+    "uw_noi": "UW!B35",
+    "uw_noi_before_reserves": "UW!B35",
+    "uw_ncf": "UW!B37",
+    "capitalization_value": "UW!B41",
+    "ltv_limit": "UW!B42",
+    "dscr_limit": "UW!B44",
+    "debt_yield_limit": "UW!B45",
+    "maximum_loan": "UW!B46",
+    "net_cash_out": "UW!B59",
+    "uw_operating_expenses": "UW!B34"
+  },
+  "fields": [
+    {
+      "id": "total_units",
+      "value": 12,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll A5:A16",
+        "underwriting-v3.xlsx 'Rent Roll'!B19"
+      ],
+      "calculation": "Count of suites 001-012 on the revised roll; unchanged"
+    },
+    {
+      "id": "occupied_units",
+      "value": 10,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D5:D16 (D14 now 'active')",
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx 'Rent Roll'!B20"
+      ],
+      "calculation": "COUNTIF(status,\"active\") = 10 (was 9); Suite 010 took possession"
+    },
+    {
+      "id": "pending_units",
+      "value": 0,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D14",
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx 'Rent Roll'!B21"
+      ],
+      "calculation": "COUNTIF(status,\"pending\") = 0 (was 1)"
+    },
+    {
+      "id": "total_area_sf",
+      "value": 66360,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll C5:C16",
+        "underwriting-v3.xlsx 'Rent Roll'!B23"
+      ],
+      "calculation": "4x5380 + 4x5500 + 4x5710 = 66,360 SF; unchanged"
+    },
+    {
+      "id": "occupied_area_sf",
+      "value": 55150,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll C5:C14, D5:D14",
+        "underwriting-v3.xlsx 'Rent Roll'!B24"
+      ],
+      "calculation": "49,770 + 5,380 (Suite 010) = 55,150 SF"
+    },
+    {
+      "id": "unit_occupancy",
+      "value": 0.8333,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D5:D16",
+        "underwriting-v3.xlsx 'Rent Roll'!B25"
+      ],
+      "calculation": "10 / 12 = 0.833333 (was 0.7500)"
+    },
+    {
+      "id": "area_occupancy",
+      "value": 0.8311,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll C5:C16",
+        "underwriting-v3.xlsx 'Rent Roll'!B26"
+      ],
+      "calculation": "55,150 / 66,360 = 0.831073 (was 0.7500)"
+    },
+    {
+      "id": "annual_in_place_rent",
+      "value": 1349400,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll E5:E14",
+        "underwriting-v3.xlsx 'Rent Roll'!B27"
+      ],
+      "calculation": "Active monthly rent 112,450 (=101,175 + 11,275) x 12 = $1,349,400 (was $1,214,100)"
+    },
+    {
+      "id": "unit_001_monthly_rent",
+      "value": 11050,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll E5",
+        "lease-001.pdf p.1",
+        "lease-correspondence.pdf p.1"
+      ],
+      "calculation": "Unchanged by the revision; revision notice states all other lease details remain unchanged"
+    },
+    {
+      "id": "gross_potential_rent",
+      "value": 1621500,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll E5:E16",
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx UW!B4"
+      ],
+      "calculation": "All-suite scheduled monthly rent $135,125 x 12 = $1,621,500 (was $1,618,800; +$225x12)"
+    },
+    {
+      "id": "uw_egi",
+      "value": 1544625,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B29"
+      ],
+      "calculation": "1,621,500 x 0.95 + 350x12 = 1,540,425 + 4,200 = $1,544,625"
+    },
+    {
+      "id": "uw_tax",
+      "value": 169974,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "operating-statement.pdf p.1",
+        "underwriting-v3.xlsx UW!B30"
+      ],
+      "calculation": "Unchanged prescribed tax expense"
+    },
+    {
+      "id": "uw_insurance",
+      "value": 56658,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "operating-statement.pdf p.1",
+        "underwriting-v3.xlsx UW!B31"
+      ],
+      "calculation": "Unchanged prescribed insurance expense (not the policy limit)"
+    },
+    {
+      "id": "uw_operating_expenses",
+      "value": 499602.75,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B34"
+      ],
+      "calculation": "169,974 + 56,658 + 226,632 + 0.03x1,544,625 (=46,338.75) = $499,602.75"
+    },
+    {
+      "id": "uw_noi",
+      "value": 1045022.25,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B35"
+      ],
+      "calculation": "1,544,625 - 499,602.75 = $1,045,022.25 before reserves (was $1,042,534.20)"
+    },
+    {
+      "id": "uw_ncf",
+      "value": 1041422.25,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B37"
+      ],
+      "calculation": "1,045,022.25 - 12x300 = $1,041,422.25"
+    },
+    {
+      "id": "sizing_rate",
+      "value": 0.075,
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B8"
+      ],
+      "calculation": "Initial sizing rate 6.7500% (= MAX(note 6.75%, floor 6.00%)) + 75 bps = 7.5000%"
+    },
+    {
+      "id": "cap_rate",
+      "value": 0.0775,
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B7"
+      ],
+      "calculation": "7.5000% + 25 bps = 7.7500%"
+    },
+    {
+      "id": "capitalization_value",
+      "value": 13484158.06,
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx UW!B41"
+      ],
+      "calculation": "1,045,022.25 / 0.0775 = $13,484,158 (was $13,900,456)"
+    },
+    {
+      "id": "ltv_limit",
+      "value": 8090494.84,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B42"
+      ],
+      "calculation": "13,484,158.06 x 60.00% = $8,090,494.84"
+    },
+    {
+      "id": "dscr_limit",
+      "value": 9929449.28,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx UW!B44"
+      ],
+      "calculation": "Max ADS = 1,041,422.25/1.25 = 833,137.80; monthly 69,428.15 capitalized at 7.5000%/12 over 360 months = $9,929,449"
+    },
+    {
+      "id": "debt_yield_limit",
+      "value": 11571358.33,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B45"
+      ],
+      "calculation": "1,041,422.25 / 0.09 = $11,571,358"
+    },
+    {
+      "id": "maximum_loan",
+      "value": 8090494.84,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "underwriting-v3.xlsx UW!B46"
+      ],
+      "calculation": "MIN(8,090,495 LTV; 9,929,449 DSCR; 11,571,358 DY) = $8,090,494.84 - LTV binding"
+    },
+    {
+      "id": "net_cash_out",
+      "value": 1464589.89,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx UW!B59"
+      ],
+      "calculation": "8,090,494.84 - 6,500,000 - 80,904.95 (1% fee) - 45,000 = $1,464,589.89"
+    },
+    {
+      "id": "insurance_policy_limit",
+      "value": 2000000,
+      "evidence": [
+        "insurance.pdf p.1"
+      ],
+      "calculation": "GL aggregate limit; unchanged by the revision and distinct from the $56,658 expense"
+    },
+    {
+      "id": "selected_roll_date",
+      "value": "2026-09-01",
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll B2",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "Revised certified roll supersedes the 2026-08-31 roll as of September 1, 2026"
+    },
+    {
+      "id": "reported_t12_noi",
+      "value": 1003656,
+      "evidence": [
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "1,456,920 - 169,974 - 56,658 - 226,632 = $1,003,656; T12 unaffected by the revision"
+    },
+    {
+      "id": "type_a_units",
+      "value": 4,
+      "evidence": [
+        "manager-cover.pdf p.1 (A = Small suite)",
+        "rent-roll-revised.xlsx Rent Roll B5:B16",
+        "underwriting-v3.xlsx 'Rent Roll'!B35"
+      ],
+      "calculation": "Small suites 001, 004, 007, 010 = 4"
+    },
+    {
+      "id": "type_a_occupied",
+      "value": 4,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D5, D8, D11, D14",
+        "underwriting-v3.xlsx 'Rent Roll'!C35"
+      ],
+      "calculation": "All four small suites now active (Suite 010 took possession); was 3"
+    },
+    {
+      "id": "type_b_units",
+      "value": 4,
+      "evidence": [
+        "manager-cover.pdf p.1 (B = Standard suite)",
+        "rent-roll-revised.xlsx Rent Roll B5:B16",
+        "underwriting-v3.xlsx 'Rent Roll'!B36"
+      ],
+      "calculation": "Standard suites 002, 005, 008, 011 = 4"
+    },
+    {
+      "id": "type_b_occupied",
+      "value": 3,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D6, D9, D12, D15",
+        "underwriting-v3.xlsx 'Rent Roll'!C36"
+      ],
+      "calculation": "002, 005, 008 active; 011 vacant = 3; unchanged"
+    },
+    {
+      "id": "type_c_units",
+      "value": 4,
+      "evidence": [
+        "manager-cover.pdf p.1 (C = Large suite)",
+        "rent-roll-revised.xlsx Rent Roll B5:B16",
+        "underwriting-v3.xlsx 'Rent Roll'!B37"
+      ],
+      "calculation": "Large suites 003, 006, 009, 012 = 4"
+    },
+    {
+      "id": "type_c_occupied",
+      "value": 3,
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D7, D10, D13, D16",
+        "underwriting-v3.xlsx 'Rent Roll'!C37"
+      ],
+      "calculation": "003, 006, 009 active; 012 vacant = 3; unchanged"
+    },
+    {
+      "id": "risk_pending_in_occupancy",
+      "value": "absent",
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll D14 ('active')",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "No pending, unpossessed suite exists on the controlling revised roll, so the manager's 10-of-12 occupancy count no longer includes an unpossessed unit; the prior overstatement is cured"
+    },
+    {
+      "id": "risk_near_term_rollover",
+      "value": "present",
+      "evidence": [
+        "rent-roll-revised.xlsx Rent Roll F5 (2027-02-28)",
+        "lease-001.pdf p.1",
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "Suite 001 active expiry 2027-02-28 is within 12 months of the analysis date; all other active expiries 2029-08-31"
+    },
+    {
+      "id": "risk_missing_insurance",
+      "value": "absent",
+      "evidence": [
+        "insurance.pdf p.1"
+      ],
+      "calculation": "Policy declaration in packet: GL aggregate $2,000,000, effective 2026-07-01 to 2027-06-30, in force"
+    },
+    {
+      "id": "risk_capital_in_opex",
+      "value": "absent",
+      "evidence": [
+        "operating-statement.pdf p.1 ('Roof replacement booked in repairs 0')"
+      ],
+      "calculation": "Reported ledger shows $0 roof replacement inside repairs, so no capital item is embedded in historical operating expenses; unchanged by the revision"
+    },
+    {
+      "id": "risk_unsigned_rent_change",
+      "value": "absent",
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "rent-roll-revised.xlsx Rent Roll E14",
+        "lease-correspondence.pdf p.1"
+      ],
+      "calculation": "No unsigned rent proposal is in the packet; the Suite 010 +$225 change is documented by the revision notice and the manager-certified revised roll, and Suite 001 is confirmed unamended"
+    },
+    {
+      "id": "risk_temporary_free_rent",
+      "value": "absent",
+      "evidence": [
+        "lease-001.pdf p.1 ('No free-rent concession applies as of the evaluation date')",
+        "lease-correspondence.pdf p.1",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "No free rent or concession documented; revision notice makes no concession change"
+    },
+    {
+      "id": "risk_sizing_floor_binding",
+      "value": "absent",
+      "evidence": [
+        "underwriting-instructions.pdf p.1 (note rate 6.7500%; floor 6.00%)",
+        "underwriting-v3.xlsx UW!B9:B10"
+      ],
+      "calculation": "Original note rate 6.7500% exceeds the 6.00% floor, so the floor does not bind; the 7.5000% sizing rate comes from the revision notice's +75 bps increase"
+    },
+    {
+      "id": "risk_refinance_shortfall",
+      "value": "absent",
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "underwriting-v3.xlsx UW!B54:B59"
+      ],
+      "calculation": "Proceeds $8,090,494.84 exceed total uses $6,625,904.95; net cash-out +$1,464,589.89, so no equity shortfall despite $249,779 lower proceeds"
+    }
+  ]
+}

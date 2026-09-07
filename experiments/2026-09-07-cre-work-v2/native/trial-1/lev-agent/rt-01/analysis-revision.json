@@ -1,0 +1,593 @@
+{
+  "revision": "Rev 2",
+  "applies": [
+    "revision-notice.pdf",
+    "rent-roll-revised.xlsx"
+  ],
+  "supersedes": {
+    "prior": "Rev 1 (2026-08-31)",
+    "archive_status": "preserved, not replaced"
+  },
+  "approved_sentence": "Source-backed analysis. Assumptions remain subject to diligence.",
+  "fields": [
+    {
+      "id": "total_units",
+      "value": 10,
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll A5:A14"
+        }
+      ],
+      "calculation": "count of suite rows"
+    },
+    {
+      "id": "occupied_units",
+      "value": 9,
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll D5:D14"
+        }
+      ],
+      "calculation": "COUNTIF(D5:D14,\"active\")"
+    },
+    {
+      "id": "pending_units",
+      "value": 0,
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll D5:D14"
+        }
+      ],
+      "calculation": "no 'pending' status on the revised roll"
+    },
+    {
+      "id": "total_area_sf",
+      "value": 32150,
+      "unit": "SF",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll C5:C14"
+        }
+      ],
+      "calculation": "SUM(C5:C14) = 3,080\u00d74 + 3,200\u00d73 + 3,410\u00d73 (Rev 1 memo reported 31,150 in error; corrected here)"
+    },
+    {
+      "id": "occupied_area_sf",
+      "value": 29070,
+      "unit": "SF",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll C5:C14, D5:D14"
+        }
+      ],
+      "calculation": "SUMIF(D5:D14,\"active\",C5:C14) = 32,150 \u2212 3,080 (Suite 010 vacant)"
+    },
+    {
+      "id": "unit_occupancy",
+      "value": 0.9,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "derived"
+        }
+      ],
+      "calculation": "9/10"
+    },
+    {
+      "id": "area_occupancy",
+      "value": 0.9042,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "derived"
+        }
+      ],
+      "calculation": "29,070/32,150"
+    },
+    {
+      "id": "annual_in_place_rent",
+      "value": 741600,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll E5:E14, D5:D14"
+        }
+      ],
+      "calculation": "(sum of active monthly rents, 61,800) \u00d7 12"
+    },
+    {
+      "id": "unit_001_monthly_rent",
+      "value": 6650,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll E5"
+        },
+        {
+          "file": "lease-correspondence.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "certified post-amendment rent; S001 amendment continues to apply"
+    },
+    {
+      "id": "gross_potential_rent",
+      "value": 817200,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll E5:E14"
+        }
+      ],
+      "calculation": "(SUM(E5:E14) \u2212 $350 S001 amendment) \u00d7 12 = 68,100 \u00d7 12"
+    },
+    {
+      "id": "uw_egi",
+      "value": 779840,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "UW!B10"
+        }
+      ],
+      "calculation": "817,200 \u00d7 0.95 + 350 \u00d7 10 = 776,340 + 3,500"
+    },
+    {
+      "id": "uw_tax",
+      "value": 85964,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "operating-statement.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "prescribed (unchanged)"
+    },
+    {
+      "id": "uw_insurance",
+      "value": 28655,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "operating-statement.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "prescribed (unchanged; distinct from GL policy limit)"
+    },
+    {
+      "id": "uw_operating_expenses",
+      "value": 252632,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "UW!B17"
+        }
+      ],
+      "calculation": "85,964 + 28,655 + 114,618 + 0.03 \u00d7 779,840 = 252,632 (mgmt fee $23,395)"
+    },
+    {
+      "id": "uw_noi",
+      "value": 527208,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "UW!B22"
+        }
+      ],
+      "calculation": "uw_egi \u2212 uw_operating_expenses (before reserves)"
+    },
+    {
+      "id": "uw_ncf",
+      "value": 524208,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "UW!B25"
+        }
+      ],
+      "calculation": "uw_noi \u2212 replacement reserves ($300 \u00d7 10)"
+    },
+    {
+      "id": "sizing_rate",
+      "value": 0.0725,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "MAX(note 7.25% [initial 6.50% + 75 bps], floor 6.00%)"
+    },
+    {
+      "id": "cap_rate",
+      "value": 0.07,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "6.7500% + 25 bps"
+    },
+    {
+      "id": "capitalization_value",
+      "value": 7531540,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "UW!B32"
+        }
+      ],
+      "calculation": "uw_noi / cap_rate = 527,208 / 0.07"
+    },
+    {
+      "id": "ltv_limit",
+      "value": 0.65,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "prescribed (unchanged)"
+    },
+    {
+      "id": "dscr_limit",
+      "value": 1.25,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "prescribed (unchanged)"
+    },
+    {
+      "id": "debt_yield_limit",
+      "value": 0.09,
+      "unit": "ratio",
+      "evidence": [
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "prescribed (unchanged)"
+    },
+    {
+      "id": "maximum_loan",
+      "value": 4895501,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "Debt!B24"
+        }
+      ],
+      "calculation": "MIN(LTV 4,895,501 | DSCR 5,122,897 | DY 5,824,531) \u2014 LTV binds"
+    },
+    {
+      "id": "net_cash_out",
+      "value": 501546,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "Debt!B32"
+        }
+      ],
+      "calculation": "4,895,501 \u2212 4,300,000 payoff \u2212 48,955 orig fee \u2212 45,000 closing"
+    },
+    {
+      "id": "insurance_policy_limit",
+      "value": 2000000,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "insurance.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "GL aggregate limit \u2014 distinct from annual insurance expense"
+    },
+    {
+      "id": "selected_roll_date",
+      "value": "2026-09-01",
+      "unit": "date",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "B2"
+        },
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "revised certified roll supersedes prior"
+    },
+    {
+      "id": "reported_t12_noi",
+      "value": 507593,
+      "unit": "USD",
+      "evidence": [
+        {
+          "file": "operating-statement.pdf",
+          "location": "page 1 (table)"
+        }
+      ],
+      "calculation": "reported figure (unchanged); different definition from UW NOI"
+    },
+    {
+      "id": "type_a_units",
+      "value": 4,
+      "evidence": [
+        {
+          "file": "manager-cover.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll B5:B14"
+        }
+      ],
+      "calculation": "count of Small suites"
+    },
+    {
+      "id": "type_a_occupied",
+      "value": 3,
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll B5:B14, D5:D14"
+        }
+      ],
+      "calculation": "active Small suites (Suite 010 vacant)"
+    },
+    {
+      "id": "type_b_units",
+      "value": 3,
+      "evidence": [
+        {
+          "file": "manager-cover.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll B5:B14"
+        }
+      ],
+      "calculation": "count of Standard suites"
+    },
+    {
+      "id": "type_b_occupied",
+      "value": 3,
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll B5:B14, D5:D14"
+        }
+      ],
+      "calculation": "all Standard active"
+    },
+    {
+      "id": "type_c_units",
+      "value": 3,
+      "evidence": [
+        {
+          "file": "manager-cover.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll B5:B14"
+        }
+      ],
+      "calculation": "count of Large suites"
+    },
+    {
+      "id": "type_c_occupied",
+      "value": 3,
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll B5:B14, D5:D14"
+        }
+      ],
+      "calculation": "all Large active"
+    },
+    {
+      "id": "risk_pending_in_occupancy",
+      "value": "present",
+      "evidence": [
+        {
+          "file": "manager-cover.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "manager headline still counts occupied + pending as leased \u2014 classification methodology flagged (revised detail again shows no pending)"
+    },
+    {
+      "id": "risk_near_term_rollover",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "rent-roll-revised.xlsx",
+          "location": "Rent Roll F5:F14"
+        }
+      ],
+      "calculation": "all active expirations 2029-08-31 \u2014 >12 months beyond 2026-09-01"
+    },
+    {
+      "id": "risk_missing_insurance",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "insurance.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "operating-statement.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "policy in force; T12 insurance expense $28,655"
+    },
+    {
+      "id": "risk_capital_in_opex",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "operating-statement.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "roof replacement $0 in repairs \u2014 properly capitalized"
+    },
+    {
+      "id": "risk_unsigned_rent_change",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "lease-correspondence.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "no unsigned rent proposal in packet; S001 amendment executed; S002 change is an authorized signed revision instruction"
+    },
+    {
+      "id": "risk_temporary_free_rent",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "lease-001.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "lease excerpt: no free-rent concession applies as of evaluation date"
+    },
+    {
+      "id": "risk_sizing_floor_binding",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "revision-notice.pdf",
+          "location": "page 1"
+        },
+        {
+          "file": "underwriting-instructions.pdf",
+          "location": "page 1"
+        }
+      ],
+      "calculation": "revised note rate 7.2500% > floor 6.0000% \u2014 note binds"
+    },
+    {
+      "id": "risk_refinance_shortfall",
+      "value": "absent",
+      "evidence": [
+        {
+          "file": "model",
+          "location": "Debt!B32"
+        }
+      ],
+      "calculation": "net_cash_out positive at $501,546"
+    }
+  ],
+  "qualifications": [
+    "Rev 1 outputs (as-of 2026-08-31) are preserved in the audit archive and are not replaced by this revision.",
+    "Rev 1 memo reported total_area_sf = 31,150 and occupied_area_sf = 28,170 in the mix table; the correct totals from unchanged source cells are 32,150 SF and 29,070 SF. Area occupancy ratio is unchanged at 0.9042 (rounded).",
+    "Historical NOI ($507,593 T12), underwritten NOI (Rev 2 $527,208 before reserves), and NCF (Rev 2 $524,208 after reserves) use different definitions and are labeled distinctly.",
+    "Insurance policy aggregate limit ($2,000,000) is a coverage limit, not an operating expense; UW insurance expense ($28,655) is separate and unchanged.",
+    "Suite 001 rent shows a resolvable source lineage: archive 2026-06-30 $6,575 \u2192 certified 2026-08-31 $6,650 (post-$350 amendment) \u2192 revised 2026-09-01 $6,650 (unchanged). Amendment continues to apply per revision notice. UW GPR uses S001 pre-amendment ($6,300) as a deliberate stabilized assumption input.",
+    "Standard third-party diligence (legal, environmental, property condition, title) remains routine pending diligence per diligence-status.pdf; no findings of defect are asserted."
+  ],
+  "summary": "Applying the revision notice, the revised certified rent roll (2026-09-01) increases Suite 002 rent by $225 to $7,025 and preserves all other lease terms. Underwriting is refreshed on the new roll while preserving the Suite 001 pre-amendment GPR method and every other UW rule. The cap rate rises 25 bps to 7.0000% and the initial sizing rate rises 75 bps to 7.2500% (floor 6.00% unchanged; note continues to bind). Revised results: UW EGI $779,840, NOI (before reserves) $527,208, NCF $524,208, capitalization value $7,531,540, maximum loan $4,895,501 with LTV binding, realized DSCR 1.31\u00d7 and DY 10.71%, and net cash-out to sponsor $501,546. All eight risk flags remain unchanged from Rev 1 (one present: manager occupancy classification methodology; seven absent).",
+  "blocked": [
+    {
+      "item": "asking_price",
+      "reason": "not supplied in source packet"
+    },
+    {
+      "item": "market_sales_comps",
+      "reason": "not supplied in source packet \u2014 no external research permitted"
+    },
+    {
+      "item": "market_rent_comps",
+      "reason": "not supplied in source packet \u2014 no external research permitted"
+    },
+    {
+      "item": "sponsor_history",
+      "reason": "not supplied in source packet \u2014 no external research permitted"
+    },
+    {
+      "item": "property_photography",
+      "reason": "not supplied in source packet"
+    },
+    {
+      "item": "legal_environmental_pca_title_reports",
+      "reason": "pending diligence per diligence-status.pdf \u2014 not defects"
+    }
+  ],
+  "input_map": {
+    "gross_potential_rent": "Inputs!B7",
+    "cap_rate": "Inputs!B22",
+    "sizing_rate": "Inputs!B27"
+  },
+  "output_map": {
+    "uw_egi": "UW!B10",
+    "uw_noi": "UW!B22",
+    "uw_ncf": "UW!B25",
+    "capitalization_value": "UW!B32",
+    "maximum_loan": "Debt!B24",
+    "net_cash_out": "Debt!B32"
+  }
+}

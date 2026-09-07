@@ -1,0 +1,24 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"sum_active_monthly\",\"expression\":\"11050+11200+11475+11050+11200+11475+11050+11200+11475\"},{\"name\":\"annual_in_place_rent\",\"expression\":\"sum_active_monthly*12\"}]}",
+  "call_id": "call_rudUtmu7ea28WlaBOVkpzVyG",
+  "arguments": {
+    "steps": [
+      {
+        "name": "sum_active_monthly",
+        "expression": "11050+11200+11475+11050+11200+11475+11050+11200+11475"
+      },
+      {
+        "name": "annual_in_place_rent",
+        "expression": "sum_active_monthly*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "sum_active_monthly": 101175,
+      "annual_in_place_rent": 1214100
+    }
+  },
+  "status": "ok"
+}

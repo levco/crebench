@@ -1,0 +1,174 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"total_area_sf\",\"expression\":\"3080*4 + 3200*3 + 3410*3\"},{\"name\":\"occupied_area_sf\",\"expression\":\"3080*3 + 3200*3 + 3410*3\"},{\"name\":\"unit_occupancy\",\"expression\":\"9/10\"},{\"name\":\"area_occupancy\",\"expression\":\"(3080*3 + 3200*3 + 3410*3) / (3080*4 + 3200*3 + 3410*3)\"},{\"name\":\"monthly_scheduled_all\",\"expression\":\"6650*4 + 6800*3 + 7075*3\"},{\"name\":\"gross_potential_rent\",\"expression\":\"(6650*4 + 6800*3 + 7075*3) * 12\"},{\"name\":\"annual_in_place_rent\",\"expression\":\"(7000 + 6650*2 + 6800*3 + 7075*3) * 12\"},{\"name\":\"other_income\",\"expression\":\"350*10\"},{\"name\":\"egi_before_loss\",\"expression\":\"gross_potential_rent\"},{\"name\":\"economic_loss\",\"expression\":\"gross_potential_rent * 0.05\"},{\"name\":\"uw_egi\",\"expression\":\"gross_potential_rent * (1-0.05) + other_income\"},{\"name\":\"mgmt_fee\",\"expression\":\"uw_egi * 0.03\"},{\"name\":\"uw_tax\",\"expression\":\"85964\"},{\"name\":\"uw_insurance\",\"expression\":\"28655\"},{\"name\":\"other_opex\",\"expression\":\"114618\"},{\"name\":\"total_opex_excl_res\",\"expression\":\"uw_tax + uw_insurance + other_opex + mgmt_fee\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi - total_opex_excl_res\"},{\"name\":\"reserves\",\"expression\":\"300*10\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi - reserves\"},{\"name\":\"cap_rate\",\"expression\":\"0.0675\"},{\"name\":\"capitalization_value\",\"expression\":\"uw_noi / cap_rate\"},{\"name\":\"sizing_rate\",\"expression\":\"max(0.065,0.06)\"},{\"name\":\"pmt_monthly_per_1\",\"expression\":\"pmt(sizing_rate/12, 360, 1)\"},{\"name\":\"annual_constant\",\"expression\":\"abs(pmt_monthly_per_1) * 12\"},{\"name\":\"dscr_min\",\"expression\":\"1.25\"},{\"name\":\"debt_yield_min\",\"expression\":\"0.09\"},{\"name\":\"ltv_limit\",\"expression\":\"capitalization_value * 0.65\"},{\"name\":\"dscr_limit\",\"expression\":\"(uw_ncf / dscr_min) / annual_constant\"},{\"name\":\"debt_yield_limit\",\"expression\":\"uw_ncf / debt_yield_min\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit, dscr_limit, debt_yield_limit)\"},{\"name\":\"orig_fee\",\"expression\":\"maximum_loan * 0.01\"},{\"name\":\"net_cash_out\",\"expression\":\"maximum_loan - (orig_fee + 45000 + 4300000)\"}]}",
+  "call_id": "call_iq0Ar9MqyTF6F4xdTZpk2zfc",
+  "arguments": {
+    "steps": [
+      {
+        "name": "total_area_sf",
+        "expression": "3080*4 + 3200*3 + 3410*3"
+      },
+      {
+        "name": "occupied_area_sf",
+        "expression": "3080*3 + 3200*3 + 3410*3"
+      },
+      {
+        "name": "unit_occupancy",
+        "expression": "9/10"
+      },
+      {
+        "name": "area_occupancy",
+        "expression": "(3080*3 + 3200*3 + 3410*3) / (3080*4 + 3200*3 + 3410*3)"
+      },
+      {
+        "name": "monthly_scheduled_all",
+        "expression": "6650*4 + 6800*3 + 7075*3"
+      },
+      {
+        "name": "gross_potential_rent",
+        "expression": "(6650*4 + 6800*3 + 7075*3) * 12"
+      },
+      {
+        "name": "annual_in_place_rent",
+        "expression": "(7000 + 6650*2 + 6800*3 + 7075*3) * 12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*10"
+      },
+      {
+        "name": "egi_before_loss",
+        "expression": "gross_potential_rent"
+      },
+      {
+        "name": "economic_loss",
+        "expression": "gross_potential_rent * 0.05"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "gross_potential_rent * (1-0.05) + other_income"
+      },
+      {
+        "name": "mgmt_fee",
+        "expression": "uw_egi * 0.03"
+      },
+      {
+        "name": "uw_tax",
+        "expression": "85964"
+      },
+      {
+        "name": "uw_insurance",
+        "expression": "28655"
+      },
+      {
+        "name": "other_opex",
+        "expression": "114618"
+      },
+      {
+        "name": "total_opex_excl_res",
+        "expression": "uw_tax + uw_insurance + other_opex + mgmt_fee"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi - total_opex_excl_res"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*10"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi - reserves"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.0675"
+      },
+      {
+        "name": "capitalization_value",
+        "expression": "uw_noi / cap_rate"
+      },
+      {
+        "name": "sizing_rate",
+        "expression": "max(0.065,0.06)"
+      },
+      {
+        "name": "pmt_monthly_per_1",
+        "expression": "pmt(sizing_rate/12, 360, 1)"
+      },
+      {
+        "name": "annual_constant",
+        "expression": "abs(pmt_monthly_per_1) * 12"
+      },
+      {
+        "name": "dscr_min",
+        "expression": "1.25"
+      },
+      {
+        "name": "debt_yield_min",
+        "expression": "0.09"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "capitalization_value * 0.65"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "(uw_ncf / dscr_min) / annual_constant"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "uw_ncf / debt_yield_min"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit, dscr_limit, debt_yield_limit)"
+      },
+      {
+        "name": "orig_fee",
+        "expression": "maximum_loan * 0.01"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "maximum_loan - (orig_fee + 45000 + 4300000)"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "total_area_sf": 32150,
+      "occupied_area_sf": 29070,
+      "unit_occupancy": 0.9,
+      "area_occupancy": 0.904199066874028,
+      "monthly_scheduled_all": 68225,
+      "gross_potential_rent": 818700,
+      "annual_in_place_rent": 743100,
+      "other_income": 3500,
+      "egi_before_loss": 818700,
+      "economic_loss": 40935.0,
+      "uw_egi": 781265.0,
+      "mgmt_fee": 23437.95,
+      "uw_tax": 85964,
+      "uw_insurance": 28655,
+      "other_opex": 114618,
+      "total_opex_excl_res": 252674.95,
+      "uw_noi": 528590.05,
+      "reserves": 3000,
+      "uw_ncf": 525590.05,
+      "cap_rate": 0.0675,
+      "capitalization_value": 7830963.703703704,
+      "sizing_rate": 0.065,
+      "pmt_monthly_per_1": -0.006320680234929653,
+      "annual_constant": 0.07584816281915584,
+      "dscr_min": 1.25,
+      "debt_yield_min": 0.09,
+      "ltv_limit": 5090126.407407408,
+      "dscr_limit": 5543602.170068748,
+      "debt_yield_limit": 5839889.444444445,
+      "maximum_loan": 5090126.407407408,
+      "orig_fee": 50901.264074074075,
+      "net_cash_out": 694225.1433333335
+    }
+  },
+  "status": "ok"
+}

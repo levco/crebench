@@ -1,5 +1,6 @@
 import {buildWorkflowSite} from './build-workflow-site.mjs';
 import {buildResearchSite} from './build-research-site.mjs';
+import {buildExpansionSite} from './build-expansion-site.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -106,5 +107,6 @@ fs.writeFileSync(path.join(dist,'robots.txt'),'User-agent: *\nAllow: /\n');
 
 if(fs.existsSync(path.join(root,'experiments/2026-09-06-workflow-v1/results.json'))){fs.copyFileSync(path.join(dist,'results.html'),path.join(dist,'pilot.html'));buildWorkflowSite({root,dist,page});}
 buildResearchSite({root,dist,page});
+buildExpansionSite({root,dist,page});
 
 console.log(`Built ${fs.readdirSync(dist).filter(f=>f.endsWith('.html')).length} pages with recorded workflow evidence and earlier pilot history.`);

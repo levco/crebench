@@ -1,0 +1,580 @@
+{
+  "revision": 2,
+  "as_of": "2026-09-01",
+  "supersedes": "Revision 1 as of 2026-08-31, retained unchanged in the audit archive",
+  "summary": "Magnolia Terrace is a 48-unit, 40,800 SF multifamily asset in Raleigh, NC, now 93.75% physically occupied (45 of 48 in possession, zero pending, three vacant) with every active lease expiring 2029-08-31. The revised certified roll dated 2026-09-01 supersedes both prior rolls. Suite 045 has taken possession and its scheduled rent rose $225 to $2,150, lifting gross_potential_rent to $977,100, uw_egi to $945,045 and uw_noi to $643,861.65 before reserves. But the same notice widened the capitalization rate 25 bp to 6.0000% and the sizing rate 75 bp to 7.0000%, and those two moves dominate: capitalization_value falls to $10,731,027.50, down $423,295.98, and maximum_loan falls to $6,307,523.32, down $481,021.81. DSCR at 1.25x on uw_ncf of $629,461.65 remains the binding constraint, now with wider headroom under both the 65% LTV cap ($667,644.56) and the 9% debt-yield floor ($686,495.02). After the unchanged $4,200,000 payoff, a $63,075.23 origination fee and $45,000 of closing costs, net_cash_out is a positive $1,999,448.08, down $476,211.59, so no additional sponsor equity is required. The 25 bp cap rate widening cost value but no proceeds, because value was never the binding test; essentially the entire loan reduction traces to the 75 bp sizing rate increase, which shortened the annuity factor from 162.4122 to 150.3076. One risk score changed: risk_pending_in_occupancy moves from present to absent, because Suite 045's possession removes the pending suite the manager's 45-of-48 headline had been counting. That earlier finding was correct when made and closed on a change in facts, not a change of view. All eight risks now read absent, which should be discounted rather than taken as reassurance: the dominant limitation is unchanged and unscored, since no market sales or rent evidence exists in the packet and the instructed 6.0000% cap rate has no stated market rationale. Reported_t12_noi remains $604,128 for the period ended 2026-08-31, so the historical record does not yet reflect Suite 045.",
+  "fields": [
+    {
+      "id": "total_units",
+      "value": 48,
+      "unit": "units",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!A5:A52"
+      ],
+      "calculation": "Count of suites on the revised roll. Unchanged from revision 1."
+    },
+    {
+      "id": "occupied_units",
+      "value": 45,
+      "unit": "units",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED 44 to 45. Possession status = active for suites 001-045. Suite 045 moved from pending to active. Excludes 3 vacant (046-048)."
+    },
+    {
+      "id": "pending_units",
+      "value": 0,
+      "unit": "units",
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "rent-roll-revised.xlsx, Rent Roll!D49"
+      ],
+      "calculation": "CHANGED 1 to 0. Suite 045 is now active and no suite carries pending status. This is a measured zero, not an unknown."
+    },
+    {
+      "id": "total_area_sf",
+      "value": 40800,
+      "unit": "SF",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!C5:C52"
+      ],
+      "calculation": "UNCHANGED. 16 x 700 + 16 x 820 + 16 x 1,030."
+    },
+    {
+      "id": "occupied_area_sf",
+      "value": 38250,
+      "unit": "SF",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!C5:C49",
+        "rent-roll-revised.xlsx, Rent Roll!D5:D49"
+      ],
+      "calculation": "CHANGED 37,220 to 38,250, an increase of Suite 045's 1,030 SF. The 45 active suites: 15 x 700 + 15 x 820 + 15 x 1,030."
+    },
+    {
+      "id": "unit_occupancy",
+      "value": 0.9375,
+      "unit": "decimal",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52"
+      ],
+      "calculation": "CHANGED 0.9167 to 0.9375. 45 / 48 exactly."
+    },
+    {
+      "id": "area_occupancy",
+      "value": 0.9375,
+      "unit": "decimal",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!C5:C52",
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52"
+      ],
+      "calculation": "CHANGED 0.9123 to 0.9375. 38,250 / 40,800. Now identical to unit_occupancy because exactly one suite of each plan is vacant."
+    },
+    {
+      "id": "annual_in_place_rent",
+      "value": 920400,
+      "unit": "USD/yr",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!E5:E49",
+        "lease-correspondence.pdf p.1"
+      ],
+      "calculation": "CHANGED $894,600 to $920,400. The 45 active suites with the executed amendment applied: (15 x $1,500 + 15 x $1,650 + 14 x $1,925 + $2,150 + $350) x 12 = $76,700 x 12."
+    },
+    {
+      "id": "unit_001_monthly_rent",
+      "value": 1850,
+      "unit": "USD/mo",
+      "evidence": [
+        "lease-001.pdf p.1",
+        "lease-correspondence.pdf p.1",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "UNCHANGED at $1,850. Base $1,500 plus the $350 amendment executed 2026-07-20. The revision notice states prior executed Suite 001 amendments continue to apply. The revised roll's $1,500 in E5 is the unamended schedule, not a reversal."
+    },
+    {
+      "id": "gross_potential_rent",
+      "value": 977100,
+      "unit": "USD/yr",
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "rent-roll-revised.xlsx, Rent Roll!E5:E52"
+      ],
+      "calculation": "CHANGED $974,400 to $977,100. All 48 suites on the new roll before the Suite 001 amendment: 16 x $1,500 + 16 x $1,650 + 15 x $1,925 + $2,150 = $81,425 x 12. The entire $2,700 uplift is the Suite 045 rent increase annualized; possession does not affect GPR, which credits all 48 either way."
+    },
+    {
+      "id": "uw_egi",
+      "value": 945045,
+      "unit": "USD/yr",
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED $942,480 to $945,045. $977,100 x (1 - 0.05) + $350 x 48 = $928,245 + $16,800. Loss factor and other income unchanged."
+    },
+    {
+      "id": "uw_tax",
+      "value": 102312,
+      "unit": "USD/yr",
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Prescribed at the T-12 actual."
+    },
+    {
+      "id": "uw_insurance",
+      "value": 34104,
+      "unit": "USD/yr",
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Prescribed annual expense. Distinct from the $2,000,000 policy limit."
+    },
+    {
+      "id": "uw_operating_expenses",
+      "value": 301183.35,
+      "unit": "USD/yr",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "CHANGED $301,106.40 to $301,183.35. $102,312 + $34,104 + $136,416 + 3% x $945,045 ($28,351.35). Only the management fee moved, by $76.95, because EGI rose. Excludes reserves."
+    },
+    {
+      "id": "uw_noi",
+      "value": 643861.65,
+      "unit": "USD/yr",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "CHANGED $641,373.60 to $643,861.65, up $2,488.05. $945,045 - $301,183.35. Before reserves; this is the capitalized figure."
+    },
+    {
+      "id": "uw_ncf",
+      "value": 629461.65,
+      "unit": "USD/yr",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "CHANGED $626,973.60 to $629,461.65. $643,861.65 - ($300 x 48 = $14,400). Reserves unchanged. Basis for DSCR and debt yield."
+    },
+    {
+      "id": "sizing_rate",
+      "value": 0.07,
+      "unit": "decimal",
+      "evidence": [
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED 0.0625 to 0.0700. Initial sizing rate of 6.2500%, itself MAX(note 6.2500%, floor 6.0000%), plus the instructed 75 basis points. Derivation shown at Inputs!B34:B36."
+    },
+    {
+      "id": "cap_rate",
+      "value": 0.06,
+      "unit": "decimal",
+      "evidence": [
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED 0.0575 to 0.0600. Initial 5.7500% plus the instructed 25 basis points. Derivation shown at Inputs!B31:B33. Still a prescribed instruction, not market-derived."
+    },
+    {
+      "id": "capitalization_value",
+      "value": 10731027.5,
+      "unit": "USD",
+      "evidence": [
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED $11,154,323.48 to $10,731,027.50, down $423,295.98. $643,861.65 / 0.0600. Higher NOI, more than offset by the wider cap rate. Equals $223,563/unit and $263.02/SF."
+    },
+    {
+      "id": "ltv_limit",
+      "value": 0.65,
+      "unit": "decimal",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Maximum LTV 65.00%."
+    },
+    {
+      "id": "dscr_limit",
+      "value": 1.25,
+      "unit": "ratio",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Minimum 1.25x, tested on NCF after reserves."
+    },
+    {
+      "id": "debt_yield_limit",
+      "value": 0.09,
+      "unit": "decimal",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Minimum 9% on NCF after reserves."
+    },
+    {
+      "id": "maximum_loan",
+      "value": 6307523.32,
+      "unit": "USD",
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED $6,788,545.13 to $6,307,523.32, down $481,021.81. MIN of three constraints. LTV: 0.65 x $10,731,027.50 = $6,975,167.88. DSCR: ($629,461.65 / 1.25 / 12) x 150.307568 = $6,307,523.32, where the annuity factor is (1-(1+0.07/12)^-360)/(0.07/12). Debt yield: $629,461.65 / 0.09 = $6,994,018.33. DSCR still binds. Sized fully amortizing at the revised rate notwithstanding 24 months of interest-only."
+    },
+    {
+      "id": "net_cash_out",
+      "value": 1999448.08,
+      "unit": "USD",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "CHANGED $2,475,659.67 to $1,999,448.08, down $476,211.59. $6,307,523.32 - $4,200,000 payoff - $63,075.23 origination fee (1%) - $45,000 closing costs. Payoff, fee rate and closing costs all unchanged. Still positive."
+    },
+    {
+      "id": "insurance_policy_limit",
+      "value": 2000000,
+      "unit": "USD",
+      "evidence": [
+        "insurance.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. General liability aggregate limit, effective 2026-07-01 to 2027-06-30, in force at the revised as-of date. Coverage limit, not the $34,104 expense."
+    },
+    {
+      "id": "selected_roll_date",
+      "value": "2026-09-01",
+      "unit": "date",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!B2",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "CHANGED from 2026-08-31. Strict date precedence: the revised roll supersedes rent-roll-certified.xlsx (2026-08-31), which had superseded rent-roll-archive.xlsx (2026-06-30). Both prior rolls are excluded and contribute no figure."
+    },
+    {
+      "id": "reported_t12_noi",
+      "value": 604128,
+      "unit": "USD/yr",
+      "evidence": [
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. As reported for 2025-09-01 to 2026-08-31: $876,960 - $102,312 - $34,104 - $136,416. No revised operating statement was supplied, so the historical record does not yet reflect Suite 045's occupancy or higher rent."
+    },
+    {
+      "id": "type_a_units",
+      "value": 16,
+      "unit": "units",
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-revised.xlsx, Rent Roll!B5:B52"
+      ],
+      "calculation": "UNCHANGED. Group A = Studio per the manager's ordered mapping."
+    },
+    {
+      "id": "type_a_occupied",
+      "value": 15,
+      "unit": "units",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!B5:B52",
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52"
+      ],
+      "calculation": "UNCHANGED. Studios with active possession; suite 046 is the one vacant Studio."
+    },
+    {
+      "id": "type_b_units",
+      "value": 16,
+      "unit": "units",
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-revised.xlsx, Rent Roll!B5:B52"
+      ],
+      "calculation": "UNCHANGED. Group B = 1BR."
+    },
+    {
+      "id": "type_b_occupied",
+      "value": 15,
+      "unit": "units",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!B5:B52",
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52"
+      ],
+      "calculation": "UNCHANGED. 1BRs with active possession; suite 047 is the one vacant 1BR."
+    },
+    {
+      "id": "type_c_units",
+      "value": 16,
+      "unit": "units",
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-revised.xlsx, Rent Roll!B5:B52"
+      ],
+      "calculation": "UNCHANGED. Group C = 2BR."
+    },
+    {
+      "id": "type_c_occupied",
+      "value": 15,
+      "unit": "units",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!B5:B52",
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52"
+      ],
+      "calculation": "CHANGED 14 to 15. Suite 045 is a 2BR and is now active. Suite 048 is the one vacant 2BR."
+    },
+    {
+      "id": "risk_pending_in_occupancy",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "revision-notice.pdf p.1",
+        "rent-roll-revised.xlsx, Rent Roll!D5:D52"
+      ],
+      "calculation": "CHANGED present to absent. Assessed on the manager's inclusion of unpossessed pending units. Suite 045 has taken possession, so no pending suite exists to be miscounted and the 45-of-48 headline now equals physical occupancy of 45. The revision 1 finding was correct when made and is preserved in the archived revision 1 documents; it closed because the facts changed, not because the assessment was withdrawn. The prescribed GPR still credits all 48 suites by instruction, which remains a separate stabilized assumption."
+    },
+    {
+      "id": "risk_near_term_rollover",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "rent-roll-revised.xlsx, Rent Roll!F5:F52",
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Near-term means an active suite expiry within 12 months of the 2026-09-01 as-of date, on or before 2027-08-31. All 45 active leases expire 2029-08-31, including newly active Suite 045, so zero qualify. The 2029 single-date concentration covering 100% of income is disclosed but falls outside the defined horizon."
+    },
+    {
+      "id": "risk_missing_insurance",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "insurance.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. The declaration remains in force at 2026-09-01: $2,000,000 GL aggregate, effective 2026-07-01 through 2027-06-30. No revised insurance record was supplied and none was needed."
+    },
+    {
+      "id": "risk_capital_in_opex",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. Assessed on the reported historical ledger classification, which the revision does not touch. Roof replacement is booked in repairs at $0 and stated to be a capital improvement with no recurring repair component included. No capital cost sits inside operating expenses."
+    },
+    {
+      "id": "risk_unsigned_rent_change",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "lease-001.pdf p.1",
+        "lease-correspondence.pdf p.1",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "UNCHANGED, and re-tested against both rent changes now in the packet. Suite 001 changed by an amendment executed by both parties 2026-07-20. Suite 045 changed by a manager revision instruction already reflected on the certified roll itself, not by a proposal awaiting signature. No unsigned rent proposal exists anywhere in the packet."
+    },
+    {
+      "id": "risk_temporary_free_rent",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "lease-001.pdf p.1",
+        "revision-notice.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. The Suite 001 lease states no free-rent concession applies as of the evaluation date, and the revision notice states all other lease details remain unchanged. Newly active Suite 045 shows no concession, abatement or inducement, and its rent rose rather than abated."
+    },
+    {
+      "id": "risk_sizing_floor_binding",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "UNCHANGED. The test compares the ORIGINAL note rate of 6.2500% against the 6.0000% floor; the note rate is greater and governs, so the floor does not bind. The instructed 75 bp increase lifts the applied sizing rate to 7.0000% and widens the gap to the floor further, which cannot make the floor binding."
+    },
+    {
+      "id": "risk_refinance_shortfall",
+      "value": "absent",
+      "unit": "flag",
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "Debt!B34 (magnolia-terrace-underwriting-rev2.xlsx)"
+      ],
+      "calculation": "UNCHANGED in status, narrower in cushion. net_cash_out of $1,999,448.08 remains positive at the sized loan, so no additional sponsor equity is required. The cushion fell $476,211.59 from revision 1."
+    }
+  ],
+  "input_map": {
+    "gross_potential_rent": "Inputs!B5",
+    "cap_rate": "Inputs!B14",
+    "sizing_rate": "Inputs!B17"
+  },
+  "output_map": {
+    "uw_egi": "Underwriting!B8",
+    "uw_noi": "Underwriting!B15",
+    "uw_ncf": "Underwriting!B17",
+    "capitalization_value": "Underwriting!B20",
+    "maximum_loan": "Debt!B13",
+    "net_cash_out": "Debt!B34"
+  },
+  "supplementary_cell_map": {
+    "cap_rate_initial": "Inputs!B31",
+    "cap_rate_adjustment_25bp": "Inputs!B32",
+    "cap_rate_revised_check": "Inputs!B33",
+    "sizing_rate_initial": "Inputs!B34",
+    "sizing_rate_adjustment_75bp": "Inputs!B35",
+    "sizing_rate_revised_check": "Inputs!B36",
+    "annual_in_place_rent": "'Rent Roll'!H58",
+    "annuity_factor": "Debt!B8",
+    "binding_constraint": "Debt!B14",
+    "revision_change_log": "'Revision Log'!A1:E50"
+  },
+  "changed_fields": [
+    "occupied_units",
+    "pending_units",
+    "occupied_area_sf",
+    "unit_occupancy",
+    "area_occupancy",
+    "annual_in_place_rent",
+    "gross_potential_rent",
+    "uw_egi",
+    "uw_operating_expenses",
+    "uw_noi",
+    "uw_ncf",
+    "sizing_rate",
+    "cap_rate",
+    "capitalization_value",
+    "maximum_loan",
+    "net_cash_out",
+    "selected_roll_date",
+    "type_c_occupied",
+    "risk_pending_in_occupancy"
+  ],
+  "unchanged_fields": [
+    "total_units",
+    "total_area_sf",
+    "unit_001_monthly_rent",
+    "uw_tax",
+    "uw_insurance",
+    "ltv_limit",
+    "dscr_limit",
+    "debt_yield_limit",
+    "insurance_policy_limit",
+    "reported_t12_noi",
+    "type_a_units",
+    "type_a_occupied",
+    "type_b_units",
+    "type_b_occupied",
+    "type_c_units",
+    "risk_near_term_rollover",
+    "risk_missing_insurance",
+    "risk_capital_in_opex",
+    "risk_unsigned_rent_change",
+    "risk_temporary_free_rent",
+    "risk_sizing_floor_binding",
+    "risk_refinance_shortfall"
+  ],
+  "qualifications": [
+    "The 6.0000% cap rate is a prescribed instruction, not a market conclusion, and the revision supplies no market or credit rationale for the 25 bp widening. With no sales comparables in the packet, the $10,731,027.50 value carries no market corroboration.",
+    "The 75 bp sizing rate increase likewise has no stated basis in the packet. It is applied as instructed.",
+    "The revision's net effect is negative despite better operations. One more occupied suite and $2,700 more scheduled rent are outweighed by $423,295.98 of value reduction and $481,021.81 of lost loan proceeds.",
+    "The cap rate move cost no loan capacity because DSCR, not LTV, binds. Essentially the entire proceeds reduction traces to the sizing rate through the annuity factor, which fell from 162.4122 to 150.3076.",
+    "uw_noi exceeds reported_t12_noi by $39,733.65, and only $2,488.05 of that gap versus revision 1 reflects the real Suite 045 increase. The remainder is assumption-driven: prescribed GPR credits all 48 suites rather than the 45 collecting, adds $16,800 of other income, and layers on a 3% management fee the T-12 never carried.",
+    "gross_potential_rent still excludes the executed Suite 001 amendment per the original instruction, which the revision left in place, while annual_in_place_rent includes it. Two separate measures serving different purposes; both are reported.",
+    "The prescribed GPR credits all 48 suites including the three vacant ones. That is an instructed stabilized assumption, distinct from the occupancy question now scored absent.",
+    "All eight risk fields now read absent. That should be discounted rather than read as reassurance, because the dominant limitation \u2014 no market evidence \u2014 is not scored as a risk field at all.",
+    "risk_pending_in_occupancy closed on a change in facts, not a correction. The revision 1 assessment stands as made and its supporting documents are preserved unchanged.",
+    "pending_units is zero because the revised roll shows no pending suite. This is a measured zero, explicitly distinguished from an unknown.",
+    "No revised operating statement was supplied, so the T-12 period ended 2026-08-31 does not reflect Suite 045's occupancy or higher rent. Any historical-to-underwritten comparison spans a boundary the revision moved.",
+    "No executed lease for Suite 045 is in the packet. Its possession and $225 increase rest on the revision notice and the certified roll.",
+    "Two point-in-time rolls two months apart still support no occupancy trend. One suite moving from pending to active is not a trend.",
+    "Suite 045 shares the 2029-08-31 expiry, so its activation adds income concentration to that single date rather than diversifying rollover.",
+    "The loan is sized on a fully amortizing 30-year payment at 7.0000% even though the first 24 months are interest-only. Actual year 1-2 cash cost is $441,526.63 with a 1.4256x DSCR; the sized 1.2500x reflects the amortizing convention.",
+    "Real estate tax remains flat at the T-12 actual per instruction. No reassessment analysis is supplied.",
+    "The roof replacement is described as capital with no dollar amount, scope, completion date or warranty supplied. That cost is explicitly unknown, distinct from the $0 in the T-12 repairs line.",
+    "Legal, environmental, property condition and title reviews are not complete and the revision supplied nothing against them. Routine pending diligence. No evidence of contamination, litigation, fraud or structural failure is supplied and none is asserted.",
+    "No property address, sponsor credentials or transaction is represented; this is original fictional evaluation material."
+  ],
+  "blocked": [
+    {
+      "item": "photographs_and_imagery",
+      "status": "unknown",
+      "reason": "Not supplied in either round. Not created or described."
+    },
+    {
+      "item": "asking_price",
+      "status": "unknown",
+      "reason": "Not supplied. No price expectation is stated anywhere in this package."
+    },
+    {
+      "item": "market_sales_comparables",
+      "status": "unknown",
+      "reason": "Not supplied, and none came with the revision. Prevents market corroboration of the instructed 6.0000% cap rate or the resulting value."
+    },
+    {
+      "item": "market_rent_comparables",
+      "status": "unknown",
+      "reason": "Not supplied. Prevents any mark-to-market, loss-to-lease or rent growth conclusion, including on Suite 045's new $2,150."
+    },
+    {
+      "item": "sponsor_history",
+      "status": "unknown",
+      "reason": "Not supplied. No track record, credentials, net worth or liquidity."
+    },
+    {
+      "item": "legal_review",
+      "status": "unknown",
+      "reason": "Not complete per diligence-status.pdf p.1. Routine pending diligence, not a finding of a defect."
+    },
+    {
+      "item": "environmental_review",
+      "status": "unknown",
+      "reason": "Not complete per diligence-status.pdf p.1. No evidence of contamination supplied; none asserted."
+    },
+    {
+      "item": "property_condition_assessment",
+      "status": "unknown",
+      "reason": "Not complete per diligence-status.pdf p.1. No evidence of structural failure supplied; none asserted. Roof scope and warranty unverified. The revision supplied no condition work."
+    },
+    {
+      "item": "title_review",
+      "status": "unknown",
+      "reason": "Not complete per diligence-status.pdf p.1. Routine pending diligence."
+    },
+    {
+      "item": "roof_replacement_cost",
+      "status": "unknown",
+      "reason": "Described as a capital improvement in operating-statement.pdf p.1 with no amount supplied. Unknown, not zero."
+    },
+    {
+      "item": "revised_operating_statement",
+      "status": "unknown",
+      "reason": "Not supplied with the revision. The T-12 still ends 2026-08-31 and predates Suite 045's occupancy."
+    },
+    {
+      "item": "suite_045_lease_document",
+      "status": "unknown",
+      "reason": "Not supplied. Possession and the $225 increase are evidenced only by revision-notice.pdf p.1 and rent-roll-revised.xlsx E49."
+    },
+    {
+      "item": "market_rationale_for_rate_changes",
+      "status": "unknown",
+      "reason": "Not supplied. The +25 bp cap rate and +75 bp sizing rate are instructions with no stated market or credit basis."
+    },
+    {
+      "item": "occupancy_trend",
+      "status": "unknown",
+      "reason": "Two point-in-time rolls two months apart support no trend, seasonality or turnover history."
+    },
+    {
+      "item": "tax_reassessment_outlook",
+      "status": "unknown",
+      "reason": "Not supplied. Tax held flat at the T-12 actual per instruction."
+    },
+    {
+      "item": "property_address",
+      "status": "unknown",
+      "reason": "Not represented per manager-cover.pdf p.1; original fictional evaluation property."
+    },
+    {
+      "item": "external_research_and_outreach",
+      "status": "not_performed",
+      "reason": "Restricted to the eleven supplied sources by instruction. No web search, market data or third-party contact was used in either round."
+    }
+  ]
+}

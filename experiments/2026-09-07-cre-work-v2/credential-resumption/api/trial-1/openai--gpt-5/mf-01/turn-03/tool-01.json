@@ -1,0 +1,94 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"total_area_sf\",\"expression\":\"16*700+16*820+16*1030\"},{\"name\":\"occupied_area_sf\",\"expression\":\"15*700+15*820+14*1030\"},{\"name\":\"unit_occupancy\",\"expression\":\"44/48\"},{\"name\":\"area_occupancy\",\"expression\":\"occupied_area_sf/total_area_sf\"},{\"name\":\"annual_in_place_rent\",\"expression\":\"(15*1500+15*1650+14*1925)*12\"},{\"name\":\"ltv_limit\",\"expression\":\"0.65*11154323.47826087\"},{\"name\":\"monthly_rate\",\"expression\":\"0.0625/12\"},{\"name\":\"n\",\"expression\":\"360\"},{\"name\":\"ads\",\"expression\":\"626973.6/1.25\"},{\"name\":\"monthly_ads\",\"expression\":\"ads/12\"},{\"name\":\"annuity_factor\",\"expression\":\"(1-(1+monthly_rate)**-n)/monthly_rate\"},{\"name\":\"dscr_limit\",\"expression\":\"monthly_ads*annuity_factor\"},{\"name\":\"debt_yield_limit\",\"expression\":\"626973.6/0.09\"},{\"name\":\"maximum_loan\",\"expression\":\"min(ltv_limit,dscr_limit,debt_yield_limit)\"},{\"name\":\"origination_fee\",\"expression\":\"0.01*maximum_loan\"},{\"name\":\"net_cash_out\",\"expression\":\"maximum_loan-origination_fee-45000-4200000\"}]}",
+  "call_id": "call_XJPGWUk9PB0aBGJGnK4pD6aL",
+  "arguments": {
+    "steps": [
+      {
+        "name": "total_area_sf",
+        "expression": "16*700+16*820+16*1030"
+      },
+      {
+        "name": "occupied_area_sf",
+        "expression": "15*700+15*820+14*1030"
+      },
+      {
+        "name": "unit_occupancy",
+        "expression": "44/48"
+      },
+      {
+        "name": "area_occupancy",
+        "expression": "occupied_area_sf/total_area_sf"
+      },
+      {
+        "name": "annual_in_place_rent",
+        "expression": "(15*1500+15*1650+14*1925)*12"
+      },
+      {
+        "name": "ltv_limit",
+        "expression": "0.65*11154323.47826087"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "0.0625/12"
+      },
+      {
+        "name": "n",
+        "expression": "360"
+      },
+      {
+        "name": "ads",
+        "expression": "626973.6/1.25"
+      },
+      {
+        "name": "monthly_ads",
+        "expression": "ads/12"
+      },
+      {
+        "name": "annuity_factor",
+        "expression": "(1-(1+monthly_rate)**-n)/monthly_rate"
+      },
+      {
+        "name": "dscr_limit",
+        "expression": "monthly_ads*annuity_factor"
+      },
+      {
+        "name": "debt_yield_limit",
+        "expression": "626973.6/0.09"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(ltv_limit,dscr_limit,debt_yield_limit)"
+      },
+      {
+        "name": "origination_fee",
+        "expression": "0.01*maximum_loan"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "maximum_loan-origination_fee-45000-4200000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "total_area_sf": 40800,
+      "occupied_area_sf": 37220,
+      "unit_occupancy": 0.9166666666666666,
+      "area_occupancy": 0.9122549019607843,
+      "annual_in_place_rent": 890400,
+      "ltv_limit": 7250310.260869565,
+      "monthly_rate": 0.005208333333333333,
+      "n": 360,
+      "ads": 501578.88,
+      "monthly_ads": 41798.24,
+      "annuity_factor": 162.41222420089665,
+      "dscr_limit": 6788545.126082886,
+      "debt_yield_limit": 6966373.333333333,
+      "maximum_loan": 6788545.126082886,
+      "origination_fee": 67885.45126082886,
+      "net_cash_out": 2475659.6748220576
+    }
+  },
+  "status": "ok"
+}

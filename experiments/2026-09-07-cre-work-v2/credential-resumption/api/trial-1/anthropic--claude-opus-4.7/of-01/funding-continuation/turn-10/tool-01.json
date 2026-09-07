@@ -1,0 +1,124 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly\",\"expression\":\"11050+11200+11475+11050+11200+11475+11050+11200+11475+11275+11200+11475\"},{\"name\":\"gpr_annual\",\"expression\":\"gpr_monthly*12\"},{\"name\":\"other_income\",\"expression\":\"350*12\"},{\"name\":\"gross_income\",\"expression\":\"gpr_annual+other_income\"},{\"name\":\"uw_egi\",\"expression\":\"gross_income*0.95\"},{\"name\":\"mgmt\",\"expression\":\"uw_egi*0.03\"},{\"name\":\"opex\",\"expression\":\"169974+56658+226632+mgmt\"},{\"name\":\"uw_noi\",\"expression\":\"uw_egi-opex\"},{\"name\":\"uw_ncf\",\"expression\":\"uw_noi-3600\"},{\"name\":\"cap_rate\",\"expression\":\"0.0775\"},{\"name\":\"cap_value\",\"expression\":\"uw_noi/cap_rate\"},{\"name\":\"sizing_rate\",\"expression\":\"max(0.0675+0.0075, 0.06)\"},{\"name\":\"mo_rate\",\"expression\":\"sizing_rate/12\"},{\"name\":\"pmt_factor\",\"expression\":\"mo_rate/(1-(1+mo_rate)**(-360))\"},{\"name\":\"annual_constant\",\"expression\":\"pmt_factor*12\"},{\"name\":\"ltv_loan\",\"expression\":\"cap_value*0.60\"},{\"name\":\"dscr_loan\",\"expression\":\"(uw_ncf/1.25)/annual_constant\"},{\"name\":\"dy_loan\",\"expression\":\"uw_ncf/0.09\"},{\"name\":\"max_loan\",\"expression\":\"min(ltv_loan, dscr_loan, dy_loan)\"},{\"name\":\"orig_fee\",\"expression\":\"max_loan*0.01\"},{\"name\":\"net_cash_out\",\"expression\":\"max_loan-6500000-45000-orig_fee\"},{\"name\":\"annual_in_place\",\"expression\":\"(11050+11200+11475+11050+11200+11475+11050+11200+11475+11275)*12\"}]}",
+  "call_id": "toolu_01JDL3AbrwN6Tt4iF7Y8jgfX",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly",
+        "expression": "11050+11200+11475+11050+11200+11475+11050+11200+11475+11275+11200+11475"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "gpr_monthly*12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*12"
+      },
+      {
+        "name": "gross_income",
+        "expression": "gpr_annual+other_income"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "gross_income*0.95"
+      },
+      {
+        "name": "mgmt",
+        "expression": "uw_egi*0.03"
+      },
+      {
+        "name": "opex",
+        "expression": "169974+56658+226632+mgmt"
+      },
+      {
+        "name": "uw_noi",
+        "expression": "uw_egi-opex"
+      },
+      {
+        "name": "uw_ncf",
+        "expression": "uw_noi-3600"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.0775"
+      },
+      {
+        "name": "cap_value",
+        "expression": "uw_noi/cap_rate"
+      },
+      {
+        "name": "sizing_rate",
+        "expression": "max(0.0675+0.0075, 0.06)"
+      },
+      {
+        "name": "mo_rate",
+        "expression": "sizing_rate/12"
+      },
+      {
+        "name": "pmt_factor",
+        "expression": "mo_rate/(1-(1+mo_rate)**(-360))"
+      },
+      {
+        "name": "annual_constant",
+        "expression": "pmt_factor*12"
+      },
+      {
+        "name": "ltv_loan",
+        "expression": "cap_value*0.60"
+      },
+      {
+        "name": "dscr_loan",
+        "expression": "(uw_ncf/1.25)/annual_constant"
+      },
+      {
+        "name": "dy_loan",
+        "expression": "uw_ncf/0.09"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(ltv_loan, dscr_loan, dy_loan)"
+      },
+      {
+        "name": "orig_fee",
+        "expression": "max_loan*0.01"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "max_loan-6500000-45000-orig_fee"
+      },
+      {
+        "name": "annual_in_place",
+        "expression": "(11050+11200+11475+11050+11200+11475+11050+11200+11475+11275)*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly": 135125,
+      "gpr_annual": 1621500,
+      "other_income": 4200,
+      "gross_income": 1625700,
+      "uw_egi": 1544415.0,
+      "mgmt": 46332.45,
+      "opex": 499596.45,
+      "uw_noi": 1044818.55,
+      "uw_ncf": 1041218.55,
+      "cap_rate": 0.0775,
+      "cap_value": 13481529.677419355,
+      "sizing_rate": 0.07500000000000001,
+      "mo_rate": 0.006250000000000001,
+      "pmt_factor": 0.006992145085527767,
+      "annual_constant": 0.0839057410263332,
+      "ltv_loan": 8088917.806451613,
+      "dscr_loan": 9927507.102744937,
+      "dy_loan": 11569095.000000002,
+      "max_loan": 8088917.806451613,
+      "orig_fee": 80889.17806451613,
+      "net_cash_out": 1463028.628387097,
+      "annual_in_place": 1349400
+    }
+  },
+  "status": "ok"
+}

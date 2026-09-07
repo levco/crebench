@@ -1,0 +1,82 @@
+{
+  "sheets": [
+    {
+      "name": "UW",
+      "cells": [
+        {
+          "cell": "B46",
+          "formula": "=(B45/12)/B44",
+          "number_format": "$#,##0",
+          "role": "total"
+        }
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "cells": [
+        {
+          "cell": "B4",
+          "formula": "=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C4",
+          "formula": "=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D4",
+          "formula": "=MIN((UW!B36/A4)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "B5",
+          "formula": "=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C5",
+          "formula": "=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D5",
+          "formula": "=MIN((UW!B36/A5)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "B6",
+          "formula": "=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(B3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C6",
+          "formula": "=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(C3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D6",
+          "formula": "=MIN((UW!B36/A6)*UW!B18, (UW!B38/UW!B19)/12/(-PMT(D3/12,UW!B43,1)), UW!B38/UW!B20)",
+          "number_format": "$#,##0"
+        }
+      ]
+    }
+  ],
+  "input_map": {
+    "cap_rate": "UW!B6",
+    "sizing_rate": "UW!B24",
+    "egi_gross_potential_rent": "UW!B4",
+    "egi_other_income": "UW!B9"
+  },
+  "output_map": {
+    "uw_egi": "UW!B29",
+    "uw_noi": "UW!B36",
+    "uw_ncf": "UW!B38",
+    "capitalization_value": "UW!B39",
+    "ltv_limit": "UW!B41",
+    "dscr_limit": "UW!B46",
+    "debt_yield_limit": "UW!B47",
+    "maximum_loan": "UW!B48",
+    "net_cash_out": "UW!B50"
+  }
+}

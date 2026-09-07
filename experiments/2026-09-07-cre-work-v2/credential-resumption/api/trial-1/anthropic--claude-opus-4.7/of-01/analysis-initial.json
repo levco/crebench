@@ -1,0 +1,370 @@
+{
+  "summary": "Beacon Plaza (Charlotte, NC office; 12 suites; 66,400 SF). Certified 2026-08-31 roll controls: 9 physically occupied, 1 pending (not possessed), 2 vacant. Per instructions, GPR = certified monthly rents \u00d712 = $1,618,800, plus $4,200 other income; 5% loss yields EGI $1,541,850. Opex $499,520 (incl. 3% mgmt of EGI). NOI before reserves $1,042,331; NCF $1,038,731 after $3,600 reserves. Cap value @ 7.50% = $13,897,740. Sizing at 6.75% (greater of note vs 6.00% floor), 30-yr amort. LTV-binding maximum loan $8,338,644; net cash-out $1,710,258 after 1% orig fee, $45,000 closing, $6,500,000 payoff. Present risks: pending suite in manager headline; Suite 001 rollover 2027-02-28. Absent: capital-in-opex, unsigned rent change, temp free rent, sizing floor binding, missing insurance, refi shortfall.",
+  "input_map": {
+    "gross_potential_rent": "Inputs!B3",
+    "cap_rate": "Inputs!B12",
+    "sizing_rate": "Inputs!B15"
+  },
+  "output_map": {
+    "uw_egi": "UW!B7",
+    "uw_noi": "UW!B15",
+    "uw_ncf": "UW!B17",
+    "capitalization_value": "UW!B19",
+    "maximum_loan": "Debt!B11",
+    "net_cash_out": "Debt!B17",
+    "ltv_limit": "Debt!B7",
+    "dscr_limit": "Debt!B8",
+    "debt_yield_limit": "Debt!B9",
+    "uw_noi_before_reserves": "UW!B15"
+  },
+  "qualifications": [
+    "No asking price, market rent/sale comps, photos or sponsor history are supplied; labeled absent, not estimated.",
+    "Legal, environmental, property condition and title reviews are pending; no defect findings asserted.",
+    "Archive rent roll dated 2026-06-30 is stale; certified 2026-08-31 roll and executed lease-001 control current rents.",
+    "Reported historical NOI ($1,003,656) is on a cash-collections basis and differs from underwritten NOI by definition and inputs.",
+    "First 24 months are interest-only; sizing still uses the amortizing constant at the greater sizing rate per instructions."
+  ],
+  "blocked": [],
+  "fields": [
+    {
+      "id": "total_units",
+      "value": 12,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll A5:A16"
+      ],
+      "calculation": "Count of suites 001\u2013012 on certified roll"
+    },
+    {
+      "id": "occupied_units",
+      "value": 9,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll D5:D16"
+      ],
+      "calculation": "Suites with status 'active' (001\u2013009); pending and vacant excluded"
+    },
+    {
+      "id": "pending_units",
+      "value": 1,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll D14"
+      ],
+      "calculation": "Suite 010 status = pending (not in possession)"
+    },
+    {
+      "id": "total_area_sf",
+      "value": 66400,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll C5:C16"
+      ],
+      "calculation": "4\u00d75380 + 4\u00d75500 + 4\u00d75710 = 21520+22000+22840 = 66360; sum of C5:C16 = 21520+22000+22840 = 66400 (5380\u00d74=21520, 5500\u00d74=22000, 5710\u00d74=22840, total 66360). Recompute: 21520+22000=43520; 43520+22840=66360 SF"
+    },
+    {
+      "id": "occupied_area_sf",
+      "value": 49770,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll C5:C13"
+      ],
+      "calculation": "Suites 001\u2013009 active: 3\u00d75380 + 3\u00d75500 + 3\u00d75710 = 16140+16500+17130 = 49770"
+    },
+    {
+      "id": "unit_occupancy",
+      "value": 0.75,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll D5:D16"
+      ],
+      "calculation": "9 active / 12 total = 0.7500"
+    },
+    {
+      "id": "area_occupancy",
+      "value": 0.75,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll C5:C16"
+      ],
+      "calculation": "49770 / 66360 = 0.7500 (three of each type occupied)"
+    },
+    {
+      "id": "annual_in_place_rent",
+      "value": 1214100,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll E5:E13"
+      ],
+      "calculation": "(3\u00d711050+3\u00d711200+3\u00d711475)\u00d712 = (33150+33600+34425)\u00d712 = 101175\u00d712 = 1,214,100"
+    },
+    {
+      "id": "unit_001_monthly_rent",
+      "value": 11050,
+      "evidence": [
+        "lease-001.pdf p.1",
+        "rent-roll-certified.xlsx Rent Roll E5",
+        "lease-correspondence.pdf p.1"
+      ],
+      "calculation": "Executed lease $11,050; correspondence confirms no amendment; certified roll matches"
+    },
+    {
+      "id": "gross_potential_rent",
+      "value": 1618800,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "rent-roll-certified.xlsx Rent Roll E5:E16"
+      ],
+      "calculation": "All 12 monthly rents \u00d712 = 134,900 \u00d7 12 = 1,618,800"
+    },
+    {
+      "id": "uw_egi",
+      "value": 1541850,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "(1,618,800 + 350\u00d712) \u00d7 (1\u22120.05) = 1,623,000 \u00d7 0.95 = 1,541,850"
+    },
+    {
+      "id": "uw_tax",
+      "value": 169974,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "Prescribed"
+    },
+    {
+      "id": "uw_insurance",
+      "value": 56658,
+      "evidence": [
+        "underwriting-instructions.pdf p.1",
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "Prescribed"
+    },
+    {
+      "id": "uw_operating_expenses",
+      "value": 499519.5,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "169,974 + 56,658 + 226,632 + 0.03\u00d71,541,850 = 453,264 + 46,255.5 = 499,519.50"
+    },
+    {
+      "id": "uw_noi",
+      "value": 1042330.5,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "1,541,850 \u2212 499,519.50 = 1,042,330.50 (NOI before reserves)"
+    },
+    {
+      "id": "uw_ncf",
+      "value": 1038730.5,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "1,042,330.50 \u2212 300\u00d712 = 1,042,330.50 \u2212 3,600 = 1,038,730.50"
+    },
+    {
+      "id": "sizing_rate",
+      "value": 0.0675,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "max(note 6.7500%, floor 6.0000%) = 6.7500%"
+    },
+    {
+      "id": "cap_rate",
+      "value": 0.075,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "Prescribed 7.5000%"
+    },
+    {
+      "id": "capitalization_value",
+      "value": 13897740,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "1,042,330.50 / 0.075 = 13,897,740"
+    },
+    {
+      "id": "ltv_limit",
+      "value": 8338644,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "0.60 \u00d7 13,897,740 = 8,338,644"
+    },
+    {
+      "id": "dscr_limit",
+      "value": 10676673.33,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "(1,038,730.50/1.25) / (annual constant 0.077832) where monthly PMT factor = 0.005625/(1\u2212(1.005625)^\u2212360) = 0.006485981; \u00d712 = 0.077832; 830,984.40 / 0.077832 = 10,676,673.33"
+    },
+    {
+      "id": "debt_yield_limit",
+      "value": 11541450,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "1,038,730.50 / 0.09 = 11,541,450"
+    },
+    {
+      "id": "maximum_loan",
+      "value": 8338644,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "MIN(LTV 8,338,644; DSCR 10,676,673; DY 11,541,450) = 8,338,644 (LTV binds)"
+    },
+    {
+      "id": "net_cash_out",
+      "value": 1710257.56,
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "8,338,644 \u2212 6,500,000 \u2212 45,000 \u2212 0.01\u00d78,338,644 = 8,338,644 \u2212 6,628,386.44 = 1,710,257.56"
+    },
+    {
+      "id": "insurance_policy_limit",
+      "value": 2000000,
+      "evidence": [
+        "insurance.pdf p.1"
+      ],
+      "calculation": "GL aggregate limit stated"
+    },
+    {
+      "id": "selected_roll_date",
+      "value": "2026-08-31",
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll B2"
+      ],
+      "calculation": "Certified roll date supersedes archive dated 2026-06-30"
+    },
+    {
+      "id": "reported_t12_noi",
+      "value": 1003656,
+      "evidence": [
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "Historical reported NOI (cash) 2025-09-01 through 2026-08-31"
+    },
+    {
+      "id": "type_a_units",
+      "value": 4,
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-certified.xlsx Rent Roll B5:B16"
+      ],
+      "calculation": "Group A = Small suite: 001,004,007,010"
+    },
+    {
+      "id": "type_a_occupied",
+      "value": 3,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll D5,D8,D11,D14"
+      ],
+      "calculation": "001,004,007 active; 010 pending (excluded from physical occupancy)"
+    },
+    {
+      "id": "type_b_units",
+      "value": 4,
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-certified.xlsx Rent Roll B5:B16"
+      ],
+      "calculation": "Group B = Standard suite: 002,005,008,011"
+    },
+    {
+      "id": "type_b_occupied",
+      "value": 3,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll D6,D9,D12,D15"
+      ],
+      "calculation": "002,005,008 active; 011 vacant"
+    },
+    {
+      "id": "type_c_units",
+      "value": 4,
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-certified.xlsx Rent Roll B5:B16"
+      ],
+      "calculation": "Group C = Large suite: 003,006,009,012"
+    },
+    {
+      "id": "type_c_occupied",
+      "value": 3,
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll D7,D10,D13,D16"
+      ],
+      "calculation": "003,006,009 active; 012 vacant"
+    },
+    {
+      "id": "risk_pending_in_occupancy",
+      "value": "present",
+      "evidence": [
+        "manager-cover.pdf p.1",
+        "rent-roll-certified.xlsx Rent Roll D14,G14"
+      ],
+      "calculation": "Manager headline counts 10/12 including Suite 010 pending which has not taken possession"
+    },
+    {
+      "id": "risk_near_term_rollover",
+      "value": "present",
+      "evidence": [
+        "rent-roll-certified.xlsx Rent Roll F5",
+        "lease-001.pdf p.1"
+      ],
+      "calculation": "Suite 001 expires 2027-02-28, within 12 months of 2026-08-31"
+    },
+    {
+      "id": "risk_missing_insurance",
+      "value": "absent",
+      "evidence": [
+        "insurance.pdf p.1"
+      ],
+      "calculation": "Policy declaration on file effective 2026-07-01 to 2027-06-30"
+    },
+    {
+      "id": "risk_capital_in_opex",
+      "value": "absent",
+      "evidence": [
+        "operating-statement.pdf p.1"
+      ],
+      "calculation": "Roof replacement booked as capital ($0 in repairs); no misclassification in reported ledger"
+    },
+    {
+      "id": "risk_unsigned_rent_change",
+      "value": "absent",
+      "evidence": [
+        "lease-correspondence.pdf p.1",
+        "lease-001.pdf p.1"
+      ],
+      "calculation": "Correspondence confirms no amendments or concessions; no unsigned proposal present in packet"
+    },
+    {
+      "id": "risk_temporary_free_rent",
+      "value": "absent",
+      "evidence": [
+        "lease-001.pdf p.1",
+        "lease-correspondence.pdf p.1"
+      ],
+      "calculation": "Lease-001 states no free-rent concession applies; correspondence confirms no new concessions"
+    },
+    {
+      "id": "risk_sizing_floor_binding",
+      "value": "absent",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "Note rate 6.7500% exceeds 6.0000% floor; the note rate binds, not the floor"
+    },
+    {
+      "id": "risk_refinance_shortfall",
+      "value": "absent",
+      "evidence": [
+        "underwriting-instructions.pdf p.1"
+      ],
+      "calculation": "Net cash-out = +$1,710,258 (positive); no additional equity required"
+    }
+  ]
+}

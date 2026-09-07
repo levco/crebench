@@ -1,0 +1,409 @@
+{
+  "case_id": "rt-01",
+  "model": "anthropic/claude-opus-4.7",
+  "trial": 1,
+  "stage": "initial",
+  "status": "completed",
+  "completed_at": "2026-09-07T13:57:15.611437+00:00",
+  "elapsed_seconds": 319.484,
+  "model_calls_including_retries": 12,
+  "tool_calls": 19,
+  "known_partial_cost_usd": 1.6882,
+  "cost_usd": 1.6882,
+  "returned_models": [
+    "anthropic/claude-opus-4.7"
+  ],
+  "latest_workbook": "artifacts/underwriting-v2.xlsx",
+  "latest_memo": "artifacts/memorandum-v1.pdf",
+  "artifact_versions": {
+    "workbook": 2,
+    "memo": 1
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 4500,
+        "completion_tokens": 70,
+        "total_tokens": 4570,
+        "cost": 0.02425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.02425,
+        "gateway_cost": 0.02425
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 4.113,
+      "completed_at": "2026-09-07T13:52:00.241611+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 4770,
+        "completion_tokens": 238,
+        "total_tokens": 5008,
+        "cost": 0.0298,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.0298,
+        "gateway_cost": 0.0298
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 2.854,
+      "completed_at": "2026-09-07T13:52:03.099106+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 7884,
+        "completion_tokens": 278,
+        "total_tokens": 8162,
+        "cost": 0.04637,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.04637,
+        "gateway_cost": 0.04637
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 3.547,
+      "completed_at": "2026-09-07T13:52:06.664490+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 10181,
+        "completion_tokens": 763,
+        "total_tokens": 10944,
+        "cost": 0.06998,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.06998,
+        "gateway_cost": 0.06998
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 9.522,
+      "completed_at": "2026-09-07T13:52:16.215143+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 10782,
+        "completion_tokens": 786,
+        "total_tokens": 11568,
+        "cost": 0.07356,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.07356,
+        "gateway_cost": 0.07356
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 10.362,
+      "completed_at": "2026-09-07T13:52:26.581126+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 11268,
+        "completion_tokens": 1257,
+        "total_tokens": 12525,
+        "cost": 0.087765,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.087765,
+        "gateway_cost": 0.087765
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 15.4,
+      "completed_at": "2026-09-07T13:52:41.985349+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 12182,
+        "completion_tokens": 933,
+        "total_tokens": 13115,
+        "cost": 0.084235,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.084235,
+        "gateway_cost": 0.084235
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 11.729,
+      "completed_at": "2026-09-07T13:52:53.718276+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 12508,
+        "completion_tokens": 476,
+        "total_tokens": 12984,
+        "cost": 0.07444,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.07444,
+        "gateway_cost": 0.07444
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 6.508,
+      "completed_at": "2026-09-07T13:53:00.231996+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 12740,
+        "completion_tokens": 10026,
+        "total_tokens": 22766,
+        "cost": 0.31435,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.31435,
+        "gateway_cost": 0.31435
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 88.523,
+      "completed_at": "2026-09-07T13:54:28.757049+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 22385,
+        "completion_tokens": 9479,
+        "total_tokens": 31864,
+        "cost": 0.3489,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.3489,
+        "gateway_cost": 0.3489
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 80.322,
+      "completed_at": "2026-09-07T13:55:50.094345+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 32020,
+        "completion_tokens": 2924,
+        "total_tokens": 34944,
+        "cost": 0.2332,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.2332,
+        "gateway_cost": 0.2332
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 39.262,
+      "completed_at": "2026-09-07T13:56:30.347606+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 38270,
+        "completion_tokens": 4400,
+        "total_tokens": 42670,
+        "cost": 0.30135,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.30135,
+        "gateway_cost": 0.30135
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 45.216,
+      "completed_at": "2026-09-07T13:57:15.608928+00:00"
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

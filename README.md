@@ -4,6 +4,43 @@ An open evaluation of commercial real estate document understanding, financial a
 
 [Explore the results](https://crebench.vercel.app/results.html) · [Inspect the cases](https://crebench.vercel.app/tasks.html) · [Method](https://crebench.vercel.app/method.html) · [Reproduce](https://crebench.vercel.app/reproduce.html)
 
+## Latest: expanded work-product and discovery tests
+
+[Charts, costs and coverage](https://crebench.vercel.app/expansion.html) · [Executive report](experiments/2026-09-07-cre-work-v2/REPORT.md) · [Rubric](benchmarks/cre-work-v2/RUBRIC.md) · [Source audit](experiments/2026-09-07-live-discovery-v1/SOURCE-AUDIT.md)
+
+CRE Work v2 adds 20 synthetic deal packets across four authoring families,
+original-file ingestion, editable underwriting and OM delivery, same-conversation
+revisions, eight risk checks, six actual live-research briefs, and dated lender
+qualification probes. Execution is partial; the proposed 720-stage workflow
+matrix is not complete. The principal charts use the common completed cases
+for native Lev and three API agents; a smaller Claude Chat comparison is shown
+separately. Independent CRE qualification and correction-time measurement remain
+pending. These results are separate from the earlier cohorts below.
+
+The new v2 generation adapter uses public openpyxl, ReportLab and LibreOffice
+tools. It does not require the proprietary artifact runtime used in workflow v1.
+Install both requirements files below and put `soffice` on PATH. Regrading and
+rebuilding the charts require no paid model calls:
+
+```sh
+python3 -m pip install -r requirements-review.txt -r requirements-research.txt
+python3 tools/audit-cre-work-v2.py
+python3 tools/collect-expansion.py
+python3 tools/check-expansion.py
+python3 tools/build-expansion-report.py
+python3 tools/plot-expansion.py
+npm run build
+npm run check:site
+```
+
+Use [the review protocol](benchmarks/cre-work-v2/REVIEW-PACKET.md) for reference
+qualification and coded original-file review. Private native traces and retrieved
+third-party article bodies are omitted from the public repository. Research
+fact extracts retain model field values and original-answer hashes, with their
+unverified status explicit. This limits exact replay of changing web retrieval.
+
+## Earlier financing cohort
+
 Workflow v1 uses six original fictional financing packets, each with four PDFs and an XLSX rent roll, across multifamily, retail and industrial. Lev's native product, GPT-5 in a generic agent harness and Claude Opus 5 in the same harness receive the same business brief and files. Separate direct API controls use a text-only representation. All responses and unfavorable findings are retained.
 
 The four task scores cover 17 source facts, 22 financial outputs, ten workbook acceptance checks and ten memo acceptance checks per case. Source-location evidence is scored separately. There is no blended overall winner. Actual workbooks are recalculated and changed-input copies are tested; original PDFs receive text and page-layout review.
@@ -62,7 +99,7 @@ This makes no API calls. It verifies original hashes, changed input cells, prese
 
 The original runner and all 72 frozen manifest hashes are retained. Nine gateway credit interruptions resumed their exact saved requests, with original consumed turns, tools, artifacts and costs retained. Administrative credit waiting is excluded from active run latency and explicitly logged. Completed workflows were not selectively rerun.
 
-**Artifact-generation reproduction limit:** The scored general-agent writer used the Codex-bundled `@oai/artifact-tool` runtime, unavailable from the public npm registry when checked. Its wrapper is open, but identical new artifact generation requires that runtime. Numerical regrading and independent replay of the published XLSX files use public dependencies only. A fully public generation adapter is future work and must not be represented as identical to the scored harness. Lev's backend remains proprietary; sanitized native outputs and review evidence are public.
+**Workflow v1 artifact-generation reproduction limit:** Its scored general-agent writer used the Codex-bundled `@oai/artifact-tool` runtime, unavailable from the public npm registry when checked. Its wrapper is open, but identical new artifact generation requires that runtime. Numerical regrading and independent replay of the published XLSX files use public dependencies only. The new CRE Work v2 public adapter is a different, separately scored harness; it does not retroactively replace the v1 execution. Lev's backend remains proprietary; sanitized native outputs and review evidence are public.
 
 ## Ownership and contributions
 

@@ -1,0 +1,124 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly_rev\",\"expression\":\"16*1500+16*1650+15*1925+2150\"},{\"name\":\"gpr_annual_rev\",\"expression\":\"gpr_monthly_rev*12\"},{\"name\":\"other_income\",\"expression\":\"350*48\"},{\"name\":\"egi_rev\",\"expression\":\"gpr_annual_rev*0.95+other_income\"},{\"name\":\"mgmt_rev\",\"expression\":\"egi_rev*0.03\"},{\"name\":\"opex_total_rev\",\"expression\":\"102312+34104+136416+mgmt_rev\"},{\"name\":\"noi_before_res_rev\",\"expression\":\"egi_rev-opex_total_rev\"},{\"name\":\"reserves\",\"expression\":\"300*48\"},{\"name\":\"ncf_rev\",\"expression\":\"noi_before_res_rev-reserves\"},{\"name\":\"cap_rate_rev\",\"expression\":\"0.06\"},{\"name\":\"value_rev\",\"expression\":\"noi_before_res_rev/cap_rate_rev\"},{\"name\":\"ltv_limit_rev\",\"expression\":\"0.65*value_rev\"},{\"name\":\"monthly_rate\",\"expression\":\"0.07/12\"},{\"name\":\"n\",\"expression\":\"360\"},{\"name\":\"ads_rev\",\"expression\":\"ncf_rev/1.25\"},{\"name\":\"monthly_ads_rev\",\"expression\":\"ads_rev/12\"},{\"name\":\"annuity_factor\",\"expression\":\"(1-(1+monthly_rate)**-n)/monthly_rate\"},{\"name\":\"dscr_limit_rev\",\"expression\":\"monthly_ads_rev*annuity_factor\"},{\"name\":\"debt_yield_limit_rev\",\"expression\":\"ncf_rev/0.09\"},{\"name\":\"max_loan_rev\",\"expression\":\"min(ltv_limit_rev,dscr_limit_rev,debt_yield_limit_rev)\"},{\"name\":\"origination_fee_rev\",\"expression\":\"0.01*max_loan_rev\"},{\"name\":\"net_cash_out_rev\",\"expression\":\"max_loan_rev-origination_fee_rev-45000-4200000\"}]}",
+  "call_id": "call_WuD1BZlDmoTitw8oFaYqVNw9",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly_rev",
+        "expression": "16*1500+16*1650+15*1925+2150"
+      },
+      {
+        "name": "gpr_annual_rev",
+        "expression": "gpr_monthly_rev*12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*48"
+      },
+      {
+        "name": "egi_rev",
+        "expression": "gpr_annual_rev*0.95+other_income"
+      },
+      {
+        "name": "mgmt_rev",
+        "expression": "egi_rev*0.03"
+      },
+      {
+        "name": "opex_total_rev",
+        "expression": "102312+34104+136416+mgmt_rev"
+      },
+      {
+        "name": "noi_before_res_rev",
+        "expression": "egi_rev-opex_total_rev"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*48"
+      },
+      {
+        "name": "ncf_rev",
+        "expression": "noi_before_res_rev-reserves"
+      },
+      {
+        "name": "cap_rate_rev",
+        "expression": "0.06"
+      },
+      {
+        "name": "value_rev",
+        "expression": "noi_before_res_rev/cap_rate_rev"
+      },
+      {
+        "name": "ltv_limit_rev",
+        "expression": "0.65*value_rev"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "0.07/12"
+      },
+      {
+        "name": "n",
+        "expression": "360"
+      },
+      {
+        "name": "ads_rev",
+        "expression": "ncf_rev/1.25"
+      },
+      {
+        "name": "monthly_ads_rev",
+        "expression": "ads_rev/12"
+      },
+      {
+        "name": "annuity_factor",
+        "expression": "(1-(1+monthly_rate)**-n)/monthly_rate"
+      },
+      {
+        "name": "dscr_limit_rev",
+        "expression": "monthly_ads_rev*annuity_factor"
+      },
+      {
+        "name": "debt_yield_limit_rev",
+        "expression": "ncf_rev/0.09"
+      },
+      {
+        "name": "max_loan_rev",
+        "expression": "min(ltv_limit_rev,dscr_limit_rev,debt_yield_limit_rev)"
+      },
+      {
+        "name": "origination_fee_rev",
+        "expression": "0.01*max_loan_rev"
+      },
+      {
+        "name": "net_cash_out_rev",
+        "expression": "max_loan_rev-origination_fee_rev-45000-4200000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly_rev": 81425,
+      "gpr_annual_rev": 977100,
+      "other_income": 16800,
+      "egi_rev": 945045.0,
+      "mgmt_rev": 28351.35,
+      "opex_total_rev": 301183.35,
+      "noi_before_res_rev": 643861.65,
+      "reserves": 14400,
+      "ncf_rev": 629461.65,
+      "cap_rate_rev": 0.06,
+      "value_rev": 10731027.5,
+      "ltv_limit_rev": 6975167.875,
+      "monthly_rate": 0.005833333333333334,
+      "n": 360,
+      "ads_rev": 503569.32,
+      "monthly_ads_rev": 41964.11,
+      "annuity_factor": 150.3075679478213,
+      "dscr_limit_rev": 6307523.315194847,
+      "debt_yield_limit_rev": 6994018.333333334,
+      "max_loan_rev": 6307523.315194847,
+      "origination_fee_rev": 63075.23315194847,
+      "net_cash_out_rev": 1999448.082042899
+    }
+  },
+  "status": "ok"
+}

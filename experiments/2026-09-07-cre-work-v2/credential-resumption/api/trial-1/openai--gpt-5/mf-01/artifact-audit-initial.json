@@ -1,0 +1,156 @@
+{
+  "stage": "initial",
+  "workbook": {
+    "readable": true,
+    "base_checks": [
+      {
+        "field": "uw_egi",
+        "actual": 942480,
+        "expected": 942480.0,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "uw_noi",
+        "actual": 641373.6,
+        "expected": 641373.6,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "uw_ncf",
+        "actual": 626973.6,
+        "expected": 626973.6,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "capitalization_value",
+        "actual": 11154323.4782609,
+        "expected": 11154323.47826087,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "maximum_loan",
+        "actual": 6788545.12608292,
+        "expected": 6788545.126082887,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "net_cash_out",
+        "actual": 2475659.67482209,
+        "expected": 2475659.6748220576,
+        "passed": true,
+        "live_formula": true
+      }
+    ],
+    "perturbations": [
+      {
+        "input": "cap_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 942480,
+            "expected": 942480.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": 641373.6,
+            "expected": 641373.6,
+            "passed": true
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 626973.6,
+            "expected": 626973.6,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 10261977.6,
+            "expected": 10261977.6,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 6670285.44,
+            "expected": 6670285.44,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 2358582.5856,
+            "expected": 2358582.585600001,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": "gross_potential_rent",
+        "passed": false,
+        "error": "'gross_potential_rent'"
+      },
+      {
+        "input": "sizing_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 942480,
+            "expected": 942480.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": 641373.6,
+            "expected": 641373.6,
+            "passed": true
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 626973.6,
+            "expected": 626973.6,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 11154323.4782609,
+            "expected": 11154323.47826087,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 6127190.46703838,
+            "expected": 6127190.46703839,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 1820918.56236799,
+            "expected": 1820918.5623680064,
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "all_base_outputs_correct": true,
+    "all_sensitivities_correct": false
+  },
+  "om": {
+    "readable": true,
+    "pages": 5,
+    "characters": 7592,
+    "approved_copy_present": true,
+    "financial_and_presentation_review": "pending; readable PDF is not acceptance"
+  },
+  "professional_acceptance": null,
+  "human_review": "pending",
+  "original_hashes": {
+    "artifacts/underwriting-v3.xlsx": "a0d40c57e6bb9d7b87fef05959b4e0d960a3d98d7df172cb7c3137c43dd9a892",
+    "artifacts/memorandum-v3.pdf": "c40f9a7a2c73e04649a344ef0965df4b65e5ce6a4e0c23c38c591f1ca8ceaa47"
+  }
+}

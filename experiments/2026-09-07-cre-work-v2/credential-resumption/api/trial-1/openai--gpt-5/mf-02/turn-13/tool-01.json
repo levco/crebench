@@ -1,0 +1,44 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"total_area\",\"expression\":\"22*820 + 21*940 + 21*1150\"},{\"name\":\"occupied_area\",\"expression\":\"16*820 + 16*940 + 16*1150\"},{\"name\":\"area_occupancy\",\"expression\":\"occupied_area/total_area\"},{\"name\":\"annual_in_place_rent\",\"expression\":\"(16*(1575+1725+2000))*12\"},{\"name\":\"monthly_gpr\",\"expression\":\"22*1575 + 21*1725 + 21*2000\"},{\"name\":\"gpr_annual\",\"expression\":\"monthly_gpr*12\"}]}",
+  "call_id": "call_XvRZRBUF49Qf6EHAVFOJf41E",
+  "arguments": {
+    "steps": [
+      {
+        "name": "total_area",
+        "expression": "22*820 + 21*940 + 21*1150"
+      },
+      {
+        "name": "occupied_area",
+        "expression": "16*820 + 16*940 + 16*1150"
+      },
+      {
+        "name": "area_occupancy",
+        "expression": "occupied_area/total_area"
+      },
+      {
+        "name": "annual_in_place_rent",
+        "expression": "(16*(1575+1725+2000))*12"
+      },
+      {
+        "name": "monthly_gpr",
+        "expression": "22*1575 + 21*1725 + 21*2000"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "monthly_gpr*12"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "total_area": 61930,
+      "occupied_area": 46560,
+      "area_occupancy": 0.7518165670918779,
+      "annual_in_place_rent": 1017600,
+      "monthly_gpr": 112875,
+      "gpr_annual": 1354500
+    }
+  },
+  "status": "ok"
+}

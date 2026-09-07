@@ -1,0 +1,13 @@
+# Summit Exchange: prepare a complete investment package
+
+As of 2026-08-31, analyze the attached original fictional deal packet. Produce a reconciled underwriting XLSX with live formulas, a concise investment/sales offering memorandum PDF, and an evidence-backed final analysis. Both files must be downloadable. Include executive summary, property and unit/suite mix, lease/occupancy analysis, historical versus underwritten financials, debt sizing and sources/uses, risks and missing diligence, and source notes. Do not invent photos, asking price, market comps or sponsor history. Routine generation and outline approvals are preauthorized. Use only these sources; no external research or outreach.
+
+The workbook must expose input cells for gross_potential_rent, cap_rate, sizing_rate and output cells for uw_egi, uw_noi, uw_ncf, capitalization_value, maximum_loan and net_cash_out. Provide their Sheet!A1 locations. Include a sensitivity table and a source register.
+
+Report the following named fields with value, unit where needed, and evidence filename plus page/cell location. Ratios are decimal values (0.95, not 95). For type_a/b/c use the manager's group mapping. For risk fields use present, absent or unresolved. Missing information remains explicitly unknown, distinct from zero.
+
+total_units, occupied_units, pending_units, total_area_sf, occupied_area_sf, unit_occupancy, area_occupancy, annual_in_place_rent, unit_001_monthly_rent, gross_potential_rent, uw_egi, uw_tax, uw_insurance, uw_operating_expenses, uw_noi, uw_ncf, sizing_rate, cap_rate, capitalization_value, ltv_limit, dscr_limit, debt_yield_limit, maximum_loan, net_cash_out, insurance_policy_limit, selected_roll_date, reported_t12_noi, type_a_units, type_a_occupied, type_b_units, type_b_occupied, type_c_units, type_c_occupied, risk_pending_in_occupancy, risk_near_term_rollover, risk_missing_insurance, risk_capital_in_opex, risk_unsigned_rent_change, risk_temporary_free_rent, risk_sizing_floor_binding, risk_refinance_shortfall
+
+For risk_pending_in_occupancy assess the manager's inclusion of unpossessed pending units, not whether your final calculation repeats the mistake. For risk_capital_in_opex assess the reported historical ledger classification. For risk_sizing_floor_binding compare the original note rate and floor. For risk_unsigned_rent_change assess whether an unsigned rent proposal is in the packet.
+
+In your final analysis provide fields as an array of objects with id, value, evidence (array), calculation; qualifications (array); summary; blocked (array). Also supply input_map and output_map. This is an interoperability format; substantive financial content is the assessment.

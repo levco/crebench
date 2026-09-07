@@ -1,0 +1,345 @@
+{
+  "case_id": "in-01",
+  "model": "anthropic/claude-opus-4.7",
+  "trial": 1,
+  "stage": "initial",
+  "status": "completed",
+  "completed_at": "2026-09-07T14:28:51.190714+00:00",
+  "elapsed_seconds": 234.597,
+  "model_calls_including_retries": 10,
+  "tool_calls": 17,
+  "known_partial_cost_usd": 1.18413,
+  "cost_usd": 1.18413,
+  "returned_models": [
+    "anthropic/claude-opus-4.7"
+  ],
+  "latest_workbook": "artifacts/underwriting-v1.xlsx",
+  "latest_memo": "artifacts/memorandum-v1.pdf",
+  "artifact_versions": {
+    "workbook": 1,
+    "memo": 1
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 4501,
+        "completion_tokens": 69,
+        "total_tokens": 4570,
+        "cost": 0.02423,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.02423,
+        "gateway_cost": 0.02423
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 2.115,
+      "completed_at": "2026-09-07T14:24:58.708920+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 4771,
+        "completion_tokens": 178,
+        "total_tokens": 4949,
+        "cost": 0.028305,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.028305,
+        "gateway_cost": 0.028305
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 2.954,
+      "completed_at": "2026-09-07T14:25:01.666708+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 6656,
+        "completion_tokens": 338,
+        "total_tokens": 6994,
+        "cost": 0.04173,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.04173,
+        "gateway_cost": 0.04173
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 7.666,
+      "completed_at": "2026-09-07T14:25:09.356751+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 9944,
+        "completion_tokens": 1275,
+        "total_tokens": 11219,
+        "cost": 0.081595,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.081595,
+        "gateway_cost": 0.081595
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 16.322,
+      "completed_at": "2026-09-07T14:25:25.703523+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 10573,
+        "completion_tokens": 2021,
+        "total_tokens": 12594,
+        "cost": 0.10339,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.10339,
+        "gateway_cost": 0.10339
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 25.363,
+      "completed_at": "2026-09-07T14:25:51.069814+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 10982,
+        "completion_tokens": 1079,
+        "total_tokens": 12061,
+        "cost": 0.081885,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.081885,
+        "gateway_cost": 0.081885
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 12.767,
+      "completed_at": "2026-09-07T14:26:03.839805+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 11855,
+        "completion_tokens": 8905,
+        "total_tokens": 20760,
+        "cost": 0.2819,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.2819,
+        "gateway_cost": 0.2819
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 77.775,
+      "completed_at": "2026-09-07T14:27:21.619840+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 20943,
+        "completion_tokens": 1076,
+        "total_tokens": 22019,
+        "cost": 0.131615,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.131615,
+        "gateway_cost": 0.131615
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 13.435,
+      "completed_at": "2026-09-07T14:27:36.005913+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 21883,
+        "completion_tokens": 2738,
+        "total_tokens": 24621,
+        "cost": 0.177865,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.177865,
+        "gateway_cost": 0.177865
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 36.141,
+      "completed_at": "2026-09-07T14:28:12.152235+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 27288,
+        "completion_tokens": 3807,
+        "total_tokens": 31095,
+        "cost": 0.231615,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.231615,
+        "gateway_cost": 0.231615
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 38.988,
+      "completed_at": "2026-09-07T14:28:51.188334+00:00"
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

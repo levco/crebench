@@ -1,0 +1,4297 @@
+{
+  "input_map": {
+    "gross_potential_rent": "Inputs!B4",
+    "cap_rate": "Inputs!B13",
+    "sizing_rate": "Inputs!B16",
+    "egi_gross_potential_rent": "Inputs!B4",
+    "egi_other_income": "Inputs!B6"
+  },
+  "output_map": {
+    "uw_egi": "UW!B6",
+    "uw_noi": "UW!B13",
+    "uw_noi_before_reserves": "UW!B13",
+    "uw_ncf": "UW!B15",
+    "capitalization_value": "UW!B18",
+    "maximum_loan": "Debt!B8",
+    "net_cash_out": "Debt!B23",
+    "ltv_limit": "Debt!B5",
+    "dscr_limit": "Debt!B6",
+    "debt_yield_limit": "Debt!B7",
+    "uw_egi_check": "UW!B6"
+  },
+  "sheets": [
+    {
+      "name": "Inputs",
+      "freeze_rows": 3,
+      "column_widths": {
+        "A": 44,
+        "B": 16,
+        "C": 62
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Willow Gardens - Underwriting Inputs (as of 2026-08-31)",
+          "role": "title"
+        },
+        {
+          "cell": "A3",
+          "value": "Input",
+          "role": "header"
+        },
+        {
+          "cell": "B3",
+          "value": "Value",
+          "role": "header"
+        },
+        {
+          "cell": "C3",
+          "value": "Source / note",
+          "role": "header"
+        },
+        {
+          "cell": "A4",
+          "value": "Gross potential rent (annual, all 64 suites)"
+        },
+        {
+          "cell": "B4",
+          "value": 1354500,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C4",
+          "value": "Certified roll scheduled monthly rent (E5:E68 = $112,875) x 12; rent-roll-certified.xlsx",
+          "wrap": true
+        },
+        {
+          "cell": "A5",
+          "value": "Economic loss (vacancy/credit) %"
+        },
+        {
+          "cell": "B5",
+          "value": 0.05,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C5",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A6",
+          "value": "Other income per unit (annual)"
+        },
+        {
+          "cell": "B6",
+          "value": 350,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C6",
+          "value": "underwriting-instructions.pdf p.1; reimbursements already included"
+        },
+        {
+          "cell": "A7",
+          "value": "Total units / suites"
+        },
+        {
+          "cell": "B7",
+          "formula": "='Rent Roll'!B71",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "C7",
+          "value": "Count from certified roll"
+        },
+        {
+          "cell": "A8",
+          "value": "Real estate taxes"
+        },
+        {
+          "cell": "B8",
+          "value": 142222,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C8",
+          "value": "underwriting-instructions.pdf p.1 (= operating-statement.pdf T-12)"
+        },
+        {
+          "cell": "A9",
+          "value": "Insurance expense"
+        },
+        {
+          "cell": "B9",
+          "value": 47408,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C9",
+          "value": "underwriting-instructions.pdf p.1 (= operating-statement.pdf T-12)"
+        },
+        {
+          "cell": "A10",
+          "value": "Other recurring operating expenses"
+        },
+        {
+          "cell": "B10",
+          "value": 189630,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C10",
+          "value": "underwriting-instructions.pdf p.1 (= operating-statement.pdf T-12)"
+        },
+        {
+          "cell": "A11",
+          "value": "Management fee (% of underwritten EGI)"
+        },
+        {
+          "cell": "B11",
+          "value": 0.03,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C11",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A12",
+          "value": "Replacement reserve per unit (annual)"
+        },
+        {
+          "cell": "B12",
+          "value": 300,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C12",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A13",
+          "value": "Capitalization rate (on NOI before reserves)"
+        },
+        {
+          "cell": "B13",
+          "value": 0.06,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "C13",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A14",
+          "value": "Note rate"
+        },
+        {
+          "cell": "B14",
+          "value": 0.069,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "C14",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A15",
+          "value": "Underwriting rate floor"
+        },
+        {
+          "cell": "B15",
+          "value": 0.06,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "C15",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A16",
+          "value": "Sizing rate (greater of note rate and floor)"
+        },
+        {
+          "cell": "B16",
+          "value": 0.069,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "C16",
+          "value": "Note rate 6.9000% exceeds the 6.00% floor, so the floor is not binding"
+        },
+        {
+          "cell": "A17",
+          "value": "Amortization term (months)"
+        },
+        {
+          "cell": "B17",
+          "value": 360,
+          "role": "input",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "C17",
+          "value": "30-year amortization, monthly payments"
+        },
+        {
+          "cell": "A18",
+          "value": "Maximum LTV"
+        },
+        {
+          "cell": "B18",
+          "value": 0.6,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C18",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A19",
+          "value": "Minimum DSCR (on NCF)"
+        },
+        {
+          "cell": "B19",
+          "value": 1.25,
+          "role": "input",
+          "number_format": "0.00"
+        },
+        {
+          "cell": "C19",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A20",
+          "value": "Minimum NCF debt yield"
+        },
+        {
+          "cell": "B20",
+          "value": 0.09,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C20",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A21",
+          "value": "Origination fee (% of sized loan)"
+        },
+        {
+          "cell": "B21",
+          "value": 0.01,
+          "role": "input",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "C21",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A22",
+          "value": "Closing costs"
+        },
+        {
+          "cell": "B22",
+          "value": 45000,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C22",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A23",
+          "value": "Existing loan payoff"
+        },
+        {
+          "cell": "B23",
+          "value": 7200000,
+          "role": "input",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C23",
+          "value": "underwriting-instructions.pdf p.1"
+        },
+        {
+          "cell": "A25",
+          "value": "Note: first 24 months are interest-only, but sizing uses the 30-year amortizing constant at the sizing rate per instructions.",
+          "role": "note",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "name": "Rent Roll",
+      "freeze_rows": 4,
+      "column_widths": {
+        "A": 10,
+        "B": 10,
+        "C": 8,
+        "D": 10,
+        "E": 12,
+        "F": 13,
+        "G": 13,
+        "H": 11,
+        "I": 11,
+        "J": 13
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Certified rent roll (controlling) - rent-roll-certified.xlsx",
+          "role": "title"
+        },
+        {
+          "cell": "A2",
+          "value": "As of"
+        },
+        {
+          "cell": "B2",
+          "value": "2026-08-31",
+          "role": "input"
+        },
+        {
+          "cell": "A4",
+          "value": "Suite",
+          "role": "header"
+        },
+        {
+          "cell": "B4",
+          "value": "Unit type",
+          "role": "header"
+        },
+        {
+          "cell": "C4",
+          "value": "Group",
+          "role": "header"
+        },
+        {
+          "cell": "D4",
+          "value": "Area SF",
+          "role": "header"
+        },
+        {
+          "cell": "E4",
+          "value": "Possession",
+          "role": "header"
+        },
+        {
+          "cell": "F4",
+          "value": "Monthly rent",
+          "role": "header"
+        },
+        {
+          "cell": "G4",
+          "value": "Expiration",
+          "role": "header"
+        },
+        {
+          "cell": "H4",
+          "value": "Occupied",
+          "role": "header"
+        },
+        {
+          "cell": "I4",
+          "value": "Occupied SF",
+          "role": "header"
+        },
+        {
+          "cell": "J4",
+          "value": "In-place rent",
+          "role": "header"
+        },
+        {
+          "cell": "A5",
+          "value": "001"
+        },
+        {
+          "cell": "B5",
+          "value": "Studio"
+        },
+        {
+          "cell": "C5",
+          "value": "A"
+        },
+        {
+          "cell": "D5",
+          "value": 820
+        },
+        {
+          "cell": "E5",
+          "value": "active"
+        },
+        {
+          "cell": "F5",
+          "value": 1575
+        },
+        {
+          "cell": "G5",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H5",
+          "formula": "=IF(E5=\"active\",1,0)"
+        },
+        {
+          "cell": "I5",
+          "formula": "=H5*D5"
+        },
+        {
+          "cell": "J5",
+          "formula": "=H5*F5"
+        },
+        {
+          "cell": "A6",
+          "value": "002"
+        },
+        {
+          "cell": "B6",
+          "value": "1BR"
+        },
+        {
+          "cell": "C6",
+          "value": "B"
+        },
+        {
+          "cell": "D6",
+          "value": 940
+        },
+        {
+          "cell": "E6",
+          "value": "active"
+        },
+        {
+          "cell": "F6",
+          "value": 1725
+        },
+        {
+          "cell": "G6",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H6",
+          "formula": "=IF(E6=\"active\",1,0)"
+        },
+        {
+          "cell": "I6",
+          "formula": "=H6*D6"
+        },
+        {
+          "cell": "J6",
+          "formula": "=H6*F6"
+        },
+        {
+          "cell": "A7",
+          "value": "003"
+        },
+        {
+          "cell": "B7",
+          "value": "2BR"
+        },
+        {
+          "cell": "C7",
+          "value": "C"
+        },
+        {
+          "cell": "D7",
+          "value": 1150
+        },
+        {
+          "cell": "E7",
+          "value": "active"
+        },
+        {
+          "cell": "F7",
+          "value": 2000
+        },
+        {
+          "cell": "G7",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H7",
+          "formula": "=IF(E7=\"active\",1,0)"
+        },
+        {
+          "cell": "I7",
+          "formula": "=H7*D7"
+        },
+        {
+          "cell": "J7",
+          "formula": "=H7*F7"
+        },
+        {
+          "cell": "A8",
+          "value": "004"
+        },
+        {
+          "cell": "B8",
+          "value": "Studio"
+        },
+        {
+          "cell": "C8",
+          "value": "A"
+        },
+        {
+          "cell": "D8",
+          "value": 820
+        },
+        {
+          "cell": "E8",
+          "value": "active"
+        },
+        {
+          "cell": "F8",
+          "value": 1575
+        },
+        {
+          "cell": "G8",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H8",
+          "formula": "=IF(E8=\"active\",1,0)"
+        },
+        {
+          "cell": "I8",
+          "formula": "=H8*D8"
+        },
+        {
+          "cell": "J8",
+          "formula": "=H8*F8"
+        },
+        {
+          "cell": "A9",
+          "value": "005"
+        },
+        {
+          "cell": "B9",
+          "value": "1BR"
+        },
+        {
+          "cell": "C9",
+          "value": "B"
+        },
+        {
+          "cell": "D9",
+          "value": 940
+        },
+        {
+          "cell": "E9",
+          "value": "active"
+        },
+        {
+          "cell": "F9",
+          "value": 1725
+        },
+        {
+          "cell": "G9",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H9",
+          "formula": "=IF(E9=\"active\",1,0)"
+        },
+        {
+          "cell": "I9",
+          "formula": "=H9*D9"
+        },
+        {
+          "cell": "J9",
+          "formula": "=H9*F9"
+        },
+        {
+          "cell": "A10",
+          "value": "006"
+        },
+        {
+          "cell": "B10",
+          "value": "2BR"
+        },
+        {
+          "cell": "C10",
+          "value": "C"
+        },
+        {
+          "cell": "D10",
+          "value": 1150
+        },
+        {
+          "cell": "E10",
+          "value": "active"
+        },
+        {
+          "cell": "F10",
+          "value": 2000
+        },
+        {
+          "cell": "G10",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H10",
+          "formula": "=IF(E10=\"active\",1,0)"
+        },
+        {
+          "cell": "I10",
+          "formula": "=H10*D10"
+        },
+        {
+          "cell": "J10",
+          "formula": "=H10*F10"
+        },
+        {
+          "cell": "A11",
+          "value": "007"
+        },
+        {
+          "cell": "B11",
+          "value": "Studio"
+        },
+        {
+          "cell": "C11",
+          "value": "A"
+        },
+        {
+          "cell": "D11",
+          "value": 820
+        },
+        {
+          "cell": "E11",
+          "value": "active"
+        },
+        {
+          "cell": "F11",
+          "value": 1575
+        },
+        {
+          "cell": "G11",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H11",
+          "formula": "=IF(E11=\"active\",1,0)"
+        },
+        {
+          "cell": "I11",
+          "formula": "=H11*D11"
+        },
+        {
+          "cell": "J11",
+          "formula": "=H11*F11"
+        },
+        {
+          "cell": "A12",
+          "value": "008"
+        },
+        {
+          "cell": "B12",
+          "value": "1BR"
+        },
+        {
+          "cell": "C12",
+          "value": "B"
+        },
+        {
+          "cell": "D12",
+          "value": 940
+        },
+        {
+          "cell": "E12",
+          "value": "active"
+        },
+        {
+          "cell": "F12",
+          "value": 1725
+        },
+        {
+          "cell": "G12",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H12",
+          "formula": "=IF(E12=\"active\",1,0)"
+        },
+        {
+          "cell": "I12",
+          "formula": "=H12*D12"
+        },
+        {
+          "cell": "J12",
+          "formula": "=H12*F12"
+        },
+        {
+          "cell": "A13",
+          "value": "009"
+        },
+        {
+          "cell": "B13",
+          "value": "2BR"
+        },
+        {
+          "cell": "C13",
+          "value": "C"
+        },
+        {
+          "cell": "D13",
+          "value": 1150
+        },
+        {
+          "cell": "E13",
+          "value": "active"
+        },
+        {
+          "cell": "F13",
+          "value": 2000
+        },
+        {
+          "cell": "G13",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H13",
+          "formula": "=IF(E13=\"active\",1,0)"
+        },
+        {
+          "cell": "I13",
+          "formula": "=H13*D13"
+        },
+        {
+          "cell": "J13",
+          "formula": "=H13*F13"
+        },
+        {
+          "cell": "A14",
+          "value": "010"
+        },
+        {
+          "cell": "B14",
+          "value": "Studio"
+        },
+        {
+          "cell": "C14",
+          "value": "A"
+        },
+        {
+          "cell": "D14",
+          "value": 820
+        },
+        {
+          "cell": "E14",
+          "value": "active"
+        },
+        {
+          "cell": "F14",
+          "value": 1575
+        },
+        {
+          "cell": "G14",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H14",
+          "formula": "=IF(E14=\"active\",1,0)"
+        },
+        {
+          "cell": "I14",
+          "formula": "=H14*D14"
+        },
+        {
+          "cell": "J14",
+          "formula": "=H14*F14"
+        },
+        {
+          "cell": "A15",
+          "value": "011"
+        },
+        {
+          "cell": "B15",
+          "value": "1BR"
+        },
+        {
+          "cell": "C15",
+          "value": "B"
+        },
+        {
+          "cell": "D15",
+          "value": 940
+        },
+        {
+          "cell": "E15",
+          "value": "active"
+        },
+        {
+          "cell": "F15",
+          "value": 1725
+        },
+        {
+          "cell": "G15",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H15",
+          "formula": "=IF(E15=\"active\",1,0)"
+        },
+        {
+          "cell": "I15",
+          "formula": "=H15*D15"
+        },
+        {
+          "cell": "J15",
+          "formula": "=H15*F15"
+        },
+        {
+          "cell": "A16",
+          "value": "012"
+        },
+        {
+          "cell": "B16",
+          "value": "2BR"
+        },
+        {
+          "cell": "C16",
+          "value": "C"
+        },
+        {
+          "cell": "D16",
+          "value": 1150
+        },
+        {
+          "cell": "E16",
+          "value": "active"
+        },
+        {
+          "cell": "F16",
+          "value": 2000
+        },
+        {
+          "cell": "G16",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H16",
+          "formula": "=IF(E16=\"active\",1,0)"
+        },
+        {
+          "cell": "I16",
+          "formula": "=H16*D16"
+        },
+        {
+          "cell": "J16",
+          "formula": "=H16*F16"
+        },
+        {
+          "cell": "A17",
+          "value": "013"
+        },
+        {
+          "cell": "B17",
+          "value": "Studio"
+        },
+        {
+          "cell": "C17",
+          "value": "A"
+        },
+        {
+          "cell": "D17",
+          "value": 820
+        },
+        {
+          "cell": "E17",
+          "value": "active"
+        },
+        {
+          "cell": "F17",
+          "value": 1575
+        },
+        {
+          "cell": "G17",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H17",
+          "formula": "=IF(E17=\"active\",1,0)"
+        },
+        {
+          "cell": "I17",
+          "formula": "=H17*D17"
+        },
+        {
+          "cell": "J17",
+          "formula": "=H17*F17"
+        },
+        {
+          "cell": "A18",
+          "value": "014"
+        },
+        {
+          "cell": "B18",
+          "value": "1BR"
+        },
+        {
+          "cell": "C18",
+          "value": "B"
+        },
+        {
+          "cell": "D18",
+          "value": 940
+        },
+        {
+          "cell": "E18",
+          "value": "active"
+        },
+        {
+          "cell": "F18",
+          "value": 1725
+        },
+        {
+          "cell": "G18",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H18",
+          "formula": "=IF(E18=\"active\",1,0)"
+        },
+        {
+          "cell": "I18",
+          "formula": "=H18*D18"
+        },
+        {
+          "cell": "J18",
+          "formula": "=H18*F18"
+        },
+        {
+          "cell": "A19",
+          "value": "015"
+        },
+        {
+          "cell": "B19",
+          "value": "2BR"
+        },
+        {
+          "cell": "C19",
+          "value": "C"
+        },
+        {
+          "cell": "D19",
+          "value": 1150
+        },
+        {
+          "cell": "E19",
+          "value": "active"
+        },
+        {
+          "cell": "F19",
+          "value": 2000
+        },
+        {
+          "cell": "G19",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H19",
+          "formula": "=IF(E19=\"active\",1,0)"
+        },
+        {
+          "cell": "I19",
+          "formula": "=H19*D19"
+        },
+        {
+          "cell": "J19",
+          "formula": "=H19*F19"
+        },
+        {
+          "cell": "A20",
+          "value": "016"
+        },
+        {
+          "cell": "B20",
+          "value": "Studio"
+        },
+        {
+          "cell": "C20",
+          "value": "A"
+        },
+        {
+          "cell": "D20",
+          "value": 820
+        },
+        {
+          "cell": "E20",
+          "value": "active"
+        },
+        {
+          "cell": "F20",
+          "value": 1575
+        },
+        {
+          "cell": "G20",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H20",
+          "formula": "=IF(E20=\"active\",1,0)"
+        },
+        {
+          "cell": "I20",
+          "formula": "=H20*D20"
+        },
+        {
+          "cell": "J20",
+          "formula": "=H20*F20"
+        },
+        {
+          "cell": "A21",
+          "value": "017"
+        },
+        {
+          "cell": "B21",
+          "value": "1BR"
+        },
+        {
+          "cell": "C21",
+          "value": "B"
+        },
+        {
+          "cell": "D21",
+          "value": 940
+        },
+        {
+          "cell": "E21",
+          "value": "active"
+        },
+        {
+          "cell": "F21",
+          "value": 1725
+        },
+        {
+          "cell": "G21",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H21",
+          "formula": "=IF(E21=\"active\",1,0)"
+        },
+        {
+          "cell": "I21",
+          "formula": "=H21*D21"
+        },
+        {
+          "cell": "J21",
+          "formula": "=H21*F21"
+        },
+        {
+          "cell": "A22",
+          "value": "018"
+        },
+        {
+          "cell": "B22",
+          "value": "2BR"
+        },
+        {
+          "cell": "C22",
+          "value": "C"
+        },
+        {
+          "cell": "D22",
+          "value": 1150
+        },
+        {
+          "cell": "E22",
+          "value": "active"
+        },
+        {
+          "cell": "F22",
+          "value": 2000
+        },
+        {
+          "cell": "G22",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H22",
+          "formula": "=IF(E22=\"active\",1,0)"
+        },
+        {
+          "cell": "I22",
+          "formula": "=H22*D22"
+        },
+        {
+          "cell": "J22",
+          "formula": "=H22*F22"
+        },
+        {
+          "cell": "A23",
+          "value": "019"
+        },
+        {
+          "cell": "B23",
+          "value": "Studio"
+        },
+        {
+          "cell": "C23",
+          "value": "A"
+        },
+        {
+          "cell": "D23",
+          "value": 820
+        },
+        {
+          "cell": "E23",
+          "value": "active"
+        },
+        {
+          "cell": "F23",
+          "value": 1575
+        },
+        {
+          "cell": "G23",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H23",
+          "formula": "=IF(E23=\"active\",1,0)"
+        },
+        {
+          "cell": "I23",
+          "formula": "=H23*D23"
+        },
+        {
+          "cell": "J23",
+          "formula": "=H23*F23"
+        },
+        {
+          "cell": "A24",
+          "value": "020"
+        },
+        {
+          "cell": "B24",
+          "value": "1BR"
+        },
+        {
+          "cell": "C24",
+          "value": "B"
+        },
+        {
+          "cell": "D24",
+          "value": 940
+        },
+        {
+          "cell": "E24",
+          "value": "active"
+        },
+        {
+          "cell": "F24",
+          "value": 1725
+        },
+        {
+          "cell": "G24",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H24",
+          "formula": "=IF(E24=\"active\",1,0)"
+        },
+        {
+          "cell": "I24",
+          "formula": "=H24*D24"
+        },
+        {
+          "cell": "J24",
+          "formula": "=H24*F24"
+        },
+        {
+          "cell": "A25",
+          "value": "021"
+        },
+        {
+          "cell": "B25",
+          "value": "2BR"
+        },
+        {
+          "cell": "C25",
+          "value": "C"
+        },
+        {
+          "cell": "D25",
+          "value": 1150
+        },
+        {
+          "cell": "E25",
+          "value": "active"
+        },
+        {
+          "cell": "F25",
+          "value": 2000
+        },
+        {
+          "cell": "G25",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H25",
+          "formula": "=IF(E25=\"active\",1,0)"
+        },
+        {
+          "cell": "I25",
+          "formula": "=H25*D25"
+        },
+        {
+          "cell": "J25",
+          "formula": "=H25*F25"
+        },
+        {
+          "cell": "A26",
+          "value": "022"
+        },
+        {
+          "cell": "B26",
+          "value": "Studio"
+        },
+        {
+          "cell": "C26",
+          "value": "A"
+        },
+        {
+          "cell": "D26",
+          "value": 820
+        },
+        {
+          "cell": "E26",
+          "value": "active"
+        },
+        {
+          "cell": "F26",
+          "value": 1575
+        },
+        {
+          "cell": "G26",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H26",
+          "formula": "=IF(E26=\"active\",1,0)"
+        },
+        {
+          "cell": "I26",
+          "formula": "=H26*D26"
+        },
+        {
+          "cell": "J26",
+          "formula": "=H26*F26"
+        },
+        {
+          "cell": "A27",
+          "value": "023"
+        },
+        {
+          "cell": "B27",
+          "value": "1BR"
+        },
+        {
+          "cell": "C27",
+          "value": "B"
+        },
+        {
+          "cell": "D27",
+          "value": 940
+        },
+        {
+          "cell": "E27",
+          "value": "active"
+        },
+        {
+          "cell": "F27",
+          "value": 1725
+        },
+        {
+          "cell": "G27",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H27",
+          "formula": "=IF(E27=\"active\",1,0)"
+        },
+        {
+          "cell": "I27",
+          "formula": "=H27*D27"
+        },
+        {
+          "cell": "J27",
+          "formula": "=H27*F27"
+        },
+        {
+          "cell": "A28",
+          "value": "024"
+        },
+        {
+          "cell": "B28",
+          "value": "2BR"
+        },
+        {
+          "cell": "C28",
+          "value": "C"
+        },
+        {
+          "cell": "D28",
+          "value": 1150
+        },
+        {
+          "cell": "E28",
+          "value": "active"
+        },
+        {
+          "cell": "F28",
+          "value": 2000
+        },
+        {
+          "cell": "G28",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H28",
+          "formula": "=IF(E28=\"active\",1,0)"
+        },
+        {
+          "cell": "I28",
+          "formula": "=H28*D28"
+        },
+        {
+          "cell": "J28",
+          "formula": "=H28*F28"
+        },
+        {
+          "cell": "A29",
+          "value": "025"
+        },
+        {
+          "cell": "B29",
+          "value": "Studio"
+        },
+        {
+          "cell": "C29",
+          "value": "A"
+        },
+        {
+          "cell": "D29",
+          "value": 820
+        },
+        {
+          "cell": "E29",
+          "value": "active"
+        },
+        {
+          "cell": "F29",
+          "value": 1575
+        },
+        {
+          "cell": "G29",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H29",
+          "formula": "=IF(E29=\"active\",1,0)"
+        },
+        {
+          "cell": "I29",
+          "formula": "=H29*D29"
+        },
+        {
+          "cell": "J29",
+          "formula": "=H29*F29"
+        },
+        {
+          "cell": "A30",
+          "value": "026"
+        },
+        {
+          "cell": "B30",
+          "value": "1BR"
+        },
+        {
+          "cell": "C30",
+          "value": "B"
+        },
+        {
+          "cell": "D30",
+          "value": 940
+        },
+        {
+          "cell": "E30",
+          "value": "active"
+        },
+        {
+          "cell": "F30",
+          "value": 1725
+        },
+        {
+          "cell": "G30",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H30",
+          "formula": "=IF(E30=\"active\",1,0)"
+        },
+        {
+          "cell": "I30",
+          "formula": "=H30*D30"
+        },
+        {
+          "cell": "J30",
+          "formula": "=H30*F30"
+        },
+        {
+          "cell": "A31",
+          "value": "027"
+        },
+        {
+          "cell": "B31",
+          "value": "2BR"
+        },
+        {
+          "cell": "C31",
+          "value": "C"
+        },
+        {
+          "cell": "D31",
+          "value": 1150
+        },
+        {
+          "cell": "E31",
+          "value": "active"
+        },
+        {
+          "cell": "F31",
+          "value": 2000
+        },
+        {
+          "cell": "G31",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H31",
+          "formula": "=IF(E31=\"active\",1,0)"
+        },
+        {
+          "cell": "I31",
+          "formula": "=H31*D31"
+        },
+        {
+          "cell": "J31",
+          "formula": "=H31*F31"
+        },
+        {
+          "cell": "A32",
+          "value": "028"
+        },
+        {
+          "cell": "B32",
+          "value": "Studio"
+        },
+        {
+          "cell": "C32",
+          "value": "A"
+        },
+        {
+          "cell": "D32",
+          "value": 820
+        },
+        {
+          "cell": "E32",
+          "value": "active"
+        },
+        {
+          "cell": "F32",
+          "value": 1575
+        },
+        {
+          "cell": "G32",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H32",
+          "formula": "=IF(E32=\"active\",1,0)"
+        },
+        {
+          "cell": "I32",
+          "formula": "=H32*D32"
+        },
+        {
+          "cell": "J32",
+          "formula": "=H32*F32"
+        },
+        {
+          "cell": "A33",
+          "value": "029"
+        },
+        {
+          "cell": "B33",
+          "value": "1BR"
+        },
+        {
+          "cell": "C33",
+          "value": "B"
+        },
+        {
+          "cell": "D33",
+          "value": 940
+        },
+        {
+          "cell": "E33",
+          "value": "active"
+        },
+        {
+          "cell": "F33",
+          "value": 1725
+        },
+        {
+          "cell": "G33",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H33",
+          "formula": "=IF(E33=\"active\",1,0)"
+        },
+        {
+          "cell": "I33",
+          "formula": "=H33*D33"
+        },
+        {
+          "cell": "J33",
+          "formula": "=H33*F33"
+        },
+        {
+          "cell": "A34",
+          "value": "030"
+        },
+        {
+          "cell": "B34",
+          "value": "2BR"
+        },
+        {
+          "cell": "C34",
+          "value": "C"
+        },
+        {
+          "cell": "D34",
+          "value": 1150
+        },
+        {
+          "cell": "E34",
+          "value": "active"
+        },
+        {
+          "cell": "F34",
+          "value": 2000
+        },
+        {
+          "cell": "G34",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H34",
+          "formula": "=IF(E34=\"active\",1,0)"
+        },
+        {
+          "cell": "I34",
+          "formula": "=H34*D34"
+        },
+        {
+          "cell": "J34",
+          "formula": "=H34*F34"
+        },
+        {
+          "cell": "A35",
+          "value": "031"
+        },
+        {
+          "cell": "B35",
+          "value": "Studio"
+        },
+        {
+          "cell": "C35",
+          "value": "A"
+        },
+        {
+          "cell": "D35",
+          "value": 820
+        },
+        {
+          "cell": "E35",
+          "value": "active"
+        },
+        {
+          "cell": "F35",
+          "value": 1575
+        },
+        {
+          "cell": "G35",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H35",
+          "formula": "=IF(E35=\"active\",1,0)"
+        },
+        {
+          "cell": "I35",
+          "formula": "=H35*D35"
+        },
+        {
+          "cell": "J35",
+          "formula": "=H35*F35"
+        },
+        {
+          "cell": "A36",
+          "value": "032"
+        },
+        {
+          "cell": "B36",
+          "value": "1BR"
+        },
+        {
+          "cell": "C36",
+          "value": "B"
+        },
+        {
+          "cell": "D36",
+          "value": 940
+        },
+        {
+          "cell": "E36",
+          "value": "active"
+        },
+        {
+          "cell": "F36",
+          "value": 1725
+        },
+        {
+          "cell": "G36",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H36",
+          "formula": "=IF(E36=\"active\",1,0)"
+        },
+        {
+          "cell": "I36",
+          "formula": "=H36*D36"
+        },
+        {
+          "cell": "J36",
+          "formula": "=H36*F36"
+        },
+        {
+          "cell": "A37",
+          "value": "033"
+        },
+        {
+          "cell": "B37",
+          "value": "2BR"
+        },
+        {
+          "cell": "C37",
+          "value": "C"
+        },
+        {
+          "cell": "D37",
+          "value": 1150
+        },
+        {
+          "cell": "E37",
+          "value": "active"
+        },
+        {
+          "cell": "F37",
+          "value": 2000
+        },
+        {
+          "cell": "G37",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H37",
+          "formula": "=IF(E37=\"active\",1,0)"
+        },
+        {
+          "cell": "I37",
+          "formula": "=H37*D37"
+        },
+        {
+          "cell": "J37",
+          "formula": "=H37*F37"
+        },
+        {
+          "cell": "A38",
+          "value": "034"
+        },
+        {
+          "cell": "B38",
+          "value": "Studio"
+        },
+        {
+          "cell": "C38",
+          "value": "A"
+        },
+        {
+          "cell": "D38",
+          "value": 820
+        },
+        {
+          "cell": "E38",
+          "value": "active"
+        },
+        {
+          "cell": "F38",
+          "value": 1575
+        },
+        {
+          "cell": "G38",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H38",
+          "formula": "=IF(E38=\"active\",1,0)"
+        },
+        {
+          "cell": "I38",
+          "formula": "=H38*D38"
+        },
+        {
+          "cell": "J38",
+          "formula": "=H38*F38"
+        },
+        {
+          "cell": "A39",
+          "value": "035"
+        },
+        {
+          "cell": "B39",
+          "value": "1BR"
+        },
+        {
+          "cell": "C39",
+          "value": "B"
+        },
+        {
+          "cell": "D39",
+          "value": 940
+        },
+        {
+          "cell": "E39",
+          "value": "active"
+        },
+        {
+          "cell": "F39",
+          "value": 1725
+        },
+        {
+          "cell": "G39",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H39",
+          "formula": "=IF(E39=\"active\",1,0)"
+        },
+        {
+          "cell": "I39",
+          "formula": "=H39*D39"
+        },
+        {
+          "cell": "J39",
+          "formula": "=H39*F39"
+        },
+        {
+          "cell": "A40",
+          "value": "036"
+        },
+        {
+          "cell": "B40",
+          "value": "2BR"
+        },
+        {
+          "cell": "C40",
+          "value": "C"
+        },
+        {
+          "cell": "D40",
+          "value": 1150
+        },
+        {
+          "cell": "E40",
+          "value": "active"
+        },
+        {
+          "cell": "F40",
+          "value": 2000
+        },
+        {
+          "cell": "G40",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H40",
+          "formula": "=IF(E40=\"active\",1,0)"
+        },
+        {
+          "cell": "I40",
+          "formula": "=H40*D40"
+        },
+        {
+          "cell": "J40",
+          "formula": "=H40*F40"
+        },
+        {
+          "cell": "A41",
+          "value": "037"
+        },
+        {
+          "cell": "B41",
+          "value": "Studio"
+        },
+        {
+          "cell": "C41",
+          "value": "A"
+        },
+        {
+          "cell": "D41",
+          "value": 820
+        },
+        {
+          "cell": "E41",
+          "value": "active"
+        },
+        {
+          "cell": "F41",
+          "value": 1575
+        },
+        {
+          "cell": "G41",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H41",
+          "formula": "=IF(E41=\"active\",1,0)"
+        },
+        {
+          "cell": "I41",
+          "formula": "=H41*D41"
+        },
+        {
+          "cell": "J41",
+          "formula": "=H41*F41"
+        },
+        {
+          "cell": "A42",
+          "value": "038"
+        },
+        {
+          "cell": "B42",
+          "value": "1BR"
+        },
+        {
+          "cell": "C42",
+          "value": "B"
+        },
+        {
+          "cell": "D42",
+          "value": 940
+        },
+        {
+          "cell": "E42",
+          "value": "active"
+        },
+        {
+          "cell": "F42",
+          "value": 1725
+        },
+        {
+          "cell": "G42",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H42",
+          "formula": "=IF(E42=\"active\",1,0)"
+        },
+        {
+          "cell": "I42",
+          "formula": "=H42*D42"
+        },
+        {
+          "cell": "J42",
+          "formula": "=H42*F42"
+        },
+        {
+          "cell": "A43",
+          "value": "039"
+        },
+        {
+          "cell": "B43",
+          "value": "2BR"
+        },
+        {
+          "cell": "C43",
+          "value": "C"
+        },
+        {
+          "cell": "D43",
+          "value": 1150
+        },
+        {
+          "cell": "E43",
+          "value": "active"
+        },
+        {
+          "cell": "F43",
+          "value": 2000
+        },
+        {
+          "cell": "G43",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H43",
+          "formula": "=IF(E43=\"active\",1,0)"
+        },
+        {
+          "cell": "I43",
+          "formula": "=H43*D43"
+        },
+        {
+          "cell": "J43",
+          "formula": "=H43*F43"
+        },
+        {
+          "cell": "A44",
+          "value": "040"
+        },
+        {
+          "cell": "B44",
+          "value": "Studio"
+        },
+        {
+          "cell": "C44",
+          "value": "A"
+        },
+        {
+          "cell": "D44",
+          "value": 820
+        },
+        {
+          "cell": "E44",
+          "value": "active"
+        },
+        {
+          "cell": "F44",
+          "value": 1575
+        },
+        {
+          "cell": "G44",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H44",
+          "formula": "=IF(E44=\"active\",1,0)"
+        },
+        {
+          "cell": "I44",
+          "formula": "=H44*D44"
+        },
+        {
+          "cell": "J44",
+          "formula": "=H44*F44"
+        },
+        {
+          "cell": "A45",
+          "value": "041"
+        },
+        {
+          "cell": "B45",
+          "value": "1BR"
+        },
+        {
+          "cell": "C45",
+          "value": "B"
+        },
+        {
+          "cell": "D45",
+          "value": 940
+        },
+        {
+          "cell": "E45",
+          "value": "active"
+        },
+        {
+          "cell": "F45",
+          "value": 1725
+        },
+        {
+          "cell": "G45",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H45",
+          "formula": "=IF(E45=\"active\",1,0)"
+        },
+        {
+          "cell": "I45",
+          "formula": "=H45*D45"
+        },
+        {
+          "cell": "J45",
+          "formula": "=H45*F45"
+        },
+        {
+          "cell": "A46",
+          "value": "042"
+        },
+        {
+          "cell": "B46",
+          "value": "2BR"
+        },
+        {
+          "cell": "C46",
+          "value": "C"
+        },
+        {
+          "cell": "D46",
+          "value": 1150
+        },
+        {
+          "cell": "E46",
+          "value": "active"
+        },
+        {
+          "cell": "F46",
+          "value": 2000
+        },
+        {
+          "cell": "G46",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H46",
+          "formula": "=IF(E46=\"active\",1,0)"
+        },
+        {
+          "cell": "I46",
+          "formula": "=H46*D46"
+        },
+        {
+          "cell": "J46",
+          "formula": "=H46*F46"
+        },
+        {
+          "cell": "A47",
+          "value": "043"
+        },
+        {
+          "cell": "B47",
+          "value": "Studio"
+        },
+        {
+          "cell": "C47",
+          "value": "A"
+        },
+        {
+          "cell": "D47",
+          "value": 820
+        },
+        {
+          "cell": "E47",
+          "value": "active"
+        },
+        {
+          "cell": "F47",
+          "value": 1575
+        },
+        {
+          "cell": "G47",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H47",
+          "formula": "=IF(E47=\"active\",1,0)"
+        },
+        {
+          "cell": "I47",
+          "formula": "=H47*D47"
+        },
+        {
+          "cell": "J47",
+          "formula": "=H47*F47"
+        },
+        {
+          "cell": "A48",
+          "value": "044"
+        },
+        {
+          "cell": "B48",
+          "value": "1BR"
+        },
+        {
+          "cell": "C48",
+          "value": "B"
+        },
+        {
+          "cell": "D48",
+          "value": 940
+        },
+        {
+          "cell": "E48",
+          "value": "active"
+        },
+        {
+          "cell": "F48",
+          "value": 1725
+        },
+        {
+          "cell": "G48",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H48",
+          "formula": "=IF(E48=\"active\",1,0)"
+        },
+        {
+          "cell": "I48",
+          "formula": "=H48*D48"
+        },
+        {
+          "cell": "J48",
+          "formula": "=H48*F48"
+        },
+        {
+          "cell": "A49",
+          "value": "045"
+        },
+        {
+          "cell": "B49",
+          "value": "2BR"
+        },
+        {
+          "cell": "C49",
+          "value": "C"
+        },
+        {
+          "cell": "D49",
+          "value": 1150
+        },
+        {
+          "cell": "E49",
+          "value": "active"
+        },
+        {
+          "cell": "F49",
+          "value": 2000
+        },
+        {
+          "cell": "G49",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H49",
+          "formula": "=IF(E49=\"active\",1,0)"
+        },
+        {
+          "cell": "I49",
+          "formula": "=H49*D49"
+        },
+        {
+          "cell": "J49",
+          "formula": "=H49*F49"
+        },
+        {
+          "cell": "A50",
+          "value": "046"
+        },
+        {
+          "cell": "B50",
+          "value": "Studio"
+        },
+        {
+          "cell": "C50",
+          "value": "A"
+        },
+        {
+          "cell": "D50",
+          "value": 820
+        },
+        {
+          "cell": "E50",
+          "value": "active"
+        },
+        {
+          "cell": "F50",
+          "value": 1575
+        },
+        {
+          "cell": "G50",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H50",
+          "formula": "=IF(E50=\"active\",1,0)"
+        },
+        {
+          "cell": "I50",
+          "formula": "=H50*D50"
+        },
+        {
+          "cell": "J50",
+          "formula": "=H50*F50"
+        },
+        {
+          "cell": "A51",
+          "value": "047"
+        },
+        {
+          "cell": "B51",
+          "value": "1BR"
+        },
+        {
+          "cell": "C51",
+          "value": "B"
+        },
+        {
+          "cell": "D51",
+          "value": 940
+        },
+        {
+          "cell": "E51",
+          "value": "active"
+        },
+        {
+          "cell": "F51",
+          "value": 1725
+        },
+        {
+          "cell": "G51",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H51",
+          "formula": "=IF(E51=\"active\",1,0)"
+        },
+        {
+          "cell": "I51",
+          "formula": "=H51*D51"
+        },
+        {
+          "cell": "J51",
+          "formula": "=H51*F51"
+        },
+        {
+          "cell": "A52",
+          "value": "048"
+        },
+        {
+          "cell": "B52",
+          "value": "2BR"
+        },
+        {
+          "cell": "C52",
+          "value": "C"
+        },
+        {
+          "cell": "D52",
+          "value": 1150
+        },
+        {
+          "cell": "E52",
+          "value": "active"
+        },
+        {
+          "cell": "F52",
+          "value": 2000
+        },
+        {
+          "cell": "G52",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H52",
+          "formula": "=IF(E52=\"active\",1,0)"
+        },
+        {
+          "cell": "I52",
+          "formula": "=H52*D52"
+        },
+        {
+          "cell": "J52",
+          "formula": "=H52*F52"
+        },
+        {
+          "cell": "A53",
+          "value": "049"
+        },
+        {
+          "cell": "B53",
+          "value": "Studio"
+        },
+        {
+          "cell": "C53",
+          "value": "A"
+        },
+        {
+          "cell": "D53",
+          "value": 820
+        },
+        {
+          "cell": "E53",
+          "value": "pending"
+        },
+        {
+          "cell": "F53",
+          "value": 1575
+        },
+        {
+          "cell": "G53",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H53",
+          "formula": "=IF(E53=\"active\",1,0)"
+        },
+        {
+          "cell": "I53",
+          "formula": "=H53*D53"
+        },
+        {
+          "cell": "J53",
+          "formula": "=H53*F53"
+        },
+        {
+          "cell": "A54",
+          "value": "050"
+        },
+        {
+          "cell": "B54",
+          "value": "1BR"
+        },
+        {
+          "cell": "C54",
+          "value": "B"
+        },
+        {
+          "cell": "D54",
+          "value": 940
+        },
+        {
+          "cell": "E54",
+          "value": "pending"
+        },
+        {
+          "cell": "F54",
+          "value": 1725
+        },
+        {
+          "cell": "G54",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H54",
+          "formula": "=IF(E54=\"active\",1,0)"
+        },
+        {
+          "cell": "I54",
+          "formula": "=H54*D54"
+        },
+        {
+          "cell": "J54",
+          "formula": "=H54*F54"
+        },
+        {
+          "cell": "A55",
+          "value": "051"
+        },
+        {
+          "cell": "B55",
+          "value": "2BR"
+        },
+        {
+          "cell": "C55",
+          "value": "C"
+        },
+        {
+          "cell": "D55",
+          "value": 1150
+        },
+        {
+          "cell": "E55",
+          "value": "pending"
+        },
+        {
+          "cell": "F55",
+          "value": 2000
+        },
+        {
+          "cell": "G55",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H55",
+          "formula": "=IF(E55=\"active\",1,0)"
+        },
+        {
+          "cell": "I55",
+          "formula": "=H55*D55"
+        },
+        {
+          "cell": "J55",
+          "formula": "=H55*F55"
+        },
+        {
+          "cell": "A56",
+          "value": "052"
+        },
+        {
+          "cell": "B56",
+          "value": "Studio"
+        },
+        {
+          "cell": "C56",
+          "value": "A"
+        },
+        {
+          "cell": "D56",
+          "value": 820
+        },
+        {
+          "cell": "E56",
+          "value": "pending"
+        },
+        {
+          "cell": "F56",
+          "value": 1575
+        },
+        {
+          "cell": "G56",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H56",
+          "formula": "=IF(E56=\"active\",1,0)"
+        },
+        {
+          "cell": "I56",
+          "formula": "=H56*D56"
+        },
+        {
+          "cell": "J56",
+          "formula": "=H56*F56"
+        },
+        {
+          "cell": "A57",
+          "value": "053"
+        },
+        {
+          "cell": "B57",
+          "value": "1BR"
+        },
+        {
+          "cell": "C57",
+          "value": "B"
+        },
+        {
+          "cell": "D57",
+          "value": 940
+        },
+        {
+          "cell": "E57",
+          "value": "pending"
+        },
+        {
+          "cell": "F57",
+          "value": 1725
+        },
+        {
+          "cell": "G57",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H57",
+          "formula": "=IF(E57=\"active\",1,0)"
+        },
+        {
+          "cell": "I57",
+          "formula": "=H57*D57"
+        },
+        {
+          "cell": "J57",
+          "formula": "=H57*F57"
+        },
+        {
+          "cell": "A58",
+          "value": "054"
+        },
+        {
+          "cell": "B58",
+          "value": "2BR"
+        },
+        {
+          "cell": "C58",
+          "value": "C"
+        },
+        {
+          "cell": "D58",
+          "value": 1150
+        },
+        {
+          "cell": "E58",
+          "value": "vacant"
+        },
+        {
+          "cell": "F58",
+          "value": 2000
+        },
+        {
+          "cell": "G58",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H58",
+          "formula": "=IF(E58=\"active\",1,0)"
+        },
+        {
+          "cell": "I58",
+          "formula": "=H58*D58"
+        },
+        {
+          "cell": "J58",
+          "formula": "=H58*F58"
+        },
+        {
+          "cell": "A59",
+          "value": "055"
+        },
+        {
+          "cell": "B59",
+          "value": "Studio"
+        },
+        {
+          "cell": "C59",
+          "value": "A"
+        },
+        {
+          "cell": "D59",
+          "value": 820
+        },
+        {
+          "cell": "E59",
+          "value": "vacant"
+        },
+        {
+          "cell": "F59",
+          "value": 1575
+        },
+        {
+          "cell": "G59",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H59",
+          "formula": "=IF(E59=\"active\",1,0)"
+        },
+        {
+          "cell": "I59",
+          "formula": "=H59*D59"
+        },
+        {
+          "cell": "J59",
+          "formula": "=H59*F59"
+        },
+        {
+          "cell": "A60",
+          "value": "056"
+        },
+        {
+          "cell": "B60",
+          "value": "1BR"
+        },
+        {
+          "cell": "C60",
+          "value": "B"
+        },
+        {
+          "cell": "D60",
+          "value": 940
+        },
+        {
+          "cell": "E60",
+          "value": "vacant"
+        },
+        {
+          "cell": "F60",
+          "value": 1725
+        },
+        {
+          "cell": "G60",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H60",
+          "formula": "=IF(E60=\"active\",1,0)"
+        },
+        {
+          "cell": "I60",
+          "formula": "=H60*D60"
+        },
+        {
+          "cell": "J60",
+          "formula": "=H60*F60"
+        },
+        {
+          "cell": "A61",
+          "value": "057"
+        },
+        {
+          "cell": "B61",
+          "value": "2BR"
+        },
+        {
+          "cell": "C61",
+          "value": "C"
+        },
+        {
+          "cell": "D61",
+          "value": 1150
+        },
+        {
+          "cell": "E61",
+          "value": "vacant"
+        },
+        {
+          "cell": "F61",
+          "value": 2000
+        },
+        {
+          "cell": "G61",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H61",
+          "formula": "=IF(E61=\"active\",1,0)"
+        },
+        {
+          "cell": "I61",
+          "formula": "=H61*D61"
+        },
+        {
+          "cell": "J61",
+          "formula": "=H61*F61"
+        },
+        {
+          "cell": "A62",
+          "value": "058"
+        },
+        {
+          "cell": "B62",
+          "value": "Studio"
+        },
+        {
+          "cell": "C62",
+          "value": "A"
+        },
+        {
+          "cell": "D62",
+          "value": 820
+        },
+        {
+          "cell": "E62",
+          "value": "vacant"
+        },
+        {
+          "cell": "F62",
+          "value": 1575
+        },
+        {
+          "cell": "G62",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H62",
+          "formula": "=IF(E62=\"active\",1,0)"
+        },
+        {
+          "cell": "I62",
+          "formula": "=H62*D62"
+        },
+        {
+          "cell": "J62",
+          "formula": "=H62*F62"
+        },
+        {
+          "cell": "A63",
+          "value": "059"
+        },
+        {
+          "cell": "B63",
+          "value": "1BR"
+        },
+        {
+          "cell": "C63",
+          "value": "B"
+        },
+        {
+          "cell": "D63",
+          "value": 940
+        },
+        {
+          "cell": "E63",
+          "value": "vacant"
+        },
+        {
+          "cell": "F63",
+          "value": 1725
+        },
+        {
+          "cell": "G63",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H63",
+          "formula": "=IF(E63=\"active\",1,0)"
+        },
+        {
+          "cell": "I63",
+          "formula": "=H63*D63"
+        },
+        {
+          "cell": "J63",
+          "formula": "=H63*F63"
+        },
+        {
+          "cell": "A64",
+          "value": "060"
+        },
+        {
+          "cell": "B64",
+          "value": "2BR"
+        },
+        {
+          "cell": "C64",
+          "value": "C"
+        },
+        {
+          "cell": "D64",
+          "value": 1150
+        },
+        {
+          "cell": "E64",
+          "value": "vacant"
+        },
+        {
+          "cell": "F64",
+          "value": 2000
+        },
+        {
+          "cell": "G64",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H64",
+          "formula": "=IF(E64=\"active\",1,0)"
+        },
+        {
+          "cell": "I64",
+          "formula": "=H64*D64"
+        },
+        {
+          "cell": "J64",
+          "formula": "=H64*F64"
+        },
+        {
+          "cell": "A65",
+          "value": "061"
+        },
+        {
+          "cell": "B65",
+          "value": "Studio"
+        },
+        {
+          "cell": "C65",
+          "value": "A"
+        },
+        {
+          "cell": "D65",
+          "value": 820
+        },
+        {
+          "cell": "E65",
+          "value": "vacant"
+        },
+        {
+          "cell": "F65",
+          "value": 1575
+        },
+        {
+          "cell": "G65",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H65",
+          "formula": "=IF(E65=\"active\",1,0)"
+        },
+        {
+          "cell": "I65",
+          "formula": "=H65*D65"
+        },
+        {
+          "cell": "J65",
+          "formula": "=H65*F65"
+        },
+        {
+          "cell": "A66",
+          "value": "062"
+        },
+        {
+          "cell": "B66",
+          "value": "1BR"
+        },
+        {
+          "cell": "C66",
+          "value": "B"
+        },
+        {
+          "cell": "D66",
+          "value": 940
+        },
+        {
+          "cell": "E66",
+          "value": "vacant"
+        },
+        {
+          "cell": "F66",
+          "value": 1725
+        },
+        {
+          "cell": "G66",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H66",
+          "formula": "=IF(E66=\"active\",1,0)"
+        },
+        {
+          "cell": "I66",
+          "formula": "=H66*D66"
+        },
+        {
+          "cell": "J66",
+          "formula": "=H66*F66"
+        },
+        {
+          "cell": "A67",
+          "value": "063"
+        },
+        {
+          "cell": "B67",
+          "value": "2BR"
+        },
+        {
+          "cell": "C67",
+          "value": "C"
+        },
+        {
+          "cell": "D67",
+          "value": 1150
+        },
+        {
+          "cell": "E67",
+          "value": "vacant"
+        },
+        {
+          "cell": "F67",
+          "value": 2000
+        },
+        {
+          "cell": "G67",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H67",
+          "formula": "=IF(E67=\"active\",1,0)"
+        },
+        {
+          "cell": "I67",
+          "formula": "=H67*D67"
+        },
+        {
+          "cell": "J67",
+          "formula": "=H67*F67"
+        },
+        {
+          "cell": "A68",
+          "value": "064"
+        },
+        {
+          "cell": "B68",
+          "value": "Studio"
+        },
+        {
+          "cell": "C68",
+          "value": "A"
+        },
+        {
+          "cell": "D68",
+          "value": 820
+        },
+        {
+          "cell": "E68",
+          "value": "vacant"
+        },
+        {
+          "cell": "F68",
+          "value": 1575
+        },
+        {
+          "cell": "G68",
+          "value": "2029-08-31"
+        },
+        {
+          "cell": "H68",
+          "formula": "=IF(E68=\"active\",1,0)"
+        },
+        {
+          "cell": "I68",
+          "formula": "=H68*D68"
+        },
+        {
+          "cell": "J68",
+          "formula": "=H68*F68"
+        },
+        {
+          "cell": "A70",
+          "value": "Roll summary",
+          "role": "header"
+        },
+        {
+          "cell": "A71",
+          "value": "Total units / suites"
+        },
+        {
+          "cell": "B71",
+          "formula": "=COUNTA(A5:A68)",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A72",
+          "value": "Occupied units (active / in possession)"
+        },
+        {
+          "cell": "B72",
+          "formula": "=COUNTIF(E5:E68,\"active\")",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A73",
+          "value": "Pending units (not in possession)"
+        },
+        {
+          "cell": "B73",
+          "formula": "=COUNTIF(E5:E68,\"pending\")",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "A74",
+          "value": "Vacant units"
+        },
+        {
+          "cell": "B74",
+          "formula": "=COUNTIF(E5:E68,\"vacant\")",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "A75",
+          "value": "Total area SF"
+        },
+        {
+          "cell": "B75",
+          "formula": "=SUM(D5:D68)",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A76",
+          "value": "Occupied area SF"
+        },
+        {
+          "cell": "B76",
+          "formula": "=SUM(I5:I68)",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A77",
+          "value": "Unit occupancy (physical)"
+        },
+        {
+          "cell": "B77",
+          "formula": "=B72/B71",
+          "number_format": "0.0000"
+        },
+        {
+          "cell": "A78",
+          "value": "Area occupancy (physical)"
+        },
+        {
+          "cell": "B78",
+          "formula": "=B76/B75",
+          "number_format": "0.0000"
+        },
+        {
+          "cell": "A79",
+          "value": "Scheduled monthly rent - all suites"
+        },
+        {
+          "cell": "B79",
+          "formula": "=SUM(F5:F68)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A80",
+          "value": "Gross potential rent (annual) - check vs Inputs!B4"
+        },
+        {
+          "cell": "B80",
+          "formula": "=B79*12",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A81",
+          "value": "In-place monthly rent (occupied only)"
+        },
+        {
+          "cell": "B81",
+          "formula": "=SUM(J5:J68)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A82",
+          "value": "Annual in-place rent (occupied only)"
+        },
+        {
+          "cell": "B82",
+          "formula": "=B81*12",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A83",
+          "value": "Manager 'leased' count (occupied + pending)"
+        },
+        {
+          "cell": "B83",
+          "formula": "=B72+B73",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "A84",
+          "value": "Suite 001 monthly rent (certified / executed lease)"
+        },
+        {
+          "cell": "B84",
+          "formula": "=F5",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A85",
+          "value": "All lease expirations on roll: 2029-08-31 (none within 12 months of 2026-08-31)",
+          "role": "note"
+        },
+        {
+          "cell": "A87",
+          "value": "Group",
+          "role": "header"
+        },
+        {
+          "cell": "B87",
+          "value": "Unit type",
+          "role": "header"
+        },
+        {
+          "cell": "C87",
+          "value": "Units",
+          "role": "header"
+        },
+        {
+          "cell": "D87",
+          "value": "Occupied",
+          "role": "header"
+        },
+        {
+          "cell": "E87",
+          "value": "Area SF",
+          "role": "header"
+        },
+        {
+          "cell": "F87",
+          "value": "Monthly rent/unit",
+          "role": "header"
+        },
+        {
+          "cell": "A88",
+          "value": "A"
+        },
+        {
+          "cell": "B88",
+          "value": "Studio"
+        },
+        {
+          "cell": "C88",
+          "formula": "=COUNTIF($C$5:$C$68,\"A\")",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "D88",
+          "formula": "=SUMIF($C$5:$C$68,\"A\",$H$5:$H$68)",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "E88",
+          "formula": "=SUMIF($C$5:$C$68,\"A\",$D$5:$D$68)",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "F88",
+          "value": 1575,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A89",
+          "value": "B"
+        },
+        {
+          "cell": "B89",
+          "value": "1BR"
+        },
+        {
+          "cell": "C89",
+          "formula": "=COUNTIF($C$5:$C$68,\"B\")",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "D89",
+          "formula": "=SUMIF($C$5:$C$68,\"B\",$H$5:$H$68)",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "E89",
+          "formula": "=SUMIF($C$5:$C$68,\"B\",$D$5:$D$68)",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "F89",
+          "value": 1725,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A90",
+          "value": "C"
+        },
+        {
+          "cell": "B90",
+          "value": "2BR"
+        },
+        {
+          "cell": "C90",
+          "formula": "=COUNTIF($C$5:$C$68,\"C\")",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "D90",
+          "formula": "=SUMIF($C$5:$C$68,\"C\",$H$5:$H$68)",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "E90",
+          "formula": "=SUMIF($C$5:$C$68,\"C\",$D$5:$D$68)",
+          "number_format": "#,##0"
+        },
+        {
+          "cell": "F90",
+          "value": 2000,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A91",
+          "value": "Total",
+          "role": "total"
+        },
+        {
+          "cell": "C91",
+          "formula": "=SUM(C88:C90)",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "D91",
+          "formula": "=SUM(D88:D90)",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "E91",
+          "formula": "=SUM(E88:E90)",
+          "number_format": "#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A93",
+          "value": "Group mapping A/B/C = Studio/1BR/2BR per manager-cover.pdf p.1",
+          "role": "note"
+        }
+      ]
+    },
+    {
+      "name": "UW",
+      "freeze_rows": 2,
+      "column_widths": {
+        "A": 44,
+        "B": 16,
+        "C": 16,
+        "D": 40
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Underwritten cash flow (stabilized) vs T-12 actual",
+          "role": "title"
+        },
+        {
+          "cell": "A3",
+          "value": "Gross potential rent (annual)"
+        },
+        {
+          "cell": "B3",
+          "formula": "=Inputs!B4",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D3",
+          "value": "Certified roll x 12; Suite 001 at executed $1,575",
+          "role": "note"
+        },
+        {
+          "cell": "A4",
+          "value": "Economic loss (vacancy/credit)"
+        },
+        {
+          "cell": "B4",
+          "formula": "=-Inputs!B5*B3",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D4",
+          "value": "5.00% of GPR",
+          "role": "note"
+        },
+        {
+          "cell": "A5",
+          "value": "Other income ($350/unit)"
+        },
+        {
+          "cell": "B5",
+          "formula": "=Inputs!B6*Inputs!B7",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D5",
+          "value": "Reimbursements already included; not added twice",
+          "role": "note"
+        },
+        {
+          "cell": "A6",
+          "value": "Underwritten EGI",
+          "role": "total"
+        },
+        {
+          "cell": "B6",
+          "formula": "=B3+B4+B5",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A8",
+          "value": "Real estate taxes"
+        },
+        {
+          "cell": "B8",
+          "formula": "=-Inputs!B8",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A9",
+          "value": "Insurance"
+        },
+        {
+          "cell": "B9",
+          "formula": "=-Inputs!B9",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A10",
+          "value": "Other recurring operating expenses"
+        },
+        {
+          "cell": "B10",
+          "formula": "=-Inputs!B10",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A11",
+          "value": "Management fee (3.00% of EGI)"
+        },
+        {
+          "cell": "B11",
+          "formula": "=-Inputs!B11*B6",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A12",
+          "value": "Total underwritten operating expenses",
+          "role": "total"
+        },
+        {
+          "cell": "B12",
+          "formula": "=-SUM(B8:B11)",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A13",
+          "value": "Underwritten NOI (before reserves)",
+          "role": "total"
+        },
+        {
+          "cell": "B13",
+          "formula": "=B6-B12",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A14",
+          "value": "Replacement reserves ($300/unit)"
+        },
+        {
+          "cell": "B14",
+          "formula": "=Inputs!B12*Inputs!B7",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A15",
+          "value": "Underwritten NCF (after reserves)",
+          "role": "total"
+        },
+        {
+          "cell": "B15",
+          "formula": "=B13-B14",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A17",
+          "value": "Operating expense ratio (% of EGI)"
+        },
+        {
+          "cell": "B17",
+          "formula": "=B12/B6",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "A18",
+          "value": "Capitalization value (NOI before reserves / cap rate)",
+          "role": "total"
+        },
+        {
+          "cell": "B18",
+          "formula": "=B13/Inputs!B13",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A19",
+          "value": "Value per unit"
+        },
+        {
+          "cell": "B19",
+          "formula": "=B18/Inputs!B7",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A21",
+          "value": "Historical T-12 (2025-09-01 to 2026-08-31) vs underwritten",
+          "role": "header"
+        },
+        {
+          "cell": "B21",
+          "value": "T-12 actual",
+          "role": "header"
+        },
+        {
+          "cell": "C21",
+          "value": "Underwritten",
+          "role": "header"
+        },
+        {
+          "cell": "A22",
+          "value": "Revenue (collections / EGI)"
+        },
+        {
+          "cell": "B22",
+          "value": 1219050,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C22",
+          "formula": "=B6",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A23",
+          "value": "Real estate taxes"
+        },
+        {
+          "cell": "B23",
+          "value": 142222,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C23",
+          "formula": "=Inputs!B8",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A24",
+          "value": "Insurance"
+        },
+        {
+          "cell": "B24",
+          "value": 47408,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C24",
+          "formula": "=Inputs!B9",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A25",
+          "value": "Other recurring operating expenses"
+        },
+        {
+          "cell": "B25",
+          "value": 189630,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C25",
+          "formula": "=Inputs!B10",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A26",
+          "value": "Roof replacement booked in repairs (capital)"
+        },
+        {
+          "cell": "B26",
+          "value": 0,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A27",
+          "value": "Management fee"
+        },
+        {
+          "cell": "B27",
+          "value": 0,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C27",
+          "formula": "=-B11",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A28",
+          "value": "NOI before reserves",
+          "role": "total"
+        },
+        {
+          "cell": "B28",
+          "formula": "=B22-B23-B24-B25-B26-B27",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "C28",
+          "formula": "=B13",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A29",
+          "value": "Reported T-12 NOI per operating statement"
+        },
+        {
+          "cell": "B29",
+          "value": 839790,
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A30",
+          "value": "Historical collections are cash receipts, not an annualized roll; no management fee is separately reported in the T-12 ledger and the roof replacement is booked at $0 in repairs (capital item, per operating-statement.pdf p.1).",
+          "role": "note",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "name": "Debt",
+      "freeze_rows": 2,
+      "column_widths": {
+        "A": 48,
+        "B": 16,
+        "C": 44
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Debt sizing and sources / uses",
+          "role": "title"
+        },
+        {
+          "cell": "A3",
+          "value": "Sizing rate (greater of note rate and floor)"
+        },
+        {
+          "cell": "B3",
+          "formula": "=Inputs!B16",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "C3",
+          "value": "Note 6.9000% vs floor 6.0000%",
+          "role": "note"
+        },
+        {
+          "cell": "A4",
+          "value": "Monthly amortizing constant per $1 of loan"
+        },
+        {
+          "cell": "B4",
+          "formula": "=-PMT(B3/12,Inputs!B17,1)",
+          "number_format": "0.00000000"
+        },
+        {
+          "cell": "A5",
+          "value": "LTV limit (60.00% of capitalization value)",
+          "role": "total"
+        },
+        {
+          "cell": "B5",
+          "formula": "=Inputs!B18*UW!B18",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A6",
+          "value": "DSCR limit (1.25x on NCF, 30-yr amortizing)",
+          "role": "total"
+        },
+        {
+          "cell": "B6",
+          "formula": "=(UW!B15/Inputs!B19/12)/B4",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A7",
+          "value": "Debt yield limit (NCF / 9.00%)",
+          "role": "total"
+        },
+        {
+          "cell": "B7",
+          "formula": "=UW!B15/Inputs!B20",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A8",
+          "value": "Maximum loan (most restrictive)",
+          "role": "total"
+        },
+        {
+          "cell": "B8",
+          "formula": "=MIN(B5,B6,B7)",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A9",
+          "value": "Binding constraint"
+        },
+        {
+          "cell": "B9",
+          "formula": "=IF(B8=B5,\"LTV\",IF(B8=B6,\"DSCR\",\"Debt yield\"))"
+        },
+        {
+          "cell": "A10",
+          "value": "Implied LTV at maximum loan"
+        },
+        {
+          "cell": "B10",
+          "formula": "=B8/UW!B18",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "A11",
+          "value": "Annual debt service (amortizing, sizing rate)"
+        },
+        {
+          "cell": "B11",
+          "formula": "=B8*B4*12",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A12",
+          "value": "DSCR at maximum loan (NCF)"
+        },
+        {
+          "cell": "B12",
+          "formula": "=UW!B15/B11",
+          "number_format": "0.00"
+        },
+        {
+          "cell": "A13",
+          "value": "NCF debt yield at maximum loan"
+        },
+        {
+          "cell": "B13",
+          "formula": "=UW!B15/B8",
+          "number_format": "0.00%"
+        },
+        {
+          "cell": "A14",
+          "value": "Interest-only annual debt service (first 24 months)"
+        },
+        {
+          "cell": "B14",
+          "formula": "=B8*B3",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A15",
+          "value": "DSCR during interest-only period"
+        },
+        {
+          "cell": "B15",
+          "formula": "=UW!B15/B14",
+          "number_format": "0.00"
+        },
+        {
+          "cell": "A17",
+          "value": "Sources and uses",
+          "role": "header"
+        },
+        {
+          "cell": "A18",
+          "value": "Use - existing loan payoff"
+        },
+        {
+          "cell": "B18",
+          "formula": "=Inputs!B23",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A19",
+          "value": "Use - origination fee (1.00% of loan)"
+        },
+        {
+          "cell": "B19",
+          "formula": "=B8*Inputs!B21",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A20",
+          "value": "Use - closing costs"
+        },
+        {
+          "cell": "B20",
+          "formula": "=Inputs!B22",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A21",
+          "value": "Total uses",
+          "role": "total"
+        },
+        {
+          "cell": "B21",
+          "formula": "=SUM(B18:B20)",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A22",
+          "value": "Source - new loan proceeds"
+        },
+        {
+          "cell": "B22",
+          "formula": "=B8",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A23",
+          "value": "Net cash-out to sponsor (negative = equity required)",
+          "role": "total"
+        },
+        {
+          "cell": "B23",
+          "formula": "=B22-B21",
+          "number_format": "$#,##0",
+          "role": "total"
+        },
+        {
+          "cell": "A24",
+          "value": "Additional equity required"
+        },
+        {
+          "cell": "B24",
+          "formula": "=MAX(0,-B23)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A26",
+          "value": "Refinance test: proceeds exceed payoff plus costs, so no shortfall at the underwritten NCF and 6.0000% cap rate.",
+          "role": "note",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "freeze_rows": 4,
+      "column_widths": {
+        "A": 18,
+        "B": 16,
+        "C": 16,
+        "D": 16,
+        "E": 16
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Sensitivity - maximum loan ($) by cap rate (rows) and sizing rate (columns)",
+          "role": "title"
+        },
+        {
+          "cell": "A3",
+          "value": "Cap rate \\ sizing rate",
+          "role": "header"
+        },
+        {
+          "cell": "B4",
+          "value": 0.06,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "C4",
+          "value": 0.065,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "D4",
+          "value": 0.069,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "E4",
+          "value": 0.075,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "A5",
+          "value": 0.055,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B5",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A5,(UW!$B$15/Inputs!$B$19/12)/(-PMT(B$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C5",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A5,(UW!$B$15/Inputs!$B$19/12)/(-PMT(C$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D5",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A5,(UW!$B$15/Inputs!$B$19/12)/(-PMT(D$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "E5",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A5,(UW!$B$15/Inputs!$B$19/12)/(-PMT(E$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A6",
+          "value": 0.0575,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B6",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A6,(UW!$B$15/Inputs!$B$19/12)/(-PMT(B$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C6",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A6,(UW!$B$15/Inputs!$B$19/12)/(-PMT(C$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D6",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A6,(UW!$B$15/Inputs!$B$19/12)/(-PMT(D$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "E6",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A6,(UW!$B$15/Inputs!$B$19/12)/(-PMT(E$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A7",
+          "value": 0.06,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B7",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A7,(UW!$B$15/Inputs!$B$19/12)/(-PMT(B$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C7",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A7,(UW!$B$15/Inputs!$B$19/12)/(-PMT(C$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D7",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A7,(UW!$B$15/Inputs!$B$19/12)/(-PMT(D$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "E7",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A7,(UW!$B$15/Inputs!$B$19/12)/(-PMT(E$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A8",
+          "value": 0.0625,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B8",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A8,(UW!$B$15/Inputs!$B$19/12)/(-PMT(B$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C8",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A8,(UW!$B$15/Inputs!$B$19/12)/(-PMT(C$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D8",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A8,(UW!$B$15/Inputs!$B$19/12)/(-PMT(D$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "E8",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A8,(UW!$B$15/Inputs!$B$19/12)/(-PMT(E$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A9",
+          "value": 0.065,
+          "role": "input",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B9",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A9,(UW!$B$15/Inputs!$B$19/12)/(-PMT(B$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C9",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A9,(UW!$B$15/Inputs!$B$19/12)/(-PMT(C$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D9",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A9,(UW!$B$15/Inputs!$B$19/12)/(-PMT(D$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "E9",
+          "formula": "=MIN(Inputs!$B$18*UW!$B$13/$A9,(UW!$B$15/Inputs!$B$19/12)/(-PMT(E$4/12,Inputs!$B$17,1)),UW!$B$15/Inputs!$B$20)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A11",
+          "value": "Value and net cash-out sensitivity to cap rate (sizing rate held at Inputs!B16)",
+          "role": "header"
+        },
+        {
+          "cell": "A12",
+          "value": "Cap rate",
+          "role": "header"
+        },
+        {
+          "cell": "B12",
+          "value": "Capitalization value",
+          "role": "header"
+        },
+        {
+          "cell": "C12",
+          "value": "Maximum loan",
+          "role": "header"
+        },
+        {
+          "cell": "D12",
+          "value": "Net cash-out",
+          "role": "header"
+        },
+        {
+          "cell": "A13",
+          "formula": "=A5",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B13",
+          "formula": "=UW!$B$13/A13",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C13",
+          "formula": "=MIN(Inputs!$B$18*B13,Debt!$B$6,Debt!$B$7)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D13",
+          "formula": "=C13*(1-Inputs!$B$21)-Inputs!$B$23-Inputs!$B$22",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A14",
+          "formula": "=A6",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B14",
+          "formula": "=UW!$B$13/A14",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C14",
+          "formula": "=MIN(Inputs!$B$18*B14,Debt!$B$6,Debt!$B$7)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D14",
+          "formula": "=C14*(1-Inputs!$B$21)-Inputs!$B$23-Inputs!$B$22",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A15",
+          "formula": "=A7",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B15",
+          "formula": "=UW!$B$13/A15",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C15",
+          "formula": "=MIN(Inputs!$B$18*B15,Debt!$B$6,Debt!$B$7)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D15",
+          "formula": "=C15*(1-Inputs!$B$21)-Inputs!$B$23-Inputs!$B$22",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A16",
+          "formula": "=A8",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B16",
+          "formula": "=UW!$B$13/A16",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C16",
+          "formula": "=MIN(Inputs!$B$18*B16,Debt!$B$6,Debt!$B$7)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D16",
+          "formula": "=C16*(1-Inputs!$B$21)-Inputs!$B$23-Inputs!$B$22",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A17",
+          "formula": "=A9",
+          "number_format": "0.0000%"
+        },
+        {
+          "cell": "B17",
+          "formula": "=UW!$B$13/A17",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "C17",
+          "formula": "=MIN(Inputs!$B$18*B17,Debt!$B$6,Debt!$B$7)",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "D17",
+          "formula": "=C17*(1-Inputs!$B$21)-Inputs!$B$23-Inputs!$B$22",
+          "number_format": "$#,##0"
+        },
+        {
+          "cell": "A19",
+          "value": "Sensitivity is illustrative mechanics only; no market cap-rate or comparable-sale data is supplied in the packet.",
+          "role": "note",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "name": "Sources",
+      "freeze_rows": 2,
+      "column_widths": {
+        "A": 26,
+        "B": 16,
+        "C": 30,
+        "D": 56
+      },
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Source register",
+          "role": "title"
+        },
+        {
+          "cell": "A2",
+          "value": "File",
+          "role": "header"
+        },
+        {
+          "cell": "B2",
+          "value": "Date / as-of",
+          "role": "header"
+        },
+        {
+          "cell": "C2",
+          "value": "Location used",
+          "role": "header"
+        },
+        {
+          "cell": "D2",
+          "value": "Use in this analysis",
+          "role": "header"
+        },
+        {
+          "cell": "A3",
+          "value": "rent-roll-certified.xlsx"
+        },
+        {
+          "cell": "B3",
+          "value": "2026-08-31"
+        },
+        {
+          "cell": "C3",
+          "value": "Rent Roll A5:G68, B2"
+        },
+        {
+          "cell": "D3",
+          "value": "Controlling unit count, areas, possession status, scheduled rents, expirations",
+          "wrap": true
+        },
+        {
+          "cell": "A4",
+          "value": "rent-roll-archive.xlsx"
+        },
+        {
+          "cell": "B4",
+          "value": "2026-06-30"
+        },
+        {
+          "cell": "C4",
+          "value": "Rent Roll E5:E68"
+        },
+        {
+          "cell": "D4",
+          "value": "Stale archive (superseded): rents $1,500/$1,650/$1,925; not used for underwriting",
+          "wrap": true
+        },
+        {
+          "cell": "A5",
+          "value": "lease-001.pdf"
+        },
+        {
+          "cell": "B5",
+          "value": "n/a"
+        },
+        {
+          "cell": "C5",
+          "value": "p.1"
+        },
+        {
+          "cell": "D5",
+          "value": "Suite 001 executed rent $1,575, 820 SF, expiry 2029-08-31, no free rent",
+          "wrap": true
+        },
+        {
+          "cell": "A6",
+          "value": "lease-correspondence.pdf"
+        },
+        {
+          "cell": "B6",
+          "value": "2026-08-31"
+        },
+        {
+          "cell": "C6",
+          "value": "p.1"
+        },
+        {
+          "cell": "D6",
+          "value": "Manager confirmation: no amendments or new concessions on Suite 001",
+          "wrap": true
+        },
+        {
+          "cell": "A7",
+          "value": "operating-statement.pdf"
+        },
+        {
+          "cell": "B7",
+          "value": "2025-09-01 to 2026-08-31"
+        },
+        {
+          "cell": "C7",
+          "value": "p.1"
+        },
+        {
+          "cell": "D7",
+          "value": "T-12 collections $1,219,050; tax, insurance, other opex; reported NOI $839,790; roof capital $0",
+          "wrap": true
+        },
+        {
+          "cell": "A8",
+          "value": "insurance.pdf"
+        },
+        {
+          "cell": "B8",
+          "value": "2026-07-01 to 2027-06-30"
+        },
+        {
+          "cell": "C8",
+          "value": "p.1"
+        },
+        {
+          "cell": "D8",
+          "value": "General liability aggregate limit $2,000,000 (coverage limit, not expense)",
+          "wrap": true
+        },
+        {
+          "cell": "A9",
+          "value": "underwriting-instructions.pdf"
+        },
+        {
+          "cell": "B9",
+          "value": "n/a"
+        },
+        {
+          "cell": "C9",
+          "value": "p.1"
+        },
+        {
+          "cell": "D9",
+          "value": "All underwriting and loan-sizing assumptions and constraints",
+          "wrap": true
+        },
+        {
+          "cell": "A10",
+          "value": "manager-cover.pdf"
+        },
+        {
+          "cell": "B10",
+          "value": "n/a"
+        },
+        {
+          "cell": "C10",
+          "value": "p.1"
+        },
+        {
+          "cell": "D10",
+          "value": "Manager 53/64 leased headline; A/B/C group mapping; certified detail controls",
+          "wrap": true
+        },
+        {
+          "cell": "A11",
+          "value": "diligence-status.pdf"
+        },
+        {
+          "cell": "B11",
+          "value": "n/a"
+        },
+        {
+          "cell": "C11",
+          "value": "p.1"
+        },
+        {
+          "cell": "D11",
+          "value": "Legal, environmental, PCA and title reviews outstanding; no defect findings",
+          "wrap": true
+        },
+        {
+          "cell": "A13",
+          "value": "Not supplied by the packet and therefore explicitly unknown: photographs, asking price, market rent and sale comparables, sponsor track record, address, debt quote/term sheet, unit-level tenant credit, capital plan detail, property tax appeal status.",
+          "role": "note",
+          "wrap": true
+        }
+      ]
+    }
+  ]
+}

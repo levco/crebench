@@ -1,0 +1,160 @@
+{
+  "stage": "revision",
+  "workbook": {
+    "readable": true,
+    "base_checks": [
+      {
+        "field": "uw_egi",
+        "actual": 945045,
+        "expected": 945045.0,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "uw_noi",
+        "actual": 643861.65,
+        "expected": 643861.65,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "uw_ncf",
+        "actual": 629461.65,
+        "expected": 629461.65,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "capitalization_value",
+        "actual": 10731027.5,
+        "expected": 10731027.5,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "maximum_loan",
+        "actual": 6307523.31519484,
+        "expected": 6307523.315194847,
+        "passed": true,
+        "live_formula": true
+      },
+      {
+        "field": "net_cash_out",
+        "actual": 1999448.08204289,
+        "expected": 1999448.082042899,
+        "passed": true,
+        "live_formula": true
+      }
+    ],
+    "perturbations": [
+      {
+        "input": "cap_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 945045,
+            "expected": 945045.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": 643861.65,
+            "expected": 643861.65,
+            "passed": true
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 629461.65,
+            "expected": 629461.65,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 9905563.84615385,
+            "expected": 9905563.846153846,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 6307523.31519484,
+            "expected": 6307523.315194847,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 1999448.08204289,
+            "expected": 1999448.082042899,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": "gross_potential_rent",
+        "passed": false,
+        "error": "'gross_potential_rent'"
+      },
+      {
+        "input": "sizing_rate",
+        "checks": [
+          {
+            "field": "uw_egi",
+            "actual": 945045,
+            "expected": 945045.0,
+            "passed": true
+          },
+          {
+            "field": "uw_noi",
+            "actual": 643861.65,
+            "expected": 643861.65,
+            "passed": true
+          },
+          {
+            "field": "uw_ncf",
+            "actual": 629461.65,
+            "expected": 629461.65,
+            "passed": true
+          },
+          {
+            "field": "capitalization_value",
+            "actual": 10731027.5,
+            "expected": 10731027.5,
+            "passed": true
+          },
+          {
+            "field": "maximum_loan",
+            "actual": 5719015.53902199,
+            "expected": 5719015.539021974,
+            "passed": true
+          },
+          {
+            "field": "net_cash_out",
+            "actual": 1416825.38363177,
+            "expected": 1416825.3836317547,
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "all_base_outputs_correct": true,
+    "all_sensitivities_correct": false
+  },
+  "om": {
+    "readable": true,
+    "pages": 4,
+    "characters": 6526,
+    "approved_copy_present": true,
+    "financial_and_presentation_review": "pending; readable PDF is not acceptance"
+  },
+  "professional_acceptance": null,
+  "human_review": "pending",
+  "original_hashes": {
+    "artifacts/underwriting-v4.xlsx": "9f09b4fb83a34ad1eb3d2f8afd9442b5f4afac2e372bd323cf6736606e29185f",
+    "artifacts/memorandum-v4.pdf": "61a4972dad68dc38ad9502835eb13317666ce82cb9e2884ec3929fab2363acae"
+  },
+  "unchanged_facts": {
+    "passed": 20,
+    "total": 20
+  }
+}

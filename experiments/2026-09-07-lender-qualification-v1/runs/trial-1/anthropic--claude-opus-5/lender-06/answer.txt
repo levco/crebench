@@ -1,0 +1,22 @@
+```json
+{
+  "classification": "not_eligible",
+  "reason": "As requested, the deal exceeds the stated leverage limit of the only applicable source. The Fannie Mae Conventional Properties term sheet (retrieved 2026-09-07) states a maximum LTV of 80% and a minimum DSCR of 1.25x for existing stabilized multifamily with at least five units. The subject is a stabilized 50-unit property with DSCR 1.30 (meets the DSCR floor and unit-count floor), but the requested 85% LTV is above the disclosed 80% maximum, and no leverage exception or waiver is documented in the evidence packet. The only exception language in the source is narrow and unrelated to leverage: it applies to pre-stabilized occupancy receiving case-by-case consideration, not to LTV above the maximum. Accordingly, the request as structured does not fit the disclosed criteria; a restructured request at or below 80% LTV would instead be an amount/criteria-fit question rather than an eligibility failure, but that is not what was asked. The Freddie Mac Conventional Small announcement is not applicable to Fannie Mae conventional term-sheet fit and, by its own terms, does not state a complete set of underwriting criteria. The source also expressly states that guidelines do not establish approval of a specific borrower, so no approval is evidenced.",
+  "source_ids": [
+    "fannie-conventional",
+    "freddie-transition"
+  ],
+  "missing_information": [
+    "Any documented leverage exception, waiver, or program variant permitting LTV above 80% (none in packet)",
+    "Publication/effective date of the Fannie Mae conventional term sheet (listed as null), so currency of the 80% LTV and 1.25x DSCR figures is unverified",
+    "Requested loan amount and whether it exceeds $750,000 for nonrecourse execution",
+    "Property location/market tier and any market-specific leverage adjustments",
+    "Verified occupancy history (whether the 90% for 90 days stabilization test is met by documentation)",
+    "Third-party appraisal supporting the value used in the 85% LTV calculation, and whether DSCR 1.30 is underwritten NOI at the applicable underwriting interest rate",
+    "Borrower credit, liquidity, net worth, and multifamily experience; sponsor carve-out capacity",
+    "Whether an alternative product (e.g., affordable or other Fannie execution) with different leverage limits is being considered",
+    "Any explicit actual underwriting or credit approval evidence (absent)"
+  ],
+  "approved": false
+}
+```

@@ -1,0 +1,19 @@
+```json
+{
+  "classification": "not_eligible",
+  "reason": "The Fannie Mae Conventional Properties Term Sheet limits this financing to existing stabilized multifamily properties with at least five units. The subject is a 3-unit residential property, so it fails a threshold property-type criterion for this term sheet. The favorable metrics do not cure that: LTV 60% is within the stated 80% maximum and DSCR 1.5x exceeds the stated 1.25x minimum, but those tests only matter for properties that first meet the five-unit floor. The only exception language in the supplied source is a case-by-case consideration for pre-stabilized occupancy (versus the typical 90% for 90 days); it does not extend to the minimum unit count, and no exception, waiver, or alternative Fannie product for properties under five units appears in the evidence packet. The Freddie Mac Conventional Small announcement is a different lender's program, is described only as a $2M-$10M loan-size range without a complete set of current underwriting criteria, and therefore cannot establish fit here. Nothing in either source constitutes an approval of a specific borrower or transaction.",
+  "source_ids": [
+    "fannie-conventional",
+    "freddie-transition"
+  ],
+  "missing_information": [
+    "Whether any Fannie Mae product or documented exception covers residential properties with fewer than five units (not present in the supplied sources)",
+    "Publication/effective date and version of the Fannie Mae conventional term sheet (publication_date is null; only retrieved_at 2026-09-07 is known)",
+    "Complete current underwriting criteria for Freddie Mac Conventional Small, including eligible property type and minimum unit count",
+    "Loan amount, purpose (acquisition vs. refinance), and market/location for the subject property",
+    "Occupancy history and stabilization evidence (e.g., 90% for 90 days) as documented for the subject",
+    "Borrower/sponsor credit, experience, and recourse-structure details relevant to any program considered"
+  ],
+  "approved": false
+}
+```

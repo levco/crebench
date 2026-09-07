@@ -1,0 +1,69 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_monthly\",\"expression\":\"16*1500+16*1650+16*1925\"},{\"name\":\"gpr_annual\",\"expression\":\"gpr_monthly*12\"},{\"name\":\"other_income\",\"expression\":\"350*48\"},{\"name\":\"egi\",\"expression\":\"gpr_annual*0.95+other_income\"},{\"name\":\"mgmt\",\"expression\":\"egi*0.03\"},{\"name\":\"opex_total\",\"expression\":\"102312+34104+136416+mgmt\"},{\"name\":\"noi_before_reserves\",\"expression\":\"egi-opex_total\"},{\"name\":\"reserves\",\"expression\":\"300*48\"},{\"name\":\"ncf\",\"expression\":\"noi_before_reserves-reserves\"},{\"name\":\"cap_rate\",\"expression\":\"0.0575\"},{\"name\":\"value\",\"expression\":\"noi_before_reserves/cap_rate\"}]}",
+  "call_id": "call_1cyDsQcuAIpCnjkeSgBJQxLJ",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_monthly",
+        "expression": "16*1500+16*1650+16*1925"
+      },
+      {
+        "name": "gpr_annual",
+        "expression": "gpr_monthly*12"
+      },
+      {
+        "name": "other_income",
+        "expression": "350*48"
+      },
+      {
+        "name": "egi",
+        "expression": "gpr_annual*0.95+other_income"
+      },
+      {
+        "name": "mgmt",
+        "expression": "egi*0.03"
+      },
+      {
+        "name": "opex_total",
+        "expression": "102312+34104+136416+mgmt"
+      },
+      {
+        "name": "noi_before_reserves",
+        "expression": "egi-opex_total"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*48"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi_before_reserves-reserves"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.0575"
+      },
+      {
+        "name": "value",
+        "expression": "noi_before_reserves/cap_rate"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_monthly": 81200,
+      "gpr_annual": 974400,
+      "other_income": 16800,
+      "egi": 942480.0,
+      "mgmt": 28274.399999999998,
+      "opex_total": 301106.4,
+      "noi_before_reserves": 641373.6,
+      "reserves": 14400,
+      "ncf": 626973.6,
+      "cap_rate": 0.0575,
+      "value": 11154323.47826087
+    }
+  },
+  "status": "ok"
+}

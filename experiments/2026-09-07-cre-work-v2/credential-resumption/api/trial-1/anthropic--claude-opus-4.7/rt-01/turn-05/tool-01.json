@@ -1,0 +1,54 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"pmt_per_dollar\",\"expression\":\"pmt(0.065/12, 360, -1)\"},{\"name\":\"annual_ds_per_dollar\",\"expression\":\"pmt_per_dollar*12\"},{\"name\":\"dscr_loan\",\"expression\":\"521550/(1.25*annual_ds_per_dollar)\"},{\"name\":\"dy_loan\",\"expression\":\"521550/0.09\"},{\"name\":\"ltv_loan\",\"expression\":\"7771111.11*0.65\"},{\"name\":\"max_loan\",\"expression\":\"min(dscr_loan, dy_loan, 7771111.11*0.65)\"},{\"name\":\"orig_fee\",\"expression\":\"max_loan*0.01\"},{\"name\":\"net_cash_out\",\"expression\":\"max_loan-4300000-45000-orig_fee\"}]}",
+  "call_id": "toolu_015ptFmrGryjnzz3GmcwaEHk",
+  "arguments": {
+    "steps": [
+      {
+        "name": "pmt_per_dollar",
+        "expression": "pmt(0.065/12, 360, -1)"
+      },
+      {
+        "name": "annual_ds_per_dollar",
+        "expression": "pmt_per_dollar*12"
+      },
+      {
+        "name": "dscr_loan",
+        "expression": "521550/(1.25*annual_ds_per_dollar)"
+      },
+      {
+        "name": "dy_loan",
+        "expression": "521550/0.09"
+      },
+      {
+        "name": "ltv_loan",
+        "expression": "7771111.11*0.65"
+      },
+      {
+        "name": "max_loan",
+        "expression": "min(dscr_loan, dy_loan, 7771111.11*0.65)"
+      },
+      {
+        "name": "orig_fee",
+        "expression": "max_loan*0.01"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "max_loan-4300000-45000-orig_fee"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "pmt_per_dollar": 0.006320680234929653,
+      "annual_ds_per_dollar": 0.07584816281915584,
+      "dscr_loan": 5500990.195304031,
+      "dy_loan": 5795000.0,
+      "ltv_loan": 5051222.2215,
+      "max_loan": 5051222.2215,
+      "orig_fee": 50512.222215,
+      "net_cash_out": 655709.999285
+    }
+  },
+  "status": "ok"
+}

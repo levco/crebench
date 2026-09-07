@@ -1,0 +1,185 @@
+{
+  "case_id": "mf-01",
+  "model": "anthropic/claude-opus-4.7",
+  "trial": 1,
+  "stage": "revision",
+  "status": "completed",
+  "completed_at": "2026-09-07T13:05:03.386957+00:00",
+  "elapsed_seconds": 202.301,
+  "model_calls_including_retries": 5,
+  "tool_calls": 6,
+  "known_partial_cost_usd": 1.8243999999999998,
+  "cost_usd": 1.8243999999999998,
+  "returned_models": [
+    "anthropic/claude-opus-4.7"
+  ],
+  "latest_workbook": "artifacts/underwriting-v2.xlsx",
+  "latest_memo": "artifacts/memorandum-v3.pdf",
+  "artifact_versions": {
+    "workbook": 2,
+    "memo": 3
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 41865,
+        "completion_tokens": 127,
+        "total_tokens": 41992,
+        "cost": 0.2125,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.2125,
+        "gateway_cost": 0.2125
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 2.607,
+      "completed_at": "2026-09-07T13:01:43.694104+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 45452,
+        "completion_tokens": 706,
+        "total_tokens": 46158,
+        "cost": 0.24491,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.24491,
+        "gateway_cost": 0.24491
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 9.097,
+      "completed_at": "2026-09-07T13:01:52.809946+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 46247,
+        "completion_tokens": 13674,
+        "total_tokens": 59921,
+        "cost": 0.573085,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.573085,
+        "gateway_cost": 0.573085
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 120.056,
+      "completed_at": "2026-09-07T13:03:52.871371+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 59922,
+        "completion_tokens": 2719,
+        "total_tokens": 62641,
+        "cost": 0.367585,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.367585,
+        "gateway_cost": 0.367585
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 31.101,
+      "completed_at": "2026-09-07T13:04:25.133486+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-4.7",
+      "usage": {
+        "prompt_tokens": 65684,
+        "completion_tokens": 3916,
+        "total_tokens": 69600,
+        "cost": 0.42632,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.42632,
+        "gateway_cost": 0.42632
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 38.206,
+      "completed_at": "2026-09-07T13:05:03.385046+00:00"
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

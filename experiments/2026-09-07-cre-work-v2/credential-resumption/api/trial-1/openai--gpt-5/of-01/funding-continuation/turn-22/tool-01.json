@@ -1,0 +1,9 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_new\",\"expression\":\"135125*12\"},{\"name\":\"uw_egi_new\",\"expression\":\"gpr_new*0.95 + 350*12\"},{\"name\":\"mgmt_new\",\"expression\":\"uw_egi_new*0.03\"},{\"name\":\"opex_new\",\"expression\":\"169974 + 56658 + 226632 + mgmt_new\"},{\"name\":\"noi_before_res_new\",\"expression\":\"uw_egi_new - opex_new\"},{\"name\":\"reserves\",\"expression\":\"300*12\"},{\"name\":\"ncf_new\",\"expression\":\"noi_before_res_new - reserves\"},{\"name\":\"cap_rate_new\",\"expression\":\"0.0775\"},{\"name\":\"cap_value_new\",\"expression\":\"noi_before_res_new / cap_rate_new\"},{\"name\":\"sizing_rate_new\",\"expression\":\"0.075\"},{\"name\":\"monthly_rate\",\"expression\":\"sizing_rate_new/12\"},{\"name\":\"annual_debt_service_max\",\"expression\":\"ncf_new/1.25\"},{\"name\":\"monthly_payment_max\",\"expression\":\"annual_debt_service_max/12\"},{\"name\":\"loan_dscr_new\",\"expression\":\"monthly_payment_max / (PMT(monthly_rate,360,1))\"},{\"name\":\"loan_dy_new\",\"expression\":\"ncf_new / 0.09\"},{\"name\":\"loan_ltv_new\",\"expression\":\"cap_value_new*0.6\"},{\"name\":\"max_loan_new\",\"expression\":\"min(loan_dscr_new, loan_dy_new, loan_ltv_new)\"},{\"name\":\"orig_fee_new\",\"expression\":\"max_loan_new*0.01\"},{\"name\":\"net_cash_out_new\",\"expression\":\"max_loan_new - orig_fee_new - 45000 - 6500000\"}]}",
+  "call_id": "call_HbTc4bHK6tqq3PJS7qLfQbXC",
+  "result": {
+    "error": "Arithmetic only"
+  },
+  "status": "error"
+}

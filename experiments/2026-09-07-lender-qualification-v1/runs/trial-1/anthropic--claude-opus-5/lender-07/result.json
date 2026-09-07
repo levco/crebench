@@ -1,0 +1,46 @@
+{
+  "case_id": "lender-07",
+  "model": "anthropic/claude-opus-5",
+  "trial": 1,
+  "status": "completed",
+  "started_at": "2026-09-07T12:55:45.945575+00:00",
+  "elapsed_seconds": 15.404465542000253,
+  "inference_cost_usd": 0.03184,
+  "known_partial_cost_usd": 0.03184,
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 923,
+        "completion_tokens": 1089,
+        "total_tokens": 2012,
+        "cost": 0.03184,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 256,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.03184,
+        "gateway_cost": 0.03184
+      },
+      "finish_reason": "stop",
+      "elapsed_seconds": 15.403,
+      "completed_at": "2026-09-07T12:56:01.349198+00:00"
+    }
+  ],
+  "returned_model": "anthropic/claude-opus-5",
+  "operator_semantic_corrections": 0
+}

@@ -1,0 +1,109 @@
+{
+  "name": "calculate_batch",
+  "arguments_raw": "{\"steps\":[{\"name\":\"gpr_annual\",\"expression\":\"1618800\"},{\"name\":\"uw_egi\",\"expression\":\"1618800*0.95 + 350*12\"},{\"name\":\"mgmt_fee\",\"expression\":\"uw_egi*0.03\"},{\"name\":\"op_ex_total\",\"expression\":\"169974 + 56658 + 226632 + mgmt_fee\"},{\"name\":\"noi_before_reserves\",\"expression\":\"uw_egi - op_ex_total\"},{\"name\":\"reserves\",\"expression\":\"300*12\"},{\"name\":\"ncf\",\"expression\":\"noi_before_reserves - reserves\"},{\"name\":\"cap_rate\",\"expression\":\"0.075\"},{\"name\":\"capitalization_value\",\"expression\":\"noi_before_reserves / cap_rate\"},{\"name\":\"monthly_rate\",\"expression\":\"0.0675/12\"},{\"name\":\"nper\",\"expression\":\"360\"},{\"name\":\"annual_debt_service_max\",\"expression\":\"ncf/1.25\"},{\"name\":\"monthly_payment_max\",\"expression\":\"annual_debt_service_max/12\"},{\"name\":\"loan_dscr\",\"expression\":\"monthly_payment_max * (1 - (1+monthly_rate)**(-nper)) / monthly_rate\"},{\"name\":\"loan_dy\",\"expression\":\"ncf/0.09\"},{\"name\":\"loan_ltv\",\"expression\":\"capitalization_value*0.6\"},{\"name\":\"maximum_loan\",\"expression\":\"min(loan_dscr, loan_dy, loan_ltv)\"},{\"name\":\"origination_fee\",\"expression\":\"maximum_loan*0.01\"},{\"name\":\"net_cash_out\",\"expression\":\"maximum_loan - origination_fee - 45000 - 6500000\"}]}",
+  "call_id": "call_K2jYkseKqp7KGftri28RRrkt",
+  "arguments": {
+    "steps": [
+      {
+        "name": "gpr_annual",
+        "expression": "1618800"
+      },
+      {
+        "name": "uw_egi",
+        "expression": "1618800*0.95 + 350*12"
+      },
+      {
+        "name": "mgmt_fee",
+        "expression": "uw_egi*0.03"
+      },
+      {
+        "name": "op_ex_total",
+        "expression": "169974 + 56658 + 226632 + mgmt_fee"
+      },
+      {
+        "name": "noi_before_reserves",
+        "expression": "uw_egi - op_ex_total"
+      },
+      {
+        "name": "reserves",
+        "expression": "300*12"
+      },
+      {
+        "name": "ncf",
+        "expression": "noi_before_reserves - reserves"
+      },
+      {
+        "name": "cap_rate",
+        "expression": "0.075"
+      },
+      {
+        "name": "capitalization_value",
+        "expression": "noi_before_reserves / cap_rate"
+      },
+      {
+        "name": "monthly_rate",
+        "expression": "0.0675/12"
+      },
+      {
+        "name": "nper",
+        "expression": "360"
+      },
+      {
+        "name": "annual_debt_service_max",
+        "expression": "ncf/1.25"
+      },
+      {
+        "name": "monthly_payment_max",
+        "expression": "annual_debt_service_max/12"
+      },
+      {
+        "name": "loan_dscr",
+        "expression": "monthly_payment_max * (1 - (1+monthly_rate)**(-nper)) / monthly_rate"
+      },
+      {
+        "name": "loan_dy",
+        "expression": "ncf/0.09"
+      },
+      {
+        "name": "loan_ltv",
+        "expression": "capitalization_value*0.6"
+      },
+      {
+        "name": "maximum_loan",
+        "expression": "min(loan_dscr, loan_dy, loan_ltv)"
+      },
+      {
+        "name": "origination_fee",
+        "expression": "maximum_loan*0.01"
+      },
+      {
+        "name": "net_cash_out",
+        "expression": "maximum_loan - origination_fee - 45000 - 6500000"
+      }
+    ]
+  },
+  "result": {
+    "values": {
+      "gpr_annual": 1618800,
+      "uw_egi": 1542060.0,
+      "mgmt_fee": 46261.799999999996,
+      "op_ex_total": 499525.8,
+      "noi_before_reserves": 1042534.2,
+      "reserves": 3600,
+      "ncf": 1038934.2,
+      "cap_rate": 0.075,
+      "capitalization_value": 13900456.0,
+      "monthly_rate": 0.005625000000000001,
+      "nper": 360,
+      "annual_debt_service_max": 831147.36,
+      "monthly_payment_max": 69262.28,
+      "loan_dscr": 10678767.077250497,
+      "loan_dy": 11543713.333333334,
+      "loan_ltv": 8340273.6,
+      "maximum_loan": 8340273.6,
+      "origination_fee": 83402.736,
+      "net_cash_out": 1711870.864
+    }
+  },
+  "status": "ok"
+}

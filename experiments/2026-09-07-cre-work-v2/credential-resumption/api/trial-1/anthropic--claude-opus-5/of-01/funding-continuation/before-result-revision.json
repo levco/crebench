@@ -1,0 +1,96 @@
+{
+  "case_id": "of-01",
+  "model": "anthropic/claude-opus-5",
+  "trial": 1,
+  "stage": "revision",
+  "status": "infrastructure_error",
+  "completed_at": "2026-09-07T13:11:55.110645+00:00",
+  "elapsed_seconds": 17.659,
+  "model_calls_including_retries": 3,
+  "tool_calls": 3,
+  "known_partial_cost_usd": 0.59888,
+  "cost_usd": null,
+  "returned_models": [
+    "anthropic/claude-opus-5"
+  ],
+  "latest_workbook": "artifacts/underwriting-v2.xlsx",
+  "latest_memo": "artifacts/memorandum-v1.pdf",
+  "artifact_versions": {
+    "workbook": 2,
+    "memo": 1
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 55923,
+        "completion_tokens": 111,
+        "total_tokens": 56034,
+        "cost": 0.28239,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.28239,
+        "gateway_cost": 0.28239
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 2.335,
+      "completed_at": "2026-09-07T13:11:39.788919+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "returned_model": "anthropic/claude-opus-5",
+      "usage": {
+        "prompt_tokens": 57443,
+        "completion_tokens": 1171,
+        "total_tokens": 58614,
+        "cost": 0.31649,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": null,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 649,
+          "image_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "market_cost": 0.31649,
+        "gateway_cost": 0.31649
+      },
+      "finish_reason": "tool_calls",
+      "elapsed_seconds": 14.838,
+      "completed_at": "2026-09-07T13:11:54.635089+00:00"
+    },
+    {
+      "attempt": 1,
+      "http_status": 402,
+      "error": "{\"error\":{\"message\":\"A positive credit balance is required for all requests, including BYOK, so fallback providers remain available. Add credits at https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fai%3Fmodal%3Dtop-up to continue.\",\"type\":\"insufficient_funds\"}}",
+      "elapsed_seconds": 0.469,
+      "completed_at": "2026-09-07T13:11:55.109764+00:00"
+    }
+  ],
+  "operator_semantic_corrections": 0
+}

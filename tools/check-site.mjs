@@ -87,4 +87,16 @@ if(release.research){
   }
   for(const marker of ['X-Amz-Signature','kylegraves808@gmail.com','Authorization: Bearer','sk-ant-','vck_'])assert(!JSON.stringify(results).includes(marker),`Private research marker: ${marker}`);
 }
+if(release.expansion){
+  const bytes=fs.readFileSync(path.join(dist,'expansion-results.json'));
+  const data=JSON.parse(bytes);
+  assert.equal(release.expansion.recorded_workflow_stages,data.rows.length);
+  assert.equal(release.expansion.completed_workflow_stages,data.rows.filter(r=>r.status==='completed').length);
+  assert.equal(release.expansion.target_workflow_stages,720);
+  assert.equal(release.expansion.matched_stage_pairs,data.matched_keys.length);
+  const manifest=JSON.parse(fs.readFileSync(path.join(dist,'expansion-figures/source-manifest.json')));
+  assert.equal(manifest.sha256,crypto.createHash('sha256').update(bytes).digest('hex'));
+  assert.deepEqual(manifest.matched_keys,data.matched_keys);
+  for(const [name,hash] of Object.entries(manifest.figures))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(dist,'expansion-figures',name))).digest('hex'),hash);
+}
 console.log(`Verified ${checked} local links/assets, ARIA targets, published score arithmetic, original artifact hashes, frozen protocol, and public-only output.`);
