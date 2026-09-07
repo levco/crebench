@@ -88,6 +88,8 @@ if(release.research){
   for(const marker of ['X-Amz-Signature','kylegraves808@gmail.com','Authorization: Bearer','sk-ant-','vck_'])assert(!JSON.stringify(results).includes(marker),`Private research marker: ${marker}`);
 }
 if(release.expansion){
+  const expansionHtml=fs.readFileSync(path.join(dist,'expansion.html'),'utf8');
+  assert(!/<script(?![^>]*\bsrc=)[^>]*>/i.test(expansionHtml),'Expansion scripts must obey the production CSP');
   const bytes=fs.readFileSync(path.join(dist,'expansion-results.json'));
   const data=JSON.parse(bytes);
   assert.equal(release.expansion.recorded_workflow_stages,data.rows.length);
